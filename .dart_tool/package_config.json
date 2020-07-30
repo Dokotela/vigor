@@ -69,7 +69,7 @@
     },
     {
       "name": "fhir",
-      "rootUri": "../../fhir_r4",
+      "rootUri": "../pkg/fhir_r4",
       "packageUri": "lib/",
       "languageVersion": "2.1"
     },
@@ -314,7 +314,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2020-07-30T18:30:43.156994Z",
+  "generated": "2020-07-30T18:59:05.033295Z",
   "generator": "pub",
   "generatorVersion": "2.9.0-21.0.dev.flutter-a3815b6590"
 }

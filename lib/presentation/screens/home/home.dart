@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mpepu/presentation/localization/localizations.dart';
-import 'package:mpepu/presentation/shared/shared.dart';
+import '../../shared/shared.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key key}) : super(key: key);

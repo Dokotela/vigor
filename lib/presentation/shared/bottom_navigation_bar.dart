@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mpepu/presentation/screens/home/home.dart';
-import 'package:mpepu/presentation/shared/shared.dart';
+
+import 'shared.dart';
 
 BottomAppBar bottomAppBar = BottomAppBar(
   color: Colors.blue[900],

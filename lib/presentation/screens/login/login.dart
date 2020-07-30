@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'package:mpepu/presentation/localization/translate.dart';
-import 'package:mpepu/presentation/screens/home/home.dart';
+import '../../localization/translate.dart';
+import '../../shared/shared.dart';
 
 import 'by_country.dart';
 

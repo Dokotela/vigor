@@ -81,7 +81,7 @@ packages:
   fhir:
     dependency: "direct main"
     description:
-      path: "../fhir_r4"
+      path: "pkg/fhir_r4"
       relative: true
     source: path
     version: "0.0.1"

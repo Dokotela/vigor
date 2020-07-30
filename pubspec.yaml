@@ -22,7 +22,7 @@ dependencies:
   get: ^3.2.2
   translator: ^0.1.4
   fhir:
-    path: ../fhir_r4
+    path: pkg/fhir_r4
 
 dev_dependencies:
   flutter_test:
