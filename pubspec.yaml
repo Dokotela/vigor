@@ -1,0 +1,37 @@
+name: vigor
+description: A healthcare app for Growth, Malnutrition, Immunization and HIV/EID.
+
+publish_to: 'none' 
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  cupertino_icons: ^0.1.3
+  sqflite: ^1.3.0
+  sembast_sqflite: ^0.2.0+2
+  sembast: ^2.4.5
+  path_provider: ^1.6.11
+  intl: ^0.16.1
+  google_fonts: ^1.1.0
+  get: ^3.2.2
+  translator: ^0.1.4
+  fhir:
+    path: ../fhir_r4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - lib/presentation/localization/lang/
+    - lib/presentation/img/flags/
+    - lib/presentation/img/
+                                      
