@@ -26,6 +26,12 @@
       "languageVersion": "2.2"
     },
     {
+      "name": "bloc",
+      "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/bloc-6.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.6"
+    },
+    {
       "name": "boolean_selector",
       "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/boolean_selector-2.0.0",
       "packageUri": "lib/",
@@ -188,6 +194,12 @@
       "languageVersion": "2.9"
     },
     {
+      "name": "flutter_bloc",
+      "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/flutter_bloc-6.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.6"
+    },
+    {
       "name": "flutter_localizations",
       "rootUri": "file:///home/grey/dev/flutter/packages/flutter_localizations",
       "packageUri": "lib/",
@@ -308,6 +320,12 @@
       "languageVersion": "2.0"
     },
     {
+      "name": "nested",
+      "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/nested-0.0.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.2"
+    },
+    {
       "name": "node_interop",
       "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/node_interop-1.1.1",
       "packageUri": "lib/",
@@ -384,6 +402,12 @@
       "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/process-3.0.13",
       "packageUri": "lib/",
       "languageVersion": "2.0"
+    },
+    {
+      "name": "provider",
+      "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/provider-4.3.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.7"
     },
     {
       "name": "pub_semver",
@@ -560,7 +584,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2020-07-31T03:36:13.574433Z",
+  "generated": "2020-07-31T03:56:07.338416Z",
   "generator": "pub",
   "generatorVersion": "2.9.0-21.0.dev.flutter-a3815b6590"
 }

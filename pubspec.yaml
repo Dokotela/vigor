@@ -23,6 +23,7 @@ dependencies:
   translator: ^0.1.4
   freezed_annotation: ^0.11.0
   dartz: ^0.9.1
+  flutter_bloc: ^6.0.1
   fhir:
     path: pkg/fhir_r4
 
