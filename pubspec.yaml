@@ -1,5 +1,5 @@
 name: vigor
-description: A healthcare app for Growth, Malnutrition, Immunization and HIV/EID.
+description: mHealth Platform, utilizing FHIR, written in Dart/Flutter to create transcendent data
 
 publish_to: 'none' 
 version: 1.0.0+1
@@ -21,12 +21,16 @@ dependencies:
   google_fonts: ^1.1.0
   get: ^3.2.2
   translator: ^0.1.4
+  freezed_annotation: ^0.11.0
+  dartz: ^0.9.1
   fhir:
     path: pkg/fhir_r4
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  freezed: ^0.11.4
+  build_runner: ^1.10.1
 
 flutter:
   uses-material-design: true
