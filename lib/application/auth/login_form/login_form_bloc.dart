@@ -1,5 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:vigor/domain/auth/auth_failure.dart';
 import 'package:vigor/domain/auth/i_auth_facade.dart';
@@ -13,7 +14,7 @@ part 'login_form_bloc.freezed.dart';
 class LoginFormBloc extends Bloc<LoginFormEvent, LoginFormState> {
   final IAuthFacade _authFacade;
 
-  LoginFormBloc(this._authFacade);
+  LoginFormBloc(this._authFacade) : super(LoginFormState.initial());
 
   @override
   LoginFormState get initialState => LoginFormState.initial();

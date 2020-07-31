@@ -435,9 +435,9 @@
     },
     {
       "name": "sembast_sqflite",
-      "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/sembast_sqflite-0.2.0+2",
+      "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/sembast_sqflite-1.0.0",
       "packageUri": "lib/",
-      "languageVersion": "2.7"
+      "languageVersion": "2.8"
     },
     {
       "name": "shelf",
@@ -537,7 +537,7 @@
     },
     {
       "name": "translator",
-      "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/translator-0.1.4",
+      "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/translator-0.1.5",
       "packageUri": "lib/",
       "languageVersion": "2.6"
     },
@@ -584,7 +584,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2020-07-31T03:56:07.338416Z",
+  "generated": "2020-07-31T05:01:03.374261Z",
   "generator": "pub",
   "generatorVersion": "2.9.0-21.0.dev.flutter-a3815b6590"
 }

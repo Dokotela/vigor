@@ -15,7 +15,8 @@ void main() async {
 
   for (var lang in languageList) {
     String newPhrases = //toReplace.toString();
-        await translator.translate(toReplace, to: lang['iso369-1']);
+        (await translator.translate(toReplace, to: lang['iso369-1']))
+            .toString();
     List<String> phraseList = newPhrases.toString().split('\n');
     for (var i = 0; i < phraseList.length; i++) {
       lang[phrases[i].replaceAll('**', '')] = phraseList[i];
