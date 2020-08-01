@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:vigor/domain/auth/auth_failure.dart';
 import 'package:vigor/domain/auth/i_auth_facade.dart';
-import 'package:vigor/domain/auth/value_objects.dart';
+import 'package:vigor/domain/auth/auth_value_objects.dart';
 
 part 'login_form_event.dart';
 part 'login_form_state.dart';
