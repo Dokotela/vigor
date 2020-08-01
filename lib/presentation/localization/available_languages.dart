@@ -3,7 +3,7 @@ List<Map<String, String>> availableLanguages() {
   Map<String, String> en = {
     "language": "english",
     "iso369-1": "en",
-    "title": "Mpepu",
+    "title": "Vigor",
   };
   Map<String, String> es = {
     "language": "spanish",

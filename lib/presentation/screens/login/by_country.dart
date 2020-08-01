@@ -24,6 +24,8 @@ String loginTitle(String country) {
       return 'Mpepu';
     case 'dominican_republic':
       return 'Salud\nDominicana';
+    case 'usa':
+      return 'Vigor';
     default:
       return null;
   }
@@ -37,6 +39,13 @@ TextStyle getStyle(String country) {
     case 'dominican_republic':
       return GoogleFonts.courgette(
           textStyle: TextStyle(color: Colors.red, fontSize: 40));
+    case 'usa':
+      return GoogleFonts.alegreyaSansSc(
+          textStyle: TextStyle(
+              fontWeight: FontWeight.w900,
+              color: Colors.blue[600],
+              fontSize: 50,
+              fontStyle: FontStyle.italic));
     default:
       return null;
   }

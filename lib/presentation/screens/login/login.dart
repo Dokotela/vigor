@@ -46,8 +46,9 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 }
 
-const String country = 'botswana';
+// const String country = 'botswana';
 // const String country = 'dominican_republic';
+const String country = 'usa';
 
 TextField loginField(String hint, bool obscure) => TextField(
       obscureText: obscure,
