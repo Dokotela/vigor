@@ -13,13 +13,10 @@ abstract class ValueFailure<T> with _$ValueFailure<T> {
   const factory ValueFailure.shortRegistrationName({
     @required T failedValue,
   }) = ShortRegistrationName<T>;
-  const factory ValueFailure.noBirthDate({
+  const factory ValueFailure.notAGender({
     @required T failedValue,
-  }) = NoBirthDate<T>;
-  const factory ValueFailure.noNeighborhood({
+  }) = NotAGender<T>;
+  const factory ValueFailure.notABarrio({
     @required T failedValue,
-  }) = NoNeighborhood<T>;
-  const factory ValueFailure.noRelation({
-    @required T failedValue,
-  }) = NoRelation<T>;
+  }) = NotABarrio<T>;
 }

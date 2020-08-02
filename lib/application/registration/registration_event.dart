@@ -1,4 +1,4 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+part of 'registration_bloc.dart';
 
 @freezed
 abstract class RegistrationEvent with _$RegistrationEvent {

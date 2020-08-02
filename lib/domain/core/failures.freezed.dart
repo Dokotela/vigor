@@ -34,22 +34,15 @@ class _$ValueFailureTearOff {
   }
 
 // ignore: unused_element
-  NoBirthDate<T> noBirthDate<T>({@required T failedValue}) {
-    return NoBirthDate<T>(
+  NotAGender<T> notAGender<T>({@required T failedValue}) {
+    return NotAGender<T>(
       failedValue: failedValue,
     );
   }
 
 // ignore: unused_element
-  NoNeighborhood<T> noNeighborhood<T>({@required T failedValue}) {
-    return NoNeighborhood<T>(
-      failedValue: failedValue,
-    );
-  }
-
-// ignore: unused_element
-  NoRelation<T> noRelation<T>({@required T failedValue}) {
-    return NoRelation<T>(
+  NotABarrio<T> notABarrio<T>({@required T failedValue}) {
+    return NotABarrio<T>(
       failedValue: failedValue,
     );
   }
@@ -66,18 +59,16 @@ mixin _$ValueFailure<T> {
     @required Result invalidUsername(T failedValue),
     @required Result shortPassword(T failedValue),
     @required Result shortRegistrationName(T failedValue),
-    @required Result noBirthDate(T failedValue),
-    @required Result noNeighborhood(T failedValue),
-    @required Result noRelation(T failedValue),
+    @required Result notAGender(T failedValue),
+    @required Result notABarrio(T failedValue),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result invalidUsername(T failedValue),
     Result shortPassword(T failedValue),
     Result shortRegistrationName(T failedValue),
-    Result noBirthDate(T failedValue),
-    Result noNeighborhood(T failedValue),
-    Result noRelation(T failedValue),
+    Result notAGender(T failedValue),
+    Result notABarrio(T failedValue),
     @required Result orElse(),
   });
   @optionalTypeArgs
@@ -85,18 +76,16 @@ mixin _$ValueFailure<T> {
     @required Result invalidUsername(InvalidUsername<T> value),
     @required Result shortPassword(ShortPassword<T> value),
     @required Result shortRegistrationName(ShortRegistrationName<T> value),
-    @required Result noBirthDate(NoBirthDate<T> value),
-    @required Result noNeighborhood(NoNeighborhood<T> value),
-    @required Result noRelation(NoRelation<T> value),
+    @required Result notAGender(NotAGender<T> value),
+    @required Result notABarrio(NotABarrio<T> value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result invalidUsername(InvalidUsername<T> value),
     Result shortPassword(ShortPassword<T> value),
     Result shortRegistrationName(ShortRegistrationName<T> value),
-    Result noBirthDate(NoBirthDate<T> value),
-    Result noNeighborhood(NoNeighborhood<T> value),
-    Result noRelation(NoRelation<T> value),
+    Result notAGender(NotAGender<T> value),
+    Result notABarrio(NotABarrio<T> value),
     @required Result orElse(),
   });
 
@@ -194,16 +183,14 @@ class _$InvalidUsername<T> implements InvalidUsername<T> {
     @required Result invalidUsername(T failedValue),
     @required Result shortPassword(T failedValue),
     @required Result shortRegistrationName(T failedValue),
-    @required Result noBirthDate(T failedValue),
-    @required Result noNeighborhood(T failedValue),
-    @required Result noRelation(T failedValue),
+    @required Result notAGender(T failedValue),
+    @required Result notABarrio(T failedValue),
   }) {
     assert(invalidUsername != null);
     assert(shortPassword != null);
     assert(shortRegistrationName != null);
-    assert(noBirthDate != null);
-    assert(noNeighborhood != null);
-    assert(noRelation != null);
+    assert(notAGender != null);
+    assert(notABarrio != null);
     return invalidUsername(failedValue);
   }
 
@@ -213,9 +200,8 @@ class _$InvalidUsername<T> implements InvalidUsername<T> {
     Result invalidUsername(T failedValue),
     Result shortPassword(T failedValue),
     Result shortRegistrationName(T failedValue),
-    Result noBirthDate(T failedValue),
-    Result noNeighborhood(T failedValue),
-    Result noRelation(T failedValue),
+    Result notAGender(T failedValue),
+    Result notABarrio(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -231,16 +217,14 @@ class _$InvalidUsername<T> implements InvalidUsername<T> {
     @required Result invalidUsername(InvalidUsername<T> value),
     @required Result shortPassword(ShortPassword<T> value),
     @required Result shortRegistrationName(ShortRegistrationName<T> value),
-    @required Result noBirthDate(NoBirthDate<T> value),
-    @required Result noNeighborhood(NoNeighborhood<T> value),
-    @required Result noRelation(NoRelation<T> value),
+    @required Result notAGender(NotAGender<T> value),
+    @required Result notABarrio(NotABarrio<T> value),
   }) {
     assert(invalidUsername != null);
     assert(shortPassword != null);
     assert(shortRegistrationName != null);
-    assert(noBirthDate != null);
-    assert(noNeighborhood != null);
-    assert(noRelation != null);
+    assert(notAGender != null);
+    assert(notABarrio != null);
     return invalidUsername(this);
   }
 
@@ -250,9 +234,8 @@ class _$InvalidUsername<T> implements InvalidUsername<T> {
     Result invalidUsername(InvalidUsername<T> value),
     Result shortPassword(ShortPassword<T> value),
     Result shortRegistrationName(ShortRegistrationName<T> value),
-    Result noBirthDate(NoBirthDate<T> value),
-    Result noNeighborhood(NoNeighborhood<T> value),
-    Result noRelation(NoRelation<T> value),
+    Result notAGender(NotAGender<T> value),
+    Result notABarrio(NotABarrio<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -338,16 +321,14 @@ class _$ShortPassword<T> implements ShortPassword<T> {
     @required Result invalidUsername(T failedValue),
     @required Result shortPassword(T failedValue),
     @required Result shortRegistrationName(T failedValue),
-    @required Result noBirthDate(T failedValue),
-    @required Result noNeighborhood(T failedValue),
-    @required Result noRelation(T failedValue),
+    @required Result notAGender(T failedValue),
+    @required Result notABarrio(T failedValue),
   }) {
     assert(invalidUsername != null);
     assert(shortPassword != null);
     assert(shortRegistrationName != null);
-    assert(noBirthDate != null);
-    assert(noNeighborhood != null);
-    assert(noRelation != null);
+    assert(notAGender != null);
+    assert(notABarrio != null);
     return shortPassword(failedValue);
   }
 
@@ -357,9 +338,8 @@ class _$ShortPassword<T> implements ShortPassword<T> {
     Result invalidUsername(T failedValue),
     Result shortPassword(T failedValue),
     Result shortRegistrationName(T failedValue),
-    Result noBirthDate(T failedValue),
-    Result noNeighborhood(T failedValue),
-    Result noRelation(T failedValue),
+    Result notAGender(T failedValue),
+    Result notABarrio(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -375,16 +355,14 @@ class _$ShortPassword<T> implements ShortPassword<T> {
     @required Result invalidUsername(InvalidUsername<T> value),
     @required Result shortPassword(ShortPassword<T> value),
     @required Result shortRegistrationName(ShortRegistrationName<T> value),
-    @required Result noBirthDate(NoBirthDate<T> value),
-    @required Result noNeighborhood(NoNeighborhood<T> value),
-    @required Result noRelation(NoRelation<T> value),
+    @required Result notAGender(NotAGender<T> value),
+    @required Result notABarrio(NotABarrio<T> value),
   }) {
     assert(invalidUsername != null);
     assert(shortPassword != null);
     assert(shortRegistrationName != null);
-    assert(noBirthDate != null);
-    assert(noNeighborhood != null);
-    assert(noRelation != null);
+    assert(notAGender != null);
+    assert(notABarrio != null);
     return shortPassword(this);
   }
 
@@ -394,9 +372,8 @@ class _$ShortPassword<T> implements ShortPassword<T> {
     Result invalidUsername(InvalidUsername<T> value),
     Result shortPassword(ShortPassword<T> value),
     Result shortRegistrationName(ShortRegistrationName<T> value),
-    Result noBirthDate(NoBirthDate<T> value),
-    Result noNeighborhood(NoNeighborhood<T> value),
-    Result noRelation(NoRelation<T> value),
+    Result notAGender(NotAGender<T> value),
+    Result notABarrio(NotABarrio<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -483,16 +460,14 @@ class _$ShortRegistrationName<T> implements ShortRegistrationName<T> {
     @required Result invalidUsername(T failedValue),
     @required Result shortPassword(T failedValue),
     @required Result shortRegistrationName(T failedValue),
-    @required Result noBirthDate(T failedValue),
-    @required Result noNeighborhood(T failedValue),
-    @required Result noRelation(T failedValue),
+    @required Result notAGender(T failedValue),
+    @required Result notABarrio(T failedValue),
   }) {
     assert(invalidUsername != null);
     assert(shortPassword != null);
     assert(shortRegistrationName != null);
-    assert(noBirthDate != null);
-    assert(noNeighborhood != null);
-    assert(noRelation != null);
+    assert(notAGender != null);
+    assert(notABarrio != null);
     return shortRegistrationName(failedValue);
   }
 
@@ -502,9 +477,8 @@ class _$ShortRegistrationName<T> implements ShortRegistrationName<T> {
     Result invalidUsername(T failedValue),
     Result shortPassword(T failedValue),
     Result shortRegistrationName(T failedValue),
-    Result noBirthDate(T failedValue),
-    Result noNeighborhood(T failedValue),
-    Result noRelation(T failedValue),
+    Result notAGender(T failedValue),
+    Result notABarrio(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -520,16 +494,14 @@ class _$ShortRegistrationName<T> implements ShortRegistrationName<T> {
     @required Result invalidUsername(InvalidUsername<T> value),
     @required Result shortPassword(ShortPassword<T> value),
     @required Result shortRegistrationName(ShortRegistrationName<T> value),
-    @required Result noBirthDate(NoBirthDate<T> value),
-    @required Result noNeighborhood(NoNeighborhood<T> value),
-    @required Result noRelation(NoRelation<T> value),
+    @required Result notAGender(NotAGender<T> value),
+    @required Result notABarrio(NotABarrio<T> value),
   }) {
     assert(invalidUsername != null);
     assert(shortPassword != null);
     assert(shortRegistrationName != null);
-    assert(noBirthDate != null);
-    assert(noNeighborhood != null);
-    assert(noRelation != null);
+    assert(notAGender != null);
+    assert(notABarrio != null);
     return shortRegistrationName(this);
   }
 
@@ -539,9 +511,8 @@ class _$ShortRegistrationName<T> implements ShortRegistrationName<T> {
     Result invalidUsername(InvalidUsername<T> value),
     Result shortPassword(ShortPassword<T> value),
     Result shortRegistrationName(ShortRegistrationName<T> value),
-    Result noBirthDate(NoBirthDate<T> value),
-    Result noNeighborhood(NoNeighborhood<T> value),
-    Result noRelation(NoRelation<T> value),
+    Result notAGender(NotAGender<T> value),
+    Result notABarrio(NotABarrio<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -562,38 +533,38 @@ abstract class ShortRegistrationName<T> implements ValueFailure<T> {
   $ShortRegistrationNameCopyWith<T, ShortRegistrationName<T>> get copyWith;
 }
 
-abstract class $NoBirthDateCopyWith<T, $Res>
+abstract class $NotAGenderCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
-  factory $NoBirthDateCopyWith(
-          NoBirthDate<T> value, $Res Function(NoBirthDate<T>) then) =
-      _$NoBirthDateCopyWithImpl<T, $Res>;
+  factory $NotAGenderCopyWith(
+          NotAGender<T> value, $Res Function(NotAGender<T>) then) =
+      _$NotAGenderCopyWithImpl<T, $Res>;
   @override
   $Res call({T failedValue});
 }
 
-class _$NoBirthDateCopyWithImpl<T, $Res>
+class _$NotAGenderCopyWithImpl<T, $Res>
     extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements $NoBirthDateCopyWith<T, $Res> {
-  _$NoBirthDateCopyWithImpl(
-      NoBirthDate<T> _value, $Res Function(NoBirthDate<T>) _then)
-      : super(_value, (v) => _then(v as NoBirthDate<T>));
+    implements $NotAGenderCopyWith<T, $Res> {
+  _$NotAGenderCopyWithImpl(
+      NotAGender<T> _value, $Res Function(NotAGender<T>) _then)
+      : super(_value, (v) => _then(v as NotAGender<T>));
 
   @override
-  NoBirthDate<T> get _value => super._value as NoBirthDate<T>;
+  NotAGender<T> get _value => super._value as NotAGender<T>;
 
   @override
   $Res call({
     Object failedValue = freezed,
   }) {
-    return _then(NoBirthDate<T>(
+    return _then(NotAGender<T>(
       failedValue:
           failedValue == freezed ? _value.failedValue : failedValue as T,
     ));
   }
 }
 
-class _$NoBirthDate<T> implements NoBirthDate<T> {
-  const _$NoBirthDate({@required this.failedValue})
+class _$NotAGender<T> implements NotAGender<T> {
+  const _$NotAGender({@required this.failedValue})
       : assert(failedValue != null);
 
   @override
@@ -601,13 +572,13 @@ class _$NoBirthDate<T> implements NoBirthDate<T> {
 
   @override
   String toString() {
-    return 'ValueFailure<$T>.noBirthDate(failedValue: $failedValue)';
+    return 'ValueFailure<$T>.notAGender(failedValue: $failedValue)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is NoBirthDate<T> &&
+        (other is NotAGender<T> &&
             (identical(other.failedValue, failedValue) ||
                 const DeepCollectionEquality()
                     .equals(other.failedValue, failedValue)));
@@ -618,8 +589,8 @@ class _$NoBirthDate<T> implements NoBirthDate<T> {
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
 
   @override
-  $NoBirthDateCopyWith<T, NoBirthDate<T>> get copyWith =>
-      _$NoBirthDateCopyWithImpl<T, NoBirthDate<T>>(this, _$identity);
+  $NotAGenderCopyWith<T, NotAGender<T>> get copyWith =>
+      _$NotAGenderCopyWithImpl<T, NotAGender<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -627,17 +598,15 @@ class _$NoBirthDate<T> implements NoBirthDate<T> {
     @required Result invalidUsername(T failedValue),
     @required Result shortPassword(T failedValue),
     @required Result shortRegistrationName(T failedValue),
-    @required Result noBirthDate(T failedValue),
-    @required Result noNeighborhood(T failedValue),
-    @required Result noRelation(T failedValue),
+    @required Result notAGender(T failedValue),
+    @required Result notABarrio(T failedValue),
   }) {
     assert(invalidUsername != null);
     assert(shortPassword != null);
     assert(shortRegistrationName != null);
-    assert(noBirthDate != null);
-    assert(noNeighborhood != null);
-    assert(noRelation != null);
-    return noBirthDate(failedValue);
+    assert(notAGender != null);
+    assert(notABarrio != null);
+    return notAGender(failedValue);
   }
 
   @override
@@ -646,14 +615,13 @@ class _$NoBirthDate<T> implements NoBirthDate<T> {
     Result invalidUsername(T failedValue),
     Result shortPassword(T failedValue),
     Result shortRegistrationName(T failedValue),
-    Result noBirthDate(T failedValue),
-    Result noNeighborhood(T failedValue),
-    Result noRelation(T failedValue),
+    Result notAGender(T failedValue),
+    Result notABarrio(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
-    if (noBirthDate != null) {
-      return noBirthDate(failedValue);
+    if (notAGender != null) {
+      return notAGender(failedValue);
     }
     return orElse();
   }
@@ -664,17 +632,15 @@ class _$NoBirthDate<T> implements NoBirthDate<T> {
     @required Result invalidUsername(InvalidUsername<T> value),
     @required Result shortPassword(ShortPassword<T> value),
     @required Result shortRegistrationName(ShortRegistrationName<T> value),
-    @required Result noBirthDate(NoBirthDate<T> value),
-    @required Result noNeighborhood(NoNeighborhood<T> value),
-    @required Result noRelation(NoRelation<T> value),
+    @required Result notAGender(NotAGender<T> value),
+    @required Result notABarrio(NotABarrio<T> value),
   }) {
     assert(invalidUsername != null);
     assert(shortPassword != null);
     assert(shortRegistrationName != null);
-    assert(noBirthDate != null);
-    assert(noNeighborhood != null);
-    assert(noRelation != null);
-    return noBirthDate(this);
+    assert(notAGender != null);
+    assert(notABarrio != null);
+    return notAGender(this);
   }
 
   @override
@@ -683,60 +649,59 @@ class _$NoBirthDate<T> implements NoBirthDate<T> {
     Result invalidUsername(InvalidUsername<T> value),
     Result shortPassword(ShortPassword<T> value),
     Result shortRegistrationName(ShortRegistrationName<T> value),
-    Result noBirthDate(NoBirthDate<T> value),
-    Result noNeighborhood(NoNeighborhood<T> value),
-    Result noRelation(NoRelation<T> value),
+    Result notAGender(NotAGender<T> value),
+    Result notABarrio(NotABarrio<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
-    if (noBirthDate != null) {
-      return noBirthDate(this);
+    if (notAGender != null) {
+      return notAGender(this);
     }
     return orElse();
   }
 }
 
-abstract class NoBirthDate<T> implements ValueFailure<T> {
-  const factory NoBirthDate({@required T failedValue}) = _$NoBirthDate<T>;
+abstract class NotAGender<T> implements ValueFailure<T> {
+  const factory NotAGender({@required T failedValue}) = _$NotAGender<T>;
 
   @override
   T get failedValue;
   @override
-  $NoBirthDateCopyWith<T, NoBirthDate<T>> get copyWith;
+  $NotAGenderCopyWith<T, NotAGender<T>> get copyWith;
 }
 
-abstract class $NoNeighborhoodCopyWith<T, $Res>
+abstract class $NotABarrioCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
-  factory $NoNeighborhoodCopyWith(
-          NoNeighborhood<T> value, $Res Function(NoNeighborhood<T>) then) =
-      _$NoNeighborhoodCopyWithImpl<T, $Res>;
+  factory $NotABarrioCopyWith(
+          NotABarrio<T> value, $Res Function(NotABarrio<T>) then) =
+      _$NotABarrioCopyWithImpl<T, $Res>;
   @override
   $Res call({T failedValue});
 }
 
-class _$NoNeighborhoodCopyWithImpl<T, $Res>
+class _$NotABarrioCopyWithImpl<T, $Res>
     extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements $NoNeighborhoodCopyWith<T, $Res> {
-  _$NoNeighborhoodCopyWithImpl(
-      NoNeighborhood<T> _value, $Res Function(NoNeighborhood<T>) _then)
-      : super(_value, (v) => _then(v as NoNeighborhood<T>));
+    implements $NotABarrioCopyWith<T, $Res> {
+  _$NotABarrioCopyWithImpl(
+      NotABarrio<T> _value, $Res Function(NotABarrio<T>) _then)
+      : super(_value, (v) => _then(v as NotABarrio<T>));
 
   @override
-  NoNeighborhood<T> get _value => super._value as NoNeighborhood<T>;
+  NotABarrio<T> get _value => super._value as NotABarrio<T>;
 
   @override
   $Res call({
     Object failedValue = freezed,
   }) {
-    return _then(NoNeighborhood<T>(
+    return _then(NotABarrio<T>(
       failedValue:
           failedValue == freezed ? _value.failedValue : failedValue as T,
     ));
   }
 }
 
-class _$NoNeighborhood<T> implements NoNeighborhood<T> {
-  const _$NoNeighborhood({@required this.failedValue})
+class _$NotABarrio<T> implements NotABarrio<T> {
+  const _$NotABarrio({@required this.failedValue})
       : assert(failedValue != null);
 
   @override
@@ -744,13 +709,13 @@ class _$NoNeighborhood<T> implements NoNeighborhood<T> {
 
   @override
   String toString() {
-    return 'ValueFailure<$T>.noNeighborhood(failedValue: $failedValue)';
+    return 'ValueFailure<$T>.notABarrio(failedValue: $failedValue)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is NoNeighborhood<T> &&
+        (other is NotABarrio<T> &&
             (identical(other.failedValue, failedValue) ||
                 const DeepCollectionEquality()
                     .equals(other.failedValue, failedValue)));
@@ -761,8 +726,8 @@ class _$NoNeighborhood<T> implements NoNeighborhood<T> {
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
 
   @override
-  $NoNeighborhoodCopyWith<T, NoNeighborhood<T>> get copyWith =>
-      _$NoNeighborhoodCopyWithImpl<T, NoNeighborhood<T>>(this, _$identity);
+  $NotABarrioCopyWith<T, NotABarrio<T>> get copyWith =>
+      _$NotABarrioCopyWithImpl<T, NotABarrio<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -770,17 +735,15 @@ class _$NoNeighborhood<T> implements NoNeighborhood<T> {
     @required Result invalidUsername(T failedValue),
     @required Result shortPassword(T failedValue),
     @required Result shortRegistrationName(T failedValue),
-    @required Result noBirthDate(T failedValue),
-    @required Result noNeighborhood(T failedValue),
-    @required Result noRelation(T failedValue),
+    @required Result notAGender(T failedValue),
+    @required Result notABarrio(T failedValue),
   }) {
     assert(invalidUsername != null);
     assert(shortPassword != null);
     assert(shortRegistrationName != null);
-    assert(noBirthDate != null);
-    assert(noNeighborhood != null);
-    assert(noRelation != null);
-    return noNeighborhood(failedValue);
+    assert(notAGender != null);
+    assert(notABarrio != null);
+    return notABarrio(failedValue);
   }
 
   @override
@@ -789,14 +752,13 @@ class _$NoNeighborhood<T> implements NoNeighborhood<T> {
     Result invalidUsername(T failedValue),
     Result shortPassword(T failedValue),
     Result shortRegistrationName(T failedValue),
-    Result noBirthDate(T failedValue),
-    Result noNeighborhood(T failedValue),
-    Result noRelation(T failedValue),
+    Result notAGender(T failedValue),
+    Result notABarrio(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
-    if (noNeighborhood != null) {
-      return noNeighborhood(failedValue);
+    if (notABarrio != null) {
+      return notABarrio(failedValue);
     }
     return orElse();
   }
@@ -807,17 +769,15 @@ class _$NoNeighborhood<T> implements NoNeighborhood<T> {
     @required Result invalidUsername(InvalidUsername<T> value),
     @required Result shortPassword(ShortPassword<T> value),
     @required Result shortRegistrationName(ShortRegistrationName<T> value),
-    @required Result noBirthDate(NoBirthDate<T> value),
-    @required Result noNeighborhood(NoNeighborhood<T> value),
-    @required Result noRelation(NoRelation<T> value),
+    @required Result notAGender(NotAGender<T> value),
+    @required Result notABarrio(NotABarrio<T> value),
   }) {
     assert(invalidUsername != null);
     assert(shortPassword != null);
     assert(shortRegistrationName != null);
-    assert(noBirthDate != null);
-    assert(noNeighborhood != null);
-    assert(noRelation != null);
-    return noNeighborhood(this);
+    assert(notAGender != null);
+    assert(notABarrio != null);
+    return notABarrio(this);
   }
 
   @override
@@ -826,167 +786,23 @@ class _$NoNeighborhood<T> implements NoNeighborhood<T> {
     Result invalidUsername(InvalidUsername<T> value),
     Result shortPassword(ShortPassword<T> value),
     Result shortRegistrationName(ShortRegistrationName<T> value),
-    Result noBirthDate(NoBirthDate<T> value),
-    Result noNeighborhood(NoNeighborhood<T> value),
-    Result noRelation(NoRelation<T> value),
+    Result notAGender(NotAGender<T> value),
+    Result notABarrio(NotABarrio<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
-    if (noNeighborhood != null) {
-      return noNeighborhood(this);
+    if (notABarrio != null) {
+      return notABarrio(this);
     }
     return orElse();
   }
 }
 
-abstract class NoNeighborhood<T> implements ValueFailure<T> {
-  const factory NoNeighborhood({@required T failedValue}) = _$NoNeighborhood<T>;
+abstract class NotABarrio<T> implements ValueFailure<T> {
+  const factory NotABarrio({@required T failedValue}) = _$NotABarrio<T>;
 
   @override
   T get failedValue;
   @override
-  $NoNeighborhoodCopyWith<T, NoNeighborhood<T>> get copyWith;
-}
-
-abstract class $NoRelationCopyWith<T, $Res>
-    implements $ValueFailureCopyWith<T, $Res> {
-  factory $NoRelationCopyWith(
-          NoRelation<T> value, $Res Function(NoRelation<T>) then) =
-      _$NoRelationCopyWithImpl<T, $Res>;
-  @override
-  $Res call({T failedValue});
-}
-
-class _$NoRelationCopyWithImpl<T, $Res>
-    extends _$ValueFailureCopyWithImpl<T, $Res>
-    implements $NoRelationCopyWith<T, $Res> {
-  _$NoRelationCopyWithImpl(
-      NoRelation<T> _value, $Res Function(NoRelation<T>) _then)
-      : super(_value, (v) => _then(v as NoRelation<T>));
-
-  @override
-  NoRelation<T> get _value => super._value as NoRelation<T>;
-
-  @override
-  $Res call({
-    Object failedValue = freezed,
-  }) {
-    return _then(NoRelation<T>(
-      failedValue:
-          failedValue == freezed ? _value.failedValue : failedValue as T,
-    ));
-  }
-}
-
-class _$NoRelation<T> implements NoRelation<T> {
-  const _$NoRelation({@required this.failedValue})
-      : assert(failedValue != null);
-
-  @override
-  final T failedValue;
-
-  @override
-  String toString() {
-    return 'ValueFailure<$T>.noRelation(failedValue: $failedValue)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is NoRelation<T> &&
-            (identical(other.failedValue, failedValue) ||
-                const DeepCollectionEquality()
-                    .equals(other.failedValue, failedValue)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
-
-  @override
-  $NoRelationCopyWith<T, NoRelation<T>> get copyWith =>
-      _$NoRelationCopyWithImpl<T, NoRelation<T>>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result invalidUsername(T failedValue),
-    @required Result shortPassword(T failedValue),
-    @required Result shortRegistrationName(T failedValue),
-    @required Result noBirthDate(T failedValue),
-    @required Result noNeighborhood(T failedValue),
-    @required Result noRelation(T failedValue),
-  }) {
-    assert(invalidUsername != null);
-    assert(shortPassword != null);
-    assert(shortRegistrationName != null);
-    assert(noBirthDate != null);
-    assert(noNeighborhood != null);
-    assert(noRelation != null);
-    return noRelation(failedValue);
-  }
-
-  @override
-  @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result invalidUsername(T failedValue),
-    Result shortPassword(T failedValue),
-    Result shortRegistrationName(T failedValue),
-    Result noBirthDate(T failedValue),
-    Result noNeighborhood(T failedValue),
-    Result noRelation(T failedValue),
-    @required Result orElse(),
-  }) {
-    assert(orElse != null);
-    if (noRelation != null) {
-      return noRelation(failedValue);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result invalidUsername(InvalidUsername<T> value),
-    @required Result shortPassword(ShortPassword<T> value),
-    @required Result shortRegistrationName(ShortRegistrationName<T> value),
-    @required Result noBirthDate(NoBirthDate<T> value),
-    @required Result noNeighborhood(NoNeighborhood<T> value),
-    @required Result noRelation(NoRelation<T> value),
-  }) {
-    assert(invalidUsername != null);
-    assert(shortPassword != null);
-    assert(shortRegistrationName != null);
-    assert(noBirthDate != null);
-    assert(noNeighborhood != null);
-    assert(noRelation != null);
-    return noRelation(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result invalidUsername(InvalidUsername<T> value),
-    Result shortPassword(ShortPassword<T> value),
-    Result shortRegistrationName(ShortRegistrationName<T> value),
-    Result noBirthDate(NoBirthDate<T> value),
-    Result noNeighborhood(NoNeighborhood<T> value),
-    Result noRelation(NoRelation<T> value),
-    @required Result orElse(),
-  }) {
-    assert(orElse != null);
-    if (noRelation != null) {
-      return noRelation(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class NoRelation<T> implements ValueFailure<T> {
-  const factory NoRelation({@required T failedValue}) = _$NoRelation<T>;
-
-  @override
-  T get failedValue;
-  @override
-  $NoRelationCopyWith<T, NoRelation<T>> get copyWith;
+  $NotABarrioCopyWith<T, NotABarrio<T>> get copyWith;
 }

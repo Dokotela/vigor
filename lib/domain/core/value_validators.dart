@@ -25,28 +25,32 @@ Either<ValueFailure<String>, String> validateRegistrationName(String input) {
   }
 }
 
-Either<ValueFailure<String>, DateTime> noBirthDate(DateTime input) {
-  if (input == null) {
+Either<ValueFailure<String>, String> validateRegistrationGender(String input) {
+  if (includedInList(input, [
+    'male',
+    'female',
+  ])) {
     return right(input);
   } else {
-    return left(ValueFailure.noBirthDate(failedValue: 'No birthdate provided'));
+    return left(ValueFailure.notAGender(failedValue: input));
   }
 }
 
-Either<ValueFailure<String>, DateTime> noNeighborhood(DateTime input) {
-  if (input == null) {
+Either<ValueFailure<String>, String> validateRegistrationBarrio(String input) {
+  if (includedInList(input, [
+    'Filiu',
+    'La 41',
+    'Carretera',
+    'Villa Verde',
+    'Cachipero',
+    'Puerto Rico',
+    'Kilombo'
+  ])) {
     return right(input);
   } else {
-    return left(
-        ValueFailure.noNeighborhood(failedValue: 'No neighborhood given'));
+    return left(ValueFailure.notABarrio(failedValue: input));
   }
 }
 
-Either<ValueFailure<String>, DateTime> noRelation(DateTime input) {
-  if (input == null) {
-    return right(input);
-  } else {
-    return left(
-        ValueFailure.noRelation(failedValue: 'No relationship specified'));
-  }
-}
+bool includedInList(String input, List<String> itemList) =>
+    itemList.contains(input);

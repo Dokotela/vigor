@@ -17,3 +17,31 @@ class RegistrationName extends ValueObject<String> {
 
   const RegistrationName._(this.value);
 }
+
+class RegistrationGender extends ValueObject<String> {
+  @override
+  final Either<ValueFailure<String>, String> value;
+
+  factory RegistrationGender(String input) {
+    assert(input != null);
+    return RegistrationGender._(
+      validateRegistrationGender(input),
+    );
+  }
+
+  const RegistrationGender._(this.value);
+}
+
+class RegistrationBarrio extends ValueObject<String> {
+  @override
+  final Either<ValueFailure<String>, String> value;
+
+  factory RegistrationBarrio(String input) {
+    assert(input != null);
+    return RegistrationBarrio._(
+      validateRegistrationBarrio(input),
+    );
+  }
+
+  const RegistrationBarrio._(this.value);
+}
