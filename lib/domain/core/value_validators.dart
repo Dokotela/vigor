@@ -25,17 +25,6 @@ Either<ValueFailure<String>, String> validateRegistrationName(String input) {
   }
 }
 
-Either<ValueFailure<String>, DateTime> validateRegistrationBirthDate(
-    DateTime input) {
-  if (input.isBefore(DateTime.now()) ||
-      input.isAtSameMomentAs(DateTime.now())) {
-    return right(input);
-  } else {
-    return left(ValueFailure.shortRegistrationName(
-        failedValue: input.toIso8601String()));
-  }
-}
-
 Either<ValueFailure<String>, String> validateRegistrationGender(String input) {
   if (includedInList(input, [
     'male',
@@ -44,6 +33,17 @@ Either<ValueFailure<String>, String> validateRegistrationGender(String input) {
     return right(input);
   } else {
     return left(ValueFailure.notAGender(failedValue: input));
+  }
+}
+
+Either<ValueFailure<String>, DateTime> validateRegistrationBirthDate(
+    DateTime input) {
+  if (input.isBefore(DateTime.now()) ||
+      input.isAtSameMomentAs(DateTime.now())) {
+    return right(input);
+  } else {
+    return left(ValueFailure.shortRegistrationName(
+        failedValue: input.toIso8601String()));
   }
 }
 

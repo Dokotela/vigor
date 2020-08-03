@@ -12,7 +12,7 @@ abstract class IPatientRegistrationFacade {
     @required RegistrationName family,
     @required RegistrationName given,
     @required RegistrationGender gender,
-    @required DateTime birthDate,
+    @required RegistrationBirthDate birthDate,
     @required RegistrationBarrio barrio,
   });
   Future<Either<RegistrationFailure, Unit>> update({
@@ -20,7 +20,7 @@ abstract class IPatientRegistrationFacade {
     @required RegistrationName family,
     @required RegistrationName given,
     @required RegistrationGender gender,
-    @required DateTime birthDate,
+    @required RegistrationBirthDate birthDate,
     @required RegistrationBarrio barrio,
   });
 }

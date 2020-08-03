@@ -247,7 +247,7 @@ class _$PatientRegistrationStateTearOff {
 
 // ignore: unused_element
   _RegisterPatient call(
-      {Patient currentPatient,
+      {Patient patient,
       @required
           RegistrationName family,
       @required
@@ -255,7 +255,7 @@ class _$PatientRegistrationStateTearOff {
       @required
           RegistrationGender gender,
       @required
-          DateTime birthDate,
+          RegistrationBirthDate birthDate,
       @required
           RegistrationBarrio barrio,
       @required
@@ -266,7 +266,7 @@ class _$PatientRegistrationStateTearOff {
           Option<Either<RegistrationFailure, Unit>>
               registrationFailureOrSuccessOption}) {
     return _RegisterPatient(
-      currentPatient: currentPatient,
+      patient: patient,
       family: family,
       given: given,
       gender: gender,
@@ -283,11 +283,11 @@ class _$PatientRegistrationStateTearOff {
 const $PatientRegistrationState = _$PatientRegistrationStateTearOff();
 
 mixin _$PatientRegistrationState {
-  Patient get currentPatient;
+  Patient get patient;
   RegistrationName get family;
   RegistrationName get given;
   RegistrationGender get gender;
-  DateTime get birthDate;
+  RegistrationBirthDate get birthDate;
   RegistrationBarrio get barrio;
   bool get isSubmitting;
   bool get showErrorMessages;
@@ -302,18 +302,18 @@ abstract class $PatientRegistrationStateCopyWith<$Res> {
           $Res Function(PatientRegistrationState) then) =
       _$PatientRegistrationStateCopyWithImpl<$Res>;
   $Res call(
-      {Patient currentPatient,
+      {Patient patient,
       RegistrationName family,
       RegistrationName given,
       RegistrationGender gender,
-      DateTime birthDate,
+      RegistrationBirthDate birthDate,
       RegistrationBarrio barrio,
       bool isSubmitting,
       bool showErrorMessages,
       Option<Either<RegistrationFailure, Unit>>
           registrationFailureOrSuccessOption});
 
-  $PatientCopyWith<$Res> get currentPatient;
+  $PatientCopyWith<$Res> get patient;
 }
 
 class _$PatientRegistrationStateCopyWithImpl<$Res>
@@ -326,7 +326,7 @@ class _$PatientRegistrationStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object currentPatient = freezed,
+    Object patient = freezed,
     Object family = freezed,
     Object given = freezed,
     Object gender = freezed,
@@ -337,14 +337,13 @@ class _$PatientRegistrationStateCopyWithImpl<$Res>
     Object registrationFailureOrSuccessOption = freezed,
   }) {
     return _then(_value.copyWith(
-      currentPatient: currentPatient == freezed
-          ? _value.currentPatient
-          : currentPatient as Patient,
+      patient: patient == freezed ? _value.patient : patient as Patient,
       family: family == freezed ? _value.family : family as RegistrationName,
       given: given == freezed ? _value.given : given as RegistrationName,
       gender: gender == freezed ? _value.gender : gender as RegistrationGender,
-      birthDate:
-          birthDate == freezed ? _value.birthDate : birthDate as DateTime,
+      birthDate: birthDate == freezed
+          ? _value.birthDate
+          : birthDate as RegistrationBirthDate,
       barrio: barrio == freezed ? _value.barrio : barrio as RegistrationBarrio,
       isSubmitting:
           isSubmitting == freezed ? _value.isSubmitting : isSubmitting as bool,
@@ -360,12 +359,12 @@ class _$PatientRegistrationStateCopyWithImpl<$Res>
   }
 
   @override
-  $PatientCopyWith<$Res> get currentPatient {
-    if (_value.currentPatient == null) {
+  $PatientCopyWith<$Res> get patient {
+    if (_value.patient == null) {
       return null;
     }
-    return $PatientCopyWith<$Res>(_value.currentPatient, (value) {
-      return _then(_value.copyWith(currentPatient: value));
+    return $PatientCopyWith<$Res>(_value.patient, (value) {
+      return _then(_value.copyWith(patient: value));
     });
   }
 }
@@ -377,11 +376,11 @@ abstract class _$RegisterPatientCopyWith<$Res>
       __$RegisterPatientCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Patient currentPatient,
+      {Patient patient,
       RegistrationName family,
       RegistrationName given,
       RegistrationGender gender,
-      DateTime birthDate,
+      RegistrationBirthDate birthDate,
       RegistrationBarrio barrio,
       bool isSubmitting,
       bool showErrorMessages,
@@ -389,7 +388,7 @@ abstract class _$RegisterPatientCopyWith<$Res>
           registrationFailureOrSuccessOption});
 
   @override
-  $PatientCopyWith<$Res> get currentPatient;
+  $PatientCopyWith<$Res> get patient;
 }
 
 class __$RegisterPatientCopyWithImpl<$Res>
@@ -404,7 +403,7 @@ class __$RegisterPatientCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object currentPatient = freezed,
+    Object patient = freezed,
     Object family = freezed,
     Object given = freezed,
     Object gender = freezed,
@@ -415,14 +414,13 @@ class __$RegisterPatientCopyWithImpl<$Res>
     Object registrationFailureOrSuccessOption = freezed,
   }) {
     return _then(_RegisterPatient(
-      currentPatient: currentPatient == freezed
-          ? _value.currentPatient
-          : currentPatient as Patient,
+      patient: patient == freezed ? _value.patient : patient as Patient,
       family: family == freezed ? _value.family : family as RegistrationName,
       given: given == freezed ? _value.given : given as RegistrationName,
       gender: gender == freezed ? _value.gender : gender as RegistrationGender,
-      birthDate:
-          birthDate == freezed ? _value.birthDate : birthDate as DateTime,
+      birthDate: birthDate == freezed
+          ? _value.birthDate
+          : birthDate as RegistrationBirthDate,
       barrio: barrio == freezed ? _value.barrio : barrio as RegistrationBarrio,
       isSubmitting:
           isSubmitting == freezed ? _value.isSubmitting : isSubmitting as bool,
@@ -440,7 +438,7 @@ class __$RegisterPatientCopyWithImpl<$Res>
 
 class _$_RegisterPatient implements _RegisterPatient {
   const _$_RegisterPatient(
-      {this.currentPatient,
+      {this.patient,
       @required this.family,
       @required this.given,
       @required this.gender,
@@ -459,7 +457,7 @@ class _$_RegisterPatient implements _RegisterPatient {
         assert(registrationFailureOrSuccessOption != null);
 
   @override
-  final Patient currentPatient;
+  final Patient patient;
   @override
   final RegistrationName family;
   @override
@@ -467,7 +465,7 @@ class _$_RegisterPatient implements _RegisterPatient {
   @override
   final RegistrationGender gender;
   @override
-  final DateTime birthDate;
+  final RegistrationBirthDate birthDate;
   @override
   final RegistrationBarrio barrio;
   @override
@@ -480,16 +478,16 @@ class _$_RegisterPatient implements _RegisterPatient {
 
   @override
   String toString() {
-    return 'PatientRegistrationState(currentPatient: $currentPatient, family: $family, given: $given, gender: $gender, birthDate: $birthDate, barrio: $barrio, isSubmitting: $isSubmitting, showErrorMessages: $showErrorMessages, registrationFailureOrSuccessOption: $registrationFailureOrSuccessOption)';
+    return 'PatientRegistrationState(patient: $patient, family: $family, given: $given, gender: $gender, birthDate: $birthDate, barrio: $barrio, isSubmitting: $isSubmitting, showErrorMessages: $showErrorMessages, registrationFailureOrSuccessOption: $registrationFailureOrSuccessOption)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _RegisterPatient &&
-            (identical(other.currentPatient, currentPatient) ||
+            (identical(other.patient, patient) ||
                 const DeepCollectionEquality()
-                    .equals(other.currentPatient, currentPatient)) &&
+                    .equals(other.patient, patient)) &&
             (identical(other.family, family) ||
                 const DeepCollectionEquality().equals(other.family, family)) &&
             (identical(other.given, given) ||
@@ -517,7 +515,7 @@ class _$_RegisterPatient implements _RegisterPatient {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(currentPatient) ^
+      const DeepCollectionEquality().hash(patient) ^
       const DeepCollectionEquality().hash(family) ^
       const DeepCollectionEquality().hash(given) ^
       const DeepCollectionEquality().hash(gender) ^
@@ -534,7 +532,7 @@ class _$_RegisterPatient implements _RegisterPatient {
 
 abstract class _RegisterPatient implements PatientRegistrationState {
   const factory _RegisterPatient(
-      {Patient currentPatient,
+      {Patient patient,
       @required
           RegistrationName family,
       @required
@@ -542,7 +540,7 @@ abstract class _RegisterPatient implements PatientRegistrationState {
       @required
           RegistrationGender gender,
       @required
-          DateTime birthDate,
+          RegistrationBirthDate birthDate,
       @required
           RegistrationBarrio barrio,
       @required
@@ -554,7 +552,7 @@ abstract class _RegisterPatient implements PatientRegistrationState {
               registrationFailureOrSuccessOption}) = _$_RegisterPatient;
 
   @override
-  Patient get currentPatient;
+  Patient get patient;
   @override
   RegistrationName get family;
   @override
@@ -562,7 +560,7 @@ abstract class _RegisterPatient implements PatientRegistrationState {
   @override
   RegistrationGender get gender;
   @override
-  DateTime get birthDate;
+  RegistrationBirthDate get birthDate;
   @override
   RegistrationBarrio get barrio;
   @override
