@@ -46,6 +46,13 @@ class _$ValueFailureTearOff {
       failedValue: failedValue,
     );
   }
+
+// ignore: unused_element
+  NotARelation<T> notARelation<T>({@required T failedValue}) {
+    return NotARelation<T>(
+      failedValue: failedValue,
+    );
+  }
 }
 
 // ignore: unused_element
@@ -61,6 +68,7 @@ mixin _$ValueFailure<T> {
     @required Result shortRegistrationName(T failedValue),
     @required Result notAGender(T failedValue),
     @required Result notABarrio(T failedValue),
+    @required Result notARelation(T failedValue),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
@@ -69,6 +77,7 @@ mixin _$ValueFailure<T> {
     Result shortRegistrationName(T failedValue),
     Result notAGender(T failedValue),
     Result notABarrio(T failedValue),
+    Result notARelation(T failedValue),
     @required Result orElse(),
   });
   @optionalTypeArgs
@@ -78,6 +87,7 @@ mixin _$ValueFailure<T> {
     @required Result shortRegistrationName(ShortRegistrationName<T> value),
     @required Result notAGender(NotAGender<T> value),
     @required Result notABarrio(NotABarrio<T> value),
+    @required Result notARelation(NotARelation<T> value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
@@ -86,6 +96,7 @@ mixin _$ValueFailure<T> {
     Result shortRegistrationName(ShortRegistrationName<T> value),
     Result notAGender(NotAGender<T> value),
     Result notABarrio(NotABarrio<T> value),
+    Result notARelation(NotARelation<T> value),
     @required Result orElse(),
   });
 
@@ -185,12 +196,14 @@ class _$InvalidUsername<T> implements InvalidUsername<T> {
     @required Result shortRegistrationName(T failedValue),
     @required Result notAGender(T failedValue),
     @required Result notABarrio(T failedValue),
+    @required Result notARelation(T failedValue),
   }) {
     assert(invalidUsername != null);
     assert(shortPassword != null);
     assert(shortRegistrationName != null);
     assert(notAGender != null);
     assert(notABarrio != null);
+    assert(notARelation != null);
     return invalidUsername(failedValue);
   }
 
@@ -202,6 +215,7 @@ class _$InvalidUsername<T> implements InvalidUsername<T> {
     Result shortRegistrationName(T failedValue),
     Result notAGender(T failedValue),
     Result notABarrio(T failedValue),
+    Result notARelation(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -219,12 +233,14 @@ class _$InvalidUsername<T> implements InvalidUsername<T> {
     @required Result shortRegistrationName(ShortRegistrationName<T> value),
     @required Result notAGender(NotAGender<T> value),
     @required Result notABarrio(NotABarrio<T> value),
+    @required Result notARelation(NotARelation<T> value),
   }) {
     assert(invalidUsername != null);
     assert(shortPassword != null);
     assert(shortRegistrationName != null);
     assert(notAGender != null);
     assert(notABarrio != null);
+    assert(notARelation != null);
     return invalidUsername(this);
   }
 
@@ -236,6 +252,7 @@ class _$InvalidUsername<T> implements InvalidUsername<T> {
     Result shortRegistrationName(ShortRegistrationName<T> value),
     Result notAGender(NotAGender<T> value),
     Result notABarrio(NotABarrio<T> value),
+    Result notARelation(NotARelation<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -323,12 +340,14 @@ class _$ShortPassword<T> implements ShortPassword<T> {
     @required Result shortRegistrationName(T failedValue),
     @required Result notAGender(T failedValue),
     @required Result notABarrio(T failedValue),
+    @required Result notARelation(T failedValue),
   }) {
     assert(invalidUsername != null);
     assert(shortPassword != null);
     assert(shortRegistrationName != null);
     assert(notAGender != null);
     assert(notABarrio != null);
+    assert(notARelation != null);
     return shortPassword(failedValue);
   }
 
@@ -340,6 +359,7 @@ class _$ShortPassword<T> implements ShortPassword<T> {
     Result shortRegistrationName(T failedValue),
     Result notAGender(T failedValue),
     Result notABarrio(T failedValue),
+    Result notARelation(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -357,12 +377,14 @@ class _$ShortPassword<T> implements ShortPassword<T> {
     @required Result shortRegistrationName(ShortRegistrationName<T> value),
     @required Result notAGender(NotAGender<T> value),
     @required Result notABarrio(NotABarrio<T> value),
+    @required Result notARelation(NotARelation<T> value),
   }) {
     assert(invalidUsername != null);
     assert(shortPassword != null);
     assert(shortRegistrationName != null);
     assert(notAGender != null);
     assert(notABarrio != null);
+    assert(notARelation != null);
     return shortPassword(this);
   }
 
@@ -374,6 +396,7 @@ class _$ShortPassword<T> implements ShortPassword<T> {
     Result shortRegistrationName(ShortRegistrationName<T> value),
     Result notAGender(NotAGender<T> value),
     Result notABarrio(NotABarrio<T> value),
+    Result notARelation(NotARelation<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -462,12 +485,14 @@ class _$ShortRegistrationName<T> implements ShortRegistrationName<T> {
     @required Result shortRegistrationName(T failedValue),
     @required Result notAGender(T failedValue),
     @required Result notABarrio(T failedValue),
+    @required Result notARelation(T failedValue),
   }) {
     assert(invalidUsername != null);
     assert(shortPassword != null);
     assert(shortRegistrationName != null);
     assert(notAGender != null);
     assert(notABarrio != null);
+    assert(notARelation != null);
     return shortRegistrationName(failedValue);
   }
 
@@ -479,6 +504,7 @@ class _$ShortRegistrationName<T> implements ShortRegistrationName<T> {
     Result shortRegistrationName(T failedValue),
     Result notAGender(T failedValue),
     Result notABarrio(T failedValue),
+    Result notARelation(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -496,12 +522,14 @@ class _$ShortRegistrationName<T> implements ShortRegistrationName<T> {
     @required Result shortRegistrationName(ShortRegistrationName<T> value),
     @required Result notAGender(NotAGender<T> value),
     @required Result notABarrio(NotABarrio<T> value),
+    @required Result notARelation(NotARelation<T> value),
   }) {
     assert(invalidUsername != null);
     assert(shortPassword != null);
     assert(shortRegistrationName != null);
     assert(notAGender != null);
     assert(notABarrio != null);
+    assert(notARelation != null);
     return shortRegistrationName(this);
   }
 
@@ -513,6 +541,7 @@ class _$ShortRegistrationName<T> implements ShortRegistrationName<T> {
     Result shortRegistrationName(ShortRegistrationName<T> value),
     Result notAGender(NotAGender<T> value),
     Result notABarrio(NotABarrio<T> value),
+    Result notARelation(NotARelation<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -600,12 +629,14 @@ class _$NotAGender<T> implements NotAGender<T> {
     @required Result shortRegistrationName(T failedValue),
     @required Result notAGender(T failedValue),
     @required Result notABarrio(T failedValue),
+    @required Result notARelation(T failedValue),
   }) {
     assert(invalidUsername != null);
     assert(shortPassword != null);
     assert(shortRegistrationName != null);
     assert(notAGender != null);
     assert(notABarrio != null);
+    assert(notARelation != null);
     return notAGender(failedValue);
   }
 
@@ -617,6 +648,7 @@ class _$NotAGender<T> implements NotAGender<T> {
     Result shortRegistrationName(T failedValue),
     Result notAGender(T failedValue),
     Result notABarrio(T failedValue),
+    Result notARelation(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -634,12 +666,14 @@ class _$NotAGender<T> implements NotAGender<T> {
     @required Result shortRegistrationName(ShortRegistrationName<T> value),
     @required Result notAGender(NotAGender<T> value),
     @required Result notABarrio(NotABarrio<T> value),
+    @required Result notARelation(NotARelation<T> value),
   }) {
     assert(invalidUsername != null);
     assert(shortPassword != null);
     assert(shortRegistrationName != null);
     assert(notAGender != null);
     assert(notABarrio != null);
+    assert(notARelation != null);
     return notAGender(this);
   }
 
@@ -651,6 +685,7 @@ class _$NotAGender<T> implements NotAGender<T> {
     Result shortRegistrationName(ShortRegistrationName<T> value),
     Result notAGender(NotAGender<T> value),
     Result notABarrio(NotABarrio<T> value),
+    Result notARelation(NotARelation<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -737,12 +772,14 @@ class _$NotABarrio<T> implements NotABarrio<T> {
     @required Result shortRegistrationName(T failedValue),
     @required Result notAGender(T failedValue),
     @required Result notABarrio(T failedValue),
+    @required Result notARelation(T failedValue),
   }) {
     assert(invalidUsername != null);
     assert(shortPassword != null);
     assert(shortRegistrationName != null);
     assert(notAGender != null);
     assert(notABarrio != null);
+    assert(notARelation != null);
     return notABarrio(failedValue);
   }
 
@@ -754,6 +791,7 @@ class _$NotABarrio<T> implements NotABarrio<T> {
     Result shortRegistrationName(T failedValue),
     Result notAGender(T failedValue),
     Result notABarrio(T failedValue),
+    Result notARelation(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -771,12 +809,14 @@ class _$NotABarrio<T> implements NotABarrio<T> {
     @required Result shortRegistrationName(ShortRegistrationName<T> value),
     @required Result notAGender(NotAGender<T> value),
     @required Result notABarrio(NotABarrio<T> value),
+    @required Result notARelation(NotARelation<T> value),
   }) {
     assert(invalidUsername != null);
     assert(shortPassword != null);
     assert(shortRegistrationName != null);
     assert(notAGender != null);
     assert(notABarrio != null);
+    assert(notARelation != null);
     return notABarrio(this);
   }
 
@@ -788,6 +828,7 @@ class _$NotABarrio<T> implements NotABarrio<T> {
     Result shortRegistrationName(ShortRegistrationName<T> value),
     Result notAGender(NotAGender<T> value),
     Result notABarrio(NotABarrio<T> value),
+    Result notARelation(NotARelation<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -805,4 +846,147 @@ abstract class NotABarrio<T> implements ValueFailure<T> {
   T get failedValue;
   @override
   $NotABarrioCopyWith<T, NotABarrio<T>> get copyWith;
+}
+
+abstract class $NotARelationCopyWith<T, $Res>
+    implements $ValueFailureCopyWith<T, $Res> {
+  factory $NotARelationCopyWith(
+          NotARelation<T> value, $Res Function(NotARelation<T>) then) =
+      _$NotARelationCopyWithImpl<T, $Res>;
+  @override
+  $Res call({T failedValue});
+}
+
+class _$NotARelationCopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res>
+    implements $NotARelationCopyWith<T, $Res> {
+  _$NotARelationCopyWithImpl(
+      NotARelation<T> _value, $Res Function(NotARelation<T>) _then)
+      : super(_value, (v) => _then(v as NotARelation<T>));
+
+  @override
+  NotARelation<T> get _value => super._value as NotARelation<T>;
+
+  @override
+  $Res call({
+    Object failedValue = freezed,
+  }) {
+    return _then(NotARelation<T>(
+      failedValue:
+          failedValue == freezed ? _value.failedValue : failedValue as T,
+    ));
+  }
+}
+
+class _$NotARelation<T> implements NotARelation<T> {
+  const _$NotARelation({@required this.failedValue})
+      : assert(failedValue != null);
+
+  @override
+  final T failedValue;
+
+  @override
+  String toString() {
+    return 'ValueFailure<$T>.notARelation(failedValue: $failedValue)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is NotARelation<T> &&
+            (identical(other.failedValue, failedValue) ||
+                const DeepCollectionEquality()
+                    .equals(other.failedValue, failedValue)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
+
+  @override
+  $NotARelationCopyWith<T, NotARelation<T>> get copyWith =>
+      _$NotARelationCopyWithImpl<T, NotARelation<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result invalidUsername(T failedValue),
+    @required Result shortPassword(T failedValue),
+    @required Result shortRegistrationName(T failedValue),
+    @required Result notAGender(T failedValue),
+    @required Result notABarrio(T failedValue),
+    @required Result notARelation(T failedValue),
+  }) {
+    assert(invalidUsername != null);
+    assert(shortPassword != null);
+    assert(shortRegistrationName != null);
+    assert(notAGender != null);
+    assert(notABarrio != null);
+    assert(notARelation != null);
+    return notARelation(failedValue);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result invalidUsername(T failedValue),
+    Result shortPassword(T failedValue),
+    Result shortRegistrationName(T failedValue),
+    Result notAGender(T failedValue),
+    Result notABarrio(T failedValue),
+    Result notARelation(T failedValue),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (notARelation != null) {
+      return notARelation(failedValue);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result invalidUsername(InvalidUsername<T> value),
+    @required Result shortPassword(ShortPassword<T> value),
+    @required Result shortRegistrationName(ShortRegistrationName<T> value),
+    @required Result notAGender(NotAGender<T> value),
+    @required Result notABarrio(NotABarrio<T> value),
+    @required Result notARelation(NotARelation<T> value),
+  }) {
+    assert(invalidUsername != null);
+    assert(shortPassword != null);
+    assert(shortRegistrationName != null);
+    assert(notAGender != null);
+    assert(notABarrio != null);
+    assert(notARelation != null);
+    return notARelation(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result invalidUsername(InvalidUsername<T> value),
+    Result shortPassword(ShortPassword<T> value),
+    Result shortRegistrationName(ShortRegistrationName<T> value),
+    Result notAGender(NotAGender<T> value),
+    Result notABarrio(NotABarrio<T> value),
+    Result notARelation(NotARelation<T> value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (notARelation != null) {
+      return notARelation(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class NotARelation<T> implements ValueFailure<T> {
+  const factory NotARelation({@required T failedValue}) = _$NotARelation<T>;
+
+  @override
+  T get failedValue;
+  @override
+  $NotARelationCopyWith<T, NotARelation<T>> get copyWith;
 }

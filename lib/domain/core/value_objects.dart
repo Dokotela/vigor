@@ -6,7 +6,7 @@ import 'failures.dart';
 @immutable
 abstract class ValueObject<T> {
   const ValueObject();
-  Either<ValueFailure<T>, T> get value;
+  Either<ValueFailure<String>, T> get value;
 
   bool isValid() => value.isRight();
 

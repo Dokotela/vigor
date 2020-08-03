@@ -13,23 +13,13 @@ class _$RegistrationFailureTearOff {
   const _$RegistrationFailureTearOff();
 
 // ignore: unused_element
-  ShortRegistrationName shortRegistrationName() {
-    return const ShortRegistrationName();
+  UnableToWriteDB unableToWriteDB() {
+    return const UnableToWriteDB();
   }
 
 // ignore: unused_element
-  NoBirthDate noBirthDate() {
-    return const NoBirthDate();
-  }
-
-// ignore: unused_element
-  NoNeighborhood noNeighborhood() {
-    return const NoNeighborhood();
-  }
-
-// ignore: unused_element
-  NoRelation noRelation() {
-    return const NoRelation();
+  MatchesAlreadyRegistered matchesAlreadyRegistered() {
+    return const MatchesAlreadyRegistered();
   }
 }
 
@@ -39,32 +29,24 @@ const $RegistrationFailure = _$RegistrationFailureTearOff();
 mixin _$RegistrationFailure {
   @optionalTypeArgs
   Result when<Result extends Object>({
-    @required Result shortRegistrationName(),
-    @required Result noBirthDate(),
-    @required Result noNeighborhood(),
-    @required Result noRelation(),
+    @required Result unableToWriteDB(),
+    @required Result matchesAlreadyRegistered(),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
-    Result shortRegistrationName(),
-    Result noBirthDate(),
-    Result noNeighborhood(),
-    Result noRelation(),
+    Result unableToWriteDB(),
+    Result matchesAlreadyRegistered(),
     @required Result orElse(),
   });
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result shortRegistrationName(ShortRegistrationName value),
-    @required Result noBirthDate(NoBirthDate value),
-    @required Result noNeighborhood(NoNeighborhood value),
-    @required Result noRelation(NoRelation value),
+    @required Result unableToWriteDB(UnableToWriteDB value),
+    @required Result matchesAlreadyRegistered(MatchesAlreadyRegistered value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
-    Result shortRegistrationName(ShortRegistrationName value),
-    Result noBirthDate(NoBirthDate value),
-    Result noNeighborhood(NoNeighborhood value),
-    Result noRelation(NoRelation value),
+    Result unableToWriteDB(UnableToWriteDB value),
+    Result matchesAlreadyRegistered(MatchesAlreadyRegistered value),
     @required Result orElse(),
   });
 }
@@ -84,34 +66,34 @@ class _$RegistrationFailureCopyWithImpl<$Res>
   final $Res Function(RegistrationFailure) _then;
 }
 
-abstract class $ShortRegistrationNameCopyWith<$Res> {
-  factory $ShortRegistrationNameCopyWith(ShortRegistrationName value,
-          $Res Function(ShortRegistrationName) then) =
-      _$ShortRegistrationNameCopyWithImpl<$Res>;
+abstract class $UnableToWriteDBCopyWith<$Res> {
+  factory $UnableToWriteDBCopyWith(
+          UnableToWriteDB value, $Res Function(UnableToWriteDB) then) =
+      _$UnableToWriteDBCopyWithImpl<$Res>;
 }
 
-class _$ShortRegistrationNameCopyWithImpl<$Res>
+class _$UnableToWriteDBCopyWithImpl<$Res>
     extends _$RegistrationFailureCopyWithImpl<$Res>
-    implements $ShortRegistrationNameCopyWith<$Res> {
-  _$ShortRegistrationNameCopyWithImpl(
-      ShortRegistrationName _value, $Res Function(ShortRegistrationName) _then)
-      : super(_value, (v) => _then(v as ShortRegistrationName));
+    implements $UnableToWriteDBCopyWith<$Res> {
+  _$UnableToWriteDBCopyWithImpl(
+      UnableToWriteDB _value, $Res Function(UnableToWriteDB) _then)
+      : super(_value, (v) => _then(v as UnableToWriteDB));
 
   @override
-  ShortRegistrationName get _value => super._value as ShortRegistrationName;
+  UnableToWriteDB get _value => super._value as UnableToWriteDB;
 }
 
-class _$ShortRegistrationName implements ShortRegistrationName {
-  const _$ShortRegistrationName();
+class _$UnableToWriteDB implements UnableToWriteDB {
+  const _$UnableToWriteDB();
 
   @override
   String toString() {
-    return 'RegistrationFailure.shortRegistrationName()';
+    return 'RegistrationFailure.unableToWriteDB()';
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is ShortRegistrationName);
+    return identical(this, other) || (other is UnableToWriteDB);
   }
 
   @override
@@ -120,30 +102,24 @@ class _$ShortRegistrationName implements ShortRegistrationName {
   @override
   @optionalTypeArgs
   Result when<Result extends Object>({
-    @required Result shortRegistrationName(),
-    @required Result noBirthDate(),
-    @required Result noNeighborhood(),
-    @required Result noRelation(),
+    @required Result unableToWriteDB(),
+    @required Result matchesAlreadyRegistered(),
   }) {
-    assert(shortRegistrationName != null);
-    assert(noBirthDate != null);
-    assert(noNeighborhood != null);
-    assert(noRelation != null);
-    return shortRegistrationName();
+    assert(unableToWriteDB != null);
+    assert(matchesAlreadyRegistered != null);
+    return unableToWriteDB();
   }
 
   @override
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
-    Result shortRegistrationName(),
-    Result noBirthDate(),
-    Result noNeighborhood(),
-    Result noRelation(),
+    Result unableToWriteDB(),
+    Result matchesAlreadyRegistered(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
-    if (shortRegistrationName != null) {
-      return shortRegistrationName();
+    if (unableToWriteDB != null) {
+      return unableToWriteDB();
     }
     return orElse();
   }
@@ -151,67 +127,62 @@ class _$ShortRegistrationName implements ShortRegistrationName {
   @override
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result shortRegistrationName(ShortRegistrationName value),
-    @required Result noBirthDate(NoBirthDate value),
-    @required Result noNeighborhood(NoNeighborhood value),
-    @required Result noRelation(NoRelation value),
+    @required Result unableToWriteDB(UnableToWriteDB value),
+    @required Result matchesAlreadyRegistered(MatchesAlreadyRegistered value),
   }) {
-    assert(shortRegistrationName != null);
-    assert(noBirthDate != null);
-    assert(noNeighborhood != null);
-    assert(noRelation != null);
-    return shortRegistrationName(this);
+    assert(unableToWriteDB != null);
+    assert(matchesAlreadyRegistered != null);
+    return unableToWriteDB(this);
   }
 
   @override
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
-    Result shortRegistrationName(ShortRegistrationName value),
-    Result noBirthDate(NoBirthDate value),
-    Result noNeighborhood(NoNeighborhood value),
-    Result noRelation(NoRelation value),
+    Result unableToWriteDB(UnableToWriteDB value),
+    Result matchesAlreadyRegistered(MatchesAlreadyRegistered value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
-    if (shortRegistrationName != null) {
-      return shortRegistrationName(this);
+    if (unableToWriteDB != null) {
+      return unableToWriteDB(this);
     }
     return orElse();
   }
 }
 
-abstract class ShortRegistrationName implements RegistrationFailure {
-  const factory ShortRegistrationName() = _$ShortRegistrationName;
+abstract class UnableToWriteDB implements RegistrationFailure {
+  const factory UnableToWriteDB() = _$UnableToWriteDB;
 }
 
-abstract class $NoBirthDateCopyWith<$Res> {
-  factory $NoBirthDateCopyWith(
-          NoBirthDate value, $Res Function(NoBirthDate) then) =
-      _$NoBirthDateCopyWithImpl<$Res>;
+abstract class $MatchesAlreadyRegisteredCopyWith<$Res> {
+  factory $MatchesAlreadyRegisteredCopyWith(MatchesAlreadyRegistered value,
+          $Res Function(MatchesAlreadyRegistered) then) =
+      _$MatchesAlreadyRegisteredCopyWithImpl<$Res>;
 }
 
-class _$NoBirthDateCopyWithImpl<$Res>
+class _$MatchesAlreadyRegisteredCopyWithImpl<$Res>
     extends _$RegistrationFailureCopyWithImpl<$Res>
-    implements $NoBirthDateCopyWith<$Res> {
-  _$NoBirthDateCopyWithImpl(
-      NoBirthDate _value, $Res Function(NoBirthDate) _then)
-      : super(_value, (v) => _then(v as NoBirthDate));
+    implements $MatchesAlreadyRegisteredCopyWith<$Res> {
+  _$MatchesAlreadyRegisteredCopyWithImpl(MatchesAlreadyRegistered _value,
+      $Res Function(MatchesAlreadyRegistered) _then)
+      : super(_value, (v) => _then(v as MatchesAlreadyRegistered));
 
   @override
-  NoBirthDate get _value => super._value as NoBirthDate;
+  MatchesAlreadyRegistered get _value =>
+      super._value as MatchesAlreadyRegistered;
 }
 
-class _$NoBirthDate implements NoBirthDate {
-  const _$NoBirthDate();
+class _$MatchesAlreadyRegistered implements MatchesAlreadyRegistered {
+  const _$MatchesAlreadyRegistered();
 
   @override
   String toString() {
-    return 'RegistrationFailure.noBirthDate()';
+    return 'RegistrationFailure.matchesAlreadyRegistered()';
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is NoBirthDate);
+    return identical(this, other) || (other is MatchesAlreadyRegistered);
   }
 
   @override
@@ -220,30 +191,24 @@ class _$NoBirthDate implements NoBirthDate {
   @override
   @optionalTypeArgs
   Result when<Result extends Object>({
-    @required Result shortRegistrationName(),
-    @required Result noBirthDate(),
-    @required Result noNeighborhood(),
-    @required Result noRelation(),
+    @required Result unableToWriteDB(),
+    @required Result matchesAlreadyRegistered(),
   }) {
-    assert(shortRegistrationName != null);
-    assert(noBirthDate != null);
-    assert(noNeighborhood != null);
-    assert(noRelation != null);
-    return noBirthDate();
+    assert(unableToWriteDB != null);
+    assert(matchesAlreadyRegistered != null);
+    return matchesAlreadyRegistered();
   }
 
   @override
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
-    Result shortRegistrationName(),
-    Result noBirthDate(),
-    Result noNeighborhood(),
-    Result noRelation(),
+    Result unableToWriteDB(),
+    Result matchesAlreadyRegistered(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
-    if (noBirthDate != null) {
-      return noBirthDate();
+    if (matchesAlreadyRegistered != null) {
+      return matchesAlreadyRegistered();
     }
     return orElse();
   }
@@ -251,234 +216,29 @@ class _$NoBirthDate implements NoBirthDate {
   @override
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result shortRegistrationName(ShortRegistrationName value),
-    @required Result noBirthDate(NoBirthDate value),
-    @required Result noNeighborhood(NoNeighborhood value),
-    @required Result noRelation(NoRelation value),
+    @required Result unableToWriteDB(UnableToWriteDB value),
+    @required Result matchesAlreadyRegistered(MatchesAlreadyRegistered value),
   }) {
-    assert(shortRegistrationName != null);
-    assert(noBirthDate != null);
-    assert(noNeighborhood != null);
-    assert(noRelation != null);
-    return noBirthDate(this);
+    assert(unableToWriteDB != null);
+    assert(matchesAlreadyRegistered != null);
+    return matchesAlreadyRegistered(this);
   }
 
   @override
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
-    Result shortRegistrationName(ShortRegistrationName value),
-    Result noBirthDate(NoBirthDate value),
-    Result noNeighborhood(NoNeighborhood value),
-    Result noRelation(NoRelation value),
+    Result unableToWriteDB(UnableToWriteDB value),
+    Result matchesAlreadyRegistered(MatchesAlreadyRegistered value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
-    if (noBirthDate != null) {
-      return noBirthDate(this);
+    if (matchesAlreadyRegistered != null) {
+      return matchesAlreadyRegistered(this);
     }
     return orElse();
   }
 }
 
-abstract class NoBirthDate implements RegistrationFailure {
-  const factory NoBirthDate() = _$NoBirthDate;
-}
-
-abstract class $NoNeighborhoodCopyWith<$Res> {
-  factory $NoNeighborhoodCopyWith(
-          NoNeighborhood value, $Res Function(NoNeighborhood) then) =
-      _$NoNeighborhoodCopyWithImpl<$Res>;
-}
-
-class _$NoNeighborhoodCopyWithImpl<$Res>
-    extends _$RegistrationFailureCopyWithImpl<$Res>
-    implements $NoNeighborhoodCopyWith<$Res> {
-  _$NoNeighborhoodCopyWithImpl(
-      NoNeighborhood _value, $Res Function(NoNeighborhood) _then)
-      : super(_value, (v) => _then(v as NoNeighborhood));
-
-  @override
-  NoNeighborhood get _value => super._value as NoNeighborhood;
-}
-
-class _$NoNeighborhood implements NoNeighborhood {
-  const _$NoNeighborhood();
-
-  @override
-  String toString() {
-    return 'RegistrationFailure.noNeighborhood()';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is NoNeighborhood);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result shortRegistrationName(),
-    @required Result noBirthDate(),
-    @required Result noNeighborhood(),
-    @required Result noRelation(),
-  }) {
-    assert(shortRegistrationName != null);
-    assert(noBirthDate != null);
-    assert(noNeighborhood != null);
-    assert(noRelation != null);
-    return noNeighborhood();
-  }
-
-  @override
-  @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result shortRegistrationName(),
-    Result noBirthDate(),
-    Result noNeighborhood(),
-    Result noRelation(),
-    @required Result orElse(),
-  }) {
-    assert(orElse != null);
-    if (noNeighborhood != null) {
-      return noNeighborhood();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result shortRegistrationName(ShortRegistrationName value),
-    @required Result noBirthDate(NoBirthDate value),
-    @required Result noNeighborhood(NoNeighborhood value),
-    @required Result noRelation(NoRelation value),
-  }) {
-    assert(shortRegistrationName != null);
-    assert(noBirthDate != null);
-    assert(noNeighborhood != null);
-    assert(noRelation != null);
-    return noNeighborhood(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result shortRegistrationName(ShortRegistrationName value),
-    Result noBirthDate(NoBirthDate value),
-    Result noNeighborhood(NoNeighborhood value),
-    Result noRelation(NoRelation value),
-    @required Result orElse(),
-  }) {
-    assert(orElse != null);
-    if (noNeighborhood != null) {
-      return noNeighborhood(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class NoNeighborhood implements RegistrationFailure {
-  const factory NoNeighborhood() = _$NoNeighborhood;
-}
-
-abstract class $NoRelationCopyWith<$Res> {
-  factory $NoRelationCopyWith(
-          NoRelation value, $Res Function(NoRelation) then) =
-      _$NoRelationCopyWithImpl<$Res>;
-}
-
-class _$NoRelationCopyWithImpl<$Res>
-    extends _$RegistrationFailureCopyWithImpl<$Res>
-    implements $NoRelationCopyWith<$Res> {
-  _$NoRelationCopyWithImpl(NoRelation _value, $Res Function(NoRelation) _then)
-      : super(_value, (v) => _then(v as NoRelation));
-
-  @override
-  NoRelation get _value => super._value as NoRelation;
-}
-
-class _$NoRelation implements NoRelation {
-  const _$NoRelation();
-
-  @override
-  String toString() {
-    return 'RegistrationFailure.noRelation()';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is NoRelation);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result shortRegistrationName(),
-    @required Result noBirthDate(),
-    @required Result noNeighborhood(),
-    @required Result noRelation(),
-  }) {
-    assert(shortRegistrationName != null);
-    assert(noBirthDate != null);
-    assert(noNeighborhood != null);
-    assert(noRelation != null);
-    return noRelation();
-  }
-
-  @override
-  @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result shortRegistrationName(),
-    Result noBirthDate(),
-    Result noNeighborhood(),
-    Result noRelation(),
-    @required Result orElse(),
-  }) {
-    assert(orElse != null);
-    if (noRelation != null) {
-      return noRelation();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result shortRegistrationName(ShortRegistrationName value),
-    @required Result noBirthDate(NoBirthDate value),
-    @required Result noNeighborhood(NoNeighborhood value),
-    @required Result noRelation(NoRelation value),
-  }) {
-    assert(shortRegistrationName != null);
-    assert(noBirthDate != null);
-    assert(noNeighborhood != null);
-    assert(noRelation != null);
-    return noRelation(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result shortRegistrationName(ShortRegistrationName value),
-    Result noBirthDate(NoBirthDate value),
-    Result noNeighborhood(NoNeighborhood value),
-    Result noRelation(NoRelation value),
-    @required Result orElse(),
-  }) {
-    assert(orElse != null);
-    if (noRelation != null) {
-      return noRelation(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class NoRelation implements RegistrationFailure {
-  const factory NoRelation() = _$NoRelation;
+abstract class MatchesAlreadyRegistered implements RegistrationFailure {
+  const factory MatchesAlreadyRegistered() = _$MatchesAlreadyRegistered;
 }

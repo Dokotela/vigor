@@ -19,4 +19,7 @@ abstract class ValueFailure<T> with _$ValueFailure<T> {
   const factory ValueFailure.notABarrio({
     @required T failedValue,
   }) = NotABarrio<T>;
+  const factory ValueFailure.notARelation({
+    @required T failedValue,
+  }) = NotARelation<T>;
 }
