@@ -1,7 +1,6 @@
 import 'package:fhir/fhir_r4.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sembast/sembast.dart';
 import 'package:vigor/infrastructure/fhir_db/fhir_db.dart';
 import 'package:vigor/infrastructure/fhir_db/resource_dao.dart';
 
@@ -26,19 +25,20 @@ class _LoginScreenState extends State<LoginScreen> {
 
   void callDb() async {
     await FhirDb.instance.database;
-    ResourceDao resourceDao = ResourceDao('Patient');
     Patient patient = Patient(
       resourceType: 'Patient',
-      // id: Id('12345'),
+      name: [HumanName(family: 'Faulkenberry')],
+      id: Id('vigor-373424755-744714029'),
     );
+    ResourceDao resourceDao = ResourceDao();
+    // print(patient.toJson());
     await resourceDao.save(patient);
-    List<Resource> patients = await resourceDao.getAllSortedById();
-    print(patients);
-    // patients = await resourceDao.find(resource: patient);
-    // print(patients);
-    // resourceDao.delete(patient);
-    // Patient newPatient = patients[0];
-    // print(newPatient.toJson().toString());
+    List<Resource> patients =
+        await resourceDao.getAllSortedById(resourceType: 'Patient');
+    patients.forEach((patient) => print(patient.toJson()));
+    List<Resource> history =
+        await resourceDao.getAllSortedById(resourceType: '_history');
+    history.forEach((patient) => print(patient.toJson()));
   }
 
   @override

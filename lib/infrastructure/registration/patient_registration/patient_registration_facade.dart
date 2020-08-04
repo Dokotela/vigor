@@ -21,7 +21,7 @@ class PatientRegistrationFacade implements IPatientRegistrationFacade {
     final genderString = gender.getOrCrash();
     final birthDateString = birthDate.getOrCrash();
     final barrioString = barrio.getOrCrash();
-    ResourceDao patientDao = ResourceDao('Patient');
+    ResourceDao patientDao = ResourceDao();
     Patient newPatient = Patient(
       resourceType: 'Patient',
       name: [
@@ -57,7 +57,7 @@ class PatientRegistrationFacade implements IPatientRegistrationFacade {
     final genderString = gender.getOrCrash();
     final birthDateString = birthDate.getOrCrash();
     final barrioString = barrio.getOrCrash();
-    ResourceDao patientDao = ResourceDao('Patient');
+    ResourceDao patientDao = ResourceDao();
 
     Patient newPatient = patient.copyWith(
       name: [
