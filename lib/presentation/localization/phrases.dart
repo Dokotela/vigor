@@ -12,5 +12,6 @@ List<String> phrases = [
   'HIV/EID',
   'Tuberculosis',
   'Sync',
-  'Logout'
+  'Logout',
+  'Patient Information',
 ];

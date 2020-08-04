@@ -16,7 +16,6 @@ class LoginFormBloc extends Bloc<LoginFormEvent, LoginFormState> {
 
   LoginFormBloc(this._authFacade) : super(LoginFormState.initial());
 
-  @override
   LoginFormState get initialState => LoginFormState.initial();
 
   @override

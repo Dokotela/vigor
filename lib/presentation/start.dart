@@ -23,7 +23,7 @@ class Start extends StatelessWidget {
         return supportedLocales.first;
       },
       title: 'Vigor',
-      home: LoginScreen(),
+      home: const LoginScreen(),
     );
   }
 }

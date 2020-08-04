@@ -7,7 +7,7 @@ import '../../shared/shared.dart';
 import 'by_country.dart';
 
 class LoginScreen extends StatefulWidget {
-  LoginScreen({Key key}) : super(key: key);
+  const LoginScreen({Key key}) : super(key: key);
 
   @override
   _LoginScreenState createState() => _LoginScreenState();
@@ -17,28 +17,26 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Vigor')),
+      appBar: AppBar(title: const Text('Vigor')),
       body: Center(
-        child: Container(
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                flagContainer(country, MediaQuery.of(context).size),
-                splashText(country),
-                const SizedBox(height: 30.0),
-                loginField(translateString(context, 'Username'), false),
-                const SizedBox(height: 15.0),
-                loginField(translateString(context, 'Password'), true),
-                const SizedBox(height: 15.0),
-                loginButton(
-                  translateString(context, 'Login'),
-                  MediaQuery.of(context).size,
-                ),
-              ],
-            ),
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              flagContainer(country, MediaQuery.of(context).size),
+              splashText(country),
+              const SizedBox(height: 30.0),
+              loginField(translateString(context, 'Username'), obscure: false),
+              const SizedBox(height: 15.0),
+              loginField(translateString(context, 'Password'), obscure: true),
+              const SizedBox(height: 15.0),
+              loginButton(
+                translateString(context, 'Login'),
+                MediaQuery.of(context).size,
+              ),
+            ],
           ),
         ),
       ),
@@ -50,7 +48,7 @@ class _LoginScreenState extends State<LoginScreen> {
 // const String country = 'dominican_republic';
 const String country = 'usa';
 
-TextField loginField(String hint, bool obscure) => TextField(
+TextField loginField(String hint, {bool obscure}) => TextField(
       obscureText: obscure,
       decoration: InputDecoration(
           contentPadding: padding,
@@ -71,4 +69,4 @@ Material loginButton(String login, Size size) => Material(
       ),
     );
 
-EdgeInsetsGeometry padding = EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0);
+const padding = EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0);

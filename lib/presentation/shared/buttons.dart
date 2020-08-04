@@ -2,19 +2,18 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'shared.dart';
-
 class ActionButton extends StatelessWidget {
   final String fileName;
   final String buttonText;
   static const String imgDir = 'lib/presentation/img/';
+  final Widget nextPage;
 
-  const ActionButton(this.fileName, this.buttonText);
+  const ActionButton({this.fileName, this.buttonText, this.nextPage});
 
   @override
   Widget build(BuildContext context) {
     return FlatButton(
-      onPressed: () => Get.to(HomeScreen()),
+      onPressed: () => Get.to(nextPage),
       child: Column(
         children: <Widget>[
           ClipRRect(

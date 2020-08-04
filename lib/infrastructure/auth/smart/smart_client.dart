@@ -15,7 +15,7 @@ class SmartClient {
 
   SmartClient();
 
-  void connect() async {
+  Future<void> connect() async {
     final response = await get('${fhirBaseUrl.toString()}/metadata');
     final jsonResponse = jsonDecode(response.body);
     final capabilityStatement =

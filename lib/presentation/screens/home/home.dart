@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vigor/presentation/screens/registration/registration.dart';
 import '../../shared/shared.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -18,41 +19,48 @@ class _HomeScreenState extends State<HomeScreen> {
           title: Text(AppLocalizations.of(context).translate('title')),
         ),
         body: Center(
-          child: Container(
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Wrap(
-                spacing: 40,
-                runSpacing: 40,
-                runAlignment: WrapAlignment.spaceBetween,
-                direction: Axis.horizontal,
-                children: <Widget>[
-                  ActionButton(
-                    'register',
-                    AppLocalizations.of(context).translate('Register'),
-                  ),
-                  ActionButton(
-                    'search',
-                    AppLocalizations.of(context).translate('Search'),
-                  ),
-                  ActionButton(
-                    'deworming',
-                    AppLocalizations.of(context).translate('Deworming'),
-                  ),
-                  ActionButton(
-                    'vaccine',
-                    AppLocalizations.of(context).translate('Immunization'),
-                  ),
-                  ActionButton(
-                    'growth1',
-                    AppLocalizations.of(context).translate('Growth'),
-                  ),
-                  ActionButton(
-                    'sync',
-                    AppLocalizations.of(context).translate('Sync'),
-                  ),
-                ],
-              ),
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Wrap(
+              spacing: 40,
+              runSpacing: 40,
+              runAlignment: WrapAlignment.spaceBetween,
+              direction: Axis.horizontal,
+              children: <Widget>[
+                ActionButton(
+                  fileName: 'register',
+                  buttonText:
+                      AppLocalizations.of(context).translate('Register'),
+                  nextPage: Registration(),
+                ),
+                ActionButton(
+                  fileName: 'search',
+                  buttonText: AppLocalizations.of(context).translate('Search'),
+                  nextPage: HomeScreen(),
+                ),
+                ActionButton(
+                  fileName: 'deworming',
+                  buttonText:
+                      AppLocalizations.of(context).translate('Deworming'),
+                  nextPage: HomeScreen(),
+                ),
+                ActionButton(
+                  fileName: 'vaccine',
+                  buttonText:
+                      AppLocalizations.of(context).translate('Immunization'),
+                  nextPage: HomeScreen(),
+                ),
+                ActionButton(
+                  fileName: 'growth1',
+                  buttonText: AppLocalizations.of(context).translate('Growth'),
+                  nextPage: HomeScreen(),
+                ),
+                ActionButton(
+                  fileName: 'sync',
+                  buttonText: AppLocalizations.of(context).translate('Sync'),
+                  nextPage: HomeScreen(),
+                ),
+              ],
             ),
           ),
         ),

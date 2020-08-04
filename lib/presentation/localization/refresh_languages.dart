@@ -6,7 +6,7 @@ import 'package:translator/translator.dart';
 import 'available_languages.dart';
 import 'phrases.dart';
 
-void main() async {
+Future<void> main() async {
   final translator = GoogleTranslator();
   final languageList = availableLanguages();
 
