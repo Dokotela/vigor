@@ -18,30 +18,6 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   @override
-  void initState() {
-    super.initState();
-    callDb();
-  }
-
-  void callDb() async {
-    await FhirDb.instance.database;
-    Patient patient = Patient(
-      resourceType: 'Patient',
-      name: [HumanName(family: 'Faulkenberry')],
-      id: Id('vigor-373424755-744714029'),
-    );
-    ResourceDao resourceDao = ResourceDao();
-    // print(patient.toJson());
-    await resourceDao.save(patient);
-    List<Resource> patients =
-        await resourceDao.getAllSortedById(resourceType: 'Patient');
-    patients.forEach((patient) => print(patient.toJson()));
-    List<Resource> history =
-        await resourceDao.getAllSortedById(resourceType: '_history');
-    history.forEach((patient) => print(patient.toJson()));
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Vigor')),
