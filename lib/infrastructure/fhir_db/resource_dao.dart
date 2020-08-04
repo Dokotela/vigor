@@ -12,24 +12,32 @@ class ResourceDao {
 
   Future<Database> get _db async => await FhirDb.instance.database;
 
+  Future save(Resource resource) async =>
+      resource.id == null ? insert(resource) : update(resource);
+
   Future insert(Resource resource) async {
-    await _resourceStore.add(await _db, resource.toJson());
+    resource.id = Id('vigor-${resource.hashCode}');
+    resource.meta = Meta(
+      lastUpdated: Instant(DateTime.now()),
+      versionId: Id('1'),
+    );
+    _resourceStore.record('999').put(await _db, resource.toJson());
   }
 
   Future update(Resource resource) async {
     final finder = Finder(filter: Filter.byKey(resource.id));
-    await _resourceStore.update(await _db, resource.toJson(), finder: finder);
+    // await _resourceStore.update(await _db, resource.toJson(), finder: finder);
   }
 
   Future find({Resource resource, Finder oldFinder}) async {
     final finder = oldFinder != null
         ? oldFinder
-        : Finder(filter: Filter.byKey(resource.id));
+        : Finder(filter: Filter.equals('id', '${resource.id}'));
     return await _search(finder);
   }
 
   Future delete(Resource resource) async {
-    final finder = Finder(filter: Filter.byKey(resource.id));
+    final finder = Finder(filter: Filter.equals('id', '${resource.id}'));
     await _resourceStore.delete(await _db, finder: finder);
   }
 

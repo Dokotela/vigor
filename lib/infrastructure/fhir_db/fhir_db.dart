@@ -27,7 +27,6 @@ class FhirDb {
     final appDocumentDir = await getApplicationDocumentsDirectory();
     final dbPath = join(appDocumentDir.path, 'fhir.db');
     var dbFactory = getDatabaseFactorySqflite(sqflite.databaseFactory);
-    // var codec =
     final database = await dbFactory.openDatabase(dbPath);
 
     _dbOpenCompleter.complete(database);

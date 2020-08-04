@@ -1,5 +1,9 @@
+import 'package:fhir/fhir_r4.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sembast/sembast.dart';
+import 'package:vigor/infrastructure/fhir_db/fhir_db.dart';
+import 'package:vigor/infrastructure/fhir_db/resource_dao.dart';
 
 import '../../localization/translate.dart';
 import '../../shared/shared.dart';
@@ -14,6 +18,29 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  @override
+  void initState() {
+    super.initState();
+    callDb();
+  }
+
+  void callDb() async {
+    await FhirDb.instance.database;
+    ResourceDao resourceDao = ResourceDao('Patient');
+    Patient patient = Patient(
+      resourceType: 'Patient',
+      // id: Id('12345'),
+    );
+    await resourceDao.save(patient);
+    List<Resource> patients = await resourceDao.getAllSortedById();
+    print(patients);
+    // patients = await resourceDao.find(resource: patient);
+    // print(patients);
+    // resourceDao.delete(patient);
+    // Patient newPatient = patients[0];
+    // print(newPatient.toJson().toString());
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

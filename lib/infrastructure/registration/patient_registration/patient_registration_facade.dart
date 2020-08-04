@@ -4,6 +4,7 @@ import 'package:vigor/domain/registration/patient_registration/i_patient_registr
 import 'package:vigor/domain/registration/patient_registration/patient_registration_value_objects.dart';
 import 'package:vigor/domain/registration/registration_failure.dart';
 import 'package:vigor/domain/registration/registration_value_objects.dart';
+import 'package:vigor/infrastructure/fhir_db/resource_dao.dart';
 
 class PatientRegistrationFacade implements IPatientRegistrationFacade {
   PatientRegistrationFacade();
@@ -14,9 +15,33 @@ class PatientRegistrationFacade implements IPatientRegistrationFacade {
       RegistrationName given,
       RegistrationGender gender,
       RegistrationBirthDate birthDate,
-      RegistrationBarrio barrio}) {
-    // TODO: implement register
-    throw UnimplementedError();
+      RegistrationBarrio barrio}) async {
+    final familyString = family.getOrCrash();
+    final givenString = given.getOrCrash();
+    final genderString = gender.getOrCrash();
+    final birthDateString = birthDate.getOrCrash();
+    final barrioString = barrio.getOrCrash();
+    ResourceDao patientDao = ResourceDao('Patient');
+    Patient newPatient = Patient(
+      resourceType: 'Patient',
+      name: [
+        HumanName(
+          family: familyString,
+          given: [givenString],
+        ),
+      ],
+      birthDate: Date(birthDateString),
+      gender: genderString == 'female'
+          ? PatientGender.female
+          : genderString == 'male' ? PatientGender.male : PatientGender.unknown,
+      address: [Address(district: barrioString)],
+    );
+    try {
+      await patientDao.save(newPatient);
+      return right(unit);
+    } on Exception {
+      return left(const RegistrationFailure.unableToWriteDB());
+    }
   }
 
   @override
@@ -26,8 +51,32 @@ class PatientRegistrationFacade implements IPatientRegistrationFacade {
       RegistrationName given,
       RegistrationGender gender,
       RegistrationBirthDate birthDate,
-      RegistrationBarrio barrio}) {
-    // TODO: implement update
-    throw UnimplementedError();
+      RegistrationBarrio barrio}) async {
+    final familyString = family.getOrCrash();
+    final givenString = given.getOrCrash();
+    final genderString = gender.getOrCrash();
+    final birthDateString = birthDate.getOrCrash();
+    final barrioString = barrio.getOrCrash();
+    ResourceDao patientDao = ResourceDao('Patient');
+
+    Patient newPatient = patient.copyWith(
+      name: [
+        HumanName(
+          family: familyString,
+          given: [givenString],
+        ),
+      ],
+      birthDate: Date(birthDateString),
+      gender: genderString == 'female'
+          ? PatientGender.female
+          : genderString == 'male' ? PatientGender.male : PatientGender.unknown,
+      address: [Address(district: barrioString)],
+    );
+    try {
+      await patientDao.save(newPatient);
+      return right(unit);
+    } on Exception {
+      return left(const RegistrationFailure.unableToWriteDB());
+    }
   }
 }
