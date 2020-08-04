@@ -13,11 +13,6 @@ class _$ContactRegistrationEventTearOff {
   const _$ContactRegistrationEventTearOff();
 
 // ignore: unused_element
-  AddContacts addContacts() {
-    return const AddContacts();
-  }
-
-// ignore: unused_element
   UpdateContacts updateContacts() {
     return const UpdateContacts();
   }
@@ -29,23 +24,19 @@ const $ContactRegistrationEvent = _$ContactRegistrationEventTearOff();
 mixin _$ContactRegistrationEvent {
   @optionalTypeArgs
   Result when<Result extends Object>({
-    @required Result addContacts(),
     @required Result updateContacts(),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
-    Result addContacts(),
     Result updateContacts(),
     @required Result orElse(),
   });
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result addContacts(AddContacts value),
     @required Result updateContacts(UpdateContacts value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
-    Result addContacts(AddContacts value),
     Result updateContacts(UpdateContacts value),
     @required Result orElse(),
   });
@@ -64,94 +55,6 @@ class _$ContactRegistrationEventCopyWithImpl<$Res>
   final ContactRegistrationEvent _value;
   // ignore: unused_field
   final $Res Function(ContactRegistrationEvent) _then;
-}
-
-abstract class $AddContactsCopyWith<$Res> {
-  factory $AddContactsCopyWith(
-          AddContacts value, $Res Function(AddContacts) then) =
-      _$AddContactsCopyWithImpl<$Res>;
-}
-
-class _$AddContactsCopyWithImpl<$Res>
-    extends _$ContactRegistrationEventCopyWithImpl<$Res>
-    implements $AddContactsCopyWith<$Res> {
-  _$AddContactsCopyWithImpl(
-      AddContacts _value, $Res Function(AddContacts) _then)
-      : super(_value, (v) => _then(v as AddContacts));
-
-  @override
-  AddContacts get _value => super._value as AddContacts;
-}
-
-class _$AddContacts implements AddContacts {
-  const _$AddContacts();
-
-  @override
-  String toString() {
-    return 'ContactRegistrationEvent.addContacts()';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is AddContacts);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result addContacts(),
-    @required Result updateContacts(),
-  }) {
-    assert(addContacts != null);
-    assert(updateContacts != null);
-    return addContacts();
-  }
-
-  @override
-  @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result addContacts(),
-    Result updateContacts(),
-    @required Result orElse(),
-  }) {
-    assert(orElse != null);
-    if (addContacts != null) {
-      return addContacts();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result addContacts(AddContacts value),
-    @required Result updateContacts(UpdateContacts value),
-  }) {
-    assert(addContacts != null);
-    assert(updateContacts != null);
-    return addContacts(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result addContacts(AddContacts value),
-    Result updateContacts(UpdateContacts value),
-    @required Result orElse(),
-  }) {
-    assert(orElse != null);
-    if (addContacts != null) {
-      return addContacts(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class AddContacts implements ContactRegistrationEvent {
-  const factory AddContacts() = _$AddContacts;
 }
 
 abstract class $UpdateContactsCopyWith<$Res> {
@@ -190,10 +93,8 @@ class _$UpdateContacts implements UpdateContacts {
   @override
   @optionalTypeArgs
   Result when<Result extends Object>({
-    @required Result addContacts(),
     @required Result updateContacts(),
   }) {
-    assert(addContacts != null);
     assert(updateContacts != null);
     return updateContacts();
   }
@@ -201,7 +102,6 @@ class _$UpdateContacts implements UpdateContacts {
   @override
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
-    Result addContacts(),
     Result updateContacts(),
     @required Result orElse(),
   }) {
@@ -215,10 +115,8 @@ class _$UpdateContacts implements UpdateContacts {
   @override
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result addContacts(AddContacts value),
     @required Result updateContacts(UpdateContacts value),
   }) {
-    assert(addContacts != null);
     assert(updateContacts != null);
     return updateContacts(this);
   }
@@ -226,7 +124,6 @@ class _$UpdateContacts implements UpdateContacts {
   @override
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
-    Result addContacts(AddContacts value),
     Result updateContacts(UpdateContacts value),
     @required Result orElse(),
   }) {
@@ -247,22 +144,24 @@ class _$ContactRegistrationStateTearOff {
 
 // ignore: unused_element
   _ContactRegistrationState call(
-      {Patient currentPatient,
+      {@required
+          Patient patient,
       @required
           RegistrationName family1,
       @required
           RegistrationName given1,
       @required
-          String relationship1,
-      String neighborhood1,
+          RegistrationRelation relationship1,
+      @required
+          RegistrationBarrio barrio1,
       RegistrationName family2,
       RegistrationName given2,
-      String relationship2,
-      String neighborhood2,
+      RegistrationRelation relationship2,
+      RegistrationBarrio barrio2,
       RegistrationName family3,
       RegistrationName given3,
-      String relationship3,
-      String neighborhood3,
+      RegistrationRelation relationship3,
+      RegistrationBarrio barrio3,
       @required
           bool isSubmitting,
       @required
@@ -271,19 +170,19 @@ class _$ContactRegistrationStateTearOff {
           Option<Either<RegistrationFailure, Unit>>
               registrationFailureOrSuccessOption}) {
     return _ContactRegistrationState(
-      currentPatient: currentPatient,
+      patient: patient,
       family1: family1,
       given1: given1,
       relationship1: relationship1,
-      neighborhood1: neighborhood1,
+      barrio1: barrio1,
       family2: family2,
       given2: given2,
       relationship2: relationship2,
-      neighborhood2: neighborhood2,
+      barrio2: barrio2,
       family3: family3,
       given3: given3,
       relationship3: relationship3,
-      neighborhood3: neighborhood3,
+      barrio3: barrio3,
       isSubmitting: isSubmitting,
       showErrorMessages: showErrorMessages,
       registrationFailureOrSuccessOption: registrationFailureOrSuccessOption,
@@ -295,19 +194,19 @@ class _$ContactRegistrationStateTearOff {
 const $ContactRegistrationState = _$ContactRegistrationStateTearOff();
 
 mixin _$ContactRegistrationState {
-  Patient get currentPatient;
+  Patient get patient;
   RegistrationName get family1;
   RegistrationName get given1;
-  String get relationship1;
-  String get neighborhood1;
+  RegistrationRelation get relationship1;
+  RegistrationBarrio get barrio1;
   RegistrationName get family2;
   RegistrationName get given2;
-  String get relationship2;
-  String get neighborhood2;
+  RegistrationRelation get relationship2;
+  RegistrationBarrio get barrio2;
   RegistrationName get family3;
   RegistrationName get given3;
-  String get relationship3;
-  String get neighborhood3;
+  RegistrationRelation get relationship3;
+  RegistrationBarrio get barrio3;
   bool get isSubmitting;
   bool get showErrorMessages;
   Option<Either<RegistrationFailure, Unit>>
@@ -321,25 +220,25 @@ abstract class $ContactRegistrationStateCopyWith<$Res> {
           $Res Function(ContactRegistrationState) then) =
       _$ContactRegistrationStateCopyWithImpl<$Res>;
   $Res call(
-      {Patient currentPatient,
+      {Patient patient,
       RegistrationName family1,
       RegistrationName given1,
-      String relationship1,
-      String neighborhood1,
+      RegistrationRelation relationship1,
+      RegistrationBarrio barrio1,
       RegistrationName family2,
       RegistrationName given2,
-      String relationship2,
-      String neighborhood2,
+      RegistrationRelation relationship2,
+      RegistrationBarrio barrio2,
       RegistrationName family3,
       RegistrationName given3,
-      String relationship3,
-      String neighborhood3,
+      RegistrationRelation relationship3,
+      RegistrationBarrio barrio3,
       bool isSubmitting,
       bool showErrorMessages,
       Option<Either<RegistrationFailure, Unit>>
           registrationFailureOrSuccessOption});
 
-  $PatientCopyWith<$Res> get currentPatient;
+  $PatientCopyWith<$Res> get patient;
 }
 
 class _$ContactRegistrationStateCopyWithImpl<$Res>
@@ -352,54 +251,49 @@ class _$ContactRegistrationStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object currentPatient = freezed,
+    Object patient = freezed,
     Object family1 = freezed,
     Object given1 = freezed,
     Object relationship1 = freezed,
-    Object neighborhood1 = freezed,
+    Object barrio1 = freezed,
     Object family2 = freezed,
     Object given2 = freezed,
     Object relationship2 = freezed,
-    Object neighborhood2 = freezed,
+    Object barrio2 = freezed,
     Object family3 = freezed,
     Object given3 = freezed,
     Object relationship3 = freezed,
-    Object neighborhood3 = freezed,
+    Object barrio3 = freezed,
     Object isSubmitting = freezed,
     Object showErrorMessages = freezed,
     Object registrationFailureOrSuccessOption = freezed,
   }) {
     return _then(_value.copyWith(
-      currentPatient: currentPatient == freezed
-          ? _value.currentPatient
-          : currentPatient as Patient,
+      patient: patient == freezed ? _value.patient : patient as Patient,
       family1:
           family1 == freezed ? _value.family1 : family1 as RegistrationName,
       given1: given1 == freezed ? _value.given1 : given1 as RegistrationName,
       relationship1: relationship1 == freezed
           ? _value.relationship1
-          : relationship1 as String,
-      neighborhood1: neighborhood1 == freezed
-          ? _value.neighborhood1
-          : neighborhood1 as String,
+          : relationship1 as RegistrationRelation,
+      barrio1:
+          barrio1 == freezed ? _value.barrio1 : barrio1 as RegistrationBarrio,
       family2:
           family2 == freezed ? _value.family2 : family2 as RegistrationName,
       given2: given2 == freezed ? _value.given2 : given2 as RegistrationName,
       relationship2: relationship2 == freezed
           ? _value.relationship2
-          : relationship2 as String,
-      neighborhood2: neighborhood2 == freezed
-          ? _value.neighborhood2
-          : neighborhood2 as String,
+          : relationship2 as RegistrationRelation,
+      barrio2:
+          barrio2 == freezed ? _value.barrio2 : barrio2 as RegistrationBarrio,
       family3:
           family3 == freezed ? _value.family3 : family3 as RegistrationName,
       given3: given3 == freezed ? _value.given3 : given3 as RegistrationName,
       relationship3: relationship3 == freezed
           ? _value.relationship3
-          : relationship3 as String,
-      neighborhood3: neighborhood3 == freezed
-          ? _value.neighborhood3
-          : neighborhood3 as String,
+          : relationship3 as RegistrationRelation,
+      barrio3:
+          barrio3 == freezed ? _value.barrio3 : barrio3 as RegistrationBarrio,
       isSubmitting:
           isSubmitting == freezed ? _value.isSubmitting : isSubmitting as bool,
       showErrorMessages: showErrorMessages == freezed
@@ -414,12 +308,12 @@ class _$ContactRegistrationStateCopyWithImpl<$Res>
   }
 
   @override
-  $PatientCopyWith<$Res> get currentPatient {
-    if (_value.currentPatient == null) {
+  $PatientCopyWith<$Res> get patient {
+    if (_value.patient == null) {
       return null;
     }
-    return $PatientCopyWith<$Res>(_value.currentPatient, (value) {
-      return _then(_value.copyWith(currentPatient: value));
+    return $PatientCopyWith<$Res>(_value.patient, (value) {
+      return _then(_value.copyWith(patient: value));
     });
   }
 }
@@ -431,26 +325,26 @@ abstract class _$ContactRegistrationStateCopyWith<$Res>
       __$ContactRegistrationStateCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Patient currentPatient,
+      {Patient patient,
       RegistrationName family1,
       RegistrationName given1,
-      String relationship1,
-      String neighborhood1,
+      RegistrationRelation relationship1,
+      RegistrationBarrio barrio1,
       RegistrationName family2,
       RegistrationName given2,
-      String relationship2,
-      String neighborhood2,
+      RegistrationRelation relationship2,
+      RegistrationBarrio barrio2,
       RegistrationName family3,
       RegistrationName given3,
-      String relationship3,
-      String neighborhood3,
+      RegistrationRelation relationship3,
+      RegistrationBarrio barrio3,
       bool isSubmitting,
       bool showErrorMessages,
       Option<Either<RegistrationFailure, Unit>>
           registrationFailureOrSuccessOption});
 
   @override
-  $PatientCopyWith<$Res> get currentPatient;
+  $PatientCopyWith<$Res> get patient;
 }
 
 class __$ContactRegistrationStateCopyWithImpl<$Res>
@@ -466,54 +360,49 @@ class __$ContactRegistrationStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object currentPatient = freezed,
+    Object patient = freezed,
     Object family1 = freezed,
     Object given1 = freezed,
     Object relationship1 = freezed,
-    Object neighborhood1 = freezed,
+    Object barrio1 = freezed,
     Object family2 = freezed,
     Object given2 = freezed,
     Object relationship2 = freezed,
-    Object neighborhood2 = freezed,
+    Object barrio2 = freezed,
     Object family3 = freezed,
     Object given3 = freezed,
     Object relationship3 = freezed,
-    Object neighborhood3 = freezed,
+    Object barrio3 = freezed,
     Object isSubmitting = freezed,
     Object showErrorMessages = freezed,
     Object registrationFailureOrSuccessOption = freezed,
   }) {
     return _then(_ContactRegistrationState(
-      currentPatient: currentPatient == freezed
-          ? _value.currentPatient
-          : currentPatient as Patient,
+      patient: patient == freezed ? _value.patient : patient as Patient,
       family1:
           family1 == freezed ? _value.family1 : family1 as RegistrationName,
       given1: given1 == freezed ? _value.given1 : given1 as RegistrationName,
       relationship1: relationship1 == freezed
           ? _value.relationship1
-          : relationship1 as String,
-      neighborhood1: neighborhood1 == freezed
-          ? _value.neighborhood1
-          : neighborhood1 as String,
+          : relationship1 as RegistrationRelation,
+      barrio1:
+          barrio1 == freezed ? _value.barrio1 : barrio1 as RegistrationBarrio,
       family2:
           family2 == freezed ? _value.family2 : family2 as RegistrationName,
       given2: given2 == freezed ? _value.given2 : given2 as RegistrationName,
       relationship2: relationship2 == freezed
           ? _value.relationship2
-          : relationship2 as String,
-      neighborhood2: neighborhood2 == freezed
-          ? _value.neighborhood2
-          : neighborhood2 as String,
+          : relationship2 as RegistrationRelation,
+      barrio2:
+          barrio2 == freezed ? _value.barrio2 : barrio2 as RegistrationBarrio,
       family3:
           family3 == freezed ? _value.family3 : family3 as RegistrationName,
       given3: given3 == freezed ? _value.given3 : given3 as RegistrationName,
       relationship3: relationship3 == freezed
           ? _value.relationship3
-          : relationship3 as String,
-      neighborhood3: neighborhood3 == freezed
-          ? _value.neighborhood3
-          : neighborhood3 as String,
+          : relationship3 as RegistrationRelation,
+      barrio3:
+          barrio3 == freezed ? _value.barrio3 : barrio3 as RegistrationBarrio,
       isSubmitting:
           isSubmitting == freezed ? _value.isSubmitting : isSubmitting as bool,
       showErrorMessages: showErrorMessages == freezed
@@ -530,55 +419,57 @@ class __$ContactRegistrationStateCopyWithImpl<$Res>
 
 class _$_ContactRegistrationState implements _ContactRegistrationState {
   const _$_ContactRegistrationState(
-      {this.currentPatient,
+      {@required this.patient,
       @required this.family1,
       @required this.given1,
       @required this.relationship1,
-      this.neighborhood1,
+      @required this.barrio1,
       this.family2,
       this.given2,
       this.relationship2,
-      this.neighborhood2,
+      this.barrio2,
       this.family3,
       this.given3,
       this.relationship3,
-      this.neighborhood3,
+      this.barrio3,
       @required this.isSubmitting,
       @required this.showErrorMessages,
       @required this.registrationFailureOrSuccessOption})
-      : assert(family1 != null),
+      : assert(patient != null),
+        assert(family1 != null),
         assert(given1 != null),
         assert(relationship1 != null),
+        assert(barrio1 != null),
         assert(isSubmitting != null),
         assert(showErrorMessages != null),
         assert(registrationFailureOrSuccessOption != null);
 
   @override
-  final Patient currentPatient;
+  final Patient patient;
   @override
   final RegistrationName family1;
   @override
   final RegistrationName given1;
   @override
-  final String relationship1;
+  final RegistrationRelation relationship1;
   @override
-  final String neighborhood1;
+  final RegistrationBarrio barrio1;
   @override
   final RegistrationName family2;
   @override
   final RegistrationName given2;
   @override
-  final String relationship2;
+  final RegistrationRelation relationship2;
   @override
-  final String neighborhood2;
+  final RegistrationBarrio barrio2;
   @override
   final RegistrationName family3;
   @override
   final RegistrationName given3;
   @override
-  final String relationship3;
+  final RegistrationRelation relationship3;
   @override
-  final String neighborhood3;
+  final RegistrationBarrio barrio3;
   @override
   final bool isSubmitting;
   @override
@@ -589,16 +480,16 @@ class _$_ContactRegistrationState implements _ContactRegistrationState {
 
   @override
   String toString() {
-    return 'ContactRegistrationState(currentPatient: $currentPatient, family1: $family1, given1: $given1, relationship1: $relationship1, neighborhood1: $neighborhood1, family2: $family2, given2: $given2, relationship2: $relationship2, neighborhood2: $neighborhood2, family3: $family3, given3: $given3, relationship3: $relationship3, neighborhood3: $neighborhood3, isSubmitting: $isSubmitting, showErrorMessages: $showErrorMessages, registrationFailureOrSuccessOption: $registrationFailureOrSuccessOption)';
+    return 'ContactRegistrationState(patient: $patient, family1: $family1, given1: $given1, relationship1: $relationship1, barrio1: $barrio1, family2: $family2, given2: $given2, relationship2: $relationship2, barrio2: $barrio2, family3: $family3, given3: $given3, relationship3: $relationship3, barrio3: $barrio3, isSubmitting: $isSubmitting, showErrorMessages: $showErrorMessages, registrationFailureOrSuccessOption: $registrationFailureOrSuccessOption)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _ContactRegistrationState &&
-            (identical(other.currentPatient, currentPatient) ||
+            (identical(other.patient, patient) ||
                 const DeepCollectionEquality()
-                    .equals(other.currentPatient, currentPatient)) &&
+                    .equals(other.patient, patient)) &&
             (identical(other.family1, family1) ||
                 const DeepCollectionEquality()
                     .equals(other.family1, family1)) &&
@@ -607,9 +498,9 @@ class _$_ContactRegistrationState implements _ContactRegistrationState {
             (identical(other.relationship1, relationship1) ||
                 const DeepCollectionEquality()
                     .equals(other.relationship1, relationship1)) &&
-            (identical(other.neighborhood1, neighborhood1) ||
+            (identical(other.barrio1, barrio1) ||
                 const DeepCollectionEquality()
-                    .equals(other.neighborhood1, neighborhood1)) &&
+                    .equals(other.barrio1, barrio1)) &&
             (identical(other.family2, family2) ||
                 const DeepCollectionEquality()
                     .equals(other.family2, family2)) &&
@@ -618,9 +509,9 @@ class _$_ContactRegistrationState implements _ContactRegistrationState {
             (identical(other.relationship2, relationship2) ||
                 const DeepCollectionEquality()
                     .equals(other.relationship2, relationship2)) &&
-            (identical(other.neighborhood2, neighborhood2) ||
+            (identical(other.barrio2, barrio2) ||
                 const DeepCollectionEquality()
-                    .equals(other.neighborhood2, neighborhood2)) &&
+                    .equals(other.barrio2, barrio2)) &&
             (identical(other.family3, family3) ||
                 const DeepCollectionEquality()
                     .equals(other.family3, family3)) &&
@@ -629,9 +520,9 @@ class _$_ContactRegistrationState implements _ContactRegistrationState {
             (identical(other.relationship3, relationship3) ||
                 const DeepCollectionEquality()
                     .equals(other.relationship3, relationship3)) &&
-            (identical(other.neighborhood3, neighborhood3) ||
+            (identical(other.barrio3, barrio3) ||
                 const DeepCollectionEquality()
-                    .equals(other.neighborhood3, neighborhood3)) &&
+                    .equals(other.barrio3, barrio3)) &&
             (identical(other.isSubmitting, isSubmitting) ||
                 const DeepCollectionEquality()
                     .equals(other.isSubmitting, isSubmitting)) &&
@@ -648,19 +539,19 @@ class _$_ContactRegistrationState implements _ContactRegistrationState {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(currentPatient) ^
+      const DeepCollectionEquality().hash(patient) ^
       const DeepCollectionEquality().hash(family1) ^
       const DeepCollectionEquality().hash(given1) ^
       const DeepCollectionEquality().hash(relationship1) ^
-      const DeepCollectionEquality().hash(neighborhood1) ^
+      const DeepCollectionEquality().hash(barrio1) ^
       const DeepCollectionEquality().hash(family2) ^
       const DeepCollectionEquality().hash(given2) ^
       const DeepCollectionEquality().hash(relationship2) ^
-      const DeepCollectionEquality().hash(neighborhood2) ^
+      const DeepCollectionEquality().hash(barrio2) ^
       const DeepCollectionEquality().hash(family3) ^
       const DeepCollectionEquality().hash(given3) ^
       const DeepCollectionEquality().hash(relationship3) ^
-      const DeepCollectionEquality().hash(neighborhood3) ^
+      const DeepCollectionEquality().hash(barrio3) ^
       const DeepCollectionEquality().hash(isSubmitting) ^
       const DeepCollectionEquality().hash(showErrorMessages) ^
       const DeepCollectionEquality().hash(registrationFailureOrSuccessOption);
@@ -673,22 +564,24 @@ class _$_ContactRegistrationState implements _ContactRegistrationState {
 
 abstract class _ContactRegistrationState implements ContactRegistrationState {
   const factory _ContactRegistrationState(
-          {Patient currentPatient,
+          {@required
+              Patient patient,
           @required
               RegistrationName family1,
           @required
               RegistrationName given1,
           @required
-              String relationship1,
-          String neighborhood1,
+              RegistrationRelation relationship1,
+          @required
+              RegistrationBarrio barrio1,
           RegistrationName family2,
           RegistrationName given2,
-          String relationship2,
-          String neighborhood2,
+          RegistrationRelation relationship2,
+          RegistrationBarrio barrio2,
           RegistrationName family3,
           RegistrationName given3,
-          String relationship3,
-          String neighborhood3,
+          RegistrationRelation relationship3,
+          RegistrationBarrio barrio3,
           @required
               bool isSubmitting,
           @required
@@ -699,31 +592,31 @@ abstract class _ContactRegistrationState implements ContactRegistrationState {
       _$_ContactRegistrationState;
 
   @override
-  Patient get currentPatient;
+  Patient get patient;
   @override
   RegistrationName get family1;
   @override
   RegistrationName get given1;
   @override
-  String get relationship1;
+  RegistrationRelation get relationship1;
   @override
-  String get neighborhood1;
+  RegistrationBarrio get barrio1;
   @override
   RegistrationName get family2;
   @override
   RegistrationName get given2;
   @override
-  String get relationship2;
+  RegistrationRelation get relationship2;
   @override
-  String get neighborhood2;
+  RegistrationBarrio get barrio2;
   @override
   RegistrationName get family3;
   @override
   RegistrationName get given3;
   @override
-  String get relationship3;
+  RegistrationRelation get relationship3;
   @override
-  String get neighborhood3;
+  RegistrationBarrio get barrio3;
   @override
   bool get isSubmitting;
   @override

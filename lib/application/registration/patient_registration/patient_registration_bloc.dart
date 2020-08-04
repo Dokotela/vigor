@@ -28,72 +28,59 @@ class PatientRegistrationBloc
   ) async* {
     yield* event.map(
       registerPressed: (e) async* {
-        Either<RegistrationFailure, Unit> failureOrSuccess;
-
-        final isFamilyValid = state.family.isValid();
-        final isGivenValid = state.given.isValid();
-        final isGenderValid = state.gender.isValid();
-        final isBirthDateValid = state.birthDate.isValid();
-        final isBarrioValid = state.barrio.isValid();
-
-        if (isFamilyValid &&
-            isGivenValid &&
-            isGenderValid &&
-            isBirthDateValid &&
-            isBarrioValid) {
-          yield state.copyWith(
-            isSubmitting: true,
-            registrationFailureOrSuccessOption: none(),
-          );
-
-          failureOrSuccess = await _patientRegistrationFacade.register(
-            family: state.family,
-            given: state.given,
-            gender: state.gender,
-            birthDate: state.birthDate,
-            barrio: state.barrio,
-          );
-        }
-
-        yield state.copyWith(
-          isSubmitting: false,
-          registrationFailureOrSuccessOption: optionOf(failureOrSuccess),
-        );
+        yield* _actOnPatientRegistrationFacade(
+            _patientRegistrationFacade.register);
       },
       updatePressed: (e) async* {
-        Either<RegistrationFailure, Unit> failureOrSuccess;
-
-        final isFamilyValid = state.family.isValid();
-        final isGivenValid = state.given.isValid();
-        final isGenderValid = state.gender.isValid();
-        final isBirthDateValid = state.birthDate.isValid();
-        final isBarrioValid = state.barrio.isValid();
-
-        if (isFamilyValid &&
-            isGivenValid &&
-            isGenderValid &&
-            isBirthDateValid &&
-            isBarrioValid) {
-          yield state.copyWith(
-            isSubmitting: true,
-            registrationFailureOrSuccessOption: none(),
-          );
-
-          failureOrSuccess = await _patientRegistrationFacade.update(
-            patient: state.patient,
-            family: state.family,
-            given: state.given,
-            gender: state.gender,
-            birthDate: state.birthDate,
-            barrio: state.barrio,
-          );
-        }
-
-        yield state.copyWith(
-          isSubmitting: false,
-          registrationFailureOrSuccessOption: optionOf(failureOrSuccess),
-        );
+        yield* _actOnPatientRegistrationFacade(
+            _patientRegistrationFacade.update);
       },
+    );
+  }
+
+  Stream<PatientRegistrationState> _actOnPatientRegistrationFacade(
+    Future<Either<RegistrationFailure, Unit>> Function({
+      Patient patient,
+      @required RegistrationName family,
+      @required RegistrationName given,
+      @required RegistrationGender gender,
+      @required RegistrationBirthDate birthDate,
+      @required RegistrationBarrio barrio,
+    })
+        forwardedCall,
+  ) async* {
+    Either<RegistrationFailure, Unit> failureOrSuccess;
+
+    final isFamilyValid = state.family.isValid();
+    final isGivenValid = state.given.isValid();
+    final isGenderValid = state.gender.isValid();
+    final isBirthDateValid = state.birthDate.isValid();
+    final isBarrioValid = state.barrio.isValid();
+
+    if (isFamilyValid &&
+        isGivenValid &&
+        isGenderValid &&
+        isBirthDateValid &&
+        isBarrioValid) {
+      yield state.copyWith(
+        isSubmitting: true,
+        registrationFailureOrSuccessOption: none(),
+      );
+
+      failureOrSuccess = await forwardedCall(
+        patient: state.patient,
+        family: state.family,
+        given: state.given,
+        gender: state.gender,
+        birthDate: state.birthDate,
+        barrio: state.barrio,
+      );
+    }
+
+    yield state.copyWith(
+      isSubmitting: false,
+      showErrorMessages: true,
+      registrationFailureOrSuccessOption: optionOf(failureOrSuccess),
     );
   }
 }

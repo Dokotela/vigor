@@ -10,17 +10,19 @@ class PatientRegistrationFacade implements IPatientRegistrationFacade {
   PatientRegistrationFacade();
 
   @override
-  Future<Either<RegistrationFailure, Unit>> register(
-      {RegistrationName family,
-      RegistrationName given,
-      RegistrationGender gender,
-      RegistrationBirthDate birthDate,
-      RegistrationBarrio barrio}) async {
+  Future<Either<RegistrationFailure, Unit>> register({
+    RegistrationName family,
+    RegistrationName given,
+    RegistrationGender gender,
+    RegistrationBirthDate birthDate,
+    RegistrationBarrio barrio,
+  }) async {
     final familyString = family.getOrCrash();
     final givenString = given.getOrCrash();
     final genderString = gender.getOrCrash();
     final birthDateString = birthDate.getOrCrash();
     final barrioString = barrio.getOrCrash();
+
     ResourceDao patientDao = ResourceDao();
     Patient newPatient = Patient(
       resourceType: 'Patient',
@@ -36,6 +38,7 @@ class PatientRegistrationFacade implements IPatientRegistrationFacade {
           : genderString == 'male' ? PatientGender.male : PatientGender.unknown,
       address: [Address(district: barrioString)],
     );
+
     try {
       await patientDao.save(newPatient);
       return right(unit);
@@ -45,20 +48,21 @@ class PatientRegistrationFacade implements IPatientRegistrationFacade {
   }
 
   @override
-  Future<Either<RegistrationFailure, Unit>> update(
-      {Patient patient,
-      RegistrationName family,
-      RegistrationName given,
-      RegistrationGender gender,
-      RegistrationBirthDate birthDate,
-      RegistrationBarrio barrio}) async {
+  Future<Either<RegistrationFailure, Unit>> update({
+    Patient patient,
+    RegistrationName family,
+    RegistrationName given,
+    RegistrationGender gender,
+    RegistrationBirthDate birthDate,
+    RegistrationBarrio barrio,
+  }) async {
     final familyString = family.getOrCrash();
     final givenString = given.getOrCrash();
     final genderString = gender.getOrCrash();
     final birthDateString = birthDate.getOrCrash();
     final barrioString = barrio.getOrCrash();
-    ResourceDao patientDao = ResourceDao();
 
+    ResourceDao patientDao = ResourceDao();
     Patient newPatient = patient.copyWith(
       name: [
         HumanName(
@@ -72,6 +76,7 @@ class PatientRegistrationFacade implements IPatientRegistrationFacade {
           : genderString == 'male' ? PatientGender.male : PatientGender.unknown,
       address: [Address(district: barrioString)],
     );
+
     try {
       await patientDao.save(newPatient);
       return right(unit);
