@@ -21,7 +21,6 @@ class _RegistrationFormState extends State<RegistrationForm> {
   String sexAtBirth;
   String response = '';
   String barrio = 'Escoje Barrio';
-  var patientBox;
 
   @override
   void dispose() {
@@ -183,7 +182,7 @@ class _RegistrationFormState extends State<RegistrationForm> {
 //                                    builder: (context) => MainMenu()),
 //                              );
                   },
-                  child: Text('Return to Opening Page'),
+                  child: const Text('Return to Opening Page'),
                 ),
               ],
             ),

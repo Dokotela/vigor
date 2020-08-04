@@ -8,16 +8,16 @@ import 'phrases.dart';
 
 void main() async {
   final translator = GoogleTranslator();
-  var languageList = availableLanguages();
+  final languageList = availableLanguages();
 
   var toReplace = replace(phrases.toString(), ['[', ']']);
   toReplace = toReplace.replaceAll(', ', '\n');
 
-  for (var lang in languageList) {
-    String newPhrases = //toReplace.toString();
+  for (final lang in languageList) {
+    final newPhrases = //toReplace.toString();
         (await translator.translate(toReplace, to: lang['iso369-1']))
             .toString();
-    List<String> phraseList = newPhrases.toString().split('\n');
+    final phraseList = newPhrases.toString().split('\n');
     for (var i = 0; i < phraseList.length; i++) {
       lang[phrases[i].replaceAll('**', '')] = phraseList[i];
     }
@@ -27,8 +27,9 @@ void main() async {
 }
 
 String replace(String original, List<String> replacements) {
-  for (var replacement in replacements) {
-    original = original.replaceAll(replacement, '');
+  String returnOriginal;
+  for (final replacement in replacements) {
+    returnOriginal = original.replaceAll(replacement, '');
   }
-  return original;
+  return returnOriginal;
 }

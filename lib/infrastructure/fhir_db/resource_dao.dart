@@ -12,7 +12,7 @@ class ResourceDao {
   void _setStoreType(String resourceType) =>
       _resourceStore = stringMapStoreFactory.store(resourceType);
 
-  Future<Database> get _db async => await FhirDb.instance.database;
+  Future<Database> get _db async => FhirDb.instance.database;
 
   //checks if the resource already has an id, all resources downloaded should
   //have an id, and all resources already saved will have an id, so only brand
@@ -27,7 +27,7 @@ class ResourceDao {
   //if no id, it will call _getIdAndMeta to provide the new (local, temporary
   // id) along with creating a metadata about the resource history
   Future _insert(Resource resource) async {
-    var _newResource = _getIdAndMeta(resource);
+    final _newResource = _getIdAndMeta(resource);
     await _resourceStore
         .record(_newResource.id.toString())
         .put(await _db, _newResource.toJson());
@@ -35,7 +35,7 @@ class ResourceDao {
 
   Future _update(Resource resource) async {
     final finder = Finder(filter: Filter.byKey(resource.id.toString()));
-    var oldResource =
+    final oldResource =
         await _resourceStore.record(resource.id.toString()).get(await _db);
     if (oldResource == null) {
       await _insert(resource);
@@ -43,19 +43,19 @@ class ResourceDao {
       _setStoreType('_history');
       await _resourceStore.add(await _db, oldResource);
       _setStoreType(resource.resourceType);
-      var oldMeta = Meta.fromJson(oldResource['meta']);
-      var _newResource = _newVersion(resource, oldMeta: oldMeta);
+      final oldMeta =
+          Meta.fromJson(oldResource['meta'] as Map<String, dynamic>);
+      final _newResource = _newVersion(resource, oldMeta: oldMeta);
       await _resourceStore.update(await _db, _newResource.toJson(),
           finder: finder);
     }
   }
 
   Future find({Resource resource, Finder oldFinder}) async {
-    final finder = oldFinder != null
-        ? oldFinder
-        : Finder(filter: Filter.equals('id', '${resource.id}'));
+    final finder =
+        oldFinder ?? Finder(filter: Filter.equals('id', '${resource.id}'));
     _setStoreType(resource.resourceType);
-    return await _search(finder);
+    return _search(finder);
   }
 
   Future delete(Resource resource) async {
@@ -65,7 +65,7 @@ class ResourceDao {
   }
 
   Future deleteAll({String resourceType, Resource resource}) async {
-    String type = resourceType ?? resource?.resourceType ?? '';
+    final type = resourceType ?? resource?.resourceType ?? '';
     if (type.isNotEmpty) {
       _setStoreType(type);
       await _resourceStore.delete(await _db);
@@ -74,11 +74,11 @@ class ResourceDao {
 
   Future<List<Resource>> getAllSortedById(
       {String resourceType, Resource resource}) async {
-    String type = resourceType ?? resource?.resourceType ?? '';
+    final type = resourceType ?? resource?.resourceType ?? '';
     if (type.isNotEmpty) {
       _setStoreType(type);
       final finder = Finder(sortOrders: [SortOrder('id')]);
-      return await _search(finder);
+      return _search(finder);
     }
     return [];
   }

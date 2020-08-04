@@ -16,10 +16,10 @@ class SmartClient {
   SmartClient();
 
   void connect() async {
-    var response = await get('${fhirBaseUrl.toString()}/metadata');
-    var jsonResponse = jsonDecode(response.body);
-    CapabilityStatement capabilityStatement =
-        CapabilityStatement.fromJson(jsonResponse);
+    final response = await get('${fhirBaseUrl.toString()}/metadata');
+    final jsonResponse = jsonDecode(response.body);
+    final capabilityStatement =
+        CapabilityStatement.fromJson(jsonResponse as Map<String, dynamic>);
     authorizeUrl = getEndpoint(capabilityStatement, 'authorize');
     tokenUrl = getEndpoint(capabilityStatement, 'token');
   }

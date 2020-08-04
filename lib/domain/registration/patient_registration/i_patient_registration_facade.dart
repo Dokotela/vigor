@@ -9,6 +9,7 @@ import 'package:vigor/domain/registration/registration_value_objects.dart';
 
 abstract class IPatientRegistrationFacade {
   Future<Either<RegistrationFailure, Unit>> register({
+    Patient patient,
     @required RegistrationName family,
     @required RegistrationName given,
     @required RegistrationGender gender,

@@ -1,66 +1,66 @@
 //list of languages that are currently supported
 List<Map<String, String>> availableLanguages() {
-  Map<String, String> en = {
+  final en = {
     "language": "english",
     "iso369-1": "en",
     "title": "Vigor",
   };
-  Map<String, String> es = {
+  final es = {
     "language": "spanish",
     "iso369-1": "es",
     "title": "Salud Dominicana",
   };
-  Map<String, String> zh = {
+  final zh = {
     "language": "chinese/mandarin",
     "iso369-1": "zh",
     "title": "Title",
   };
-  Map<String, String> hi = {
+  final hi = {
     "language": "hindi",
     "iso369-1": "hi",
     "title": "Title",
   };
-  Map<String, String> fr = {
+  final fr = {
     "language": "french",
     "iso369-1": "fr",
     "title": "Title",
   };
-  Map<String, String> ar = {
+  final ar = {
     "language": "arabic",
     "iso369-1": "ar",
     "title": "Title",
   };
-  Map<String, String> bn = {
+  final bn = {
     "language": "bengali/bangla",
     "iso369-1": "bn",
     "title": "Title",
   };
-  Map<String, String> ru = {
+  final ru = {
     "language": "russian",
     "iso369-1": "ru",
     "title": "Title",
   };
-  Map<String, String> pt = {
+  final pt = {
     "language": "portuguese",
     "iso369-1": "pt",
     "title": "Title",
   };
-  Map<String, String> id = {
+  final id = {
     "language": "indonesian",
     "iso369-1": "id",
     "title": "Title",
   };
-  Map<String, String> pa = {
+  final pa = {
     "language": "punjabi",
     "iso369-1": "pa",
     "title": "Title",
   };
-  Map<String, String> mr = {
+  final mr = {
     "language": "marathi",
     "iso369-1": "mr",
     "title": "Title",
   };
-  Map<String, String> th = {
+  final th = {
     "language": "thai",
     "iso369-1": "th",
     "title": "Title",

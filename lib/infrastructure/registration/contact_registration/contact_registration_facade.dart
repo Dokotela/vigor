@@ -43,8 +43,8 @@ class ContactRegistrationFacade implements IContactRegistrationFacade {
     final relationship3String = relationship3.getOrCrash();
     final barrio3String = barrio3.getOrCrash();
 
-    ResourceDao patientDao = ResourceDao();
-    List<PatientContact> contactList = [];
+    final patientDao = ResourceDao();
+    final contactList = <PatientContact>[];
     contactList.add(_formatPatientContact(
         family1String, given1String, barrio1String, relationship1String));
 
@@ -56,7 +56,7 @@ class ContactRegistrationFacade implements IContactRegistrationFacade {
       contactList.add(_formatPatientContact(
           family3String, given3String, barrio3String, relationship3String));
     }
-    Patient newPatient = patient.copyWith(contact: contactList);
+    final newPatient = patient.copyWith(contact: contactList);
 
     try {
       await patientDao.save(newPatient);

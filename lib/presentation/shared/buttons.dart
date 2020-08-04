@@ -7,13 +7,12 @@ import 'shared.dart';
 class ActionButton extends StatelessWidget {
   final String fileName;
   final String buttonText;
-  // final Function func;
-  final String imgDir = 'lib/presentation/img/';
+  static const String imgDir = 'lib/presentation/img/';
 
-  ActionButton(this.fileName, this.buttonText);
+  const ActionButton(this.fileName, this.buttonText);
 
   @override
-  Widget build(context) {
+  Widget build(BuildContext context) {
     return FlatButton(
       onPressed: () => Get.to(HomeScreen()),
       child: Column(

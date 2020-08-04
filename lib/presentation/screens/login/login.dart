@@ -1,8 +1,5 @@
-import 'package:fhir/fhir_r4.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vigor/infrastructure/fhir_db/fhir_db.dart';
-import 'package:vigor/infrastructure/fhir_db/resource_dao.dart';
 
 import '../../localization/translate.dart';
 import '../../shared/shared.dart';
@@ -31,11 +28,11 @@ class _LoginScreenState extends State<LoginScreen> {
               children: <Widget>[
                 flagContainer(country, MediaQuery.of(context).size),
                 splashText(country),
-                SizedBox(height: 30.0),
+                const SizedBox(height: 30.0),
                 loginField(translateString(context, 'Username'), false),
-                SizedBox(height: 15.0),
+                const SizedBox(height: 15.0),
                 loginField(translateString(context, 'Password'), true),
-                SizedBox(height: 15.0),
+                const SizedBox(height: 15.0),
                 loginButton(
                   translateString(context, 'Login'),
                   MediaQuery.of(context).size,

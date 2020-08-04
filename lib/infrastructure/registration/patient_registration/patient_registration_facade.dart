@@ -11,6 +11,7 @@ class PatientRegistrationFacade implements IPatientRegistrationFacade {
 
   @override
   Future<Either<RegistrationFailure, Unit>> register({
+    Patient patient,
     RegistrationName family,
     RegistrationName given,
     RegistrationGender gender,
@@ -23,8 +24,8 @@ class PatientRegistrationFacade implements IPatientRegistrationFacade {
     final birthDateString = birthDate.getOrCrash();
     final barrioString = barrio.getOrCrash();
 
-    ResourceDao patientDao = ResourceDao();
-    Patient newPatient = Patient(
+    final patientDao = ResourceDao();
+    final newPatient = Patient(
       resourceType: 'Patient',
       name: [
         HumanName(
@@ -62,8 +63,8 @@ class PatientRegistrationFacade implements IPatientRegistrationFacade {
     final birthDateString = birthDate.getOrCrash();
     final barrioString = barrio.getOrCrash();
 
-    ResourceDao patientDao = ResourceDao();
-    Patient newPatient = patient.copyWith(
+    final patientDao = ResourceDao();
+    final newPatient = patient.copyWith(
       name: [
         HumanName(
           family: familyString,
