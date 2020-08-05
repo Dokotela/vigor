@@ -14,4 +14,11 @@ List<String> phrases = [
   'Sync',
   'Logout',
   'Patient Information',
+  'Register Patient',
+  'Sex at birth',
+  'female',
+  'male',
+  'Date of Birth',
+  'Neighborhood',
+  'Relationship',
 ];

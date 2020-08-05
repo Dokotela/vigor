@@ -10,9 +10,9 @@ List<Map<String, String>> availableLanguages() {
     "iso369-1": "es",
     "title": "Salud Dominicana",
   };
-  final zh = {
+  final zhCn = {
     "language": "chinese/mandarin",
-    "iso369-1": "zh",
+    "iso369-1": "zh-cn",
     "title": "Title",
   };
   final hi = {
@@ -65,5 +65,5 @@ List<Map<String, String>> availableLanguages() {
     "iso369-1": "th",
     "title": "Title",
   };
-  return [en, es, zh, hi, fr, ar, bn, ru, pt, id, pa, mr, th];
+  return [en, es, zhCn, hi, fr, ar, bn, ru, pt, id, pa, mr, th];
 }

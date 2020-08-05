@@ -21,8 +21,11 @@ Future<void> main() async {
     for (var i = 0; i < phraseList.length; i++) {
       lang[phrases[i].replaceAll('**', '')] = phraseList[i];
     }
-    await File("./lib/presentation/localization/lang/${lang['iso369-1']}.json")
-        .writeAsString(json.encode(lang));
+    lang['Username'] = lang['Username'].substring(1, lang['Username'].length);
+    final file =
+        'const ${lang['iso369-1'].replaceAll('-', '')}Lang = ${json.encode(lang)};';
+    await File("./lib/presentation/localization/lang/${lang['iso369-1']}.dart")
+        .writeAsString(file);
   }
 }
 

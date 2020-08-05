@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../localization/translate.dart';
 import '../../shared/shared.dart';
 
 import 'by_country.dart';
@@ -17,7 +16,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Vigor')),
+      appBar: AppBar(title: Text('title'.tr)),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -28,14 +27,11 @@ class _LoginScreenState extends State<LoginScreen> {
               flagContainer(country, MediaQuery.of(context).size),
               splashText(country),
               const SizedBox(height: 30.0),
-              loginField(translateString(context, 'Username'), obscure: false),
+              loginField('Username'.tr, obscure: false),
               const SizedBox(height: 15.0),
-              loginField(translateString(context, 'Password'), obscure: true),
+              loginField('Password'.tr, obscure: true),
               const SizedBox(height: 15.0),
-              loginButton(
-                translateString(context, 'Login'),
-                MediaQuery.of(context).size,
-              ),
+              loginButton('Login'.tr, MediaQuery.of(context).size),
             ],
           ),
         ),
