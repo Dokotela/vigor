@@ -21,4 +21,6 @@ List<String> phrases = [
   'Date of Birth',
   'Neighborhood',
   'Relationship',
+  'Family Name',
+  'Other Names',
 ];

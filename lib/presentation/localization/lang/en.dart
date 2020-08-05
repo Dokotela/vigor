@@ -23,5 +23,7 @@ const enLang = {
   "male": "male",
   "Date of Birth": "Date of Birth",
   "Neighborhood": "Neighborhood",
-  "Relationship": "Relationship"
+  "Relationship": "Relationship",
+  "Family Name": "Family Name",
+  "Other Names": "Other Names"
 };

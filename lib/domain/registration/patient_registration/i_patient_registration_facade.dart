@@ -12,7 +12,7 @@ abstract class IPatientRegistrationFacade {
     Patient patient,
     @required RegistrationName family,
     @required RegistrationName given,
-    @required RegistrationGender gender,
+    @required String gender,
     @required RegistrationBirthDate birthDate,
     @required RegistrationBarrio barrio,
   });
@@ -20,7 +20,7 @@ abstract class IPatientRegistrationFacade {
     @required Patient patient,
     @required RegistrationName family,
     @required RegistrationName given,
-    @required RegistrationGender gender,
+    @required String gender,
     @required RegistrationBirthDate birthDate,
     @required RegistrationBarrio barrio,
   });

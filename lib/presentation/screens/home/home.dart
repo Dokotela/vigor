@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:vigor/presentation/screens/registration/registration.dart';
 import '../../shared/shared.dart';
 
@@ -15,9 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return MaterialApp(
       theme: ThemeClass.dark(),
       home: Scaffold(
-        appBar: AppBar(
-          title: Text(AppLocalizations.of(context).translate('title')),
-        ),
+        appBar: AppBar(title: Text('title'.tr)),
         body: Center(
           child: Padding(
             padding: const EdgeInsets.all(8.0),
@@ -28,38 +27,29 @@ class _HomeScreenState extends State<HomeScreen> {
               direction: Axis.horizontal,
               children: <Widget>[
                 ActionButton(
-                  fileName: 'register',
-                  buttonText:
-                      AppLocalizations.of(context).translate('Register'),
-                  nextPage: Registration(),
-                ),
+                    fileName: 'register',
+                    buttonText: 'Register'.tr,
+                    nextPage: Registration()),
                 ActionButton(
-                  fileName: 'search',
-                  buttonText: AppLocalizations.of(context).translate('Search'),
-                  nextPage: HomeScreen(),
-                ),
+                    fileName: 'search',
+                    buttonText: 'Search'.tr,
+                    nextPage: HomeScreen()),
                 ActionButton(
-                  fileName: 'deworming',
-                  buttonText:
-                      AppLocalizations.of(context).translate('Deworming'),
-                  nextPage: HomeScreen(),
-                ),
+                    fileName: 'deworming',
+                    buttonText: 'Deworming'.tr,
+                    nextPage: HomeScreen()),
                 ActionButton(
-                  fileName: 'vaccine',
-                  buttonText:
-                      AppLocalizations.of(context).translate('Immunization'),
-                  nextPage: HomeScreen(),
-                ),
+                    fileName: 'vaccine',
+                    buttonText: 'Immunization'.tr,
+                    nextPage: HomeScreen()),
                 ActionButton(
-                  fileName: 'growth1',
-                  buttonText: AppLocalizations.of(context).translate('Growth'),
-                  nextPage: HomeScreen(),
-                ),
+                    fileName: 'growth1',
+                    buttonText: 'Growth'.tr,
+                    nextPage: HomeScreen()),
                 ActionButton(
-                  fileName: 'sync',
-                  buttonText: AppLocalizations.of(context).translate('Sync'),
-                  nextPage: HomeScreen(),
-                ),
+                    fileName: 'sync',
+                    buttonText: 'Sync'.tr,
+                    nextPage: HomeScreen()),
               ],
             ),
           ),

@@ -24,9 +24,9 @@ class _RegistrationFormState extends State<RegistrationForm> {
   Future _selectDate() async {
     DateTime picked = await showDatePicker(
         context: context,
-        initialDate: new DateTime.now(),
-        firstDate: new DateTime(2016),
-        lastDate: new DateTime.now());
+        initialDate: DateTime.now(),
+        firstDate: DateTime(2016),
+        lastDate: DateTime.now());
     if (picked != null) setState(() => _birthDate = picked);
   }
 
@@ -36,24 +36,24 @@ class _RegistrationFormState extends State<RegistrationForm> {
       appBar: AppBar(
         title: Text('Register Patient'),
       ),
-      body: new Column(
+      body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          new TextField(
-            decoration: new InputDecoration(hintText: 'Given Names'),
+          TextField(
+            decoration: InputDecoration(hintText: 'Given Names'),
             controller: givenNameController,
           ),
 
-          new TextField(
-            decoration: new InputDecoration(hintText: 'Family Names'),
+          TextField(
+            decoration: InputDecoration(hintText: 'Family Names'),
             controller: familyNameController,
           ),
 
-          new Column(
+          Column(
             children: <Widget>[
-              new Row(
+              Row(
                 children: <Widget>[
-                  new Text(' Sex at birth'),
+                  Text(' Sex at birth'),
                   Radio(
                     value: 'female',
                     groupValue: sexAtBirth,
@@ -80,7 +80,7 @@ class _RegistrationFormState extends State<RegistrationForm> {
           ),
 
           //Calls above function to select birthdate
-          new Column(
+          Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               FlatButton(
@@ -101,9 +101,9 @@ class _RegistrationFormState extends State<RegistrationForm> {
             ],
           ),
 
-          new Column(
+          Column(
             children: <Widget>[
-              new Row(
+              Row(
                 children: <Widget>[
                   Text(
                     'Barrio     ',
@@ -122,9 +122,9 @@ class _RegistrationFormState extends State<RegistrationForm> {
                       'Puerto_Rico',
                       'Kilombo'
                     ].map((String value) {
-                      return new DropdownMenuItem<String>(
+                      return DropdownMenuItem<String>(
                         value: value,
-                        child: new Text(value),
+                        child: Text(value),
                       );
                     }).toList(),
                     hint: Text(barrio),
@@ -143,7 +143,7 @@ class _RegistrationFormState extends State<RegistrationForm> {
 
           Expanded(
             flex: 1,
-            child: new Row(
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 // RaisedButton(

@@ -10,18 +10,32 @@ class PatientRegistrationController extends GetxController {
   TextEditingController familyName;
   TextEditingController givenName;
 
-  RegistrationName family = RegistrationName('Smith');
-  RegistrationName given = RegistrationName('');
-  RegistrationGender gender = RegistrationGender('female');
-  RegistrationBirthDate birthDate = RegistrationBirthDate(DateTime(
-      DateTime.now().year, DateTime.now().month, DateTime.now().day + 1));
-  RegistrationBarrio barrio = RegistrationBarrio('');
+  RegistrationName family;
+  String familyError;
+  RegistrationName given;
+  String givenError;
+  String gender;
+  RegistrationBirthDate birthDate;
+  String birthDateError;
+  RegistrationBarrio barrio;
+  String barrioError;
 
-  void changeLastName() {
-    print(family == RegistrationName('Smith'));
+  void register() {
     family == RegistrationName('Smith')
         ? family = RegistrationName('Faulkenberry')
         : family = RegistrationName('Smith');
+    update();
+  }
+
+  void setFemaleGender() {
+    gender = 'female';
+    print(gender);
+    update();
+  }
+
+  void setMaleGender() {
+    gender = 'male';
+    print(gender);
     update();
   }
 }
