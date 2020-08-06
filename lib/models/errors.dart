@@ -1,9 +1,9 @@
-import 'package:vigor/domain/core/failures.dart';
+import 'package:vigor/models/failures.dart';
 
 class UnexpectedValueError extends Error {
-  final ValueFailure valueFailure;
-
   UnexpectedValueError(this.valueFailure);
+
+  final ValueFailure valueFailure;
 
   @override
   String toString() {

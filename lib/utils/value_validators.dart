@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:vigor/domain/core/failures.dart';
+import 'package:vigor/models/failures.dart';
 
 Either<ValueFailure<String>, String> validateUsername(String input) {
   if (input.length >= 6) {

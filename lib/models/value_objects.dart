@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:vigor/domain/core/errors.dart';
+import 'package:vigor/models/errors.dart';
 
 import 'failures.dart';
 
@@ -16,7 +16,9 @@ abstract class ValueObject<T> {
 
   @override
   bool operator ==(Object o) {
-    if (identical(this, o)) return true;
+    if (identical(this, o)) {
+      return true;
+    }
     return o is ValueObject<T> && o.value == value;
   }
 

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../shared/shared.dart';
-
+import '../screens.dart';
 import 'by_country.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -60,7 +59,7 @@ Material loginButton(String login, Size size) => Material(
       child: MaterialButton(
         minWidth: size.width,
         padding: padding,
-        onPressed: () => Get.to(HomeScreen()),
+        onPressed: () => Get.to<Widget>(HomeScreen()),
         child: Text(login, textAlign: TextAlign.center),
       ),
     );

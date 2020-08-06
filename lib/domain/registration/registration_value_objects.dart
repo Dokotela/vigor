@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
 
-import 'package:vigor/domain/core/failures.dart';
-import 'package:vigor/domain/core/value_objects.dart';
-import 'package:vigor/domain/core/value_validators.dart';
+import 'package:vigor/models/failures.dart';
+import 'package:vigor/models/value_objects.dart';
+import 'package:vigor/utils/value_validators.dart';
 
 class RegistrationName extends ValueObject<String> {
   @override

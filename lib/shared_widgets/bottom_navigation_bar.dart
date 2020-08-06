@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import 'shared.dart';
+import 'package:vigor/screens/screens.dart';
 
 BottomAppBar bottomAppBar = BottomAppBar(
   color: Colors.blue[900],
@@ -14,11 +13,11 @@ BottomAppBar bottomAppBar = BottomAppBar(
       ),
       IconButton(
         icon: Icon(Icons.home, color: Colors.white),
-        onPressed: () => Get.to(HomeScreen()),
+        onPressed: () => Get.to<Widget>(HomeScreen()),
       ),
       IconButton(
         icon: Icon(Icons.exit_to_app, color: Colors.white),
-        onPressed: () => Get.to(LoginScreen()),
+        onPressed: () => Get.to<Widget>(const LoginScreen()),
       ),
     ],
   ),
@@ -31,7 +30,7 @@ BottomAppBar homeBottomAppBar = BottomAppBar(
     children: [
       IconButton(
         icon: Icon(Icons.exit_to_app, color: Colors.white),
-        onPressed: () => Get.to(LoginScreen()),
+        onPressed: () => Get.to<Widget>(const LoginScreen()),
       ),
     ],
   ),

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vigor/presentation/screens/registration/registration.dart';
-import '../../shared/shared.dart';
+import 'package:vigor/shared_widgets/shared_widgets.dart';
+
+import '../screens.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key key}) : super(key: key);
@@ -14,7 +15,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeClass.dark(),
+      theme: ThemeData.dark(),
       home: Scaffold(
         appBar: AppBar(title: Text('title'.tr)),
         body: Center(
