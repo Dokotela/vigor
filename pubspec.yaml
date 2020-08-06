@@ -39,7 +39,7 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - lib/presentation/localization/lang/
-    - lib/presentation/img/flags/
-    - lib/presentation/img/
+    - assets/localization/lang/
+    - assets/img/flags/
+    - assets/img/
                                       
