@@ -23,7 +23,10 @@ class _LoginScreenState extends State<LoginScreen> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              flagContainer(country, MediaQuery.of(context).size),
+              Flexible(
+                flex: 1,
+                child: flagContainer(country, MediaQuery.of(context).size),
+              ),
               splashText(country),
               const SizedBox(height: 30.0),
               loginField('Username'.tr, obscure: false),
@@ -46,10 +49,12 @@ const String country = 'usa';
 TextField loginField(String hint, {bool obscure}) => TextField(
       obscureText: obscure,
       decoration: InputDecoration(
-          contentPadding: padding,
-          hintText: hint,
-          border:
-              OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
+        contentPadding: padding,
+        hintText: hint,
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0)),
+        focusedBorder:
+            OutlineInputBorder(borderRadius: BorderRadius.circular(32.0)),
+      ),
     );
 
 Material loginButton(String login, Size size) => Material(

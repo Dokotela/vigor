@@ -22,4 +22,10 @@ abstract class ValueFailure<T> with _$ValueFailure<T> {
   const factory ValueFailure.notARelation({
     @required T failedValue,
   }) = NotARelation<T>;
+  const factory ValueFailure.futureDate({
+    @required T failedValue,
+  }) = FutureDate<T>;
+  const factory ValueFailure.fhirPrimitiveFail({
+    @required T failedValue,
+  }) = FhirPrimitiveFail<T>;
 }

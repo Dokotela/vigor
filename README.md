@@ -4,7 +4,6 @@ A new Flutter project.
 
 ## Getting Started
 
-
 models - object classes used throughout app
 screens - screens: ui, corresponds to routes
 services - interaction with the outside world (web apis, local db, etc)

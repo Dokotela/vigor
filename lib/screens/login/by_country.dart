@@ -8,7 +8,7 @@ Container flagContainer(String country, Size size) => Container(
     );
 
 Image getFlag(String country) => Image(
-      image: AssetImage('lib/presentation/img/flags/$country.png'),
+      image: AssetImage('assets/img/flags/$country.png'),
       fit: BoxFit.contain,
     );
 

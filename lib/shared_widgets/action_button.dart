@@ -7,7 +7,7 @@ class ActionButton extends StatelessWidget {
 
   final String fileName;
   final String buttonText;
-  static const String imgDir = 'lib/presentation/img/';
+  static const String imgDir = 'assets/img/';
   final Widget nextPage;
 
   @override

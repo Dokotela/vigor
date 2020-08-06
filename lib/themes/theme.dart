@@ -15,6 +15,16 @@ abstract class ThemeClass {
         primaryColor: Colors.blue[900],
         accentColor: Colors.red[600],
         textTheme: _darkTextTheme,
+        inputDecorationTheme: InputDecorationTheme(
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(16.0),
+            borderSide: BorderSide(color: Colors.blue, width: 24.0),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(16.0),
+            borderSide: BorderSide(color: Colors.blue, width: 2.0),
+          ),
+        ),
       );
 }
 

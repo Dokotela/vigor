@@ -53,6 +53,20 @@ class _$ValueFailureTearOff {
       failedValue: failedValue,
     );
   }
+
+// ignore: unused_element
+  FutureDate<T> futureDate<T>({@required T failedValue}) {
+    return FutureDate<T>(
+      failedValue: failedValue,
+    );
+  }
+
+// ignore: unused_element
+  FhirPrimitiveFail<T> fhirPrimitiveFail<T>({@required T failedValue}) {
+    return FhirPrimitiveFail<T>(
+      failedValue: failedValue,
+    );
+  }
 }
 
 // ignore: unused_element
@@ -69,6 +83,8 @@ mixin _$ValueFailure<T> {
     @required Result notAGender(T failedValue),
     @required Result notABarrio(T failedValue),
     @required Result notARelation(T failedValue),
+    @required Result futureDate(T failedValue),
+    @required Result fhirPrimitiveFail(T failedValue),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
@@ -78,6 +94,8 @@ mixin _$ValueFailure<T> {
     Result notAGender(T failedValue),
     Result notABarrio(T failedValue),
     Result notARelation(T failedValue),
+    Result futureDate(T failedValue),
+    Result fhirPrimitiveFail(T failedValue),
     @required Result orElse(),
   });
   @optionalTypeArgs
@@ -88,6 +106,8 @@ mixin _$ValueFailure<T> {
     @required Result notAGender(NotAGender<T> value),
     @required Result notABarrio(NotABarrio<T> value),
     @required Result notARelation(NotARelation<T> value),
+    @required Result futureDate(FutureDate<T> value),
+    @required Result fhirPrimitiveFail(FhirPrimitiveFail<T> value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
@@ -97,6 +117,8 @@ mixin _$ValueFailure<T> {
     Result notAGender(NotAGender<T> value),
     Result notABarrio(NotABarrio<T> value),
     Result notARelation(NotARelation<T> value),
+    Result futureDate(FutureDate<T> value),
+    Result fhirPrimitiveFail(FhirPrimitiveFail<T> value),
     @required Result orElse(),
   });
 
@@ -197,6 +219,8 @@ class _$InvalidUsername<T> implements InvalidUsername<T> {
     @required Result notAGender(T failedValue),
     @required Result notABarrio(T failedValue),
     @required Result notARelation(T failedValue),
+    @required Result futureDate(T failedValue),
+    @required Result fhirPrimitiveFail(T failedValue),
   }) {
     assert(invalidUsername != null);
     assert(shortPassword != null);
@@ -204,6 +228,8 @@ class _$InvalidUsername<T> implements InvalidUsername<T> {
     assert(notAGender != null);
     assert(notABarrio != null);
     assert(notARelation != null);
+    assert(futureDate != null);
+    assert(fhirPrimitiveFail != null);
     return invalidUsername(failedValue);
   }
 
@@ -216,6 +242,8 @@ class _$InvalidUsername<T> implements InvalidUsername<T> {
     Result notAGender(T failedValue),
     Result notABarrio(T failedValue),
     Result notARelation(T failedValue),
+    Result futureDate(T failedValue),
+    Result fhirPrimitiveFail(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -234,6 +262,8 @@ class _$InvalidUsername<T> implements InvalidUsername<T> {
     @required Result notAGender(NotAGender<T> value),
     @required Result notABarrio(NotABarrio<T> value),
     @required Result notARelation(NotARelation<T> value),
+    @required Result futureDate(FutureDate<T> value),
+    @required Result fhirPrimitiveFail(FhirPrimitiveFail<T> value),
   }) {
     assert(invalidUsername != null);
     assert(shortPassword != null);
@@ -241,6 +271,8 @@ class _$InvalidUsername<T> implements InvalidUsername<T> {
     assert(notAGender != null);
     assert(notABarrio != null);
     assert(notARelation != null);
+    assert(futureDate != null);
+    assert(fhirPrimitiveFail != null);
     return invalidUsername(this);
   }
 
@@ -253,6 +285,8 @@ class _$InvalidUsername<T> implements InvalidUsername<T> {
     Result notAGender(NotAGender<T> value),
     Result notABarrio(NotABarrio<T> value),
     Result notARelation(NotARelation<T> value),
+    Result futureDate(FutureDate<T> value),
+    Result fhirPrimitiveFail(FhirPrimitiveFail<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -341,6 +375,8 @@ class _$ShortPassword<T> implements ShortPassword<T> {
     @required Result notAGender(T failedValue),
     @required Result notABarrio(T failedValue),
     @required Result notARelation(T failedValue),
+    @required Result futureDate(T failedValue),
+    @required Result fhirPrimitiveFail(T failedValue),
   }) {
     assert(invalidUsername != null);
     assert(shortPassword != null);
@@ -348,6 +384,8 @@ class _$ShortPassword<T> implements ShortPassword<T> {
     assert(notAGender != null);
     assert(notABarrio != null);
     assert(notARelation != null);
+    assert(futureDate != null);
+    assert(fhirPrimitiveFail != null);
     return shortPassword(failedValue);
   }
 
@@ -360,6 +398,8 @@ class _$ShortPassword<T> implements ShortPassword<T> {
     Result notAGender(T failedValue),
     Result notABarrio(T failedValue),
     Result notARelation(T failedValue),
+    Result futureDate(T failedValue),
+    Result fhirPrimitiveFail(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -378,6 +418,8 @@ class _$ShortPassword<T> implements ShortPassword<T> {
     @required Result notAGender(NotAGender<T> value),
     @required Result notABarrio(NotABarrio<T> value),
     @required Result notARelation(NotARelation<T> value),
+    @required Result futureDate(FutureDate<T> value),
+    @required Result fhirPrimitiveFail(FhirPrimitiveFail<T> value),
   }) {
     assert(invalidUsername != null);
     assert(shortPassword != null);
@@ -385,6 +427,8 @@ class _$ShortPassword<T> implements ShortPassword<T> {
     assert(notAGender != null);
     assert(notABarrio != null);
     assert(notARelation != null);
+    assert(futureDate != null);
+    assert(fhirPrimitiveFail != null);
     return shortPassword(this);
   }
 
@@ -397,6 +441,8 @@ class _$ShortPassword<T> implements ShortPassword<T> {
     Result notAGender(NotAGender<T> value),
     Result notABarrio(NotABarrio<T> value),
     Result notARelation(NotARelation<T> value),
+    Result futureDate(FutureDate<T> value),
+    Result fhirPrimitiveFail(FhirPrimitiveFail<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -486,6 +532,8 @@ class _$ShortRegistrationName<T> implements ShortRegistrationName<T> {
     @required Result notAGender(T failedValue),
     @required Result notABarrio(T failedValue),
     @required Result notARelation(T failedValue),
+    @required Result futureDate(T failedValue),
+    @required Result fhirPrimitiveFail(T failedValue),
   }) {
     assert(invalidUsername != null);
     assert(shortPassword != null);
@@ -493,6 +541,8 @@ class _$ShortRegistrationName<T> implements ShortRegistrationName<T> {
     assert(notAGender != null);
     assert(notABarrio != null);
     assert(notARelation != null);
+    assert(futureDate != null);
+    assert(fhirPrimitiveFail != null);
     return shortRegistrationName(failedValue);
   }
 
@@ -505,6 +555,8 @@ class _$ShortRegistrationName<T> implements ShortRegistrationName<T> {
     Result notAGender(T failedValue),
     Result notABarrio(T failedValue),
     Result notARelation(T failedValue),
+    Result futureDate(T failedValue),
+    Result fhirPrimitiveFail(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -523,6 +575,8 @@ class _$ShortRegistrationName<T> implements ShortRegistrationName<T> {
     @required Result notAGender(NotAGender<T> value),
     @required Result notABarrio(NotABarrio<T> value),
     @required Result notARelation(NotARelation<T> value),
+    @required Result futureDate(FutureDate<T> value),
+    @required Result fhirPrimitiveFail(FhirPrimitiveFail<T> value),
   }) {
     assert(invalidUsername != null);
     assert(shortPassword != null);
@@ -530,6 +584,8 @@ class _$ShortRegistrationName<T> implements ShortRegistrationName<T> {
     assert(notAGender != null);
     assert(notABarrio != null);
     assert(notARelation != null);
+    assert(futureDate != null);
+    assert(fhirPrimitiveFail != null);
     return shortRegistrationName(this);
   }
 
@@ -542,6 +598,8 @@ class _$ShortRegistrationName<T> implements ShortRegistrationName<T> {
     Result notAGender(NotAGender<T> value),
     Result notABarrio(NotABarrio<T> value),
     Result notARelation(NotARelation<T> value),
+    Result futureDate(FutureDate<T> value),
+    Result fhirPrimitiveFail(FhirPrimitiveFail<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -630,6 +688,8 @@ class _$NotAGender<T> implements NotAGender<T> {
     @required Result notAGender(T failedValue),
     @required Result notABarrio(T failedValue),
     @required Result notARelation(T failedValue),
+    @required Result futureDate(T failedValue),
+    @required Result fhirPrimitiveFail(T failedValue),
   }) {
     assert(invalidUsername != null);
     assert(shortPassword != null);
@@ -637,6 +697,8 @@ class _$NotAGender<T> implements NotAGender<T> {
     assert(notAGender != null);
     assert(notABarrio != null);
     assert(notARelation != null);
+    assert(futureDate != null);
+    assert(fhirPrimitiveFail != null);
     return notAGender(failedValue);
   }
 
@@ -649,6 +711,8 @@ class _$NotAGender<T> implements NotAGender<T> {
     Result notAGender(T failedValue),
     Result notABarrio(T failedValue),
     Result notARelation(T failedValue),
+    Result futureDate(T failedValue),
+    Result fhirPrimitiveFail(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -667,6 +731,8 @@ class _$NotAGender<T> implements NotAGender<T> {
     @required Result notAGender(NotAGender<T> value),
     @required Result notABarrio(NotABarrio<T> value),
     @required Result notARelation(NotARelation<T> value),
+    @required Result futureDate(FutureDate<T> value),
+    @required Result fhirPrimitiveFail(FhirPrimitiveFail<T> value),
   }) {
     assert(invalidUsername != null);
     assert(shortPassword != null);
@@ -674,6 +740,8 @@ class _$NotAGender<T> implements NotAGender<T> {
     assert(notAGender != null);
     assert(notABarrio != null);
     assert(notARelation != null);
+    assert(futureDate != null);
+    assert(fhirPrimitiveFail != null);
     return notAGender(this);
   }
 
@@ -686,6 +754,8 @@ class _$NotAGender<T> implements NotAGender<T> {
     Result notAGender(NotAGender<T> value),
     Result notABarrio(NotABarrio<T> value),
     Result notARelation(NotARelation<T> value),
+    Result futureDate(FutureDate<T> value),
+    Result fhirPrimitiveFail(FhirPrimitiveFail<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -773,6 +843,8 @@ class _$NotABarrio<T> implements NotABarrio<T> {
     @required Result notAGender(T failedValue),
     @required Result notABarrio(T failedValue),
     @required Result notARelation(T failedValue),
+    @required Result futureDate(T failedValue),
+    @required Result fhirPrimitiveFail(T failedValue),
   }) {
     assert(invalidUsername != null);
     assert(shortPassword != null);
@@ -780,6 +852,8 @@ class _$NotABarrio<T> implements NotABarrio<T> {
     assert(notAGender != null);
     assert(notABarrio != null);
     assert(notARelation != null);
+    assert(futureDate != null);
+    assert(fhirPrimitiveFail != null);
     return notABarrio(failedValue);
   }
 
@@ -792,6 +866,8 @@ class _$NotABarrio<T> implements NotABarrio<T> {
     Result notAGender(T failedValue),
     Result notABarrio(T failedValue),
     Result notARelation(T failedValue),
+    Result futureDate(T failedValue),
+    Result fhirPrimitiveFail(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -810,6 +886,8 @@ class _$NotABarrio<T> implements NotABarrio<T> {
     @required Result notAGender(NotAGender<T> value),
     @required Result notABarrio(NotABarrio<T> value),
     @required Result notARelation(NotARelation<T> value),
+    @required Result futureDate(FutureDate<T> value),
+    @required Result fhirPrimitiveFail(FhirPrimitiveFail<T> value),
   }) {
     assert(invalidUsername != null);
     assert(shortPassword != null);
@@ -817,6 +895,8 @@ class _$NotABarrio<T> implements NotABarrio<T> {
     assert(notAGender != null);
     assert(notABarrio != null);
     assert(notARelation != null);
+    assert(futureDate != null);
+    assert(fhirPrimitiveFail != null);
     return notABarrio(this);
   }
 
@@ -829,6 +909,8 @@ class _$NotABarrio<T> implements NotABarrio<T> {
     Result notAGender(NotAGender<T> value),
     Result notABarrio(NotABarrio<T> value),
     Result notARelation(NotARelation<T> value),
+    Result futureDate(FutureDate<T> value),
+    Result fhirPrimitiveFail(FhirPrimitiveFail<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -916,6 +998,8 @@ class _$NotARelation<T> implements NotARelation<T> {
     @required Result notAGender(T failedValue),
     @required Result notABarrio(T failedValue),
     @required Result notARelation(T failedValue),
+    @required Result futureDate(T failedValue),
+    @required Result fhirPrimitiveFail(T failedValue),
   }) {
     assert(invalidUsername != null);
     assert(shortPassword != null);
@@ -923,6 +1007,8 @@ class _$NotARelation<T> implements NotARelation<T> {
     assert(notAGender != null);
     assert(notABarrio != null);
     assert(notARelation != null);
+    assert(futureDate != null);
+    assert(fhirPrimitiveFail != null);
     return notARelation(failedValue);
   }
 
@@ -935,6 +1021,8 @@ class _$NotARelation<T> implements NotARelation<T> {
     Result notAGender(T failedValue),
     Result notABarrio(T failedValue),
     Result notARelation(T failedValue),
+    Result futureDate(T failedValue),
+    Result fhirPrimitiveFail(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -953,6 +1041,8 @@ class _$NotARelation<T> implements NotARelation<T> {
     @required Result notAGender(NotAGender<T> value),
     @required Result notABarrio(NotABarrio<T> value),
     @required Result notARelation(NotARelation<T> value),
+    @required Result futureDate(FutureDate<T> value),
+    @required Result fhirPrimitiveFail(FhirPrimitiveFail<T> value),
   }) {
     assert(invalidUsername != null);
     assert(shortPassword != null);
@@ -960,6 +1050,8 @@ class _$NotARelation<T> implements NotARelation<T> {
     assert(notAGender != null);
     assert(notABarrio != null);
     assert(notARelation != null);
+    assert(futureDate != null);
+    assert(fhirPrimitiveFail != null);
     return notARelation(this);
   }
 
@@ -972,6 +1064,8 @@ class _$NotARelation<T> implements NotARelation<T> {
     Result notAGender(NotAGender<T> value),
     Result notABarrio(NotABarrio<T> value),
     Result notARelation(NotARelation<T> value),
+    Result futureDate(FutureDate<T> value),
+    Result fhirPrimitiveFail(FhirPrimitiveFail<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -989,4 +1083,316 @@ abstract class NotARelation<T> implements ValueFailure<T> {
   T get failedValue;
   @override
   $NotARelationCopyWith<T, NotARelation<T>> get copyWith;
+}
+
+abstract class $FutureDateCopyWith<T, $Res>
+    implements $ValueFailureCopyWith<T, $Res> {
+  factory $FutureDateCopyWith(
+          FutureDate<T> value, $Res Function(FutureDate<T>) then) =
+      _$FutureDateCopyWithImpl<T, $Res>;
+  @override
+  $Res call({T failedValue});
+}
+
+class _$FutureDateCopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res>
+    implements $FutureDateCopyWith<T, $Res> {
+  _$FutureDateCopyWithImpl(
+      FutureDate<T> _value, $Res Function(FutureDate<T>) _then)
+      : super(_value, (v) => _then(v as FutureDate<T>));
+
+  @override
+  FutureDate<T> get _value => super._value as FutureDate<T>;
+
+  @override
+  $Res call({
+    Object failedValue = freezed,
+  }) {
+    return _then(FutureDate<T>(
+      failedValue:
+          failedValue == freezed ? _value.failedValue : failedValue as T,
+    ));
+  }
+}
+
+class _$FutureDate<T> implements FutureDate<T> {
+  const _$FutureDate({@required this.failedValue})
+      : assert(failedValue != null);
+
+  @override
+  final T failedValue;
+
+  @override
+  String toString() {
+    return 'ValueFailure<$T>.futureDate(failedValue: $failedValue)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is FutureDate<T> &&
+            (identical(other.failedValue, failedValue) ||
+                const DeepCollectionEquality()
+                    .equals(other.failedValue, failedValue)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
+
+  @override
+  $FutureDateCopyWith<T, FutureDate<T>> get copyWith =>
+      _$FutureDateCopyWithImpl<T, FutureDate<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result invalidUsername(T failedValue),
+    @required Result shortPassword(T failedValue),
+    @required Result shortRegistrationName(T failedValue),
+    @required Result notAGender(T failedValue),
+    @required Result notABarrio(T failedValue),
+    @required Result notARelation(T failedValue),
+    @required Result futureDate(T failedValue),
+    @required Result fhirPrimitiveFail(T failedValue),
+  }) {
+    assert(invalidUsername != null);
+    assert(shortPassword != null);
+    assert(shortRegistrationName != null);
+    assert(notAGender != null);
+    assert(notABarrio != null);
+    assert(notARelation != null);
+    assert(futureDate != null);
+    assert(fhirPrimitiveFail != null);
+    return futureDate(failedValue);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result invalidUsername(T failedValue),
+    Result shortPassword(T failedValue),
+    Result shortRegistrationName(T failedValue),
+    Result notAGender(T failedValue),
+    Result notABarrio(T failedValue),
+    Result notARelation(T failedValue),
+    Result futureDate(T failedValue),
+    Result fhirPrimitiveFail(T failedValue),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (futureDate != null) {
+      return futureDate(failedValue);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result invalidUsername(InvalidUsername<T> value),
+    @required Result shortPassword(ShortPassword<T> value),
+    @required Result shortRegistrationName(ShortRegistrationName<T> value),
+    @required Result notAGender(NotAGender<T> value),
+    @required Result notABarrio(NotABarrio<T> value),
+    @required Result notARelation(NotARelation<T> value),
+    @required Result futureDate(FutureDate<T> value),
+    @required Result fhirPrimitiveFail(FhirPrimitiveFail<T> value),
+  }) {
+    assert(invalidUsername != null);
+    assert(shortPassword != null);
+    assert(shortRegistrationName != null);
+    assert(notAGender != null);
+    assert(notABarrio != null);
+    assert(notARelation != null);
+    assert(futureDate != null);
+    assert(fhirPrimitiveFail != null);
+    return futureDate(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result invalidUsername(InvalidUsername<T> value),
+    Result shortPassword(ShortPassword<T> value),
+    Result shortRegistrationName(ShortRegistrationName<T> value),
+    Result notAGender(NotAGender<T> value),
+    Result notABarrio(NotABarrio<T> value),
+    Result notARelation(NotARelation<T> value),
+    Result futureDate(FutureDate<T> value),
+    Result fhirPrimitiveFail(FhirPrimitiveFail<T> value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (futureDate != null) {
+      return futureDate(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class FutureDate<T> implements ValueFailure<T> {
+  const factory FutureDate({@required T failedValue}) = _$FutureDate<T>;
+
+  @override
+  T get failedValue;
+  @override
+  $FutureDateCopyWith<T, FutureDate<T>> get copyWith;
+}
+
+abstract class $FhirPrimitiveFailCopyWith<T, $Res>
+    implements $ValueFailureCopyWith<T, $Res> {
+  factory $FhirPrimitiveFailCopyWith(FhirPrimitiveFail<T> value,
+          $Res Function(FhirPrimitiveFail<T>) then) =
+      _$FhirPrimitiveFailCopyWithImpl<T, $Res>;
+  @override
+  $Res call({T failedValue});
+}
+
+class _$FhirPrimitiveFailCopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res>
+    implements $FhirPrimitiveFailCopyWith<T, $Res> {
+  _$FhirPrimitiveFailCopyWithImpl(
+      FhirPrimitiveFail<T> _value, $Res Function(FhirPrimitiveFail<T>) _then)
+      : super(_value, (v) => _then(v as FhirPrimitiveFail<T>));
+
+  @override
+  FhirPrimitiveFail<T> get _value => super._value as FhirPrimitiveFail<T>;
+
+  @override
+  $Res call({
+    Object failedValue = freezed,
+  }) {
+    return _then(FhirPrimitiveFail<T>(
+      failedValue:
+          failedValue == freezed ? _value.failedValue : failedValue as T,
+    ));
+  }
+}
+
+class _$FhirPrimitiveFail<T> implements FhirPrimitiveFail<T> {
+  const _$FhirPrimitiveFail({@required this.failedValue})
+      : assert(failedValue != null);
+
+  @override
+  final T failedValue;
+
+  @override
+  String toString() {
+    return 'ValueFailure<$T>.fhirPrimitiveFail(failedValue: $failedValue)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is FhirPrimitiveFail<T> &&
+            (identical(other.failedValue, failedValue) ||
+                const DeepCollectionEquality()
+                    .equals(other.failedValue, failedValue)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
+
+  @override
+  $FhirPrimitiveFailCopyWith<T, FhirPrimitiveFail<T>> get copyWith =>
+      _$FhirPrimitiveFailCopyWithImpl<T, FhirPrimitiveFail<T>>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result invalidUsername(T failedValue),
+    @required Result shortPassword(T failedValue),
+    @required Result shortRegistrationName(T failedValue),
+    @required Result notAGender(T failedValue),
+    @required Result notABarrio(T failedValue),
+    @required Result notARelation(T failedValue),
+    @required Result futureDate(T failedValue),
+    @required Result fhirPrimitiveFail(T failedValue),
+  }) {
+    assert(invalidUsername != null);
+    assert(shortPassword != null);
+    assert(shortRegistrationName != null);
+    assert(notAGender != null);
+    assert(notABarrio != null);
+    assert(notARelation != null);
+    assert(futureDate != null);
+    assert(fhirPrimitiveFail != null);
+    return fhirPrimitiveFail(failedValue);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result invalidUsername(T failedValue),
+    Result shortPassword(T failedValue),
+    Result shortRegistrationName(T failedValue),
+    Result notAGender(T failedValue),
+    Result notABarrio(T failedValue),
+    Result notARelation(T failedValue),
+    Result futureDate(T failedValue),
+    Result fhirPrimitiveFail(T failedValue),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (fhirPrimitiveFail != null) {
+      return fhirPrimitiveFail(failedValue);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result invalidUsername(InvalidUsername<T> value),
+    @required Result shortPassword(ShortPassword<T> value),
+    @required Result shortRegistrationName(ShortRegistrationName<T> value),
+    @required Result notAGender(NotAGender<T> value),
+    @required Result notABarrio(NotABarrio<T> value),
+    @required Result notARelation(NotARelation<T> value),
+    @required Result futureDate(FutureDate<T> value),
+    @required Result fhirPrimitiveFail(FhirPrimitiveFail<T> value),
+  }) {
+    assert(invalidUsername != null);
+    assert(shortPassword != null);
+    assert(shortRegistrationName != null);
+    assert(notAGender != null);
+    assert(notABarrio != null);
+    assert(notARelation != null);
+    assert(futureDate != null);
+    assert(fhirPrimitiveFail != null);
+    return fhirPrimitiveFail(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result invalidUsername(InvalidUsername<T> value),
+    Result shortPassword(ShortPassword<T> value),
+    Result shortRegistrationName(ShortRegistrationName<T> value),
+    Result notAGender(NotAGender<T> value),
+    Result notABarrio(NotABarrio<T> value),
+    Result notARelation(NotARelation<T> value),
+    Result futureDate(FutureDate<T> value),
+    Result fhirPrimitiveFail(FhirPrimitiveFail<T> value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (fhirPrimitiveFail != null) {
+      return fhirPrimitiveFail(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class FhirPrimitiveFail<T> implements ValueFailure<T> {
+  const factory FhirPrimitiveFail({@required T failedValue}) =
+      _$FhirPrimitiveFail<T>;
+
+  @override
+  T get failedValue;
+  @override
+  $FhirPrimitiveFailCopyWith<T, FhirPrimitiveFail<T>> get copyWith;
 }
