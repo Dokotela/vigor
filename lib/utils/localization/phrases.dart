@@ -24,4 +24,10 @@ List<String> phrases = [
   'Family Name',
   'Other Names',
   'cannot be future date',
+  'Register Patient',
+  'Enter family name',
+  'Enter other names',
+  'Please select neighborhood',
+  'Please select birthdate',
+  'Please select sex',
 ];
