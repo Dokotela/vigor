@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -17,7 +19,7 @@ class Start extends StatelessWidget {
       // theme: ThemeClass.light(),
       theme: ThemeClass.dark(),
       translations: MyTranslations(),
-      locale: const Locale('en', 'Us'),
+      locale: Locale(Platform.localeName.split('_')[0]),
       title: 'Vigor',
       home: const LoginScreen(),
     );

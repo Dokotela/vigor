@@ -18,7 +18,7 @@ class Registration extends StatelessWidget {
         padding: const EdgeInsets.all(10.0),
         child: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               Column(
                 children: <Widget>[
@@ -42,27 +42,41 @@ class Registration extends StatelessWidget {
                   ),
                 ],
               ),
-              GetBuilder<PatientRegistrationController>(
-                builder: (_) => Row(
+              Obx(
+                () => Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    Text('Sex at birth'.tr),
+                    Text(
+                      'Sex at birth'.tr,
+                      style: ThemeClass.dark().textTheme.headline4,
+                    ),
                     Radio(
                       value: 'female',
-                      groupValue: regController.gender,
+                      groupValue: regController.gender.value,
                       onChanged: (String _) => regController.setFemaleGender(),
                     ),
-                    Text('female'.tr),
+                    Text(
+                      'female'.tr,
+                      style: ThemeClass.dark().textTheme.headline4,
+                    ),
                     Radio(
                       value: 'male',
-                      groupValue: regController.gender,
+                      groupValue: regController.gender.value,
                       onChanged: (String _) => regController.setMaleGender(),
                     ),
-                    Text('male'.tr),
+                    Text(
+                      'male'.tr,
+                      style: ThemeClass.dark().textTheme.headline4,
+                    ),
                   ],
                 ),
               ),
               RaisedButton(
+                materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12.0),
+                  side: BorderSide(color: Colors.blue, width: 2.0),
+                ),
                 color: ThemeClass.dark().backgroundColor,
                 onPressed: () => showDatePicker(
                   context: context,
@@ -70,20 +84,37 @@ class Registration extends StatelessWidget {
                   firstDate: DateTime(1900, 1, 1),
                   lastDate: DateTime(2999, 12, 31),
                 ).then((date) => regController.chooseBirthDate(date)),
-                child: GetBuilder<PatientRegistrationController>(
-                  builder: (_) => Text(
-                    '${"Date of Birth".tr} ${regController?.dispBirthDate ?? ''}',
+                child: Obx(
+                  () => Text(
+                    '${"Date of Birth".tr} ${regController.dispBirthDate.value}',
+                    style: ThemeClass.dark().textTheme.headline5,
                     textAlign: TextAlign.center,
                   ),
                 ),
               ),
+              DropdownButton<String>(
+                  items: <String>[
+                    'Filiu',
+                    'La 41',
+                    'Carretera',
+                    'Villa_Verde',
+                    'Cachipero',
+                    'Puerto_Rico',
+                    'Kilombo'
+                  ].map((String value) {
+                    return DropdownMenuItem<String>(
+                      value: value,
+                      child: Text(value),
+                    );
+                  }).toList(),
+                  hint: Obx(() => Text(
+                        regController.displayBarrio.value,
+                        style: ThemeClass.dark().textTheme.headline4,
+                      )),
+                  onChanged: (newVal) => regController.setBarrio(newVal)),
             ],
           ),
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () => regController.register(),
-        child: Icon(Icons.add),
       ),
       bottomNavigationBar: bottomAppBar,
     );

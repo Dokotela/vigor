@@ -48,7 +48,7 @@ TextTheme _buildTextTheme() => TextTheme(
     );
 
 TextStyle _getTextStyle(double size, FontWeight fontWeight) =>
-    TextStyle(fontSize: size, fontWeight: fontWeight);
+    TextStyle(fontSize: size, fontWeight: fontWeight, color: Colors.white70);
 
 //     // Customize Themes
 //     appBarTheme: _buildAppBarTheme(textTheme),

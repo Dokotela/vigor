@@ -4,19 +4,24 @@ import 'package:get/get.dart';
 import 'package:vigor/models/registration_value_objects.dart';
 
 class PatientRegistrationController extends GetxController {
-  r4.Patient patient;
+  PatientRegistrationController({this.patient});
 
+  r4.Patient patient;
   TextEditingController familyName;
   TextEditingController givenName;
-
   RegistrationName family;
   String familyError;
   RegistrationName given;
   String givenError;
-  String gender;
+  final gender = ''.obs;
   RegistrationBirthDate birthDate;
-  String dispBirthDate =
-      DateTime.now().add(const Duration(days: 1)).toString().substring(0, 10);
+  final dispBirthDate = DateTime.now()
+      .add(const Duration(days: 1))
+      .toString()
+      .substring(0, 10)
+      .obs;
+  RegistrationBarrio barrio;
+  final displayBarrio = 'Neighborhood'.tr.obs;
 
   void register() {
     family == RegistrationName('Smith')
@@ -25,23 +30,18 @@ class PatientRegistrationController extends GetxController {
     update();
   }
 
-  void setFemaleGender() {
-    gender = 'female';
-    update();
-  }
+  void setFemaleGender() => gender.value = 'female';
 
-  void setMaleGender() {
-    gender = 'male';
-    update();
-  }
+  void setMaleGender() => gender.value = 'male';
 
   void chooseBirthDate(DateTime date) {
     final dateOnly = date.toString().substring(0, 10);
     birthDate = RegistrationBirthDate(r4.Date(dateOnly));
-    dispBirthDate = birthDate.value.fold(
+    dispBirthDate.value = birthDate.value.fold(
       (ifLeft) => '${"cannot be future date".tr}: ${ifLeft.failedValue}',
       (ifRight) => ifRight.toString(),
     );
-    update();
   }
+
+  void setBarrio(String newVal) => displayBarrio.value = newVal;
 }
