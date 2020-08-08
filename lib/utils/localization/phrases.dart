@@ -23,7 +23,7 @@ List<String> phrases = [
   'Relationship',
   'Family Name',
   'Other Names',
-  'cannot be future date',
+  'Cannot be future date',
   'Register Patient',
   'Enter family name',
   'Enter other names',

@@ -1,66 +1,58 @@
 import 'package:fhir/fhir_r4.dart' as r4;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vigor/models/registration/registration_value_objects.dart';
+import 'package:vigor/utils/validators.dart';
 
-class PatientRegistrationController extends GetxController {
-  PatientRegistrationController({this.patient});
+class PatRegController extends GetxController {
+  PatRegController({this.patient});
 
   r4.Patient patient;
   TextEditingController familyName = TextEditingController(text: '');
   TextEditingController givenName = TextEditingController(text: '');
-  RegistrationName family = RegistrationName('  ');
-  RegistrationName given = RegistrationName('  ');
-  final gender = ''.obs;
-  RegistrationBirthDate birthDate;
-  final dispBirthDate = DateTime.now()
-      .add(const Duration(days: 1))
-      .toString()
-      .substring(0, 10)
-      .obs;
-  RegistrationBarrio barrio = RegistrationBarrio('Neighborhood');
-  final displayBarrio = 'Neighborhood'.tr.obs;
+  String familyError;
+  String givenError;
+  final gender = 'female'.obs;
+  final birthDate = DateTime.now().add(const Duration(days: 1)).obs;
+  final birthDateError = ''.obs;
+  final barrio = 'Neighborhood'.tr.obs;
+  final barrioError = ''.obs;
 
-  String familyError() => family.value.fold(
-        (ifLeft) => 'Enter family name'.tr,
-        (ifRight) => null,
-      );
-
-  String givenError() => given.value.fold(
-        (ifLeft) => 'Enter other names'.tr,
-        (ifRight) => null,
-      );
+  String dispFamilyError() => familyError;
+  String dispGivenError() => givenError;
 
   void setFemaleGender() => gender.value = 'female';
-
   void setMaleGender() => gender.value = 'male';
+  String curGender() => gender.value;
 
-  void chooseBirthDate(DateTime date) {
-    final dateOnly = date.toString().substring(0, 10);
-    birthDate = RegistrationBirthDate(r4.Date(dateOnly));
-    dispBirthDate.value = birthDate.value.fold(
-      (ifLeft) => '${"cannot be future date".tr}: ${ifLeft.failedValue}',
-      (ifRight) => ifRight.toString(),
-    );
-  }
+  void chooseBirthDate(DateTime date) => birthDate.value = date;
+  String displayBirthDate() => birthDate.value.toString().substring(0, 10);
+  String dispBirthDateError() => birthDateError.value;
 
-  void setBarrio(String newVal) => displayBarrio.value = newVal;
+  void setBarrio(String newVal) => barrio.value = newVal;
+  String displayBarrio() => barrio.value;
+  String dispBarrioError() => barrioError.value;
 
   void register() {
-    family = RegistrationName(familyName.value.text);
-    given = RegistrationName(givenName.value.text);
-    if (family.isValid() &&
-        given.isValid() &&
-        barrio.isValid() &&
-        gender.value != '' &&
-        birthDate.isValid()) {
+    print(familyName.value.text);
+    print(givenName.value.text);
+    if (isValidRegistrationName(familyName.value.text) &&
+        isValidRegistrationName(givenName.value.text) &&
+        isValidRegistrationBirthDate(birthDate.value) &&
+        isValidRegistrationBarrio(barrio.value)) {
     } else {
-      if (!birthDate.isValid()) {
-        dispBirthDate.value = birthDate.value.fold(
-          (ifLeft) => '${"cannot be future date".tr}: ${ifLeft.failedValue}',
-          (ifRight) => ifRight.toString(),
-        );
+      if (!isValidRegistrationName(familyName.value.text)) {
+        familyError = 'Enter family name'.tr;
       }
+      if (!isValidRegistrationName(givenName.value.text)) {
+        givenError = 'Enter other names'.tr;
+      }
+      if (!isValidRegistrationBirthDate(birthDate.value)) {
+        birthDateError.value = 'Cannot be future date'.tr;
+      }
+      if (!isValidRegistrationBarrio(barrio.value)) {
+        barrioError.value = 'Please select neighborhood'.tr;
+      }
+      update();
     }
   }
 }
