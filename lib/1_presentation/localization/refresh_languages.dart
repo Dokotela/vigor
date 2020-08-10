@@ -24,9 +24,10 @@ Future<void> main() async {
     lang['Username'] = lang['Username'].substring(1, lang['Username'].length);
     final file =
         'const ${lang['iso369-1'].replaceAll('-', '')}Lang = ${json.encode(lang)};';
+    final singleQuoteFile = file.replaceAll('"', "'''");
     await File(
             "./lib/1_presentation/localization/lang/${lang['iso369-1']}.dart")
-        .writeAsString(file);
+        .writeAsString(singleQuoteFile);
   }
 }
 

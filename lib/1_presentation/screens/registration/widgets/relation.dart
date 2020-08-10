@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:vigor/1_presentation/themes/themes.dart';
 
 class RelationWidget extends StatelessWidget {
   const RelationWidget({

@@ -1,6 +1,8 @@
+import 'package:fhir/fhir_r4.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:vigor/1_presentation/shared_widgets/shared_widgets.dart';
+import 'package:vigor/4_infrastructure/fhir_db/resource_dao.dart';
 
 import '../screens.dart';
 
@@ -44,6 +46,16 @@ class HomeScreen extends StatelessWidget {
                     fileName: 'sync',
                     buttonText: 'Sync'.tr,
                     nextPage: HomeScreen()),
+                RaisedButton(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16.0),
+                  ),
+                  onPressed: () async {
+                    print(await ResourceDao()
+                        .getAllSortedById(resourceType: 'Patient'));
+                  },
+                  child: Text('Print Db'.tr),
+                ),
               ],
             ),
           ),

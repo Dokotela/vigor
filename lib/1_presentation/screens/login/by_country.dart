@@ -38,7 +38,7 @@ TextStyle getStyle(String country) {
           textStyle: TextStyle(color: Colors.blue[600], fontSize: 40));
     case 'dominican_republic':
       return GoogleFonts.courgette(
-          textStyle: TextStyle(color: Colors.red, fontSize: 40));
+          textStyle: const TextStyle(color: Colors.red, fontSize: 40));
     case 'usa':
       return GoogleFonts.alegreyaSansSc(
           textStyle: TextStyle(

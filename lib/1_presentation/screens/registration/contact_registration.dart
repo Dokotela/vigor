@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vigor/1_presentation/screens/home/home.dart';
 import 'package:vigor/1_presentation/shared_widgets/shared_widgets.dart';
 import 'package:vigor/2_application/registration/contact_registration_controller.dart';
 

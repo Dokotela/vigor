@@ -13,13 +13,17 @@ class _$DbFailureTearOff {
   const _$DbFailureTearOff();
 
 // ignore: unused_element
-  UnableToSave unableToSave() {
-    return const UnableToSave();
+  UnableToSave unableToSave({String error}) {
+    return UnableToSave(
+      error: error,
+    );
   }
 
 // ignore: unused_element
-  ResourceAlreadyPresent resourceAlreadyPresent() {
-    return const ResourceAlreadyPresent();
+  ResourceAlreadyPresent resourceAlreadyPresent(String error) {
+    return ResourceAlreadyPresent(
+      error,
+    );
   }
 }
 
@@ -27,15 +31,17 @@ class _$DbFailureTearOff {
 const $DbFailure = _$DbFailureTearOff();
 
 mixin _$DbFailure {
+  String get error;
+
   @optionalTypeArgs
   Result when<Result extends Object>({
-    @required Result unableToSave(),
-    @required Result resourceAlreadyPresent(),
+    @required Result unableToSave(String error),
+    @required Result resourceAlreadyPresent(String error),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
-    Result unableToSave(),
-    Result resourceAlreadyPresent(),
+    Result unableToSave(String error),
+    Result resourceAlreadyPresent(String error),
     @required Result orElse(),
   });
   @optionalTypeArgs
@@ -49,11 +55,14 @@ mixin _$DbFailure {
     Result resourceAlreadyPresent(ResourceAlreadyPresent value),
     @required Result orElse(),
   });
+
+  $DbFailureCopyWith<DbFailure> get copyWith;
 }
 
 abstract class $DbFailureCopyWith<$Res> {
   factory $DbFailureCopyWith(DbFailure value, $Res Function(DbFailure) then) =
       _$DbFailureCopyWithImpl<$Res>;
+  $Res call({String error});
 }
 
 class _$DbFailureCopyWithImpl<$Res> implements $DbFailureCopyWith<$Res> {
@@ -62,12 +71,23 @@ class _$DbFailureCopyWithImpl<$Res> implements $DbFailureCopyWith<$Res> {
   final DbFailure _value;
   // ignore: unused_field
   final $Res Function(DbFailure) _then;
+
+  @override
+  $Res call({
+    Object error = freezed,
+  }) {
+    return _then(_value.copyWith(
+      error: error == freezed ? _value.error : error as String,
+    ));
+  }
 }
 
-abstract class $UnableToSaveCopyWith<$Res> {
+abstract class $UnableToSaveCopyWith<$Res> implements $DbFailureCopyWith<$Res> {
   factory $UnableToSaveCopyWith(
           UnableToSave value, $Res Function(UnableToSave) then) =
       _$UnableToSaveCopyWithImpl<$Res>;
+  @override
+  $Res call({String error});
 }
 
 class _$UnableToSaveCopyWithImpl<$Res> extends _$DbFailureCopyWithImpl<$Res>
@@ -78,45 +98,65 @@ class _$UnableToSaveCopyWithImpl<$Res> extends _$DbFailureCopyWithImpl<$Res>
 
   @override
   UnableToSave get _value => super._value as UnableToSave;
+
+  @override
+  $Res call({
+    Object error = freezed,
+  }) {
+    return _then(UnableToSave(
+      error: error == freezed ? _value.error : error as String,
+    ));
+  }
 }
 
 class _$UnableToSave implements UnableToSave {
-  const _$UnableToSave();
+  const _$UnableToSave({this.error});
+
+  @override
+  final String error;
 
   @override
   String toString() {
-    return 'DbFailure.unableToSave()';
+    return 'DbFailure.unableToSave(error: $error)';
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is UnableToSave);
+    return identical(this, other) ||
+        (other is UnableToSave &&
+            (identical(other.error, error) ||
+                const DeepCollectionEquality().equals(other.error, error)));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(error);
+
+  @override
+  $UnableToSaveCopyWith<UnableToSave> get copyWith =>
+      _$UnableToSaveCopyWithImpl<UnableToSave>(this, _$identity);
 
   @override
   @optionalTypeArgs
   Result when<Result extends Object>({
-    @required Result unableToSave(),
-    @required Result resourceAlreadyPresent(),
+    @required Result unableToSave(String error),
+    @required Result resourceAlreadyPresent(String error),
   }) {
     assert(unableToSave != null);
     assert(resourceAlreadyPresent != null);
-    return unableToSave();
+    return unableToSave(error);
   }
 
   @override
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
-    Result unableToSave(),
-    Result resourceAlreadyPresent(),
+    Result unableToSave(String error),
+    Result resourceAlreadyPresent(String error),
     @required Result orElse(),
   }) {
     assert(orElse != null);
     if (unableToSave != null) {
-      return unableToSave();
+      return unableToSave(error);
     }
     return orElse();
   }
@@ -148,13 +188,21 @@ class _$UnableToSave implements UnableToSave {
 }
 
 abstract class UnableToSave implements DbFailure {
-  const factory UnableToSave() = _$UnableToSave;
+  const factory UnableToSave({String error}) = _$UnableToSave;
+
+  @override
+  String get error;
+  @override
+  $UnableToSaveCopyWith<UnableToSave> get copyWith;
 }
 
-abstract class $ResourceAlreadyPresentCopyWith<$Res> {
+abstract class $ResourceAlreadyPresentCopyWith<$Res>
+    implements $DbFailureCopyWith<$Res> {
   factory $ResourceAlreadyPresentCopyWith(ResourceAlreadyPresent value,
           $Res Function(ResourceAlreadyPresent) then) =
       _$ResourceAlreadyPresentCopyWithImpl<$Res>;
+  @override
+  $Res call({String error});
 }
 
 class _$ResourceAlreadyPresentCopyWithImpl<$Res>
@@ -166,45 +214,66 @@ class _$ResourceAlreadyPresentCopyWithImpl<$Res>
 
   @override
   ResourceAlreadyPresent get _value => super._value as ResourceAlreadyPresent;
+
+  @override
+  $Res call({
+    Object error = freezed,
+  }) {
+    return _then(ResourceAlreadyPresent(
+      error == freezed ? _value.error : error as String,
+    ));
+  }
 }
 
 class _$ResourceAlreadyPresent implements ResourceAlreadyPresent {
-  const _$ResourceAlreadyPresent();
+  const _$ResourceAlreadyPresent(this.error) : assert(error != null);
+
+  @override
+  final String error;
 
   @override
   String toString() {
-    return 'DbFailure.resourceAlreadyPresent()';
+    return 'DbFailure.resourceAlreadyPresent(error: $error)';
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is ResourceAlreadyPresent);
+    return identical(this, other) ||
+        (other is ResourceAlreadyPresent &&
+            (identical(other.error, error) ||
+                const DeepCollectionEquality().equals(other.error, error)));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(error);
+
+  @override
+  $ResourceAlreadyPresentCopyWith<ResourceAlreadyPresent> get copyWith =>
+      _$ResourceAlreadyPresentCopyWithImpl<ResourceAlreadyPresent>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
   Result when<Result extends Object>({
-    @required Result unableToSave(),
-    @required Result resourceAlreadyPresent(),
+    @required Result unableToSave(String error),
+    @required Result resourceAlreadyPresent(String error),
   }) {
     assert(unableToSave != null);
     assert(resourceAlreadyPresent != null);
-    return resourceAlreadyPresent();
+    return resourceAlreadyPresent(error);
   }
 
   @override
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
-    Result unableToSave(),
-    Result resourceAlreadyPresent(),
+    Result unableToSave(String error),
+    Result resourceAlreadyPresent(String error),
     @required Result orElse(),
   }) {
     assert(orElse != null);
     if (resourceAlreadyPresent != null) {
-      return resourceAlreadyPresent();
+      return resourceAlreadyPresent(error);
     }
     return orElse();
   }
@@ -236,5 +305,10 @@ class _$ResourceAlreadyPresent implements ResourceAlreadyPresent {
 }
 
 abstract class ResourceAlreadyPresent implements DbFailure {
-  const factory ResourceAlreadyPresent() = _$ResourceAlreadyPresent;
+  const factory ResourceAlreadyPresent(String error) = _$ResourceAlreadyPresent;
+
+  @override
+  String get error;
+  @override
+  $ResourceAlreadyPresentCopyWith<ResourceAlreadyPresent> get copyWith;
 }

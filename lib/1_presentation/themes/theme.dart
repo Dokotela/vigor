@@ -18,11 +18,11 @@ abstract class ThemeClass {
         inputDecorationTheme: InputDecorationTheme(
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(16.0),
-            borderSide: BorderSide(color: Colors.blue, width: 24.0),
+            borderSide: const BorderSide(color: Colors.blue, width: 24.0),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(16.0),
-            borderSide: BorderSide(color: Colors.blue, width: 2.0),
+            borderSide: const BorderSide(color: Colors.blue, width: 2.0),
           ),
         ),
       );

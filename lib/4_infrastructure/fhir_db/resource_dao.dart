@@ -5,9 +5,9 @@ import 'fhir_db.dart';
 part 'resource_dao_save.dart';
 
 class ResourceDao {
-  StoreRef<String, Map<String, dynamic>> _resourceStore;
-
   ResourceDao();
+
+  StoreRef<String, Map<String, dynamic>> _resourceStore;
 
   void _setStoreType(String resourceType) =>
       _resourceStore = stringMapStoreFactory.store(resourceType);

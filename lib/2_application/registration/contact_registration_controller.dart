@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:fhir/fhir_r4.dart' as r4;
+import 'package:vigor/1_presentation/screens/home/home.dart';
 import 'package:vigor/3_domain/const/const.dart';
 import 'package:vigor/3_domain/formatters/format_patient_contact.dart';
+import 'package:vigor/3_domain/interfaces/save_to_db.dart';
 import 'package:vigor/3_domain/validators.dart';
 
 class ContactRegistrationController extends GetxController {
@@ -64,7 +66,7 @@ class ContactRegistrationController extends GetxController {
   String dispRelationError(_ContactRegistration contact) =>
       contact.relationError;
 
-  void registerContacts() {
+  Future<void> registerContacts() async {
     if (isValidRegistrationName(contact1.value.familyName.text) &&
         isValidRegistrationName(contact1.value.givenName.value.text) &&
         isValidRegistrationBarrio(contact1.value.barrio) &&
@@ -75,6 +77,11 @@ class ContactRegistrationController extends GetxController {
           contact1.value.barrio,
           contact1.value.relation);
       final newPatient = patient.copyWith(contact: [newContact]);
+      final saveResult = await SaveResource(newPatient).toDb();
+      saveResult.fold(
+        (ifLeft) => Get.snackbar('Error', ifLeft.error),
+        (ifRight) => Get.to(HomeScreen()),
+      );
     } else {}
     update();
   }
