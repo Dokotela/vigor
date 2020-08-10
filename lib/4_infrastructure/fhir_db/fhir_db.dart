@@ -7,12 +7,11 @@ import 'package:sembast_sqflite/sembast_sqflite.dart';
 import 'package:sqflite/sqflite.dart' as sqflite;
 
 class FhirDb {
+  FhirDb._();
   static final FhirDb _db = FhirDb._();
   static FhirDb get instance => _db;
 
   Completer<Database> _dbOpenCompleter;
-
-  FhirDb._();
 
   Future<Database> get database async {
     if (_dbOpenCompleter == null) {
@@ -26,7 +25,7 @@ class FhirDb {
   Future _openDatabase() async {
     final appDocumentDir = await getApplicationDocumentsDirectory();
     final dbPath = join(appDocumentDir.path, 'fhir.db');
-    var dbFactory = getDatabaseFactorySqflite(sqflite.databaseFactory);
+    final dbFactory = getDatabaseFactorySqflite(sqflite.databaseFactory);
     final database = await dbFactory.openDatabase(dbPath);
 
     _dbOpenCompleter.complete(database);
