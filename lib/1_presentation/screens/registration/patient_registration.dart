@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vigor/1_presentation/screens/registration/widgets/gender.dart';
 import 'package:vigor/1_presentation/shared_widgets/shared_widgets.dart';
-import 'package:vigor/1_presentation/themes/themes.dart';
 import 'package:vigor/2_application/registration/patient_registration_controller.dart';
+
+import 'widgets/barrio.dart';
+import 'widgets/birthDate.dart';
+import 'widgets/names.dart';
 
 class PatientRegistration extends StatelessWidget {
   @override
@@ -20,132 +24,27 @@ class PatientRegistration extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
-                Column(
-                  children: <Widget>[
-                    TextFormField(
-                      controller: controller.familyName,
-                      decoration: InputDecoration(
-                        hintText: 'Family Name'.tr,
-                        errorText: controller.dispFamilyNameError().tr,
-                      ),
-                    ),
-                    TextFormField(
-                      controller: controller.givenName,
-                      decoration: InputDecoration(
-                        hintText: 'Other Names'.tr,
-                        errorText: controller.dispGivenNameError().tr,
-                      ),
-                    ),
-                  ],
+                NamesInputWidget(
+                  familyName: controller.familyName,
+                  givenName: controller.givenName,
+                  familyNameError: controller.dispFamilyNameError(),
+                  givenNameError: controller.dispGivenNameError(),
                 ),
-                Container(
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Colors.grey),
-                    borderRadius: BorderRadius.circular(16.0),
-                  ),
-                  child: Column(
-                    children: <Widget>[
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Text(
-                            'Sex at birth'.tr,
-                            style: ThemeClass.dark().textTheme.headline5,
-                          ),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Radio(
-                            value: 'female',
-                            groupValue: controller.curGender(),
-                            onChanged: (String _) =>
-                                controller.setFemaleGender(),
-                          ),
-                          Text('female'.tr,
-                              style: ThemeClass.dark().textTheme.headline5),
-                          Radio(
-                            value: 'male',
-                            groupValue: controller.curGender(),
-                            onChanged: (String _) => controller.setMaleGender(),
-                          ),
-                          Text('male'.tr,
-                              style: ThemeClass.dark().textTheme.headline5),
-                        ],
-                      ),
-                    ],
-                  ),
+                GenderSelectionWidget(
+                  curGender: controller.curGender(),
+                  setFemaleGender: controller.setFemaleGender,
+                  setMaleGender: controller.setMaleGender,
                 ),
-                RaisedButton(
-                  shape: RoundedRectangleBorder(
-                    side: const BorderSide(color: Colors.grey),
-                    borderRadius: BorderRadius.circular(12.0),
-                  ),
-                  color: Colors.transparent,
-                  onPressed: () => showDatePicker(
-                    context: context,
-                    initialDate: DateTime.now().add(const Duration(days: 1)),
-                    firstDate: DateTime(1900, 1, 1),
-                    lastDate: DateTime(2999, 12, 31),
-                  ).then((date) => controller.chooseBirthDate(date)),
-                  child: Column(
-                    children: <Widget>[
-                      Row(
-                        children: <Widget>[
-                          const Icon(Icons.calendar_today, size: 64.0),
-                          Column(
-                            children: [
-                              Text(
-                                '${"Date of Birth".tr} ${controller.displayBirthDate()}',
-                                style: ThemeClass.dark().textTheme.headline5,
-                                textAlign: TextAlign.center,
-                              ),
-                              Text(
-                                controller.dispBirthDateError().tr,
-                                style: const TextStyle(
-                                    fontSize: 12.0, color: Colors.red),
-                              ),
-                            ],
-                          )
-                        ],
-                      ),
-                    ],
-                  ),
+                BirthDateWidget(
+                  chooseBirthDate: controller.chooseBirthDate,
+                  displayBirthDate: controller.displayBirthDate(),
+                  dispBirthDateError: controller.dispBirthDateError(),
                 ),
-                Container(
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Colors.grey),
-                    borderRadius: BorderRadius.circular(16.0),
-                  ),
-                  child: Column(
-                    children: <Widget>[
-                      DropdownButtonHideUnderline(
-                        child: DropdownButton<String>(
-                            items: controller.barriosList.map((String value) {
-                              return DropdownMenuItem<String>(
-                                value: value,
-                                child: Text(
-                                  value,
-                                  style: ThemeClass.dark().textTheme.headline4,
-                                ),
-                              );
-                            }).toList(),
-                            hint: Text(
-                              controller.displayBarrio().tr,
-                              style: ThemeClass.dark().textTheme.headline4,
-                            ),
-                            onChanged: (newVal) =>
-                                controller.setBarrio(newVal)),
-                      ),
-                      Text(
-                        controller.dispBarrioError().tr,
-                        style:
-                            const TextStyle(fontSize: 12.0, color: Colors.red),
-                      ),
-                    ],
-                  ),
+                BarrioWidget(
+                  barriosList: controller.barriosList,
+                  displayBarrio: controller.displayBarrio(),
+                  setBarrio: controller.setBarrio,
+                  dispBarrioError: controller.dispBarrioError(),
                 ),
                 ButtonTheme(
                   minWidth: double.infinity,

@@ -2,8 +2,8 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vigor/1_presentation/localization/localization.dart';
 import 'package:vigor/1_presentation/themes/themes.dart';
-import 'package:vigor/4_infrastructure/localization/localization.dart';
 
 import 'login/login.dart';
 

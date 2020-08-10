@@ -14,7 +14,7 @@ class PatientRegistrationController extends GetxController {
   String familyError;
   String givenError;
   final gender = 'female'.obs;
-  final birthDate = DateTime.now().add(const Duration(days: 1)).obs;
+  final registerBirthDate = DateTime.now().add(const Duration(days: 1)).obs;
   final birthDateError = ''.obs;
   final barrio = 'Neighborhood'.obs;
   final barrioError = ''.obs;
@@ -36,11 +36,12 @@ class PatientRegistrationController extends GetxController {
   String curGender() => gender.value;
 
   void chooseBirthDate(DateTime date) {
-    birthDate.value = date ?? birthDate.value;
+    registerBirthDate.value = date ?? registerBirthDate.value;
     update();
   }
 
-  String displayBirthDate() => birthDate.value.toString().substring(0, 10);
+  String displayBirthDate() =>
+      registerBirthDate.value.toString().substring(0, 10);
   String dispBirthDateError() => birthDateError.value;
 
   void setBarrio(String newVal) {
@@ -54,14 +55,26 @@ class PatientRegistrationController extends GetxController {
   void register() {
     if (isValidRegistrationName(familyName.value.text) &&
         isValidRegistrationName(givenName.value.text) &&
-        isValidRegistrationBirthDate(birthDate.value) &&
+        isValidRegistrationBirthDate(registerBirthDate.value) &&
         isValidRegistrationBarrio(barrio.value)) {
       final r4.Patient newPatient = patient == null
           ? r4.Patient(
               resourceType: 'Patient',
-              name: [r4.HumanName(family: familyName.value.text)])
-          : patient
-              .copyWith(name: [r4.HumanName(family: familyName.value.text)]);
+              name: [
+                r4.HumanName(
+                    family: familyName.value.text,
+                    given: [givenName.value.text])
+              ],
+              birthDate: r4.Date(registerBirthDate.value),
+              address: [r4.Address(district: barrio.value)])
+          : patient.copyWith(
+              name: [
+                r4.HumanName(
+                    family: familyName.value.text,
+                    given: [givenName.value.text])
+              ],
+              birthDate: r4.Date(registerBirthDate.value),
+              address: [r4.Address(district: barrio.value)]);
       Get.to(ContactRegistration(), arguments: newPatient);
     } else {
       if (!isValidRegistrationName(familyName.value.text)) {
@@ -74,7 +87,7 @@ class PatientRegistrationController extends GetxController {
       } else {
         givenError = null;
       }
-      if (!isValidRegistrationBirthDate(birthDate.value)) {
+      if (!isValidRegistrationBirthDate(registerBirthDate.value)) {
         birthDateError.value = 'Cannot be future date';
       } else {
         birthDateError.value = '';
