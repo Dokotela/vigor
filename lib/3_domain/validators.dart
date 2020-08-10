@@ -1,4 +1,4 @@
-import 'const/registration.dart';
+import 'const/const.dart';
 
 bool isValidRegistrationName(String name) => name.length >= 2;
 

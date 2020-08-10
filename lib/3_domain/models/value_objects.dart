@@ -1,6 +1,5 @@
 import 'package:dartz/dartz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:vigor/models/errors.dart';
 
 import 'failures.dart';
 
@@ -8,9 +7,6 @@ import 'failures.dart';
 abstract class ValueObject<T> {
   const ValueObject();
   Either<ValueFailure<String>, T> get value;
-
-  /// Throws [UnexpectedValueError] containing the [ValueFailure]
-  T getOrCrash() => value.fold((f) => throw UnexpectedValueError(f), id);
 
   bool isValid() => value.isRight();
 

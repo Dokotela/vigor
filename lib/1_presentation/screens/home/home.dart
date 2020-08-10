@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vigor/shared_widgets/shared_widgets.dart';
+import 'package:vigor/1_presentation/shared_widgets/shared_widgets.dart';
 
 import '../screens.dart';
 
@@ -30,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ActionButton(
                     fileName: 'register',
                     buttonText: 'Register'.tr,
-                    nextPage: Registration()),
+                    nextPage: PatientRegistration()),
                 ActionButton(
                     fileName: 'search',
                     buttonText: 'Search'.tr,
