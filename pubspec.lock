@@ -200,11 +200,9 @@ packages:
   fhir:
     dependency: "direct main"
     description:
-      path: "."
-      ref: HEAD
-      resolved-ref: "3d3b21d2884e24634be69d0b8ff46bdfbe71c337"
-      url: "git://github.com/Dokotela/fhir_r4.git"
-    source: git
+      path: "../fhir_versions/fhir_r4"
+      relative: true
+    source: path
     version: "0.0.1"
   file:
     dependency: transitive

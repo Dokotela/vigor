@@ -11,7 +11,7 @@ class SaveResource {
 
   Future<Either<DbFailure, Unit>> toDb() async {
     try {
-      resourceDao.save(resource);
+      await resourceDao.save(resource);
     } catch (error) {
       return left(DbFailure.unableToSave(error: error.toString()));
     }

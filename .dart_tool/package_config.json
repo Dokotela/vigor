@@ -171,7 +171,7 @@
     },
     {
       "name": "fhir",
-      "rootUri": "file:///home/grey/.pub-cache/git/fhir_r4-3d3b21d2884e24634be69d0b8ff46bdfbe71c337/",
+      "rootUri": "../../fhir_versions/fhir_r4",
       "packageUri": "lib/",
       "languageVersion": "2.8"
     },
@@ -590,7 +590,7 @@
       "languageVersion": "2.8"
     }
   ],
-  "generated": "2020-08-10T23:37:54.899771Z",
+  "generated": "2020-08-11T13:52:10.072054Z",
   "generator": "pub",
   "generatorVersion": "2.9.0"
 }

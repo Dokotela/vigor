@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:fhir/fhir_r4.dart';
 import 'package:sembast/sembast.dart';
 

@@ -51,8 +51,9 @@ class HomeScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(16.0),
                   ),
                   onPressed: () async {
-                    print(await ResourceDao()
-                        .getAllSortedById(resourceType: 'Patient'));
+                    (await ResourceDao()
+                            .getAllSortedById(resourceType: 'Patient'))
+                        .forEach((resource) => print(resource.toJson()));
                   },
                   child: Text('Print Db'.tr),
                 ),

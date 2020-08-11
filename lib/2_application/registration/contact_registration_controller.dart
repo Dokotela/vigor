@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:fhir/fhir_r4.dart' as r4;
@@ -77,10 +79,11 @@ class ContactRegistrationController extends GetxController {
           contact1.value.barrio,
           contact1.value.relation);
       final newPatient = patient.copyWith(contact: [newContact]);
+      print(jsonEncode(newPatient.toJson()));
       final saveResult = await SaveResource(newPatient).toDb();
       saveResult.fold(
         (ifLeft) => Get.snackbar('Error', ifLeft.error),
-        (ifRight) => Get.to(HomeScreen()),
+        (ifRight) => Get.offAll(HomeScreen()),
       );
     } else {}
     update();

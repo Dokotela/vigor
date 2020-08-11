@@ -17,7 +17,7 @@ BottomAppBar bottomAppBar = BottomAppBar(
       ),
       IconButton(
         icon: const Icon(Icons.exit_to_app, color: Colors.white),
-        onPressed: () => Get.to<Widget>(const LoginScreen()),
+        onPressed: () => Get.offAll<Widget>(const LoginScreen()),
       ),
     ],
   ),
