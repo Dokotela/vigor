@@ -18,7 +18,20 @@ class PatientHome extends StatelessWidget {
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: <Widget>[],
+              children: <Widget>[
+                FlatButton(
+                  onPressed: () => controller.editPatient(),
+                  child: Column(
+                    children: [
+                      Text('${"Name".tr}: ${controller.patientName()}'),
+                      Text('${"ID"}: ${controller.patientId()}'),
+                      Text(
+                          '${"Birthdate".tr}: ${controller.patientBirthDate()}'),
+                      Text('${"Sex".tr}: ${controller.patientSex()}')
+                    ],
+                  ),
+                )
+              ],
             ),
           ),
         ),

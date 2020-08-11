@@ -19,28 +19,32 @@ class ResourceDao {
   //checks if the resource already has an id, all resources downloaded should
   //have an id, and all resources already saved will have an id, so only brand
   //spanking new resources won't
-  Future save(Resource resource) async {
+  Future<Resource> save(Resource resource) async {
     if (resource != null && resource?.resourceType != null) {
       _setStoreType(resource.resourceType);
-      resource.id == null ? await _insert(resource) : await _update(resource);
+      return resource.id == null
+          ? await _insert(resource)
+          : await _update(resource);
     }
+    throw const FormatException('Resource to save cannot be null');
   }
 
   //if no id, it will call _getIdAndMeta to provide the new (local, temporary
   // id) along with creating a metadata about the resource history
-  Future _insert(Resource resource) async {
+  Future<Resource> _insert(Resource resource) async {
     final _newResource = _getIdAndMeta(resource);
     await _resourceStore
         .record(_newResource.id.toString())
         .put(await _db, _newResource.toJson());
+    return _newResource;
   }
 
-  Future _update(Resource resource) async {
+  Future<Resource> _update(Resource resource) async {
     final finder = Finder(filter: Filter.byKey(resource.id.toString()));
     final oldResource =
         await _resourceStore.record(resource.id.toString()).get(await _db);
     if (oldResource == null) {
-      await _insert(resource);
+      return await _insert(resource);
     } else {
       _setStoreType('_history');
       await _resourceStore.add(await _db, oldResource);
@@ -50,6 +54,7 @@ class ResourceDao {
       final _newResource = _newVersion(resource, oldMeta: oldMeta);
       await _resourceStore.update(await _db, _newResource.toJson(),
           finder: finder);
+      return _newResource;
     }
   }
 

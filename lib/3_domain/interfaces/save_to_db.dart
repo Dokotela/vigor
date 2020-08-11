@@ -9,12 +9,13 @@ class SaveResource {
   final Resource resource;
   final ResourceDao resourceDao = ResourceDao();
 
-  Future<Either<DbFailure, Unit>> toDb() async {
+  Future<Either<DbFailure, Resource>> toDb() async {
+    Resource resultResource;
     try {
-      await resourceDao.save(resource);
+      resultResource = await resourceDao.save(resource);
     } catch (error) {
       return left(DbFailure.unableToSave(error: error.toString()));
     }
-    return right(unit);
+    return right(resultResource);
   }
 }

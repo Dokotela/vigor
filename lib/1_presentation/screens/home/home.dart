@@ -1,4 +1,3 @@
-import 'package:fhir/fhir_r4.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:vigor/1_presentation/shared_widgets/shared_widgets.dart';
@@ -25,27 +24,33 @@ class HomeScreen extends StatelessWidget {
                 ActionButton(
                     fileName: 'register',
                     buttonText: 'Register'.tr,
-                    nextPage: PatientRegistration()),
+                    nextPage: PatientRegistration(),
+                    getFunc: Get.offAll),
                 ActionButton(
                     fileName: 'search',
                     buttonText: 'Search'.tr,
-                    nextPage: HomeScreen()),
+                    nextPage: HomeScreen(),
+                    getFunc: Get.offAll),
                 ActionButton(
                     fileName: 'deworming',
                     buttonText: 'Deworming'.tr,
-                    nextPage: HomeScreen()),
+                    nextPage: HomeScreen(),
+                    getFunc: Get.offAll),
                 ActionButton(
                     fileName: 'vaccine',
                     buttonText: 'Immunization'.tr,
-                    nextPage: HomeScreen()),
+                    nextPage: HomeScreen(),
+                    getFunc: Get.offAll),
                 ActionButton(
                     fileName: 'growth1',
                     buttonText: 'Growth'.tr,
-                    nextPage: HomeScreen()),
+                    nextPage: HomeScreen(),
+                    getFunc: Get.offAll),
                 ActionButton(
                     fileName: 'sync',
                     buttonText: 'Sync'.tr,
-                    nextPage: HomeScreen()),
+                    nextPage: HomeScreen(),
+                    getFunc: Get.offAll),
                 RaisedButton(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(16.0),

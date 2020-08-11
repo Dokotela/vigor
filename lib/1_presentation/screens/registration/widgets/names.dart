@@ -20,7 +20,6 @@ class NamesInputWidget extends StatelessWidget {
         TextFormField(
           controller: familyName,
           decoration: InputDecoration(
-            labelText: familyNameError.tr,
             hintText: 'Family Name'.tr,
             errorText: familyNameError.tr,
           ),
@@ -28,7 +27,6 @@ class NamesInputWidget extends StatelessWidget {
         TextFormField(
           controller: givenName,
           decoration: InputDecoration(
-            labelText: 'Other Names'.tr,
             hintText: 'Other Names'.tr,
             errorText: givenNameError.tr,
           ),
