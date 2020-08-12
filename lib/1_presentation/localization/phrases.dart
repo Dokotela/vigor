@@ -41,4 +41,6 @@ List<String> phrases = [
   'brother',
   'other',
   'Name',
+  'Birthdate',
+  'Sex',
 ];

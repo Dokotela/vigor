@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vigor/1_presentation/themes/themes.dart';
+import 'package:vigor/1_presentation/theme/theme.dart';
 
 class GenderSelectionWidget extends StatelessWidget {
   const GenderSelectionWidget({

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vigor/1_presentation/screens/patient_home/widgets/info_banner.dart';
 import 'package:vigor/1_presentation/shared_widgets/shared_widgets.dart';
 import 'package:vigor/2_application/patient_home/patient_home_controller.dart';
 
@@ -17,18 +18,20 @@ class PatientHome extends StatelessWidget {
           padding: const EdgeInsets.all(10.0),
           child: Center(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 FlatButton(
+                  color: Colors.white,
+                  shape: RoundedRectangleBorder(
+                    side: const BorderSide(color: Colors.white),
+                    borderRadius: BorderRadius.circular(16.0),
+                  ),
                   onPressed: () => controller.editPatient(),
-                  child: Column(
-                    children: [
-                      Text('${"Name".tr}: ${controller.patientName()}'),
-                      Text('${"ID"}: ${controller.patientId()}'),
-                      Text(
-                          '${"Birthdate".tr}: ${controller.patientBirthDate()}'),
-                      Text('${"Sex".tr}: ${controller.patientSex()}')
-                    ],
+                  child: InfoBannerWidget(
+                    lastCommaFirstName: controller.patientName(),
+                    id: controller.patientId(),
+                    birthDate: controller.patientBirthDate(),
+                    sex: controller.patientSex(),
                   ),
                 )
               ],

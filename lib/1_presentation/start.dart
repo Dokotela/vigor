@@ -3,9 +3,9 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:vigor/1_presentation/localization/localization.dart';
-import 'package:vigor/1_presentation/themes/themes.dart';
+import 'package:vigor/1_presentation/theme/theme.dart';
 
-import 'login/login.dart';
+import 'screens/login/login.dart';
 
 class Start extends StatelessWidget {
   @override

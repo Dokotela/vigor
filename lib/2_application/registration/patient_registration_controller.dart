@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:vigor/1_presentation/screens/registration/contact_registration.dart';
 import 'package:vigor/3_domain/formatters/basic_enum_to_string.dart';
+import 'package:vigor/3_domain/formatters/district_from_address.dart';
 import 'package:vigor/3_domain/formatters/simple_date.dart';
 import 'package:vigor/3_domain/validators.dart';
 import 'package:vigor/3_domain/const/const.dart';
@@ -16,18 +17,13 @@ class PatientRegistrationController extends GetxController {
     givenName.text = patient?.name == null
         ? ''
         : patient.name[0].given == null ? '' : patient.name[0].given.join(' ');
-
     gender = patient?.gender == null
         ? 'female'.obs
         : basicEnumToString(patient.gender).obs;
     registerBirthDate = patient?.birthDate == null
         ? DateTime.now().add(const Duration(days: 1)).obs
         : DateTime.parse(patient.birthDate.toString()).obs;
-    barrio = patient?.address == null
-        ? 'Neighborhood'.tr.obs
-        : patient.address[0].district == null
-            ? 'Neighborhood'.tr.obs
-            : patient.address[0].district.obs;
+    barrio = districtFromAddress(patient?.address).tr.obs;
     super.onInit();
   }
 
@@ -38,9 +34,9 @@ class PatientRegistrationController extends GetxController {
   String givenError;
   RxString gender;
   Rx<DateTime> registerBirthDate;
-  RxString birthDateError = ''.obs;
+  final birthDateError = ''.obs;
   RxString barrio;
-  RxString barrioError = ''.obs;
+  final barrioError = ''.obs;
   final List<String> barriosList = barrios;
 
   String dispFamilyNameError() => familyError;

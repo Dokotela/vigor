@@ -3,11 +3,25 @@ import 'package:get/get.dart';
 import 'package:fhir/fhir_r4.dart' as r4;
 import 'package:vigor/1_presentation/screens/patient_home/patient_home.dart';
 import 'package:vigor/3_domain/const/const.dart';
+import 'package:vigor/3_domain/formatters/district_from_address.dart';
 import 'package:vigor/3_domain/formatters/format_patient_contact.dart';
 import 'package:vigor/3_domain/interfaces/save_to_db.dart';
 import 'package:vigor/3_domain/validators.dart';
 
 class ContactRegistrationController extends GetxController {
+  @override
+  void onInit() {
+    print(patient.toJson().toString());
+    if (patient.contact != null) {
+      contact1.value.familyName.text = patient.contact[0]?.name?.family ?? '';
+      contact1.value.givenName.text =
+          patient.contact[0]?.name?.given?.join(' ') ?? '';
+      contact1.value.barrio = districtFromAddress([patient.contact[0].address]);
+      contact1.value.relation = getPatientContactType(patient.contact);
+    }
+    super.onInit();
+  }
+
   final r4.Patient patient = Get.arguments;
   final barriosList = barrios;
   final relationList = relationship_types;
@@ -83,7 +97,12 @@ class ContactRegistrationController extends GetxController {
         (ifRight) =>
             Get.offAll(PatientHome(), arguments: ifRight as r4.Patient),
       );
-    } else {}
+    } else {
+      print(contact1.value.familyName.text);
+      print(contact1.value.givenName.value.text);
+      print(contact1.value.barrio);
+      print(contact1.value.relation);
+    }
     update();
   }
 }
