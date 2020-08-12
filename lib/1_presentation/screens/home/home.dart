@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vigor/1_presentation/screens/patient_search/patient_search.dart';
 import 'package:vigor/1_presentation/shared_widgets/shared_widgets.dart';
 import 'package:vigor/4_infrastructure/fhir_db/resource_dao.dart';
 
@@ -29,7 +30,7 @@ class HomeScreen extends StatelessWidget {
                 ActionButton(
                     fileName: 'search',
                     buttonText: 'Search'.tr,
-                    nextPage: HomeScreen(),
+                    nextPage: PatientSearch(),
                     getFunc: Get.offAll),
                 ActionButton(
                     fileName: 'deworming',

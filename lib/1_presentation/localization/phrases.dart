@@ -43,4 +43,6 @@ List<String> phrases = [
   'Name',
   'Birthdate',
   'Sex',
+  'Search Name',
+  'Register New Patient',
 ];
