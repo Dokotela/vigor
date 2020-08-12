@@ -22,6 +22,7 @@ class PatientSearch extends StatelessWidget {
               Row(
                 children: [
                   Flexible(
+                    flex: 20,
                     child: TextFormField(
                       controller: controller.searchName,
                       decoration: InputDecoration(
@@ -29,8 +30,10 @@ class PatientSearch extends StatelessWidget {
                       ),
                     ),
                   ),
+                  const Spacer(),
                   Container(
-                    width: 120.0,
+                    height: 60.0,
+                    width: 130.0,
                     child: RaisedButton(
                       color: Colors.grey,
                       shape: RoundedRectangleBorder(
@@ -40,6 +43,7 @@ class PatientSearch extends StatelessWidget {
                       child: Text(
                         'Register New Patient'.tr,
                         textAlign: TextAlign.center,
+                        style: TextStyle(fontSize: 18.0),
                       ),
                     ),
                   ),
@@ -58,16 +62,16 @@ class PatientSearch extends StatelessWidget {
                         side: BorderSide(color: Colors.blue[600]),
                         borderRadius: BorderRadius.circular(16.0),
                       ),
-                      color: controller.getColor1(),
-                      onPressed: () => controller.switchColor1(),
+                      color: controller.getDewormingColor(),
+                      onPressed: () => controller.filterByDeworming(),
                       child: const Text('Deworming')),
                   RaisedButton(
                       shape: RoundedRectangleBorder(
                         side: BorderSide(color: Colors.blue[600]),
                         borderRadius: BorderRadius.circular(16.0),
                       ),
-                      color: controller.getColor2(),
-                      onPressed: () => controller.switchColor2(),
+                      color: controller.getVaccineColor(),
+                      onPressed: () => controller.filterByVaccine(),
                       child: const Text('Vaccines')),
                 ],
               ),

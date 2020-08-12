@@ -91,7 +91,7 @@ class ContactRegistrationController extends GetxController {
           contact1.value.barrio,
           contact1.value.relation);
       final newPatient = patient.copyWith(contact: [newContact]);
-      final saveResult = await SaveResource(newPatient).toDb();
+      final saveResult = await IFhirDb().save(newPatient);
       saveResult.fold(
         (ifLeft) => Get.snackbar('Error', ifLeft.error),
         (ifRight) =>
