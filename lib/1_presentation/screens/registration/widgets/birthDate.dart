@@ -5,10 +5,12 @@ import 'package:vigor/1_presentation/theme/theme.dart';
 class BirthDateWidget extends StatelessWidget {
   const BirthDateWidget({
     @required this.chooseBirthDate,
+    @required this.curBirthDate,
     @required this.displayBirthDate,
     @required this.dispBirthDateError,
   });
   final Function chooseBirthDate;
+  final DateTime curBirthDate;
   final String displayBirthDate;
   final String dispBirthDateError;
 
@@ -22,7 +24,7 @@ class BirthDateWidget extends StatelessWidget {
       color: Colors.transparent,
       onPressed: () => showDatePicker(
         context: Get.context,
-        initialDate: DateTime.now().add(const Duration(days: 1)),
+        initialDate: curBirthDate,
         firstDate: DateTime(1900, 1, 1),
         lastDate: DateTime(2999, 12, 31),
       ).then((date) => chooseBirthDate(date)),

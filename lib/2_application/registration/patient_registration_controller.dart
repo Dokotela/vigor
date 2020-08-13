@@ -17,13 +17,12 @@ class PatientRegistrationController extends GetxController {
     givenName.text = patient?.name == null
         ? ''
         : patient.name[0].given == null ? '' : patient.name[0].given.join(' ');
-    gender = patient?.gender == null
-        ? 'female'.obs
-        : basicEnumToString(patient.gender).obs;
-    registerBirthDate = patient?.birthDate == null
-        ? DateTime.now().add(const Duration(days: 1)).obs
-        : DateTime.parse(patient.birthDate.toString()).obs;
-    barrio = districtFromAddress(patient?.address).tr.obs;
+    gender =
+        patient?.gender == null ? 'female' : basicEnumToString(patient.gender);
+    birthDate = patient?.birthDate == null
+        ? DateTime.now().add(const Duration(days: 1))
+        : DateTime.parse(patient.birthDate.toString());
+    barrio = districtFromAddress(patient?.address);
     super.onInit();
   }
 
@@ -32,94 +31,76 @@ class PatientRegistrationController extends GetxController {
   final givenName = TextEditingController();
   String familyError;
   String givenError;
-  RxString gender;
-  Rx<DateTime> registerBirthDate;
-  final birthDateError = ''.obs;
-  RxString barrio;
-  final barrioError = ''.obs;
+  String gender;
+  DateTime birthDate;
+  String birthDateError = '';
+  String barrio;
+  String barrioError = '';
   final List<String> barriosList = barrios;
 
-  String dispFamilyNameError() => familyError;
-  String dispGivenNameError() => givenError;
-
-  void setFemaleGender() {
-    gender.value = 'female';
+  void setGender(String newGender) {
+    gender = newGender;
     update();
   }
-
-  void setMaleGender() {
-    gender.value = 'male';
-    update();
-  }
-
-  String curGender() => gender.value;
 
   void chooseBirthDate(DateTime date) {
-    registerBirthDate.value = date ?? registerBirthDate.value;
+    birthDate = date ?? birthDate;
     update();
   }
 
-  String displayBirthDate() => simpleDateTime(registerBirthDate.value);
-  String dispBirthDateError() => birthDateError.value;
+  String displayBirthDate() => simpleDateTime(birthDate);
 
   void setBarrio(String newVal) {
-    barrio.value = newVal;
+    barrio = newVal;
     update();
   }
 
-  String displayBarrio() => barrio.value;
-  String dispBarrioError() => barrioError.value;
-
   void register() {
-    if (isValidRegistrationName(familyName.value.text) &&
-        isValidRegistrationName(givenName.value.text) &&
-        isValidRegistrationBirthDate(registerBirthDate.value) &&
-        isValidRegistrationBarrio(barrio.value)) {
+    if (isValidRegistrationName(familyName.text) &&
+        isValidRegistrationName(givenName.text) &&
+        isValidRegistrationBirthDate(birthDate) &&
+        isValidRegistrationBarrio(barrio)) {
       final r4.Patient newPatient = patient == null
           ? r4.Patient(
               resourceType: 'Patient',
               name: [
-                r4.HumanName(
-                    family: familyName.value.text,
-                    given: [givenName.value.text])
+                r4.HumanName(family: familyName.text, given: [givenName.text])
               ],
-              birthDate: r4.Date(registerBirthDate.value),
-              address: [r4.Address(district: barrio.value)],
-              gender: gender.value == 'female'
+              birthDate: r4.Date(birthDate),
+              address: [r4.Address(district: barrio)],
+              gender: gender == 'female'
                   ? r4.PatientGender.female
                   : r4.PatientGender.male)
           : patient.copyWith(
               name: [
-                r4.HumanName(
-                    family: familyName.value.text,
-                    given: [givenName.value.text])
+                r4.HumanName(family: familyName.text, given: [givenName.text])
               ],
-              birthDate: r4.Date(registerBirthDate.value),
-              address: [r4.Address(district: barrio.value)],
-              gender: gender.value == 'female'
+              birthDate: r4.Date(birthDate),
+              address: [r4.Address(district: barrio)],
+              gender: gender == 'female'
                   ? r4.PatientGender.female
                   : r4.PatientGender.male);
       Get.to(ContactRegistration(), arguments: newPatient);
     } else {
-      if (!isValidRegistrationName(familyName.value.text)) {
+      if (!isValidRegistrationName(familyName.text)) {
         familyError = 'Enter family name';
       } else {
         familyError = null;
       }
-      if (!isValidRegistrationName(givenName.value.text)) {
+      if (!isValidRegistrationName(givenName.text)) {
         givenError = 'Enter other names';
       } else {
         givenError = null;
       }
-      if (!isValidRegistrationBirthDate(registerBirthDate.value)) {
-        birthDateError.value = 'Cannot be future date';
+      if (!isValidRegistrationBirthDate(birthDate)) {
+        birthDateError = 'Cannot be future date';
       } else {
-        birthDateError.value = '';
+        birthDateError = '';
       }
-      if (!isValidRegistrationBarrio(barrio.value)) {
-        barrioError.value = 'Please select neighborhood';
+      if (!isValidRegistrationBarrio(barrio)) {
+        barrioError = 'Please select neighborhood';
       } else {
-        barrioError.value = '';
+        barrioError = '';
       }
       update();
     }

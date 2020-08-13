@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:intl/date_symbols.dart';
 import 'package:vigor/1_presentation/screens/screens.dart';
 import 'package:vigor/1_presentation/shared_widgets/shared_widgets.dart';
 import 'package:vigor/2_application/patient_search/patient_search_controller.dart';
+
+import 'patient_search_button_controller.dart';
 
 class PatientSearch extends StatelessWidget {
   @override
@@ -49,27 +52,30 @@ class PatientSearch extends StatelessWidget {
                 thickness: 4.0,
                 color: Colors.blue[900],
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Text('Filter'.tr, style: const TextStyle(fontSize: 30.0)),
-                  RaisedButton(
-                      shape: RoundedRectangleBorder(
-                        side: BorderSide(color: Colors.blue[600]),
-                        borderRadius: BorderRadius.circular(16.0),
-                      ),
-                      color: controller.getColor1(),
-                      onPressed: () => controller.switchColor1(),
-                      child: const Text('Deworming')),
-                  RaisedButton(
-                      shape: RoundedRectangleBorder(
-                        side: BorderSide(color: Colors.blue[600]),
-                        borderRadius: BorderRadius.circular(16.0),
-                      ),
-                      color: controller.getColor2(),
-                      onPressed: () => controller.switchColor2(),
-                      child: const Text('Vaccines')),
-                ],
+              GetBuilder<PatientSearchButtonController>(
+                init: PatientSearchButtonController(),
+                builder: (_) => Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Text('Filter'.tr, style: const TextStyle(fontSize: 30.0)),
+                    RaisedButton(
+                        shape: RoundedRectangleBorder(
+                          side: BorderSide(color: Colors.blue[600]),
+                          borderRadius: BorderRadius.circular(16.0),
+                        ),
+                        color: _.color1,
+                        onPressed: () => _.switchColor1(),
+                        child: const Text('Deworming')),
+                    RaisedButton(
+                        shape: RoundedRectangleBorder(
+                          side: BorderSide(color: Colors.blue[600]),
+                          borderRadius: BorderRadius.circular(16.0),
+                        ),
+                        color: _.color2,
+                        onPressed: () => _.switchColor2(),
+                        child: const Text('Vaccines')),
+                  ],
+                ),
               ),
               Divider(
                 thickness: 4.0,

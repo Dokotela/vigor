@@ -11,13 +11,12 @@ import 'package:vigor/3_domain/validators.dart';
 class ContactRegistrationController extends GetxController {
   @override
   void onInit() {
-    print(patient.toJson().toString());
     if (patient.contact != null) {
-      contact1.value.familyName.text = patient.contact[0]?.name?.family ?? '';
-      contact1.value.givenName.text =
+      contact1.familyName.text = patient.contact[0]?.name?.family ?? '';
+      contact1.givenName.text =
           patient.contact[0]?.name?.given?.join(' ') ?? '';
-      contact1.value.barrio = districtFromAddress([patient.contact[0].address]);
-      contact1.value.relation = getPatientContactType(patient.contact);
+      contact1.barrio = districtFromAddress([patient.contact[0].address]);
+      contact1.relation = getPatientContactType(patient.contact);
     }
     super.onInit();
   }
@@ -26,70 +25,36 @@ class ContactRegistrationController extends GetxController {
   final barriosList = barrios;
   final relationList = relationship_types;
 
-  final contact1 = _ContactRegistration().obs;
-  final contact2 = _ContactRegistration().obs;
-  final contact3 = _ContactRegistration().obs;
-
-  _ContactRegistration getContact1() => contact1.value;
-  _ContactRegistration getContact2() => contact2.value;
-  _ContactRegistration getContact3() => contact3.value;
-
-  TextEditingController getFamilyTextController(_ContactRegistration contact) =>
-      contact.familyName;
-  TextEditingController getGivenTextController(_ContactRegistration contact) =>
-      contact.givenName;
-
-  String dispFamilyNameError(_ContactRegistration contact) =>
-      contact.familyError;
-  String dispGivenNameError(_ContactRegistration contact) => contact.givenError;
+  final contact1 = _ContactRegistration();
+  final contact2 = _ContactRegistration();
 
   void setBarrio1(String newVal) {
-    contact1.value.barrio = newVal;
+    contact1.barrio = newVal;
     update();
   }
 
   void setBarrio2(String newVal) {
-    contact2.value.barrio = newVal;
+    contact2.barrio = newVal;
     update();
   }
-
-  void setBarrio3(String newVal) {
-    contact3.value.barrio = newVal;
-    update();
-  }
-
-  String displayBarrio(_ContactRegistration contact) => contact.barrio;
-  String dispBarrioError(_ContactRegistration contact) => contact.barrioError;
 
   void setRelation1(String newVal) {
-    contact1.value.relation = newVal;
+    contact1.relation = newVal;
     update();
   }
 
   void setRelation2(String newVal) {
-    contact2.value.relation = newVal;
+    contact2.relation = newVal;
     update();
   }
-
-  void setRelation3(String newVal) {
-    contact3.value.relation = newVal;
-    update();
-  }
-
-  String displayRelation(_ContactRegistration contact) => contact.relation;
-  String dispRelationError(_ContactRegistration contact) =>
-      contact.relationError;
 
   Future<void> registerContacts() async {
-    if (isValidRegistrationName(contact1.value.familyName.text) &&
-        isValidRegistrationName(contact1.value.givenName.value.text) &&
-        isValidRegistrationBarrio(contact1.value.barrio) &&
-        isValidRegistrationRelation(contact1.value.relation)) {
-      final newContact = formatPatientContact(
-          contact1.value.familyName.text,
-          contact1.value.givenName.text,
-          contact1.value.barrio,
-          contact1.value.relation);
+    if (isValidRegistrationName(contact1.familyName.text) &&
+        isValidRegistrationName(contact1.givenName.text) &&
+        isValidRegistrationBarrio(contact1.barrio) &&
+        isValidRegistrationRelation(contact1.relation)) {
+      final newContact = formatPatientContact(contact1.familyName.text,
+          contact1.givenName.text, contact1.barrio, contact1.relation);
       final newPatient = patient.copyWith(contact: [newContact]);
       final saveResult = await SaveResource(newPatient).toDb();
       saveResult.fold(
@@ -98,10 +63,10 @@ class ContactRegistrationController extends GetxController {
             Get.offAll(PatientHome(), arguments: ifRight as r4.Patient),
       );
     } else {
-      print(contact1.value.familyName.text);
-      print(contact1.value.givenName.value.text);
-      print(contact1.value.barrio);
-      print(contact1.value.relation);
+      print(contact1.familyName.text);
+      print(contact1.givenName.text);
+      print(contact1.barrio);
+      print(contact1.relation);
     }
     update();
   }
@@ -117,7 +82,4 @@ class _ContactRegistration {
   String barrioError = '';
   String relation = 'Relationship';
   String relationError = '';
-
-  String dispFamilyNameError() => familyError;
-  String dispGivenNameError() => givenError;
 }

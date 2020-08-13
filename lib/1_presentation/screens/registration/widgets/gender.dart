@@ -5,13 +5,11 @@ import 'package:vigor/1_presentation/theme/theme.dart';
 class GenderSelectionWidget extends StatelessWidget {
   const GenderSelectionWidget({
     @required this.curGender,
-    @required this.setFemaleGender,
-    @required this.setMaleGender,
+    @required this.setGender,
   });
 
   final String curGender;
-  final Function setFemaleGender;
-  final Function setMaleGender;
+  final Function setGender;
 
   @override
   Widget build(BuildContext context) {
@@ -37,13 +35,13 @@ class GenderSelectionWidget extends StatelessWidget {
               Radio(
                 value: 'female',
                 groupValue: curGender,
-                onChanged: (String _) => setFemaleGender(),
+                onChanged: (String gender) => setGender(gender),
               ),
               Text('female'.tr, style: ThemeClass.dark().textTheme.headline5),
               Radio(
                 value: 'male',
                 groupValue: curGender,
-                onChanged: (String _) => setMaleGender(),
+                onChanged: (String gender) => setGender(gender),
               ),
               Text('male'.tr, style: ThemeClass.dark().textTheme.headline5),
             ],
