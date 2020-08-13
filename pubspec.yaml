@@ -26,9 +26,9 @@ dependencies:
   flutter_bloc: ^6.0.1
   http: ^0.12.2
   fhir:
-    # git:
-    #   url: git://github.com/Dokotela/fhir_r4.git
-    path: ../fhir_versions/fhir_r4
+    git:
+      url: git://github.com/Dokotela/fhir_r4.git
+    # path: ../fhir_versions/fhir_r4
 
 dev_dependencies:
   flutter_test:

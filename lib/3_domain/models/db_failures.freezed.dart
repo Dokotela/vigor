@@ -25,6 +25,13 @@ class _$DbFailureTearOff {
       error,
     );
   }
+
+// ignore: unused_element
+  UnableToObtainList unableToObtainList({String error}) {
+    return UnableToObtainList(
+      error: error,
+    );
+  }
 }
 
 // ignore: unused_element
@@ -37,22 +44,26 @@ mixin _$DbFailure {
   Result when<Result extends Object>({
     @required Result unableToSave(String error),
     @required Result resourceAlreadyPresent(String error),
+    @required Result unableToObtainList(String error),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result unableToSave(String error),
     Result resourceAlreadyPresent(String error),
+    Result unableToObtainList(String error),
     @required Result orElse(),
   });
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result unableToSave(UnableToSave value),
     @required Result resourceAlreadyPresent(ResourceAlreadyPresent value),
+    @required Result unableToObtainList(UnableToObtainList value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result unableToSave(UnableToSave value),
     Result resourceAlreadyPresent(ResourceAlreadyPresent value),
+    Result unableToObtainList(UnableToObtainList value),
     @required Result orElse(),
   });
 
@@ -141,9 +152,11 @@ class _$UnableToSave implements UnableToSave {
   Result when<Result extends Object>({
     @required Result unableToSave(String error),
     @required Result resourceAlreadyPresent(String error),
+    @required Result unableToObtainList(String error),
   }) {
     assert(unableToSave != null);
     assert(resourceAlreadyPresent != null);
+    assert(unableToObtainList != null);
     return unableToSave(error);
   }
 
@@ -152,6 +165,7 @@ class _$UnableToSave implements UnableToSave {
   Result maybeWhen<Result extends Object>({
     Result unableToSave(String error),
     Result resourceAlreadyPresent(String error),
+    Result unableToObtainList(String error),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -166,9 +180,11 @@ class _$UnableToSave implements UnableToSave {
   Result map<Result extends Object>({
     @required Result unableToSave(UnableToSave value),
     @required Result resourceAlreadyPresent(ResourceAlreadyPresent value),
+    @required Result unableToObtainList(UnableToObtainList value),
   }) {
     assert(unableToSave != null);
     assert(resourceAlreadyPresent != null);
+    assert(unableToObtainList != null);
     return unableToSave(this);
   }
 
@@ -177,6 +193,7 @@ class _$UnableToSave implements UnableToSave {
   Result maybeMap<Result extends Object>({
     Result unableToSave(UnableToSave value),
     Result resourceAlreadyPresent(ResourceAlreadyPresent value),
+    Result unableToObtainList(UnableToObtainList value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -258,9 +275,11 @@ class _$ResourceAlreadyPresent implements ResourceAlreadyPresent {
   Result when<Result extends Object>({
     @required Result unableToSave(String error),
     @required Result resourceAlreadyPresent(String error),
+    @required Result unableToObtainList(String error),
   }) {
     assert(unableToSave != null);
     assert(resourceAlreadyPresent != null);
+    assert(unableToObtainList != null);
     return resourceAlreadyPresent(error);
   }
 
@@ -269,6 +288,7 @@ class _$ResourceAlreadyPresent implements ResourceAlreadyPresent {
   Result maybeWhen<Result extends Object>({
     Result unableToSave(String error),
     Result resourceAlreadyPresent(String error),
+    Result unableToObtainList(String error),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -283,9 +303,11 @@ class _$ResourceAlreadyPresent implements ResourceAlreadyPresent {
   Result map<Result extends Object>({
     @required Result unableToSave(UnableToSave value),
     @required Result resourceAlreadyPresent(ResourceAlreadyPresent value),
+    @required Result unableToObtainList(UnableToObtainList value),
   }) {
     assert(unableToSave != null);
     assert(resourceAlreadyPresent != null);
+    assert(unableToObtainList != null);
     return resourceAlreadyPresent(this);
   }
 
@@ -294,6 +316,7 @@ class _$ResourceAlreadyPresent implements ResourceAlreadyPresent {
   Result maybeMap<Result extends Object>({
     Result unableToSave(UnableToSave value),
     Result resourceAlreadyPresent(ResourceAlreadyPresent value),
+    Result unableToObtainList(UnableToObtainList value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -311,4 +334,126 @@ abstract class ResourceAlreadyPresent implements DbFailure {
   String get error;
   @override
   $ResourceAlreadyPresentCopyWith<ResourceAlreadyPresent> get copyWith;
+}
+
+abstract class $UnableToObtainListCopyWith<$Res>
+    implements $DbFailureCopyWith<$Res> {
+  factory $UnableToObtainListCopyWith(
+          UnableToObtainList value, $Res Function(UnableToObtainList) then) =
+      _$UnableToObtainListCopyWithImpl<$Res>;
+  @override
+  $Res call({String error});
+}
+
+class _$UnableToObtainListCopyWithImpl<$Res>
+    extends _$DbFailureCopyWithImpl<$Res>
+    implements $UnableToObtainListCopyWith<$Res> {
+  _$UnableToObtainListCopyWithImpl(
+      UnableToObtainList _value, $Res Function(UnableToObtainList) _then)
+      : super(_value, (v) => _then(v as UnableToObtainList));
+
+  @override
+  UnableToObtainList get _value => super._value as UnableToObtainList;
+
+  @override
+  $Res call({
+    Object error = freezed,
+  }) {
+    return _then(UnableToObtainList(
+      error: error == freezed ? _value.error : error as String,
+    ));
+  }
+}
+
+class _$UnableToObtainList implements UnableToObtainList {
+  const _$UnableToObtainList({this.error});
+
+  @override
+  final String error;
+
+  @override
+  String toString() {
+    return 'DbFailure.unableToObtainList(error: $error)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is UnableToObtainList &&
+            (identical(other.error, error) ||
+                const DeepCollectionEquality().equals(other.error, error)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(error);
+
+  @override
+  $UnableToObtainListCopyWith<UnableToObtainList> get copyWith =>
+      _$UnableToObtainListCopyWithImpl<UnableToObtainList>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result unableToSave(String error),
+    @required Result resourceAlreadyPresent(String error),
+    @required Result unableToObtainList(String error),
+  }) {
+    assert(unableToSave != null);
+    assert(resourceAlreadyPresent != null);
+    assert(unableToObtainList != null);
+    return unableToObtainList(error);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result unableToSave(String error),
+    Result resourceAlreadyPresent(String error),
+    Result unableToObtainList(String error),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (unableToObtainList != null) {
+      return unableToObtainList(error);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result unableToSave(UnableToSave value),
+    @required Result resourceAlreadyPresent(ResourceAlreadyPresent value),
+    @required Result unableToObtainList(UnableToObtainList value),
+  }) {
+    assert(unableToSave != null);
+    assert(resourceAlreadyPresent != null);
+    assert(unableToObtainList != null);
+    return unableToObtainList(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result unableToSave(UnableToSave value),
+    Result resourceAlreadyPresent(ResourceAlreadyPresent value),
+    Result unableToObtainList(UnableToObtainList value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (unableToObtainList != null) {
+      return unableToObtainList(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UnableToObtainList implements DbFailure {
+  const factory UnableToObtainList({String error}) = _$UnableToObtainList;
+
+  @override
+  String get error;
+  @override
+  $UnableToObtainListCopyWith<UnableToObtainList> get copyWith;
 }

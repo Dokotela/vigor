@@ -7,4 +7,6 @@ abstract class DbFailure with _$DbFailure {
   const factory DbFailure.unableToSave({String error}) = UnableToSave;
   const factory DbFailure.resourceAlreadyPresent(String error) =
       ResourceAlreadyPresent;
+  const factory DbFailure.unableToObtainList({String error}) =
+      UnableToObtainList;
 }

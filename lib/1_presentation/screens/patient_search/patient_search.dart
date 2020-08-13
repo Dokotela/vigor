@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:intl/date_symbols.dart';
 import 'package:vigor/1_presentation/screens/screens.dart';
 import 'package:vigor/1_presentation/shared_widgets/shared_widgets.dart';
 import 'package:vigor/2_application/patient_search/patient_search_controller.dart';
@@ -25,6 +24,7 @@ class PatientSearch extends StatelessWidget {
               Row(
                 children: [
                   Flexible(
+                    flex: 20,
                     child: TextFormField(
                       controller: controller.searchName,
                       decoration: InputDecoration(
@@ -32,8 +32,10 @@ class PatientSearch extends StatelessWidget {
                       ),
                     ),
                   ),
+                  const Spacer(),
                   Container(
-                    width: 120.0,
+                    height: 60.0,
+                    width: 130.0,
                     child: RaisedButton(
                       color: Colors.grey,
                       shape: RoundedRectangleBorder(
@@ -43,6 +45,7 @@ class PatientSearch extends StatelessWidget {
                       child: Text(
                         'Register New Patient'.tr,
                         textAlign: TextAlign.center,
+                        style: const TextStyle(fontSize: 18.0),
                       ),
                     ),
                   ),
