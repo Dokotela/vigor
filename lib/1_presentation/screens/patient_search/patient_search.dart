@@ -90,7 +90,17 @@ class PatientSearch extends StatelessWidget {
                   const Text('Age'),
                   const Text('Barrio'),
                 ],
-              )
+              ),
+              Expanded(
+                child: ListView.builder(
+                  padding: const EdgeInsets.all(8),
+                  itemCount: controller.patientList.length,
+                  itemBuilder: (context, index) {
+                    return Text(
+                        controller.patientList[index].toJson().toString());
+                  },
+                ),
+              ),
             ],
           ),
         ),
