@@ -30,6 +30,7 @@ class PatientSearch extends StatelessWidget {
                       decoration: InputDecoration(
                         hintText: 'Search Name'.tr,
                       ),
+                      onChanged: (value) => controller.searchPatientsByName(),
                     ),
                   ),
                   const Spacer(),
@@ -85,20 +86,77 @@ class PatientSearch extends StatelessWidget {
                 color: Colors.blue[900],
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  const Text('Name'),
-                  const Text('Age'),
-                  const Text('Barrio'),
+                  Container(
+                    width: Get.width / 3,
+                    child: RaisedButton(
+                      onPressed: () => controller.sortPatientsByName(),
+                      child: const Text(
+                        'Name',
+                        style: TextStyle(fontSize: 14.0),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    width: Get.width / 5,
+                    child: RaisedButton(
+                      onPressed: () => controller.sortPatientsByBirthDate(),
+                      child: const Text(
+                        'Birthdate',
+                        style: TextStyle(fontSize: 14.0),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    width: Get.width / 5,
+                    child: RaisedButton(
+                      onPressed: () => controller.sortPatientsByBarrio(),
+                      child: const Text(
+                        'Neighborhood',
+                        style: TextStyle(fontSize: 14.0),
+                      ),
+                    ),
+                  ),
                 ],
               ),
               Expanded(
-                child: ListView.builder(
-                  padding: const EdgeInsets.all(8),
-                  itemCount: controller.patientList.length,
-                  itemBuilder: (context, index) {
-                    return Text(
-                        controller.patientList[index].toJson().toString());
-                  },
+                child: Obx(
+                  () => ListView.separated(
+                    itemCount: controller.curPatientList.length,
+                    separatorBuilder: (context, index) =>
+                        const Divider(color: Colors.white),
+                    itemBuilder: (context, index) => Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Container(
+                          width: Get.width / 3,
+                          child: Text(
+                            controller.patientName(
+                                controller.curPatientList.value[index]),
+                            style: const TextStyle(fontSize: 16.0),
+                          ),
+                        ),
+                        Container(
+                          width: Get.width / 5,
+                          child: Text(
+                            controller.patientDob(
+                                controller.curPatientList.value[index]),
+                            style: const TextStyle(fontSize: 16.0),
+                          ),
+                        ),
+                        Container(
+                          width: Get.width / 5,
+                          child: Text(
+                            controller.patientBarrio(
+                                controller.curPatientList.value[index]),
+                            overflow: TextOverflow.ellipsis,
+                            style: const TextStyle(fontSize: 16.0),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
               ),
             ],
