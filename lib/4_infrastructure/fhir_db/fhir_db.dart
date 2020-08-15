@@ -10,6 +10,15 @@ class FhirDb {
   FhirDb._();
   static final FhirDb _db = FhirDb._();
   static FhirDb get instance => _db;
+  final List<String> resourceTypes = [];
+
+  void addResourceType(String resourceType) {
+    if (!resourceTypes.contains(resourceType)) {
+      resourceTypes.add(resourceType);
+    }
+  }
+
+  List<String> getResourceTypes() => resourceTypes;
 
   Completer<Database> _dbOpenCompleter;
 

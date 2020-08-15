@@ -9,10 +9,15 @@ class ResourceDao {
 
   StoreRef<String, Map<String, dynamic>> _resourceStore;
 
-  void _setStoreType(String resourceType) =>
-      _resourceStore = stringMapStoreFactory.store(resourceType);
+  void _setStoreType(String resourceType) {
+    _addResourceType(resourceType);
+    _resourceStore = stringMapStoreFactory.store(resourceType);
+  }
 
   Future<Database> get _db async => FhirDb.instance.database;
+  void _addResourceType(String resourceType) =>
+      FhirDb.instance.addResourceType(resourceType);
+  List<String> _getResourceTypes() => FhirDb.instance.getResourceTypes();
 
   //checks if the resource already has an id, all resources downloaded should
   //have an id, and all resources already saved will have an id, so only brand
@@ -75,6 +80,16 @@ class ResourceDao {
       _setStoreType(type);
       await _resourceStore.delete(await _db);
     }
+  }
+
+  Future<List<Resource>> getAllResources() async {
+    final resourceTypes = _getResourceTypes();
+    final resourceList = <Resource>[];
+    for (final resource in resourceTypes) {
+      final partialList = await getAllSortedById(resourceType: resource);
+      partialList.forEach(resourceList.add);
+    }
+    return resourceList;
   }
 
   Future<List<Resource>> getAllSortedById(
