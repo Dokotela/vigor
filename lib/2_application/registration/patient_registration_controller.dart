@@ -9,6 +9,22 @@ import 'package:vigor/3_domain/validators.dart';
 import 'package:vigor/3_domain/const/const.dart';
 
 class PatientRegistrationController extends GetxController {
+  // VARIABLES
+  String familyError;
+  String givenError;
+  String gender;
+  DateTime birthDate;
+  String birthDateError = '';
+  String barrio;
+  String barrioError = '';
+
+  // PROPERTIES
+  final r4.Patient patient = Get.arguments;
+  final familyName = TextEditingController();
+  final givenName = TextEditingController();
+  final List<String> barriosList = barrios;
+
+  //INIT
   @override
   void onInit() {
     familyName.text = patient?.name == null
@@ -25,18 +41,6 @@ class PatientRegistrationController extends GetxController {
     barrio = districtFromAddress(patient?.address);
     super.onInit();
   }
-
-  final r4.Patient patient = Get.arguments;
-  final familyName = TextEditingController();
-  final givenName = TextEditingController();
-  String familyError;
-  String givenError;
-  String gender;
-  DateTime birthDate;
-  String birthDateError = '';
-  String barrio;
-  String barrioError = '';
-  final List<String> barriosList = barrios;
 
   void setGender(String newGender) {
     gender = newGender;

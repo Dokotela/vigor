@@ -16,7 +16,7 @@ class Start extends StatelessWidget {
       translations: MyTranslations(),
       locale: Locale(Platform.localeName.split('_')[0]),
       title: 'Vigor',
-      home: const LoginScreen(),
+      home: LoginScreen(),
     );
   }
 }

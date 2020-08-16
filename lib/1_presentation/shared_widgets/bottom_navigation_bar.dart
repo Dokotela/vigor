@@ -17,7 +17,7 @@ BottomAppBar bottomAppBar = BottomAppBar(
       ),
       IconButton(
         icon: const Icon(Icons.exit_to_app, color: Colors.white),
-        onPressed: () => Get.offAll<Widget>(const LoginScreen()),
+        onPressed: () => Get.offAll<Widget>(LoginScreen()),
       ),
     ],
   ),
@@ -30,7 +30,7 @@ BottomAppBar homeBottomAppBar = BottomAppBar(
     children: [
       IconButton(
         icon: const Icon(Icons.exit_to_app, color: Colors.white),
-        onPressed: () => Get.to<Widget>(const LoginScreen()),
+        onPressed: () => Get.to<Widget>(LoginScreen()),
       ),
     ],
   ),

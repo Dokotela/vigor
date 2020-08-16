@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vigor/1_presentation/screens/login/widgets/flag.dart';
+import 'package:vigor/1_presentation/screens/login/widgets/login_button.dart';
+import 'package:vigor/1_presentation/screens/login/widgets/login_field.dart';
+import 'package:vigor/1_presentation/screens/login/widgets/splash_title.dart';
 
-import '../screens.dart';
-import 'by_country.dart';
+class LoginScreen extends StatelessWidget {
+  static const _padding = EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0);
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key key}) : super(key: key);
+// const String country = 'botswana';
+// const String country = 'dominican_republic';
+  static const String _country = 'usa';
 
-  @override
-  _LoginScreenState createState() => _LoginScreenState();
-}
-
-class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,17 +23,16 @@ class _LoginScreenState extends State<LoginScreen> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              Flexible(
-                flex: 1,
-                child: flagContainer(country, MediaQuery.of(context).size),
-              ),
-              splashText(country),
+              const FlagWidget(_country),
+              const SplashTitleWidget(_country),
               const SizedBox(height: 30.0),
-              loginField('Username'.tr, obscure: false),
+              LoginFieldWidget(
+                  hint: 'Username'.tr, obscure: false, padding: _padding),
               const SizedBox(height: 15.0),
-              loginField('Password'.tr, obscure: true),
+              LoginFieldWidget(
+                  hint: 'Password'.tr, obscure: true, padding: _padding),
               const SizedBox(height: 15.0),
-              loginButton('Login'.tr, MediaQuery.of(context).size),
+              LoginButtonWidget(login: 'Login'.tr, padding: _padding),
             ],
           ),
         ),
@@ -41,32 +40,3 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 }
-
-// const String country = 'botswana';
-// const String country = 'dominican_republic';
-const String country = 'usa';
-
-TextField loginField(String hint, {bool obscure}) => TextField(
-      obscureText: obscure,
-      decoration: InputDecoration(
-        contentPadding: padding,
-        hintText: hint,
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0)),
-        focusedBorder:
-            OutlineInputBorder(borderRadius: BorderRadius.circular(32.0)),
-      ),
-    );
-
-Material loginButton(String login, Size size) => Material(
-      elevation: 5.0,
-      borderRadius: BorderRadius.circular(64.0),
-      color: Colors.blue[600],
-      child: MaterialButton(
-        minWidth: size.width,
-        padding: padding,
-        onPressed: () => Get.to<Widget>(HomeScreen()),
-        child: Text(login, textAlign: TextAlign.center),
-      ),
-    );
-
-const padding = EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0);
