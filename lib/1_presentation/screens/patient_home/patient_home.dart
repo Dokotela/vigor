@@ -28,10 +28,10 @@ class PatientHome extends StatelessWidget {
                   ),
                   onPressed: () => controller.editPatient(),
                   child: InfoBannerWidget(
-                    lastCommaFirstName: controller.patientName(),
-                    id: controller.patientId(),
-                    birthDate: controller.patientBirthDate(),
-                    sex: controller.patientSex(),
+                    lastCommaFirstName: controller.name(),
+                    id: controller.id(),
+                    birthDate: controller.birthDate(),
+                    sex: controller.sex(),
                   ),
                 )
               ],

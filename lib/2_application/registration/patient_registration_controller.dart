@@ -10,8 +10,8 @@ import 'package:vigor/3_domain/const/const.dart';
 
 class PatientRegistrationController extends GetxController {
   // VARIABLES
-  String familyError;
-  String givenError;
+  String familyNameError;
+  String givenNameError;
   String gender;
   DateTime birthDate;
   String birthDateError = '';
@@ -42,22 +42,28 @@ class PatientRegistrationController extends GetxController {
     super.onInit();
   }
 
+  // SETTER FUNCTIONS
+
   void setGender(String newGender) {
     gender = newGender;
     update();
   }
 
-  void chooseBirthDate(DateTime date) {
+  void setBirthDate(DateTime date) {
     birthDate = date ?? birthDate;
     update();
   }
-
-  String displayBirthDate() => simpleDateTime(birthDate);
 
   void setBarrio(String newVal) {
     barrio = newVal;
     update();
   }
+
+  // GETTER FUNCTIONS
+
+  String getBirthDate() => simpleDateTime(birthDate);
+
+  // FUNCTIONS
 
   void register() {
     if (isValidRegistrationName(familyName.text) &&
@@ -87,14 +93,14 @@ class PatientRegistrationController extends GetxController {
       Get.to(ContactRegistration(), arguments: newPatient);
     } else {
       if (!isValidRegistrationName(familyName.text)) {
-        familyError = 'Enter family name';
+        familyNameError = 'Enter family name';
       } else {
-        familyError = null;
+        familyNameError = null;
       }
       if (!isValidRegistrationName(givenName.text)) {
-        givenError = 'Enter other names';
+        givenNameError = 'Enter other names';
       } else {
-        givenError = null;
+        givenNameError = null;
       }
       if (!isValidRegistrationBirthDate(birthDate)) {
         birthDateError = 'Cannot be future date';

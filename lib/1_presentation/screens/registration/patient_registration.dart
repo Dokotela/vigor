@@ -27,17 +27,17 @@ class PatientRegistration extends StatelessWidget {
                 NamesInputWidget(
                   familyName: controller.familyName,
                   givenName: controller.givenName,
-                  familyNameError: controller.familyError,
-                  givenNameError: controller.givenError,
+                  familyNameError: controller.familyNameError,
+                  givenNameError: controller.givenNameError,
                 ),
                 GenderSelectionWidget(
                   curGender: controller.gender,
                   setGender: controller.setGender,
                 ),
                 BirthDateWidget(
-                  chooseBirthDate: controller.chooseBirthDate,
+                  chooseBirthDate: controller.setBirthDate,
                   curBirthDate: controller.birthDate,
-                  displayBirthDate: controller.displayBirthDate(),
+                  displayBirthDate: controller.getBirthDate(),
                   dispBirthDateError: controller.birthDateError,
                 ),
                 BarrioWidget(

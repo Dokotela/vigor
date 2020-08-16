@@ -9,6 +9,16 @@ import 'package:vigor/3_domain/interfaces/i_fhir_db.dart';
 import 'package:vigor/3_domain/validators.dart';
 
 class ContactRegistrationController extends GetxController {
+  // PROPERTIES
+
+  final r4.Patient patient = Get.arguments;
+  final barriosList = barrios;
+  final relationList = relationship_types;
+  final contact1 = _ContactRegistration();
+  final contact2 = _ContactRegistration();
+
+  // INIT
+
   @override
   void onInit() {
     if (patient.contact != null) {
@@ -21,12 +31,7 @@ class ContactRegistrationController extends GetxController {
     super.onInit();
   }
 
-  final r4.Patient patient = Get.arguments;
-  final barriosList = barrios;
-  final relationList = relationship_types;
-
-  final contact1 = _ContactRegistration();
-  final contact2 = _ContactRegistration();
+  // SETTER FUNCTIONS
 
   void setBarrio1(String newVal) {
     contact1.barrio = newVal;
@@ -47,6 +52,8 @@ class ContactRegistrationController extends GetxController {
     contact2.relation = newVal;
     update();
   }
+
+  // FUNCTIONS
 
   Future<void> registerContacts() async {
     if (isValidRegistrationName(contact1.familyName.text) &&

@@ -28,4 +28,28 @@ class IFhirDb {
     }
     return right(resultList);
   }
+
+  Future<Either<DbFailure, List<Resource>>> returnPatientImmunizationHistory(
+      String resourceType) async {
+    List<Resource> resultList;
+    try {
+      resultList =
+          await resourceDao.getAllSortedById(resourceType: resourceType);
+    } catch (error) {
+      return left(DbFailure.unableToObtainList(error: error.toString()));
+    }
+    return right(resultList);
+  }
+
+  Future<Either<DbFailure, List<Resource>>> returnPatientPastDeworming(
+      String resourceType) async {
+    List<Resource> resultList;
+    try {
+      resultList =
+          await resourceDao.getAllSortedById(resourceType: resourceType);
+    } catch (error) {
+      return left(DbFailure.unableToObtainList(error: error.toString()));
+    }
+    return right(resultList);
+  }
 }
