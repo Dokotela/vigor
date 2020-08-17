@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:fhir/fhir_r4.dart' as r4;
-import 'package:vigor/1_presentation/screens/patient_home/patient_home.dart';
+import 'package:vigor/1_presentation/screens/screens.dart';
 import 'package:vigor/3_domain/const/const.dart';
 import 'package:vigor/3_domain/formatters/district_from_address.dart';
 import 'package:vigor/3_domain/formatters/format_patient_contact.dart';
@@ -10,7 +10,6 @@ import 'package:vigor/3_domain/validators.dart';
 
 class ContactRegistrationController extends GetxController {
   // PROPERTIES
-
   final r4.Patient patient = Get.arguments;
   final barriosList = barrios;
   final relationList = relationship_types;
@@ -18,7 +17,6 @@ class ContactRegistrationController extends GetxController {
   final contact2 = _ContactRegistration();
 
   // INIT
-
   @override
   void onInit() {
     if (patient.contact != null) {
@@ -32,7 +30,6 @@ class ContactRegistrationController extends GetxController {
   }
 
   // SETTER FUNCTIONS
-
   void setBarrio1(String newVal) {
     contact1.barrio = newVal;
     update();
@@ -54,7 +51,6 @@ class ContactRegistrationController extends GetxController {
   }
 
   // FUNCTIONS
-
   Future<void> registerContacts() async {
     if (isValidRegistrationName(contact1.familyName.text) &&
         isValidRegistrationName(contact1.givenName.text) &&

@@ -1,11 +1,20 @@
 import 'package:fhir/fhir_r4.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vigor/1_presentation/screens/screens.dart';
 import 'package:vigor/3_domain/formatters/patient_name.dart';
 import 'package:vigor/3_domain/formatters/simple_date.dart';
 import 'package:vigor/3_domain/interfaces/i_fhir_db.dart';
 
 class PatientSearchController extends GetxController {
+  // VARIABLES
+  var fullPatientList = <Resource>[];
+
+  // PROPERTIES
+  final searchName = TextEditingController();
+  final curPatientList = <Resource>[].obs;
+
+  // INIT
   @override
   Future onInit() async {
     fullPatientList =
@@ -15,10 +24,7 @@ class PatientSearchController extends GetxController {
     super.onInit();
   }
 
-  final searchName = TextEditingController();
-  var fullPatientList = <Resource>[];
-  final curPatientList = <Resource>[].obs;
-
+  // GETTER FUNCTIONS
   String patientName(Resource resource) =>
       lastCommaGivenName((resource as Patient).name[0]);
   String patientDob(Resource resource) =>
@@ -28,6 +34,7 @@ class PatientSearchController extends GetxController {
           ? ''
           : (resource as Patient).address[0].district;
 
+  // FUNCTIONS
   void searchPatientsByName() {
     if (searchName.text.length >= 2) {
       curPatientList.value = <Resource>[];
@@ -70,4 +77,7 @@ class PatientSearchController extends GetxController {
             : (b as Patient).address[0]?.district ?? ''));
     update();
   }
+
+  void selectPatient(int index) =>
+      Get.to(PatientHome(), arguments: curPatientList.value[index]);
 }

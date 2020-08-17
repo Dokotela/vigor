@@ -126,35 +126,39 @@ class PatientSearch extends StatelessWidget {
                     itemCount: controller.curPatientList.length,
                     separatorBuilder: (context, index) =>
                         const Divider(color: Colors.white),
-                    itemBuilder: (context, index) => Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Container(
-                          width: Get.width / 3,
-                          child: Text(
-                            controller.patientName(
-                                controller.curPatientList.value[index]),
-                            style: const TextStyle(fontSize: 16.0),
+                    itemBuilder: (context, index) => RaisedButton(
+                      color: Colors.transparent,
+                      onPressed: () => controller.selectPatient(index),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Container(
+                            width: Get.width / 3,
+                            child: Text(
+                              controller.patientName(
+                                  controller.curPatientList.value[index]),
+                              style: const TextStyle(fontSize: 16.0),
+                            ),
                           ),
-                        ),
-                        Container(
-                          width: Get.width / 5,
-                          child: Text(
-                            controller.patientDob(
-                                controller.curPatientList.value[index]),
-                            style: const TextStyle(fontSize: 16.0),
+                          Container(
+                            width: Get.width / 5,
+                            child: Text(
+                              controller.patientDob(
+                                  controller.curPatientList.value[index]),
+                              style: const TextStyle(fontSize: 16.0),
+                            ),
                           ),
-                        ),
-                        Container(
-                          width: Get.width / 5,
-                          child: Text(
-                            controller.patientBarrio(
-                                controller.curPatientList.value[index]),
-                            overflow: TextOverflow.ellipsis,
-                            style: const TextStyle(fontSize: 16.0),
+                          Container(
+                            width: Get.width / 5,
+                            child: Text(
+                              controller.patientBarrio(
+                                  controller.curPatientList.value[index]),
+                              overflow: TextOverflow.ellipsis,
+                              style: const TextStyle(fontSize: 16.0),
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 ),

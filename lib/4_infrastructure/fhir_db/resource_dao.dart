@@ -47,7 +47,10 @@ class ResourceDao {
     final oldResource =
         await _resourceStore.record(resource.id.toString()).get(await _db);
     if (oldResource == null) {
-      return await _insert(resource);
+      await _resourceStore
+          .record(resource.id.toString())
+          .put(await _db, resource.toJson());
+      return resource;
     } else {
       _setStoreType('_history');
       await _resourceStore.add(await _db, oldResource);
@@ -101,6 +104,13 @@ class ResourceDao {
       return _search(finder);
     }
     return [];
+  }
+
+  Future<List<Resource>> searchFor(
+      String resourceType, String field, String value) async {
+    _setStoreType(resourceType);
+    final finder = Finder(filter: Filter.equals(field, value));
+    return await _search(finder);
   }
 
   Future<List<Resource>> _search(Finder finder) async {

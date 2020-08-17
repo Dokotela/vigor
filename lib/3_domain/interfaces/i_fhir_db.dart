@@ -30,23 +30,23 @@ class IFhirDb {
   }
 
   Future<Either<DbFailure, List<Resource>>> returnPatientImmunizationHistory(
-      String resourceType) async {
-    List<Resource> resultList;
-    try {
-      resultList =
-          await resourceDao.getAllSortedById(resourceType: resourceType);
-    } catch (error) {
-      return left(DbFailure.unableToObtainList(error: error.toString()));
-    }
-    return right(resultList);
+      String patientId) async {
+    return await searchFunction(
+        'Immunization', 'patient.reference', 'Patient/$patientId');
   }
 
   Future<Either<DbFailure, List<Resource>>> returnPatientPastDeworming(
-      String resourceType) async {
+      String patientId) async {
+    return await searchFunction(
+        'MedicationAdministration', 'subject.reference', 'Patient/$patientId');
+  }
+
+  Future<Either<DbFailure, List<Resource>>> searchFunction(
+      String resourceType, String searchString, String reference) async {
     List<Resource> resultList;
     try {
       resultList =
-          await resourceDao.getAllSortedById(resourceType: resourceType);
+          await resourceDao.searchFor(resourceType, searchString, reference);
     } catch (error) {
       return left(DbFailure.unableToObtainList(error: error.toString()));
     }

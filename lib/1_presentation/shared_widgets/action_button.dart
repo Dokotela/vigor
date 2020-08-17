@@ -18,7 +18,7 @@ class ActionButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FlatButton(
-      onPressed: () => getFunc(nextPage),
+      onPressed: () => nextPage == null ? getFunc() : getFunc(nextPage),
       child: Column(
         children: <Widget>[
           ClipRRect(

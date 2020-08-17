@@ -24,7 +24,7 @@ class PatientRegistrationController extends GetxController {
   final givenName = TextEditingController();
   final List<String> barriosList = barrios;
 
-  //INIT
+  // INIT
   @override
   void onInit() {
     familyName.text = patient?.name == null
@@ -43,7 +43,6 @@ class PatientRegistrationController extends GetxController {
   }
 
   // SETTER FUNCTIONS
-
   void setGender(String newGender) {
     gender = newGender;
     update();
@@ -60,11 +59,9 @@ class PatientRegistrationController extends GetxController {
   }
 
   // GETTER FUNCTIONS
-
   String getBirthDate() => simpleDateTime(birthDate);
 
   // FUNCTIONS
-
   void register() {
     if (isValidRegistrationName(familyName.text) &&
         isValidRegistrationName(givenName.text) &&

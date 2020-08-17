@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vigor/1_presentation/screens/patient_home/widgets/info_banner.dart';
 import 'package:vigor/1_presentation/shared_widgets/shared_widgets.dart';
-import 'package:vigor/2_application/patient_home/patient_home_controller.dart';
+import 'package:vigor/2_application/patient_home/patient_immunizations_controller.dart';
 
-class PatientHome extends StatelessWidget {
+import 'widgets/info_banner.dart';
+
+class PatientImmunizations extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<PatientHomeController>(
-      init: PatientHomeController(),
+    return GetBuilder<PatientImmunizationsController>(
+      init: PatientImmunizationsController(),
       builder: (controller) => Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: AppBar(
-          title: Text('title'.tr),
+          title: Text('Immunizations'.tr),
         ),
         body: Padding(
           padding: const EdgeInsets.all(10.0),
@@ -33,7 +34,23 @@ class PatientHome extends StatelessWidget {
                     birthDate: controller.birthDate(),
                     sex: controller.sex(),
                   ),
-                )
+                ),
+                Expanded(
+                  child: Obx(
+                    () => ListView.separated(
+                      itemCount: controller.pastImmunizations.length,
+                      separatorBuilder: (context, index) =>
+                          const Divider(color: Colors.white),
+                      itemBuilder: (context, index) => Container(
+                        child: Text(
+                          controller.vaccineInfo(index),
+                          overflow: TextOverflow.ellipsis,
+                          style: const TextStyle(fontSize: 16.0),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
