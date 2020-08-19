@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:vigor/1_presentation/screens/patient_search/patient_search.dart';
 import 'package:vigor/1_presentation/shared_widgets/shared_widgets.dart';
-import 'package:vigor/3_domain/interfaces/i_fhir_server.dart';
 import 'package:vigor/4_infrastructure/fhir_db/resource_dao.dart';
+import 'package:vigor/4_infrastructure/interfaces/i_fhir_server.dart';
 
 import '../screens.dart';
 

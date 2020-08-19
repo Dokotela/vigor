@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:vigor/1_presentation/screens/screens.dart';
 import 'package:vigor/3_domain/formatters/patient_name.dart';
 import 'package:vigor/3_domain/formatters/simple_date.dart';
-import 'package:vigor/3_domain/interfaces/i_fhir_db.dart';
+import 'package:vigor/4_infrastructure/interfaces/i_fhir_db.dart';
 
 class PatientSearchController extends GetxController {
   // VARIABLES

@@ -5,7 +5,7 @@ import 'package:vigor/1_presentation/screens/screens.dart';
 import 'package:vigor/3_domain/const/const.dart';
 import 'package:vigor/3_domain/formatters/district_from_address.dart';
 import 'package:vigor/3_domain/formatters/format_patient_contact.dart';
-import 'package:vigor/3_domain/interfaces/i_fhir_db.dart';
+import 'package:vigor/4_infrastructure/interfaces/i_fhir_db.dart';
 import 'package:vigor/3_domain/validators.dart';
 
 class ContactRegistrationController extends GetxController {

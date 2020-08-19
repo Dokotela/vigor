@@ -38,12 +38,12 @@ class PatientImmunizations extends StatelessWidget {
                 Expanded(
                   child: Obx(
                     () => ListView.separated(
-                      itemCount: controller.pastImmunizations.length,
+                      itemCount: controller.immRecs.length,
                       separatorBuilder: (context, index) =>
                           const Divider(color: Colors.white),
                       itemBuilder: (context, index) => Container(
                         child: Text(
-                          controller.vaccineInfo(index),
+                          controller.vaccineRecommendation(index),
                           overflow: TextOverflow.ellipsis,
                           style: const TextStyle(fontSize: 16.0),
                         ),

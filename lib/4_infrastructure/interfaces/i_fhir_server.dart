@@ -2,7 +2,8 @@ import 'dart:convert';
 
 import 'package:fhir/fhir_r4.dart';
 import 'package:http/http.dart';
-import 'package:vigor/3_domain/interfaces/i_fhir_db.dart';
+
+import 'i_fhir_db.dart';
 
 class IFhirServer {
   IFhirServer();

@@ -28,7 +28,10 @@ dependencies:
   fhir:
     git:
       url: git://github.com/Dokotela/fhir_r4.git
-    # path: ../fhir_versions/fhir_r4
+  vax_cast:
+    git:
+      url: git://github.com/Dokotela/vax_cast.git
+      ref: vigor
 
 dev_dependencies:
   flutter_test:
