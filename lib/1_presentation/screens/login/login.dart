@@ -9,8 +9,8 @@ class LoginScreen extends StatelessWidget {
   static const _padding = EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0);
 
 // const String country = 'botswana';
-// const String country = 'dominican_republic';
-  static const String _country = 'usa';
+  static const String _country = 'dominican_republic';
+  // static const String _country = 'usa';
 
   @override
   Widget build(BuildContext context) {

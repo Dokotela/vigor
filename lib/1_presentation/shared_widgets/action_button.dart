@@ -1,5 +1,6 @@
 //ActionButton, returns FlatButton with image, text, and function to call, passed as arguments
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class ActionButton extends StatelessWidget {
   const ActionButton({
@@ -26,7 +27,7 @@ class ActionButton extends StatelessWidget {
           ),
           Text(
             buttonText,
-            style: const TextStyle(color: Colors.white),
+            style: Get.theme.textTheme.bodyText1,
           ),
         ],
       ),

@@ -52,9 +52,12 @@ class PatientSearchController extends GetxController {
   }
 
   void sortPatientsByName() {
-    curPatientList.value.sort((a, b) =>
-        lastCommaGivenName((a as Patient).name[0]).toLowerCase().compareTo(
-            lastCommaGivenName((b as Patient).name[0]).toLowerCase()));
+    curPatientList.value.sort((a, b) => lastCommaGivenName(
+            (a as Patient).name == null ? null : (a as Patient).name[0])
+        .toLowerCase()
+        .compareTo(lastCommaGivenName(
+                (b as Patient).name == null ? null : (b as Patient).name[0])
+            .toLowerCase()));
     update();
   }
 

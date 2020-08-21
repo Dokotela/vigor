@@ -11,7 +11,6 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.dark(),
       home: Scaffold(
         appBar: AppBar(title: Text('title'.tr)),
         body: Center(

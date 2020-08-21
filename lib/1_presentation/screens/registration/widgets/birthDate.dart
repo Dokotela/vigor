@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vigor/1_presentation/theme/theme.dart';
 
 class BirthDateWidget extends StatelessWidget {
   const BirthDateWidget({
@@ -24,6 +23,7 @@ class BirthDateWidget extends StatelessWidget {
       color: Colors.transparent,
       onPressed: () => showDatePicker(
         context: Get.context,
+        locale: Get.locale,
         initialDate: curBirthDate,
         firstDate: DateTime(1900, 1, 1),
         lastDate: DateTime(2999, 12, 31),
@@ -37,7 +37,7 @@ class BirthDateWidget extends StatelessWidget {
                 children: [
                   Text(
                     '${"Date of Birth".tr} $displayBirthDate',
-                    style: ThemeClass.dark().textTheme.headline5,
+                    style: Get.theme.textTheme.headline5,
                     textAlign: TextAlign.center,
                   ),
                   Text(

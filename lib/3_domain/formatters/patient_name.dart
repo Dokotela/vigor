@@ -1,8 +1,8 @@
 import 'package:fhir/fhir_r4.dart';
 
 String lastCommaGivenName(HumanName name) {
-  String nameString = '${name.family},';
-  if (name.given != null) {
+  String nameString = '${name?.family ?? ''},';
+  if (name?.given != null) {
     for (final givenName in name.given) {
       nameString += ' $givenName';
     }

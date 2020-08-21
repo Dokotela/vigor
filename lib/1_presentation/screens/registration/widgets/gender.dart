@@ -25,7 +25,7 @@ class GenderSelectionWidget extends StatelessWidget {
             children: <Widget>[
               Text(
                 'Sex at birth'.tr,
-                style: ThemeClass.dark().textTheme.headline5,
+                style: Get.theme.textTheme.headline5,
               ),
             ],
           ),
@@ -37,13 +37,13 @@ class GenderSelectionWidget extends StatelessWidget {
                 groupValue: curGender,
                 onChanged: (String gender) => setGender(gender),
               ),
-              Text('female'.tr, style: ThemeClass.dark().textTheme.headline5),
+              Text('female'.tr, style: Get.theme.textTheme.headline5),
               Radio(
                 value: 'male',
                 groupValue: curGender,
                 onChanged: (String gender) => setGender(gender),
               ),
-              Text('male'.tr, style: ThemeClass.dark().textTheme.headline5),
+              Text('male'.tr, style: Get.theme.textTheme.headline5),
             ],
           ),
         ],
