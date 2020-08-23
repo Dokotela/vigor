@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vigor/2_application/registration/patient_registration_bloc/patient_registration_controller.dart';
 
 class BirthDateWidget extends StatelessWidget {
   const BirthDateWidget({
@@ -27,7 +28,8 @@ class BirthDateWidget extends StatelessWidget {
         initialDate: curBirthDate,
         firstDate: DateTime(1900, 1, 1),
         lastDate: DateTime(2999, 12, 31),
-      ).then((date) => chooseBirthDate(date)),
+      ).then(
+          (date) => chooseBirthDate(PatientRegistrationEvent.birthDate(date))),
       child: Column(
         children: <Widget>[
           Row(

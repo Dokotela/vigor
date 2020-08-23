@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
+import 'package:vigor/2_application/registration/patient_registration_bloc/patient_registration_controller.dart';
 
 class BarrioWidget extends StatelessWidget {
   const BarrioWidget({
@@ -27,18 +28,17 @@ class BarrioWidget extends StatelessWidget {
         children: <Widget>[
           DropdownButtonHideUnderline(
             child: DropdownButton<String>(
-                items: barriosList.map((String value) {
+                items: barriosList.map((String barrio) {
                   return DropdownMenuItem<String>(
-                    value: value,
-                    child: Text(
-                      value,
-                    ),
+                    value: barrio,
+                    child: Text(barrio),
                   );
                 }).toList(),
                 hint: Text(
                   displayBarrio.tr,
                 ),
-                onChanged: (newVal) => setBarrio(newVal)),
+                onChanged: (newVal) =>
+                    setBarrio(PatientRegistrationEvent.barrio(newVal))),
           ),
           Text(
             dispBarrioError.tr,

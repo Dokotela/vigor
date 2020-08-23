@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:vigor/1_presentation/screens/registration/widgets/gender.dart';
 import 'package:vigor/1_presentation/shared_widgets/shared_widgets.dart';
-import 'package:vigor/2_application/registration/patient_registration_controller.dart';
+import 'package:vigor/2_application/registration/patient_registration_bloc/patient_registration_controller.dart';
 
 import 'widgets/barrio.dart';
 import 'widgets/birthDate.dart';
@@ -32,18 +32,18 @@ class PatientRegistration extends StatelessWidget {
                 ),
                 GenderSelectionWidget(
                   curGender: controller.gender,
-                  setGender: controller.setGender,
+                  setGender: controller.event,
                 ),
                 BirthDateWidget(
-                  chooseBirthDate: controller.setBirthDate,
+                  chooseBirthDate: controller.event,
                   curBirthDate: controller.birthDate,
-                  displayBirthDate: controller.getBirthDate(),
+                  displayBirthDate: controller.birthDateString,
                   dispBirthDateError: controller.birthDateError,
                 ),
                 BarrioWidget(
                   barriosList: controller.barriosList,
                   displayBarrio: controller.barrio,
-                  setBarrio: controller.setBarrio,
+                  setBarrio: controller.event,
                   dispBarrioError: controller.barrioError,
                 ),
                 ButtonTheme(
@@ -52,7 +52,8 @@ class PatientRegistration extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(16.0),
                     ),
-                    onPressed: () => controller.register(),
+                    onPressed: () => controller
+                        .event(const PatientRegistrationEvent.register()),
                     child: Text('Register Patient'.tr),
                   ),
                 ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:vigor/1_presentation/shared_widgets/shared_widgets.dart';
-import 'package:vigor/2_application/registration/contact_registration_controller.dart';
+import 'package:vigor/2_application/registration/contact_registration_bloc/contact_registration_controller.dart';
 
 import 'widgets/barrio.dart';
 import 'widgets/names.dart';
