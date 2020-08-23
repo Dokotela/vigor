@@ -91,7 +91,7 @@ class PatientSearch extends StatelessWidget {
                   Container(
                     width: Get.width / 3,
                     child: RaisedButton(
-                      onPressed: () => controller.sortPatientsByName(),
+                      onPressed: () => controller.sortCurrentPatientsByName(),
                       child: const Text(
                         'Name',
                         style: TextStyle(fontSize: 14.0),
@@ -123,7 +123,7 @@ class PatientSearch extends StatelessWidget {
               Expanded(
                 child: Obx(
                   () => ListView.separated(
-                    itemCount: controller.curPatientList.length,
+                    itemCount: controller.currentListLength,
                     separatorBuilder: (context, index) =>
                         const Divider(color: Colors.white),
                     itemBuilder: (context, index) => RaisedButton(
@@ -135,24 +135,21 @@ class PatientSearch extends StatelessWidget {
                           Container(
                             width: Get.width / 3,
                             child: Text(
-                              controller.patientName(
-                                  controller.curPatientList.value[index]),
+                              controller.patientName(index),
                               style: const TextStyle(fontSize: 16.0),
                             ),
                           ),
                           Container(
                             width: Get.width / 5,
                             child: Text(
-                              controller.patientDob(
-                                  controller.curPatientList.value[index]),
+                              controller.patientDob(index),
                               style: const TextStyle(fontSize: 16.0),
                             ),
                           ),
                           Container(
                             width: Get.width / 5,
                             child: Text(
-                              controller.patientBarrio(
-                                  controller.curPatientList.value[index]),
+                              controller.patientBarrio(index),
                               overflow: TextOverflow.ellipsis,
                               style: const TextStyle(fontSize: 16.0),
                             ),
