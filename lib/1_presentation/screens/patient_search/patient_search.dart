@@ -42,7 +42,7 @@ class PatientSearch extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(16.0),
                       ),
-                      onPressed: () => Get.to(PatientRegistration()),
+                      onPressed: () => Get.to(PatientRegistrationScreen()),
                       child: Text(
                         'Register New Patient'.tr,
                         textAlign: TextAlign.center,

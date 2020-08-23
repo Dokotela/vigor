@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vigor/2_application/registration/patient_registration_bloc/patient_registration_controller.dart';
 
 class GenderSelectionWidget extends StatelessWidget {
   const GenderSelectionWidget({
@@ -35,15 +34,13 @@ class GenderSelectionWidget extends StatelessWidget {
               Radio(
                 value: 'female',
                 groupValue: curGender,
-                onChanged: (String gender) =>
-                    setGender(PatientRegistrationEvent.gender(gender)),
+                onChanged: (String gender) => setGender(gender),
               ),
               Text('female'.tr, style: Get.theme.textTheme.headline5),
               Radio(
                 value: 'male',
                 groupValue: curGender,
-                onChanged: (String gender) =>
-                    setGender(PatientRegistrationEvent.gender(gender)),
+                onChanged: (String gender) => setGender(gender),
               ),
               Text('male'.tr, style: Get.theme.textTheme.headline5),
             ],

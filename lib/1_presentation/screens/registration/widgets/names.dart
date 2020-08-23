@@ -15,23 +15,25 @@ class NamesInputWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        TextFormField(
-          controller: familyName,
-          decoration: InputDecoration(
-            hintText: 'Family Name'.tr,
-            errorText: familyNameError.tr,
+    return Container(
+      child: Column(
+        children: <Widget>[
+          TextFormField(
+            controller: familyName,
+            decoration: InputDecoration(
+              hintText: 'Family Name'.tr,
+              errorText: familyNameError.tr,
+            ),
           ),
-        ),
-        TextFormField(
-          controller: givenName,
-          decoration: InputDecoration(
-            hintText: 'Other Names'.tr,
-            errorText: givenNameError.tr,
+          TextFormField(
+            controller: givenName,
+            decoration: InputDecoration(
+              hintText: 'Other Names'.tr,
+              errorText: givenNameError.tr,
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

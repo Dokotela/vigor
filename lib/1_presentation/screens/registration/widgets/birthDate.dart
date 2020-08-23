@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vigor/2_application/registration/patient_registration_bloc/patient_registration_controller.dart';
 
 class BirthDateWidget extends StatelessWidget {
   const BirthDateWidget({
     @required this.chooseBirthDate,
-    @required this.curBirthDate,
+    @required this.currentBirthDate,
     @required this.displayBirthDate,
     @required this.dispBirthDateError,
   });
   final Function chooseBirthDate;
-  final DateTime curBirthDate;
+  final DateTime currentBirthDate;
   final String displayBirthDate;
   final String dispBirthDateError;
 
@@ -25,11 +24,10 @@ class BirthDateWidget extends StatelessWidget {
       onPressed: () => showDatePicker(
         context: Get.context,
         locale: Get.locale,
-        initialDate: curBirthDate,
+        initialDate: currentBirthDate,
         firstDate: DateTime(1900, 1, 1),
         lastDate: DateTime(2999, 12, 31),
-      ).then(
-          (date) => chooseBirthDate(PatientRegistrationEvent.birthDate(date))),
+      ).then((date) => chooseBirthDate(date ?? currentBirthDate)),
       child: Column(
         children: <Widget>[
           Row(

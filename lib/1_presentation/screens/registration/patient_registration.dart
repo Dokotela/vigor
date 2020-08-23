@@ -8,7 +8,7 @@ import 'widgets/barrio.dart';
 import 'widgets/birthDate.dart';
 import 'widgets/names.dart';
 
-class PatientRegistration extends StatelessWidget {
+class PatientRegistrationScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<PatientRegistrationController>(
@@ -18,46 +18,53 @@ class PatientRegistration extends StatelessWidget {
         appBar: AppBar(
           title: Text('Patient Information'.tr),
         ),
-        body: Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: <Widget>[
-                NamesInputWidget(
-                  familyName: controller.familyName,
-                  givenName: controller.givenName,
-                  familyNameError: controller.familyNameError,
-                  givenNameError: controller.givenNameError,
-                ),
-                GenderSelectionWidget(
-                  curGender: controller.gender,
-                  setGender: controller.event,
-                ),
-                BirthDateWidget(
-                  chooseBirthDate: controller.event,
-                  curBirthDate: controller.birthDate,
-                  displayBirthDate: controller.birthDateString,
-                  dispBirthDateError: controller.birthDateError,
-                ),
-                BarrioWidget(
-                  barriosList: controller.barriosList,
-                  displayBarrio: controller.barrio,
-                  setBarrio: controller.event,
-                  dispBarrioError: controller.barrioError,
-                ),
-                ButtonTheme(
-                  minWidth: double.infinity,
-                  child: RaisedButton(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16.0),
-                    ),
-                    onPressed: () => controller
-                        .event(const PatientRegistrationEvent.register()),
-                    child: Text('Register Patient'.tr),
+        body: GestureDetector(
+          onTap: () {
+            final currentFocus = FocusScope.of(context);
+            if (!currentFocus.hasPrimaryFocus) {
+              currentFocus.unfocus();
+            }
+          },
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  NamesInputWidget(
+                    familyName: controller.familyName,
+                    givenName: controller.givenName,
+                    familyNameError: controller.familyNameError,
+                    givenNameError: controller.givenNameError,
                   ),
-                ),
-              ],
+                  GenderSelectionWidget(
+                    curGender: controller.gender,
+                    setGender: controller.genderEvent,
+                  ),
+                  BirthDateWidget(
+                    chooseBirthDate: controller.birthDateEvent,
+                    currentBirthDate: controller.birthDate,
+                    displayBirthDate: controller.birthDateString,
+                    dispBirthDateError: controller.birthDateError,
+                  ),
+                  BarrioWidget(
+                    barriosList: controller.barriosList,
+                    displayBarrio: controller.barrio,
+                    setBarrio: controller.barrioEvent,
+                    dispBarrioError: controller.barrioError,
+                  ),
+                  ButtonTheme(
+                    minWidth: double.infinity,
+                    child: RaisedButton(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16.0),
+                      ),
+                      onPressed: () => controller.registerEvent(),
+                      child: Text('Register Patient'.tr),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ),

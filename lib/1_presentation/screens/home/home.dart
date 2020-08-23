@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:vigor/1_presentation/screens/patient_search/patient_search.dart';
 import 'package:vigor/1_presentation/shared_widgets/shared_widgets.dart';
-import 'package:vigor/2_application/registration/registration_try/registration_screen.dart';
 import 'package:vigor/4_infrastructure/fhir_db/resource_dao.dart';
 import 'package:vigor/4_infrastructure/interfaces/i_fhir_server.dart';
 
@@ -26,7 +25,7 @@ class HomeScreen extends StatelessWidget {
                 ActionButton(
                     fileName: 'register',
                     buttonText: 'Register'.tr,
-                    nextPage: PatientRegistration(),
+                    nextPage: PatientRegistrationScreen(),
                     getFunc: Get.offAll),
                 ActionButton(
                     fileName: 'search',
@@ -46,7 +45,7 @@ class HomeScreen extends StatelessWidget {
                 ActionButton(
                     fileName: 'growth1',
                     buttonText: 'Growth'.tr,
-                    nextPage: RegistrationScreen(),
+                    nextPage: HomeScreen(),
                     getFunc: Get.offAll),
                 ActionButton(
                     fileName: 'sync',

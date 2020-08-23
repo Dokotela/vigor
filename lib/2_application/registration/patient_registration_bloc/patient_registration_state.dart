@@ -14,7 +14,7 @@ abstract class PatientRegistrationState with _$PatientRegistrationState {
     List<String> barriosList,
   }) = _PatientRegistrationState;
 
-  factory PatientRegistrationState.initialNew() => PatientRegistrationState(
+  factory PatientRegistrationState.initial() => PatientRegistrationState(
         birthDateError: '',
         barrioError: '',
         barriosList: barrios,
@@ -25,7 +25,7 @@ abstract class PatientRegistrationState with _$PatientRegistrationState {
             DateTime.now().year, DateTime.now().month, DateTime.now().day + 1),
       );
 
-  factory PatientRegistrationState.initialPatient(Patient patient) =>
+  factory PatientRegistrationState.update(Patient patient) =>
       PatientRegistrationState(
         birthDateError: '',
         barrioError: '',

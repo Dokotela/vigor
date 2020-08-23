@@ -30,5 +30,5 @@ class PatientParasiteController extends GetxController {
 
   // FUNCTIONS
   void editPatient() =>
-      Get.off(PatientRegistration(), arguments: patient.patient);
+      Get.off(PatientRegistrationScreen(), arguments: patient.patient);
 }

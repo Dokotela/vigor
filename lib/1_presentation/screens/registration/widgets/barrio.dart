@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:vigor/2_application/registration/patient_registration_bloc/patient_registration_controller.dart';
 
 class BarrioWidget extends StatelessWidget {
   const BarrioWidget({
@@ -37,8 +36,7 @@ class BarrioWidget extends StatelessWidget {
                 hint: Text(
                   displayBarrio.tr,
                 ),
-                onChanged: (newVal) =>
-                    setBarrio(PatientRegistrationEvent.barrio(newVal))),
+                onChanged: (newVal) => setBarrio(newVal)),
           ),
           Text(
             dispBarrioError.tr,

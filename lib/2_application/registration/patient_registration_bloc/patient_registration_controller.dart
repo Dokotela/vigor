@@ -10,7 +10,6 @@ import 'package:vigor/3_domain/validators.dart';
 import 'package:vigor/3_domain/const/const.dart';
 
 part 'patient_registration_controller.freezed.dart';
-part 'patient_registration_event.dart';
 part 'patient_registration_state.dart';
 
 class PatientRegistrationController extends GetxController {
@@ -23,8 +22,8 @@ class PatientRegistrationController extends GetxController {
   @override
   void onInit() {
     Get.arguments == null
-        ? state.value = PatientRegistrationState.initialNew()
-        : state.value = PatientRegistrationState.initialPatient(Get.arguments);
+        ? state.value = PatientRegistrationState.initial()
+        : state.value = PatientRegistrationState.update(Get.arguments);
     familyName.text = state.value.patient?.name == null
         ? ''
         : state.value.patient.name[0].family == null
@@ -50,54 +49,61 @@ class PatientRegistrationController extends GetxController {
   String get barrioError => state.value.barrioError;
 
   // EVENTS
-  void event(PatientRegistrationEvent newEvent) {
-    if (newEvent is _Gender) {
-      state.value = state.value.copyWith(gender: newEvent.gender);
-    } else if (newEvent is _BirthDate) {
-      state.value = state.value.copyWith(birthDate: newEvent.birthDate);
-    } else if (newEvent is _Barrio) {
-      state.value = state.value.copyWith(barrio: newEvent.barrio);
-    } else if (newEvent is _Register) {
-      if (isValidRegistrationName(familyName.text) &&
-          isValidRegistrationName(givenName.text) &&
-          isValidRegistrationBirthDate(birthDate) &&
-          isValidRegistrationBarrio(barrio)) {
-        final Patient newPatient = state.value.patient == null
-            ? Patient(
-                resourceType: 'Patient',
-                name: [
-                  HumanName(family: familyName.text, given: [givenName.text])
-                ],
-                birthDate: Date(birthDate),
-                address: [Address(district: barrio)],
-                gender: gender == 'female'
-                    ? PatientGender.female
-                    : PatientGender.male)
-            : state.value.patient.copyWith(
-                name: [
-                  HumanName(family: familyName.text, given: [givenName.text])
-                ],
-                birthDate: Date(birthDate),
-                address: [Address(district: barrio)],
-                gender: gender == 'female'
-                    ? PatientGender.female
-                    : PatientGender.male);
-        Get.to(ContactRegistration(), arguments: newPatient);
-      } else {
-        state.value = state.value.copyWith(
-            familyNameError: !isValidRegistrationName(familyName.text)
-                ? 'Enter family name'
-                : state.value.familyNameError,
-            givenNameError: !isValidRegistrationName(givenName.text)
-                ? 'Enter other names'
-                : state.value.givenNameError,
-            birthDateError: !isValidRegistrationBirthDate(state.value.birthDate)
-                ? 'Cannot be future date'
-                : '',
-            barrioError: !isValidRegistrationBarrio(barrio)
-                ? 'Please select neighborhood'
-                : '');
-      }
+  void genderEvent(String gender) {
+    state.value = state.value.copyWith(gender: gender);
+    update();
+  }
+
+  void birthDateEvent(DateTime birthDate) {
+    state.value = state.value.copyWith(birthDate: birthDate);
+    update();
+  }
+
+  void barrioEvent(String barrio) {
+    state.value = state.value.copyWith(barrio: barrio);
+    update();
+  }
+
+  void registerEvent() {
+    if (isValidRegistrationName(familyName.text) &&
+        isValidRegistrationName(givenName.text) &&
+        isValidRegistrationBirthDate(birthDate) &&
+        isValidRegistrationBarrio(barrio)) {
+      final Patient newPatient = state.value.patient == null
+          ? Patient(
+              resourceType: 'Patient',
+              name: [
+                HumanName(family: familyName.text, given: [givenName.text])
+              ],
+              birthDate: Date(birthDate),
+              address: [Address(district: barrio)],
+              gender: gender == 'female'
+                  ? PatientGender.female
+                  : PatientGender.male)
+          : state.value.patient.copyWith(
+              name: [
+                HumanName(family: familyName.text, given: [givenName.text])
+              ],
+              birthDate: Date(birthDate),
+              address: [Address(district: barrio)],
+              gender: gender == 'female'
+                  ? PatientGender.female
+                  : PatientGender.male);
+      Get.to(ContactRegistration(), arguments: newPatient);
+    } else {
+      state.value = state.value.copyWith(
+          familyNameError: !isValidRegistrationName(familyName.text)
+              ? 'Enter family name'
+              : state.value.familyNameError,
+          givenNameError: !isValidRegistrationName(givenName.text)
+              ? 'Enter other names'
+              : state.value.givenNameError,
+          birthDateError: !isValidRegistrationBirthDate(state.value.birthDate)
+              ? 'Cannot be future date'
+              : '',
+          barrioError: !isValidRegistrationBarrio(barrio)
+              ? 'Please select neighborhood'
+              : '');
     }
     update();
   }
