@@ -7,7 +7,11 @@ abstract class PatientSearchState with _$PatientSearchState {
     List<Resource> activePatientList,
   }) = _PatientSearchState;
 
-  factory PatientSearchState.initial(List<Resource> patientList) =>
+  factory PatientSearchState.initial() => const PatientSearchState(
+        fullPatientList: <Resource>[],
+        activePatientList: <Resource>[],
+      );
+  factory PatientSearchState.loadList(List<Resource> patientList) =>
       PatientSearchState(
         fullPatientList: patientList,
         activePatientList: patientList,

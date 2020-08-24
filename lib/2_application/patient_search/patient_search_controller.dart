@@ -13,12 +13,12 @@ part 'patient_search_state.dart';
 class PatientSearchController extends GetxController {
   // PROPERTIES
   final searchName = TextEditingController();
-  final state = const PatientSearchState().obs;
+  final state = PatientSearchState.initial().obs;
 
   // INIT
   @override
   Future onInit() async {
-    state.value = PatientSearchState.initial(
+    state.value = PatientSearchState.loadList(
         (await IFhirDb().returnListOfSingleResourceType('Patient'))
             .fold((l) => null, (r) => r.toList()));
     super.onInit();
