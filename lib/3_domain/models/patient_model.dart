@@ -52,7 +52,7 @@ class PatientModel {
     }
   }
 
-  String name() => lastCommaGivenName(patient.name[0]);
+  String name() => lastCommaGivenName(patient);
   String id() => patient.id.toString();
   String sex() => basicEnumToString(patient.gender);
   String birthDate() => simpleDate(patient.birthDate);

@@ -7,10 +7,12 @@ import 'i_fhir_db.dart';
 
 class IFhirServer {
   IFhirServer();
-  static const server = 'https://r4immunizationtesting.aidbox.app';
+  // static const server = 'https://r4immunizationtesting.aidbox.app';
+  static const server = 'http://10.0.2.2:8080/hapi-fhir-jpaserver';
 
   Future syncWithServer() async {
-    final headers = await _getAuthorizationToken();
+    // final headers = await _getAuthorizationToken();
+    final headers = {'Content-type': 'application/json'};
 
     final patientBundles = await _getPatients(headers);
     await saveToDb(patientBundles);
@@ -54,7 +56,7 @@ class IFhirServer {
           .firstWhere((link) => link.relation == 'next')
           .url
           .toString();
-      bundleList.add(await getBundle('$server/fhir$newSearchUrl', headers));
+      bundleList.add(await getBundle('$newSearchUrl', headers));
     }
     return bundleList;
   }
@@ -69,11 +71,15 @@ class IFhirServer {
           .firstWhere((link) => link.relation == 'next')
           .url
           .toString();
-      bundleList.add(await getBundle('$server/fhir$newSearchUrl', headers));
+      bundleList.add(await getBundle('$newSearchUrl', headers));
     }
     return bundleList;
   }
 
-  Future<Bundle> getBundle(String url, Map<String, String> headers) async =>
-      Bundle.fromJson(json.decode((await get(url, headers: headers)).body));
+  Future<Bundle> getBundle(String url, Map<String, String> headers) async {
+    print(url);
+    final localUrl = url.replaceAll('localhost', '10.0.2.2');
+    final result = await get(localUrl, headers: headers);
+    return Bundle.fromJson(json.decode(result.body));
+  }
 }

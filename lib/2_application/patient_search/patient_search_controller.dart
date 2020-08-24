@@ -25,8 +25,8 @@ class PatientSearchController extends GetxController {
   }
 
   // GETTER FUNCTIONS
-  String patientName(int index) => lastCommaGivenName(
-      (state.value.activePatientList[index] as Patient).name[0]);
+  String patientName(int index) =>
+      lastCommaGivenName(state.value.activePatientList[index] as Patient);
   String patientDob(int index) =>
       simpleDate((state.value.activePatientList[index] as Patient).birthDate);
   String patientBarrio(int index) =>
@@ -42,8 +42,7 @@ class PatientSearchController extends GetxController {
     var patientList = <Resource>[];
     if (searchName.text.length >= 2) {
       for (final patient in state.value.fullPatientList) {
-        if (lastCommaGivenName((patient as Patient).name[0])
-            .contains(searchName.text)) {
+        if (lastCommaGivenName(patient as Patient).contains(searchName.text)) {
           patientList.add(patient);
         }
       }
@@ -62,12 +61,9 @@ class PatientSearchController extends GetxController {
   }
 
   List<Patient> _sortPatientsByName(List<Resource> patientList) {
-    patientList.sort((a, b) => lastCommaGivenName(
-            (a as Patient).name == null ? null : (a as Patient).name[0])
+    patientList.sort((a, b) => lastCommaGivenName(a as Patient)
         .toLowerCase()
-        .compareTo(lastCommaGivenName(
-                (b as Patient).name == null ? null : (b as Patient).name[0])
-            .toLowerCase()));
+        .compareTo(lastCommaGivenName(b as Patient).toLowerCase()));
     return patientList;
   }
 
