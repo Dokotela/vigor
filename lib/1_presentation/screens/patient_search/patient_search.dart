@@ -92,9 +92,9 @@ class PatientSearch extends StatelessWidget {
                     width: Get.width / 3,
                     child: RaisedButton(
                       onPressed: () => controller.sortCurrentPatientsByName(),
-                      child: const Text(
-                        'Name',
-                        style: TextStyle(fontSize: 14.0),
+                      child: Text(
+                        'Name'.tr,
+                        style: const TextStyle(fontSize: 14.0),
                       ),
                     ),
                   ),
@@ -102,9 +102,9 @@ class PatientSearch extends StatelessWidget {
                     width: Get.width / 5,
                     child: RaisedButton(
                       onPressed: () => controller.sortPatientsByBirthDate(),
-                      child: const Text(
-                        'Birthdate',
-                        style: TextStyle(fontSize: 14.0),
+                      child: Text(
+                        'Birthdate'.tr,
+                        style: const TextStyle(fontSize: 14.0),
                       ),
                     ),
                   ),
@@ -112,22 +112,27 @@ class PatientSearch extends StatelessWidget {
                     width: Get.width / 5,
                     child: RaisedButton(
                       onPressed: () => controller.sortPatientsByBarrio(),
-                      child: const Text(
-                        'Neighborhood',
-                        style: TextStyle(fontSize: 14.0),
+                      child: Text(
+                        'Neighborhood'.tr,
+                        style: const TextStyle(fontSize: 14.0),
                       ),
                     ),
                   ),
                 ],
               ),
+              const Divider(
+                thickness: 4.0,
+                color: Colors.transparent,
+              ),
               Expanded(
                 child: Obx(
                   () => ListView.separated(
                     itemCount: controller.currentListLength,
-                    separatorBuilder: (context, index) =>
-                        const Divider(color: Colors.white),
-                    itemBuilder: (context, index) => RaisedButton(
-                      color: Colors.transparent,
+                    separatorBuilder: (context, index) => Divider(
+                      thickness: 1.0,
+                      color: Colors.blue[900],
+                    ),
+                    itemBuilder: (context, index) => FlatButton(
                       onPressed: () => controller.selectPatient(index),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,

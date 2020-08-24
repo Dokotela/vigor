@@ -87,6 +87,7 @@ class PatientSearchController extends GetxController {
         .compareTo((b as Patient)?.address == null
             ? ''
             : (b as Patient).address[0]?.district ?? ''));
+
     state.value = state.value.copyWith(activePatientList: patientList);
     update();
   }
