@@ -15,10 +15,12 @@ class _$PatientImmunizationsStateTearOff {
 // ignore: unused_element
   _PatientImmunizationsState call(
       {PatientModel patient,
+      List<ImmunizationEvaluation> immEvals,
       List<ImmunizationRecommendationRecommendation> fullImmRecs,
       List<ImmunizationRecommendationRecommendation> displayImmRecs}) {
     return _PatientImmunizationsState(
       patient: patient,
+      immEvals: immEvals,
       fullImmRecs: fullImmRecs,
       displayImmRecs: displayImmRecs,
     );
@@ -30,6 +32,7 @@ const $PatientImmunizationsState = _$PatientImmunizationsStateTearOff();
 
 mixin _$PatientImmunizationsState {
   PatientModel get patient;
+  List<ImmunizationEvaluation> get immEvals;
   List<ImmunizationRecommendationRecommendation> get fullImmRecs;
   List<ImmunizationRecommendationRecommendation> get displayImmRecs;
 
@@ -42,6 +45,7 @@ abstract class $PatientImmunizationsStateCopyWith<$Res> {
       _$PatientImmunizationsStateCopyWithImpl<$Res>;
   $Res call(
       {PatientModel patient,
+      List<ImmunizationEvaluation> immEvals,
       List<ImmunizationRecommendationRecommendation> fullImmRecs,
       List<ImmunizationRecommendationRecommendation> displayImmRecs});
 }
@@ -57,11 +61,15 @@ class _$PatientImmunizationsStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object patient = freezed,
+    Object immEvals = freezed,
     Object fullImmRecs = freezed,
     Object displayImmRecs = freezed,
   }) {
     return _then(_value.copyWith(
       patient: patient == freezed ? _value.patient : patient as PatientModel,
+      immEvals: immEvals == freezed
+          ? _value.immEvals
+          : immEvals as List<ImmunizationEvaluation>,
       fullImmRecs: fullImmRecs == freezed
           ? _value.fullImmRecs
           : fullImmRecs as List<ImmunizationRecommendationRecommendation>,
@@ -80,6 +88,7 @@ abstract class _$PatientImmunizationsStateCopyWith<$Res>
   @override
   $Res call(
       {PatientModel patient,
+      List<ImmunizationEvaluation> immEvals,
       List<ImmunizationRecommendationRecommendation> fullImmRecs,
       List<ImmunizationRecommendationRecommendation> displayImmRecs});
 }
@@ -98,11 +107,15 @@ class __$PatientImmunizationsStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object patient = freezed,
+    Object immEvals = freezed,
     Object fullImmRecs = freezed,
     Object displayImmRecs = freezed,
   }) {
     return _then(_PatientImmunizationsState(
       patient: patient == freezed ? _value.patient : patient as PatientModel,
+      immEvals: immEvals == freezed
+          ? _value.immEvals
+          : immEvals as List<ImmunizationEvaluation>,
       fullImmRecs: fullImmRecs == freezed
           ? _value.fullImmRecs
           : fullImmRecs as List<ImmunizationRecommendationRecommendation>,
@@ -115,10 +128,12 @@ class __$PatientImmunizationsStateCopyWithImpl<$Res>
 
 class _$_PatientImmunizationsState implements _PatientImmunizationsState {
   const _$_PatientImmunizationsState(
-      {this.patient, this.fullImmRecs, this.displayImmRecs});
+      {this.patient, this.immEvals, this.fullImmRecs, this.displayImmRecs});
 
   @override
   final PatientModel patient;
+  @override
+  final List<ImmunizationEvaluation> immEvals;
   @override
   final List<ImmunizationRecommendationRecommendation> fullImmRecs;
   @override
@@ -126,7 +141,7 @@ class _$_PatientImmunizationsState implements _PatientImmunizationsState {
 
   @override
   String toString() {
-    return 'PatientImmunizationsState(patient: $patient, fullImmRecs: $fullImmRecs, displayImmRecs: $displayImmRecs)';
+    return 'PatientImmunizationsState(patient: $patient, immEvals: $immEvals, fullImmRecs: $fullImmRecs, displayImmRecs: $displayImmRecs)';
   }
 
   @override
@@ -136,6 +151,9 @@ class _$_PatientImmunizationsState implements _PatientImmunizationsState {
             (identical(other.patient, patient) ||
                 const DeepCollectionEquality()
                     .equals(other.patient, patient)) &&
+            (identical(other.immEvals, immEvals) ||
+                const DeepCollectionEquality()
+                    .equals(other.immEvals, immEvals)) &&
             (identical(other.fullImmRecs, fullImmRecs) ||
                 const DeepCollectionEquality()
                     .equals(other.fullImmRecs, fullImmRecs)) &&
@@ -148,6 +166,7 @@ class _$_PatientImmunizationsState implements _PatientImmunizationsState {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(patient) ^
+      const DeepCollectionEquality().hash(immEvals) ^
       const DeepCollectionEquality().hash(fullImmRecs) ^
       const DeepCollectionEquality().hash(displayImmRecs);
 
@@ -161,12 +180,15 @@ class _$_PatientImmunizationsState implements _PatientImmunizationsState {
 abstract class _PatientImmunizationsState implements PatientImmunizationsState {
   const factory _PatientImmunizationsState(
           {PatientModel patient,
+          List<ImmunizationEvaluation> immEvals,
           List<ImmunizationRecommendationRecommendation> fullImmRecs,
           List<ImmunizationRecommendationRecommendation> displayImmRecs}) =
       _$_PatientImmunizationsState;
 
   @override
   PatientModel get patient;
+  @override
+  List<ImmunizationEvaluation> get immEvals;
   @override
   List<ImmunizationRecommendationRecommendation> get fullImmRecs;
   @override

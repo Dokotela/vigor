@@ -25,7 +25,10 @@ class PatientImmunizationsController extends GetxController {
     displayRecs.removeWhere(
         (rec) => rec.forecastStatus.coding[0].code != Code('notComplete'));
     state.value = state.value.copyWith(
-        fullImmRecs: fullRecs, displayImmRecs: sortRecsByDate(displayRecs));
+      immEvals: patient.immEvaluations,
+      fullImmRecs: fullRecs,
+      displayImmRecs: sortRecsByDate(displayRecs),
+    );
 
     super.onInit();
   }

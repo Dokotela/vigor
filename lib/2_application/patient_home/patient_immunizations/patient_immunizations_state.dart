@@ -4,6 +4,7 @@ part of 'patient_immunizations_controller.dart';
 abstract class PatientImmunizationsState with _$PatientImmunizationsState {
   const factory PatientImmunizationsState({
     PatientModel patient,
+    List<ImmunizationEvaluation> immEvals,
     List<ImmunizationRecommendationRecommendation> fullImmRecs,
     List<ImmunizationRecommendationRecommendation> displayImmRecs,
   }) = _PatientImmunizationsState;
@@ -11,6 +12,7 @@ abstract class PatientImmunizationsState with _$PatientImmunizationsState {
   factory PatientImmunizationsState.initial(PatientModel patient) =>
       PatientImmunizationsState(
         patient: patient,
+        immEvals: [],
         fullImmRecs: [],
         displayImmRecs: [],
       );

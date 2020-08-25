@@ -819,7 +819,7 @@ packages:
     description:
       path: "."
       ref: vigor
-      resolved-ref: "3dee032e85d25c73863d196b554b84e3b9aa85c7"
+      resolved-ref: "6c52c50a7ec8e9ddbed0e436fc3d8ee5f26eef20"
       url: "git://github.com/Dokotela/vax_cast.git"
     source: git
     version: "0.0.0"

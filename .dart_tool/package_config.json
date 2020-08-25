@@ -705,7 +705,7 @@
     },
     {
       "name": "vax_cast",
-      "rootUri": "file:///home/grey/.pub-cache/git/vax_cast-3dee032e85d25c73863d196b554b84e3b9aa85c7/",
+      "rootUri": "file:///home/grey/.pub-cache/git/vax_cast-6c52c50a7ec8e9ddbed0e436fc3d8ee5f26eef20/",
       "packageUri": "lib/",
       "languageVersion": "2.7"
     },
@@ -752,7 +752,7 @@
       "languageVersion": "2.8"
     }
   ],
-  "generated": "2020-08-22T14:48:02.573482Z",
+  "generated": "2020-08-25T17:55:03.537509Z",
   "generator": "pub",
   "generatorVersion": "2.9.1"
 }
