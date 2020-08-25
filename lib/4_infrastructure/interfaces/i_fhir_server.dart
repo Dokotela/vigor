@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:fhir/fhir_r4.dart';
 import 'package:http/http.dart';
+import 'package:vigor/4_infrastructure/fhir_db/resource_dao.dart';
 
 import 'i_fhir_db.dart';
 
@@ -12,13 +13,37 @@ class IFhirServer {
 
   Future syncWithServer() async {
     // final headers = await _getAuthorizationToken();
-    final headers = {'Content-type': 'application/json'};
+    final headers = {'Content-type': 'application/fhir+json'};
+
+    await uploadAllResources(headers);
 
     final patientBundles = await _getPatients(headers);
     await saveToDb(patientBundles);
 
     final vaccineBundles = await _getImmunizations(headers);
     await saveToDb(vaccineBundles);
+  }
+
+  Future uploadAllResources(Map<String, dynamic> headers) async {
+    final allResources = await ResourceDao().getAllResources();
+    final resourceBundle = Bundle(
+      resourceType: 'Bundle',
+      type: BundleType.transaction,
+      entry: [],
+    );
+    for (final resource in allResources) {
+      resourceBundle.entry.add(
+        BundleEntry(
+          resource: resource,
+          request: BundleRequest(
+            method: BundleRequestMethod.post,
+            url: FhirUri(resource.resourceType),
+          ),
+        ),
+      );
+    }
+    final result = await post('$server/fhir',
+        headers: headers, body: jsonEncode(resourceBundle.toJson()));
   }
 
   Future saveToDb(List<Bundle> bundleList) async {
