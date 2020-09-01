@@ -45,7 +45,11 @@ class PatientImmunizations extends StatelessWidget {
                     separatorBuilder: (context, index) =>
                         const Divider(color: Colors.white),
                     itemBuilder: (context, index) => Container(
-                      color: controller.colorByDate(index),
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: controller.colorByDate(index),
+                        ),
+                      ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [

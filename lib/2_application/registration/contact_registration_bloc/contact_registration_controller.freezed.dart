@@ -449,3 +449,715 @@ abstract class _ContactRegistrationState implements ContactRegistrationState {
   @override
   _$ContactRegistrationStateCopyWith<_ContactRegistrationState> get copyWith;
 }
+
+class _$ContactRegistrationEventTearOff {
+  const _$ContactRegistrationEventTearOff();
+
+// ignore: unused_element
+  _Barrio1 barrio1(String barrio1) {
+    return _Barrio1(
+      barrio1,
+    );
+  }
+
+// ignore: unused_element
+  _Relation1 relation1(String relation1) {
+    return _Relation1(
+      relation1,
+    );
+  }
+
+// ignore: unused_element
+  _Barrio2 barrio2(String barrio2) {
+    return _Barrio2(
+      barrio2,
+    );
+  }
+
+// ignore: unused_element
+  _Relation2 relation2(String relation2) {
+    return _Relation2(
+      relation2,
+    );
+  }
+
+// ignore: unused_element
+  _Register register() {
+    return const _Register();
+  }
+}
+
+// ignore: unused_element
+const $ContactRegistrationEvent = _$ContactRegistrationEventTearOff();
+
+mixin _$ContactRegistrationEvent {
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result barrio1(String barrio1),
+    @required Result relation1(String relation1),
+    @required Result barrio2(String barrio2),
+    @required Result relation2(String relation2),
+    @required Result register(),
+  });
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result barrio1(String barrio1),
+    Result relation1(String relation1),
+    Result barrio2(String barrio2),
+    Result relation2(String relation2),
+    Result register(),
+    @required Result orElse(),
+  });
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result barrio1(_Barrio1 value),
+    @required Result relation1(_Relation1 value),
+    @required Result barrio2(_Barrio2 value),
+    @required Result relation2(_Relation2 value),
+    @required Result register(_Register value),
+  });
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result barrio1(_Barrio1 value),
+    Result relation1(_Relation1 value),
+    Result barrio2(_Barrio2 value),
+    Result relation2(_Relation2 value),
+    Result register(_Register value),
+    @required Result orElse(),
+  });
+}
+
+abstract class $ContactRegistrationEventCopyWith<$Res> {
+  factory $ContactRegistrationEventCopyWith(ContactRegistrationEvent value,
+          $Res Function(ContactRegistrationEvent) then) =
+      _$ContactRegistrationEventCopyWithImpl<$Res>;
+}
+
+class _$ContactRegistrationEventCopyWithImpl<$Res>
+    implements $ContactRegistrationEventCopyWith<$Res> {
+  _$ContactRegistrationEventCopyWithImpl(this._value, this._then);
+
+  final ContactRegistrationEvent _value;
+  // ignore: unused_field
+  final $Res Function(ContactRegistrationEvent) _then;
+}
+
+abstract class _$Barrio1CopyWith<$Res> {
+  factory _$Barrio1CopyWith(_Barrio1 value, $Res Function(_Barrio1) then) =
+      __$Barrio1CopyWithImpl<$Res>;
+  $Res call({String barrio1});
+}
+
+class __$Barrio1CopyWithImpl<$Res>
+    extends _$ContactRegistrationEventCopyWithImpl<$Res>
+    implements _$Barrio1CopyWith<$Res> {
+  __$Barrio1CopyWithImpl(_Barrio1 _value, $Res Function(_Barrio1) _then)
+      : super(_value, (v) => _then(v as _Barrio1));
+
+  @override
+  _Barrio1 get _value => super._value as _Barrio1;
+
+  @override
+  $Res call({
+    Object barrio1 = freezed,
+  }) {
+    return _then(_Barrio1(
+      barrio1 == freezed ? _value.barrio1 : barrio1 as String,
+    ));
+  }
+}
+
+class _$_Barrio1 implements _Barrio1 {
+  const _$_Barrio1(this.barrio1) : assert(barrio1 != null);
+
+  @override
+  final String barrio1;
+
+  @override
+  String toString() {
+    return 'ContactRegistrationEvent.barrio1(barrio1: $barrio1)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _Barrio1 &&
+            (identical(other.barrio1, barrio1) ||
+                const DeepCollectionEquality().equals(other.barrio1, barrio1)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(barrio1);
+
+  @override
+  _$Barrio1CopyWith<_Barrio1> get copyWith =>
+      __$Barrio1CopyWithImpl<_Barrio1>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result barrio1(String barrio1),
+    @required Result relation1(String relation1),
+    @required Result barrio2(String barrio2),
+    @required Result relation2(String relation2),
+    @required Result register(),
+  }) {
+    assert(barrio1 != null);
+    assert(relation1 != null);
+    assert(barrio2 != null);
+    assert(relation2 != null);
+    assert(register != null);
+    return barrio1(this.barrio1);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result barrio1(String barrio1),
+    Result relation1(String relation1),
+    Result barrio2(String barrio2),
+    Result relation2(String relation2),
+    Result register(),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (barrio1 != null) {
+      return barrio1(this.barrio1);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result barrio1(_Barrio1 value),
+    @required Result relation1(_Relation1 value),
+    @required Result barrio2(_Barrio2 value),
+    @required Result relation2(_Relation2 value),
+    @required Result register(_Register value),
+  }) {
+    assert(barrio1 != null);
+    assert(relation1 != null);
+    assert(barrio2 != null);
+    assert(relation2 != null);
+    assert(register != null);
+    return barrio1(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result barrio1(_Barrio1 value),
+    Result relation1(_Relation1 value),
+    Result barrio2(_Barrio2 value),
+    Result relation2(_Relation2 value),
+    Result register(_Register value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (barrio1 != null) {
+      return barrio1(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Barrio1 implements ContactRegistrationEvent {
+  const factory _Barrio1(String barrio1) = _$_Barrio1;
+
+  String get barrio1;
+  _$Barrio1CopyWith<_Barrio1> get copyWith;
+}
+
+abstract class _$Relation1CopyWith<$Res> {
+  factory _$Relation1CopyWith(
+          _Relation1 value, $Res Function(_Relation1) then) =
+      __$Relation1CopyWithImpl<$Res>;
+  $Res call({String relation1});
+}
+
+class __$Relation1CopyWithImpl<$Res>
+    extends _$ContactRegistrationEventCopyWithImpl<$Res>
+    implements _$Relation1CopyWith<$Res> {
+  __$Relation1CopyWithImpl(_Relation1 _value, $Res Function(_Relation1) _then)
+      : super(_value, (v) => _then(v as _Relation1));
+
+  @override
+  _Relation1 get _value => super._value as _Relation1;
+
+  @override
+  $Res call({
+    Object relation1 = freezed,
+  }) {
+    return _then(_Relation1(
+      relation1 == freezed ? _value.relation1 : relation1 as String,
+    ));
+  }
+}
+
+class _$_Relation1 implements _Relation1 {
+  const _$_Relation1(this.relation1) : assert(relation1 != null);
+
+  @override
+  final String relation1;
+
+  @override
+  String toString() {
+    return 'ContactRegistrationEvent.relation1(relation1: $relation1)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _Relation1 &&
+            (identical(other.relation1, relation1) ||
+                const DeepCollectionEquality()
+                    .equals(other.relation1, relation1)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(relation1);
+
+  @override
+  _$Relation1CopyWith<_Relation1> get copyWith =>
+      __$Relation1CopyWithImpl<_Relation1>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result barrio1(String barrio1),
+    @required Result relation1(String relation1),
+    @required Result barrio2(String barrio2),
+    @required Result relation2(String relation2),
+    @required Result register(),
+  }) {
+    assert(barrio1 != null);
+    assert(relation1 != null);
+    assert(barrio2 != null);
+    assert(relation2 != null);
+    assert(register != null);
+    return relation1(this.relation1);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result barrio1(String barrio1),
+    Result relation1(String relation1),
+    Result barrio2(String barrio2),
+    Result relation2(String relation2),
+    Result register(),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (relation1 != null) {
+      return relation1(this.relation1);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result barrio1(_Barrio1 value),
+    @required Result relation1(_Relation1 value),
+    @required Result barrio2(_Barrio2 value),
+    @required Result relation2(_Relation2 value),
+    @required Result register(_Register value),
+  }) {
+    assert(barrio1 != null);
+    assert(relation1 != null);
+    assert(barrio2 != null);
+    assert(relation2 != null);
+    assert(register != null);
+    return relation1(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result barrio1(_Barrio1 value),
+    Result relation1(_Relation1 value),
+    Result barrio2(_Barrio2 value),
+    Result relation2(_Relation2 value),
+    Result register(_Register value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (relation1 != null) {
+      return relation1(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Relation1 implements ContactRegistrationEvent {
+  const factory _Relation1(String relation1) = _$_Relation1;
+
+  String get relation1;
+  _$Relation1CopyWith<_Relation1> get copyWith;
+}
+
+abstract class _$Barrio2CopyWith<$Res> {
+  factory _$Barrio2CopyWith(_Barrio2 value, $Res Function(_Barrio2) then) =
+      __$Barrio2CopyWithImpl<$Res>;
+  $Res call({String barrio2});
+}
+
+class __$Barrio2CopyWithImpl<$Res>
+    extends _$ContactRegistrationEventCopyWithImpl<$Res>
+    implements _$Barrio2CopyWith<$Res> {
+  __$Barrio2CopyWithImpl(_Barrio2 _value, $Res Function(_Barrio2) _then)
+      : super(_value, (v) => _then(v as _Barrio2));
+
+  @override
+  _Barrio2 get _value => super._value as _Barrio2;
+
+  @override
+  $Res call({
+    Object barrio2 = freezed,
+  }) {
+    return _then(_Barrio2(
+      barrio2 == freezed ? _value.barrio2 : barrio2 as String,
+    ));
+  }
+}
+
+class _$_Barrio2 implements _Barrio2 {
+  const _$_Barrio2(this.barrio2) : assert(barrio2 != null);
+
+  @override
+  final String barrio2;
+
+  @override
+  String toString() {
+    return 'ContactRegistrationEvent.barrio2(barrio2: $barrio2)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _Barrio2 &&
+            (identical(other.barrio2, barrio2) ||
+                const DeepCollectionEquality().equals(other.barrio2, barrio2)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(barrio2);
+
+  @override
+  _$Barrio2CopyWith<_Barrio2> get copyWith =>
+      __$Barrio2CopyWithImpl<_Barrio2>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result barrio1(String barrio1),
+    @required Result relation1(String relation1),
+    @required Result barrio2(String barrio2),
+    @required Result relation2(String relation2),
+    @required Result register(),
+  }) {
+    assert(barrio1 != null);
+    assert(relation1 != null);
+    assert(barrio2 != null);
+    assert(relation2 != null);
+    assert(register != null);
+    return barrio2(this.barrio2);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result barrio1(String barrio1),
+    Result relation1(String relation1),
+    Result barrio2(String barrio2),
+    Result relation2(String relation2),
+    Result register(),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (barrio2 != null) {
+      return barrio2(this.barrio2);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result barrio1(_Barrio1 value),
+    @required Result relation1(_Relation1 value),
+    @required Result barrio2(_Barrio2 value),
+    @required Result relation2(_Relation2 value),
+    @required Result register(_Register value),
+  }) {
+    assert(barrio1 != null);
+    assert(relation1 != null);
+    assert(barrio2 != null);
+    assert(relation2 != null);
+    assert(register != null);
+    return barrio2(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result barrio1(_Barrio1 value),
+    Result relation1(_Relation1 value),
+    Result barrio2(_Barrio2 value),
+    Result relation2(_Relation2 value),
+    Result register(_Register value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (barrio2 != null) {
+      return barrio2(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Barrio2 implements ContactRegistrationEvent {
+  const factory _Barrio2(String barrio2) = _$_Barrio2;
+
+  String get barrio2;
+  _$Barrio2CopyWith<_Barrio2> get copyWith;
+}
+
+abstract class _$Relation2CopyWith<$Res> {
+  factory _$Relation2CopyWith(
+          _Relation2 value, $Res Function(_Relation2) then) =
+      __$Relation2CopyWithImpl<$Res>;
+  $Res call({String relation2});
+}
+
+class __$Relation2CopyWithImpl<$Res>
+    extends _$ContactRegistrationEventCopyWithImpl<$Res>
+    implements _$Relation2CopyWith<$Res> {
+  __$Relation2CopyWithImpl(_Relation2 _value, $Res Function(_Relation2) _then)
+      : super(_value, (v) => _then(v as _Relation2));
+
+  @override
+  _Relation2 get _value => super._value as _Relation2;
+
+  @override
+  $Res call({
+    Object relation2 = freezed,
+  }) {
+    return _then(_Relation2(
+      relation2 == freezed ? _value.relation2 : relation2 as String,
+    ));
+  }
+}
+
+class _$_Relation2 implements _Relation2 {
+  const _$_Relation2(this.relation2) : assert(relation2 != null);
+
+  @override
+  final String relation2;
+
+  @override
+  String toString() {
+    return 'ContactRegistrationEvent.relation2(relation2: $relation2)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _Relation2 &&
+            (identical(other.relation2, relation2) ||
+                const DeepCollectionEquality()
+                    .equals(other.relation2, relation2)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(relation2);
+
+  @override
+  _$Relation2CopyWith<_Relation2> get copyWith =>
+      __$Relation2CopyWithImpl<_Relation2>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result barrio1(String barrio1),
+    @required Result relation1(String relation1),
+    @required Result barrio2(String barrio2),
+    @required Result relation2(String relation2),
+    @required Result register(),
+  }) {
+    assert(barrio1 != null);
+    assert(relation1 != null);
+    assert(barrio2 != null);
+    assert(relation2 != null);
+    assert(register != null);
+    return relation2(this.relation2);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result barrio1(String barrio1),
+    Result relation1(String relation1),
+    Result barrio2(String barrio2),
+    Result relation2(String relation2),
+    Result register(),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (relation2 != null) {
+      return relation2(this.relation2);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result barrio1(_Barrio1 value),
+    @required Result relation1(_Relation1 value),
+    @required Result barrio2(_Barrio2 value),
+    @required Result relation2(_Relation2 value),
+    @required Result register(_Register value),
+  }) {
+    assert(barrio1 != null);
+    assert(relation1 != null);
+    assert(barrio2 != null);
+    assert(relation2 != null);
+    assert(register != null);
+    return relation2(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result barrio1(_Barrio1 value),
+    Result relation1(_Relation1 value),
+    Result barrio2(_Barrio2 value),
+    Result relation2(_Relation2 value),
+    Result register(_Register value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (relation2 != null) {
+      return relation2(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Relation2 implements ContactRegistrationEvent {
+  const factory _Relation2(String relation2) = _$_Relation2;
+
+  String get relation2;
+  _$Relation2CopyWith<_Relation2> get copyWith;
+}
+
+abstract class _$RegisterCopyWith<$Res> {
+  factory _$RegisterCopyWith(_Register value, $Res Function(_Register) then) =
+      __$RegisterCopyWithImpl<$Res>;
+}
+
+class __$RegisterCopyWithImpl<$Res>
+    extends _$ContactRegistrationEventCopyWithImpl<$Res>
+    implements _$RegisterCopyWith<$Res> {
+  __$RegisterCopyWithImpl(_Register _value, $Res Function(_Register) _then)
+      : super(_value, (v) => _then(v as _Register));
+
+  @override
+  _Register get _value => super._value as _Register;
+}
+
+class _$_Register implements _Register {
+  const _$_Register();
+
+  @override
+  String toString() {
+    return 'ContactRegistrationEvent.register()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is _Register);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result barrio1(String barrio1),
+    @required Result relation1(String relation1),
+    @required Result barrio2(String barrio2),
+    @required Result relation2(String relation2),
+    @required Result register(),
+  }) {
+    assert(barrio1 != null);
+    assert(relation1 != null);
+    assert(barrio2 != null);
+    assert(relation2 != null);
+    assert(register != null);
+    return register();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result barrio1(String barrio1),
+    Result relation1(String relation1),
+    Result barrio2(String barrio2),
+    Result relation2(String relation2),
+    Result register(),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (register != null) {
+      return register();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result barrio1(_Barrio1 value),
+    @required Result relation1(_Relation1 value),
+    @required Result barrio2(_Barrio2 value),
+    @required Result relation2(_Relation2 value),
+    @required Result register(_Register value),
+  }) {
+    assert(barrio1 != null);
+    assert(relation1 != null);
+    assert(barrio2 != null);
+    assert(relation2 != null);
+    assert(register != null);
+    return register(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result barrio1(_Barrio1 value),
+    Result relation1(_Relation1 value),
+    Result barrio2(_Barrio2 value),
+    Result relation2(_Relation2 value),
+    Result register(_Register value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (register != null) {
+      return register(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Register implements ContactRegistrationEvent {
+  const factory _Register() = _$_Register;
+}

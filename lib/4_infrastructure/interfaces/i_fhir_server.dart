@@ -15,7 +15,7 @@ class IFhirServer {
     // final headers = await _getAuthorizationToken();
     final headers = {'Content-type': 'application/fhir+json'};
 
-    await uploadAllResources(headers);
+    // await uploadAllResources(headers);
 
     final patientBundles = await _getPatients(headers);
     await saveToDb(patientBundles);

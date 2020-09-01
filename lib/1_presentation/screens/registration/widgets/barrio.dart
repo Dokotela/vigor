@@ -8,12 +8,14 @@ class BarrioWidget extends StatelessWidget {
     @required this.displayBarrio,
     @required this.setBarrio,
     @required this.dispBarrioError,
+    this.eventType,
   });
 
   final List<String> barriosList;
   final String displayBarrio;
   final Function setBarrio;
   final String dispBarrioError;
+  final dynamic eventType;
 
   @override
   Widget build(Object context) {

@@ -11,6 +11,7 @@ import 'package:vigor/3_domain/validators.dart';
 
 part 'contact_registration_controller.freezed.dart';
 part 'contact_registration_state.dart';
+part 'contact_registration_event.dart';
 
 class ContactRegistrationController extends GetxController {
   // PROPERTIES
@@ -49,6 +50,9 @@ class ContactRegistrationController extends GetxController {
   List<String> get relationList => state.value.relationList;
 
   // EVENTS
+  // void event(ContactRegistrationEvent event) {
+  //   event.map
+  // }
   void barrio1Event(String barrio1) {
     state.value = state.value.copyWith(barrio1: barrio1);
     update();
