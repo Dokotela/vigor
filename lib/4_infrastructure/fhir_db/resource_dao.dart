@@ -17,6 +17,8 @@ class ResourceDao {
   Future<Database> get _db async => FhirDb.instance.database;
   void _addResourceType(String resourceType) =>
       FhirDb.instance.addResourceType(resourceType);
+  void _removeResourceType(String resourceType) =>
+      FhirDb.instance.removeResourceType(resourceType);
   List<String> _getResourceTypes() => FhirDb.instance.getResourceTypes();
 
   //checks if the resource already has an id, all resources downloaded should
@@ -77,12 +79,26 @@ class ResourceDao {
     await _resourceStore.delete(await _db, finder: finder);
   }
 
-  Future deleteAll({String resourceType, Resource resource}) async {
+  Future deleteSingleType({String resourceType, Resource resource}) async {
     final type = resourceType ?? resource?.resourceType ?? '';
     if (type.isNotEmpty) {
-      _setStoreType(type);
-      await _resourceStore.delete(await _db);
+      await _deleteType(type);
     }
+  }
+
+  Future deleteAllResources() async {
+    final resourceTypes = _getResourceTypes();
+    print(resourceTypes);
+    resourceTypes.forEach(_deleteType);
+    // for (var type in resourceTypes) {
+    //   await _deleteType(type);
+    // }
+  }
+
+  Future _deleteType(String resourceType) async {
+    _setStoreType(resourceType);
+    await _resourceStore.delete(await _db);
+    _removeResourceType(resourceType);
   }
 
   Future<List<Resource>> getAllResources() async {

@@ -57,9 +57,7 @@ class HomeScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(16.0),
                   ),
                   onPressed: () async {
-                    await ResourceDao().deleteAll(resourceType: 'Patient');
-                    await ResourceDao().deleteAll(resourceType: 'Immunization');
-                    await ResourceDao().deleteAll(resourceType: '_history');
+                    await ResourceDao().deleteAllResources();
                   },
                   child: Text('Delete Db'.tr),
                 ),

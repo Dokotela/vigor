@@ -18,6 +18,12 @@ class FhirDb {
     }
   }
 
+  void removeResourceType(String resourceType) {
+    if (resourceTypes.contains(resourceType)) {
+      resourceTypes.removeWhere((type) => type == resourceType);
+    }
+  }
+
   List<String> getResourceTypes() => resourceTypes;
 
   Completer<Database> _dbOpenCompleter;
