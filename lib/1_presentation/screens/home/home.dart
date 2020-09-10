@@ -1,3 +1,4 @@
+import 'package:fhir/fhir_r4.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:vigor/1_presentation/screens/patient_search/patient_search.dart';
@@ -57,7 +58,14 @@ class HomeScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(16.0),
                   ),
                   onPressed: () async {
-                    await ResourceDao().deleteAllResources();
+                    // await ResourceDao().deleteAllResources();
+                    List<Resource> resources =
+                        await ResourceDao().getAllResources();
+                    for (final resource in resources) {
+                      print(resource.toJson());
+                    }
+                    await ResourceDao()
+                        .deleteSingleType(resourceType: '_history');
                   },
                   child: Text('Delete Db'.tr),
                 ),

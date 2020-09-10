@@ -10,7 +10,7 @@ class FhirDb {
   FhirDb._();
   static final FhirDb _db = FhirDb._();
   static FhirDb get instance => _db;
-  final List<String> resourceTypes = [];
+  List<String> resourceTypes = [];
 
   void addResourceType(String resourceType) {
     if (!resourceTypes.contains(resourceType)) {
@@ -18,11 +18,8 @@ class FhirDb {
     }
   }
 
-  void removeResourceType(String resourceType) {
-    if (resourceTypes.contains(resourceType)) {
-      resourceTypes.removeWhere((type) => type == resourceType);
-    }
-  }
+  void removeResourceTypes(List<String> typesToDelete) =>
+      resourceTypes.removeWhere((type) => typesToDelete.contains(type));
 
   List<String> getResourceTypes() => resourceTypes;
 

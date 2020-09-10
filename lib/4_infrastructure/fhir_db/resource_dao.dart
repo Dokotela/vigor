@@ -9,16 +9,14 @@ class ResourceDao {
 
   StoreRef<String, Map<String, dynamic>> _resourceStore;
 
-  void _setStoreType(String resourceType) {
-    _addResourceType(resourceType);
-    _resourceStore = stringMapStoreFactory.store(resourceType);
-  }
+  void _setStoreType(String resourceType) =>
+      _resourceStore = stringMapStoreFactory.store(resourceType);
 
   Future<Database> get _db async => FhirDb.instance.database;
   void _addResourceType(String resourceType) =>
       FhirDb.instance.addResourceType(resourceType);
-  void _removeResourceType(String resourceType) =>
-      FhirDb.instance.removeResourceType(resourceType);
+  void _removeResourceTypes(List<String> types) =>
+      FhirDb.instance.removeResourceTypes(types);
   List<String> _getResourceTypes() => FhirDb.instance.getResourceTypes();
 
   //checks if the resource already has an id, all resources downloaded should
@@ -27,6 +25,7 @@ class ResourceDao {
   Future<Resource> save(Resource resource) async {
     if (resource != null && resource?.resourceType != null) {
       _setStoreType(resource.resourceType);
+      _addResourceType(resource.resourceType);
       return resource.id == null
           ? await _insert(resource)
           : await _update(resource);
@@ -55,8 +54,10 @@ class ResourceDao {
       return resource;
     } else {
       _setStoreType('_history');
+      _addResourceType('_history');
       await _resourceStore.add(await _db, oldResource);
       _setStoreType(resource.resourceType);
+      _addResourceType(resource.resourceType);
       final oldMeta =
           Meta.fromJson(oldResource['meta'] as Map<String, dynamic>);
       final _newResource = _newVersion(resource, oldMeta: oldMeta);
@@ -73,32 +74,28 @@ class ResourceDao {
     return _search(finder);
   }
 
-  Future delete(Resource resource) async {
-    _setStoreType(resource.resourceType);
-    final finder = Finder(filter: Filter.equals('id', '${resource.id}'));
-    await _resourceStore.delete(await _db, finder: finder);
-  }
-
   Future deleteSingleType({String resourceType, Resource resource}) async {
     final type = resourceType ?? resource?.resourceType ?? '';
     if (type.isNotEmpty) {
-      await _deleteType(type);
+      _setStoreType(resourceType);
+      await _resourceStore.delete(await _db);
+      _removeResourceTypes([resourceType]);
     }
   }
 
   Future deleteAllResources() async {
     final resourceTypes = _getResourceTypes();
-    print(resourceTypes);
-    resourceTypes.forEach(_deleteType);
-    // for (var type in resourceTypes) {
-    //   await _deleteType(type);
-    // }
+    for (var type in resourceTypes) {
+      _setStoreType(type);
+      await _resourceStore.delete(await _db);
+    }
+    _removeResourceTypes(resourceTypes);
   }
 
-  Future _deleteType(String resourceType) async {
-    _setStoreType(resourceType);
-    await _resourceStore.delete(await _db);
-    _removeResourceType(resourceType);
+  Future delete(Resource resource) async {
+    _setStoreType(resource.resourceType);
+    final finder = Finder(filter: Filter.equals('id', '${resource.id}'));
+    await _resourceStore.delete(await _db, finder: finder);
   }
 
   Future<List<Resource>> getAllResources() async {
