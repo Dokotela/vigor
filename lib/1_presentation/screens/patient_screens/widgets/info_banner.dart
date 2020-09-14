@@ -26,12 +26,12 @@ class InfoBannerWidget extends StatelessWidget {
       children: <Widget>[
         _spacerV(),
         Row(children: [
-          _flexTwo('${"Name".tr}: ', lastCommaFirstName),
+          _flexTwo('${"Name".tr}:  ', lastCommaFirstName),
           _flexOne(relativeAge)
         ]),
         _spacerV(),
         Row(children: [
-          _flexTwo('${"Birthdate".tr}: ', birthDate),
+          _flexTwo('${"Birthdate".tr}:  ', birthDate),
           _flexOne(sex)
         ]),
         _spacerV(),
@@ -46,24 +46,24 @@ class InfoBannerWidget extends StatelessWidget {
       alignment: Alignment.centerRight,
       child: SizedBox(
         width: Get.width * 2 / 3,
-        child: Row(
-          children: [
-            const Text('ID:    '),
-            _sharedText(id, textAlign: TextAlign.right)
-          ],
-        ),
+        child: _flexTwo('ID:  ', id),
       ),
     );
   }
 
-  // Two flexible widgets within a row
+  // Two widgets within a row, left is not flexible
   Widget _flexTwo(String text1, String text2) {
     return Flexible(
       flex: 4,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.end,
         children: [
-          _sharedText(text1),
+          Text(
+            text1,
+            style: localTextStyle,
+            textAlign: TextAlign.left,
+          ),
           _sharedText(text2, textAlign: TextAlign.right)
         ],
       ),
