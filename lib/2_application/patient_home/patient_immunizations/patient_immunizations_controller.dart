@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:get/get.dart';
 import 'package:vigor/1_presentation/screens/screens.dart';
+import 'package:vigor/2_application/patient_home/shared/relative_age.dart';
 import 'package:vigor/3_domain/formatters/simple_date.dart';
 import 'package:vigor/3_domain/models/patient_model.dart';
 
@@ -38,6 +39,8 @@ class PatientImmunizationsController extends GetxController {
   String id() => state.value.patient.id();
   String sex() => state.value.patient.sex();
   String birthDate() => state.value.patient.birthDate();
+  String relativeAge() => sharedRelativeAge(state.value.patient.birthDate());
+
   int get numberOfRecommendations => state.value.displayImmRecs.length;
   Color colorByDate(int index) {
     final dueDate = DateTime.parse(state

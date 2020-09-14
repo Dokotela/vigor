@@ -8,6 +8,8 @@ abstract class ThemeClass {
         brightness: Brightness.light,
         primaryColor: AppColors.primaryLight,
         accentColor: AppColors.secondaryLight,
+        backgroundColor: AppColors.backgroundLight,
+        scaffoldBackgroundColor: AppColors.backgroundLight,
         disabledColor: AppColors.disabledLight,
         textTheme: MyTextTheme.buildLightTextTheme(),
       );
@@ -18,6 +20,8 @@ abstract class ThemeClass {
         primaryColor: AppColors.primaryDark,
         accentColor: AppColors.secondaryDark,
         disabledColor: AppColors.disabledDark,
+        backgroundColor: AppColors.backgroundDark,
+        scaffoldBackgroundColor: AppColors.backgroundDark,
         textTheme: MyTextTheme.buildDarkTextTheme(),
         inputDecorationTheme: InputDecorationTheme(
           border: OutlineInputBorder(
@@ -37,11 +41,13 @@ class AppColors {
   static const Color primaryLight = Color(0xFF2D9CDB);
   static const Color secondaryLight = Color(0xFFF2C94C);
   static const Color disabledLight = Colors.white38;
+  static const Color backgroundLight = Colors.white;
   static const Color textDark = Color(0xFF000000);
   // Dark theme  // todo: replace
   static const Color primaryDark = Color(0xFF2D9CDB);
   static const Color secondaryDark = Color(0xFFF2C94C);
   static const Color disabledDark = Colors.white38;
+  static const Color backgroundDark = Colors.white;
   static const Color textLight = gray6;
   // Multi-theme
   static const Color gray5 = Color(0xFFE0E0E0);

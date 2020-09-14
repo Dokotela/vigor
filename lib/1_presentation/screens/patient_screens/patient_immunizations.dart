@@ -31,6 +31,7 @@ class PatientImmunizations extends StatelessWidget {
                   lastCommaFirstName: controller.name(),
                   id: controller.id(),
                   birthDate: controller.birthDate(),
+                  relativeAge: controller.relativeAge(),
                   sex: controller.sex(),
                 ),
               ),

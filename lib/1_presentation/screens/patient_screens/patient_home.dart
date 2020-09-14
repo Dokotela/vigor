@@ -23,14 +23,15 @@ class PatientHome extends StatelessWidget {
               children: <Widget>[
                 FlatButton(
                   color: Colors.white,
-                  shape: RoundedRectangleBorder(
-                    side: const BorderSide(color: Colors.white),
-                    borderRadius: BorderRadius.circular(16.0),
-                  ),
+                  // shape: RoundedRectangleBorder(
+                  //   side: const BorderSide(color: Colors.white),
+                  //   borderRadius: BorderRadius.circular(16.0),
+                  // ),
                   onPressed: () => controller.editPatient(),
                   child: InfoBannerWidget(
                     lastCommaFirstName: controller.name(),
                     id: controller.id(),
+                    relativeAge: controller.relativeAge(),
                     birthDate: controller.birthDate(),
                     sex: controller.sex(),
                   ),

@@ -4,6 +4,8 @@ import 'package:vigor/1_presentation/screens/screens.dart';
 import 'package:vigor/3_domain/models/patient_model.dart';
 import 'package:vigor/4_infrastructure/interfaces/i_fhir_db.dart';
 
+import 'shared/relative_age.dart';
+
 class PatientParasiteController extends GetxController {
   // PROPERTIES
   final PatientModel patient = PatientModel(patient: Get.arguments);
@@ -27,6 +29,7 @@ class PatientParasiteController extends GetxController {
   String id() => patient.id();
   String sex() => patient.sex();
   String birthDate() => patient.birthDate();
+  String relativeAge() => sharedRelativeAge(patient.birthDate());
 
   // FUNCTIONS
   void editPatient() =>
