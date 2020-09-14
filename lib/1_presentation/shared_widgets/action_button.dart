@@ -4,32 +4,25 @@ import 'package:get/get.dart';
 
 class ActionButton extends StatelessWidget {
   const ActionButton({
-    this.fileName,
-    this.buttonText,
-    this.nextPage,
-    this.getFunc,
+    @required this.buttonText,
+    this.onPressed,
   });
 
-  final String fileName;
   final String buttonText;
-  static const String imgDir = 'assets/img/';
-  final Widget nextPage;
-  final Function getFunc;
+  final Function onPressed;
 
   @override
   Widget build(BuildContext context) {
-    return FlatButton(
-      onPressed: () => nextPage == null ? getFunc() : getFunc(nextPage),
-      child: Column(
-        children: <Widget>[
-          ClipRRect(
-            child: Image.asset('$imgDir$fileName.png', height: 100, width: 100),
-          ),
-          Text(
-            buttonText,
-            style: Get.theme.textTheme.bodyText1,
-          ),
-        ],
+    return ButtonTheme.fromButtonThemeData(
+      data: Get.theme.buttonTheme.copyWith(minWidth: Get.width / 2),
+      child: RaisedButton(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+        onPressed: onPressed,
+        padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 16),
+        child: Text(
+          buttonText,
+          style: Get.theme.textTheme.headline4,
+        ),
       ),
     );
   }

@@ -6,16 +6,18 @@ abstract class ThemeClass {
   static ThemeData light() => ThemeData(
         visualDensity: VisualDensity.adaptivePlatformDensity,
         brightness: Brightness.light,
-        primaryColor: Colors.blue[300],
-        accentColor: Colors.red[600],
+        primaryColor: AppColors.primaryLight,
+        accentColor: AppColors.secondaryLight,
+        disabledColor: AppColors.disabledLight,
         textTheme: MyTextTheme.buildLightTextTheme(),
       );
 
   static ThemeData dark() => ThemeData(
         visualDensity: VisualDensity.adaptivePlatformDensity,
         brightness: Brightness.dark,
-        primaryColor: Colors.blue[900],
-        accentColor: Colors.red[600],
+        primaryColor: AppColors.primaryDark,
+        accentColor: AppColors.secondaryDark,
+        disabledColor: AppColors.disabledDark,
         textTheme: MyTextTheme.buildDarkTextTheme(),
         inputDecorationTheme: InputDecorationTheme(
           border: OutlineInputBorder(
@@ -30,31 +32,18 @@ abstract class ThemeClass {
       );
 }
 
-//     // Customize Themes
-//     appBarTheme: _buildAppBarTheme(textTheme),
-//     iconTheme: iconTheme,
-//     primaryIconTheme: iconTheme.copyWith(color: _AppColors.primary),
-
-//     // Misc
-//     buttonTheme: ButtonThemeData(
-//       buttonColor: _AppColors.primary,
-//       textTheme: ButtonTextTheme.primary,
-//     ),
-//     unselectedWidgetColor: _AppColors.disabledWidget,
-//     textTheme: textTheme.apply(
-//       displayColor: _AppColors.primary,
-//       bodyColor: _AppColors.primary,
-//     ),
-//   );
-// }
-
-// /// ******* Custom Themes *******
-// AppBarTheme _buildAppBarTheme(TextTheme textTheme) {
-//   return AppBarTheme(
-//     textTheme: textTheme.apply(displayColor: _AppColors.primary),
-//   );
-// }
-
-// IconThemeData _buildIconTheme() {
-//   return const IconThemeData(color: _AppColors.primary, size: 32);
-// }
+class AppColors {
+  // Light theme
+  static const Color primaryLight = Color(0xFF2D9CDB);
+  static const Color secondaryLight = Color(0xFFF2C94C);
+  static const Color disabledLight = Colors.white38;
+  static const Color textDark = Color(0xFF000000);
+  // Dark theme  // todo: replace
+  static const Color primaryDark = Color(0xFF2D9CDB);
+  static const Color secondaryDark = Color(0xFFF2C94C);
+  static const Color disabledDark = Colors.white38;
+  static const Color textLight = gray6;
+  // Multi-theme
+  static const Color gray5 = Color(0xFFE0E0E0);
+  static const Color gray6 = Color(0xFFF2F2F2);
+}

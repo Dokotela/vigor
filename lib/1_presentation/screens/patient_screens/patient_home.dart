@@ -38,16 +38,16 @@ class PatientHome extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    ActionButton(
-                        fileName: 'deworming',
-                        buttonText: 'Deworming'.tr,
-                        nextPage: null,
-                        getFunc: controller.parasiteScreen),
-                    ActionButton(
-                        fileName: 'vaccine',
-                        buttonText: 'Immunization'.tr,
-                        nextPage: null,
-                        getFunc: controller.immunizationScreen),
+                    // ActionButton(
+                    //     fileName: 'deworming',
+                    //     buttonText: 'Deworming'.tr,
+                    //     nextPage: null,
+                    //     getFunc: controller.parasiteScreen),
+                    // ActionButton(
+                    //     fileName: 'vaccine',
+                    //     buttonText: 'Immunization'.tr,
+                    //     nextPage: null,
+                    //     getFunc: controller.immunizationScreen),
                   ],
                 ),
               ],

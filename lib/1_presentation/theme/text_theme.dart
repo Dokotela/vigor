@@ -7,8 +7,8 @@ abstract class MyTextTheme {
   static TextTheme _buildTextTheme(Color textColor) => TextTheme(
         headline1: _getTextStyle(96, FontWeight.w100, textColor),
         headline2: _getTextStyle(60, FontWeight.w100, textColor),
-        headline3: _getTextStyle(32, FontWeight.w800, textColor),
-        headline4: _getTextStyle(24, FontWeight.w800, textColor),
+        headline3: _getTextStyle(40, FontWeight.w600, textColor), // app title
+        headline4: _getTextStyle(28, FontWeight.w400, textColor), // buttons
         headline5: _getTextStyle(20, FontWeight.w400, textColor),
         headline6: _getTextStyle(22, FontWeight.bold, textColor),
         subtitle1: _getTextStyle(20, FontWeight.bold, textColor),
