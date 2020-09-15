@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:get/get.dart';
 import 'package:vigor/1_presentation/screens/screens.dart';
+import 'package:vigor/2_application/patient_home/patient_home_controller.dart';
 import 'package:vigor/2_application/patient_home/shared/relative_age.dart';
 import 'package:vigor/3_domain/formatters/simple_date.dart';
 import 'package:vigor/3_domain/models/patient_model.dart';
@@ -12,7 +13,12 @@ part 'patient_immunizations_state.dart';
 
 class PatientImmunizationsController extends GetxController {
   // PROPERTIES
-  final state = PatientImmunizationsState.initial(Get.arguments).obs;
+  final state = PatientImmunizationsState.initial(
+          Get.find<PatientHomeController>().patient)
+      .obs;
+  // final state = PatientImmunizationsState.initial(Get.arguments).obs;
+  // removed this line so that arguments don't need to be passed via the router
+  // probably better to use services for the data model
 
   // INIT
   @override

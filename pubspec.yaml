@@ -35,6 +35,8 @@ dependencies:
       ref: vigor
   timeago: ^2.0.27
   auto_size_text: ^2.1.0
+  photo_view: ^0.10.2
+  flutter_svg: ^0.19.0
 
 dev_dependencies:
   flutter_test:
@@ -48,3 +50,4 @@ flutter:
   assets:
     - assets/img/flags/
     - assets/img/
+    - assets/svg/

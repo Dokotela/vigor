@@ -53,6 +53,6 @@ class PatientHomeController extends GetxController
   void parasiteScreen() =>
       Get.to(PatientParasite(), arguments: patient.patient);
 
-  void immunizationScreen() =>
-      Get.to(PatientImmunizations(), arguments: patient);
+  // void immunizationScreen() =>
+  //     Get.to(PatientImmunizations(), arguments: patient);
 }
