@@ -37,7 +37,7 @@ class BirthDateWidget extends StatelessWidget {
                 children: [
                   Text(
                     '${"Date of Birth".tr} $displayBirthDate',
-                    style: Get.theme.textTheme.headline5,
+                    style: Get.theme.textTheme.headline6,
                     textAlign: TextAlign.center,
                   ),
                   Text(

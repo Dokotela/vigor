@@ -20,7 +20,7 @@ dependencies:
   path_provider: ^1.6.11
   intl: ^0.16.1
   google_fonts: ^1.1.0
-  get: ^3.4.2
+  get: ^3.10.2
   translator: ^0.1.5
   freezed_annotation: ^0.11.0+1
   dartz: ^0.9.1

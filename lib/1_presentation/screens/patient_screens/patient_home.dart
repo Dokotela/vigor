@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:vigor/1_presentation/shared_widgets/shared_widgets.dart';
+import 'package:vigor/1_presentation/theme/theme.dart';
 import 'package:vigor/2_application/patient_home/patient_home_controller.dart';
 
 import 'widgets/info_banner.dart';
@@ -16,8 +17,7 @@ class PatientHome extends StatelessWidget {
           title: Text('title'.tr),
         ),
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
+          children: [
             FlatButton(
               color: Colors.white,
               onPressed: () => controller.editPatient(),
@@ -29,20 +29,21 @@ class PatientHome extends StatelessWidget {
                 sex: controller.sex(),
               ),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                // ActionButton(
-                //     fileName: 'deworming',
-                //     buttonText: 'Deworming'.tr,
-                //     nextPage: null,
-                //     getFunc: controller.parasiteScreen),
-                // ActionButton(
-                //     fileName: 'vaccine',
-                //     buttonText: 'Immunization'.tr,
-                //     nextPage: null,
-                //     getFunc: controller.immunizationScreen),
+            TabBar(
+              controller: controller.tabController,
+              tabs: <Widget>[
+                ...controller.tabsList().map((e) => _buildTab(e)),
               ],
+            ),
+            Expanded(
+              child: TabBarView(
+                controller: controller.tabController,
+                children: const <Widget>[
+                  Tab(text: 'Growth Curve Screen'),
+                  Tab(text: 'Milestones Screen'),
+                  Tab(text: 'Vaccines Screen'),
+                ],
+              ),
             ),
           ],
         ),
@@ -50,4 +51,18 @@ class PatientHome extends StatelessWidget {
       ),
     );
   }
+}
+
+Widget _buildTab(String text) {
+  return Container(
+    height: 52,
+    width: double.infinity,
+    decoration: BoxDecoration(border: Border.all(color: AppColors.gray5)),
+    child: Center(
+      child: Text(
+        text,
+        textAlign: TextAlign.center,
+      ),
+    ),
+  );
 }

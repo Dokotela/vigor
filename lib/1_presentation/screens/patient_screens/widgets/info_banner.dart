@@ -17,14 +17,13 @@ class InfoBannerWidget extends StatelessWidget {
   final String birthDate;
   final String relativeAge;
   final String sex;
-  static const localTextStyle = TextStyle(color: Colors.black);
 
   @override
   Widget build(Object context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        _spacerV(),
+        _spacerVL(),
         Row(children: [
           _flexTwo('${"Name".tr}:  ', lastCommaFirstName),
           _flexOne(relativeAge)
@@ -36,7 +35,7 @@ class InfoBannerWidget extends StatelessWidget {
         ]),
         _spacerV(),
         _buildBottomRow(),
-        _spacerV(),
+        _spacerVL(),
       ],
     );
   }
@@ -46,7 +45,18 @@ class InfoBannerWidget extends StatelessWidget {
       alignment: Alignment.centerRight,
       child: SizedBox(
         width: Get.width * 2 / 3,
-        child: _flexTwo('ID:  ', id),
+        child: Row(
+          children: [
+            Text('ID:  ', style: Get.textTheme.bodyText2),
+            Expanded(
+                child: AutoSizeText(
+              id,
+              maxLines: 1,
+              style: Get.textTheme.bodyText2,
+              textAlign: TextAlign.end,
+            )),
+          ],
+        ),
       ),
     );
   }
@@ -61,7 +71,7 @@ class InfoBannerWidget extends StatelessWidget {
         children: [
           Text(
             text1,
-            style: localTextStyle,
+            style: Get.textTheme.headline6,
             textAlign: TextAlign.left,
           ),
           _sharedText(text2, textAlign: TextAlign.right)
@@ -88,9 +98,10 @@ class InfoBannerWidget extends StatelessWidget {
           child: AutoSizeText(
         text,
         maxLines: 1,
-        style: localTextStyle,
+        style: Get.textTheme.headline6,
         textAlign: textAlign,
       ));
 
   Widget _spacerV() => const SizedBox(height: 8.0);
+  Widget _spacerVL() => const SizedBox(height: 20.0);
 }
