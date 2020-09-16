@@ -30,7 +30,6 @@ class FhirDb {
       _dbOpenCompleter = Completer();
       _openDatabase();
     }
-
     return _dbOpenCompleter.future;
   }
 
@@ -39,7 +38,6 @@ class FhirDb {
     final dbPath = join(appDocumentDir.path, 'fhir.db');
     final dbFactory = getDatabaseFactorySqflite(sqflite.databaseFactory);
     final database = await dbFactory.openDatabase(dbPath);
-
     _dbOpenCompleter.complete(database);
   }
 }

@@ -25,13 +25,14 @@ dependencies:
   dartz: ^0.9.1
   flutter_bloc: ^6.0.1
   http: ^0.12.2
-  fhir:
-    git:
-      url: git://github.com/Dokotela/fhir_r4.git
+  fhir: ^0.0.5
   vax_cast:
     git:
       url: git://github.com/Dokotela/vax_cast.git
       ref: vigor
+  fhir_db:
+    git:
+      url: git://github.com/Dokotela/fhir_db.git
 
 dev_dependencies:
   flutter_test:
