@@ -85,6 +85,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.3"
+  archive:
+    dependency: transitive
+    description:
+      name: archive
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.13"
   args:
     dependency: transitive
     description:
@@ -295,6 +302,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.0"
+  excel:
+    dependency: transitive
+    description:
+      name: excel
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.1.5"
   fake_async:
     dependency: transitive
     description:
@@ -305,10 +319,17 @@ packages:
   fhir:
     dependency: "direct main"
     description:
+      name: fhir
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.5"
+  fhir_db:
+    dependency: "direct main"
+    description:
       path: "."
       ref: HEAD
-      resolved-ref: b25ae85ce6c3babb8ec6bd7a31fd39221b924965
-      url: "git://github.com/Dokotela/fhir_r4.git"
+      resolved-ref: "71d6c65fb8b9b4d4222ab4462abc55fb7de2662e"
+      url: "git://github.com/Dokotela/fhir_db.git"
     source: git
     version: "0.0.1"
   file:
@@ -592,6 +613,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.9.0"
+  petitparser:
+    dependency: transitive
+    description:
+      name: petitparser
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.0.4"
   platform:
     dependency: transitive
     description:
@@ -663,19 +691,19 @@ packages:
     source: hosted
     version: "2.0.1"
   sembast:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: sembast
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.4.7+6"
   sembast_sqflite:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: sembast_sqflite
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.0"
+    version: "0.2.0+2"
   shelf:
     dependency: transitive
     description:
@@ -710,7 +738,7 @@ packages:
     source: hosted
     version: "1.7.0"
   sqflite:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: sqflite
       url: "https://pub.dartlang.org"
@@ -813,13 +841,13 @@ packages:
       name: uuid
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.2.0"
+    version: "2.2.2"
   vax_cast:
     dependency: "direct main"
     description:
       path: "."
       ref: vigor
-      resolved-ref: "6c52c50a7ec8e9ddbed0e436fc3d8ee5f26eef20"
+      resolved-ref: "0de97e9402537837cd8bf28d11c2790b929aa407"
       url: "git://github.com/Dokotela/vax_cast.git"
     source: git
     version: "0.0.0"
@@ -858,6 +886,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.1.0"
+  xml:
+    dependency: transitive
+    description:
+      name: xml
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "4.2.0"
   yaml:
     dependency: transitive
     description:

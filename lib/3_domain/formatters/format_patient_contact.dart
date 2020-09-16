@@ -1,4 +1,4 @@
-import 'package:fhir/fhir_r4.dart';
+import 'package:fhir/r4.dart';
 
 PatientContact formatPatientContact(
         String family, String given, String barrio, String relationship) =>

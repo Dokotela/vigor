@@ -1,4 +1,4 @@
-import 'package:fhir/fhir_r4.dart';
+import 'package:fhir/r4.dart';
 import 'package:get/get.dart';
 import 'package:vigor/3_domain/formatters/basic_enum_to_string.dart';
 import 'package:vigor/3_domain/formatters/patient_name.dart';

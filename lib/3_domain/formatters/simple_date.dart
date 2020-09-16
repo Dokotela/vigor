@@ -1,4 +1,4 @@
-import 'package:fhir/fhir_r4.dart';
+import 'package:fhir/r4.dart';
 
 String simpleDate(Date date) =>
     date == null ? '' : date.toString().substring(0, 10);

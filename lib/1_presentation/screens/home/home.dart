@@ -1,9 +1,9 @@
-import 'package:fhir/fhir_r4.dart';
+import 'package:fhir/r4.dart';
+import 'package:fhir_db/resource_dao.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:vigor/1_presentation/screens/patient_search/patient_search.dart';
 import 'package:vigor/1_presentation/shared_widgets/shared_widgets.dart';
-import 'package:vigor/4_infrastructure/fhir_db/resource_dao.dart';
 import 'package:vigor/4_infrastructure/interfaces/i_fhir_server.dart';
 
 import '../screens.dart';

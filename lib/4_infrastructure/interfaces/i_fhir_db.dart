@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
-import 'package:fhir/fhir_r4.dart';
+import 'package:fhir/r4.dart';
+import 'package:fhir_db/resource_dao.dart';
 import 'package:vigor/3_domain/models/db_failures.dart';
-import 'package:vigor/4_infrastructure/fhir_db/resource_dao.dart';
 
 class IFhirDb {
   IFhirDb();

@@ -1,7 +1,7 @@
 // import 'package:dartz/dartz.dart';
 // import 'package:freezed_annotation/freezed_annotation.dart';
 
-// import 'package:fhir/fhir_r4.dart';
+// import 'package:fhir/r4.dart';
 // import 'package:vigor/domain/registration/contact_registration/contact_registration_value_objects.dart';
 
 // import 'package:vigor/domain/registration/contact_registration/i_contact_registration_facade.dart';

@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:fhir/fhir_r4.dart';
+import 'package:fhir/r4.dart';
 import 'package:http/http.dart';
 
 Future main() async {

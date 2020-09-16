@@ -1,4 +1,4 @@
-import 'package:fhir/fhir_r4.dart';
+import 'package:fhir/r4.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:get/get.dart';

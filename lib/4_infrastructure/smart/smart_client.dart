@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:fhir/fhir_r4.dart';
+import 'package:fhir/r4.dart';
 import 'package:http/http.dart';
 
 class SmartClient {

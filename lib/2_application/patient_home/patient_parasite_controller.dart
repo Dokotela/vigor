@@ -1,4 +1,4 @@
-import 'package:fhir/fhir_r4.dart';
+import 'package:fhir/r4.dart';
 import 'package:get/get.dart';
 import 'package:vigor/1_presentation/screens/screens.dart';
 import 'package:vigor/3_domain/models/patient_model.dart';

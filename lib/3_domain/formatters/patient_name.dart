@@ -1,4 +1,4 @@
-import 'package:fhir/fhir_r4.dart';
+import 'package:fhir/r4.dart';
 
 String lastCommaGivenName(Patient patient) {
   if (patient.name == null) {

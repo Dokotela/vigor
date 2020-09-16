@@ -1,8 +1,8 @@
 import 'dart:convert';
 
-import 'package:fhir/fhir_r4.dart';
+import 'package:fhir/r4.dart';
+import 'package:fhir_db/resource_dao.dart';
 import 'package:http/http.dart';
-import 'package:vigor/4_infrastructure/fhir_db/resource_dao.dart';
 
 import 'i_fhir_db.dart';
 
