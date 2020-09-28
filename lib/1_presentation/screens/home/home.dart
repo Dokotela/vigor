@@ -66,6 +66,7 @@ class HomeScreen extends StatelessWidget {
                     }
                     await ResourceDao()
                         .deleteSingleType(resourceType: '_history');
+                    await ResourceDao().deleteAllResources();
                   },
                   child: Text('Delete Db'.tr),
                 ),
