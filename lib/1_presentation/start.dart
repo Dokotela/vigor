@@ -3,10 +3,10 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get.dart';
-import 'package:vigor/1_presentation/localization/localization.dart';
-import 'package:vigor/1_presentation/theme/theme.dart';
 
-import 'screens/login/login.dart';
+import '../home/home.dart';
+import 'localization/localization.dart';
+import 'theme/theme.dart';
 
 class Start extends StatelessWidget {
   @override
@@ -18,8 +18,8 @@ class Start extends StatelessWidget {
       localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,
       ],
-      title: 'Vigor',
-      home: LoginScreen(),
+      title: 'VaxCast',
+      home: HomeScreen(),
     );
   }
 }

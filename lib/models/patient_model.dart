@@ -1,15 +1,13 @@
 import 'package:fhir/r4.dart';
 import 'package:get/get.dart';
 import 'package:vigor/3_domain/formatters/basic_enum_to_string.dart';
-import 'package:vigor/3_domain/formatters/patient_name.dart';
 import 'package:vigor/3_domain/formatters/simple_date.dart';
-import 'package:vigor/4_infrastructure/interfaces/i_fhir_db.dart';
-import 'package:vigor/4_infrastructure/interfaces/i_vax_cast.dart';
+import 'package:vigor/interfaces/i_fhir_db.dart';
+import 'package:vigor/interfaces/i_vax_cast.dart';
 
 class PatientModel {
   PatientModel({
     this.patient,
-    this.medsAdministered,
     this.pastImmunizations,
     this.immEvaluations,
     this.recommendation,
@@ -52,8 +50,7 @@ class PatientModel {
     }
   }
 
-  String name() => lastCommaGivenName(patient);
-  String id() => patient.id.toString();
+  String name() => patient.name == null ? '' : patient.name[0].text;
   String sex() => basicEnumToString(patient.gender);
   String birthDate() => simpleDate(patient.birthDate);
 }

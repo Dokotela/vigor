@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:fhir/r4.dart';
 import 'package:fhir_db/resource_dao.dart';
-import 'package:vigor/3_domain/models/db_failures.dart';
+import 'package:vigor/models/db_failures.dart';
 
 class IFhirDb {
   IFhirDb();
@@ -33,12 +33,6 @@ class IFhirDb {
       String patientId) async {
     return await searchFunction(
         'Immunization', 'patient.reference', 'Patient/$patientId');
-  }
-
-  Future<Either<DbFailure, List<Resource>>> returnPatientPastDeworming(
-      String patientId) async {
-    return await searchFunction(
-        'MedicationAdministration', 'subject.reference', 'Patient/$patientId');
   }
 
   Future<Either<DbFailure, List<Resource>>> searchFunction(
