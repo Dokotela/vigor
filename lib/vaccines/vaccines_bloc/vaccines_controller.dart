@@ -2,7 +2,8 @@ import 'package:fhir/r4.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:get/get.dart';
-import 'package:vigor/interfaces/i_fhir_db.dart';
+import 'package:vigor/3_domain/formatters/simple_date.dart';
+import 'package:vigor/models/patient_model.dart';
 
 part 'vaccines_controller.freezed.dart';
 part 'vaccines_event.dart';
@@ -11,61 +12,84 @@ part 'vaccines_state.dart';
 class VaccinesController extends GetxController {
   // PROPERTIES
   final state = const VaccinesState().obs;
-  final nameController = TextEditingController();
 
   // INIT
   @override
   Future onInit() async {
     state.value = VaccinesState.initial();
-    final patientsFromDb =
-        (await IFhirDb().returnListOfSingleResourceType('Patient'))
-            .fold((l) => null, (r) => r.toList());
-    final curPatientList = <Patient>[];
-    for (var patient in patientsFromDb) {
-      curPatientList.add(patient as Patient);
-    }
-    final curNameList = <String>[];
-    for (var patient in curPatientList) {
-      if (patient.name != null) {
-        curNameList.add(patient?.name[0]?.text ?? '');
-      }
-    }
+    final PatientModel patient = PatientModel(patient: Get.arguments);
+    patient.loadImmunizations();
+    await patient.getImmunizationRecommendation();
+    final fullRecs = <ImmunizationRecommendationRecommendation>[];
+    patient.recommendation.recommendation.forEach(fullRecs.add);
+    final displayRecs = fullRecs;
+    displayRecs.removeWhere(
+        (rec) => rec.forecastStatus.coding[0].code != Code('notComplete'));
+    state.value = VaccinesState(
+      patient: patient,
+      immEvals: patient.immEvaluations,
+      fullImmRecs: fullRecs,
+      displayImmRecs: sortRecsByDate(displayRecs),
+    );
     super.onInit();
-    state.value = VaccinesState.loadNames(
-        nameList: curNameList, patientList: curPatientList);
   }
 
   // GETTERS
-  // String get name => state.value.
-  // List<String> get nameList => state.value.nameList;
-  // String get nameError => state.value.nameError;
-  // String get newNameError => state.value.newNameError;
+  String get name =>
+      state.value.patient == null ? '' : state.value.patient.name();
+  String get sex =>
+      state.value.patient == null ? '' : state.value.patient.sex();
+  String get birthDate =>
+      state.value.patient == null ? '' : state.value.patient.birthDate();
 
-  // EVENTS
-  // void event(VaccinesEvent newEvent) {
-  //   newEvent.map(
-  //     registerPatient: (event) async {
-  //       final curNameList = nameList.toList();
-  //       curNameList.add(event.newName);
-  //       final curPatientList = state.value.patientList;
-  //       final newPatient = await IFhirDb().save(
-  //         Patient(
-  //           resourceType: 'Patient',
-  //           name: [
-  //             HumanName(text: event.newName),
-  //           ],
-  //         ),
-  //       );
-  //       newPatient.fold(
-  //           (l) => Get.snackbar('Error saving new patient', '${l.error}'),
-  //           (r) => curPatientList.add(r as Patient));
-  //       state.value = VaccinesState.loadNames(
-  //           nameList: curNameList, patientList: curPatientList);
-  //       update();
-  //     },
-  //     choosePatient: (event) {
+  // GETTERS
+  int get numberOfRecommendations => state.value.displayImmRecs.length;
+  Color colorByDate(int index) {
+    final dueDate = DateTime.parse(state
+        .value.displayImmRecs[index].dateCriterion
+        .firstWhere((criteria) => criteria?.code?.coding != null
+            ? criteria.code.coding[0].code == Code('30980-7')
+            : false)
+        .value
+        .toString());
+    return dueDate.isBefore(DateTime.now())
+        ? Colors.red
+        : dueDate.isBefore(DateTime(DateTime.now().year, DateTime.now().month,
+                DateTime.now().day + 30))
+            ? Colors.yellow
+            : Colors.transparent;
+  }
 
-  //     },
-  //   );
-  // }
+  String vaccineType(int index) =>
+      state.value.displayImmRecs[index].vaccineCode != null
+          ? state.value.displayImmRecs[index].vaccineCode[0].coding != null
+              ? state
+                  .value.displayImmRecs[index].vaccineCode[0].coding[0].display
+              : ''
+          : '';
+  String vaccineDate(int index) =>
+      simpleFhirDateTime(state.value.displayImmRecs[index].dateCriterion
+          .firstWhere((criteria) => criteria?.code?.coding != null
+              ? criteria.code.coding[0].code == Code('30980-7')
+              : false)
+          .value);
+
+  // FUNCTIONS
+
+  List<ImmunizationRecommendationRecommendation> sortRecsByDate(
+      List<ImmunizationRecommendationRecommendation> recList) {
+    recList.sort((a, b) => DateTime.parse(a.dateCriterion
+            .firstWhere((criteria) => criteria?.code?.coding != null
+                ? criteria.code.coding[0].code == Code('30980-7')
+                : false)
+            .value
+            .toString())
+        .compareTo(DateTime.parse(b.dateCriterion
+            .firstWhere((criteria) => criteria?.code?.coding != null
+                ? criteria.code.coding[0].code == Code('30980-7')
+                : false)
+            .value
+            .toString())));
+    return recList;
+  }
 }

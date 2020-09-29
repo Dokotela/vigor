@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'info_banner.dart';
 import 'vaccines_bloc/vaccines_controller.dart';
 
-class PatientImmunizations extends StatelessWidget {
+class Vaccines extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<VaccinesController>(
@@ -19,19 +19,10 @@ class PatientImmunizations extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
-              FlatButton(
-                color: Colors.white,
-                shape: RoundedRectangleBorder(
-                  side: const BorderSide(color: Colors.white),
-                  borderRadius: BorderRadius.circular(16.0),
-                ),
-                onPressed: () => controller.editPatient(),
-                child: InfoBannerWidget(
-                  lastCommaFirstName: controller.name(),
-                  id: controller.id(),
-                  birthDate: controller.birthDate(),
-                  sex: controller.sex(),
-                ),
+              InfoBannerWidget(
+                name: controller.name,
+                birthDate: controller.birthDate,
+                sex: controller.sex,
               ),
               Divider(
                 thickness: 4.0,

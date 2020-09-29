@@ -4,14 +4,12 @@ import 'package:get/get.dart';
 
 class InfoBannerWidget extends StatelessWidget {
   const InfoBannerWidget({
-    @required this.lastCommaFirstName,
-    @required this.id,
+    @required this.name,
     @required this.birthDate,
     @required this.sex,
   });
 
-  final String lastCommaFirstName;
-  final String id;
+  final String name;
   final String birthDate;
   final String sex;
   static const localTextStyle = TextStyle(color: Colors.black);
@@ -21,8 +19,7 @@ class InfoBannerWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        Text('${"Name".tr}: $lastCommaFirstName', style: localTextStyle),
-        Text('${"ID"}: $id', style: localTextStyle),
+        Text('${"Name".tr}: $name', style: localTextStyle),
         Text('${"Birthdate".tr}: $birthDate', style: localTextStyle),
         Text('${"Sex".tr}: $sex', style: localTextStyle),
       ],

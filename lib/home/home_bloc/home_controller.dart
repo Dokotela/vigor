@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:get/get.dart';
 import 'package:vigor/interfaces/i_fhir_db.dart';
+import 'package:vigor/vaccines/vaccines.dart';
 
 part 'home_controller.freezed.dart';
 part 'home_event.dart';
@@ -27,7 +28,10 @@ class HomeController extends GetxController {
     final curNameList = <String>[];
     for (var patient in curPatientList) {
       if (patient.name != null) {
-        curNameList.add(patient?.name[0]?.text ?? '');
+        curNameList.add(patient?.name[0]?.text ??
+            patient?.name[0]?.family ??
+            patient?.name[0]?.given ??
+            '');
       }
     }
     super.onInit();
@@ -53,16 +57,25 @@ class HomeController extends GetxController {
             name: [
               HumanName(text: event.newName),
             ],
+            birthDate: Date(DateTime.now()),
           ),
         );
         newPatient.fold(
-            (l) => Get.snackbar('Error saving new patient', '${l.error}'),
-            (r) => curPatientList.add(r as Patient));
+          (l) => Get.snackbar('Error saving new patient', '${l.error}'),
+          (r) => curPatientList.add(r as Patient),
+        );
         state.value = HomeState.loadNames(
             nameList: curNameList, patientList: curPatientList);
         update();
       },
-      choosePatient: (event) {},
+      choosePatient: (event) {
+        print(event.name);
+        final patient = state.value.patientList.firstWhere((thisPatient) =>
+            thisPatient.name == null
+                ? false
+                : thisPatient.name[0].text == event.name);
+        Get.to(Vaccines(), arguments: patient);
+      },
     );
   }
 }

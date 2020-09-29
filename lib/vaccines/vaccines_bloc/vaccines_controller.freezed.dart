@@ -273,16 +273,16 @@ class _$VaccinesStateTearOff {
 // ignore: unused_element
   _VaccinesState call(
       {String name,
-      String nameError,
-      String newNameError,
-      List<String> nameList,
-      List<Patient> patientList}) {
+      PatientModel patient,
+      List<ImmunizationEvaluation> immEvals,
+      List<ImmunizationRecommendationRecommendation> fullImmRecs,
+      List<ImmunizationRecommendationRecommendation> displayImmRecs}) {
     return _VaccinesState(
       name: name,
-      nameError: nameError,
-      newNameError: newNameError,
-      nameList: nameList,
-      patientList: patientList,
+      patient: patient,
+      immEvals: immEvals,
+      fullImmRecs: fullImmRecs,
+      displayImmRecs: displayImmRecs,
     );
   }
 }
@@ -292,10 +292,10 @@ const $VaccinesState = _$VaccinesStateTearOff();
 
 mixin _$VaccinesState {
   String get name;
-  String get nameError;
-  String get newNameError;
-  List<String> get nameList;
-  List<Patient> get patientList;
+  PatientModel get patient;
+  List<ImmunizationEvaluation> get immEvals;
+  List<ImmunizationRecommendationRecommendation> get fullImmRecs;
+  List<ImmunizationRecommendationRecommendation> get displayImmRecs;
 
   $VaccinesStateCopyWith<VaccinesState> get copyWith;
 }
@@ -306,10 +306,10 @@ abstract class $VaccinesStateCopyWith<$Res> {
       _$VaccinesStateCopyWithImpl<$Res>;
   $Res call(
       {String name,
-      String nameError,
-      String newNameError,
-      List<String> nameList,
-      List<Patient> patientList});
+      PatientModel patient,
+      List<ImmunizationEvaluation> immEvals,
+      List<ImmunizationRecommendationRecommendation> fullImmRecs,
+      List<ImmunizationRecommendationRecommendation> displayImmRecs});
 }
 
 class _$VaccinesStateCopyWithImpl<$Res>
@@ -323,22 +323,23 @@ class _$VaccinesStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object name = freezed,
-    Object nameError = freezed,
-    Object newNameError = freezed,
-    Object nameList = freezed,
-    Object patientList = freezed,
+    Object patient = freezed,
+    Object immEvals = freezed,
+    Object fullImmRecs = freezed,
+    Object displayImmRecs = freezed,
   }) {
     return _then(_value.copyWith(
       name: name == freezed ? _value.name : name as String,
-      nameError: nameError == freezed ? _value.nameError : nameError as String,
-      newNameError: newNameError == freezed
-          ? _value.newNameError
-          : newNameError as String,
-      nameList:
-          nameList == freezed ? _value.nameList : nameList as List<String>,
-      patientList: patientList == freezed
-          ? _value.patientList
-          : patientList as List<Patient>,
+      patient: patient == freezed ? _value.patient : patient as PatientModel,
+      immEvals: immEvals == freezed
+          ? _value.immEvals
+          : immEvals as List<ImmunizationEvaluation>,
+      fullImmRecs: fullImmRecs == freezed
+          ? _value.fullImmRecs
+          : fullImmRecs as List<ImmunizationRecommendationRecommendation>,
+      displayImmRecs: displayImmRecs == freezed
+          ? _value.displayImmRecs
+          : displayImmRecs as List<ImmunizationRecommendationRecommendation>,
     ));
   }
 }
@@ -351,10 +352,10 @@ abstract class _$VaccinesStateCopyWith<$Res>
   @override
   $Res call(
       {String name,
-      String nameError,
-      String newNameError,
-      List<String> nameList,
-      List<Patient> patientList});
+      PatientModel patient,
+      List<ImmunizationEvaluation> immEvals,
+      List<ImmunizationRecommendationRecommendation> fullImmRecs,
+      List<ImmunizationRecommendationRecommendation> displayImmRecs});
 }
 
 class __$VaccinesStateCopyWithImpl<$Res>
@@ -370,22 +371,23 @@ class __$VaccinesStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object name = freezed,
-    Object nameError = freezed,
-    Object newNameError = freezed,
-    Object nameList = freezed,
-    Object patientList = freezed,
+    Object patient = freezed,
+    Object immEvals = freezed,
+    Object fullImmRecs = freezed,
+    Object displayImmRecs = freezed,
   }) {
     return _then(_VaccinesState(
       name: name == freezed ? _value.name : name as String,
-      nameError: nameError == freezed ? _value.nameError : nameError as String,
-      newNameError: newNameError == freezed
-          ? _value.newNameError
-          : newNameError as String,
-      nameList:
-          nameList == freezed ? _value.nameList : nameList as List<String>,
-      patientList: patientList == freezed
-          ? _value.patientList
-          : patientList as List<Patient>,
+      patient: patient == freezed ? _value.patient : patient as PatientModel,
+      immEvals: immEvals == freezed
+          ? _value.immEvals
+          : immEvals as List<ImmunizationEvaluation>,
+      fullImmRecs: fullImmRecs == freezed
+          ? _value.fullImmRecs
+          : fullImmRecs as List<ImmunizationRecommendationRecommendation>,
+      displayImmRecs: displayImmRecs == freezed
+          ? _value.displayImmRecs
+          : displayImmRecs as List<ImmunizationRecommendationRecommendation>,
     ));
   }
 }
@@ -393,25 +395,25 @@ class __$VaccinesStateCopyWithImpl<$Res>
 class _$_VaccinesState implements _VaccinesState {
   const _$_VaccinesState(
       {this.name,
-      this.nameError,
-      this.newNameError,
-      this.nameList,
-      this.patientList});
+      this.patient,
+      this.immEvals,
+      this.fullImmRecs,
+      this.displayImmRecs});
 
   @override
   final String name;
   @override
-  final String nameError;
+  final PatientModel patient;
   @override
-  final String newNameError;
+  final List<ImmunizationEvaluation> immEvals;
   @override
-  final List<String> nameList;
+  final List<ImmunizationRecommendationRecommendation> fullImmRecs;
   @override
-  final List<Patient> patientList;
+  final List<ImmunizationRecommendationRecommendation> displayImmRecs;
 
   @override
   String toString() {
-    return 'VaccinesState(name: $name, nameError: $nameError, newNameError: $newNameError, nameList: $nameList, patientList: $patientList)';
+    return 'VaccinesState(name: $name, patient: $patient, immEvals: $immEvals, fullImmRecs: $fullImmRecs, displayImmRecs: $displayImmRecs)';
   }
 
   @override
@@ -420,28 +422,28 @@ class _$_VaccinesState implements _VaccinesState {
         (other is _VaccinesState &&
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.nameError, nameError) ||
+            (identical(other.patient, patient) ||
                 const DeepCollectionEquality()
-                    .equals(other.nameError, nameError)) &&
-            (identical(other.newNameError, newNameError) ||
+                    .equals(other.patient, patient)) &&
+            (identical(other.immEvals, immEvals) ||
                 const DeepCollectionEquality()
-                    .equals(other.newNameError, newNameError)) &&
-            (identical(other.nameList, nameList) ||
+                    .equals(other.immEvals, immEvals)) &&
+            (identical(other.fullImmRecs, fullImmRecs) ||
                 const DeepCollectionEquality()
-                    .equals(other.nameList, nameList)) &&
-            (identical(other.patientList, patientList) ||
+                    .equals(other.fullImmRecs, fullImmRecs)) &&
+            (identical(other.displayImmRecs, displayImmRecs) ||
                 const DeepCollectionEquality()
-                    .equals(other.patientList, patientList)));
+                    .equals(other.displayImmRecs, displayImmRecs)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(nameError) ^
-      const DeepCollectionEquality().hash(newNameError) ^
-      const DeepCollectionEquality().hash(nameList) ^
-      const DeepCollectionEquality().hash(patientList);
+      const DeepCollectionEquality().hash(patient) ^
+      const DeepCollectionEquality().hash(immEvals) ^
+      const DeepCollectionEquality().hash(fullImmRecs) ^
+      const DeepCollectionEquality().hash(displayImmRecs);
 
   @override
   _$VaccinesStateCopyWith<_VaccinesState> get copyWith =>
@@ -450,22 +452,23 @@ class _$_VaccinesState implements _VaccinesState {
 
 abstract class _VaccinesState implements VaccinesState {
   const factory _VaccinesState(
-      {String name,
-      String nameError,
-      String newNameError,
-      List<String> nameList,
-      List<Patient> patientList}) = _$_VaccinesState;
+          {String name,
+          PatientModel patient,
+          List<ImmunizationEvaluation> immEvals,
+          List<ImmunizationRecommendationRecommendation> fullImmRecs,
+          List<ImmunizationRecommendationRecommendation> displayImmRecs}) =
+      _$_VaccinesState;
 
   @override
   String get name;
   @override
-  String get nameError;
+  PatientModel get patient;
   @override
-  String get newNameError;
+  List<ImmunizationEvaluation> get immEvals;
   @override
-  List<String> get nameList;
+  List<ImmunizationRecommendationRecommendation> get fullImmRecs;
   @override
-  List<Patient> get patientList;
+  List<ImmunizationRecommendationRecommendation> get displayImmRecs;
   @override
   _$VaccinesStateCopyWith<_VaccinesState> get copyWith;
 }

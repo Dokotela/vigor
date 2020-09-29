@@ -4,27 +4,23 @@ part of 'vaccines_controller.dart';
 abstract class VaccinesState with _$VaccinesState {
   const factory VaccinesState({
     String name,
-    String nameError,
-    String newNameError,
-    List<String> nameList,
-    List<Patient> patientList,
+    PatientModel patient,
+    List<ImmunizationEvaluation> immEvals,
+    List<ImmunizationRecommendationRecommendation> fullImmRecs,
+    List<ImmunizationRecommendationRecommendation> displayImmRecs,
   }) = _VaccinesState;
 
   factory VaccinesState.initial() => const VaccinesState(
-        name: '',
-        nameError: '',
-        newNameError: '',
-        nameList: [],
-        patientList: [],
+        patient: null,
+        immEvals: [],
+        fullImmRecs: [],
+        displayImmRecs: [],
       );
 
-  factory VaccinesState.loadNames(
-          {List<String> nameList, List<Patient> patientList}) =>
-      VaccinesState(
-        name: '',
-        nameError: '',
-        newNameError: '',
-        nameList: nameList,
-        patientList: patientList,
+  factory VaccinesState.loadPatient(PatientModel patient) => VaccinesState(
+        patient: patient,
+        immEvals: [],
+        fullImmRecs: [],
+        displayImmRecs: [],
       );
 }

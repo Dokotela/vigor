@@ -33,6 +33,7 @@ class PatientModel {
           (ifRight) => ifRight.forEach(
               (resource) => pastImmunizations.add(resource as Immunization)));
     });
+    print(pastImmunizations.length);
   }
 
   Future getImmunizationRecommendation() async {
@@ -51,6 +52,8 @@ class PatientModel {
   }
 
   String name() => patient.name == null ? '' : patient.name[0].text;
-  String sex() => basicEnumToString(patient.gender);
-  String birthDate() => simpleDate(patient.birthDate);
+  String sex() =>
+      patient.gender == null ? '' : basicEnumToString(patient.gender);
+  String birthDate() =>
+      patient.birthDate == null ? '' : simpleDate(patient.birthDate);
 }
