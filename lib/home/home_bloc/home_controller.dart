@@ -25,7 +25,6 @@ class HomeController extends GetxController {
     final curPatientList = <Patient>[];
     for (var patient in patientsFromDb) {
       curPatientList.add(patient as Patient);
-      print((patient as Patient).toJson());
     }
     final curNameList = <String>[];
     for (var patient in curPatientList) {

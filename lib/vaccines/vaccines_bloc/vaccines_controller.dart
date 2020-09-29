@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:vigor/models/patient_model.dart';
 
 import '../../formatters.dart';
+import '../vaccine_lists.dart';
 
 part 'vaccines_controller.freezed.dart';
 part 'vaccines_event.dart';
@@ -28,6 +29,10 @@ class VaccinesController extends GetxController {
       state.value.patient == null ? '' : state.value.patient.birthDate();
   DateTime birthDateValue() =>
       state.value.patient == null ? '' : state.value.patient.birthDateValue();
+  String get newVaccineType => state.value.vaccineType;
+  String get newVaccineName => state.value.vaccineName;
+  DateTime get newVaccineDate => state.value.vaccineDate;
+  String get vaccineDateString => simpleDateTime(state.value.vaccineDate);
 
   // GETTERS
   Future _getVaccineInfo(PatientModel patient) async {
@@ -46,6 +51,8 @@ class VaccinesController extends GetxController {
     );
     update();
   }
+
+  int get numberOfPastVaccines => state.value.patient.pastImmunizations.length;
 
   int get numberOfRecommendations => state.value.displayImmRecs.length;
   Color colorByDate(int index) {
@@ -75,39 +82,9 @@ class VaccinesController extends GetxController {
         null) {
       return '';
     } else {
-      switch (state.value.displayImmRecs[index].vaccineCode[0].coding[0].code
-          .toString()) {
-        case '08':
-          return 'Hepatitis B';
-        case '20':
-          return 'DTaP - Diptheria, Tetanus and Pertussis';
-        case '48':
-          return 'Haemophilus influenzae type b';
-        case '133':
-          return 'Pneumococcus (PCV 13)';
-        case '10':
-          return 'Polio';
-        case '116':
-          return 'Rotavirus';
-        case '140':
-          return 'Influenza';
-        case '52':
-          return 'Hepatitis A';
-        case '03':
-          return 'MMR - Measles, Mumps, and Rubella';
-        case '21':
-          return 'Varicella/Chicken Pox';
-        case '165':
-          return 'HPV';
-        case '114':
-          return 'Meningococcus';
-        case '187':
-          return 'Zoster/Shingles';
-        case '33':
-          return 'Pneumococcus (PPV23)';
-        default:
-          return '';
-      }
+      return cvxToString[state
+          .value.displayImmRecs[index].vaccineCode[0].coding[0].code
+          .toString()];
     }
   }
 
@@ -145,6 +122,36 @@ class VaccinesController extends GetxController {
         await _getVaccineInfo(PatientModel(patient: curPatient));
       },
       enterVaccine: (event) => null,
+      newVaccineType: (event) {
+        state.value = VaccinesState.vaccineEntry(
+          patient: state.value.patient,
+          immEvals: state.value.immEvals,
+          fullImmRecs: state.value.fullImmRecs,
+          displayImmRecs: state.value.fullImmRecs,
+          newType: event.type,
+        );
+        update();
+      },
+      newVaccineName: (event) {
+        state.value = VaccinesState.vaccineEntry(
+          patient: state.value.patient,
+          immEvals: state.value.immEvals,
+          fullImmRecs: state.value.fullImmRecs,
+          displayImmRecs: state.value.fullImmRecs,
+          newName: event.name,
+        );
+        update();
+      },
+      newVaccineDate: (event) {
+        state.value = VaccinesState.vaccineEntry(
+          patient: state.value.patient,
+          immEvals: state.value.immEvals,
+          fullImmRecs: state.value.fullImmRecs,
+          displayImmRecs: state.value.fullImmRecs,
+          date: event.date,
+        );
+        update();
+      },
     );
   }
 }

@@ -23,6 +23,27 @@ class _$VaccinesEventTearOff {
   EnterVaccine enterVaccine() {
     return const EnterVaccine();
   }
+
+// ignore: unused_element
+  NewVaccineType newVaccineType(String type) {
+    return NewVaccineType(
+      type,
+    );
+  }
+
+// ignore: unused_element
+  NewVaccineName newVaccineName(String name) {
+    return NewVaccineName(
+      name,
+    );
+  }
+
+// ignore: unused_element
+  NewVaccineDate newVaccineDate(DateTime date) {
+    return NewVaccineDate(
+      date,
+    );
+  }
 }
 
 // ignore: unused_element
@@ -33,22 +54,34 @@ mixin _$VaccinesEvent {
   Result when<Result extends Object>({
     @required Result enterBirthdate(DateTime birth),
     @required Result enterVaccine(),
+    @required Result newVaccineType(String type),
+    @required Result newVaccineName(String name),
+    @required Result newVaccineDate(DateTime date),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result enterBirthdate(DateTime birth),
     Result enterVaccine(),
+    Result newVaccineType(String type),
+    Result newVaccineName(String name),
+    Result newVaccineDate(DateTime date),
     @required Result orElse(),
   });
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result enterBirthdate(EnterBirthdate value),
     @required Result enterVaccine(EnterVaccine value),
+    @required Result newVaccineType(NewVaccineType value),
+    @required Result newVaccineName(NewVaccineName value),
+    @required Result newVaccineDate(NewVaccineDate value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result enterBirthdate(EnterBirthdate value),
     Result enterVaccine(EnterVaccine value),
+    Result newVaccineType(NewVaccineType value),
+    Result newVaccineName(NewVaccineName value),
+    Result newVaccineDate(NewVaccineDate value),
     @required Result orElse(),
   });
 }
@@ -127,9 +160,15 @@ class _$EnterBirthdate implements EnterBirthdate {
   Result when<Result extends Object>({
     @required Result enterBirthdate(DateTime birth),
     @required Result enterVaccine(),
+    @required Result newVaccineType(String type),
+    @required Result newVaccineName(String name),
+    @required Result newVaccineDate(DateTime date),
   }) {
     assert(enterBirthdate != null);
     assert(enterVaccine != null);
+    assert(newVaccineType != null);
+    assert(newVaccineName != null);
+    assert(newVaccineDate != null);
     return enterBirthdate(birth);
   }
 
@@ -138,6 +177,9 @@ class _$EnterBirthdate implements EnterBirthdate {
   Result maybeWhen<Result extends Object>({
     Result enterBirthdate(DateTime birth),
     Result enterVaccine(),
+    Result newVaccineType(String type),
+    Result newVaccineName(String name),
+    Result newVaccineDate(DateTime date),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -152,9 +194,15 @@ class _$EnterBirthdate implements EnterBirthdate {
   Result map<Result extends Object>({
     @required Result enterBirthdate(EnterBirthdate value),
     @required Result enterVaccine(EnterVaccine value),
+    @required Result newVaccineType(NewVaccineType value),
+    @required Result newVaccineName(NewVaccineName value),
+    @required Result newVaccineDate(NewVaccineDate value),
   }) {
     assert(enterBirthdate != null);
     assert(enterVaccine != null);
+    assert(newVaccineType != null);
+    assert(newVaccineName != null);
+    assert(newVaccineDate != null);
     return enterBirthdate(this);
   }
 
@@ -163,6 +211,9 @@ class _$EnterBirthdate implements EnterBirthdate {
   Result maybeMap<Result extends Object>({
     Result enterBirthdate(EnterBirthdate value),
     Result enterVaccine(EnterVaccine value),
+    Result newVaccineType(NewVaccineType value),
+    Result newVaccineName(NewVaccineName value),
+    Result newVaccineDate(NewVaccineDate value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -217,9 +268,15 @@ class _$EnterVaccine implements EnterVaccine {
   Result when<Result extends Object>({
     @required Result enterBirthdate(DateTime birth),
     @required Result enterVaccine(),
+    @required Result newVaccineType(String type),
+    @required Result newVaccineName(String name),
+    @required Result newVaccineDate(DateTime date),
   }) {
     assert(enterBirthdate != null);
     assert(enterVaccine != null);
+    assert(newVaccineType != null);
+    assert(newVaccineName != null);
+    assert(newVaccineDate != null);
     return enterVaccine();
   }
 
@@ -228,6 +285,9 @@ class _$EnterVaccine implements EnterVaccine {
   Result maybeWhen<Result extends Object>({
     Result enterBirthdate(DateTime birth),
     Result enterVaccine(),
+    Result newVaccineType(String type),
+    Result newVaccineName(String name),
+    Result newVaccineDate(DateTime date),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -242,9 +302,15 @@ class _$EnterVaccine implements EnterVaccine {
   Result map<Result extends Object>({
     @required Result enterBirthdate(EnterBirthdate value),
     @required Result enterVaccine(EnterVaccine value),
+    @required Result newVaccineType(NewVaccineType value),
+    @required Result newVaccineName(NewVaccineName value),
+    @required Result newVaccineDate(NewVaccineDate value),
   }) {
     assert(enterBirthdate != null);
     assert(enterVaccine != null);
+    assert(newVaccineType != null);
+    assert(newVaccineName != null);
+    assert(newVaccineDate != null);
     return enterVaccine(this);
   }
 
@@ -253,6 +319,9 @@ class _$EnterVaccine implements EnterVaccine {
   Result maybeMap<Result extends Object>({
     Result enterBirthdate(EnterBirthdate value),
     Result enterVaccine(EnterVaccine value),
+    Result newVaccineType(NewVaccineType value),
+    Result newVaccineName(NewVaccineName value),
+    Result newVaccineDate(NewVaccineDate value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -267,19 +336,413 @@ abstract class EnterVaccine implements VaccinesEvent {
   const factory EnterVaccine() = _$EnterVaccine;
 }
 
+abstract class $NewVaccineTypeCopyWith<$Res> {
+  factory $NewVaccineTypeCopyWith(
+          NewVaccineType value, $Res Function(NewVaccineType) then) =
+      _$NewVaccineTypeCopyWithImpl<$Res>;
+  $Res call({String type});
+}
+
+class _$NewVaccineTypeCopyWithImpl<$Res>
+    extends _$VaccinesEventCopyWithImpl<$Res>
+    implements $NewVaccineTypeCopyWith<$Res> {
+  _$NewVaccineTypeCopyWithImpl(
+      NewVaccineType _value, $Res Function(NewVaccineType) _then)
+      : super(_value, (v) => _then(v as NewVaccineType));
+
+  @override
+  NewVaccineType get _value => super._value as NewVaccineType;
+
+  @override
+  $Res call({
+    Object type = freezed,
+  }) {
+    return _then(NewVaccineType(
+      type == freezed ? _value.type : type as String,
+    ));
+  }
+}
+
+class _$NewVaccineType implements NewVaccineType {
+  const _$NewVaccineType(this.type) : assert(type != null);
+
+  @override
+  final String type;
+
+  @override
+  String toString() {
+    return 'VaccinesEvent.newVaccineType(type: $type)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is NewVaccineType &&
+            (identical(other.type, type) ||
+                const DeepCollectionEquality().equals(other.type, type)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(type);
+
+  @override
+  $NewVaccineTypeCopyWith<NewVaccineType> get copyWith =>
+      _$NewVaccineTypeCopyWithImpl<NewVaccineType>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result enterBirthdate(DateTime birth),
+    @required Result enterVaccine(),
+    @required Result newVaccineType(String type),
+    @required Result newVaccineName(String name),
+    @required Result newVaccineDate(DateTime date),
+  }) {
+    assert(enterBirthdate != null);
+    assert(enterVaccine != null);
+    assert(newVaccineType != null);
+    assert(newVaccineName != null);
+    assert(newVaccineDate != null);
+    return newVaccineType(type);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result enterBirthdate(DateTime birth),
+    Result enterVaccine(),
+    Result newVaccineType(String type),
+    Result newVaccineName(String name),
+    Result newVaccineDate(DateTime date),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (newVaccineType != null) {
+      return newVaccineType(type);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result enterBirthdate(EnterBirthdate value),
+    @required Result enterVaccine(EnterVaccine value),
+    @required Result newVaccineType(NewVaccineType value),
+    @required Result newVaccineName(NewVaccineName value),
+    @required Result newVaccineDate(NewVaccineDate value),
+  }) {
+    assert(enterBirthdate != null);
+    assert(enterVaccine != null);
+    assert(newVaccineType != null);
+    assert(newVaccineName != null);
+    assert(newVaccineDate != null);
+    return newVaccineType(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result enterBirthdate(EnterBirthdate value),
+    Result enterVaccine(EnterVaccine value),
+    Result newVaccineType(NewVaccineType value),
+    Result newVaccineName(NewVaccineName value),
+    Result newVaccineDate(NewVaccineDate value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (newVaccineType != null) {
+      return newVaccineType(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class NewVaccineType implements VaccinesEvent {
+  const factory NewVaccineType(String type) = _$NewVaccineType;
+
+  String get type;
+  $NewVaccineTypeCopyWith<NewVaccineType> get copyWith;
+}
+
+abstract class $NewVaccineNameCopyWith<$Res> {
+  factory $NewVaccineNameCopyWith(
+          NewVaccineName value, $Res Function(NewVaccineName) then) =
+      _$NewVaccineNameCopyWithImpl<$Res>;
+  $Res call({String name});
+}
+
+class _$NewVaccineNameCopyWithImpl<$Res>
+    extends _$VaccinesEventCopyWithImpl<$Res>
+    implements $NewVaccineNameCopyWith<$Res> {
+  _$NewVaccineNameCopyWithImpl(
+      NewVaccineName _value, $Res Function(NewVaccineName) _then)
+      : super(_value, (v) => _then(v as NewVaccineName));
+
+  @override
+  NewVaccineName get _value => super._value as NewVaccineName;
+
+  @override
+  $Res call({
+    Object name = freezed,
+  }) {
+    return _then(NewVaccineName(
+      name == freezed ? _value.name : name as String,
+    ));
+  }
+}
+
+class _$NewVaccineName implements NewVaccineName {
+  const _$NewVaccineName(this.name) : assert(name != null);
+
+  @override
+  final String name;
+
+  @override
+  String toString() {
+    return 'VaccinesEvent.newVaccineName(name: $name)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is NewVaccineName &&
+            (identical(other.name, name) ||
+                const DeepCollectionEquality().equals(other.name, name)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(name);
+
+  @override
+  $NewVaccineNameCopyWith<NewVaccineName> get copyWith =>
+      _$NewVaccineNameCopyWithImpl<NewVaccineName>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result enterBirthdate(DateTime birth),
+    @required Result enterVaccine(),
+    @required Result newVaccineType(String type),
+    @required Result newVaccineName(String name),
+    @required Result newVaccineDate(DateTime date),
+  }) {
+    assert(enterBirthdate != null);
+    assert(enterVaccine != null);
+    assert(newVaccineType != null);
+    assert(newVaccineName != null);
+    assert(newVaccineDate != null);
+    return newVaccineName(name);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result enterBirthdate(DateTime birth),
+    Result enterVaccine(),
+    Result newVaccineType(String type),
+    Result newVaccineName(String name),
+    Result newVaccineDate(DateTime date),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (newVaccineName != null) {
+      return newVaccineName(name);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result enterBirthdate(EnterBirthdate value),
+    @required Result enterVaccine(EnterVaccine value),
+    @required Result newVaccineType(NewVaccineType value),
+    @required Result newVaccineName(NewVaccineName value),
+    @required Result newVaccineDate(NewVaccineDate value),
+  }) {
+    assert(enterBirthdate != null);
+    assert(enterVaccine != null);
+    assert(newVaccineType != null);
+    assert(newVaccineName != null);
+    assert(newVaccineDate != null);
+    return newVaccineName(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result enterBirthdate(EnterBirthdate value),
+    Result enterVaccine(EnterVaccine value),
+    Result newVaccineType(NewVaccineType value),
+    Result newVaccineName(NewVaccineName value),
+    Result newVaccineDate(NewVaccineDate value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (newVaccineName != null) {
+      return newVaccineName(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class NewVaccineName implements VaccinesEvent {
+  const factory NewVaccineName(String name) = _$NewVaccineName;
+
+  String get name;
+  $NewVaccineNameCopyWith<NewVaccineName> get copyWith;
+}
+
+abstract class $NewVaccineDateCopyWith<$Res> {
+  factory $NewVaccineDateCopyWith(
+          NewVaccineDate value, $Res Function(NewVaccineDate) then) =
+      _$NewVaccineDateCopyWithImpl<$Res>;
+  $Res call({DateTime date});
+}
+
+class _$NewVaccineDateCopyWithImpl<$Res>
+    extends _$VaccinesEventCopyWithImpl<$Res>
+    implements $NewVaccineDateCopyWith<$Res> {
+  _$NewVaccineDateCopyWithImpl(
+      NewVaccineDate _value, $Res Function(NewVaccineDate) _then)
+      : super(_value, (v) => _then(v as NewVaccineDate));
+
+  @override
+  NewVaccineDate get _value => super._value as NewVaccineDate;
+
+  @override
+  $Res call({
+    Object date = freezed,
+  }) {
+    return _then(NewVaccineDate(
+      date == freezed ? _value.date : date as DateTime,
+    ));
+  }
+}
+
+class _$NewVaccineDate implements NewVaccineDate {
+  const _$NewVaccineDate(this.date) : assert(date != null);
+
+  @override
+  final DateTime date;
+
+  @override
+  String toString() {
+    return 'VaccinesEvent.newVaccineDate(date: $date)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is NewVaccineDate &&
+            (identical(other.date, date) ||
+                const DeepCollectionEquality().equals(other.date, date)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(date);
+
+  @override
+  $NewVaccineDateCopyWith<NewVaccineDate> get copyWith =>
+      _$NewVaccineDateCopyWithImpl<NewVaccineDate>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result enterBirthdate(DateTime birth),
+    @required Result enterVaccine(),
+    @required Result newVaccineType(String type),
+    @required Result newVaccineName(String name),
+    @required Result newVaccineDate(DateTime date),
+  }) {
+    assert(enterBirthdate != null);
+    assert(enterVaccine != null);
+    assert(newVaccineType != null);
+    assert(newVaccineName != null);
+    assert(newVaccineDate != null);
+    return newVaccineDate(date);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result enterBirthdate(DateTime birth),
+    Result enterVaccine(),
+    Result newVaccineType(String type),
+    Result newVaccineName(String name),
+    Result newVaccineDate(DateTime date),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (newVaccineDate != null) {
+      return newVaccineDate(date);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result enterBirthdate(EnterBirthdate value),
+    @required Result enterVaccine(EnterVaccine value),
+    @required Result newVaccineType(NewVaccineType value),
+    @required Result newVaccineName(NewVaccineName value),
+    @required Result newVaccineDate(NewVaccineDate value),
+  }) {
+    assert(enterBirthdate != null);
+    assert(enterVaccine != null);
+    assert(newVaccineType != null);
+    assert(newVaccineName != null);
+    assert(newVaccineDate != null);
+    return newVaccineDate(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result enterBirthdate(EnterBirthdate value),
+    Result enterVaccine(EnterVaccine value),
+    Result newVaccineType(NewVaccineType value),
+    Result newVaccineName(NewVaccineName value),
+    Result newVaccineDate(NewVaccineDate value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (newVaccineDate != null) {
+      return newVaccineDate(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class NewVaccineDate implements VaccinesEvent {
+  const factory NewVaccineDate(DateTime date) = _$NewVaccineDate;
+
+  DateTime get date;
+  $NewVaccineDateCopyWith<NewVaccineDate> get copyWith;
+}
+
 class _$VaccinesStateTearOff {
   const _$VaccinesStateTearOff();
 
 // ignore: unused_element
   _VaccinesState call(
-      {String name,
-      PatientModel patient,
+      {PatientModel patient,
+      String vaccineType,
+      String vaccineName,
+      DateTime vaccineDate,
       List<ImmunizationEvaluation> immEvals,
       List<ImmunizationRecommendationRecommendation> fullImmRecs,
       List<ImmunizationRecommendationRecommendation> displayImmRecs}) {
     return _VaccinesState(
-      name: name,
       patient: patient,
+      vaccineType: vaccineType,
+      vaccineName: vaccineName,
+      vaccineDate: vaccineDate,
       immEvals: immEvals,
       fullImmRecs: fullImmRecs,
       displayImmRecs: displayImmRecs,
@@ -291,8 +754,10 @@ class _$VaccinesStateTearOff {
 const $VaccinesState = _$VaccinesStateTearOff();
 
 mixin _$VaccinesState {
-  String get name;
   PatientModel get patient;
+  String get vaccineType;
+  String get vaccineName;
+  DateTime get vaccineDate;
   List<ImmunizationEvaluation> get immEvals;
   List<ImmunizationRecommendationRecommendation> get fullImmRecs;
   List<ImmunizationRecommendationRecommendation> get displayImmRecs;
@@ -305,8 +770,10 @@ abstract class $VaccinesStateCopyWith<$Res> {
           VaccinesState value, $Res Function(VaccinesState) then) =
       _$VaccinesStateCopyWithImpl<$Res>;
   $Res call(
-      {String name,
-      PatientModel patient,
+      {PatientModel patient,
+      String vaccineType,
+      String vaccineName,
+      DateTime vaccineDate,
       List<ImmunizationEvaluation> immEvals,
       List<ImmunizationRecommendationRecommendation> fullImmRecs,
       List<ImmunizationRecommendationRecommendation> displayImmRecs});
@@ -322,15 +789,22 @@ class _$VaccinesStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object name = freezed,
     Object patient = freezed,
+    Object vaccineType = freezed,
+    Object vaccineName = freezed,
+    Object vaccineDate = freezed,
     Object immEvals = freezed,
     Object fullImmRecs = freezed,
     Object displayImmRecs = freezed,
   }) {
     return _then(_value.copyWith(
-      name: name == freezed ? _value.name : name as String,
       patient: patient == freezed ? _value.patient : patient as PatientModel,
+      vaccineType:
+          vaccineType == freezed ? _value.vaccineType : vaccineType as String,
+      vaccineName:
+          vaccineName == freezed ? _value.vaccineName : vaccineName as String,
+      vaccineDate:
+          vaccineDate == freezed ? _value.vaccineDate : vaccineDate as DateTime,
       immEvals: immEvals == freezed
           ? _value.immEvals
           : immEvals as List<ImmunizationEvaluation>,
@@ -351,8 +825,10 @@ abstract class _$VaccinesStateCopyWith<$Res>
       __$VaccinesStateCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String name,
-      PatientModel patient,
+      {PatientModel patient,
+      String vaccineType,
+      String vaccineName,
+      DateTime vaccineDate,
       List<ImmunizationEvaluation> immEvals,
       List<ImmunizationRecommendationRecommendation> fullImmRecs,
       List<ImmunizationRecommendationRecommendation> displayImmRecs});
@@ -370,15 +846,22 @@ class __$VaccinesStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object name = freezed,
     Object patient = freezed,
+    Object vaccineType = freezed,
+    Object vaccineName = freezed,
+    Object vaccineDate = freezed,
     Object immEvals = freezed,
     Object fullImmRecs = freezed,
     Object displayImmRecs = freezed,
   }) {
     return _then(_VaccinesState(
-      name: name == freezed ? _value.name : name as String,
       patient: patient == freezed ? _value.patient : patient as PatientModel,
+      vaccineType:
+          vaccineType == freezed ? _value.vaccineType : vaccineType as String,
+      vaccineName:
+          vaccineName == freezed ? _value.vaccineName : vaccineName as String,
+      vaccineDate:
+          vaccineDate == freezed ? _value.vaccineDate : vaccineDate as DateTime,
       immEvals: immEvals == freezed
           ? _value.immEvals
           : immEvals as List<ImmunizationEvaluation>,
@@ -394,16 +877,22 @@ class __$VaccinesStateCopyWithImpl<$Res>
 
 class _$_VaccinesState implements _VaccinesState {
   const _$_VaccinesState(
-      {this.name,
-      this.patient,
+      {this.patient,
+      this.vaccineType,
+      this.vaccineName,
+      this.vaccineDate,
       this.immEvals,
       this.fullImmRecs,
       this.displayImmRecs});
 
   @override
-  final String name;
-  @override
   final PatientModel patient;
+  @override
+  final String vaccineType;
+  @override
+  final String vaccineName;
+  @override
+  final DateTime vaccineDate;
   @override
   final List<ImmunizationEvaluation> immEvals;
   @override
@@ -413,18 +902,25 @@ class _$_VaccinesState implements _VaccinesState {
 
   @override
   String toString() {
-    return 'VaccinesState(name: $name, patient: $patient, immEvals: $immEvals, fullImmRecs: $fullImmRecs, displayImmRecs: $displayImmRecs)';
+    return 'VaccinesState(patient: $patient, vaccineType: $vaccineType, vaccineName: $vaccineName, vaccineDate: $vaccineDate, immEvals: $immEvals, fullImmRecs: $fullImmRecs, displayImmRecs: $displayImmRecs)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _VaccinesState &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
             (identical(other.patient, patient) ||
                 const DeepCollectionEquality()
                     .equals(other.patient, patient)) &&
+            (identical(other.vaccineType, vaccineType) ||
+                const DeepCollectionEquality()
+                    .equals(other.vaccineType, vaccineType)) &&
+            (identical(other.vaccineName, vaccineName) ||
+                const DeepCollectionEquality()
+                    .equals(other.vaccineName, vaccineName)) &&
+            (identical(other.vaccineDate, vaccineDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.vaccineDate, vaccineDate)) &&
             (identical(other.immEvals, immEvals) ||
                 const DeepCollectionEquality()
                     .equals(other.immEvals, immEvals)) &&
@@ -439,8 +935,10 @@ class _$_VaccinesState implements _VaccinesState {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(patient) ^
+      const DeepCollectionEquality().hash(vaccineType) ^
+      const DeepCollectionEquality().hash(vaccineName) ^
+      const DeepCollectionEquality().hash(vaccineDate) ^
       const DeepCollectionEquality().hash(immEvals) ^
       const DeepCollectionEquality().hash(fullImmRecs) ^
       const DeepCollectionEquality().hash(displayImmRecs);
@@ -452,17 +950,23 @@ class _$_VaccinesState implements _VaccinesState {
 
 abstract class _VaccinesState implements VaccinesState {
   const factory _VaccinesState(
-          {String name,
-          PatientModel patient,
+          {PatientModel patient,
+          String vaccineType,
+          String vaccineName,
+          DateTime vaccineDate,
           List<ImmunizationEvaluation> immEvals,
           List<ImmunizationRecommendationRecommendation> fullImmRecs,
           List<ImmunizationRecommendationRecommendation> displayImmRecs}) =
       _$_VaccinesState;
 
   @override
-  String get name;
-  @override
   PatientModel get patient;
+  @override
+  String get vaccineType;
+  @override
+  String get vaccineName;
+  @override
+  DateTime get vaccineDate;
   @override
   List<ImmunizationEvaluation> get immEvals;
   @override

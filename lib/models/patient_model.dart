@@ -12,13 +12,11 @@ class PatientModel {
     this.immEvaluations,
     this.recommendation,
   }) {
-    medsAdministered ??= <MedicationAdministration>[];
     pastImmunizations ??= <Immunization>[];
     immEvaluations ??= <ImmunizationEvaluation>[];
   }
 
   Patient patient;
-  List<MedicationAdministration> medsAdministered;
   List<Immunization> pastImmunizations;
   List<ImmunizationEvaluation> immEvaluations;
   ImmunizationRecommendation recommendation;
@@ -33,7 +31,6 @@ class PatientModel {
           (ifRight) => ifRight.forEach(
               (resource) => pastImmunizations.add(resource as Immunization)));
     });
-    print(pastImmunizations.length);
   }
 
   Future getImmunizationRecommendation() async {

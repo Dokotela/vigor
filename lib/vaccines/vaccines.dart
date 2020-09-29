@@ -1,9 +1,98 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'vaccine_lists.dart';
 import 'vaccines_bloc/vaccines_controller.dart';
 
 class Vaccines extends StatelessWidget {
+  dynamic _displayDialog(
+      BuildContext context, VaccinesController controller) async {
+    return showDialog(
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            content: Column(
+              children: [
+                DropdownButton(
+                  items: vaccineList
+                      .map((value) => DropdownMenuItem(
+                            child: Container(
+                                width: Get.width * .5, child: Text('$value\n')),
+                            value: value,
+                          ))
+                      .toList(),
+                  onChanged: (String value) =>
+                      controller.event(VaccinesEvent.newVaccineType(value)),
+                  isExpanded: false,
+                  hint: Obx(
+                    () => Container(
+                      width: Get.width * .5,
+                      child: Text(
+                        controller.newVaccineType,
+                      ),
+                    ),
+                  ),
+                ),
+                Divider(
+                  thickness: 4.0,
+                  color: Colors.blue[900],
+                ),
+                DropdownButton(
+                  items: tradeNames
+                      .map((value) => DropdownMenuItem(
+                            child: Container(
+                                width: Get.width * .5, child: Text('$value\n')),
+                            value: value,
+                          ))
+                      .toList(),
+                  onChanged: (String value) =>
+                      controller.event(VaccinesEvent.newVaccineName(value)),
+                  isExpanded: false,
+                  hint: Obx(
+                    () => Container(
+                      width: Get.width * .5,
+                      child: Text(
+                        controller.newVaccineName,
+                      ),
+                    ),
+                  ),
+                ),
+                Divider(
+                  thickness: 4.0,
+                  color: Colors.blue[900],
+                ),
+                FlatButton(
+                  shape: RoundedRectangleBorder(
+                    side: const BorderSide(color: Colors.grey),
+                    borderRadius: BorderRadius.circular(12.0),
+                  ),
+                  color: Colors.transparent,
+                  onPressed: () => showDatePicker(
+                    context: Get.context,
+                    locale: Get.locale,
+                    initialDate: controller.newVaccineDate,
+                    firstDate: DateTime(1900, 1, 1),
+                    lastDate: DateTime(2999, 12, 31),
+                  ).then((date) => controller.event(
+                      VaccinesEvent.newVaccineDate(
+                          date ?? controller.newVaccineDate))),
+                  child: Text(
+                      '${"Date Given".tr}: ${controller.vaccineDateString}'),
+                ),
+              ],
+            ),
+            actions: <Widget>[
+              FlatButton(
+                child: const Text('Record Vaccine'),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              )
+            ],
+          );
+        });
+  }
+
   @override
   Widget build(BuildContext context) {
     return GetBuilder<VaccinesController>(
@@ -61,7 +150,7 @@ class Vaccines extends StatelessWidget {
                 flex: 2,
                 child: Obx(
                   () => ListView.separated(
-                    itemCount: controller.numberOfRecommendations,
+                    itemCount: controller.numberOfPastVaccines,
                     separatorBuilder: (context, index) =>
                         const Divider(color: Colors.white),
                     itemBuilder: (context, index) => Container(
@@ -96,7 +185,7 @@ class Vaccines extends StatelessWidget {
                 ),
               ),
               RaisedButton(
-                onPressed: () {},
+                onPressed: () => _displayDialog(context, controller),
                 child: const Text('Enter New Vaccine',
                     style: TextStyle(fontSize: 20)),
               ),
