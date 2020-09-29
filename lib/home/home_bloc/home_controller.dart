@@ -50,7 +50,7 @@ class HomeController extends GetxController {
   void event(HomeEvent newEvent) {
     newEvent.map(
       registerPatient: (event) async {
-        final curNameList = nameList.toList();
+        var curNameList = nameList.toList();
         curNameList.add(event.newName);
         final curPatientList = state.value.patientList;
         final newPatient = await IFhirDb().save(
