@@ -1,8 +1,30 @@
-import 'package:flutter/material.dart';
+import 'dart:io';
 
-import '1_presentation/start.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:get/get.dart';
+
+import 'home/home.dart';
+import 'localization/localization.dart';
+import 'theme/theme.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(Start());
+}
+
+class Start extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return GetMaterialApp(
+      theme: ThemeClass.light(),
+      translations: MyTranslations(),
+      locale: Locale(Platform.localeName.split('_')[0]),
+      localizationsDelegates: const [
+        GlobalMaterialLocalizations.delegate,
+      ],
+      title: 'VaxCast',
+      home: HomeScreen(),
+    );
+  }
 }

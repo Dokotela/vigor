@@ -1,3 +1,4 @@
+import 'package:fhir_db/resource_dao.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -67,6 +68,13 @@ class HomeScreen extends StatelessWidget {
                     HomeEvent.registerPatient(controller.nameController.text),
                   ),
                   child: Text('Click to Register New Patient'.tr),
+                ),
+                RaisedButton(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16.0),
+                  ),
+                  onPressed: () async =>
+                      await ResourceDao().deleteAllResources(),
                 ),
               ],
             ),

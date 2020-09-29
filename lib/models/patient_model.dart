@@ -1,9 +1,9 @@
 import 'package:fhir/r4.dart';
 import 'package:get/get.dart';
-import 'package:vigor/3_domain/formatters/basic_enum_to_string.dart';
-import 'package:vigor/3_domain/formatters/simple_date.dart';
 import 'package:vigor/interfaces/i_fhir_db.dart';
 import 'package:vigor/interfaces/i_vax_cast.dart';
+
+import '../formatters.dart';
 
 class PatientModel {
   PatientModel({
@@ -56,4 +56,7 @@ class PatientModel {
       patient.gender == null ? '' : basicEnumToString(patient.gender);
   String birthDate() =>
       patient.birthDate == null ? '' : simpleDate(patient.birthDate);
+  DateTime birthDateValue() => patient.birthDate == null
+      ? ''
+      : DateTime.parse(patient.birthDate.toString());
 }

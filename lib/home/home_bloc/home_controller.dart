@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:get/get.dart';
 import 'package:vigor/interfaces/i_fhir_db.dart';
+import 'package:vigor/models/patient_model.dart';
 import 'package:vigor/vaccines/vaccines.dart';
 
 part 'home_controller.freezed.dart';
@@ -24,6 +25,7 @@ class HomeController extends GetxController {
     final curPatientList = <Patient>[];
     for (var patient in patientsFromDb) {
       curPatientList.add(patient as Patient);
+      print((patient as Patient).toJson());
     }
     final curNameList = <String>[];
     for (var patient in curPatientList) {
@@ -34,9 +36,10 @@ class HomeController extends GetxController {
             '');
       }
     }
-    super.onInit();
     state.value =
         HomeState.loadNames(nameList: curNameList, patientList: curPatientList);
+    update();
+    super.onInit();
   }
 
   // GETTERS
@@ -69,12 +72,11 @@ class HomeController extends GetxController {
         update();
       },
       choosePatient: (event) {
-        print(event.name);
         final patient = state.value.patientList.firstWhere((thisPatient) =>
             thisPatient.name == null
                 ? false
                 : thisPatient.name[0].text == event.name);
-        Get.to(Vaccines(), arguments: patient);
+        Get.to(Vaccines(), arguments: PatientModel(patient: patient));
       },
     );
   }
