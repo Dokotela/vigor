@@ -31,7 +31,7 @@ class HomeScreen extends StatelessWidget {
               buttonText: 'All Patients', //todo: translate
               onPressed: () => Get.to(PatientSearch()),
             ),
-            ActionButton(
+            const ActionButton(
               buttonText: 'My Schedule', //todo: translate
               // onPressed: () {},
             ),

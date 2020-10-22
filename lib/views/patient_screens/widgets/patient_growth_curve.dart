@@ -39,7 +39,7 @@ class PatientGrowthCurve extends StatelessWidget {
 
   Widget _selectedButton(String title, Function onPressed) {
     return RaisedButton(
-      shape: CircleBorder(),
+      shape: const CircleBorder(),
       child: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Text(

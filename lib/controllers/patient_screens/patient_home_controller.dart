@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../views/screens.dart';
 import '../../models/patient_model.dart';
+import '../../views/screens.dart';
 import 'shared/relative_age.dart';
 
 class PatientHomeController extends GetxController

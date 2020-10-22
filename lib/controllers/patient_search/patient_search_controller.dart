@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:get/get.dart';
 
-import '../../views/screens.dart';
+import '../../interfaces/i_fhir_db.dart';
 import '../../models/_internal/patient_name.dart';
 import '../../models/_internal/simple_date.dart';
-import '../../interfaces/i_fhir_db.dart';
+import '../../views/screens.dart';
 
 part 'patient_search_controller.freezed.dart';
 part 'patient_search_state.dart';

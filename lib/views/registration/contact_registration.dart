@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../views/widgets/shared_widgets.dart';
 import '../../controllers/registration/contact_registration_bloc/contact_registration_controller.dart';
+import '../../views/widgets/shared_widgets.dart';
 
 import 'widgets/barrio.dart';
 import 'widgets/names.dart';

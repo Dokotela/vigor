@@ -2,8 +2,8 @@ import 'package:fhir/r4.dart';
 import 'package:get/get.dart';
 import 'package:vigor/interfaces/i_fhir_db.dart';
 
-import '../../views/screens.dart';
 import '../../models/patient_model.dart';
+import '../../views/screens.dart';
 import 'shared/relative_age.dart';
 
 class PatientParasiteController extends GetxController {

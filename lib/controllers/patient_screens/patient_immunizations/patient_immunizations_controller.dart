@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:get/get.dart';
 
-import '../../../views/screens.dart';
 import '../../../models/_internal/simple_date.dart';
 import '../../../models/patient_model.dart';
+import '../../../views/screens.dart';
 import '../patient_home_controller.dart';
 import '../shared/relative_age.dart';
 

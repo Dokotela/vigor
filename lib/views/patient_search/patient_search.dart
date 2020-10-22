@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../views/widgets/shared_widgets.dart';
 import '../../controllers/patient_search/patient_search_controller.dart';
+import '../../views/widgets/shared_widgets.dart';
 
 import '../screens.dart';
 import 'patient_search_button_controller.dart';
