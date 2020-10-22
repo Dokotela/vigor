@@ -1,5 +1,5 @@
 // import 'package:dartz/dartz.dart';
-// import 'package:fhir/fhir_r4.dart';
+// import 'package:fhir/r4.dart';
 // import 'package:vigor/domain/registration/patient_registration/i_patient_registration_facade.dart';
 // import 'package:vigor/domain/registration/patient_registration/patient_registration_value_objects.dart';
 // import 'package:vigor/domain/registration/registration_failure.dart';
