@@ -9,6 +9,7 @@ part of 'patient_registration_controller.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$PatientRegistrationStateTearOff {
   const _$PatientRegistrationStateTearOff();
 
@@ -37,9 +38,11 @@ class _$PatientRegistrationStateTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $PatientRegistrationState = _$PatientRegistrationStateTearOff();
 
+/// @nodoc
 mixin _$PatientRegistrationState {
   String get familyNameError;
   String get givenNameError;
@@ -54,6 +57,7 @@ mixin _$PatientRegistrationState {
   $PatientRegistrationStateCopyWith<PatientRegistrationState> get copyWith;
 }
 
+/// @nodoc
 abstract class $PatientRegistrationStateCopyWith<$Res> {
   factory $PatientRegistrationStateCopyWith(PatientRegistrationState value,
           $Res Function(PatientRegistrationState) then) =
@@ -72,6 +76,7 @@ abstract class $PatientRegistrationStateCopyWith<$Res> {
   $PatientCopyWith<$Res> get patient;
 }
 
+/// @nodoc
 class _$PatientRegistrationStateCopyWithImpl<$Res>
     implements $PatientRegistrationStateCopyWith<$Res> {
   _$PatientRegistrationStateCopyWithImpl(this._value, this._then);
@@ -126,6 +131,7 @@ class _$PatientRegistrationStateCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$PatientRegistrationStateCopyWith<$Res>
     implements $PatientRegistrationStateCopyWith<$Res> {
   factory _$PatientRegistrationStateCopyWith(_PatientRegistrationState value,
@@ -147,6 +153,7 @@ abstract class _$PatientRegistrationStateCopyWith<$Res>
   $PatientCopyWith<$Res> get patient;
 }
 
+/// @nodoc
 class __$PatientRegistrationStateCopyWithImpl<$Res>
     extends _$PatientRegistrationStateCopyWithImpl<$Res>
     implements _$PatientRegistrationStateCopyWith<$Res> {
@@ -194,6 +201,7 @@ class __$PatientRegistrationStateCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_PatientRegistrationState implements _PatientRegistrationState {
   const _$_PatientRegistrationState(
       {this.familyNameError,

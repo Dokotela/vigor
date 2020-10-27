@@ -9,6 +9,7 @@ part of 'patient_search_controller.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$PatientSearchStateTearOff {
   const _$PatientSearchStateTearOff();
 
@@ -22,9 +23,11 @@ class _$PatientSearchStateTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $PatientSearchState = _$PatientSearchStateTearOff();
 
+/// @nodoc
 mixin _$PatientSearchState {
   List<Resource> get fullPatientList;
   List<Resource> get activePatientList;
@@ -32,6 +35,7 @@ mixin _$PatientSearchState {
   $PatientSearchStateCopyWith<PatientSearchState> get copyWith;
 }
 
+/// @nodoc
 abstract class $PatientSearchStateCopyWith<$Res> {
   factory $PatientSearchStateCopyWith(
           PatientSearchState value, $Res Function(PatientSearchState) then) =
@@ -39,6 +43,7 @@ abstract class $PatientSearchStateCopyWith<$Res> {
   $Res call({List<Resource> fullPatientList, List<Resource> activePatientList});
 }
 
+/// @nodoc
 class _$PatientSearchStateCopyWithImpl<$Res>
     implements $PatientSearchStateCopyWith<$Res> {
   _$PatientSearchStateCopyWithImpl(this._value, this._then);
@@ -63,6 +68,7 @@ class _$PatientSearchStateCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$PatientSearchStateCopyWith<$Res>
     implements $PatientSearchStateCopyWith<$Res> {
   factory _$PatientSearchStateCopyWith(
@@ -72,6 +78,7 @@ abstract class _$PatientSearchStateCopyWith<$Res>
   $Res call({List<Resource> fullPatientList, List<Resource> activePatientList});
 }
 
+/// @nodoc
 class __$PatientSearchStateCopyWithImpl<$Res>
     extends _$PatientSearchStateCopyWithImpl<$Res>
     implements _$PatientSearchStateCopyWith<$Res> {
@@ -98,6 +105,7 @@ class __$PatientSearchStateCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_PatientSearchState implements _PatientSearchState {
   const _$_PatientSearchState({this.fullPatientList, this.activePatientList});
 

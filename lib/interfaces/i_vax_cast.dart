@@ -9,6 +9,6 @@ abstract class IVaxCast {
     List<Immunization> immunizations,
   }) async {
     return await VaxCast()
-        .forecastR4(patient, immunizations, assessmentDate.toString());
+        .forecastSoonR4(patient, immunizations, assessmentDate.toString());
   }
 }

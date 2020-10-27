@@ -17,15 +17,12 @@ class PatientImmunizationsController extends GetxController {
   final state = PatientImmunizationsState.initial(
           Get.find<PatientHomeController>().patient)
       .obs;
-  // final state = PatientImmunizationsState.initial(Get.arguments).obs;
-  // removed this line so that arguments don't need to be passed via the router
-  // probably better to use services for the data model
 
   // INIT
   @override
   Future onInit() async {
     final patient = state.value.patient;
-    patient.loadImmunizations();
+    await patient.loadImmunizations();
     await patient.getImmunizationRecommendation();
     final fullRecs = <ImmunizationRecommendationRecommendation>[];
     patient.recommendation.recommendation.forEach(fullRecs.add);
@@ -37,7 +34,7 @@ class PatientImmunizationsController extends GetxController {
       fullImmRecs: fullRecs,
       displayImmRecs: sortRecsByDate(displayRecs),
     );
-
+    patient.createHx();
     super.onInit();
   }
 

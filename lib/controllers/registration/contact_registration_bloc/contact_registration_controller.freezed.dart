@@ -9,6 +9,7 @@ part of 'contact_registration_controller.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$ContactRegistrationStateTearOff {
   const _$ContactRegistrationStateTearOff();
 
@@ -49,9 +50,11 @@ class _$ContactRegistrationStateTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ContactRegistrationState = _$ContactRegistrationStateTearOff();
 
+/// @nodoc
 mixin _$ContactRegistrationState {
   Patient get patient;
   String get familyNameError1;
@@ -72,6 +75,7 @@ mixin _$ContactRegistrationState {
   $ContactRegistrationStateCopyWith<ContactRegistrationState> get copyWith;
 }
 
+/// @nodoc
 abstract class $ContactRegistrationStateCopyWith<$Res> {
   factory $ContactRegistrationStateCopyWith(ContactRegistrationState value,
           $Res Function(ContactRegistrationState) then) =
@@ -96,6 +100,7 @@ abstract class $ContactRegistrationStateCopyWith<$Res> {
   $PatientCopyWith<$Res> get patient;
 }
 
+/// @nodoc
 class _$ContactRegistrationStateCopyWithImpl<$Res>
     implements $ContactRegistrationStateCopyWith<$Res> {
   _$ContactRegistrationStateCopyWithImpl(this._value, this._then);
@@ -172,6 +177,7 @@ class _$ContactRegistrationStateCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ContactRegistrationStateCopyWith<$Res>
     implements $ContactRegistrationStateCopyWith<$Res> {
   factory _$ContactRegistrationStateCopyWith(_ContactRegistrationState value,
@@ -199,6 +205,7 @@ abstract class _$ContactRegistrationStateCopyWith<$Res>
   $PatientCopyWith<$Res> get patient;
 }
 
+/// @nodoc
 class __$ContactRegistrationStateCopyWithImpl<$Res>
     extends _$ContactRegistrationStateCopyWithImpl<$Res>
     implements _$ContactRegistrationStateCopyWith<$Res> {
@@ -268,6 +275,7 @@ class __$ContactRegistrationStateCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_ContactRegistrationState implements _ContactRegistrationState {
   const _$_ContactRegistrationState(
       {this.patient,
@@ -450,6 +458,7 @@ abstract class _ContactRegistrationState implements ContactRegistrationState {
   _$ContactRegistrationStateCopyWith<_ContactRegistrationState> get copyWith;
 }
 
+/// @nodoc
 class _$ContactRegistrationEventTearOff {
   const _$ContactRegistrationEventTearOff();
 
@@ -487,9 +496,11 @@ class _$ContactRegistrationEventTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ContactRegistrationEvent = _$ContactRegistrationEventTearOff();
 
+/// @nodoc
 mixin _$ContactRegistrationEvent {
   @optionalTypeArgs
   Result when<Result extends Object>({
@@ -527,12 +538,14 @@ mixin _$ContactRegistrationEvent {
   });
 }
 
+/// @nodoc
 abstract class $ContactRegistrationEventCopyWith<$Res> {
   factory $ContactRegistrationEventCopyWith(ContactRegistrationEvent value,
           $Res Function(ContactRegistrationEvent) then) =
       _$ContactRegistrationEventCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$ContactRegistrationEventCopyWithImpl<$Res>
     implements $ContactRegistrationEventCopyWith<$Res> {
   _$ContactRegistrationEventCopyWithImpl(this._value, this._then);
@@ -542,12 +555,14 @@ class _$ContactRegistrationEventCopyWithImpl<$Res>
   final $Res Function(ContactRegistrationEvent) _then;
 }
 
+/// @nodoc
 abstract class _$Barrio1CopyWith<$Res> {
   factory _$Barrio1CopyWith(_Barrio1 value, $Res Function(_Barrio1) then) =
       __$Barrio1CopyWithImpl<$Res>;
   $Res call({String barrio1});
 }
 
+/// @nodoc
 class __$Barrio1CopyWithImpl<$Res>
     extends _$ContactRegistrationEventCopyWithImpl<$Res>
     implements _$Barrio1CopyWith<$Res> {
@@ -567,6 +582,7 @@ class __$Barrio1CopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_Barrio1 implements _Barrio1 {
   const _$_Barrio1(this.barrio1) : assert(barrio1 != null);
 
@@ -670,6 +686,7 @@ abstract class _Barrio1 implements ContactRegistrationEvent {
   _$Barrio1CopyWith<_Barrio1> get copyWith;
 }
 
+/// @nodoc
 abstract class _$Relation1CopyWith<$Res> {
   factory _$Relation1CopyWith(
           _Relation1 value, $Res Function(_Relation1) then) =
@@ -677,6 +694,7 @@ abstract class _$Relation1CopyWith<$Res> {
   $Res call({String relation1});
 }
 
+/// @nodoc
 class __$Relation1CopyWithImpl<$Res>
     extends _$ContactRegistrationEventCopyWithImpl<$Res>
     implements _$Relation1CopyWith<$Res> {
@@ -696,6 +714,7 @@ class __$Relation1CopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_Relation1 implements _Relation1 {
   const _$_Relation1(this.relation1) : assert(relation1 != null);
 
@@ -800,12 +819,14 @@ abstract class _Relation1 implements ContactRegistrationEvent {
   _$Relation1CopyWith<_Relation1> get copyWith;
 }
 
+/// @nodoc
 abstract class _$Barrio2CopyWith<$Res> {
   factory _$Barrio2CopyWith(_Barrio2 value, $Res Function(_Barrio2) then) =
       __$Barrio2CopyWithImpl<$Res>;
   $Res call({String barrio2});
 }
 
+/// @nodoc
 class __$Barrio2CopyWithImpl<$Res>
     extends _$ContactRegistrationEventCopyWithImpl<$Res>
     implements _$Barrio2CopyWith<$Res> {
@@ -825,6 +846,7 @@ class __$Barrio2CopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_Barrio2 implements _Barrio2 {
   const _$_Barrio2(this.barrio2) : assert(barrio2 != null);
 
@@ -928,6 +950,7 @@ abstract class _Barrio2 implements ContactRegistrationEvent {
   _$Barrio2CopyWith<_Barrio2> get copyWith;
 }
 
+/// @nodoc
 abstract class _$Relation2CopyWith<$Res> {
   factory _$Relation2CopyWith(
           _Relation2 value, $Res Function(_Relation2) then) =
@@ -935,6 +958,7 @@ abstract class _$Relation2CopyWith<$Res> {
   $Res call({String relation2});
 }
 
+/// @nodoc
 class __$Relation2CopyWithImpl<$Res>
     extends _$ContactRegistrationEventCopyWithImpl<$Res>
     implements _$Relation2CopyWith<$Res> {
@@ -954,6 +978,7 @@ class __$Relation2CopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_Relation2 implements _Relation2 {
   const _$_Relation2(this.relation2) : assert(relation2 != null);
 
@@ -1058,11 +1083,13 @@ abstract class _Relation2 implements ContactRegistrationEvent {
   _$Relation2CopyWith<_Relation2> get copyWith;
 }
 
+/// @nodoc
 abstract class _$RegisterCopyWith<$Res> {
   factory _$RegisterCopyWith(_Register value, $Res Function(_Register) then) =
       __$RegisterCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$RegisterCopyWithImpl<$Res>
     extends _$ContactRegistrationEventCopyWithImpl<$Res>
     implements _$RegisterCopyWith<$Res> {
@@ -1073,6 +1100,7 @@ class __$RegisterCopyWithImpl<$Res>
   _Register get _value => super._value as _Register;
 }
 
+/// @nodoc
 class _$_Register implements _Register {
   const _$_Register();
 

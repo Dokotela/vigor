@@ -9,6 +9,7 @@ part of 'db_failures.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$DbFailureTearOff {
   const _$DbFailureTearOff();
 
@@ -34,9 +35,11 @@ class _$DbFailureTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $DbFailure = _$DbFailureTearOff();
 
+/// @nodoc
 mixin _$DbFailure {
   String get error;
 
@@ -70,12 +73,14 @@ mixin _$DbFailure {
   $DbFailureCopyWith<DbFailure> get copyWith;
 }
 
+/// @nodoc
 abstract class $DbFailureCopyWith<$Res> {
   factory $DbFailureCopyWith(DbFailure value, $Res Function(DbFailure) then) =
       _$DbFailureCopyWithImpl<$Res>;
   $Res call({String error});
 }
 
+/// @nodoc
 class _$DbFailureCopyWithImpl<$Res> implements $DbFailureCopyWith<$Res> {
   _$DbFailureCopyWithImpl(this._value, this._then);
 
@@ -93,6 +98,7 @@ class _$DbFailureCopyWithImpl<$Res> implements $DbFailureCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class $UnableToSaveCopyWith<$Res> implements $DbFailureCopyWith<$Res> {
   factory $UnableToSaveCopyWith(
           UnableToSave value, $Res Function(UnableToSave) then) =
@@ -101,6 +107,7 @@ abstract class $UnableToSaveCopyWith<$Res> implements $DbFailureCopyWith<$Res> {
   $Res call({String error});
 }
 
+/// @nodoc
 class _$UnableToSaveCopyWithImpl<$Res> extends _$DbFailureCopyWithImpl<$Res>
     implements $UnableToSaveCopyWith<$Res> {
   _$UnableToSaveCopyWithImpl(
@@ -120,6 +127,7 @@ class _$UnableToSaveCopyWithImpl<$Res> extends _$DbFailureCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$UnableToSave implements UnableToSave {
   const _$UnableToSave({this.error});
 
@@ -213,6 +221,7 @@ abstract class UnableToSave implements DbFailure {
   $UnableToSaveCopyWith<UnableToSave> get copyWith;
 }
 
+/// @nodoc
 abstract class $ResourceAlreadyPresentCopyWith<$Res>
     implements $DbFailureCopyWith<$Res> {
   factory $ResourceAlreadyPresentCopyWith(ResourceAlreadyPresent value,
@@ -222,6 +231,7 @@ abstract class $ResourceAlreadyPresentCopyWith<$Res>
   $Res call({String error});
 }
 
+/// @nodoc
 class _$ResourceAlreadyPresentCopyWithImpl<$Res>
     extends _$DbFailureCopyWithImpl<$Res>
     implements $ResourceAlreadyPresentCopyWith<$Res> {
@@ -242,6 +252,7 @@ class _$ResourceAlreadyPresentCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$ResourceAlreadyPresent implements ResourceAlreadyPresent {
   const _$ResourceAlreadyPresent(this.error) : assert(error != null);
 
@@ -336,6 +347,7 @@ abstract class ResourceAlreadyPresent implements DbFailure {
   $ResourceAlreadyPresentCopyWith<ResourceAlreadyPresent> get copyWith;
 }
 
+/// @nodoc
 abstract class $UnableToObtainListCopyWith<$Res>
     implements $DbFailureCopyWith<$Res> {
   factory $UnableToObtainListCopyWith(
@@ -345,6 +357,7 @@ abstract class $UnableToObtainListCopyWith<$Res>
   $Res call({String error});
 }
 
+/// @nodoc
 class _$UnableToObtainListCopyWithImpl<$Res>
     extends _$DbFailureCopyWithImpl<$Res>
     implements $UnableToObtainListCopyWith<$Res> {
@@ -365,6 +378,7 @@ class _$UnableToObtainListCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$UnableToObtainList implements UnableToObtainList {
   const _$UnableToObtainList({this.error});
 

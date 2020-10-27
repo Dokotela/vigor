@@ -9,6 +9,7 @@ part of 'value_failures.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$ValueFailureTearOff {
   const _$ValueFailureTearOff();
 
@@ -69,9 +70,11 @@ class _$ValueFailureTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ValueFailure = _$ValueFailureTearOff();
 
+/// @nodoc
 mixin _$ValueFailure<T> {
   T get failedValue;
 
@@ -125,6 +128,7 @@ mixin _$ValueFailure<T> {
   $ValueFailureCopyWith<T, ValueFailure<T>> get copyWith;
 }
 
+/// @nodoc
 abstract class $ValueFailureCopyWith<T, $Res> {
   factory $ValueFailureCopyWith(
           ValueFailure<T> value, $Res Function(ValueFailure<T>) then) =
@@ -132,6 +136,7 @@ abstract class $ValueFailureCopyWith<T, $Res> {
   $Res call({T failedValue});
 }
 
+/// @nodoc
 class _$ValueFailureCopyWithImpl<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
   _$ValueFailureCopyWithImpl(this._value, this._then);
@@ -151,6 +156,7 @@ class _$ValueFailureCopyWithImpl<T, $Res>
   }
 }
 
+/// @nodoc
 abstract class $InvalidUsernameCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
   factory $InvalidUsernameCopyWith(
@@ -160,6 +166,7 @@ abstract class $InvalidUsernameCopyWith<T, $Res>
   $Res call({T failedValue});
 }
 
+/// @nodoc
 class _$InvalidUsernameCopyWithImpl<T, $Res>
     extends _$ValueFailureCopyWithImpl<T, $Res>
     implements $InvalidUsernameCopyWith<T, $Res> {
@@ -181,6 +188,7 @@ class _$InvalidUsernameCopyWithImpl<T, $Res>
   }
 }
 
+/// @nodoc
 class _$InvalidUsername<T> implements InvalidUsername<T> {
   const _$InvalidUsername({@required this.failedValue})
       : assert(failedValue != null);
@@ -307,6 +315,7 @@ abstract class InvalidUsername<T> implements ValueFailure<T> {
   $InvalidUsernameCopyWith<T, InvalidUsername<T>> get copyWith;
 }
 
+/// @nodoc
 abstract class $ShortPasswordCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
   factory $ShortPasswordCopyWith(
@@ -316,6 +325,7 @@ abstract class $ShortPasswordCopyWith<T, $Res>
   $Res call({T failedValue});
 }
 
+/// @nodoc
 class _$ShortPasswordCopyWithImpl<T, $Res>
     extends _$ValueFailureCopyWithImpl<T, $Res>
     implements $ShortPasswordCopyWith<T, $Res> {
@@ -337,6 +347,7 @@ class _$ShortPasswordCopyWithImpl<T, $Res>
   }
 }
 
+/// @nodoc
 class _$ShortPassword<T> implements ShortPassword<T> {
   const _$ShortPassword({@required this.failedValue})
       : assert(failedValue != null);
@@ -462,6 +473,7 @@ abstract class ShortPassword<T> implements ValueFailure<T> {
   $ShortPasswordCopyWith<T, ShortPassword<T>> get copyWith;
 }
 
+/// @nodoc
 abstract class $ShortRegistrationNameCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
   factory $ShortRegistrationNameCopyWith(ShortRegistrationName<T> value,
@@ -471,6 +483,7 @@ abstract class $ShortRegistrationNameCopyWith<T, $Res>
   $Res call({T failedValue});
 }
 
+/// @nodoc
 class _$ShortRegistrationNameCopyWithImpl<T, $Res>
     extends _$ValueFailureCopyWithImpl<T, $Res>
     implements $ShortRegistrationNameCopyWith<T, $Res> {
@@ -493,6 +506,7 @@ class _$ShortRegistrationNameCopyWithImpl<T, $Res>
   }
 }
 
+/// @nodoc
 class _$ShortRegistrationName<T> implements ShortRegistrationName<T> {
   const _$ShortRegistrationName({@required this.failedValue})
       : assert(failedValue != null);
@@ -620,6 +634,7 @@ abstract class ShortRegistrationName<T> implements ValueFailure<T> {
   $ShortRegistrationNameCopyWith<T, ShortRegistrationName<T>> get copyWith;
 }
 
+/// @nodoc
 abstract class $NotAGenderCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
   factory $NotAGenderCopyWith(
@@ -629,6 +644,7 @@ abstract class $NotAGenderCopyWith<T, $Res>
   $Res call({T failedValue});
 }
 
+/// @nodoc
 class _$NotAGenderCopyWithImpl<T, $Res>
     extends _$ValueFailureCopyWithImpl<T, $Res>
     implements $NotAGenderCopyWith<T, $Res> {
@@ -650,6 +666,7 @@ class _$NotAGenderCopyWithImpl<T, $Res>
   }
 }
 
+/// @nodoc
 class _$NotAGender<T> implements NotAGender<T> {
   const _$NotAGender({@required this.failedValue})
       : assert(failedValue != null);
@@ -775,6 +792,7 @@ abstract class NotAGender<T> implements ValueFailure<T> {
   $NotAGenderCopyWith<T, NotAGender<T>> get copyWith;
 }
 
+/// @nodoc
 abstract class $NotABarrioCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
   factory $NotABarrioCopyWith(
@@ -784,6 +802,7 @@ abstract class $NotABarrioCopyWith<T, $Res>
   $Res call({T failedValue});
 }
 
+/// @nodoc
 class _$NotABarrioCopyWithImpl<T, $Res>
     extends _$ValueFailureCopyWithImpl<T, $Res>
     implements $NotABarrioCopyWith<T, $Res> {
@@ -805,6 +824,7 @@ class _$NotABarrioCopyWithImpl<T, $Res>
   }
 }
 
+/// @nodoc
 class _$NotABarrio<T> implements NotABarrio<T> {
   const _$NotABarrio({@required this.failedValue})
       : assert(failedValue != null);
@@ -930,6 +950,7 @@ abstract class NotABarrio<T> implements ValueFailure<T> {
   $NotABarrioCopyWith<T, NotABarrio<T>> get copyWith;
 }
 
+/// @nodoc
 abstract class $NotARelationCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
   factory $NotARelationCopyWith(
@@ -939,6 +960,7 @@ abstract class $NotARelationCopyWith<T, $Res>
   $Res call({T failedValue});
 }
 
+/// @nodoc
 class _$NotARelationCopyWithImpl<T, $Res>
     extends _$ValueFailureCopyWithImpl<T, $Res>
     implements $NotARelationCopyWith<T, $Res> {
@@ -960,6 +982,7 @@ class _$NotARelationCopyWithImpl<T, $Res>
   }
 }
 
+/// @nodoc
 class _$NotARelation<T> implements NotARelation<T> {
   const _$NotARelation({@required this.failedValue})
       : assert(failedValue != null);
@@ -1085,6 +1108,7 @@ abstract class NotARelation<T> implements ValueFailure<T> {
   $NotARelationCopyWith<T, NotARelation<T>> get copyWith;
 }
 
+/// @nodoc
 abstract class $FutureDateCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
   factory $FutureDateCopyWith(
@@ -1094,6 +1118,7 @@ abstract class $FutureDateCopyWith<T, $Res>
   $Res call({T failedValue});
 }
 
+/// @nodoc
 class _$FutureDateCopyWithImpl<T, $Res>
     extends _$ValueFailureCopyWithImpl<T, $Res>
     implements $FutureDateCopyWith<T, $Res> {
@@ -1115,6 +1140,7 @@ class _$FutureDateCopyWithImpl<T, $Res>
   }
 }
 
+/// @nodoc
 class _$FutureDate<T> implements FutureDate<T> {
   const _$FutureDate({@required this.failedValue})
       : assert(failedValue != null);
@@ -1240,6 +1266,7 @@ abstract class FutureDate<T> implements ValueFailure<T> {
   $FutureDateCopyWith<T, FutureDate<T>> get copyWith;
 }
 
+/// @nodoc
 abstract class $FhirPrimitiveFailCopyWith<T, $Res>
     implements $ValueFailureCopyWith<T, $Res> {
   factory $FhirPrimitiveFailCopyWith(FhirPrimitiveFail<T> value,
@@ -1249,6 +1276,7 @@ abstract class $FhirPrimitiveFailCopyWith<T, $Res>
   $Res call({T failedValue});
 }
 
+/// @nodoc
 class _$FhirPrimitiveFailCopyWithImpl<T, $Res>
     extends _$ValueFailureCopyWithImpl<T, $Res>
     implements $FhirPrimitiveFailCopyWith<T, $Res> {
@@ -1270,6 +1298,7 @@ class _$FhirPrimitiveFailCopyWithImpl<T, $Res>
   }
 }
 
+/// @nodoc
 class _$FhirPrimitiveFail<T> implements FhirPrimitiveFail<T> {
   const _$FhirPrimitiveFail({@required this.failedValue})
       : assert(failedValue != null);

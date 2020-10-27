@@ -1,5 +1,6 @@
 import 'package:fhir/r4.dart';
 import 'package:get/get.dart';
+import 'package:vax_cast/vax_cast.dart';
 import 'package:vigor/interfaces/i_fhir_db.dart';
 import 'package:vigor/interfaces/i_vax_cast.dart';
 
@@ -12,10 +13,12 @@ class PatientModel {
     this.pastImmunizations,
     this.immEvaluations,
     this.recommendation,
+    this.pastImmMap,
   }) {
     medsAdministered ??= <MedicationAdministration>[];
     pastImmunizations ??= <Immunization>[];
     immEvaluations ??= <ImmunizationEvaluation>[];
+    pastImmMap ??= <String, List<Immunization>>{};
   }
 
   Patient patient;
@@ -23,17 +26,37 @@ class PatientModel {
   List<Immunization> pastImmunizations;
   List<ImmunizationEvaluation> immEvaluations;
   ImmunizationRecommendation recommendation;
+  Map<String, List<Immunization>> pastImmMap;
 
-  void loadImmunizations() {
+  Future loadImmunizations() async {
     final iFhirDb = IFhirDb();
-    iFhirDb
+    await iFhirDb
         .returnPatientImmunizationHistory(patient.id.toString())
         .then((result) {
       result.fold(
-          (ifLeft) => Get.snackbar('Error', '${ifLeft.error}'),
-          (ifRight) => ifRight.forEach(
+          (l) => Get.snackbar('Error', '${l.error}'),
+          (r) => r.forEach(
               (resource) => pastImmunizations.add(resource as Immunization)));
     });
+  }
+
+  void createHx() {
+    for (var imm in pastImmunizations) {
+      final cvx = imm.vaccineCode.coding
+          .firstWhere(
+              (coding) =>
+                  coding.system == FhirUri('http://hl7.org/fhir/sid/cvx'),
+              orElse: () => null)
+          ?.code
+          ?.toString();
+      if (cvx != null) {
+        for (var ag in simpleCvxMap[cvx].antigens) {
+          pastImmMap.containsKey(ag)
+              ? pastImmMap[ag].add(imm)
+              : pastImmMap[ag] = [imm];
+        }
+      }
+    }
   }
 
   Future getImmunizationRecommendation() async {

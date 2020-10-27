@@ -9,6 +9,7 @@ part of 'patient_immunizations_controller.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$PatientImmunizationsStateTearOff {
   const _$PatientImmunizationsStateTearOff();
 
@@ -27,9 +28,11 @@ class _$PatientImmunizationsStateTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $PatientImmunizationsState = _$PatientImmunizationsStateTearOff();
 
+/// @nodoc
 mixin _$PatientImmunizationsState {
   PatientModel get patient;
   List<ImmunizationEvaluation> get immEvals;
@@ -39,6 +42,7 @@ mixin _$PatientImmunizationsState {
   $PatientImmunizationsStateCopyWith<PatientImmunizationsState> get copyWith;
 }
 
+/// @nodoc
 abstract class $PatientImmunizationsStateCopyWith<$Res> {
   factory $PatientImmunizationsStateCopyWith(PatientImmunizationsState value,
           $Res Function(PatientImmunizationsState) then) =
@@ -50,6 +54,7 @@ abstract class $PatientImmunizationsStateCopyWith<$Res> {
       List<ImmunizationRecommendationRecommendation> displayImmRecs});
 }
 
+/// @nodoc
 class _$PatientImmunizationsStateCopyWithImpl<$Res>
     implements $PatientImmunizationsStateCopyWith<$Res> {
   _$PatientImmunizationsStateCopyWithImpl(this._value, this._then);
@@ -80,6 +85,7 @@ class _$PatientImmunizationsStateCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$PatientImmunizationsStateCopyWith<$Res>
     implements $PatientImmunizationsStateCopyWith<$Res> {
   factory _$PatientImmunizationsStateCopyWith(_PatientImmunizationsState value,
@@ -93,6 +99,7 @@ abstract class _$PatientImmunizationsStateCopyWith<$Res>
       List<ImmunizationRecommendationRecommendation> displayImmRecs});
 }
 
+/// @nodoc
 class __$PatientImmunizationsStateCopyWithImpl<$Res>
     extends _$PatientImmunizationsStateCopyWithImpl<$Res>
     implements _$PatientImmunizationsStateCopyWith<$Res> {
@@ -126,6 +133,7 @@ class __$PatientImmunizationsStateCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_PatientImmunizationsState implements _PatientImmunizationsState {
   const _$_PatientImmunizationsState(
       {this.patient, this.immEvals, this.fullImmRecs, this.displayImmRecs});
