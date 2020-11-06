@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../ui/views/views.dart';
 
 BottomAppBar bottomAppBar = BottomAppBar(
   color: Colors.blue[900],
@@ -12,11 +13,11 @@ BottomAppBar bottomAppBar = BottomAppBar(
       ),
       IconButton(
         icon: const Icon(Icons.home, color: Colors.white),
-        onPressed: () => Get.offAll<Widget>(HomeScreen()),
+        onPressed: () => Get.offAll<Widget>(HomeView()),
       ),
       IconButton(
         icon: const Icon(Icons.exit_to_app, color: Colors.white),
-        onPressed: () => Get.offAll<Widget>(LoginScreen()),
+        onPressed: () => Get.offAll<Widget>(LoginView()),
       ),
     ],
   ),
@@ -29,7 +30,7 @@ BottomAppBar homeBottomAppBar = BottomAppBar(
     children: [
       IconButton(
         icon: const Icon(Icons.exit_to_app, color: Colors.white),
-        onPressed: () => Get.to<Widget>(LoginScreen()),
+        onPressed: () => Get.to<Widget>(LoginView()),
       ),
     ],
   ),

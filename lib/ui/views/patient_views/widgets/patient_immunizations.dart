@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../controllers/patient_screens/patient_immunizations/patient_immunizations_controller.dart';
-
 class PatientImmunizations extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

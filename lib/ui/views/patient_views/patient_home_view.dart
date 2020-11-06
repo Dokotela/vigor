@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../controllers/patient_screens/patient_home_controller.dart';
-import '../theme/theme.dart';
-
 import 'widgets/info_banner.dart';
 import 'widgets/patient_growth_curve.dart';
 import 'widgets/patient_immunizations.dart';
 
-class PatientHome extends StatelessWidget {
+class PatientHomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<PatientHomeController>(

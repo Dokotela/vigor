@@ -3,21 +3,31 @@ import '../ui/views/views.dart';
 
 part 'app_routes.dart';
 
-abstract class AppPages {
-  static final pages = [
-    GetPage(name: Routes.HOME, page: () => HomeView()),
-    GetPage(
-      name: Routes.LOGIN,
-      page: () => LoginView(),
-      // binding: SurveyBinding(),
-    ),
-    GetPage(
-      name: Routes.PATIENT_REGISTRATION,
-      page: () => PatientRegistrationView(),
-    ),
-    GetPage(
-      name: Routes.CONTACT_REGISTRATION,
-      page: () => ContactRegistrationView(),
-    ),
-  ];
-}
+final appPages = [
+  GetPage(name: AppRoutes.HOME, page: () => HomeView()),
+  GetPage(
+    name: AppRoutes.LOGIN,
+    page: () => LoginView(),
+    // binding: SurveyBinding(),
+  ),
+  GetPage(
+    name: AppRoutes.PATIENT_REGISTRATION,
+    page: () => PatientRegistrationView(),
+  ),
+  GetPage(
+    name: AppRoutes.CONTACT_REGISTRATION,
+    page: () => ContactRegistrationView(),
+  ),
+  GetPage(
+    name: AppRoutes.PATIENT_SEARCH,
+    page: () => ContactRegistrationView(),
+  ),
+  GetPage(
+    name: AppRoutes.PATIENT_HOME,
+    page: () => PatientHomeView(),
+  ),
+  GetPage(
+    name: AppRoutes.CONTACT_REGISTRATION,
+    page: () => ContactRegistrationView(),
+  ),
+];

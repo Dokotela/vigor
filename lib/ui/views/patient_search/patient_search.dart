@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vigor/_internal/extended_widgets/bottom_navigation_bar.dart';
 
 import '../views.dart';
 import 'patient_search_button_controller.dart';
@@ -40,7 +41,7 @@ class PatientSearchView extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(16.0),
                       ),
-                      onPressed: () => Get.to(PatientRegistrationScreen()),
+                      onPressed: () => Get.to(PatientRegistrationView()),
                       child: Text(
                         'Register New Patient'.tr,
                         textAlign: TextAlign.center,

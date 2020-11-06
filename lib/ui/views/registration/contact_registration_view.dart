@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import '../../controllers/registration/contact_registration_bloc/contact_registration_controller.dart';
-import '../widgets/shared_widgets.dart';
+import 'package:vigor/_internal/extended_widgets/bottom_navigation_bar.dart';
 
 import 'widgets/barrio.dart';
 import 'widgets/names.dart';

@@ -3,10 +3,14 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
+import 'controllers/commands/locale_controller.dart';
+import 'controllers/commands/theme_controller.dart';
 import 'localization.dart';
+import 'routes/routes.dart';
+import 'ui/styled_components/styled_loading.dart';
 import 'ui/views/views.dart';
 
-void main() async {
+Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await _initServices();
   runApp(MyApp());
@@ -29,8 +33,8 @@ class MyApp extends StatelessWidget {
           child: GetMaterialApp(
             // *** LOCALES ***
             locale: localeService.getLocale, // <- Current locale
-            localizationsDelegates: [
-              const AppLocalizationsDelegate(), // <- Your custom delegate
+            localizationsDelegates: const [
+              AppLocalizationsDelegate(), // <- Your custom delegate
               GlobalMaterialLocalizations.delegate,
               GlobalWidgetsLocalizations.delegate,
             ],
@@ -45,7 +49,7 @@ class MyApp extends StatelessWidget {
             // *** ROUTES ***
             // initialRoute: "/",
             home: HomeView(),
-            getPages: AppPages.pages,
+            getPages: appPages,
             debugShowCheckedModeBanner: false,
             //defaultTransition: Transition.fade,
           ),

@@ -1,4 +1,4 @@
-import '../../models/_internal/const.dart';
+import '../constants/constants.dart';
 
 bool isValidRegistrationName(String name) => name.length >= 2;
 

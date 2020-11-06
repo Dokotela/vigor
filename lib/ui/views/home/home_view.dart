@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
+import 'package:vigor/_internal/extended_widgets/bottom_navigation_bar.dart';
+import '../../styled_components/action_button.dart';
 import '../views.dart';
 
 class HomeView extends StatelessWidget {
@@ -23,11 +24,11 @@ class HomeView extends StatelessWidget {
           children: [
             ActionButton(
               buttonText: 'New Patient', //todo: translate
-              onPressed: () => Get.to(PatientRegistrationScreen()),
+              onPressed: () => Get.to(PatientRegistrationView()),
             ),
             ActionButton(
               buttonText: 'All Patients', //todo: translate
-              onPressed: () => Get.to(PatientSearch()),
+              onPressed: () => Get.to(PatientSearchView()),
             ),
             const ActionButton(
               buttonText: 'My Schedule', //todo: translate
