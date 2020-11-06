@@ -1,10 +1,10 @@
 import 'package:fhir/r4.dart';
 import 'package:get/get.dart';
 import 'package:vax_cast/vax_cast.dart';
-import 'package:vigor/interfaces/i_fhir_db.dart';
-import 'package:vigor/interfaces/i_vax_cast.dart';
+import 'package:vigor/api/i_fhir_db.dart';
+import 'package:vigor/api/i_vax_cast.dart';
 
-import '_internal/formatters.dart';
+import '../../_internal/utils/utils.dart';
 
 class PatientModel {
   PatientModel({

@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vigor/views/patient_search/patient_search.dart';
-import 'package:vigor/views/widgets/shared_widgets.dart';
 
 import '../screens.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

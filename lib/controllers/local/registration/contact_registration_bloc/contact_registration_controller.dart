@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:get/get.dart';
 
-import '../../../interfaces/i_fhir_db.dart';
+import '../../../api/i_fhir_db.dart';
 import '../../../models/_internal/const.dart';
 import '../../../models/_internal/formatters.dart';
 import '../../../models/_internal/validators.dart';

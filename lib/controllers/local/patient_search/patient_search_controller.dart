@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:get/get.dart';
 
-import '../../interfaces/i_fhir_db.dart';
+import '../../api/i_fhir_db.dart';
 import '../../models/_internal/patient_name.dart';
 import '../../models/_internal/simple_date.dart';
 import '../../views/screens.dart';

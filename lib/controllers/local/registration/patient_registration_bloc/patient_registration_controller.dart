@@ -4,8 +4,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:get/get.dart';
 import 'package:vigor/views/screens.dart';
 import 'package:vigor/models/_internal/const.dart';
-import 'package:vigor/models/_internal/formatters.dart';
-import 'package:vigor/models/_internal/validators.dart';
+import 'package:vigor/_internal/utils/utils.dart';
+import 'package:vigor/_internal/utils/validators.dart';
 
 part 'patient_registration_controller.freezed.dart';
 part 'patient_registration_state.dart';
