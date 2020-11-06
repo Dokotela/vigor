@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../screens.dart';
+import '../views.dart';
 
 class HomeView extends StatelessWidget {
   @override

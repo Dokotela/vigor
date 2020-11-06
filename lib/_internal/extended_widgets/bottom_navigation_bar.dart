@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../screens.dart';
-
 BottomAppBar bottomAppBar = BottomAppBar(
   color: Colors.blue[900],
   child: Row(

@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../controllers/patient_search/patient_search_controller.dart';
-import '../../views/widgets/shared_widgets.dart';
-
-import '../screens.dart';
+import '../views.dart';
 import 'patient_search_button_controller.dart';
 
-class PatientSearch extends StatelessWidget {
+class PatientSearchView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<PatientSearchController>(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../screens.dart';
+import '../../views.dart';
 
 class LoginButtonWidget extends StatelessWidget {
   const LoginButtonWidget({
@@ -21,7 +21,7 @@ class LoginButtonWidget extends StatelessWidget {
       child: MaterialButton(
         minWidth: Get.width,
         padding: padding,
-        onPressed: () => Get.to<Widget>(HomeScreen()),
+        onPressed: () => Get.to<Widget>(HomeView()),
         child: Text(login, textAlign: TextAlign.center),
       ),
     );

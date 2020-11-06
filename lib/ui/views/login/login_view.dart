@@ -6,10 +6,11 @@ import 'widgets/login_button.dart';
 import 'widgets/login_field.dart';
 import 'widgets/splash_title.dart';
 
-class LoginScreen extends StatelessWidget {
+class LoginView extends StatelessWidget {
   static const _padding = EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0);
 
-// const String country = 'botswana';
+  /// ToDo: make localization work by country
+  // const String country = 'botswana';
   // static const String _country = 'dominican_republic';
   static const String _country = 'usa';
 

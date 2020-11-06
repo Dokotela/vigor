@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../controllers/registration/contact_registration_bloc/contact_registration_controller.dart';
-import '../../views/widgets/shared_widgets.dart';
+import '../widgets/shared_widgets.dart';
 
 import 'widgets/barrio.dart';
 import 'widgets/names.dart';
 import 'widgets/relation.dart';
 
-class ContactRegistration extends StatelessWidget {
+class ContactRegistrationView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<ContactRegistrationController>(

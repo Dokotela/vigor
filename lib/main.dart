@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
 import 'localization.dart';
-import 'ui/views/screens.dart';
+import 'ui/views/views.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

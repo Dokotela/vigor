@@ -9,7 +9,7 @@ import 'widgets/birthDate.dart';
 import 'widgets/gender.dart';
 import 'widgets/names.dart';
 
-class PatientRegistrationScreen extends StatelessWidget {
+class PatientRegistrationView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<PatientRegistrationController>(
