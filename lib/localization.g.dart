@@ -68,6 +68,9 @@ class AppLocalizations {
         relationship: "Relationship",
         search: "Search",
         submitShare: "Submit/Share",
+        newPatient: "New Patient",
+        allPatients: "All Patients",
+        mySchedule: "My Schedule",
         address: AppLocalizations_Labels_General_Address(
           city: "City",
           country: "Country",
@@ -308,6 +311,9 @@ class AppLocalizations {
         relationship: "Relación",
         search: "Buscar",
         submitShare: "Presentar / Compartir",
+        newPatient: "Paciente nuevo",
+        allPatients: "todos los pacientes",
+        mySchedule: "Mi horario",
         address: AppLocalizations_Labels_General_Address(
           city: "Ciudad",
           country: "País",
@@ -341,7 +347,7 @@ class AppLocalizations {
       ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "Spanish",
-        title: "Elige lengua",
+        title: "Español",
       ),
       medical: AppLocalizations_Labels_Medical(
         growth: "Crecimiento",
@@ -548,6 +554,9 @@ class AppLocalizations {
         relationship: "صلة",
         search: "بحث",
         submitShare: "إرسال / حصة",
+        newPatient: "مريض جديد",
+        allPatients: "كل المرضى",
+        mySchedule: "جدولي",
         address: AppLocalizations_Labels_General_Address(
           city: "مدينة",
           country: "بلد",
@@ -581,7 +590,7 @@ class AppLocalizations {
       ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "Arabic",
-        title: "اختيار اللغة",
+        title: "عربى",
       ),
       medical: AppLocalizations_Labels_Medical(
         growth: "نمو",
@@ -785,6 +794,9 @@ class AppLocalizations {
         relationship: "संबंध",
         search: "खोज",
         submitShare: "जमा करें / शेयर",
+        newPatient: "नए रोगी",
+        allPatients: "सभी मरीजों को",
+        mySchedule: "मेरे अनुसूची",
         address: AppLocalizations_Labels_General_Address(
           city: "Faridabad",
           country: "देश",
@@ -818,7 +830,7 @@ class AppLocalizations {
       ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "Hindi",
-        title: "भाषा चुनें",
+        title: "हिंदी",
       ),
       medical: AppLocalizations_Labels_Medical(
         growth: "विकास",
@@ -1024,6 +1036,9 @@ class AppLocalizations {
         relationship: "отношения",
         search: "Поиск",
         submitShare: "Отправить / Share",
+        newPatient: "Новый пациент",
+        allPatients: "Все пациенты",
+        mySchedule: "Мое расписание",
         address: AppLocalizations_Labels_General_Address(
           city: "город",
           country: "Страна",
@@ -1057,7 +1072,7 @@ class AppLocalizations {
       ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "Russian",
-        title: "Выберите язык",
+        title: "русский",
       ),
       medical: AppLocalizations_Labels_Medical(
         growth: "рост",
@@ -1267,6 +1282,9 @@ class AppLocalizations {
         relationship: "সম্পর্ক",
         search: "অনুসন্ধান করুন",
         submitShare: "জমা দিন / শেয়ার",
+        newPatient: "নিউ রোগীর",
+        allPatients: "সব রোগীদের",
+        mySchedule: "আমার সময়সূচি",
         address: AppLocalizations_Labels_General_Address(
           city: "শহর",
           country: "দেশ",
@@ -1300,7 +1318,7 @@ class AppLocalizations {
       ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "Bengali",
-        title: "ভাষা নির্বাচন করুন",
+        title: "বাংলা",
       ),
       medical: AppLocalizations_Labels_Medical(
         growth: "উন্নতি",
@@ -1505,6 +1523,9 @@ class AppLocalizations {
         relationship: "relationship",
         search: "ရှာဖှေ",
         submitShare: "Submit / ဝေမျှမယ်",
+        newPatient: "နယူးလူနာ",
+        allPatients: "အားလုံးလူနာများ",
+        mySchedule: "အကြှနျုပျ၏ဇယား",
         address: AppLocalizations_Labels_General_Address(
           city: "မြို့",
           country: "ပြည်",
@@ -1538,7 +1559,7 @@ class AppLocalizations {
       ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "Burmese",
-        title: "ဘာသာစကားများကိုရွေးချယ်ပါ",
+        title: "မြန်မာ",
       ),
       medical: AppLocalizations_Labels_Medical(
         growth: "တိုးတက်မှုနှုန်း",
@@ -1746,6 +1767,9 @@ class AppLocalizations {
         relationship: "关系",
         search: "搜索",
         submitShare: "提交/股",
+        newPatient: "新患者",
+        allPatients: "所有患者",
+        mySchedule: "我的日程表",
         address: AppLocalizations_Labels_General_Address(
           city: "市",
           country: "国家",
@@ -1779,7 +1803,7 @@ class AppLocalizations {
       ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "Chinese (Simplified)",
-        title: "选择语言",
+        title: "简体中文）",
       ),
       medical: AppLocalizations_Labels_Medical(
         growth: "发展",
@@ -1970,6 +1994,9 @@ class AppLocalizations {
         relationship: "關係",
         search: "搜索",
         submitShare: "提交/股",
+        newPatient: "新患者",
+        allPatients: "所有患者",
+        mySchedule: "我的日程表",
         address: AppLocalizations_Labels_General_Address(
           city: "市",
           country: "國家",
@@ -2002,8 +2029,8 @@ class AppLocalizations {
         ),
       ),
       language: AppLocalizations_Labels_Language(
-        inEnglish: "Chinese(Traditional)",
-        title: "選擇語言",
+        inEnglish: "Chinese (Traditional)",
+        title: "中國傳統的）",
       ),
       medical: AppLocalizations_Labels_Medical(
         growth: "發展",
@@ -2194,6 +2221,9 @@ class AppLocalizations {
         relationship: "ارتباط",
         search: "جستجو کردن",
         submitShare: "ارسال / اشتراک",
+        newPatient: "بیمار جدید",
+        allPatients: "همه بیماران",
+        mySchedule: "برنامه من",
         address: AppLocalizations_Labels_General_Address(
           city: "شهرستان",
           country: "کشور",
@@ -2227,7 +2257,7 @@ class AppLocalizations {
       ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "Farsi",
-        title: "زبان را انتخاب کنید",
+        title: "فارسی",
       ),
       medical: AppLocalizations_Labels_Medical(
         growth: "رشد",
@@ -2433,6 +2463,9 @@ class AppLocalizations {
         relationship: "Relation",
         search: "Chercher",
         submitShare: "Déposer / Partager",
+        newPatient: "nouveau patient",
+        allPatients: "tous les patients",
+        mySchedule: "Mon emploi du temps",
         address: AppLocalizations_Labels_General_Address(
           city: "Ville",
           country: "Pays",
@@ -2466,7 +2499,7 @@ class AppLocalizations {
       ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "French",
-        title: "Choose language",
+        title: "français",
       ),
       medical: AppLocalizations_Labels_Medical(
         growth: "Croissance",
@@ -2675,6 +2708,9 @@ class AppLocalizations {
         relationship: "Beziehung",
         search: "Suche",
         submitShare: "Senden / Share",
+        newPatient: "Neuer Patient",
+        allPatients: "alle Patienten",
+        mySchedule: "Mein Terminplan",
         address: AppLocalizations_Labels_General_Address(
           city: "Stadt",
           country: "Land",
@@ -2708,7 +2744,7 @@ class AppLocalizations {
       ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "German",
-        title: "Sprache wählen",
+        title: "Deutsche",
       ),
       medical: AppLocalizations_Labels_Medical(
         growth: "Wachstum",
@@ -2916,6 +2952,9 @@ class AppLocalizations {
         relationship: "Hubungan",
         search: "Cari",
         submitShare: "Menyerahkan / Share",
+        newPatient: "Pasien baru",
+        allPatients: "semua Pasien",
+        mySchedule: "Jadwal saya",
         address: AppLocalizations_Labels_General_Address(
           city: "Kota",
           country: "Negara",
@@ -2949,7 +2988,7 @@ class AppLocalizations {
       ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "Indonesian",
-        title: "Pilih bahasa",
+        title: "bahasa Indonesia",
       ),
       medical: AppLocalizations_Labels_Medical(
         growth: "Pertumbuhan",
@@ -3101,6 +3140,240 @@ class AppLocalizations {
         updateProfile: "Memperbaharui profil",
       ),
     ),
+    Locale.fromSubtags(languageCode: "ja"): AppLocalizations_Labels(
+      app: AppLocalizations_Labels_App(
+        chooseLanguage: "言語を選択",
+        chooseTheme: "テーマを選択してください",
+        settings: "アプリの設定",
+        system: "システム",
+        title: "Prapare",
+      ),
+      auth: AppLocalizations_Labels_Auth(
+        cancel: "キャンセル",
+        changePassword: "パスワードを変更する",
+        email: "Eメール",
+        password: "パスワード",
+        resetPassword: "パスワードを再設定する",
+        signIn: "サインイン",
+        signUp: "サインアップ",
+        submit: "参加する",
+        userName: "ユーザー名",
+      ),
+      dates: AppLocalizations_Labels_Dates(
+        month: AppLocalizations_Labels_Dates_Month(
+          april: "四月",
+          august: "八月",
+          december: "12月",
+          february: "2月",
+          january: "1月",
+          july: "七月",
+          june: "六月",
+          march: "行進",
+          may: "五月",
+          november: "十一月",
+          october: "10月",
+          september: "九月",
+        ),
+        weekday: AppLocalizations_Labels_Dates_Weekday(
+          friday: "金曜日",
+          monday: "月曜",
+          saturday: "土曜日",
+          sunday: "日曜日",
+          thursday: "木曜日",
+          tuesday: "火曜日",
+          wednesday: "水曜日",
+        ),
+      ),
+      general: AppLocalizations_Labels_General(
+        birthDate: "誕生日",
+        dateofBirth: "生年月日",
+        editSurvey: "編集調査",
+        familyName: "苗字",
+        female: "女性",
+        givenNames: "名前",
+        male: "男性",
+        newSurvey: "新しい調査",
+        relationship: "関係",
+        search: "探す",
+        submitShare: "送信/共有",
+        newPatient: "新しい患者",
+        allPatients: "すべての患者",
+        mySchedule: "私のスケジュール",
+        address: AppLocalizations_Labels_General_Address(
+          city: "市",
+          country: "国",
+          county: "郡",
+          district: "地区",
+          neighborhood: "ご近所",
+          postalCode: "郵便番号",
+          state: "状態",
+          title: "住所",
+        ),
+        relation: AppLocalizations_Labels_General_Relation(
+          aunt: "叔母",
+          brother: "兄",
+          daughter: "娘",
+          father: "お父さん",
+          grandfather: "祖父",
+          grandmother: "祖母",
+          mother: "母",
+          nephew: "甥",
+          niece: "姪",
+          sister: "シスター",
+          son: "息子",
+          title: "関係",
+          uncle: "おじさん",
+        ),
+        sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
+          female: "女性",
+          male: "男性",
+          title: "出生時のセックス",
+        ),
+      ),
+      language: AppLocalizations_Labels_Language(
+        inEnglish: "Japanese",
+        title: "日本語",
+      ),
+      medical: AppLocalizations_Labels_Medical(
+        growth: "成長",
+        immunization: "免疫",
+        immunizations: "予防接種",
+        vaccine: "ワクチン",
+        vaccines: "ワクチン",
+      ),
+      prapare: AppLocalizations_Labels_Prapare(
+        title: "対応や患者の資産を評価するための議定書、リスク、および経験[PRAPARE]",
+        answers: AppLocalizations_Labels_Prapare_Answers(
+          chooseNotToAnswer: "私はこの質問に答えるしないことを選択します",
+          no: "番号",
+          yes: "はい",
+          housing: AppLocalizations_Labels_Prapare_Answers_Housing(
+            iDoNotHaveHousing:
+                "私は（ビーチで、車の中で、あるいは公園で、路上で外に住んで、避難所では、ホテル内に他の人と一緒に暮らす、）は、ハウジングを持っていません",
+            iHaveHousing: "私は住宅を持っています",
+          ),
+          howMuch: AppLocalizations_Labels_Prapare_Answers_HowMuch(
+            aLittleBit: "若干",
+            notAtAll: "どういたしまして",
+            quiteABit: "かなり",
+            somewhat: "幾分",
+            veryMuch: "とても",
+          ),
+          howOften: AppLocalizations_Labels_Prapare_Answers_HowOften(
+            fiftyOrMoreTimesAWeek: "5回以上週",
+            lessThanOnceAWeek: "週に一回未満",
+            oneOrTwoTimesAWeek: "1または2回の週",
+            threeToFiveTimesAWeek: "3〜5回週",
+          ),
+          insurance: AppLocalizations_Labels_Prapare_Answers_Insurance(
+            chipMedicaid: "CHIPメディケイド",
+            medicaid: "メディケイド",
+            medicare: "メディケア",
+            noneOrUninsured: "なし/無保険",
+            otherPublicInsuranceChip: "その他の公的保険（CHIP）",
+            otherPublicInsuranceNotChip: "その他の公的保険（ないCHIP）",
+            privateInsurance: "民間の保険",
+          ),
+          language: AppLocalizations_Labels_Prapare_Answers_Language(
+            english: "英語",
+            languageOtherThanEnglish: "英語以外の言語",
+          ),
+          race: AppLocalizations_Labels_Prapare_Answers_Race(
+            americanIndianAlaskanNative: "アメリカインディアン/アラスカネイティブ",
+            asian: "アジアの",
+            blackAfricanAmerican: "ブラック/アフリカ系アメリカ人",
+            nativeHawaiian: "ハワイ先住民",
+            other: "他の",
+            pacificIslander: "太平洋諸島",
+            white: "白い",
+          ),
+          school: AppLocalizations_Labels_Prapare_Answers_School(
+            highSchoolDiplomaOrGed: "高校の卒業証書またはGED",
+            lessThanHighSchoolDegree: "高校度未満",
+            moreThanHighSchool: "高校以上",
+          ),
+          transportation:
+              AppLocalizations_Labels_Prapare_Answers_Transportation(
+            yesKeptFromMedical: "はい、それは医療の予定からか、私の薬を得ることから私を維持しています",
+            yesKeptFromNonMedical:
+                "はい、それは私が必要という非医療会議、予定、仕事、または物事を得ることからから私を維持しています",
+          ),
+          without: AppLocalizations_Labels_Prapare_Answers_Without(
+            childCare: "育児",
+            clothing: "衣類",
+            food: "食物",
+            medicineOrAnyHealthCare: "医学または任意のヘルスケア（医療、歯科、精神衛生、ビジョン）",
+            other: "他の",
+            phone: "電話",
+            utilities: "ユーティリティ",
+          ),
+          work: AppLocalizations_Labels_Prapare_Answers_Work(
+            fullTimeWork: "フルタイム勤務",
+            otherwiseUnemployedButNotSeekingWork:
+                "それ以外の場合は失業者が、仕事を求めていない（例：学生、引退した、無効、未払いの主介護者）",
+            partTimeOrTemporaryWork: "パートタイムや一時的な作業",
+            unemployed: "無職",
+          ),
+        ),
+        familyAndHome: AppLocalizations_Labels_Prapare_FamilyAndHome(
+          address: "あなたはどのようなアドレスに住んでいますか？",
+          household: "自分を含めどのように多くの家族、とあなたが現在住んでいますか？",
+          housing: "あなたの住宅事情は、今日は何ですか？",
+          losingHousing: "あなたの住宅を失うことを心配していますか？",
+          title: "家族とホーム",
+        ),
+        moneyAndResources: AppLocalizations_Labels_Prapare_MoneyAndResources(
+          income:
+              "昨年中は、あなたとあなたが一緒に暮らす家族のための合わせた合計収入は何でしたか？この情報は、任意の給付の資格がある場合は、私たちが判断するのに役立ちます。",
+          insurance: "あなたの主な保険は何ですか？",
+          school: "あなたが終了したことを学校の最高レベルは何ですか？",
+          title: "お金とリソース",
+          transportation:
+              "交通機関の欠如は、医療予定、会議、仕事、または日常生活に必要なものを得ることからあなたを守っていますか？",
+          without:
+              "昨年、あなたやあなたが一緒に暮らすすべての家族のメンバーは、それが本当に必要な時に、次のいずれかを取得することができませんでしたか？",
+          work: "あなたの現在の作業状況は何ですか？",
+        ),
+        optionalMeasures: AppLocalizations_Labels_Prapare_OptionalMeasures(
+          afraid: "昨年、あなたはあなたのパートナーまたはex-パートナーを恐れていますか？",
+          prison: "昨年、あなたは刑務所、刑務所、拘置所、または少年矯正施設内の行で2泊以上を費やしていますか？",
+          refugee: "あなたは難民か？",
+          safe: "あなたは物理的に、どこ現在ライブ感情的に安全だと感じますか？",
+          title: "オプションの対策",
+        ),
+        personalCharacteristics:
+            AppLocalizations_Labels_Prapare_PersonalCharacteristics(
+          language: "あなたが最も快適話す言語は何ですか？",
+          latino: "あなた自身ヒスパニック/ラテン考えるのですか？",
+          military: "あなたは、米国の軍隊から排出されていますか？",
+          race: "あなたはどちらのレース（s）はありますか？",
+          seasonalWork: "過去2年間の任意の時点で、季節や移民農作業は、収入のあなたやあなたの家族の主な情報源となっていますか？",
+          title: "個人的特徴",
+        ),
+        socialAndEmotionalHealth:
+            AppLocalizations_Labels_Prapare_SocialAndEmotionalHealth(
+          stress:
+              "誰かが、緊張緊張、不安を感じているか、彼らの心を悩まされているので、夜に眠ることができないとき、ストレスがあります。あなたはどのように強調していますか？",
+          talk:
+              "どのくらいの頻度であなたが気にして近くに感じることを人に話すかを参照してください（例：、友人や家族を訪問し、電話で友人に話し、教会やクラブの会合に行きますか）？",
+          title: "社会的、感情的な健康",
+        ),
+      ),
+      registration: AppLocalizations_Labels_Registration(
+        registerPatient: "登録患者",
+      ),
+      settings: AppLocalizations_Labels_Settings(
+        dark: "闇",
+        language: "言語",
+        light: "光",
+        ok: "OK",
+        signOut: "サインアウト",
+        system: "システム",
+        theme: "テーマ",
+        title: "設定",
+        updateProfile: "プロフィールを更新",
+      ),
+    ),
     Locale.fromSubtags(languageCode: "km"): AppLocalizations_Labels(
       app: AppLocalizations_Labels_App(
         chooseLanguage: "ជ្រើសរើសភាសា",
@@ -3157,6 +3430,9 @@ class AppLocalizations {
         relationship: "ទំនាក់ទំនង",
         search: "ស្វែងរក",
         submitShare: "ដាក់ស្នើ / ចែករំលែក",
+        newPatient: "ជម្ងឺថ្មី",
+        allPatients: "អ្នកជំងឺទាំងអស់",
+        mySchedule: "កាលវិភាគ​របស់​ខ្ញុំ",
         address: AppLocalizations_Labels_General_Address(
           city: "ទីក្រុង",
           country: "ប្រទេស",
@@ -3190,7 +3466,7 @@ class AppLocalizations {
       ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "Khmer",
-        title: "ជ្រើសរើសភាសា",
+        title: "ភាសាខ្មែរ",
       ),
       medical: AppLocalizations_Labels_Medical(
         growth: "កំណើន",
@@ -3398,6 +3674,9 @@ class AppLocalizations {
         relationship: "관계",
         search: "검색",
         submitShare: "전송 / 공유",
+        newPatient: "새로운 환자",
+        allPatients: "모든 환자",
+        mySchedule: "내 일정",
         address: AppLocalizations_Labels_General_Address(
           city: "시티",
           country: "국가",
@@ -3431,7 +3710,7 @@ class AppLocalizations {
       ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "Korean",
-        title: "언어 선택",
+        title: "한국어",
       ),
       medical: AppLocalizations_Labels_Medical(
         growth: "성장",
@@ -3629,6 +3908,9 @@ class AppLocalizations {
         relationship: "ຄວາມສໍາພັນ",
         search: "ຄົ້ນຫາ",
         submitShare: "ຍື່ນສະເຫນີ / Share",
+        newPatient: "ອົດທົນໃຫມ່",
+        allPatients: "ຄົນເຈັບທັງຫມົດ",
+        mySchedule: "ຕາຕະລາງຂອງຂ້າພະເຈົ້າ",
         address: AppLocalizations_Labels_General_Address(
           city: "ເມືອງ",
           country: "ປະເທດ",
@@ -3662,7 +3944,7 @@ class AppLocalizations {
       ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "Lao",
-        title: "ເລືອກພາສາ",
+        title: "ລາວ",
       ),
       medical: AppLocalizations_Labels_Medical(
         growth: "ການຂະຫຍາຍຕົວ",
@@ -3869,6 +4151,9 @@ class AppLocalizations {
         relationship: "संबंध",
         search: "शोधा",
         submitShare: "सबमिट करा / शेअर",
+        newPatient: "नवीन रुग्णांच्या",
+        allPatients: "सर्व रुग्णांना",
+        mySchedule: "माझे वेळापत्रक",
         address: AppLocalizations_Labels_General_Address(
           city: "सिटी",
           country: "देश",
@@ -3902,7 +4187,7 @@ class AppLocalizations {
       ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "Marathi",
-        title: "भाषा निवडा",
+        title: "मराठी",
       ),
       medical: AppLocalizations_Labels_Medical(
         growth: "वाढ",
@@ -4106,6 +4391,9 @@ class AppLocalizations {
         relationship: "सम्बन्ध",
         search: "खोज",
         submitShare: "पेश / शेयर",
+        newPatient: "नयाँ रोगी",
+        allPatients: "सबै विरामी",
+        mySchedule: "मेरो तालिका",
         address: AppLocalizations_Labels_General_Address(
           city: "शहर",
           country: "देश",
@@ -4139,7 +4427,7 @@ class AppLocalizations {
       ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "Nepali",
-        title: "भाषा चयन",
+        title: "नेपाली",
       ),
       medical: AppLocalizations_Labels_Medical(
         growth: "वृद्धि",
@@ -4345,6 +4633,9 @@ class AppLocalizations {
         relationship: "Relação",
         search: "Pesquisa",
         submitShare: "Enviar / Share",
+        newPatient: "New Patient",
+        allPatients: "Todos os pacientes",
+        mySchedule: "Meu horário",
         address: AppLocalizations_Labels_General_Address(
           city: "Cidade",
           country: "País",
@@ -4378,7 +4669,7 @@ class AppLocalizations {
       ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "Portuguese",
-        title: "Escolha o Seu idioma",
+        title: "Português",
       ),
       medical: AppLocalizations_Labels_Medical(
         growth: "Crescimento",
@@ -4586,6 +4877,9 @@ class AppLocalizations {
         relationship: "ਰਿਸ਼ਤਾ",
         search: "ਖੋਜ",
         submitShare: "ਪੇਸ਼ ਕਰੋ / share",
+        newPatient: "ਨਿਊ ਮਰੀਜ਼",
+        allPatients: "ਸਾਰੇ ਮਰੀਜ਼",
+        mySchedule: "ਮੇਰੀ ਤਹਿ",
         address: AppLocalizations_Labels_General_Address(
           city: "ਸਿਟੀ",
           country: "ਦੇਸ਼",
@@ -4619,7 +4913,7 @@ class AppLocalizations {
       ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "Punjabi",
-        title: "ਭਾਸ਼ਾ ਚੁਣੋ",
+        title: "ਪੰਜਾਬੀ ਦੇ",
       ),
       medical: AppLocalizations_Labels_Medical(
         growth: "ਵਿਕਾਸ",
@@ -4825,6 +5119,9 @@ class AppLocalizations {
         relationship: "xiriirka",
         search: "Raadi",
         submitShare: "Gudbi / Share",
+        newPatient: "bukaanka New",
+        allPatients: "All Bukaanka",
+        mySchedule: "My Schedule",
         address: AppLocalizations_Labels_General_Address(
           city: "City",
           country: "Country",
@@ -4858,7 +5155,7 @@ class AppLocalizations {
       ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "Somali",
-        title: "dooro Language",
+        title: "Soomaali",
       ),
       medical: AppLocalizations_Labels_Medical(
         growth: "Kobaca",
@@ -5067,6 +5364,9 @@ class AppLocalizations {
         relationship: "uhusiano",
         search: "Tafuta",
         submitShare: "Wasilisha / Shiriki",
+        newPatient: "mgonjwa New",
+        allPatients: "Wagonjwa wote",
+        mySchedule: "Ratiba yangu",
         address: AppLocalizations_Labels_General_Address(
           city: "City",
           country: "Nchi",
@@ -5100,7 +5400,7 @@ class AppLocalizations {
       ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "Swahili",
-        title: "Chagua LUGHA",
+        title: "Kiswahili",
       ),
       medical: AppLocalizations_Labels_Medical(
         growth: "ukuaji",
@@ -5306,6 +5606,9 @@ class AppLocalizations {
         relationship: "Relasyon",
         search: "Hanapan",
         submitShare: "Isumite / Share",
+        newPatient: "bagong Pasyente",
+        allPatients: "Ang lahat ng mga pasyente",
+        mySchedule: "Aking Talaan",
         address: AppLocalizations_Labels_General_Address(
           city: "lungsod",
           country: "bansa",
@@ -5339,7 +5642,7 @@ class AppLocalizations {
       ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "Tagalog",
-        title: "Piliin Ang Bahagi ng Pananalita",
+        title: "Tagalog",
       ),
       medical: AppLocalizations_Labels_Medical(
         growth: "paglaki",
@@ -5549,6 +5852,9 @@ class AppLocalizations {
         relationship: "ความสัมพันธ์",
         search: "ค้นหา",
         submitShare: "ส่ง / หุ้น",
+        newPatient: "ผู้ป่วยใหม่",
+        allPatients: "ผู้ป่วยทั้งหมด",
+        mySchedule: "ตารางของฉัน",
         address: AppLocalizations_Labels_General_Address(
           city: "เมือง",
           country: "ประเทศ",
@@ -5582,7 +5888,7 @@ class AppLocalizations {
       ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "Thai",
-        title: "เลือกภาษา",
+        title: "ไทย",
       ),
       medical: AppLocalizations_Labels_Medical(
         growth: "การเจริญเติบโต",
@@ -5788,6 +6094,9 @@ class AppLocalizations {
         relationship: "munosabatlar",
         search: "Qidirmoq",
         submitShare: "Submit / Share",
+        newPatient: "Yangi kasal",
+        allPatients: "barcha bemorlar",
+        mySchedule: "Mening jadvali",
         address: AppLocalizations_Labels_General_Address(
           city: "shahar",
           country: "mamlakat",
@@ -5821,7 +6130,7 @@ class AppLocalizations {
       ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "Uzbek",
-        title: "Tilni tanlang",
+        title: "O'zbekiston",
       ),
       medical: AppLocalizations_Labels_Medical(
         growth: "o'sish",
@@ -6025,6 +6334,9 @@ class AppLocalizations {
         relationship: "Mối quan hệ",
         search: "Tìm kiếm",
         submitShare: "Gửi / Chia sẻ",
+        newPatient: "Bệnh nhân mới",
+        allPatients: "Tất cả các bệnh nhân",
+        mySchedule: "Thời gian biểu của tôi",
         address: AppLocalizations_Labels_General_Address(
           city: "thành phố",
           country: "Quốc gia",
@@ -6058,7 +6370,7 @@ class AppLocalizations {
       ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "Vietnamese",
-        title: "Select language",
+        title: "Tiếng Việt",
       ),
       medical: AppLocalizations_Labels_Medical(
         growth: "sự phát triển",
@@ -6603,6 +6915,9 @@ class AppLocalizations_Labels_General {
       this.relationship,
       this.search,
       this.submitShare,
+      this.newPatient,
+      this.allPatients,
+      this.mySchedule,
       this.address,
       this.relation,
       this.sexAtBirth});
@@ -6628,6 +6943,12 @@ class AppLocalizations_Labels_General {
   final String search;
 
   final String submitShare;
+
+  final String newPatient;
+
+  final String allPatients;
+
+  final String mySchedule;
 
   final AppLocalizations_Labels_General_Address address;
 
@@ -6659,6 +6980,12 @@ class AppLocalizations_Labels_General {
         return search;
       case 'submitShare':
         return submitShare;
+      case 'newPatient':
+        return newPatient;
+      case 'allPatients':
+        return allPatients;
+      case 'mySchedule':
+        return mySchedule;
       default:
         return '';
     }
