@@ -57,6 +57,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        allPatients: "All Patients",
         birthDate: "Birthdate",
         dateofBirth: "Date of Birth",
         editSurvey: "Edit Survey",
@@ -64,13 +65,12 @@ class AppLocalizations {
         female: "Female",
         givenNames: "Given Names",
         male: "Male",
+        mySchedule: "My Schedule",
+        newPatient: "New Patient",
         newSurvey: "New Survey",
         relationship: "Relationship",
         search: "Search",
         submitShare: "Submit/Share",
-        newPatient: "New Patient",
-        allPatients: "All Patients",
-        mySchedule: "My Schedule",
         address: AppLocalizations_Labels_General_Address(
           city: "City",
           country: "Country",
@@ -254,6 +254,9 @@ class AppLocalizations {
         title: "Settings",
         updateProfile: "Update Profile",
       ),
+      vigor: AppLocalizations_Labels_Vigor(
+        title: "Vigor",
+      ),
     ),
     Locale.fromSubtags(languageCode: "es"): AppLocalizations_Labels(
       app: AppLocalizations_Labels_App(
@@ -300,6 +303,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        allPatients: "todos los pacientes",
         birthDate: "Fecha de nacimiento",
         dateofBirth: "Fecha de nacimiento",
         editSurvey: "Editar encuesta",
@@ -307,13 +311,12 @@ class AppLocalizations {
         female: "Hembra",
         givenNames: "Nombres dados",
         male: "Masculino",
+        mySchedule: "Mi horario",
+        newPatient: "Paciente nuevo",
         newSurvey: "nueva Encuesta",
         relationship: "Relación",
         search: "Buscar",
         submitShare: "Presentar / Compartir",
-        newPatient: "Paciente nuevo",
-        allPatients: "todos los pacientes",
-        mySchedule: "Mi horario",
         address: AppLocalizations_Labels_General_Address(
           city: "Ciudad",
           country: "País",
@@ -497,6 +500,9 @@ class AppLocalizations {
         title: "ajustes",
         updateProfile: "Actualización del perfil",
       ),
+      vigor: AppLocalizations_Labels_Vigor(
+        title: "Vigor",
+      ),
     ),
     Locale.fromSubtags(languageCode: "ar"): AppLocalizations_Labels(
       app: AppLocalizations_Labels_App(
@@ -543,6 +549,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        allPatients: "كل المرضى",
         birthDate: "تاريخ الولادة",
         dateofBirth: "تاريخ الولادة",
         editSurvey: "تحرير مسح",
@@ -550,13 +557,12 @@ class AppLocalizations {
         female: "أنثى",
         givenNames: "أسماء مسماه",
         male: "الذكر",
+        mySchedule: "جدولي",
+        newPatient: "مريض جديد",
         newSurvey: "مسح جديد",
         relationship: "صلة",
         search: "بحث",
         submitShare: "إرسال / حصة",
-        newPatient: "مريض جديد",
-        allPatients: "كل المرضى",
-        mySchedule: "جدولي",
         address: AppLocalizations_Labels_General_Address(
           city: "مدينة",
           country: "بلد",
@@ -737,6 +743,9 @@ class AppLocalizations {
         title: "إعدادات",
         updateProfile: "تحديث الملف",
       ),
+      vigor: AppLocalizations_Labels_Vigor(
+        title: "قوة",
+      ),
     ),
     Locale.fromSubtags(languageCode: "hi"): AppLocalizations_Labels(
       app: AppLocalizations_Labels_App(
@@ -783,6 +792,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        allPatients: "सभी मरीजों को",
         birthDate: "जन्म दिन",
         dateofBirth: "जन्म की तारीख",
         editSurvey: "सर्वे संपादित करें",
@@ -790,13 +800,12 @@ class AppLocalizations {
         female: "महिला",
         givenNames: "दिए गए नाम",
         male: "नर",
+        mySchedule: "मेरे अनुसूची",
+        newPatient: "नए रोगी",
         newSurvey: "नए सर्वेक्षण",
         relationship: "संबंध",
         search: "खोज",
         submitShare: "जमा करें / शेयर",
-        newPatient: "नए रोगी",
-        allPatients: "सभी मरीजों को",
-        mySchedule: "मेरे अनुसूची",
         address: AppLocalizations_Labels_General_Address(
           city: "Faridabad",
           country: "देश",
@@ -979,6 +988,9 @@ class AppLocalizations {
         title: "समायोजन",
         updateProfile: "प्रोफ़ाइल अपडेट करें",
       ),
+      vigor: AppLocalizations_Labels_Vigor(
+        title: "ताक़त",
+      ),
     ),
     Locale.fromSubtags(languageCode: "ru"): AppLocalizations_Labels(
       app: AppLocalizations_Labels_App(
@@ -1025,6 +1037,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        allPatients: "Все пациенты",
         birthDate: "Дата рождения",
         dateofBirth: "Дата рождения",
         editSurvey: "Изменить опрос",
@@ -1032,13 +1045,12 @@ class AppLocalizations {
         female: "женский",
         givenNames: "Второе имя",
         male: "мужчина",
+        mySchedule: "Мое расписание",
+        newPatient: "Новый пациент",
         newSurvey: "повторная съемка",
         relationship: "отношения",
         search: "Поиск",
         submitShare: "Отправить / Share",
-        newPatient: "Новый пациент",
-        allPatients: "Все пациенты",
-        mySchedule: "Мое расписание",
         address: AppLocalizations_Labels_General_Address(
           city: "город",
           country: "Страна",
@@ -1225,6 +1237,9 @@ class AppLocalizations {
         title: "настройки",
         updateProfile: "Обновить профиль",
       ),
+      vigor: AppLocalizations_Labels_Vigor(
+        title: "сила",
+      ),
     ),
     Locale.fromSubtags(languageCode: "bn"): AppLocalizations_Labels(
       app: AppLocalizations_Labels_App(
@@ -1271,6 +1286,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        allPatients: "সব রোগীদের",
         birthDate: "জন্ম তারিখ",
         dateofBirth: "জন্ম তারিখ",
         editSurvey: "সার্ভে সম্পাদনা",
@@ -1278,13 +1294,12 @@ class AppLocalizations {
         female: "মহিলা",
         givenNames: "প্রদত্ত নাম",
         male: "পুরুষ",
+        mySchedule: "আমার সময়সূচি",
+        newPatient: "নিউ রোগীর",
         newSurvey: "নতুন জরিপ",
         relationship: "সম্পর্ক",
         search: "অনুসন্ধান করুন",
         submitShare: "জমা দিন / শেয়ার",
-        newPatient: "নিউ রোগীর",
-        allPatients: "সব রোগীদের",
-        mySchedule: "আমার সময়সূচি",
         address: AppLocalizations_Labels_General_Address(
           city: "শহর",
           country: "দেশ",
@@ -1466,6 +1481,9 @@ class AppLocalizations {
         title: "সেটিংস",
         updateProfile: "হালনাগাদ প্রফাইল",
       ),
+      vigor: AppLocalizations_Labels_Vigor(
+        title: "তেজ",
+      ),
     ),
     Locale.fromSubtags(languageCode: "my"): AppLocalizations_Labels(
       app: AppLocalizations_Labels_App(
@@ -1512,6 +1530,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        allPatients: "အားလုံးလူနာများ",
         birthDate: "မွေးရက်",
         dateofBirth: "မွေးရက်",
         editSurvey: "Edit ကိုစစ်တမ်း",
@@ -1519,13 +1538,12 @@ class AppLocalizations {
         female: "အမြိုးသမီး",
         givenNames: "ပေးထားသောအမည်",
         male: "အထီး",
+        mySchedule: "အကြှနျုပျ၏ဇယား",
+        newPatient: "နယူးလူနာ",
         newSurvey: "နယူးစစ်တမ်း",
         relationship: "relationship",
         search: "ရှာဖှေ",
         submitShare: "Submit / ဝေမျှမယ်",
-        newPatient: "နယူးလူနာ",
-        allPatients: "အားလုံးလူနာများ",
-        mySchedule: "အကြှနျုပျ၏ဇယား",
         address: AppLocalizations_Labels_General_Address(
           city: "မြို့",
           country: "ပြည်",
@@ -1710,6 +1728,9 @@ class AppLocalizations {
         title: "Settings များ",
         updateProfile: "Update ကိုကိုယ်ရေးဖိုင်",
       ),
+      vigor: AppLocalizations_Labels_Vigor(
+        title: "သန်စွမ်း",
+      ),
     ),
     Locale.fromSubtags(languageCode: "zh_CN"): AppLocalizations_Labels(
       app: AppLocalizations_Labels_App(
@@ -1756,6 +1777,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        allPatients: "所有患者",
         birthDate: "生日",
         dateofBirth: "出生日期",
         editSurvey: "编辑调查",
@@ -1763,13 +1785,12 @@ class AppLocalizations {
         female: "女",
         givenNames: "姓",
         male: "男",
+        mySchedule: "我的日程表",
+        newPatient: "新患者",
         newSurvey: "新调查",
         relationship: "关系",
         search: "搜索",
         submitShare: "提交/股",
-        newPatient: "新患者",
-        allPatients: "所有患者",
-        mySchedule: "我的日程表",
         address: AppLocalizations_Labels_General_Address(
           city: "市",
           country: "国家",
@@ -1937,6 +1958,9 @@ class AppLocalizations {
         title: "设置",
         updateProfile: "更新配置文件",
       ),
+      vigor: AppLocalizations_Labels_Vigor(
+        title: "活力",
+      ),
     ),
     Locale.fromSubtags(languageCode: "zh_TW"): AppLocalizations_Labels(
       app: AppLocalizations_Labels_App(
@@ -1983,6 +2007,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        allPatients: "所有患者",
         birthDate: "生日",
         dateofBirth: "出生日期",
         editSurvey: "編輯調查",
@@ -1990,13 +2015,12 @@ class AppLocalizations {
         female: "女",
         givenNames: "姓",
         male: "男",
+        mySchedule: "我的日程表",
+        newPatient: "新患者",
         newSurvey: "新調查",
         relationship: "關係",
         search: "搜索",
         submitShare: "提交/股",
-        newPatient: "新患者",
-        allPatients: "所有患者",
-        mySchedule: "我的日程表",
         address: AppLocalizations_Labels_General_Address(
           city: "市",
           country: "國家",
@@ -2164,6 +2188,9 @@ class AppLocalizations {
         title: "設置",
         updateProfile: "更新配置文件",
       ),
+      vigor: AppLocalizations_Labels_Vigor(
+        title: "活力",
+      ),
     ),
     Locale.fromSubtags(languageCode: "fa"): AppLocalizations_Labels(
       app: AppLocalizations_Labels_App(
@@ -2210,6 +2237,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        allPatients: "همه بیماران",
         birthDate: "تاریخ تولد",
         dateofBirth: "تاریخ تولد",
         editSurvey: "بررسی ویرایش",
@@ -2217,13 +2245,12 @@ class AppLocalizations {
         female: "زن",
         givenNames: "اسامی با توجه به",
         male: "نر",
+        mySchedule: "برنامه من",
+        newPatient: "بیمار جدید",
         newSurvey: "نظرسنجی جدید",
         relationship: "ارتباط",
         search: "جستجو کردن",
         submitShare: "ارسال / اشتراک",
-        newPatient: "بیمار جدید",
-        allPatients: "همه بیماران",
-        mySchedule: "برنامه من",
         address: AppLocalizations_Labels_General_Address(
           city: "شهرستان",
           country: "کشور",
@@ -2406,6 +2433,9 @@ class AppLocalizations {
         title: "تنظیمات",
         updateProfile: "بروزرسانی پروفایل",
       ),
+      vigor: AppLocalizations_Labels_Vigor(
+        title: "قدرت",
+      ),
     ),
     Locale.fromSubtags(languageCode: "fr"): AppLocalizations_Labels(
       app: AppLocalizations_Labels_App(
@@ -2452,6 +2482,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        allPatients: "tous les patients",
         birthDate: "Date de naissance",
         dateofBirth: "Date de naissance",
         editSurvey: "Modifier enquête",
@@ -2459,13 +2490,12 @@ class AppLocalizations {
         female: "Femelle",
         givenNames: "Prénoms",
         male: "Masculin",
+        mySchedule: "Mon emploi du temps",
+        newPatient: "nouveau patient",
         newSurvey: "Une nouvelle enquête",
         relationship: "Relation",
         search: "Chercher",
         submitShare: "Déposer / Partager",
-        newPatient: "nouveau patient",
-        allPatients: "tous les patients",
-        mySchedule: "Mon emploi du temps",
         address: AppLocalizations_Labels_General_Address(
           city: "Ville",
           country: "Pays",
@@ -2651,6 +2681,9 @@ class AppLocalizations {
         title: "Réglages",
         updateProfile: "Mettre à jour le profil",
       ),
+      vigor: AppLocalizations_Labels_Vigor(
+        title: "Vigueur",
+      ),
     ),
     Locale.fromSubtags(languageCode: "de"): AppLocalizations_Labels(
       app: AppLocalizations_Labels_App(
@@ -2697,6 +2730,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        allPatients: "alle Patienten",
         birthDate: "Geburtsdatum",
         dateofBirth: "Geburtsdatum",
         editSurvey: "Umfrage bearbeiten",
@@ -2704,13 +2738,12 @@ class AppLocalizations {
         female: "Weiblich",
         givenNames: "Vornamen",
         male: "Männlich",
+        mySchedule: "Mein Terminplan",
+        newPatient: "Neuer Patient",
         newSurvey: "neue Umfrage",
         relationship: "Beziehung",
         search: "Suche",
         submitShare: "Senden / Share",
-        newPatient: "Neuer Patient",
-        allPatients: "alle Patienten",
-        mySchedule: "Mein Terminplan",
         address: AppLocalizations_Labels_General_Address(
           city: "Stadt",
           country: "Land",
@@ -2895,6 +2928,9 @@ class AppLocalizations {
         title: "die Einstellungen",
         updateProfile: "Profil aktualisieren",
       ),
+      vigor: AppLocalizations_Labels_Vigor(
+        title: "Kraft",
+      ),
     ),
     Locale.fromSubtags(languageCode: "id"): AppLocalizations_Labels(
       app: AppLocalizations_Labels_App(
@@ -2941,6 +2977,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        allPatients: "semua Pasien",
         birthDate: "Tanggal lahir",
         dateofBirth: "Tanggal lahir",
         editSurvey: "mengedit Survey",
@@ -2948,13 +2985,12 @@ class AppLocalizations {
         female: "Perempuan",
         givenNames: "Memberikan nama",
         male: "Pria",
+        mySchedule: "Jadwal saya",
+        newPatient: "Pasien baru",
         newSurvey: "Survei baru",
         relationship: "Hubungan",
         search: "Cari",
         submitShare: "Menyerahkan / Share",
-        newPatient: "Pasien baru",
-        allPatients: "semua Pasien",
-        mySchedule: "Jadwal saya",
         address: AppLocalizations_Labels_General_Address(
           city: "Kota",
           country: "Negara",
@@ -3139,6 +3175,9 @@ class AppLocalizations {
         title: "pengaturan",
         updateProfile: "Memperbaharui profil",
       ),
+      vigor: AppLocalizations_Labels_Vigor(
+        title: "Semangat",
+      ),
     ),
     Locale.fromSubtags(languageCode: "ja"): AppLocalizations_Labels(
       app: AppLocalizations_Labels_App(
@@ -3185,6 +3224,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        allPatients: "すべての患者",
         birthDate: "誕生日",
         dateofBirth: "生年月日",
         editSurvey: "編集調査",
@@ -3192,13 +3232,12 @@ class AppLocalizations {
         female: "女性",
         givenNames: "名前",
         male: "男性",
+        mySchedule: "私のスケジュール",
+        newPatient: "新しい患者",
         newSurvey: "新しい調査",
         relationship: "関係",
         search: "探す",
         submitShare: "送信/共有",
-        newPatient: "新しい患者",
-        allPatients: "すべての患者",
-        mySchedule: "私のスケジュール",
         address: AppLocalizations_Labels_General_Address(
           city: "市",
           country: "国",
@@ -3373,6 +3412,9 @@ class AppLocalizations {
         title: "設定",
         updateProfile: "プロフィールを更新",
       ),
+      vigor: AppLocalizations_Labels_Vigor(
+        title: "活力",
+      ),
     ),
     Locale.fromSubtags(languageCode: "km"): AppLocalizations_Labels(
       app: AppLocalizations_Labels_App(
@@ -3419,6 +3461,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        allPatients: "អ្នកជំងឺទាំងអស់",
         birthDate: "ថ្ងៃខែ​ឆ្នាំ​កំណើត",
         dateofBirth: "ថ្ងៃខែ​ឆ្នាំ​កំណើត",
         editSurvey: "កែសម្រួលការស្ទង់មតិ",
@@ -3426,13 +3469,12 @@ class AppLocalizations {
         female: "ស្រី",
         givenNames: "ឈ្មោះ​ហៅក្រៅ",
         male: "បុរស",
+        mySchedule: "កាលវិភាគ​របស់​ខ្ញុំ",
+        newPatient: "ជម្ងឺថ្មី",
         newSurvey: "ការស្ទង់មតិថ្មី",
         relationship: "ទំនាក់ទំនង",
         search: "ស្វែងរក",
         submitShare: "ដាក់ស្នើ / ចែករំលែក",
-        newPatient: "ជម្ងឺថ្មី",
-        allPatients: "អ្នកជំងឺទាំងអស់",
-        mySchedule: "កាលវិភាគ​របស់​ខ្ញុំ",
         address: AppLocalizations_Labels_General_Address(
           city: "ទីក្រុង",
           country: "ប្រទេស",
@@ -3617,6 +3659,9 @@ class AppLocalizations {
         title: "ការកំណត់",
         updateProfile: "ទម្រង់ធ្វើឱ្យទាន់សម័យ",
       ),
+      vigor: AppLocalizations_Labels_Vigor(
+        title: "ភាពរឹងមាំខាង",
+      ),
     ),
     Locale.fromSubtags(languageCode: "ko"): AppLocalizations_Labels(
       app: AppLocalizations_Labels_App(
@@ -3663,6 +3708,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        allPatients: "모든 환자",
         birthDate: "생일",
         dateofBirth: "생년월일",
         editSurvey: "편집 설문 조사",
@@ -3670,13 +3716,12 @@ class AppLocalizations {
         female: "여자",
         givenNames: "지정된 이름의",
         male: "남성",
+        mySchedule: "내 일정",
+        newPatient: "새로운 환자",
         newSurvey: "새로운 설문 조사",
         relationship: "관계",
         search: "검색",
         submitShare: "전송 / 공유",
-        newPatient: "새로운 환자",
-        allPatients: "모든 환자",
-        mySchedule: "내 일정",
         address: AppLocalizations_Labels_General_Address(
           city: "시티",
           country: "국가",
@@ -3851,6 +3896,9 @@ class AppLocalizations {
         title: "설정",
         updateProfile: "프로필 업데이트",
       ),
+      vigor: AppLocalizations_Labels_Vigor(
+        title: "활기",
+      ),
     ),
     Locale.fromSubtags(languageCode: "lo"): AppLocalizations_Labels(
       app: AppLocalizations_Labels_App(
@@ -3897,6 +3945,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        allPatients: "ຄົນເຈັບທັງຫມົດ",
         birthDate: "ວັນເດືອນປີເກີດ",
         dateofBirth: "ວັນ​ເດືອນ​ປີ​ເກີດ",
         editSurvey: "ດັດແກ້ການສໍາຫຼວດ",
@@ -3904,13 +3953,12 @@ class AppLocalizations {
         female: "ຍິງ",
         givenNames: "Names ເນື່ອງ",
         male: "ຜູ້​ຊາຍ",
+        mySchedule: "ຕາຕະລາງຂອງຂ້າພະເຈົ້າ",
+        newPatient: "ອົດທົນໃຫມ່",
         newSurvey: "ການສໍາຫຼວດໃຫມ່",
         relationship: "ຄວາມສໍາພັນ",
         search: "ຄົ້ນຫາ",
         submitShare: "ຍື່ນສະເຫນີ / Share",
-        newPatient: "ອົດທົນໃຫມ່",
-        allPatients: "ຄົນເຈັບທັງຫມົດ",
-        mySchedule: "ຕາຕະລາງຂອງຂ້າພະເຈົ້າ",
         address: AppLocalizations_Labels_General_Address(
           city: "ເມືອງ",
           country: "ປະເທດ",
@@ -4094,6 +4142,9 @@ class AppLocalizations {
         title: "ການຕັ້ງຄ່າ",
         updateProfile: "ແຜງ",
       ),
+      vigor: AppLocalizations_Labels_Vigor(
+        title: "ຢ່າງແຂງແຮງ",
+      ),
     ),
     Locale.fromSubtags(languageCode: "mr"): AppLocalizations_Labels(
       app: AppLocalizations_Labels_App(
@@ -4140,6 +4191,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        allPatients: "सर्व रुग्णांना",
         birthDate: "जन्मदिनांक",
         dateofBirth: "जन्म तारीख",
         editSurvey: "सर्वेक्षण संपादित करा",
@@ -4147,13 +4199,12 @@ class AppLocalizations {
         female: "स्त्री",
         givenNames: "नावे दिली",
         male: "पुरुष",
+        mySchedule: "माझे वेळापत्रक",
+        newPatient: "नवीन रुग्णांच्या",
         newSurvey: "नवीन सर्वेक्षण",
         relationship: "संबंध",
         search: "शोधा",
         submitShare: "सबमिट करा / शेअर",
-        newPatient: "नवीन रुग्णांच्या",
-        allPatients: "सर्व रुग्णांना",
-        mySchedule: "माझे वेळापत्रक",
         address: AppLocalizations_Labels_General_Address(
           city: "सिटी",
           country: "देश",
@@ -4334,6 +4385,9 @@ class AppLocalizations {
         title: "सेटिंग्ज",
         updateProfile: "प्रोफाइल अद्यतनित करा",
       ),
+      vigor: AppLocalizations_Labels_Vigor(
+        title: "जोम",
+      ),
     ),
     Locale.fromSubtags(languageCode: "ne"): AppLocalizations_Labels(
       app: AppLocalizations_Labels_App(
@@ -4380,6 +4434,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        allPatients: "सबै विरामी",
         birthDate: "जन्म मिति",
         dateofBirth: "जन्म मिति",
         editSurvey: "सर्वेक्षण सम्पादन",
@@ -4387,13 +4442,12 @@ class AppLocalizations {
         female: "महिला",
         givenNames: "नामहरू",
         male: "पुरुष",
+        mySchedule: "मेरो तालिका",
+        newPatient: "नयाँ रोगी",
         newSurvey: "नयाँ सर्वेक्षण",
         relationship: "सम्बन्ध",
         search: "खोज",
         submitShare: "पेश / शेयर",
-        newPatient: "नयाँ रोगी",
-        allPatients: "सबै विरामी",
-        mySchedule: "मेरो तालिका",
         address: AppLocalizations_Labels_General_Address(
           city: "शहर",
           country: "देश",
@@ -4576,6 +4630,9 @@ class AppLocalizations {
         title: "सेटिङहरू",
         updateProfile: "प्रोफाइल अद्यावधिक",
       ),
+      vigor: AppLocalizations_Labels_Vigor(
+        title: "ताकत",
+      ),
     ),
     Locale.fromSubtags(languageCode: "pt"): AppLocalizations_Labels(
       app: AppLocalizations_Labels_App(
@@ -4622,6 +4679,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        allPatients: "Todos os pacientes",
         birthDate: "Data de nascimento",
         dateofBirth: "Data de nascimento",
         editSurvey: "Editar questionário",
@@ -4629,13 +4687,12 @@ class AppLocalizations {
         female: "Fêmea",
         givenNames: "Nomes dados",
         male: "Masculino",
+        mySchedule: "Meu horário",
+        newPatient: "New Patient",
         newSurvey: "nova pesquisa",
         relationship: "Relação",
         search: "Pesquisa",
         submitShare: "Enviar / Share",
-        newPatient: "New Patient",
-        allPatients: "Todos os pacientes",
-        mySchedule: "Meu horário",
         address: AppLocalizations_Labels_General_Address(
           city: "Cidade",
           country: "País",
@@ -4820,6 +4877,9 @@ class AppLocalizations {
         title: "Definições",
         updateProfile: "Atualizar perfil",
       ),
+      vigor: AppLocalizations_Labels_Vigor(
+        title: "Vigor",
+      ),
     ),
     Locale.fromSubtags(languageCode: "pa"): AppLocalizations_Labels(
       app: AppLocalizations_Labels_App(
@@ -4866,6 +4926,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        allPatients: "ਸਾਰੇ ਮਰੀਜ਼",
         birthDate: "ਜਨਮ ਮਿਤੀ",
         dateofBirth: "ਜਨਮ ਤਾਰੀਖ",
         editSurvey: "ਸਰਵੇਖਣ ਸੋਧ",
@@ -4873,13 +4934,12 @@ class AppLocalizations {
         female: "ਔਰਤ",
         givenNames: "ਦਿੱਤੇ ਹੋਏ ਨਾਂ",
         male: "ਮਰਦ",
+        mySchedule: "ਮੇਰੀ ਤਹਿ",
+        newPatient: "ਨਿਊ ਮਰੀਜ਼",
         newSurvey: "ਨਿਊ ਸਰਵੇ",
         relationship: "ਰਿਸ਼ਤਾ",
         search: "ਖੋਜ",
         submitShare: "ਪੇਸ਼ ਕਰੋ / share",
-        newPatient: "ਨਿਊ ਮਰੀਜ਼",
-        allPatients: "ਸਾਰੇ ਮਰੀਜ਼",
-        mySchedule: "ਮੇਰੀ ਤਹਿ",
         address: AppLocalizations_Labels_General_Address(
           city: "ਸਿਟੀ",
           country: "ਦੇਸ਼",
@@ -5062,6 +5122,9 @@ class AppLocalizations {
         title: "ਸੈਟਿੰਗ",
         updateProfile: "ਅੱਪਡੇਟ ਪ੍ਰੋਫ਼ਾਈਲ English",
       ),
+      vigor: AppLocalizations_Labels_Vigor(
+        title: "ਜੋਸ਼",
+      ),
     ),
     Locale.fromSubtags(languageCode: "so"): AppLocalizations_Labels(
       app: AppLocalizations_Labels_App(
@@ -5108,6 +5171,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        allPatients: "All Bukaanka",
         birthDate: "Taariiqda dhalasha",
         dateofBirth: "Taariikhda Dhalashada",
         editSurvey: "edit Survey",
@@ -5115,13 +5179,12 @@ class AppLocalizations {
         female: "Dheddig",
         givenNames: "Marka la eego magacyada",
         male: "Male",
+        mySchedule: "My Schedule",
+        newPatient: "bukaanka New",
         newSurvey: "New Survey",
         relationship: "xiriirka",
         search: "Raadi",
         submitShare: "Gudbi / Share",
-        newPatient: "bukaanka New",
-        allPatients: "All Bukaanka",
-        mySchedule: "My Schedule",
         address: AppLocalizations_Labels_General_Address(
           city: "City",
           country: "Country",
@@ -5307,6 +5370,9 @@ class AppLocalizations {
         title: "Settings",
         updateProfile: "update Profile",
       ),
+      vigor: AppLocalizations_Labels_Vigor(
+        title: "luminayey",
+      ),
     ),
     Locale.fromSubtags(languageCode: "sw"): AppLocalizations_Labels(
       app: AppLocalizations_Labels_App(
@@ -5353,6 +5419,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        allPatients: "Wagonjwa wote",
         birthDate: "Tarehe ya kuzaliwa",
         dateofBirth: "Tarehe ya kuzaliwa",
         editSurvey: "Hariri Survey",
@@ -5360,13 +5427,12 @@ class AppLocalizations {
         female: "mwanamke",
         givenNames: "Majina kutokana",
         male: "Mwanaume",
+        mySchedule: "Ratiba yangu",
+        newPatient: "mgonjwa New",
         newSurvey: "Survey New",
         relationship: "uhusiano",
         search: "Tafuta",
         submitShare: "Wasilisha / Shiriki",
-        newPatient: "mgonjwa New",
-        allPatients: "Wagonjwa wote",
-        mySchedule: "Ratiba yangu",
         address: AppLocalizations_Labels_General_Address(
           city: "City",
           country: "Nchi",
@@ -5549,6 +5615,9 @@ class AppLocalizations {
         title: "mipangilio",
         updateProfile: "Mwisho profile",
       ),
+      vigor: AppLocalizations_Labels_Vigor(
+        title: "nguvu",
+      ),
     ),
     Locale.fromSubtags(languageCode: "tl"): AppLocalizations_Labels(
       app: AppLocalizations_Labels_App(
@@ -5595,6 +5664,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        allPatients: "Ang lahat ng mga pasyente",
         birthDate: "Araw ng kapanganakan",
         dateofBirth: "Araw ng kapanganakan",
         editSurvey: "I-edit ang Survey",
@@ -5602,13 +5672,12 @@ class AppLocalizations {
         female: "babae",
         givenNames: "Given Pangalan",
         male: "lalaki",
+        mySchedule: "Aking Talaan",
+        newPatient: "bagong Pasyente",
         newSurvey: "bagong Survey",
         relationship: "Relasyon",
         search: "Hanapan",
         submitShare: "Isumite / Share",
-        newPatient: "bagong Pasyente",
-        allPatients: "Ang lahat ng mga pasyente",
-        mySchedule: "Aking Talaan",
         address: AppLocalizations_Labels_General_Address(
           city: "lungsod",
           country: "bansa",
@@ -5795,6 +5864,9 @@ class AppLocalizations {
         title: "Mga Setting",
         updateProfile: "I-update ang Profile",
       ),
+      vigor: AppLocalizations_Labels_Vigor(
+        title: "kalakasan",
+      ),
     ),
     Locale.fromSubtags(languageCode: "th"): AppLocalizations_Labels(
       app: AppLocalizations_Labels_App(
@@ -5841,6 +5913,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        allPatients: "ผู้ป่วยทั้งหมด",
         birthDate: "วันที่เกิด",
         dateofBirth: "วันเกิด",
         editSurvey: "แก้ไขการสำรวจ",
@@ -5848,13 +5921,12 @@ class AppLocalizations {
         female: "หญิง",
         givenNames: "ชื่อจริง",
         male: "ชาย",
+        mySchedule: "ตารางของฉัน",
+        newPatient: "ผู้ป่วยใหม่",
         newSurvey: "การสำรวจใหม่",
         relationship: "ความสัมพันธ์",
         search: "ค้นหา",
         submitShare: "ส่ง / หุ้น",
-        newPatient: "ผู้ป่วยใหม่",
-        allPatients: "ผู้ป่วยทั้งหมด",
-        mySchedule: "ตารางของฉัน",
         address: AppLocalizations_Labels_General_Address(
           city: "เมือง",
           country: "ประเทศ",
@@ -6037,6 +6109,9 @@ class AppLocalizations {
         title: "การตั้งค่า",
         updateProfile: "รายละเอียดการปรับปรุง",
       ),
+      vigor: AppLocalizations_Labels_Vigor(
+        title: "พลัง",
+      ),
     ),
     Locale.fromSubtags(languageCode: "uz"): AppLocalizations_Labels(
       app: AppLocalizations_Labels_App(
@@ -6083,6 +6158,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        allPatients: "barcha bemorlar",
         birthDate: "Tug'ilgan sana",
         dateofBirth: "Tug'ilgan sana",
         editSurvey: "Edit Survey",
@@ -6090,13 +6166,12 @@ class AppLocalizations {
         female: "ayol",
         givenNames: "Ism va Sharif",
         male: "erkak",
+        mySchedule: "Mening jadvali",
+        newPatient: "Yangi kasal",
         newSurvey: "Yangi tadqiqot",
         relationship: "munosabatlar",
         search: "Qidirmoq",
         submitShare: "Submit / Share",
-        newPatient: "Yangi kasal",
-        allPatients: "barcha bemorlar",
-        mySchedule: "Mening jadvali",
         address: AppLocalizations_Labels_General_Address(
           city: "shahar",
           country: "mamlakat",
@@ -6277,6 +6352,9 @@ class AppLocalizations {
         title: "Sozlamalar",
         updateProfile: "yangilash Profil",
       ),
+      vigor: AppLocalizations_Labels_Vigor(
+        title: "kuch",
+      ),
     ),
     Locale.fromSubtags(languageCode: "vi"): AppLocalizations_Labels(
       app: AppLocalizations_Labels_App(
@@ -6323,6 +6401,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        allPatients: "Tất cả các bệnh nhân",
         birthDate: "Ngày sinh",
         dateofBirth: "Ngày sinh",
         editSurvey: "Sửa Khảo sát",
@@ -6330,13 +6409,12 @@ class AppLocalizations {
         female: "Giống cái",
         givenNames: "Tên trao",
         male: "Nam giới",
+        mySchedule: "Thời gian biểu của tôi",
+        newPatient: "Bệnh nhân mới",
         newSurvey: "Khảo sát mới",
         relationship: "Mối quan hệ",
         search: "Tìm kiếm",
         submitShare: "Gửi / Chia sẻ",
-        newPatient: "Bệnh nhân mới",
-        allPatients: "Tất cả các bệnh nhân",
-        mySchedule: "Thời gian biểu của tôi",
         address: AppLocalizations_Labels_General_Address(
           city: "thành phố",
           country: "Quốc gia",
@@ -6517,6 +6595,9 @@ class AppLocalizations {
         theme: "chủ đề",
         title: "Cài đặt",
         updateProfile: "Cập nhật hồ sơ",
+      ),
+      vigor: AppLocalizations_Labels_Vigor(
+        title: "sức mạnh",
       ),
     ),
   };
@@ -6904,23 +6985,25 @@ class AppLocalizations_Labels_General_SexAtBirth {
 
 class AppLocalizations_Labels_General {
   const AppLocalizations_Labels_General(
-      {this.birthDate,
+      {this.allPatients,
+      this.birthDate,
       this.dateofBirth,
       this.editSurvey,
       this.familyName,
       this.female,
       this.givenNames,
       this.male,
+      this.mySchedule,
+      this.newPatient,
       this.newSurvey,
       this.relationship,
       this.search,
       this.submitShare,
-      this.newPatient,
-      this.allPatients,
-      this.mySchedule,
       this.address,
       this.relation,
       this.sexAtBirth});
+
+  final String allPatients;
 
   final String birthDate;
 
@@ -6936,6 +7019,10 @@ class AppLocalizations_Labels_General {
 
   final String male;
 
+  final String mySchedule;
+
+  final String newPatient;
+
   final String newSurvey;
 
   final String relationship;
@@ -6943,12 +7030,6 @@ class AppLocalizations_Labels_General {
   final String search;
 
   final String submitShare;
-
-  final String newPatient;
-
-  final String allPatients;
-
-  final String mySchedule;
 
   final AppLocalizations_Labels_General_Address address;
 
@@ -6958,6 +7039,8 @@ class AppLocalizations_Labels_General {
 
   String getByKey(String key) {
     switch (key) {
+      case 'allPatients':
+        return allPatients;
       case 'birthDate':
         return birthDate;
       case 'dateofBirth':
@@ -6972,6 +7055,10 @@ class AppLocalizations_Labels_General {
         return givenNames;
       case 'male':
         return male;
+      case 'mySchedule':
+        return mySchedule;
+      case 'newPatient':
+        return newPatient;
       case 'newSurvey':
         return newSurvey;
       case 'relationship':
@@ -6980,12 +7067,6 @@ class AppLocalizations_Labels_General {
         return search;
       case 'submitShare':
         return submitShare;
-      case 'newPatient':
-        return newPatient;
-      case 'allPatients':
-        return allPatients;
-      case 'mySchedule':
-        return mySchedule;
       default:
         return '';
     }
@@ -7711,6 +7792,21 @@ class AppLocalizations_Labels_Settings {
   }
 }
 
+class AppLocalizations_Labels_Vigor {
+  const AppLocalizations_Labels_Vigor({this.title});
+
+  final String title;
+
+  String getByKey(String key) {
+    switch (key) {
+      case 'title':
+        return title;
+      default:
+        return '';
+    }
+  }
+}
+
 class AppLocalizations_Labels {
   const AppLocalizations_Labels(
       {this.app,
@@ -7721,7 +7817,8 @@ class AppLocalizations_Labels {
       this.medical,
       this.prapare,
       this.registration,
-      this.settings});
+      this.settings,
+      this.vigor});
 
   final AppLocalizations_Labels_App app;
 
@@ -7740,6 +7837,8 @@ class AppLocalizations_Labels {
   final AppLocalizations_Labels_Registration registration;
 
   final AppLocalizations_Labels_Settings settings;
+
+  final AppLocalizations_Labels_Vigor vigor;
 
   String getByKey(String key) {
     switch (key) {
