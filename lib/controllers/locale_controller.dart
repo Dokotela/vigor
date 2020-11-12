@@ -6,9 +6,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
-import '../../localization.dart';
-import '../../models/data/menu_option.dart';
-import '../../models/data/menu_options_model.dart';
+import '../localization.dart';
+import '../models/data/menu_option.dart';
+import '../models/data/menu_options_model.dart';
 
 class LocaleController extends GetxController {
   static LocaleController get to => Get.find();

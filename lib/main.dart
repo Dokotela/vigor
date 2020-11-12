@@ -3,8 +3,8 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
-import 'controllers/commands/locale_controller.dart';
-import 'controllers/commands/theme_controller.dart';
+import 'controllers/locale_controller.dart';
+import 'controllers/theme_controller.dart';
 import 'localization.dart';
 import 'routes/routes.dart';
 import 'ui/styled_components/styled_loading.dart';
