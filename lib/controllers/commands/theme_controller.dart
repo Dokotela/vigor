@@ -21,10 +21,7 @@ class ThemeController extends GetxController {
   @override
   Future<void> onReady() async {
     await getThemeModeFromStore();
-
-    ///ToDo: should this be onReady or onInit?
     super.onReady();
-    super.onInit();
   }
 
   Future<void> setThemeMode(ThemeMode obj) async {
