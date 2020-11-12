@@ -4,7 +4,6 @@ import 'package:vigor/ui/styled_components/bottom_navigation_bar.dart';
 import '../../../localization.dart';
 import '../../../routes/routes.dart';
 import '../../styled_components/action_button.dart';
-import '../views.dart';
 
 class HomeView extends StatelessWidget {
   @override
@@ -27,16 +26,15 @@ class HomeView extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             ActionButton(
-              buttonText: 'New Patient', //todo: translate
+              buttonText: labels.general.newPatient,
               onPressed: () => null, //Get.to(PatientRegistrationView()),
             ),
             ActionButton(
-              buttonText: 'All Patients', //todo: translate
+              buttonText: labels.general.allPatients,
               onPressed: () => Get.toNamed(AppRoutes.PATIENT_SEARCH),
             ),
-            const ActionButton(
-              buttonText: 'My Schedule', //todo: translate
-              // onPressed: () {},
+            ActionButton(
+              buttonText: labels.general.mySchedule,
             ),
           ],
         ),

@@ -61,15 +61,10 @@ class AppLocalizations {
         birthDate: "Birthdate",
         dateofBirth: "Date of Birth",
         editSurvey: "Edit Survey",
-        familyName: "Family Name",
-        female: "Female",
-        givenNames: "Given Names",
-        male: "Male",
         mySchedule: "My Schedule",
         newPatient: "New Patient",
         newSurvey: "New Survey",
         relationship: "Relationship",
-        search: "Search",
         submitShare: "Submit/Share",
         address: AppLocalizations_Labels_General_Address(
           city: "City",
@@ -80,6 +75,14 @@ class AppLocalizations {
           postalCode: "Postal Code",
           state: "State",
           title: "Address",
+        ),
+        name: AppLocalizations_Labels_General_Name(
+          familyName: "Family Name",
+          firstName: "First Name",
+          givenNames: "Given Names",
+          lastName: "Last Name",
+          name: "Name",
+          otherNames: "Other Names",
         ),
         relation: AppLocalizations_Labels_General_Relation(
           aunt: "Aunt",
@@ -96,6 +99,11 @@ class AppLocalizations {
           title: "Relation",
           uncle: "Uncle",
         ),
+        search: AppLocalizations_Labels_General_Search(
+          search: "Search",
+          searchName: "Search Name",
+          filter: "Filter",
+        ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "Female",
           male: "Male",
@@ -110,6 +118,7 @@ class AppLocalizations {
         growth: "Growth",
         immunization: "Immunization",
         immunizations: "Immunizations",
+        deworming: "Deworming",
         vaccine: "Vaccine",
         vaccines: "Vaccines",
       ),
@@ -180,15 +189,10 @@ class AppLocalizations {
         birthDate: "Fecha de nacimiento",
         dateofBirth: "Fecha de nacimiento",
         editSurvey: "Editar encuesta",
-        familyName: "Apellido",
-        female: "Hembra",
-        givenNames: "Nombres dados",
-        male: "Masculino",
         mySchedule: "Mi horario",
         newPatient: "Paciente nuevo",
         newSurvey: "nueva Encuesta",
         relationship: "Relación",
-        search: "Buscar",
         submitShare: "Presentar / Compartir",
         address: AppLocalizations_Labels_General_Address(
           city: "Ciudad",
@@ -199,6 +203,14 @@ class AppLocalizations {
           postalCode: "Código postal",
           state: "Estado",
           title: "Habla a",
+        ),
+        name: AppLocalizations_Labels_General_Name(
+          familyName: "Apellido",
+          firstName: "Nombre de pila",
+          givenNames: "Nombres dados",
+          lastName: "Apellido",
+          name: "Nombre",
+          otherNames: "Otros nombres",
         ),
         relation: AppLocalizations_Labels_General_Relation(
           aunt: "Tía",
@@ -215,6 +227,11 @@ class AppLocalizations {
           title: "Relación",
           uncle: "Tío",
         ),
+        search: AppLocalizations_Labels_General_Search(
+          search: "Buscar",
+          searchName: "búsqueda por nombre",
+          filter: "Filtrar",
+        ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "Hembra",
           male: "Masculino",
@@ -229,6 +246,7 @@ class AppLocalizations {
         growth: "Crecimiento",
         immunization: "Inmunización",
         immunizations: "inmunizaciones",
+        deworming: "desparasitación",
         vaccine: "Vacuna",
         vaccines: "Vacunas",
       ),
@@ -299,15 +317,10 @@ class AppLocalizations {
         birthDate: "تاريخ الولادة",
         dateofBirth: "تاريخ الولادة",
         editSurvey: "تحرير مسح",
-        familyName: "اسم العائلة",
-        female: "أنثى",
-        givenNames: "أسماء مسماه",
-        male: "الذكر",
         mySchedule: "جدولي",
         newPatient: "مريض جديد",
         newSurvey: "مسح جديد",
         relationship: "صلة",
-        search: "بحث",
         submitShare: "إرسال / حصة",
         address: AppLocalizations_Labels_General_Address(
           city: "مدينة",
@@ -318,6 +331,14 @@ class AppLocalizations {
           postalCode: "رمز بريدي",
           state: "حالة",
           title: "عنوان",
+        ),
+        name: AppLocalizations_Labels_General_Name(
+          familyName: "اسم العائلة",
+          firstName: "الاسم الاول",
+          givenNames: "أسماء مسماه",
+          lastName: "الكنية",
+          name: "اسم",
+          otherNames: "اسماء اخرى",
         ),
         relation: AppLocalizations_Labels_General_Relation(
           aunt: "عمة",
@@ -334,6 +355,11 @@ class AppLocalizations {
           title: "علاقة",
           uncle: "اخو الام",
         ),
+        search: AppLocalizations_Labels_General_Search(
+          search: "بحث",
+          searchName: "البحث اسم",
+          filter: "منقي",
+        ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "أنثى",
           male: "الذكر",
@@ -348,6 +374,7 @@ class AppLocalizations {
         growth: "نمو",
         immunization: "تحصين",
         immunizations: "التطعيمات",
+        deworming: "للتخلص من الديدان",
         vaccine: "لقاح",
         vaccines: "#VALUE!",
       ),
@@ -418,15 +445,10 @@ class AppLocalizations {
         birthDate: "जन्म दिन",
         dateofBirth: "जन्म की तारीख",
         editSurvey: "सर्वे संपादित करें",
-        familyName: "परिवार का नाम",
-        female: "महिला",
-        givenNames: "दिए गए नाम",
-        male: "नर",
         mySchedule: "मेरे अनुसूची",
         newPatient: "नए रोगी",
         newSurvey: "नए सर्वेक्षण",
         relationship: "संबंध",
-        search: "खोज",
         submitShare: "जमा करें / शेयर",
         address: AppLocalizations_Labels_General_Address(
           city: "Faridabad",
@@ -437,6 +459,14 @@ class AppLocalizations {
           postalCode: "डाक कोड",
           state: "राज्य",
           title: "पता",
+        ),
+        name: AppLocalizations_Labels_General_Name(
+          familyName: "परिवार का नाम",
+          firstName: "पहला नाम",
+          givenNames: "दिए गए नाम",
+          lastName: "उपनाम",
+          name: "नाम",
+          otherNames: "दुसरे नाम",
         ),
         relation: AppLocalizations_Labels_General_Relation(
           aunt: "चाची",
@@ -453,6 +483,11 @@ class AppLocalizations {
           title: "रिश्ता",
           uncle: "चाचा",
         ),
+        search: AppLocalizations_Labels_General_Search(
+          search: "खोज",
+          searchName: "खोजें नाम",
+          filter: "फ़िल्टर",
+        ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "महिला",
           male: "नर",
@@ -467,6 +502,7 @@ class AppLocalizations {
         growth: "विकास",
         immunization: "प्रतिरक्षा",
         immunizations: "टीकाकरण",
+        deworming: "स्वच्छ",
         vaccine: "टीका",
         vaccines: "टीके",
       ),
@@ -537,15 +573,10 @@ class AppLocalizations {
         birthDate: "Дата рождения",
         dateofBirth: "Дата рождения",
         editSurvey: "Изменить опрос",
-        familyName: "Фамилия",
-        female: "женский",
-        givenNames: "Второе имя",
-        male: "мужчина",
         mySchedule: "Мое расписание",
         newPatient: "Новый пациент",
         newSurvey: "повторная съемка",
         relationship: "отношения",
-        search: "Поиск",
         submitShare: "Отправить / Share",
         address: AppLocalizations_Labels_General_Address(
           city: "город",
@@ -556,6 +587,14 @@ class AppLocalizations {
           postalCode: "Почтовый Код",
           state: "состояние",
           title: "Адрес",
+        ),
+        name: AppLocalizations_Labels_General_Name(
+          familyName: "Фамилия",
+          firstName: "Имя",
+          givenNames: "Второе имя",
+          lastName: "Фамилия",
+          name: "название",
+          otherNames: "Другие имена",
         ),
         relation: AppLocalizations_Labels_General_Relation(
           aunt: "тетка",
@@ -572,6 +611,11 @@ class AppLocalizations {
           title: "Связь",
           uncle: "Дядя",
         ),
+        search: AppLocalizations_Labels_General_Search(
+          search: "Поиск",
+          searchName: "Поиск Имя",
+          filter: "Фильтр",
+        ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "женский",
           male: "мужчина",
@@ -586,6 +630,7 @@ class AppLocalizations {
         growth: "рост",
         immunization: "иммунизация",
         immunizations: "Иммунизация",
+        deworming: "дегельминтация",
         vaccine: "вакцина",
         vaccines: "Вакцина",
       ),
@@ -656,15 +701,10 @@ class AppLocalizations {
         birthDate: "জন্ম তারিখ",
         dateofBirth: "জন্ম তারিখ",
         editSurvey: "সার্ভে সম্পাদনা",
-        familyName: "পারিবারিক নাম",
-        female: "মহিলা",
-        givenNames: "প্রদত্ত নাম",
-        male: "পুরুষ",
         mySchedule: "আমার সময়সূচি",
         newPatient: "নিউ রোগীর",
         newSurvey: "নতুন জরিপ",
         relationship: "সম্পর্ক",
-        search: "অনুসন্ধান করুন",
         submitShare: "জমা দিন / শেয়ার",
         address: AppLocalizations_Labels_General_Address(
           city: "শহর",
@@ -675,6 +715,14 @@ class AppLocalizations {
           postalCode: "পোস্ট অফিসের নাম্বার",
           state: "রাষ্ট্র",
           title: "ঠিকানা",
+        ),
+        name: AppLocalizations_Labels_General_Name(
+          familyName: "পারিবারিক নাম",
+          firstName: "নামের প্রথম অংশ",
+          givenNames: "প্রদত্ত নাম",
+          lastName: "নামের শেষাংশ",
+          name: "নাম",
+          otherNames: "অন্য নামগুলো",
         ),
         relation: AppLocalizations_Labels_General_Relation(
           aunt: "মাসি",
@@ -691,6 +739,11 @@ class AppLocalizations {
           title: "সম্পর্ক",
           uncle: "চাচা",
         ),
+        search: AppLocalizations_Labels_General_Search(
+          search: "অনুসন্ধান করুন",
+          searchName: "অনুসন্ধান নাম",
+          filter: "ছাঁকনি",
+        ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "মহিলা",
           male: "পুরুষ",
@@ -705,6 +758,7 @@ class AppLocalizations {
         growth: "উন্নতি",
         immunization: "টিকাদান",
         immunizations: "ইমিউনাইজেশন",
+        deworming: "ডিওয়ার্মিং",
         vaccine: "টীকা",
         vaccines: "টিকা",
       ),
@@ -775,15 +829,10 @@ class AppLocalizations {
         birthDate: "မွေးရက်",
         dateofBirth: "မွေးရက်",
         editSurvey: "Edit ကိုစစ်တမ်း",
-        familyName: "မိသားစုနာမည်",
-        female: "အမြိုးသမီး",
-        givenNames: "ပေးထားသောအမည်",
-        male: "အထီး",
         mySchedule: "အကြှနျုပျ၏ဇယား",
         newPatient: "နယူးလူနာ",
         newSurvey: "နယူးစစ်တမ်း",
         relationship: "relationship",
-        search: "ရှာဖှေ",
         submitShare: "Submit / ဝေမျှမယ်",
         address: AppLocalizations_Labels_General_Address(
           city: "မြို့",
@@ -794,6 +843,14 @@ class AppLocalizations {
           postalCode: "စာတိုက်သင်္ကေတ",
           state: "ပြည်နယ်",
           title: "လိပ်စာ",
+        ),
+        name: AppLocalizations_Labels_General_Name(
+          familyName: "မိသားစုနာမည်",
+          firstName: "နာမည်",
+          givenNames: "ပေးထားသောအမည်",
+          lastName: "မျိုးနွယ်အမည်",
+          name: "အမည်",
+          otherNames: "အခြားအမည်များ",
         ),
         relation: AppLocalizations_Labels_General_Relation(
           aunt: "အဒေါ်",
@@ -810,6 +867,11 @@ class AppLocalizations {
           title: "ဆှေမြိုး",
           uncle: "ဘကြီး",
         ),
+        search: AppLocalizations_Labels_General_Search(
+          search: "ရှာဖှေ",
+          searchName: "ရှာရန်အမည်",
+          filter: "ရေစစ်",
+        ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "အမြိုးသမီး",
           male: "အထီး",
@@ -824,6 +886,7 @@ class AppLocalizations {
         growth: "တိုးတက်မှုနှုန်း",
         immunization: "ကာကွယ်ဆေးထိုး",
         immunizations: "ကာကွယ်ဆေးထိုးပေးခြင်း",
+        deworming: "Deworming",
         vaccine: "ကာကွယ်ဆေး",
         vaccines: "ကာကွယ်ဆေးများ",
       ),
@@ -894,15 +957,10 @@ class AppLocalizations {
         birthDate: "生日",
         dateofBirth: "出生日期",
         editSurvey: "编辑调查",
-        familyName: "姓",
-        female: "女",
-        givenNames: "姓",
-        male: "男",
         mySchedule: "我的日程表",
         newPatient: "新患者",
         newSurvey: "新调查",
         relationship: "关系",
-        search: "搜索",
         submitShare: "提交/股",
         address: AppLocalizations_Labels_General_Address(
           city: "市",
@@ -913,6 +971,14 @@ class AppLocalizations {
           postalCode: "邮政编码",
           state: "州",
           title: "地址",
+        ),
+        name: AppLocalizations_Labels_General_Name(
+          familyName: "姓",
+          firstName: "名字",
+          givenNames: "姓",
+          lastName: "姓",
+          name: "名称",
+          otherNames: "其他名称",
         ),
         relation: AppLocalizations_Labels_General_Relation(
           aunt: "姑妈",
@@ -929,6 +995,11 @@ class AppLocalizations {
           title: "关系",
           uncle: "叔叔",
         ),
+        search: AppLocalizations_Labels_General_Search(
+          search: "搜索",
+          searchName: "搜索产品名称",
+          filter: "过滤",
+        ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "女",
           male: "男",
@@ -943,6 +1014,7 @@ class AppLocalizations {
         growth: "发展",
         immunization: "免疫接种",
         immunizations: "预防接种",
+        deworming: "驱虫",
         vaccine: "疫苗",
         vaccines: "疫苗",
       ),
@@ -1013,15 +1085,10 @@ class AppLocalizations {
         birthDate: "生日",
         dateofBirth: "出生日期",
         editSurvey: "編輯調查",
-        familyName: "姓",
-        female: "女",
-        givenNames: "姓",
-        male: "男",
         mySchedule: "我的日程表",
         newPatient: "新患者",
         newSurvey: "新調查",
         relationship: "關係",
-        search: "搜索",
         submitShare: "提交/股",
         address: AppLocalizations_Labels_General_Address(
           city: "市",
@@ -1032,6 +1099,14 @@ class AppLocalizations {
           postalCode: "郵政編碼",
           state: "州",
           title: "地址",
+        ),
+        name: AppLocalizations_Labels_General_Name(
+          familyName: "姓",
+          firstName: "名字",
+          givenNames: "姓",
+          lastName: "姓",
+          name: "名稱",
+          otherNames: "其他名稱",
         ),
         relation: AppLocalizations_Labels_General_Relation(
           aunt: "姑媽",
@@ -1048,6 +1123,11 @@ class AppLocalizations {
           title: "關係",
           uncle: "叔叔",
         ),
+        search: AppLocalizations_Labels_General_Search(
+          search: "搜索",
+          searchName: "搜索產品名稱",
+          filter: "過濾",
+        ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "女",
           male: "男",
@@ -1062,6 +1142,7 @@ class AppLocalizations {
         growth: "發展",
         immunization: "免疫接種",
         immunizations: "預防接種",
+        deworming: "驅蟲",
         vaccine: "疫苗",
         vaccines: "疫苗",
       ),
@@ -1132,15 +1213,10 @@ class AppLocalizations {
         birthDate: "تاریخ تولد",
         dateofBirth: "تاریخ تولد",
         editSurvey: "بررسی ویرایش",
-        familyName: "نام خانوادگی",
-        female: "زن",
-        givenNames: "اسامی با توجه به",
-        male: "نر",
         mySchedule: "برنامه من",
         newPatient: "بیمار جدید",
         newSurvey: "نظرسنجی جدید",
         relationship: "ارتباط",
-        search: "جستجو کردن",
         submitShare: "ارسال / اشتراک",
         address: AppLocalizations_Labels_General_Address(
           city: "شهرستان",
@@ -1151,6 +1227,14 @@ class AppLocalizations {
           postalCode: "کد پستی",
           state: "دولت",
           title: "نشانی",
+        ),
+        name: AppLocalizations_Labels_General_Name(
+          familyName: "نام خانوادگی",
+          firstName: "نام کوچک",
+          givenNames: "اسامی با توجه به",
+          lastName: "نام خانوادگی",
+          name: "نام",
+          otherNames: "نامهای دیگر",
         ),
         relation: AppLocalizations_Labels_General_Relation(
           aunt: "عمه",
@@ -1167,6 +1251,11 @@ class AppLocalizations {
           title: "رابطه",
           uncle: "عمو یا دایی",
         ),
+        search: AppLocalizations_Labels_General_Search(
+          search: "جستجو کردن",
+          searchName: "جستجو نام",
+          filter: "صافی",
+        ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "زن",
           male: "نر",
@@ -1181,6 +1270,7 @@ class AppLocalizations {
         growth: "رشد",
         immunization: "ایمن سازی",
         immunizations: "ایمن سازی",
+        deworming: "کرم زدایی",
         vaccine: "واکسن",
         vaccines: "واکسن ها",
       ),
@@ -1251,15 +1341,10 @@ class AppLocalizations {
         birthDate: "Date de naissance",
         dateofBirth: "Date de naissance",
         editSurvey: "Modifier enquête",
-        familyName: "Nom de famille",
-        female: "Femelle",
-        givenNames: "Prénoms",
-        male: "Masculin",
         mySchedule: "Mon emploi du temps",
         newPatient: "nouveau patient",
         newSurvey: "Une nouvelle enquête",
         relationship: "Relation",
-        search: "Chercher",
         submitShare: "Déposer / Partager",
         address: AppLocalizations_Labels_General_Address(
           city: "Ville",
@@ -1270,6 +1355,14 @@ class AppLocalizations {
           postalCode: "code postal",
           state: "Etat",
           title: "Adresse",
+        ),
+        name: AppLocalizations_Labels_General_Name(
+          familyName: "Nom de famille",
+          firstName: "Prénom",
+          givenNames: "Prénoms",
+          lastName: "Nom de famille",
+          name: "Nom",
+          otherNames: "Autres noms",
         ),
         relation: AppLocalizations_Labels_General_Relation(
           aunt: "Tante",
@@ -1286,6 +1379,11 @@ class AppLocalizations {
           title: "Relation",
           uncle: "Oncle",
         ),
+        search: AppLocalizations_Labels_General_Search(
+          search: "Chercher",
+          searchName: "Recherche Nom",
+          filter: "Filtre",
+        ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "Femelle",
           male: "Masculin",
@@ -1300,6 +1398,7 @@ class AppLocalizations {
         growth: "Croissance",
         immunization: "Immunisation",
         immunizations: "immunisations",
+        deworming: "déparasitage",
         vaccine: "Vaccin",
         vaccines: "Vaccins",
       ),
@@ -1370,15 +1469,10 @@ class AppLocalizations {
         birthDate: "Geburtsdatum",
         dateofBirth: "Geburtsdatum",
         editSurvey: "Umfrage bearbeiten",
-        familyName: "Nachname",
-        female: "Weiblich",
-        givenNames: "Vornamen",
-        male: "Männlich",
         mySchedule: "Mein Terminplan",
         newPatient: "Neuer Patient",
         newSurvey: "neue Umfrage",
         relationship: "Beziehung",
-        search: "Suche",
         submitShare: "Senden / Share",
         address: AppLocalizations_Labels_General_Address(
           city: "Stadt",
@@ -1389,6 +1483,14 @@ class AppLocalizations {
           postalCode: "Postleitzahl",
           state: "Zustand",
           title: "Adresse",
+        ),
+        name: AppLocalizations_Labels_General_Name(
+          familyName: "Nachname",
+          firstName: "Vorname",
+          givenNames: "Vornamen",
+          lastName: "Nachname",
+          name: "Name",
+          otherNames: "Andere Namen",
         ),
         relation: AppLocalizations_Labels_General_Relation(
           aunt: "Tante",
@@ -1405,6 +1507,11 @@ class AppLocalizations {
           title: "Beziehung",
           uncle: "Onkel",
         ),
+        search: AppLocalizations_Labels_General_Search(
+          search: "Suche",
+          searchName: "Suchen Name",
+          filter: "Filter",
+        ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "Weiblich",
           male: "Männlich",
@@ -1419,6 +1526,7 @@ class AppLocalizations {
         growth: "Wachstum",
         immunization: "Immunisierung",
         immunizations: "Immunisierungen",
+        deworming: "Entwurmung",
         vaccine: "Impfstoff",
         vaccines: "Impfungen",
       ),
@@ -1489,15 +1597,10 @@ class AppLocalizations {
         birthDate: "Tanggal lahir",
         dateofBirth: "Tanggal lahir",
         editSurvey: "mengedit Survey",
-        familyName: "Nama keluarga",
-        female: "Perempuan",
-        givenNames: "Memberikan nama",
-        male: "Pria",
         mySchedule: "Jadwal saya",
         newPatient: "Pasien baru",
         newSurvey: "Survei baru",
         relationship: "Hubungan",
-        search: "Cari",
         submitShare: "Menyerahkan / Share",
         address: AppLocalizations_Labels_General_Address(
           city: "Kota",
@@ -1508,6 +1611,14 @@ class AppLocalizations {
           postalCode: "Kode Pos",
           state: "Negara",
           title: "Alamat",
+        ),
+        name: AppLocalizations_Labels_General_Name(
+          familyName: "Nama keluarga",
+          firstName: "Nama depan",
+          givenNames: "Memberikan nama",
+          lastName: "Nama keluarga",
+          name: "Nama",
+          otherNames: "Nama lain",
         ),
         relation: AppLocalizations_Labels_General_Relation(
           aunt: "Bibi",
@@ -1524,6 +1635,11 @@ class AppLocalizations {
           title: "Hubungan",
           uncle: "Paman",
         ),
+        search: AppLocalizations_Labels_General_Search(
+          search: "Cari",
+          searchName: "Nama Cari",
+          filter: "Saring",
+        ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "Perempuan",
           male: "Pria",
@@ -1538,6 +1654,7 @@ class AppLocalizations {
         growth: "Pertumbuhan",
         immunization: "Imunisasi",
         immunizations: "imunisasi",
+        deworming: "cacingan",
         vaccine: "Vaksin",
         vaccines: "Vaksin",
       ),
@@ -1608,15 +1725,10 @@ class AppLocalizations {
         birthDate: "誕生日",
         dateofBirth: "生年月日",
         editSurvey: "編集調査",
-        familyName: "苗字",
-        female: "女性",
-        givenNames: "名前",
-        male: "男性",
         mySchedule: "私のスケジュール",
         newPatient: "新しい患者",
         newSurvey: "新しい調査",
         relationship: "関係",
-        search: "探す",
         submitShare: "送信/共有",
         address: AppLocalizations_Labels_General_Address(
           city: "市",
@@ -1627,6 +1739,14 @@ class AppLocalizations {
           postalCode: "郵便番号",
           state: "状態",
           title: "住所",
+        ),
+        name: AppLocalizations_Labels_General_Name(
+          familyName: "苗字",
+          firstName: "ファーストネーム",
+          givenNames: "名前",
+          lastName: "苗字",
+          name: "名前",
+          otherNames: "他の名前",
         ),
         relation: AppLocalizations_Labels_General_Relation(
           aunt: "叔母",
@@ -1643,6 +1763,11 @@ class AppLocalizations {
           title: "関係",
           uncle: "おじさん",
         ),
+        search: AppLocalizations_Labels_General_Search(
+          search: "探す",
+          searchName: "検索名前",
+          filter: "フィルタ",
+        ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "女性",
           male: "男性",
@@ -1657,6 +1782,7 @@ class AppLocalizations {
         growth: "成長",
         immunization: "免疫",
         immunizations: "予防接種",
+        deworming: "駆虫",
         vaccine: "ワクチン",
         vaccines: "ワクチン",
       ),
@@ -1727,15 +1853,10 @@ class AppLocalizations {
         birthDate: "ថ្ងៃខែ​ឆ្នាំ​កំណើត",
         dateofBirth: "ថ្ងៃខែ​ឆ្នាំ​កំណើត",
         editSurvey: "កែសម្រួលការស្ទង់មតិ",
-        familyName: "ឈ្មោះគ្រួសារ",
-        female: "ស្រី",
-        givenNames: "ឈ្មោះ​ហៅក្រៅ",
-        male: "បុរស",
         mySchedule: "កាលវិភាគ​របស់​ខ្ញុំ",
         newPatient: "ជម្ងឺថ្មី",
         newSurvey: "ការស្ទង់មតិថ្មី",
         relationship: "ទំនាក់ទំនង",
-        search: "ស្វែងរក",
         submitShare: "ដាក់ស្នើ / ចែករំលែក",
         address: AppLocalizations_Labels_General_Address(
           city: "ទីក្រុង",
@@ -1746,6 +1867,14 @@ class AppLocalizations {
           postalCode: "លេខ​កូដ​ប្រៃ​ស​ណី​យ",
           state: "រដ្ឋ",
           title: "អាសយដ្ឋាន",
+        ),
+        name: AppLocalizations_Labels_General_Name(
+          familyName: "ឈ្មោះគ្រួសារ",
+          firstName: "ឈ្មោះជាលើកដំបូង",
+          givenNames: "ឈ្មោះ​ហៅក្រៅ",
+          lastName: "នាមត្រកូល",
+          name: "ឈ្មោះ",
+          otherNames: "ឈ្មោះ​ដ៏​ទៃ​ទៀត",
         ),
         relation: AppLocalizations_Labels_General_Relation(
           aunt: "មីង",
@@ -1762,6 +1891,11 @@ class AppLocalizations {
           title: "ទំនាក់ទំនង",
           uncle: "ពូ",
         ),
+        search: AppLocalizations_Labels_General_Search(
+          search: "ស្វែងរក",
+          searchName: "ស្វែងរកឈ្មោះ",
+          filter: "តម្រង",
+        ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "ស្រី",
           male: "បុរស",
@@ -1776,6 +1910,7 @@ class AppLocalizations {
         growth: "កំណើន",
         immunization: "ចាក់ថ្នាំបង្ការរោគ",
         immunizations: "ចាក់ថ្នាំបង្ការរោគ",
+        deworming: "Deworming",
         vaccine: "ថ្នាំបង្ការ",
         vaccines: "វ៉ាក់សាំង",
       ),
@@ -1846,15 +1981,10 @@ class AppLocalizations {
         birthDate: "생일",
         dateofBirth: "생년월일",
         editSurvey: "편집 설문 조사",
-        familyName: "가족 이름",
-        female: "여자",
-        givenNames: "지정된 이름의",
-        male: "남성",
         mySchedule: "내 일정",
         newPatient: "새로운 환자",
         newSurvey: "새로운 설문 조사",
         relationship: "관계",
-        search: "검색",
         submitShare: "전송 / 공유",
         address: AppLocalizations_Labels_General_Address(
           city: "시티",
@@ -1865,6 +1995,14 @@ class AppLocalizations {
           postalCode: "우편 번호",
           state: "상태",
           title: "주소",
+        ),
+        name: AppLocalizations_Labels_General_Name(
+          familyName: "가족 이름",
+          firstName: "이름",
+          givenNames: "지정된 이름의",
+          lastName: "성",
+          name: "이름",
+          otherNames: "다른 이름들",
         ),
         relation: AppLocalizations_Labels_General_Relation(
           aunt: "이모",
@@ -1881,6 +2019,11 @@ class AppLocalizations {
           title: "관계",
           uncle: "삼촌",
         ),
+        search: AppLocalizations_Labels_General_Search(
+          search: "검색",
+          searchName: "이름으로 검색",
+          filter: "필터",
+        ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "여자",
           male: "남성",
@@ -1895,6 +2038,7 @@ class AppLocalizations {
         growth: "성장",
         immunization: "면제",
         immunizations: "예방 접종",
+        deworming: "구충제",
         vaccine: "백신",
         vaccines: "백신",
       ),
@@ -1965,15 +2109,10 @@ class AppLocalizations {
         birthDate: "ວັນເດືອນປີເກີດ",
         dateofBirth: "ວັນ​ເດືອນ​ປີ​ເກີດ",
         editSurvey: "ດັດແກ້ການສໍາຫຼວດ",
-        familyName: "ນາມ​ສະ​ກຸນ",
-        female: "ຍິງ",
-        givenNames: "Names ເນື່ອງ",
-        male: "ຜູ້​ຊາຍ",
         mySchedule: "ຕາຕະລາງຂອງຂ້າພະເຈົ້າ",
         newPatient: "ອົດທົນໃຫມ່",
         newSurvey: "ການສໍາຫຼວດໃຫມ່",
         relationship: "ຄວາມສໍາພັນ",
-        search: "ຄົ້ນຫາ",
         submitShare: "ຍື່ນສະເຫນີ / Share",
         address: AppLocalizations_Labels_General_Address(
           city: "ເມືອງ",
@@ -1984,6 +2123,14 @@ class AppLocalizations {
           postalCode: "ລະ​ຫັດ​ໄປ​ສະ​ນີ",
           state: "State",
           title: "ທີ່ຢູ່",
+        ),
+        name: AppLocalizations_Labels_General_Name(
+          familyName: "ນາມ​ສະ​ກຸນ",
+          firstName: "ຊື່​ແທ້",
+          givenNames: "Names ເນື່ອງ",
+          lastName: "ນາມ​ສະ​ກຸນ",
+          name: "ຊື່",
+          otherNames: "ຊື່ອື່ນໆ",
         ),
         relation: AppLocalizations_Labels_General_Relation(
           aunt: "ປ້າ",
@@ -2000,6 +2147,11 @@ class AppLocalizations {
           title: "Relation",
           uncle: "ລຸງ",
         ),
+        search: AppLocalizations_Labels_General_Search(
+          search: "ຄົ້ນຫາ",
+          searchName: "ຄົ້ນຫາຊື່",
+          filter: "ການກັ່ນຕອງ",
+        ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "ຍິງ",
           male: "ຜູ້​ຊາຍ",
@@ -2014,6 +2166,7 @@ class AppLocalizations {
         growth: "ການຂະຫຍາຍຕົວ",
         immunization: "ປ້ອງກັນພະຍາດ",
         immunizations: "ພູມຕ້ານທານ",
+        deworming: "Deworming",
         vaccine: "ສັກຢາວັກຊີນ",
         vaccines: "ວັກ​ຊີນ​ປ້ອງ​ກັນ",
       ),
@@ -2084,15 +2237,10 @@ class AppLocalizations {
         birthDate: "जन्मदिनांक",
         dateofBirth: "जन्म तारीख",
         editSurvey: "सर्वेक्षण संपादित करा",
-        familyName: "कौटुंबिक नाव",
-        female: "स्त्री",
-        givenNames: "नावे दिली",
-        male: "पुरुष",
         mySchedule: "माझे वेळापत्रक",
         newPatient: "नवीन रुग्णांच्या",
         newSurvey: "नवीन सर्वेक्षण",
         relationship: "संबंध",
-        search: "शोधा",
         submitShare: "सबमिट करा / शेअर",
         address: AppLocalizations_Labels_General_Address(
           city: "सिटी",
@@ -2103,6 +2251,14 @@ class AppLocalizations {
           postalCode: "पिनकोड",
           state: "राज्य",
           title: "पत्ता",
+        ),
+        name: AppLocalizations_Labels_General_Name(
+          familyName: "कौटुंबिक नाव",
+          firstName: "पहिले नाव",
+          givenNames: "नावे दिली",
+          lastName: "आडनाव",
+          name: "नाव",
+          otherNames: "इतर नावे",
         ),
         relation: AppLocalizations_Labels_General_Relation(
           aunt: "काकू",
@@ -2119,6 +2275,11 @@ class AppLocalizations {
           title: "नाते",
           uncle: "काका",
         ),
+        search: AppLocalizations_Labels_General_Search(
+          search: "शोधा",
+          searchName: "शोध नाव",
+          filter: "फिल्टर",
+        ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "स्त्री",
           male: "पुरुष",
@@ -2133,6 +2294,7 @@ class AppLocalizations {
         growth: "वाढ",
         immunization: "लसीकरण",
         immunizations: "लसीकरण",
+        deworming: "माद्यांचे",
         vaccine: "लस",
         vaccines: "लसीकरण",
       ),
@@ -2203,15 +2365,10 @@ class AppLocalizations {
         birthDate: "जन्म मिति",
         dateofBirth: "जन्म मिति",
         editSurvey: "सर्वेक्षण सम्पादन",
-        familyName: "परिवार नाम",
-        female: "महिला",
-        givenNames: "नामहरू",
-        male: "पुरुष",
         mySchedule: "मेरो तालिका",
         newPatient: "नयाँ रोगी",
         newSurvey: "नयाँ सर्वेक्षण",
         relationship: "सम्बन्ध",
-        search: "खोज",
         submitShare: "पेश / शेयर",
         address: AppLocalizations_Labels_General_Address(
           city: "शहर",
@@ -2222,6 +2379,14 @@ class AppLocalizations {
           postalCode: "पिन कोड",
           state: "राज्य",
           title: "ठेगाना",
+        ),
+        name: AppLocalizations_Labels_General_Name(
+          familyName: "परिवार नाम",
+          firstName: "पहिलो नाम",
+          givenNames: "नामहरू",
+          lastName: "थर",
+          name: "नाम",
+          otherNames: "अरु नामहरु",
         ),
         relation: AppLocalizations_Labels_General_Relation(
           aunt: "चाची",
@@ -2238,6 +2403,11 @@ class AppLocalizations {
           title: "सम्बन्ध",
           uncle: "चाचा",
         ),
+        search: AppLocalizations_Labels_General_Search(
+          search: "खोज",
+          searchName: "खोज नाम",
+          filter: "फिल्टर",
+        ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "महिला",
           male: "पुरुष",
@@ -2252,6 +2422,7 @@ class AppLocalizations {
         growth: "वृद्धि",
         immunization: "खोप",
         immunizations: "प्रतिरक्षक",
+        deworming: "Deworming",
         vaccine: "टीका",
         vaccines: "औषधी",
       ),
@@ -2322,15 +2493,10 @@ class AppLocalizations {
         birthDate: "Data de nascimento",
         dateofBirth: "Data de nascimento",
         editSurvey: "Editar questionário",
-        familyName: "Sobrenome",
-        female: "Fêmea",
-        givenNames: "Nomes dados",
-        male: "Masculino",
         mySchedule: "Meu horário",
         newPatient: "New Patient",
         newSurvey: "nova pesquisa",
         relationship: "Relação",
-        search: "Pesquisa",
         submitShare: "Enviar / Share",
         address: AppLocalizations_Labels_General_Address(
           city: "Cidade",
@@ -2341,6 +2507,14 @@ class AppLocalizations {
           postalCode: "Código postal",
           state: "Estado",
           title: "Endereço",
+        ),
+        name: AppLocalizations_Labels_General_Name(
+          familyName: "Sobrenome",
+          firstName: "Primeiro nome",
+          givenNames: "Nomes dados",
+          lastName: "Último nome",
+          name: "Nome",
+          otherNames: "Outros nomes",
         ),
         relation: AppLocalizations_Labels_General_Relation(
           aunt: "Tia",
@@ -2357,6 +2531,11 @@ class AppLocalizations {
           title: "Relação",
           uncle: "Tio",
         ),
+        search: AppLocalizations_Labels_General_Search(
+          search: "Pesquisa",
+          searchName: "pesquisa por nome",
+          filter: "Filtro",
+        ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "Fêmea",
           male: "Masculino",
@@ -2371,6 +2550,7 @@ class AppLocalizations {
         growth: "Crescimento",
         immunization: "Imunização",
         immunizations: "imunizações",
+        deworming: "desparasitação",
         vaccine: "Vacina",
         vaccines: "Vacinas",
       ),
@@ -2441,15 +2621,10 @@ class AppLocalizations {
         birthDate: "ਜਨਮ ਮਿਤੀ",
         dateofBirth: "ਜਨਮ ਤਾਰੀਖ",
         editSurvey: "ਸਰਵੇਖਣ ਸੋਧ",
-        familyName: "ਖਾਨਦਾਨ ਦਾ ਨਾ",
-        female: "ਔਰਤ",
-        givenNames: "ਦਿੱਤੇ ਹੋਏ ਨਾਂ",
-        male: "ਮਰਦ",
         mySchedule: "ਮੇਰੀ ਤਹਿ",
         newPatient: "ਨਿਊ ਮਰੀਜ਼",
         newSurvey: "ਨਿਊ ਸਰਵੇ",
         relationship: "ਰਿਸ਼ਤਾ",
-        search: "ਖੋਜ",
         submitShare: "ਪੇਸ਼ ਕਰੋ / share",
         address: AppLocalizations_Labels_General_Address(
           city: "ਸਿਟੀ",
@@ -2460,6 +2635,14 @@ class AppLocalizations {
           postalCode: "ਡਾਕ ਕੋਡ",
           state: "ਸਟੇਟ",
           title: "ਪਤਾ",
+        ),
+        name: AppLocalizations_Labels_General_Name(
+          familyName: "ਖਾਨਦਾਨ ਦਾ ਨਾ",
+          firstName: "ਪਹਿਲਾ ਨਾਂ",
+          givenNames: "ਦਿੱਤੇ ਹੋਏ ਨਾਂ",
+          lastName: "ਆਖੀਰਲਾ ਨਾਂਮ",
+          name: "ਦਾ ਨਾਮ",
+          otherNames: "ਹੋਰ ਨਾਮ",
         ),
         relation: AppLocalizations_Labels_General_Relation(
           aunt: "ਮਾਸੀ",
@@ -2476,6 +2659,11 @@ class AppLocalizations {
           title: "ਸਬੰਧ",
           uncle: "ਅੰਕਲ",
         ),
+        search: AppLocalizations_Labels_General_Search(
+          search: "ਖੋਜ",
+          searchName: "ਖੋਜ ਦਾ ਨਾਮ",
+          filter: "ਫਿਲਟਰ",
+        ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "ਔਰਤ",
           male: "ਮਰਦ",
@@ -2490,6 +2678,7 @@ class AppLocalizations {
         growth: "ਵਿਕਾਸ",
         immunization: "ਟੀਕਾਕਰਣ",
         immunizations: "ਟੀਕਾਕਰਣ",
+        deworming: "ਸ਼ੈੱਡ",
         vaccine: "ਵੈਕਸੀਨ",
         vaccines: "ਟੀਕੇ",
       ),
@@ -2560,15 +2749,10 @@ class AppLocalizations {
         birthDate: "Taariiqda dhalasha",
         dateofBirth: "Taariikhda Dhalashada",
         editSurvey: "edit Survey",
-        familyName: "Magaca qoyska",
-        female: "Dheddig",
-        givenNames: "Marka la eego magacyada",
-        male: "Male",
         mySchedule: "My Schedule",
         newPatient: "bukaanka New",
         newSurvey: "New Survey",
         relationship: "xiriirka",
-        search: "Raadi",
         submitShare: "Gudbi / Share",
         address: AppLocalizations_Labels_General_Address(
           city: "City",
@@ -2579,6 +2763,14 @@ class AppLocalizations {
           postalCode: "boostada Code",
           state: "State",
           title: "Address",
+        ),
+        name: AppLocalizations_Labels_General_Name(
+          familyName: "Magaca qoyska",
+          firstName: "Magaca koowaad",
+          givenNames: "Marka la eego magacyada",
+          lastName: "Last Name",
+          name: "magaca",
+          otherNames: "Magacyada kale",
         ),
         relation: AppLocalizations_Labels_General_Relation(
           aunt: "eedaday",
@@ -2595,6 +2787,11 @@ class AppLocalizations {
           title: "Xiriirka",
           uncle: "adeer",
         ),
+        search: AppLocalizations_Labels_General_Search(
+          search: "Raadi",
+          searchName: "Search Name",
+          filter: "filter",
+        ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "Dheddig",
           male: "Male",
@@ -2609,6 +2806,7 @@ class AppLocalizations {
         growth: "Kobaca",
         immunization: "Talaalka",
         immunizations: "tallaalada",
+        deworming: "gooryaan",
         vaccine: "tallaalka",
         vaccines: "Talaalo",
       ),
@@ -2679,15 +2877,10 @@ class AppLocalizations {
         birthDate: "Tarehe ya kuzaliwa",
         dateofBirth: "Tarehe ya kuzaliwa",
         editSurvey: "Hariri Survey",
-        familyName: "Jina la ukoo",
-        female: "mwanamke",
-        givenNames: "Majina kutokana",
-        male: "Mwanaume",
         mySchedule: "Ratiba yangu",
         newPatient: "mgonjwa New",
         newSurvey: "Survey New",
         relationship: "uhusiano",
-        search: "Tafuta",
         submitShare: "Wasilisha / Shiriki",
         address: AppLocalizations_Labels_General_Address(
           city: "City",
@@ -2698,6 +2891,14 @@ class AppLocalizations {
           postalCode: "Posta",
           state: "hali",
           title: "Anuani",
+        ),
+        name: AppLocalizations_Labels_General_Name(
+          familyName: "Jina la ukoo",
+          firstName: "Jina la kwanza",
+          givenNames: "Majina kutokana",
+          lastName: "Jina la familia",
+          name: "jina",
+          otherNames: "Majina Mengine",
         ),
         relation: AppLocalizations_Labels_General_Relation(
           aunt: "shangazi",
@@ -2714,6 +2915,11 @@ class AppLocalizations {
           title: "uhusiano",
           uncle: "Uncle",
         ),
+        search: AppLocalizations_Labels_General_Search(
+          search: "Tafuta",
+          searchName: "Search Jina",
+          filter: "filter",
+        ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "mwanamke",
           male: "Mwanaume",
@@ -2728,6 +2934,7 @@ class AppLocalizations {
         growth: "ukuaji",
         immunization: "Chanjo",
         immunizations: "chanjo",
+        deworming: "deworming",
         vaccine: "chanjo",
         vaccines: "Chanjo",
       ),
@@ -2798,15 +3005,10 @@ class AppLocalizations {
         birthDate: "Araw ng kapanganakan",
         dateofBirth: "Araw ng kapanganakan",
         editSurvey: "I-edit ang Survey",
-        familyName: "Apelyido",
-        female: "babae",
-        givenNames: "Given Pangalan",
-        male: "lalaki",
         mySchedule: "Aking Talaan",
         newPatient: "bagong Pasyente",
         newSurvey: "bagong Survey",
         relationship: "Relasyon",
-        search: "Hanapan",
         submitShare: "Isumite / Share",
         address: AppLocalizations_Labels_General_Address(
           city: "lungsod",
@@ -2817,6 +3019,14 @@ class AppLocalizations {
           postalCode: "Postal Code",
           state: "estado",
           title: "address",
+        ),
+        name: AppLocalizations_Labels_General_Name(
+          familyName: "Apelyido",
+          firstName: "Pangalan",
+          givenNames: "Given Pangalan",
+          lastName: "Huling pangalan",
+          name: "pangalan",
+          otherNames: "Ibang pangalan",
         ),
         relation: AppLocalizations_Labels_General_Relation(
           aunt: "Tiya",
@@ -2833,6 +3043,11 @@ class AppLocalizations {
           title: "kaugnayan",
           uncle: "Tiyuhin",
         ),
+        search: AppLocalizations_Labels_General_Search(
+          search: "Hanapan",
+          searchName: "Search Pangalan",
+          filter: "Filter",
+        ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "babae",
           male: "lalaki",
@@ -2847,6 +3062,7 @@ class AppLocalizations {
         growth: "paglaki",
         immunization: "pagbibigay ng kabal",
         immunizations: "Imunisasyon",
+        deworming: "deworming",
         vaccine: "bakuna",
         vaccines: "Mga bakuna",
       ),
@@ -2917,15 +3133,10 @@ class AppLocalizations {
         birthDate: "วันที่เกิด",
         dateofBirth: "วันเกิด",
         editSurvey: "แก้ไขการสำรวจ",
-        familyName: "นามสกุล",
-        female: "หญิง",
-        givenNames: "ชื่อจริง",
-        male: "ชาย",
         mySchedule: "ตารางของฉัน",
         newPatient: "ผู้ป่วยใหม่",
         newSurvey: "การสำรวจใหม่",
         relationship: "ความสัมพันธ์",
-        search: "ค้นหา",
         submitShare: "ส่ง / หุ้น",
         address: AppLocalizations_Labels_General_Address(
           city: "เมือง",
@@ -2936,6 +3147,14 @@ class AppLocalizations {
           postalCode: "รหัสไปรษณีย์",
           state: "สถานะ",
           title: "ที่อยู่",
+        ),
+        name: AppLocalizations_Labels_General_Name(
+          familyName: "นามสกุล",
+          firstName: "ชื่อจริง",
+          givenNames: "ชื่อจริง",
+          lastName: "นามสกุล",
+          name: "ชื่อ",
+          otherNames: "ชื่ออื่น",
         ),
         relation: AppLocalizations_Labels_General_Relation(
           aunt: "ป้า",
@@ -2952,6 +3171,11 @@ class AppLocalizations {
           title: "ความสัมพันธ์",
           uncle: "ลุง",
         ),
+        search: AppLocalizations_Labels_General_Search(
+          search: "ค้นหา",
+          searchName: "ค้นหาชื่อ",
+          filter: "กรอง",
+        ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "หญิง",
           male: "ชาย",
@@ -2966,6 +3190,7 @@ class AppLocalizations {
         growth: "การเจริญเติบโต",
         immunization: "การทำให้รอดจาก",
         immunizations: "การฉีดวัคซีน",
+        deworming: "การถ่ายพยาธิ",
         vaccine: "วัคซีน",
         vaccines: "วัคซีน",
       ),
@@ -3036,15 +3261,10 @@ class AppLocalizations {
         birthDate: "Tug'ilgan sana",
         dateofBirth: "Tug'ilgan sana",
         editSurvey: "Edit Survey",
-        familyName: "Familiya",
-        female: "ayol",
-        givenNames: "Ism va Sharif",
-        male: "erkak",
         mySchedule: "Mening jadvali",
         newPatient: "Yangi kasal",
         newSurvey: "Yangi tadqiqot",
         relationship: "munosabatlar",
-        search: "Qidirmoq",
         submitShare: "Submit / Share",
         address: AppLocalizations_Labels_General_Address(
           city: "shahar",
@@ -3055,6 +3275,14 @@ class AppLocalizations {
           postalCode: "Pochta Indeksi",
           state: "Davlat",
           title: "manzil",
+        ),
+        name: AppLocalizations_Labels_General_Name(
+          familyName: "Familiya",
+          firstName: "Ism",
+          givenNames: "Ism va Sharif",
+          lastName: "Familiya",
+          name: "ism",
+          otherNames: "Boshqa Ismlar",
         ),
         relation: AppLocalizations_Labels_General_Relation(
           aunt: "amma",
@@ -3071,6 +3299,11 @@ class AppLocalizations {
           title: "qarindosh",
           uncle: "Tog'a",
         ),
+        search: AppLocalizations_Labels_General_Search(
+          search: "Qidirmoq",
+          searchName: "Qidiruv nomi",
+          filter: "filter",
+        ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "ayol",
           male: "erkak",
@@ -3085,6 +3318,7 @@ class AppLocalizations {
         growth: "o'sish",
         immunization: "emlash",
         immunizations: "emlash",
+        deworming: "degelmintizatsiya,",
         vaccine: "vaktsina",
         vaccines: "Vaksinalar",
       ),
@@ -3155,15 +3389,10 @@ class AppLocalizations {
         birthDate: "Ngày sinh",
         dateofBirth: "Ngày sinh",
         editSurvey: "Sửa Khảo sát",
-        familyName: "Tên gia đình",
-        female: "Giống cái",
-        givenNames: "Tên trao",
-        male: "Nam giới",
         mySchedule: "Thời gian biểu của tôi",
         newPatient: "Bệnh nhân mới",
         newSurvey: "Khảo sát mới",
         relationship: "Mối quan hệ",
-        search: "Tìm kiếm",
         submitShare: "Gửi / Chia sẻ",
         address: AppLocalizations_Labels_General_Address(
           city: "thành phố",
@@ -3174,6 +3403,14 @@ class AppLocalizations {
           postalCode: "Mã bưu điện",
           state: "Tiểu bang",
           title: "Địa chỉ",
+        ),
+        name: AppLocalizations_Labels_General_Name(
+          familyName: "Tên gia đình",
+          firstName: "Tên đầu tiên",
+          givenNames: "Tên trao",
+          lastName: "tên họ",
+          name: "Tên",
+          otherNames: "Vài cái tên khác",
         ),
         relation: AppLocalizations_Labels_General_Relation(
           aunt: "Cô",
@@ -3190,6 +3427,11 @@ class AppLocalizations {
           title: "Quan hệ",
           uncle: "Chú",
         ),
+        search: AppLocalizations_Labels_General_Search(
+          search: "Tìm kiếm",
+          searchName: "Tim kiêm tên",
+          filter: "Lọc",
+        ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "Giống cái",
           male: "Nam giới",
@@ -3204,6 +3446,7 @@ class AppLocalizations {
         growth: "sự phát triển",
         immunization: "Tiêm chủng",
         immunizations: "chích ngừa",
+        deworming: "tẩy giun",
         vaccine: "vắc-xin",
         vaccines: "Vắc-xin",
       ),
@@ -3508,6 +3751,47 @@ class AppLocalizations_Labels_General_Address {
   }
 }
 
+class AppLocalizations_Labels_General_Name {
+  const AppLocalizations_Labels_General_Name(
+      {this.familyName,
+      this.firstName,
+      this.givenNames,
+      this.lastName,
+      this.name,
+      this.otherNames});
+
+  final String familyName;
+
+  final String firstName;
+
+  final String givenNames;
+
+  final String lastName;
+
+  final String name;
+
+  final String otherNames;
+
+  String getByKey(String key) {
+    switch (key) {
+      case 'familyName':
+        return familyName;
+      case 'firstName':
+        return firstName;
+      case 'givenNames':
+        return givenNames;
+      case 'lastName':
+        return lastName;
+      case 'name':
+        return name;
+      case 'otherNames':
+        return otherNames;
+      default:
+        return '';
+    }
+  }
+}
+
 class AppLocalizations_Labels_General_Relation {
   const AppLocalizations_Labels_General_Relation(
       {this.aunt,
@@ -3584,6 +3868,30 @@ class AppLocalizations_Labels_General_Relation {
   }
 }
 
+class AppLocalizations_Labels_General_Search {
+  const AppLocalizations_Labels_General_Search(
+      {this.search, this.searchName, this.filter});
+
+  final String search;
+
+  final String searchName;
+
+  final String filter;
+
+  String getByKey(String key) {
+    switch (key) {
+      case 'search':
+        return search;
+      case 'searchName':
+        return searchName;
+      case 'filter':
+        return filter;
+      default:
+        return '';
+    }
+  }
+}
+
 class AppLocalizations_Labels_General_SexAtBirth {
   const AppLocalizations_Labels_General_SexAtBirth(
       {this.female, this.male, this.title});
@@ -3614,18 +3922,15 @@ class AppLocalizations_Labels_General {
       this.birthDate,
       this.dateofBirth,
       this.editSurvey,
-      this.familyName,
-      this.female,
-      this.givenNames,
-      this.male,
       this.mySchedule,
       this.newPatient,
       this.newSurvey,
       this.relationship,
-      this.search,
       this.submitShare,
       this.address,
+      this.name,
       this.relation,
+      this.search,
       this.sexAtBirth});
 
   final String allPatients;
@@ -3636,14 +3941,6 @@ class AppLocalizations_Labels_General {
 
   final String editSurvey;
 
-  final String familyName;
-
-  final String female;
-
-  final String givenNames;
-
-  final String male;
-
   final String mySchedule;
 
   final String newPatient;
@@ -3652,13 +3949,15 @@ class AppLocalizations_Labels_General {
 
   final String relationship;
 
-  final String search;
-
   final String submitShare;
 
   final AppLocalizations_Labels_General_Address address;
 
+  final AppLocalizations_Labels_General_Name name;
+
   final AppLocalizations_Labels_General_Relation relation;
+
+  final AppLocalizations_Labels_General_Search search;
 
   final AppLocalizations_Labels_General_SexAtBirth sexAtBirth;
 
@@ -3672,14 +3971,6 @@ class AppLocalizations_Labels_General {
         return dateofBirth;
       case 'editSurvey':
         return editSurvey;
-      case 'familyName':
-        return familyName;
-      case 'female':
-        return female;
-      case 'givenNames':
-        return givenNames;
-      case 'male':
-        return male;
       case 'mySchedule':
         return mySchedule;
       case 'newPatient':
@@ -3688,8 +3979,6 @@ class AppLocalizations_Labels_General {
         return newSurvey;
       case 'relationship':
         return relationship;
-      case 'search':
-        return search;
       case 'submitShare':
         return submitShare;
       default:
@@ -3722,6 +4011,7 @@ class AppLocalizations_Labels_Medical {
       {this.growth,
       this.immunization,
       this.immunizations,
+      this.deworming,
       this.vaccine,
       this.vaccines});
 
@@ -3730,6 +4020,8 @@ class AppLocalizations_Labels_Medical {
   final String immunization;
 
   final String immunizations;
+
+  final String deworming;
 
   final String vaccine;
 
@@ -3743,6 +4035,8 @@ class AppLocalizations_Labels_Medical {
         return immunization;
       case 'immunizations':
         return immunizations;
+      case 'deworming':
+        return deworming;
       case 'vaccine':
         return vaccine;
       case 'vaccines':

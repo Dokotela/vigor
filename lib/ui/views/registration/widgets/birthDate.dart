@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vigor/localization.dart';
 
 class BirthDateWidget extends StatelessWidget {
   const BirthDateWidget({
@@ -15,6 +16,8 @@ class BirthDateWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final labels = AppLocalizations.of(context);
+
     return RaisedButton(
       shape: RoundedRectangleBorder(
         side: const BorderSide(color: Colors.grey),
@@ -36,10 +39,11 @@ class BirthDateWidget extends StatelessWidget {
               Column(
                 children: [
                   Text(
-                    '${"Date of Birth".tr} $displayBirthDate',
+                    '${labels.general.dateofBirth} $displayBirthDate',
                     style: Get.theme.textTheme.headline6,
                     textAlign: TextAlign.center,
                   ),
+                  // todo: is this error text widget necessary?
                   Text(
                     dispBirthDateError.tr,
                     style: const TextStyle(fontSize: 12.0, color: Colors.red),

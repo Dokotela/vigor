@@ -1,5 +1,7 @@
+import 'dart:ui' as ui;
+
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:vigor/localization.dart';
 
 import 'widgets/flag.dart';
 import 'widgets/login_button.dart';
@@ -10,14 +12,16 @@ class LoginView extends StatelessWidget {
   static const _padding = EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0);
 
   /// ToDo: make localization work by country
-  // const String country = 'botswana';
-  // static const String _country = 'dominican_republic';
-  static const String _country = 'usa';
+  // static const String _country = 'usa';
 
   @override
   Widget build(BuildContext context) {
+    final AppLocalizations_Labels labels = AppLocalizations.of(context);
+    // ToDo: @dokotela, use this line to get your country code
+    final _country = ui.window.locale.countryCode;
+
     return Scaffold(
-      appBar: AppBar(title: Text('title'.tr)),
+      appBar: AppBar(title: Text(labels.app.title)),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -25,16 +29,18 @@ class LoginView extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              const FlagWidget(_country),
-              const SplashTitleWidget(_country),
+              FlagWidget(_country),
+              SplashTitleWidget(_country),
               const SizedBox(height: 30.0),
               LoginFieldWidget(
-                  hint: 'Username'.tr, obscure: false, padding: _padding),
+                  hint: labels.auth.userName,
+                  obscure: false,
+                  padding: _padding),
               const SizedBox(height: 15.0),
               LoginFieldWidget(
-                  hint: 'Password'.tr, obscure: true, padding: _padding),
+                  hint: labels.auth.password, obscure: true, padding: _padding),
               const SizedBox(height: 15.0),
-              LoginButtonWidget(login: 'Login'.tr, padding: _padding),
+              LoginButtonWidget(login: labels.auth.signIn, padding: _padding),
             ],
           ),
         ),

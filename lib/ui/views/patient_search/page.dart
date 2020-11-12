@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vigor/localization.dart';
 import 'package:vigor/ui/styled_components/bottom_navigation_bar.dart';
 
 import '../../../controllers/local/patient_search/controller.dart';
@@ -8,13 +9,14 @@ import 'view_controller.dart';
 class PatientSearchPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final labels = AppLocalizations.of(context);
     final PatientSearchViewController viewController = Get.find();
     final PatientSearchController stateController = Get.find();
 
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        title: Text('title'.tr),
+        title: Text(labels.app.title),
       ),
       body: Padding(
         padding: const EdgeInsets.all(10.0),
@@ -28,7 +30,7 @@ class PatientSearchPage extends StatelessWidget {
                   child: TextFormField(
                     controller: stateController.searchName,
                     decoration: InputDecoration(
-                      hintText: 'Search Name'.tr,
+                      hintText: labels.general.search.searchName,
                     ),
                     onChanged: (value) => stateController.event(
                         PatientSearchEvent.searchPatientByName(name: value)),
@@ -60,7 +62,8 @@ class PatientSearchPage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Text('Filter'.tr, style: const TextStyle(fontSize: 30.0)),
+                Text(labels.general.search.filter,
+                    style: const TextStyle(fontSize: 30.0)),
                 RaisedButton(
                     shape: RoundedRectangleBorder(
                       side: BorderSide(color: Colors.blue[600]),
@@ -68,7 +71,7 @@ class PatientSearchPage extends StatelessWidget {
                     ),
                     color: viewController.color1,
                     onPressed: () => viewController.switchColor1(),
-                    child: const Text('Deworming')),
+                    child: Text(labels.medical.deworming)),
                 RaisedButton(
                     shape: RoundedRectangleBorder(
                       side: BorderSide(color: Colors.blue[600]),
@@ -76,7 +79,9 @@ class PatientSearchPage extends StatelessWidget {
                     ),
                     color: viewController.color2,
                     onPressed: () => viewController.switchColor2(),
-                    child: const Text('Vaccines')),
+                    // todo: handle singular/pleural as extension
+                    /// spec: https://github.com/aloisdeniel/flutter_sheet_localization
+                    child: Text(labels.medical.vaccines)),
               ],
             ),
             Divider(
@@ -92,7 +97,7 @@ class PatientSearchPage extends StatelessWidget {
                     onPressed: () => stateController
                         .event(const PatientSearchEvent.sortPatientsByName()),
                     child: Text(
-                      'Name'.tr,
+                      labels.general.name.name,
                       style: const TextStyle(fontSize: 14.0),
                     ),
                   ),
@@ -103,7 +108,7 @@ class PatientSearchPage extends StatelessWidget {
                     onPressed: () => stateController.event(
                         const PatientSearchEvent.sortPatientsByBirthdate()),
                     child: Text(
-                      'Birthdate'.tr,
+                      labels.general.birthDate,
                       style: const TextStyle(fontSize: 14.0),
                     ),
                   ),
@@ -114,7 +119,7 @@ class PatientSearchPage extends StatelessWidget {
                     onPressed: () => stateController
                         .event(const PatientSearchEvent.sortPatientsByBarrio()),
                     child: Text(
-                      'Neighborhood'.tr,
+                      labels.general.address.neighborhood,
                       style: const TextStyle(fontSize: 14.0),
                     ),
                   ),

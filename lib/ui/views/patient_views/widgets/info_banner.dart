@@ -2,6 +2,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
+import 'package:vigor/localization.dart';
 
 class InfoBannerWidget extends StatelessWidget {
   const InfoBannerWidget({
@@ -20,17 +21,19 @@ class InfoBannerWidget extends StatelessWidget {
 
   @override
   Widget build(Object context) {
+    final labels = AppLocalizations.of(context);
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         _spacerVL(),
         Row(children: [
-          _flexTwo('${"Name".tr}:  ', lastCommaFirstName),
+          _flexTwo('${labels.general.name}:  ', lastCommaFirstName),
           _flexOne(relativeAge)
         ]),
         _spacerV(),
         Row(children: [
-          _flexTwo('${"Birthdate".tr}:  ', birthDate),
+          _flexTwo('${labels.general.birthDate}:  ', birthDate),
           _flexOne(sex)
         ]),
         _spacerV(),
