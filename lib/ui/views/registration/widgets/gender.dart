@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vigor/localization.dart';
 
 class GenderSelectionWidget extends StatelessWidget {
   const GenderSelectionWidget({
@@ -12,6 +13,8 @@ class GenderSelectionWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final labels = AppLocalizations.of(context);
+
     return Container(
       decoration: BoxDecoration(
         border: Border.all(color: Colors.grey),
@@ -23,7 +26,7 @@ class GenderSelectionWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text(
-                'Sex at birth'.tr,
+                labels.general.sexAtBirth.title,
                 style: Get.theme.textTheme.headline6,
               ),
             ],
@@ -32,17 +35,21 @@ class GenderSelectionWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Radio(
-                value: 'female',
+                value:
+                    'female', // todo: extract to strings.dart or /_internal/constants
                 groupValue: curGender,
                 onChanged: (String gender) => setGender(gender),
               ),
-              Text('female'.tr, style: Get.theme.textTheme.headline6),
+              Text(labels.general.sexAtBirth.female,
+                  style: Get.theme.textTheme.headline6),
               Radio(
-                value: 'male',
+                value:
+                    'male', // todo: extract to strings.dart or /_internal/constants
                 groupValue: curGender,
                 onChanged: (String gender) => setGender(gender),
               ),
-              Text('male'.tr, style: Get.theme.textTheme.headline6),
+              Text(labels.general.sexAtBirth.male,
+                  style: Get.theme.textTheme.headline6),
             ],
           ),
         ],

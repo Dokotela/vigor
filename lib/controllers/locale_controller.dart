@@ -6,9 +6,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
-import '../../localization.dart';
-import '../../models/data/menu_option.dart';
-import '../../models/data/menu_options_model.dart';
+import '../localization.dart';
+import '../models/data/menu_option.dart';
+import '../models/data/menu_options_model.dart';
 
 class LocaleController extends GetxController {
   static LocaleController get to => Get.find();
@@ -23,12 +23,6 @@ class LocaleController extends GetxController {
   Future onReady() async {
     setInitialLocalLanguage();
     super.onReady();
-    super.onInit();
-  }
-
-  Future<LocaleController> init() async {
-    setInitialLocalLanguage();
-    return this;
   }
 
   // Retrieves and Sets language based on device settings

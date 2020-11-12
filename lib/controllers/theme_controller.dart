@@ -5,8 +5,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import '../../_internal/utils/theme_mode_util.dart';
-import '../../ui/themes.dart';
+import '../_internal/utils/theme_mode_util.dart';
+import '../ui/themes.dart';
 
 class ThemeController extends GetxController {
   static ThemeController get to => Get.find();
@@ -21,10 +21,7 @@ class ThemeController extends GetxController {
   @override
   Future<void> onReady() async {
     await getThemeModeFromStore();
-
-    ///ToDo: should this be onReady or onInit?
     super.onReady();
-    super.onInit();
   }
 
   Future<void> setThemeMode(ThemeMode obj) async {
