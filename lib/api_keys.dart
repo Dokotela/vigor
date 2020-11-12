@@ -1,7 +1,7 @@
 class ApiKeys {
   /// spreadsheet for translations
   static const localeSpreadsheetId =
-      '1PLDOZe_YBBc2ORPoUqA3R6v7_5pn5VLFgLChcyKy8PM';
+      '10-53L67TkSS-4XXI7KBNm8odYbgudjOsR99MvY49BCs';
 
   static const localeSheetId = '0';
 }
