@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../ui/views/views.dart';
+import '../views/views.dart';
 
 BottomAppBar bottomAppBar = BottomAppBar(
   color: Colors.blue[900],

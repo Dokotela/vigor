@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vigor/_internal/extended_widgets/bottom_navigation_bar.dart';
+import 'package:vigor/ui/styled_components/bottom_navigation_bar.dart';
 import '../../../localization.dart';
 import '../../../routes/routes.dart';
 import '../../styled_components/action_button.dart';
