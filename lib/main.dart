@@ -10,6 +10,7 @@ import 'routes/routes.dart';
 import 'ui/styled_components/styled_loading.dart';
 import 'ui/views/views.dart';
 
+/// sources mostly from https://github.com/FireJuun/prapare/blob/main/lib/main.dart
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await _initServices();

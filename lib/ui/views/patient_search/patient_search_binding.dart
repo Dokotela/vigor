@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 import '../../../controllers/local/patient_search/controller.dart';
 
-import 'view_controller.dart';
+import 'patient_search_view_controller.dart';
 
 class PatientSearchBinding implements Bindings {
   @override

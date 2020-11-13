@@ -6,45 +6,37 @@ class SplashTitleWidget extends StatelessWidget {
 
   final String country;
 
-  String _loginTitle(String country) {
-    switch (country) {
-      case 'botswana':
-        return 'Mpepu';
-      case 'dominican_republic':
-        return 'Salud\nDominicana';
-      case 'usa':
-        return 'Vigor';
-      default:
-        return null;
-    }
-  }
-
-  TextStyle _loginStyle(String country) {
-    switch (country) {
-      case 'botswana':
-        return GoogleFonts.archivoBlack(
-            textStyle: TextStyle(color: Colors.blue[600], fontSize: 40));
-      case 'dominican_republic':
-        return GoogleFonts.courgette(
-            textStyle: const TextStyle(color: Colors.red, fontSize: 40));
-      case 'usa':
-        return GoogleFonts.alegreyaSansSc(
-            textStyle: TextStyle(
-                fontWeight: FontWeight.w900,
-                color: Colors.blue[600],
-                fontSize: 50,
-                fontStyle: FontStyle.italic));
-      default:
-        return null;
-    }
-  }
-
   @override
   Widget build(Object context) {
-    return Text(
-      _loginTitle(country),
-      textAlign: TextAlign.center,
-      style: _loginStyle(country),
-    );
+    switch (country) {
+      case 'BW':
+        return Text('Mpepu',
+            textAlign: TextAlign.center,
+            style: GoogleFonts.archivoBlack(
+                textStyle: TextStyle(color: Colors.blue[600], fontSize: 40)));
+      case 'DO':
+        return Text('Salud\nDominicana',
+            textAlign: TextAlign.center,
+            style: GoogleFonts.courgette(
+                textStyle: const TextStyle(color: Colors.red, fontSize: 40)));
+      case 'US':
+        return Text('Vigor',
+            textAlign: TextAlign.center,
+            style: GoogleFonts.alegreyaSansSc(
+                textStyle: TextStyle(
+                    fontWeight: FontWeight.w900,
+                    color: Colors.blue[600],
+                    fontSize: 50,
+                    fontStyle: FontStyle.italic)));
+      default:
+        return Text('Vigor',
+            textAlign: TextAlign.center,
+            style: GoogleFonts.alegreyaSansSc(
+                textStyle: TextStyle(
+                    fontWeight: FontWeight.w900,
+                    color: Colors.blue[600],
+                    fontSize: 50,
+                    fontStyle: FontStyle.italic)));
+    }
   }
 }

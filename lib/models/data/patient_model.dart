@@ -75,7 +75,14 @@ class PatientModel {
   }
 
   String name() => lastCommaGivenName(patient);
+  String familyName() => patient.name == null ? '' : patient.name[0].family;
+  String givenName() => patient.name == null
+      ? ''
+      : patient.name[0].given == null
+          ? ''
+          : patient.name[0].given[0];
   String id() => patient.id.toString();
   String sex() => basicEnumToString(patient.gender);
   String birthDate() => simpleDate(patient.birthDate);
+  String barrio() => districtFromAddress(patient.address);
 }

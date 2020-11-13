@@ -1,5 +1,5 @@
 import 'package:get/route_manager.dart';
-import '../ui/views/patient_search/binding.dart';
+import '../ui/views/patient_search/patient_search_binding.dart';
 import '../ui/views/views.dart';
 
 part 'app_routes.dart';
@@ -9,7 +9,6 @@ final appPages = [
   GetPage(
     name: AppRoutes.LOGIN,
     page: () => LoginView(),
-    // binding: SurveyBinding(),
   ),
   // GetPage(
   //   name: AppRoutes.PATIENT_REGISTRATION,
@@ -24,10 +23,10 @@ final appPages = [
     page: () => PatientSearchPage(),
     binding: PatientSearchBinding(),
   ),
-  // GetPage(
-  //   name: AppRoutes.PATIENT_HOME,
-  //   page: () => PatientHomeView(),
-  // ),
+  GetPage(
+    name: AppRoutes.PATIENT_HOME,
+    page: () => HomeView(),
+  ),
   // GetPage(
   //   name: AppRoutes.CONTACT_REGISTRATION,
   //   page: () => ContactRegistrationView(),

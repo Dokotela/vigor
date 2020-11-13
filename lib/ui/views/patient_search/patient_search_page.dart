@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vigor/localization.dart';
-import 'package:vigor/ui/styled_components/bottom_navigation_bar.dart';
 
 import '../../../controllers/local/patient_search/controller.dart';
-import 'view_controller.dart';
+import '../../../localization.dart';
+import '../../styled_components/bottom_navigation_bar.dart';
+import 'patient_search_view_controller.dart';
 
 class PatientSearchPage extends StatelessWidget {
   @override

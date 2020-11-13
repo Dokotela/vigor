@@ -4,19 +4,18 @@ import 'package:vigor/localization.dart';
 
 class NamesInputWidget extends StatelessWidget {
   const NamesInputWidget({
-    @required this.familyName,
-    @required this.givenName,
     @required this.familyNameError,
     @required this.givenNameError,
   });
-  final TextEditingController familyName;
-  final TextEditingController givenName;
+
   final String familyNameError;
   final String givenNameError;
 
   @override
   Widget build(BuildContext context) {
     final labels = AppLocalizations.of(context);
+    final familyName = TextEditingController();
+    final givenName = TextEditingController();
 
     return Container(
       child: Column(

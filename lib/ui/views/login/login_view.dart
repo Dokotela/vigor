@@ -16,9 +16,7 @@ class LoginView extends StatelessWidget {
     final AppLocalizations_Labels labels = AppLocalizations.of(context);
 
     /// ToDo: make localization work by country
-    // ToDo: @dokotela, use this line to get your country code
     final _country = ui.window.locale.countryCode;
-    print(_country);
 
     return Scaffold(
       appBar: AppBar(title: Text(labels.app.title)),
@@ -29,9 +27,14 @@ class LoginView extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
+              /// Widget that displays the flags country as a map of that country
               FlagWidget(_country),
+
+              ///specific text with formatting for that country's app title
               SplashTitleWidget(_country),
               const SizedBox(height: 30.0),
+
+              /// ToDo: make a real login
               LoginFieldWidget(
                   hint: labels.auth.userName,
                   obscure: false,
