@@ -11,7 +11,8 @@ class PatientSearchPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final labels = AppLocalizations.of(context);
     final PatientSearchViewController viewController = Get.find();
-    final PatientSearchController stateController = Get.find();
+    final PatientSearchController controller = Get.find();
+    final searchName = TextEditingController();
 
     return Scaffold(
       resizeToAvoidBottomInset: false,
@@ -28,12 +29,11 @@ class PatientSearchPage extends StatelessWidget {
                 Flexible(
                   flex: 20,
                   child: TextFormField(
-                    controller: stateController.searchName,
+                    controller: searchName,
                     decoration: InputDecoration(
                       hintText: labels.general.search.searchName,
                     ),
-                    onChanged: (value) => stateController.event(
-                        PatientSearchEvent.searchPatientByName(name: value)),
+                    onChanged: (value) => controller.searchPatientByName(value),
                   ),
                 ),
                 const Spacer(),
@@ -94,8 +94,7 @@ class PatientSearchPage extends StatelessWidget {
                 Container(
                   width: Get.width / 3,
                   child: RaisedButton(
-                    onPressed: () => stateController
-                        .event(const PatientSearchEvent.sortPatientsByName()),
+                    onPressed: () => controller.sortByName(),
                     child: Text(
                       labels.general.name.name,
                       style: const TextStyle(fontSize: 14.0),
@@ -105,8 +104,7 @@ class PatientSearchPage extends StatelessWidget {
                 Container(
                   width: Get.width / 5,
                   child: RaisedButton(
-                    onPressed: () => stateController.event(
-                        const PatientSearchEvent.sortPatientsByBirthdate()),
+                    onPressed: () => controller..sortByBirthdate(),
                     child: Text(
                       labels.general.birthDate,
                       style: const TextStyle(fontSize: 14.0),
@@ -116,8 +114,7 @@ class PatientSearchPage extends StatelessWidget {
                 Container(
                   width: Get.width / 5,
                   child: RaisedButton(
-                    onPressed: () => stateController
-                        .event(const PatientSearchEvent.sortPatientsByBarrio()),
+                    onPressed: () => controller.sortByBarrio(),
                     child: Text(
                       labels.general.address.neighborhood,
                       style: const TextStyle(fontSize: 14.0),
@@ -133,35 +130,34 @@ class PatientSearchPage extends StatelessWidget {
             Expanded(
               child: Obx(
                 () => ListView.separated(
-                  itemCount: stateController.currentListLength,
+                  itemCount: controller.currentListLength,
                   separatorBuilder: (context, index) => Divider(
                     thickness: 1.0,
                     color: Colors.blue[900],
                   ),
                   itemBuilder: (context, index) => FlatButton(
-                    onPressed: () => stateController
-                        .event(PatientSearchEvent.selectPatient(index: index)),
+                    onPressed: () => controller.selectPatient(index),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Container(
                           width: Get.width / 3,
                           child: Text(
-                            stateController.patientName(index),
+                            controller.patientName(index),
                             style: const TextStyle(fontSize: 16.0),
                           ),
                         ),
                         Container(
                           width: Get.width / 5,
                           child: Text(
-                            stateController.patientDob(index),
+                            controller.patientDob(index),
                             style: const TextStyle(fontSize: 16.0),
                           ),
                         ),
                         Container(
                           width: Get.width / 5,
                           child: Text(
-                            stateController.patientBarrio(index),
+                            controller.patientBarrio(index),
                             overflow: TextOverflow.ellipsis,
                             style: const TextStyle(fontSize: 16.0),
                           ),

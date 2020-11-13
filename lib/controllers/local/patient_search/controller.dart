@@ -1,75 +1,66 @@
 import 'package:fhir/r4.dart';
-import 'package:flutter/material.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:get/get.dart';
 
 import '../../../_internal/utils/utils.dart';
 import '../../../services/i_fhir_db.dart';
 import '../../../ui/views/views.dart';
 
-part 'state.dart';
-part 'event.dart';
-part 'controller.freezed.dart';
-
 class PatientSearchController extends GetxController {
-  // State
-  final state = PatientSearchState().obs;
+  static PatientSearchController get to => Get.find();
+  final _fullPatientList = <Resource>[].obs;
+  final _activePatientList = <Resource>[].obs;
 
-  // INIT
-  @override
-  Future onInit() async {
-    event(
-      PatientSearchEvent.loadList(
-        patientList:
-            (await IFhirDb().returnListOfSingleResourceType('Patient')).fold(
-          (l) => <Resource>[],
-          (r) => r.toList(),
-        ),
-      ),
-    );
-    super.onInit();
-  }
+  ///INIT
+  Future init() async => loadList();
 
-  // GETTER FUNCTIONS
+  /// GETTER FUNCTIONS
   String patientName(int index) =>
-      lastCommaGivenName(state.value.activePatientList[index] as Patient);
+      lastCommaGivenName(_activePatientList[index] as Patient);
   String patientDob(int index) =>
-      simpleDate((state.value.activePatientList[index] as Patient).birthDate);
+      simpleDate((_activePatientList[index] as Patient).birthDate);
   String patientBarrio(int index) =>
-      (state.value.activePatientList[index] as Patient).address == null
+      (_activePatientList[index] as Patient).address == null
           ? ''
-          : (state.value.activePatientList[index] as Patient)
-              .address[0]
-              .district;
-  TextEditingController get searchName => state.value.searchName;
-  int get currentListLength => state.value.activePatientList.length;
+          : (_activePatientList[index] as Patient).address[0].district;
+  int get currentListLength => _activePatientList.length;
 
-  // EVENTS
-  void event(PatientSearchEvent newEvent) {
-    newEvent.map(
-      loadList: (m) => _updateState(
-          fullPatientList: m.patientList, activePatientList: m.patientList),
-      searchPatientByName: (m) => m.name.length >= 2
-          ? _updateState(activePatientList: state.value.searchByName(m.name))
-          : _updateState(activePatientList: state.value.fullPatientList),
-      sortPatientsByName: (m) =>
-          _updateState(activePatientList: state.value.sortByName()),
-      sortPatientsByBirthdate: (m) =>
-          _updateState(activePatientList: state.value.sortByBirthdate()),
-      sortPatientsByBarrio: (m) =>
-          _updateState(activePatientList: state.value.sortByBarrio()),
-      selectPatient: (m) =>
-          Get.to(HomeView(), arguments: state.value.activePatientList[m.index]),
-    );
+  ///EVENTS
+  Future loadList() async {
+    final newList = (await IFhirDb().returnListOfSingleResourceType('Patient'))
+        .fold((l) => <Resource>[], (r) => r.toList());
+    _fullPatientList.addAll(newList);
+    _activePatientList.addAll(newList);
   }
 
-  void _updateState({
-    List<Resource> fullPatientList,
-    List<Resource> activePatientList,
-    TextEditingController searchName,
-  }) =>
-      state.value = state.value.copyWith(
-          fullPatientList: fullPatientList ?? state.value.fullPatientList,
-          activePatientList: activePatientList ?? state.value.activePatientList,
-          searchName: searchName ?? state.value.searchName);
+  void searchPatientByName(String name) {
+    _activePatientList.value = <Resource>[];
+    for (final patient in _fullPatientList) {
+      if (lastCommaGivenName(patient as Patient)
+          .toLowerCase()
+          .contains(name.toLowerCase())) {
+        _activePatientList.add(patient);
+      }
+    }
+  }
+
+  void sortByName() =>
+      _activePatientList.sort((a, b) => lastCommaGivenName(a as Patient)
+          .toLowerCase()
+          .compareTo(lastCommaGivenName(b as Patient).toLowerCase()));
+
+  void sortByBirthdate() => _activePatientList.sort((a, b) =>
+      (DateTime.tryParse((a as Patient).birthDate.toString()) ?? DateTime(1900))
+          .compareTo((DateTime.tryParse((b as Patient).birthDate.toString())) ??
+              DateTime(1900)));
+
+  void sortByBarrio() =>
+      _activePatientList.sort((a, b) => ((a as Patient)?.address == null
+              ? ''
+              : (a as Patient).address[0]?.district ?? '')
+          .compareTo((b as Patient)?.address == null
+              ? ''
+              : (b as Patient).address[0]?.district ?? ''));
+
+  void selectPatient(int index) =>
+      Get.to(HomeView(), arguments: _activePatientList[index]);
 }
