@@ -59,30 +59,32 @@ class PatientSearchPage extends StatelessWidget {
               thickness: 4.0,
               color: Colors.blue[900],
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Text(labels.general.search.filter,
-                    style: const TextStyle(fontSize: 30.0)),
-                RaisedButton(
-                    shape: RoundedRectangleBorder(
-                      side: BorderSide(color: Colors.blue[600]),
-                      borderRadius: BorderRadius.circular(16.0),
-                    ),
-                    color: viewController.color1,
-                    onPressed: () => viewController.switchColor1(),
-                    child: Text(labels.medical.deworming)),
-                RaisedButton(
-                    shape: RoundedRectangleBorder(
-                      side: BorderSide(color: Colors.blue[600]),
-                      borderRadius: BorderRadius.circular(16.0),
-                    ),
-                    color: viewController.color2,
-                    onPressed: () => viewController.switchColor2(),
-                    // todo: handle singular/pleural as extension
-                    /// spec: https://github.com/aloisdeniel/flutter_sheet_localization
-                    child: Text(labels.medical.vaccines)),
-              ],
+            Obx(
+              () => Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text(labels.general.search.filter,
+                      style: const TextStyle(fontSize: 30.0)),
+                  RaisedButton(
+                      shape: RoundedRectangleBorder(
+                        side: BorderSide(color: Colors.blue[600]),
+                        borderRadius: BorderRadius.circular(16.0),
+                      ),
+                      color: viewController.color1,
+                      onPressed: () => viewController.switchColor1(),
+                      child: Text(labels.medical.deworming)),
+                  RaisedButton(
+                      shape: RoundedRectangleBorder(
+                        side: BorderSide(color: Colors.blue[600]),
+                        borderRadius: BorderRadius.circular(16.0),
+                      ),
+                      color: viewController.color2,
+                      onPressed: () => viewController.switchColor2(),
+                      // todo: handle singular/pleural as extension
+                      /// spec: https://github.com/aloisdeniel/flutter_sheet_localization
+                      child: Text(labels.medical.vaccines)),
+                ],
+              ),
             ),
             Divider(
               thickness: 4.0,
@@ -104,7 +106,7 @@ class PatientSearchPage extends StatelessWidget {
                 Container(
                   width: Get.width / 5,
                   child: RaisedButton(
-                    onPressed: () => controller..sortByBirthdate(),
+                    onPressed: () => controller.sortByBirthdate(),
                     child: Text(
                       labels.general.birthDate,
                       style: const TextStyle(fontSize: 14.0),
