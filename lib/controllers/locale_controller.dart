@@ -6,16 +6,16 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
+import '../_internal/constants/menu_options.dart';
 import '../localization.dart';
 import '../models/data/menu_option.dart';
-import '../models/data/menu_options_model.dart';
 
 class LocaleController extends GetxController {
   static LocaleController get to => Get.find();
 
   final language = ''.obs;
   final store = GetStorage();
-  final List<MenuOption> languageOptions = MenuOptionsModel.languageOptions;
+  final List<MenuOption> languageOptions = availableLanguages;
 
   String get currentLanguage => language.value;
 
@@ -47,8 +47,8 @@ class LocaleController extends GetxController {
   Locale get getLocale {
     if ((currentLanguageStore.value == '') ||
         (currentLanguageStore.value == null)) {
-      language.value = MenuOptionsModel.defaultLanguage;
-      updateLanguage(MenuOptionsModel.defaultLanguage);
+      language.value = defaultLanguage;
+      updateLanguage(defaultLanguage);
     }
     // gets the default language key (from the translation language system)
     Locale _updatedLocal = AppLocalizations.languages.keys.first;

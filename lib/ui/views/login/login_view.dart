@@ -11,14 +11,14 @@ import 'widgets/splash_title.dart';
 class LoginView extends StatelessWidget {
   static const _padding = EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0);
 
-  /// ToDo: make localization work by country
-  // static const String _country = 'usa';
-
   @override
   Widget build(BuildContext context) {
     final AppLocalizations_Labels labels = AppLocalizations.of(context);
+
+    /// ToDo: make localization work by country
     // ToDo: @dokotela, use this line to get your country code
     final _country = ui.window.locale.countryCode;
+    print(_country);
 
     return Scaffold(
       appBar: AppBar(title: Text(labels.app.title)),
