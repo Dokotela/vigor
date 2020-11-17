@@ -4,10 +4,14 @@ import 'package:vigor/localization.dart';
 
 class NamesInputWidget extends StatelessWidget {
   const NamesInputWidget({
+    @required this.familyName,
+    @required this.givenName,
     @required this.familyNameError,
     @required this.givenNameError,
   });
 
+  final TextEditingController familyName;
+  final TextEditingController givenName;
   final String familyNameError;
   final String givenNameError;
 

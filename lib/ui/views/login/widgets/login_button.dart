@@ -21,7 +21,7 @@ class LoginButtonWidget extends StatelessWidget {
       child: MaterialButton(
         minWidth: Get.width,
         padding: padding,
-        onPressed: () => Get.to<Widget>(HomeView()),
+        onPressed: () => Get.to<Widget>(HomePage()),
         child: Text(login, textAlign: TextAlign.center),
       ),
     );

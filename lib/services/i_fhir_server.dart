@@ -42,7 +42,7 @@ class IFhirServer {
         ),
       );
     }
-    final result = await post('$server/fhir',
+    await post('$server/fhir',
         headers: headers, body: jsonEncode(resourceBundle.toJson()));
   }
 

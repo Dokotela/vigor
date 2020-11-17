@@ -62,5 +62,5 @@ class PatientSearchController extends GetxController {
               : (b as Patient).address[0]?.district ?? ''));
 
   void selectPatient(int index) =>
-      Get.to(HomeView(), arguments: _activePatientList[index]);
+      Get.to(HomePage(), arguments: _activePatientList[index]);
 }

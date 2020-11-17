@@ -4,6 +4,7 @@ import 'package:vigor/_internal/constants/constants.dart';
 import 'package:vigor/_internal/utils/utils.dart';
 import 'package:vigor/_internal/utils/validators.dart';
 import 'package:vigor/models/data/patient_model.dart';
+import 'package:vigor/ui/views/views.dart';
 
 class PatientRegistrationController extends GetxController {
   /// PROPERTIES
@@ -71,7 +72,8 @@ class PatientRegistrationController extends GetxController {
                 gender: gender == 'female'
                     ? PatientGender.female
                     : PatientGender.male);
-            Get.to(ContactRegistration(), arguments: _patient.value.patient);
+            Get.to(ContactRegistrationPage(),
+                arguments: _patient.value.patient);
           } else {
             _barrioError.value = 'Please select neighborhood';
           }

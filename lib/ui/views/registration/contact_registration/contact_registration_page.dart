@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vigor/controllers/local/registration/contact_registration_controller.dart';
+import 'package:vigor/ui/styled_components/bottom_navigation_bar.dart';
 
+import '../../../../localization.dart';
 import '../widgets/barrio.dart';
 import '../widgets/names.dart';
 import '../widgets/relation.dart';
@@ -8,6 +11,17 @@ import '../widgets/relation.dart';
 class ContactRegistrationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final labels = AppLocalizations.of(context);
+    final ContactRegistrationController controller = Get.find();
+    final familyName1 =
+        TextEditingController(text: controller.initialFamilyName1);
+    final givenName1 =
+        TextEditingController(text: controller.initialGivenName1);
+    final familyName2 =
+        TextEditingController(text: controller.initialFamilyName2);
+    final givenName2 =
+        TextEditingController(text: controller.initialGivenName2);
+
     return GetBuilder<ContactRegistrationController>(
       init: ContactRegistrationController(),
       builder: (controller) => Scaffold(
@@ -29,8 +43,8 @@ class ContactRegistrationPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
                   NamesInputWidget(
-                    familyName: controller.familyName1,
-                    givenName: controller.givenName1,
+                    familyName: familyName1,
+                    givenName: givenName1,
                     familyNameError: controller.familyNameError1,
                     givenNameError: controller.givenNameError1,
                   ),
@@ -56,8 +70,8 @@ class ContactRegistrationPage extends StatelessWidget {
                     thickness: 10,
                   ),
                   NamesInputWidget(
-                    familyName: controller.familyName2,
-                    givenName: controller.givenName2,
+                    familyName: familyName2,
+                    givenName: givenName2,
                     familyNameError: controller.familyNameError2,
                     givenNameError: controller.givenNameError2,
                   ),
@@ -84,7 +98,12 @@ class ContactRegistrationPage extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(16.0),
                       ),
-                      onPressed: () => controller.registerEvent(),
+                      onPressed: () => controller.registerEvent(
+                        familyName1: familyName1.text,
+                        givenName1: givenName1.text,
+                        familyName2: familyName2.text,
+                        givenName2: givenName2.text,
+                      ),
                       child: Text('Register Patient'.tr),
                     ),
                   ),

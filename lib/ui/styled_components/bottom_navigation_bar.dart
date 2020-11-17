@@ -13,7 +13,7 @@ BottomAppBar bottomAppBar = BottomAppBar(
       ),
       IconButton(
         icon: const Icon(Icons.home, color: Colors.white),
-        onPressed: () => Get.offAll<Widget>(HomeView()),
+        onPressed: () => Get.offAll<Widget>(HomePage()),
       ),
       IconButton(
         icon: const Icon(Icons.exit_to_app, color: Colors.white),

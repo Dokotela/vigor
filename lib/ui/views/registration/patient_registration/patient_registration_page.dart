@@ -14,6 +14,8 @@ class PatientRegistrationPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final labels = AppLocalizations.of(context);
     final PatientRegistrationController controller = Get.find();
+    final givenName = TextEditingController(text: controller.givenName);
+    final familyName = TextEditingController(text: controller.familyName);
 
     return Scaffold(
       resizeToAvoidBottomInset: false,
@@ -34,6 +36,8 @@ class PatientRegistrationPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
                 NamesInputWidget(
+                  givenName: givenName,
+                  familyName: familyName,
                   familyNameError: controller.familyNameError,
                   givenNameError: controller.givenNameError,
                 ),

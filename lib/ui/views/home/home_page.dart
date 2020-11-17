@@ -5,7 +5,7 @@ import '../../../localization.dart';
 import '../../../routes/routes.dart';
 import '../../styled_components/action_button.dart';
 
-class HomeView extends StatelessWidget {
+class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final labels = AppLocalizations.of(context);
