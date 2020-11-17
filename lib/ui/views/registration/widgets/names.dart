@@ -18,8 +18,6 @@ class NamesInputWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final labels = AppLocalizations.of(context);
-    final familyName = TextEditingController();
-    final givenName = TextEditingController();
 
     return Container(
       child: Column(

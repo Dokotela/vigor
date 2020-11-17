@@ -14,8 +14,9 @@ class PatientRegistrationPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final labels = AppLocalizations.of(context);
     final PatientRegistrationController controller = Get.find();
-    final givenName = TextEditingController(text: controller.givenName);
-    final familyName = TextEditingController(text: controller.familyName);
+    final familyName =
+        TextEditingController(text: controller.initialFamilyName);
+    final givenName = TextEditingController(text: controller.initialGivenName);
 
     return Scaffold(
       resizeToAvoidBottomInset: false,
@@ -32,47 +33,48 @@ class PatientRegistrationPage extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(10.0),
           child: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: <Widget>[
-                NamesInputWidget(
-                  givenName: givenName,
-                  familyName: familyName,
-                  familyNameError: controller.familyNameError,
-                  givenNameError: controller.givenNameError,
-                ),
-                GenderSelectionWidget(
-                  curGender: controller.gender,
-                  setGender: controller.genderEvent,
-                ),
-                BirthDateWidget(
-                  chooseBirthDate: controller.birthDateEvent,
-                  currentBirthDate: controller.birthDate,
-                  displayBirthDate: controller.birthDateString,
-                  dispBirthDateError: controller.birthDateError,
-                ),
-                BarrioWidget(
-                  barriosList: controller.barriosList,
-                  displayBarrio: controller.barrio,
-                  setBarrio: controller.barrioEvent,
-                  dispBarrioError: controller.barrioError,
-                ),
-                ButtonTheme(
-                  minWidth: double.infinity,
-                  child: RaisedButton(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16.0),
-                    ),
-
-                    /// ToDo: add back in names
-                    onPressed: () => controller.registerEvent(
-                      familyName: '',
-                      givenName: '',
-                    ),
-                    child: Text('Register Patient'.tr),
+            child: Obx(
+              () => Column(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  NamesInputWidget(
+                    familyName: familyName,
+                    givenName: givenName,
+                    familyNameError: controller.familyNameError,
+                    givenNameError: controller.givenNameError,
                   ),
-                ),
-              ],
+                  GenderSelectionWidget(
+                    curGender: controller.gender,
+                    setGender: controller.genderEvent,
+                  ),
+                  BirthDateWidget(
+                    chooseBirthDate: controller.birthDateEvent,
+                    currentBirthDate: controller.birthDate,
+                    displayBirthDate: controller.birthDateString,
+                    dispBirthDateError: controller.birthDateError,
+                  ),
+                  BarrioWidget(
+                    barriosList: controller.barriosList,
+                    displayBarrio: controller.barrio,
+                    setBarrio: controller.barrioEvent,
+                    dispBarrioError: controller.barrioError,
+                  ),
+                  ButtonTheme(
+                    minWidth: double.infinity,
+                    child: RaisedButton(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16.0),
+                      ),
+
+                      /// ToDo: add back in names
+                      onPressed: () => controller.registerEvent(
+                          familyName: familyName.text,
+                          givenName: givenName.text),
+                      child: Text('Register Patient'.tr),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ),

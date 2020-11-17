@@ -8,16 +8,14 @@ import '../../../_internal/constants/constants.dart';
 import '../../../models/data/patient_model.dart';
 
 class ContactRegistrationController extends GetxController {
-  // PROPERTIES
+  /// PROPERTIES
   final _patient = PatientModel().obs;
-
   final _familyNameError1 = ''.obs;
   final _givenNameError1 = ''.obs;
   final _barrio1 = 'Neighborhood'.obs;
   final _barrioError1 = ''.obs;
   final _relation1 = 'Relationship'.obs;
   final _relationError1 = ''.obs;
-
   final _familyNameError2 = ''.obs;
   final _givenNameError2 = ''.obs;
   final _barrio2 = 'Neighborhood'.obs;
@@ -25,7 +23,7 @@ class ContactRegistrationController extends GetxController {
   final _relation2 = 'Relationship'.obs;
   final _relationError2 = ''.obs;
 
-  // // INIT
+  /// INIT
   @override
   void onInit() {
     _patient.value = Get.arguments;

@@ -27,7 +27,7 @@ class HomePage extends StatelessWidget {
           children: [
             ActionButton(
               buttonText: labels.general.newPatient,
-              onPressed: () => null, //Get.to(PatientRegistrationView()),
+              onPressed: () => Get.toNamed(AppRoutes.PATIENT_REGISTRATION),
             ),
             ActionButton(
               buttonText: labels.general.allPatients,

@@ -17,7 +17,7 @@ class PatientSearchController extends GetxController {
   String patientName(int index) =>
       lastCommaGivenName(_activePatientList[index] as Patient);
   String patientDob(int index) =>
-      simpleDate((_activePatientList[index] as Patient).birthDate);
+      dateFromFhirDate((_activePatientList[index] as Patient).birthDate);
   String patientBarrio(int index) =>
       (_activePatientList[index] as Patient).address == null
           ? ''

@@ -1,9 +1,11 @@
 import 'package:fhir/r4.dart';
 
-String simpleDate(Date date) =>
+String dateFromFhirDate(Date date) =>
     date == null ? '' : date.toString().substring(0, 10);
 
-String simpleDateTime(Date date) => date.toString().substring(0, 10);
-
-String simpleFhirDateTime(FhirDateTime date) =>
+String dateFromFhirDateTime(FhirDateTime date) =>
     date.toString().substring(0, 10);
+
+String dateFromDateTime(DateTime date) => date.toString().substring(0,10);
+
+
