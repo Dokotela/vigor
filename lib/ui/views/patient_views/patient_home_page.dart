@@ -12,7 +12,7 @@ class PatientHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final labels = AppLocalizations.of(context);
-    final PatientHomeController controller = Get.find();
+    final PatientHomeController controller = Get.put(PatientHomeController());
 
     return Scaffold(
       resizeToAvoidBottomInset: false,

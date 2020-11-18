@@ -2,10 +2,11 @@ import 'package:fhir/r4.dart';
 import 'package:get/get.dart';
 
 import '../../../_internal/utils/utils.dart';
+import '../../../routes/routes.dart';
 import '../../../services/i_fhir_db.dart';
-import '../../../ui/views/views.dart';
 
 class PatientSearchController extends GetxController {
+  /// PROPERTIES
   final _fullPatientList = <Resource>[].obs;
   final _activePatientList = <Resource>[].obs;
 
@@ -23,7 +24,7 @@ class PatientSearchController extends GetxController {
           : (_activePatientList[index] as Patient).address[0].district;
   int get currentListLength => _activePatientList.length;
 
-  ///EVENTS
+  /// EVENTS
   Future loadList() async {
     final newList = (await IFhirDb().returnListOfSingleResourceType('Patient'))
         .fold((l) => <Resource>[], (r) => r.toList());
@@ -61,5 +62,5 @@ class PatientSearchController extends GetxController {
               : (b as Patient).address[0]?.district ?? ''));
 
   void selectPatient(int index) =>
-      Get.to(HomePage(), arguments: _activePatientList[index]);
+      Get.toNamed(AppRoutes.PATIENT_HOME, arguments: _activePatientList[index]);
 }

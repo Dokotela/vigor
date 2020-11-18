@@ -23,24 +23,23 @@ class ContactRegistrationPage extends StatelessWidget {
     final givenName2 =
         TextEditingController(text: controller.initialGivenName2);
 
-    return GetBuilder<ContactRegistrationController>(
-      init: ContactRegistrationController(),
-      builder: (controller) => Scaffold(
-        resizeToAvoidBottomInset: false,
-        appBar: AppBar(
-          title: Text('Patient Contacts'.tr),
-        ),
-        body: GestureDetector(
-          onTap: () {
-            final currentFocus = FocusScope.of(context);
-            if (!currentFocus.hasPrimaryFocus) {
-              currentFocus.unfocus();
-            }
-          },
-          child: Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Center(
-              child: Column(
+    return Scaffold(
+      resizeToAvoidBottomInset: false,
+      appBar: AppBar(
+        title: Text('Patient Contacts'.tr),
+      ),
+      body: GestureDetector(
+        onTap: () {
+          final currentFocus = FocusScope.of(context);
+          if (!currentFocus.hasPrimaryFocus) {
+            currentFocus.unfocus();
+          }
+        },
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Center(
+            child: Obx(
+              () => Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
                   NamesInputWidget(
@@ -113,8 +112,8 @@ class ContactRegistrationPage extends StatelessWidget {
             ),
           ),
         ),
-        bottomNavigationBar: bottomAppBar,
       ),
+      bottomNavigationBar: bottomAppBar,
     );
   }
 }

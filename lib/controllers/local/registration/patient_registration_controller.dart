@@ -36,7 +36,7 @@ class PatientRegistrationController extends GetxController {
     super.onInit();
   }
 
-  ///  GETTERS
+  /// GETTER FUNCTIONS
   String get gender => _gender.value;
   String get initialFamilyName => _patient.value.familyName();
   String get initialGivenName => _patient.value.givenName();

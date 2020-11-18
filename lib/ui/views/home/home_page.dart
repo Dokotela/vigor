@@ -26,10 +26,13 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            /// Registration for a new patient
             ActionButton(
               buttonText: labels.general.newPatient,
               onPressed: () => Get.toNamed(AppRoutes.PATIENT_REGISTRATION),
             ),
+
+            /// Search the patients stored on the device
             ActionButton(
               buttonText: labels.general.allPatients,
               onPressed: () => Get.toNamed(AppRoutes.PATIENT_SEARCH),
