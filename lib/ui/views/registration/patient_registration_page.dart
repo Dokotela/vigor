@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../../controllers/local/registration/patient_registration_controller.dart';
-import '../../../../localization.dart';
-import '../../../../ui/styled_components/bottom_navigation_bar.dart';
-import '../widgets/barrio.dart';
-import '../widgets/birthDate.dart';
-import '../widgets/gender.dart';
-import '../widgets/names.dart';
+import '../../../controllers/local/registration/patient_registration_controller.dart';
+import '../../../localization.dart';
+import '../../styled_components/bottom_navigation_bar.dart';
+import 'widgets/barrio.dart';
+import 'widgets/birthDate.dart';
+import 'widgets/gender.dart';
+import 'widgets/names.dart';
 
 class PatientRegistrationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final labels = AppLocalizations.of(context);
-    final PatientRegistrationController controller = Get.find();
+    final PatientRegistrationController controller =
+        Get.put(PatientRegistrationController());
     final familyName =
         TextEditingController(text: controller.initialFamilyName);
     final givenName = TextEditingController(text: controller.initialGivenName);

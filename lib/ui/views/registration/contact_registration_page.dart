@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../../controllers/local/registration/contact_registration_controller.dart';
-import '../../../../localization.dart';
-import '../../../../ui/styled_components/bottom_navigation_bar.dart';
-import '../widgets/barrio.dart';
-import '../widgets/names.dart';
-import '../widgets/relation.dart';
+import '../../../controllers/local/registration/contact_registration_controller.dart';
+import '../../../localization.dart';
+import '../../styled_components/bottom_navigation_bar.dart';
+import 'widgets/barrio.dart';
+import 'widgets/names.dart';
+import 'widgets/relation.dart';
 
 class ContactRegistrationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final labels = AppLocalizations.of(context);
-    final ContactRegistrationController controller = Get.find();
+    final ContactRegistrationController controller =
+        Get.put(ContactRegistrationController());
     final familyName1 =
         TextEditingController(text: controller.initialFamilyName1);
     final givenName1 =

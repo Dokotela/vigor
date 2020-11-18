@@ -10,8 +10,8 @@ class PatientSearchPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final labels = AppLocalizations.of(context);
-    final PatientSearchViewController viewController = Get.find();
-    final PatientSearchController controller = Get.find();
+    final viewController = Get.put(PatientSearchViewController());
+    final controller = Get.put(PatientSearchController());
     final searchName = TextEditingController();
 
     return Scaffold(

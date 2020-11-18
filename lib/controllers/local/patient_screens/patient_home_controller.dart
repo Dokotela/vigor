@@ -20,8 +20,8 @@ class PatientHomeController extends GetxController
   // INIT
   @override
   void onInit() {
-    super.onInit();
     _tabController = TabController(length: _tabsList.length, vsync: this);
+    super.onInit();
   }
 
   // CLOSE

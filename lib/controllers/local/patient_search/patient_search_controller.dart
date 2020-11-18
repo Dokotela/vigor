@@ -6,7 +6,6 @@ import '../../../services/i_fhir_db.dart';
 import '../../../ui/views/views.dart';
 
 class PatientSearchController extends GetxController {
-  static PatientSearchController get to => Get.find();
   final _fullPatientList = <Resource>[].obs;
   final _activePatientList = <Resource>[].obs;
 
