@@ -27,41 +27,27 @@ class InfoBannerWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        _spacerVL(),
-        Row(children: [
-          _flexTwo('${labels.general.name}:  ', lastCommaFirstName),
-          _flexOne(relativeAge)
-        ]),
         _spacerV(),
-        Row(children: [
-          _flexTwo('${labels.general.birthDate}:  ', birthDate),
-          _flexOne(sex)
-        ]),
-        _spacerV(),
-        _buildBottomRow(),
-        _spacerVL(),
-      ],
-    );
-  }
-
-  Widget _buildBottomRow() {
-    return Align(
-      alignment: Alignment.centerRight,
-      child: SizedBox(
-        width: Get.width * 2 / 3,
-        child: Row(
-          children: [
-            Text('ID:  ', style: Get.textTheme.bodyText2),
-            Expanded(
-                child: AutoSizeText(
-              id,
-              maxLines: 1,
-              style: Get.textTheme.bodyText2,
-              textAlign: TextAlign.end,
-            )),
-          ],
+        Container(
+          color: Colors.grey[200],
+          child: Row(children: [
+            _flexTwo('${labels.general.name.name}:  ', lastCommaFirstName)
+          ]),
         ),
-      ),
+        _spacerV(),
+        Row(children: [_flexTwo('${labels.general.birthDate}:  ', birthDate)]),
+        _spacerV(),
+        Container(
+          color: Colors.grey[200],
+          child: Row(children: [
+            _flexTwo(
+                'Age: $relativeAge', '${labels.general.sexAtBirth.title}: $sex')
+          ]),
+        ),
+        _spacerV(),
+        Row(children: [_flexTwo('ID:  ', id)]),
+        _spacerV(),
+      ],
     );
   }
 

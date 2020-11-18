@@ -43,10 +43,10 @@ class PatientHomePage extends StatelessWidget {
               child: TabBarView(
                 controller: controller.tabController,
                 children: <Widget>[
+                  PatientImmHx(),
+                  // Center(child: Text('Vaccines Screen')),
                   PatientGrowthCurve(),
                   const Center(child: Text('Milestones Screen')),
-                  // Center(child: Text('Vaccines Screen')),
-                  PatientImmHx(),
                 ],
               ),
             ),
