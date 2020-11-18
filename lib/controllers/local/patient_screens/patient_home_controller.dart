@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vigor/models/data/patient_model.dart';
-import 'package:vigor/ui/views/views.dart';
+import '../../../models/data/patient_model.dart';
+import '../../../ui/views/views.dart';
 
 import 'shared/relative_age.dart';
 

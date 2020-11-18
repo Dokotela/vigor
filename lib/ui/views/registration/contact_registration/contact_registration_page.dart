@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vigor/controllers/local/registration/contact_registration_controller.dart';
-import 'package:vigor/ui/styled_components/bottom_navigation_bar.dart';
 
+import '../../../../controllers/local/registration/contact_registration_controller.dart';
 import '../../../../localization.dart';
+import '../../../../ui/styled_components/bottom_navigation_bar.dart';
 import '../widgets/barrio.dart';
 import '../widgets/names.dart';
 import '../widgets/relation.dart';

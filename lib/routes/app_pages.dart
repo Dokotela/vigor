@@ -1,7 +1,8 @@
 import 'package:get/route_manager.dart';
-import 'package:vigor/ui/views/registration/contact_registration/contact_registration_binding.dart';
-import 'package:vigor/ui/views/registration/patient_registration/patient_registration_binding.dart';
+
 import '../ui/views/patient_search/patient_search_binding.dart';
+import '../ui/views/registration/contact_registration/contact_registration_binding.dart';
+import '../ui/views/registration/patient_registration/patient_registration_binding.dart';
 import '../ui/views/views.dart';
 
 part 'app_routes.dart';

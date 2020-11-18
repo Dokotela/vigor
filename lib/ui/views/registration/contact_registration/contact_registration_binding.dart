@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
-import 'package:vigor/controllers/local/registration/contact_registration_controller.dart';
+
+import '../../../../controllers/local/registration/contact_registration_controller.dart';
 
 class ContactRegistrationBinding implements Bindings {
   @override

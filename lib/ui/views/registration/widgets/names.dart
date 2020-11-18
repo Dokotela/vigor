@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vigor/localization.dart';
+
+import '../../../../localization.dart';
 
 class NamesInputWidget extends StatelessWidget {
   const NamesInputWidget({

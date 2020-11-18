@@ -1,11 +1,12 @@
 import 'package:fhir/r4.dart';
 import 'package:get/get.dart';
-import 'package:vigor/_internal/utils/utils.dart';
-import 'package:vigor/_internal/utils/validators.dart';
-import 'package:vigor/services/i_fhir_db.dart';
-import 'package:vigor/ui/views/views.dart';
+
 import '../../../_internal/constants/constants.dart';
+import '../../../_internal/utils/utils.dart';
+import '../../../_internal/utils/validators.dart';
 import '../../../models/data/patient_model.dart';
+import '../../../services/i_fhir_db.dart';
+import '../../../ui/views/views.dart';
 
 class ContactRegistrationController extends GetxController {
   /// PROPERTIES

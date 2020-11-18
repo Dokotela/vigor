@@ -1,8 +1,8 @@
 import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
-import 'package:vigor/localization.dart';
 
+import '../../../localization.dart';
 import 'widgets/flag.dart';
 import 'widgets/login_button.dart';
 import 'widgets/login_field.dart';
