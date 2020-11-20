@@ -27,7 +27,6 @@ class InfoBannerWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        _spacerV(),
         Container(
           color: Colors.grey[200],
           child: Row(children: [
@@ -46,7 +45,6 @@ class InfoBannerWidget extends StatelessWidget {
         ),
         _spacerV(),
         Row(children: [_flexTwo('ID:  ', id)]),
-        _spacerV(),
       ],
     );
   }
@@ -93,5 +91,4 @@ class InfoBannerWidget extends StatelessWidget {
       ));
 
   Widget _spacerV() => const SizedBox(height: 8.0);
-  Widget _spacerVL() => const SizedBox(height: 20.0);
 }

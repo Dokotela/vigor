@@ -44,7 +44,6 @@ class PatientHomePage extends StatelessWidget {
                 controller: controller.tabController,
                 children: <Widget>[
                   PatientImmHx(),
-                  // Center(child: Text('Vaccines Screen')),
                   PatientGrowthCurve(),
                   const Center(child: Text('Milestones Screen')),
                 ],
@@ -63,11 +62,12 @@ Widget _buildTab(String text) {
     child: Container(
       height: 52,
       width: double.infinity,
-      decoration: BoxDecoration(border: Border.all(color: Colors.grey[50])),
+      decoration: BoxDecoration(border: Border.all(color: Colors.grey[400])),
       child: Center(
         child: Text(
           text,
           textAlign: TextAlign.center,
+          style: TextStyle(color: Colors.black),
         ),
       ),
     ),

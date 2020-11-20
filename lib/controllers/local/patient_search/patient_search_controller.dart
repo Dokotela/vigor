@@ -11,7 +11,11 @@ class PatientSearchController extends GetxController {
   final _activePatientList = <Resource>[].obs;
 
   ///INIT
-  Future init() async => loadList();
+  @override
+  Future onInit() async {
+    await _loadList();
+    super.onInit();
+  }
 
   /// GETTER FUNCTIONS
   String patientName(int index) =>
@@ -25,7 +29,7 @@ class PatientSearchController extends GetxController {
   int get currentListLength => _activePatientList.length;
 
   /// EVENTS
-  Future loadList() async {
+  Future _loadList() async {
     final newList = (await IFhirDb().returnListOfSingleResourceType('Patient'))
         .fold((l) => <Resource>[], (r) => r.toList());
     _fullPatientList.addAll(newList);
