@@ -33,6 +33,8 @@ class _AppColors {
   static const Color blueGreen = Color(0xFF005A6C);
   //this is the light mode "social and emotional health" banner
   static const Color blueGreenDarkMode = Color(0xFF277787);
+  // deep royal blue
+  static const Color bannerBlue = Color(0xFF0D47A1);
   //this is the dark mode "social and emotional health" banner
   static const Color greySurface = Color(0xFFE4E4E3);
   //this is the light mode color used for the home view background and the settings menu background
@@ -118,10 +120,10 @@ class AppTheme {
       case ThemeType.Prapare:
         return AppTheme(isDark: false)
           ..bg1 = _AppColors.greySurface
-          ..bg2 = _AppColors.greenSurface
+          ..bg2 = _AppColors.bannerBlue
           ..surface = Colors.white
-          ..primary = _AppColors.green
-          ..primaryVariant = _AppColors.greenDark
+          ..primary = _AppColors.bannerBlue
+          ..primaryVariant = _AppColors.bannerBlue
           ..secondary = _AppColors.orange
           ..secondaryVariant = _AppColors.orangeDark
           ..heading1 = _AppColors.orangeRed
@@ -136,10 +138,10 @@ class AppTheme {
       case ThemeType.Prapare_Dark:
         return AppTheme(isDark: true)
           ..bg1 = _AppColors.blackBackground
-          ..bg2 = _AppColors.greenSurfaceDark
+          ..bg2 = _AppColors.bannerBlue
           ..surface = _AppColors.blackSurface
-          ..primary = _AppColors.greenDark
-          ..primaryVariant = _AppColors.green
+          ..primary = _AppColors.bannerBlue
+          ..primaryVariant = _AppColors.blue
           ..secondary = _AppColors.orangeDark
           ..secondaryVariant = _AppColors.orange
           ..heading1 = _AppColors.orangeRedDarkMode
