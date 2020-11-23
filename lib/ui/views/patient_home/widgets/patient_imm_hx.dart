@@ -8,7 +8,7 @@ class PatientImmHx extends StatelessWidget {
       padding: const EdgeInsets.all(4.0),
       child: Column(
         children: [
-          const SizedBox(height: 10.0),
+          const SizedBox(height: 5.0),
           Table(
             defaultVerticalAlignment: TableCellVerticalAlignment.bottom,
             border: TableBorder.symmetric(

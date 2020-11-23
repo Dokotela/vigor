@@ -24,5 +24,5 @@ class PatientHomeController extends GetxController
 
   /// EVENTS
   void editPatient() =>
-      Get.offNamed(AppRoutes.PATIENT_REGISTRATION, arguments: patient);
+      Get.toNamed(AppRoutes.PATIENT_REGISTRATION, arguments: patient);
 }

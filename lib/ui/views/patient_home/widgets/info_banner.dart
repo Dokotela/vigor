@@ -7,14 +7,12 @@ import '../../../../localization.dart';
 
 class InfoBannerWidget extends StatelessWidget {
   const InfoBannerWidget({
-    @required this.lastCommaFirstName,
     @required this.id,
     @required this.birthDate,
     @required this.relativeAge,
     @required this.sex,
   });
 
-  final String lastCommaFirstName;
   final String id;
   final String birthDate;
   final String relativeAge;
@@ -58,19 +56,6 @@ class InfoBannerWidget extends StatelessWidget {
         ],
       ),
     );
-  }
-
-  // One flexible widget within a row
-  // Row is necessary, otherwise Expanded throws an error
-  // https://stackoverflow.com/questions/54905388/incorrect-use-of-parent-data-widget-expanded-widgets-must-be-placed-inside-flex
-  Widget _flexOne(String text3) {
-    return Flexible(
-        flex: 2,
-        child: Row(
-          children: [
-            _sharedText(text3, textAlign: TextAlign.right),
-          ],
-        ));
   }
 
   // Text will automatically adjust to the available size

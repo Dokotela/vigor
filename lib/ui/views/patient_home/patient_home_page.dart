@@ -16,7 +16,17 @@ class PatientHomePage extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        title: Text(controller.patient.name(), style: TextStyle(fontSize: 24)),
+        title: FlatButton(
+          onPressed: () => controller.editPatient(),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(controller.patient.name(),
+                  style: TextStyle(color: Colors.white, fontSize: 28)),
+              Icon(Icons.edit, color: Colors.white),
+            ],
+          ),
+        ),
       ),
       body: SafeArea(
         child: Column(
@@ -25,7 +35,6 @@ class PatientHomePage extends StatelessWidget {
               color: Colors.white,
               onPressed: () => controller.editPatient(),
               child: InfoBannerWidget(
-                lastCommaFirstName: controller.name(),
                 id: controller.id(),
                 birthDate: controller.birthDate(),
                 relativeAge: controller.relativeAge(),
