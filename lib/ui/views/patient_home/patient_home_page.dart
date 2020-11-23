@@ -5,7 +5,7 @@ import '../../../controllers/local/patient_home/patient_home_controller.dart';
 import '../../../localization.dart';
 import '../../../ui/styled_components/bottom_navigation_bar.dart';
 import 'widgets/info_banner.dart';
-import 'widgets/patient_imm_hx.dart';
+import 'widgets/patient_imm_page.dart';
 
 class PatientHomePage extends StatelessWidget {
   @override
@@ -41,7 +41,7 @@ class PatientHomePage extends StatelessWidget {
                 sex: controller.sex(),
               ),
             ),
-            PatientImmHx(),
+            PatientImmPage(),
           ],
         ),
       ),

@@ -1,8 +1,10 @@
+import 'package:dartz/dartz.dart';
 import 'package:fhir/r4.dart';
 import 'package:get/get.dart';
 import 'package:vax_cast/vax_cast.dart';
 
 import '../../_internal/utils/utils.dart';
+import '../../services/i_dr_vax_cast.dart';
 import '../../services/i_fhir_db.dart';
 import '../../services/i_vax_cast.dart';
 
@@ -14,11 +16,13 @@ class PatientModel {
     this.immEvaluations,
     this.recommendation,
     this.pastImmMap,
+    this.immHx,
   }) {
     medsAdministered ??= <MedicationAdministration>[];
     pastImmunizations ??= <Immunization>[];
     immEvaluations ??= <ImmunizationEvaluation>[];
     pastImmMap ??= <String, List<Immunization>>{};
+    immHx ??= <String, Tuple2<int, List<FhirDateTime>>>{};
   }
 
   Patient patient;
@@ -27,6 +31,7 @@ class PatientModel {
   List<ImmunizationEvaluation> immEvaluations;
   ImmunizationRecommendation recommendation;
   Map<String, List<Immunization>> pastImmMap;
+  Map<String, Tuple2<int, List<FhirDateTime>>> immHx;
 
   Future loadImmunizations() async {
     final iFhirDb = IFhirDb();
@@ -58,6 +63,9 @@ class PatientModel {
       }
     }
   }
+
+  void getDrRecommendation() =>
+      immHx = IDrVaxCast.drVaxCast(immunizations: pastImmunizations);
 
   Future getImmunizationRecommendation() async {
     final returnValues = await IVaxCast.vaxCast(
