@@ -1,4 +1,5 @@
 import 'package:fhir/r4.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../_internal/constants/constants.dart';
@@ -22,6 +23,8 @@ class PatientRegistrationController extends GetxController {
   final _barrio = 'Neighborhood'.obs;
   final _barrioError = ''.obs;
   final _barriosList = barrios.obs;
+  final familyName = TextEditingController();
+  final givenName = TextEditingController();
 
   /// INIT
   @override
@@ -32,6 +35,8 @@ class PatientRegistrationController extends GetxController {
       _birthDate.value =
           DateTime.parse(_patient.value.patient.birthDate.toString());
       _barrio.value = _patient.value.barrio();
+      familyName.text = initialFamilyName;
+      givenName.text = initialGivenName;
     }
     super.onInit();
   }
@@ -56,15 +61,16 @@ class PatientRegistrationController extends GetxController {
 
   void barrioEvent(String barrio) => _barrio.value = barrio;
 
-  void registerEvent({String familyName, String givenName}) {
-    if (isValidRegistrationName(familyName)) {
-      if (isValidRegistrationName(givenName)) {
+  void registerEvent() {
+    if (isValidRegistrationName(familyName.text)) {
+      if (isValidRegistrationName(givenName.text)) {
         if (isValidRegistrationBirthDate(birthDate)) {
           if (isValidRegistrationBarrio(barrio)) {
             _patient.value.patient = _patient.value.patient == null
                 ? Patient(
                     name: [
-                      HumanName(family: familyName, given: [givenName])
+                      HumanName(
+                          family: familyName.text, given: [givenName.text])
                     ],
                     birthDate: Date(birthDate),
                     address: [Address(district: barrio)],
@@ -73,7 +79,8 @@ class PatientRegistrationController extends GetxController {
                         : PatientGender.male)
                 : _patient.value.patient.copyWith(
                     name: [
-                      HumanName(family: familyName, given: [givenName])
+                      HumanName(
+                          family: familyName.text, given: [givenName.text])
                     ],
                     birthDate: Date(birthDate),
                     address: [Address(district: barrio)],

@@ -1,4 +1,5 @@
 import 'package:fhir/r4.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:vigor/routes/routes.dart';
 
@@ -23,6 +24,10 @@ class ContactRegistrationController extends GetxController {
   final _barrioError2 = ''.obs;
   final _relation2 = 'Relationship'.obs;
   final _relationError2 = ''.obs;
+  final familyName1 = TextEditingController();
+  final givenName1 = TextEditingController();
+  final familyName2 = TextEditingController();
+  final givenName2 = TextEditingController();
 
   /// INIT
   @override
@@ -32,6 +37,10 @@ class ContactRegistrationController extends GetxController {
     _relation1.value = _contactRelation(0);
     _barrio2.value = _contactBarrio(1);
     _relation2.value = _contactRelation(1);
+    familyName1.text = initialFamilyName1;
+    givenName1.text = initialGivenName1;
+    familyName2.text = initialFamilyName2;
+    givenName2.text = initialGivenName2;
     super.onInit();
   }
 
@@ -113,18 +122,13 @@ class ContactRegistrationController extends GetxController {
   void relation1Event(String relation1) => _relation1.value = relation1;
   void relation2Event(String relation2) => _relation2.value = relation2;
 
-  Future<void> registerEvent({
-    String familyName1,
-    String givenName1,
-    String familyName2,
-    String givenName2,
-  }) async {
-    if (isValidRegistrationName(familyName1) &&
-        isValidRegistrationName(givenName1) &&
+  Future<void> registerEvent() async {
+    if (isValidRegistrationName(familyName1.text) &&
+        isValidRegistrationName(givenName1.text) &&
         isValidRegistrationBarrio(barrio1) &&
         isValidRegistrationRelation(relation1)) {
-      final newContact1 =
-          formatPatientContact(familyName1, givenName1, barrio1, relation1);
+      final newContact1 = formatPatientContact(
+          familyName1.text, givenName1.text, barrio1, relation1);
       _patient.value.patient.contact == null
           ? _patient.value.patient =
               _patient.value.patient.copyWith(contact: [newContact1])
@@ -134,12 +138,12 @@ class ContactRegistrationController extends GetxController {
                   ? null
                   : _patient.value.patient.contact.add(newContact1);
 
-      if (isValidRegistrationName(familyName2) &&
-          isValidRegistrationName(givenName2) &&
+      if (isValidRegistrationName(familyName2.text) &&
+          isValidRegistrationName(givenName2.text) &&
           isValidRegistrationBarrio(barrio2) &&
           isValidRegistrationRelation(relation2)) {
-        final newContact2 =
-            formatPatientContact(familyName2, givenName2, barrio2, relation2);
+        final newContact2 = formatPatientContact(
+            familyName2.text, givenName2.text, barrio2, relation2);
         _patient.value.patient.contact == null
             ? _patient.value.patient =
                 _patient.value.patient.copyWith(contact: [newContact2])
@@ -156,10 +160,10 @@ class ContactRegistrationController extends GetxController {
         (r) => Get.offAllNamed(AppRoutes.PATIENT_HOME, arguments: r as Patient),
       );
     } else {
-      _familyNameError1.value = !isValidRegistrationName(familyName1)
+      _familyNameError1.value = !isValidRegistrationName(familyName1.text)
           ? 'Enter family name'
           : _familyNameError1.value;
-      _givenNameError1.value = !isValidRegistrationName(givenName1)
+      _givenNameError1.value = !isValidRegistrationName(givenName1.text)
           ? 'Enter other names'
           : _givenNameError1.value;
       _relationError1.value = !isValidRegistrationRelation(relation1)

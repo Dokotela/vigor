@@ -14,28 +14,20 @@ class ContactRegistrationPage extends StatelessWidget {
     final labels = AppLocalizations.of(context);
     final ContactRegistrationController controller =
         Get.put(ContactRegistrationController());
-    final familyName1 =
-        TextEditingController(text: controller.initialFamilyName1);
-    final givenName1 =
-        TextEditingController(text: controller.initialGivenName1);
-    final familyName2 =
-        TextEditingController(text: controller.initialFamilyName2);
-    final givenName2 =
-        TextEditingController(text: controller.initialGivenName2);
 
-    return Scaffold(
-      resizeToAvoidBottomInset: false,
-      appBar: AppBar(
-        title: Text('Patient Contacts'.tr),
-      ),
-      body: GestureDetector(
-        onTap: () {
-          final currentFocus = FocusScope.of(context);
-          if (!currentFocus.hasPrimaryFocus) {
-            currentFocus.unfocus();
-          }
-        },
-        child: Padding(
+    return GestureDetector(
+      onTap: () {
+        final currentFocus = FocusScope.of(context);
+        if (!currentFocus.hasPrimaryFocus) {
+          currentFocus.unfocus();
+        }
+      },
+      child: Scaffold(
+        resizeToAvoidBottomInset: false,
+        appBar: AppBar(
+          title: Text('Patient Contacts'.tr),
+        ),
+        body: Padding(
           padding: const EdgeInsets.all(10.0),
           child: Center(
             child: Obx(
@@ -43,8 +35,8 @@ class ContactRegistrationPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
                   NamesInputWidget(
-                    familyName: familyName1,
-                    givenName: givenName1,
+                    familyName: controller.familyName1,
+                    givenName: controller.givenName1,
                     familyNameError: controller.familyNameError1,
                     givenNameError: controller.givenNameError1,
                   ),
@@ -70,8 +62,8 @@ class ContactRegistrationPage extends StatelessWidget {
                     thickness: 10,
                   ),
                   NamesInputWidget(
-                    familyName: familyName2,
-                    givenName: givenName2,
+                    familyName: controller.familyName2,
+                    givenName: controller.givenName2,
                     familyNameError: controller.familyNameError2,
                     givenNameError: controller.givenNameError2,
                   ),
@@ -98,12 +90,7 @@ class ContactRegistrationPage extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(16.0),
                       ),
-                      onPressed: () => controller.registerEvent(
-                        familyName1: familyName1.text,
-                        givenName1: givenName1.text,
-                        familyName2: familyName2.text,
-                        givenName2: givenName2.text,
-                      ),
+                      onPressed: () => controller.registerEvent(),
                       child: Text('Register Patient'.tr),
                     ),
                   ),
@@ -112,8 +99,8 @@ class ContactRegistrationPage extends StatelessWidget {
             ),
           ),
         ),
+        bottomNavigationBar: bottomAppBar,
       ),
-      bottomNavigationBar: bottomAppBar,
     );
   }
 }
