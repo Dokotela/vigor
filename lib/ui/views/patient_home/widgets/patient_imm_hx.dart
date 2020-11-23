@@ -8,25 +8,27 @@ class PatientImmHx extends StatelessWidget {
       padding: const EdgeInsets.all(4.0),
       child: Column(
         children: [
+          const SizedBox(height: 10.0),
           Table(
             defaultVerticalAlignment: TableCellVerticalAlignment.bottom,
             border: TableBorder.symmetric(
                 inside: BorderSide(width: 1, color: Colors.white),
                 outside: BorderSide(width: 1, color: Colors.white)),
             columnWidths: {
-              0: FixedColumnWidth(Get.width / 4),
+              0: FixedColumnWidth(Get.width / 3),
             },
             children: [
               TableRow(
                 decoration: BoxDecoration(color: Colors.grey[100]),
                 children: [
-                  TableCell(child: Text('Deworming')),
+                  TableCell(
+                      child: Text('Deworming', style: TextStyle(fontSize: 18))),
                   TableCell(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text('1\n'),
-                        _completed,
+                        _completed(),
                       ],
                     ),
                   ),
@@ -35,7 +37,7 @@ class PatientImmHx extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text('2\n'),
-                        _completed,
+                        _completed(),
                       ],
                     ),
                   ),
@@ -44,7 +46,7 @@ class PatientImmHx extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text('3\n'),
-                        _completed,
+                        _completed(),
                       ],
                     ),
                   ),
@@ -53,7 +55,7 @@ class PatientImmHx extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text('4\n'),
-                        _overdue,
+                        _overdue(),
                       ],
                     ),
                   ),
@@ -78,7 +80,8 @@ class PatientImmHx extends StatelessWidget {
               TableRow(
                 decoration: BoxDecoration(color: Colors.grey[100]),
                 children: [
-                  TableCell(child: Text('Doses\n')),
+                  TableCell(
+                      child: Text('Doses\n', style: TextStyle(fontSize: 18))),
                   TableCell(child: Text('7\n')),
                   TableCell(child: Text('8\n')),
                   TableCell(child: Text('9\n')),
@@ -89,26 +92,32 @@ class PatientImmHx extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(height: 6.0),
+          const SizedBox(height: 10.0),
           Table(
             defaultVerticalAlignment: TableCellVerticalAlignment.bottom,
             border: TableBorder.symmetric(
                 inside: BorderSide(width: 1, color: Colors.white),
                 outside: BorderSide(width: 1, color: Colors.white)),
             columnWidths: {
-              0: FixedColumnWidth(Get.width / 4),
+              0: FixedColumnWidth(Get.width / 3),
             },
             children: [
               TableRow(
                 decoration: BoxDecoration(color: Colors.grey[100]),
                 children: [
                   TableCell(child: Text('')),
-                  TableCell(child: Text('Dosis RN')),
-                  TableCell(child: Text('1ra Dosis')),
-                  TableCell(child: Text('2da Dosis')),
-                  TableCell(child: Text('3rd Dosis')),
-                  TableCell(child: Text('1er Ref')),
-                  TableCell(child: Text('2da Ref')),
+                  TableCell(
+                      child: Text('Dosis RN', style: TextStyle(fontSize: 16))),
+                  TableCell(
+                      child: Text('1ra Dosis', style: TextStyle(fontSize: 16))),
+                  TableCell(
+                      child: Text('2da Dosis', style: TextStyle(fontSize: 16))),
+                  TableCell(
+                      child: Text('3rd Dosis', style: TextStyle(fontSize: 16))),
+                  TableCell(
+                      child: Text('1er Ref', style: TextStyle(fontSize: 16))),
+                  TableCell(
+                      child: Text('2da Ref', style: TextStyle(fontSize: 16))),
                 ],
               ),
               TableRow(
@@ -203,9 +212,10 @@ class PatientImmHx extends StatelessWidget {
 List<Widget> _getContainers(String text, List<dynamic> color) {
   var cont = <Widget>[
     TableCell(
+      verticalAlignment: TableCellVerticalAlignment.middle,
       child: Container(
         color: Colors.grey[100],
-        child: Text(text),
+        child: Text(text, style: TextStyle(fontSize: 18)),
       ),
     )
   ];
@@ -213,32 +223,39 @@ List<Widget> _getContainers(String text, List<dynamic> color) {
     if (i == Colors.black || i == Colors.grey[100]) {
       cont.add(_nothing(i));
     } else if (i == Colors.green) {
-      cont.add(_completed);
+      cont.add(TableCell(
+          verticalAlignment: TableCellVerticalAlignment.middle,
+          child: _completed()));
     } else if (i == Colors.red) {
-      cont.add(_overdue);
+      cont.add(TableCell(
+          verticalAlignment: TableCellVerticalAlignment.middle,
+          child: _overdue()));
     } else if (i == Colors.yellow) {
-      cont.add(_due);
+      cont.add(TableCell(
+          verticalAlignment: TableCellVerticalAlignment.middle, child: _due()));
     }
   }
   return cont;
 }
 
-Container _nothing(Color newColor) => Container(
-      color: newColor,
-      child: Text('\n'),
+Widget _nothing(Color newColor) => TableCell(
+      child: Container(
+        color: newColor,
+        child: Text('\n'),
+      ),
     );
 
-final _due = Container(
-  color: Colors.grey[100],
-  child: Icon(Icons.visibility, color: Colors.yellow[500]),
-);
+Widget _due() => Container(
+      color: Colors.orange,
+      child: Icon(Icons.error, color: Colors.yellow[300], size: 24),
+    );
 
-final _completed = Container(
-  color: Colors.grey[100],
-  child: Icon(Icons.check_circle, color: Colors.green),
-);
+Widget _completed() => Container(
+      color: Colors.grey[100],
+      child: Icon(Icons.check_circle, color: Colors.green, size: 24),
+    );
 
-final _overdue = Container(
-  color: Colors.grey[100],
-  child: Icon(Icons.warning, color: Colors.red),
-);
+Widget _overdue() => Container(
+      color: Colors.grey[100],
+      child: Icon(Icons.warning, color: Colors.red, size: 24),
+    );

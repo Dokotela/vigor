@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../controllers/local/patient_screens/patient_home_controller.dart';
+import '../../../controllers/local/patient_home/patient_home_controller.dart';
 import '../../../localization.dart';
 import '../../../ui/styled_components/bottom_navigation_bar.dart';
 import 'widgets/info_banner.dart';
-import 'widgets/patient_growth_curve.dart';
 import 'widgets/patient_imm_hx.dart';
 
 class PatientHomePage extends StatelessWidget {
@@ -17,7 +16,7 @@ class PatientHomePage extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        title: Text('title'.tr),
+        title: Text(controller.patient.name(), style: TextStyle(fontSize: 24)),
       ),
       body: SafeArea(
         child: Column(
@@ -33,43 +32,11 @@ class PatientHomePage extends StatelessWidget {
                 sex: controller.sex(),
               ),
             ),
-            TabBar(
-              controller: controller.tabController,
-              tabs: <Widget>[
-                ...controller.tabsList().map((e) => _buildTab(e)),
-              ],
-            ),
-            Expanded(
-              child: TabBarView(
-                controller: controller.tabController,
-                children: <Widget>[
-                  PatientImmHx(),
-                  PatientGrowthCurve(),
-                  const Center(child: Text('Milestones Screen')),
-                ],
-              ),
-            ),
+            PatientImmHx(),
           ],
         ),
       ),
       bottomNavigationBar: bottomAppBar,
     );
   }
-}
-
-Widget _buildTab(String text) {
-  return Tab(
-    child: Container(
-      height: 52,
-      width: double.infinity,
-      decoration: BoxDecoration(border: Border.all(color: Colors.grey[400])),
-      child: Center(
-        child: Text(
-          text,
-          textAlign: TextAlign.center,
-          style: TextStyle(color: Colors.black),
-        ),
-      ),
-    ),
-  );
 }

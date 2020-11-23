@@ -27,24 +27,16 @@ class InfoBannerWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        Container(
-          color: Colors.grey[200],
-          child: Row(children: [
-            _flexTwo('${labels.general.name.name}:  ', lastCommaFirstName)
-          ]),
-        ),
         _spacerV(),
-        Row(children: [_flexTwo('${labels.general.birthDate}:  ', birthDate)]),
+        Row(children: [
+          _flexTwo(
+              '${labels.general.birthDate}: $birthDate', 'Age: $relativeAge')
+        ]),
         _spacerV(),
-        Container(
-          color: Colors.grey[200],
-          child: Row(children: [
-            _flexTwo(
-                'Age: $relativeAge', '${labels.general.sexAtBirth.title}: $sex')
-          ]),
-        ),
+        Row(children: [
+          _flexTwo('${labels.general.sexAtBirth.title}: $sex', 'ID: $id')
+        ]),
         _spacerV(),
-        Row(children: [_flexTwo('ID:  ', id)]),
       ],
     );
   }

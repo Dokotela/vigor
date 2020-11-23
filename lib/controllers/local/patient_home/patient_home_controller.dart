@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:vigor/routes/routes.dart';
 import '../../../models/data/patient_model.dart';
-import '../../../ui/views/views.dart';
 
 import 'shared/relative_age.dart';
 
@@ -49,7 +48,4 @@ class PatientHomeController extends GetxController
   /// EVENTS
   void editPatient() =>
       Get.offNamed(AppRoutes.PATIENT_REGISTRATION, arguments: patient);
-
-  // void immunizationScreen() =>
-  //     Get.to(PatientImmunizations(), arguments: patient);
 }
