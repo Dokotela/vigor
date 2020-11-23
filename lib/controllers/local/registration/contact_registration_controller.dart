@@ -1,4 +1,5 @@
 import 'package:fhir/r4.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:vigor/routes/routes.dart';
 
@@ -11,13 +12,19 @@ import '../../../services/i_fhir_db.dart';
 class ContactRegistrationController extends GetxController {
   /// PROPERTIES
   final _patient = PatientModel().obs;
+
+  final familyName1 = TextEditingController();
   final _familyNameError1 = ''.obs;
+  final givenName1 = TextEditingController();
   final _givenNameError1 = ''.obs;
   final _barrio1 = 'Neighborhood'.obs;
   final _barrioError1 = ''.obs;
   final _relation1 = 'Relationship'.obs;
   final _relationError1 = ''.obs;
+
+  final familyName2 = TextEditingController();
   final _familyNameError2 = ''.obs;
+  final givenName2 = TextEditingController();
   final _givenNameError2 = ''.obs;
   final _barrio2 = 'Neighborhood'.obs;
   final _barrioError2 = ''.obs;
@@ -32,15 +39,23 @@ class ContactRegistrationController extends GetxController {
     _relation1.value = _contactRelation(0);
     _barrio2.value = _contactBarrio(1);
     _relation2.value = _contactRelation(1);
+    familyName1.text = _familyName(0);
+    givenName1.text = _givenName(0);
+    familyName2.text = _familyName(1);
+    givenName2.text = _givenName(1);
+
     super.onInit();
   }
+
+  String get initialGivenName2 => _givenName(1);
+  String get initialFamilyName2 => _familyName(1);
+  String get initialGivenName1 => _givenName(0);
+  String get initialFamilyName1 => _familyName(0);
 
   // GETTERS
   List<String> get barriosList => barrios;
   List<String> get relationList => relationship_types;
 
-  String get initialGivenName1 => _givenName(0);
-  String get initialFamilyName1 => _familyName(0);
   String get familyNameError1 => _familyNameError1.value;
   String get givenNameError1 => _givenNameError1.value;
   String get barrio1 => _barrio1.value;
@@ -48,8 +63,6 @@ class ContactRegistrationController extends GetxController {
   String get relation1 => _relation1.value;
   String get relationError1 => _relationError1.value;
 
-  String get initialGivenName2 => _givenName(1);
-  String get initialFamilyName2 => _familyName(1);
   String get familyNameError2 => _familyNameError2.value;
   String get givenNameError2 => _givenNameError2.value;
   String get barrio2 => _barrio2.value;
@@ -113,18 +126,13 @@ class ContactRegistrationController extends GetxController {
   void relation1Event(String relation1) => _relation1.value = relation1;
   void relation2Event(String relation2) => _relation2.value = relation2;
 
-  Future<void> registerEvent({
-    String familyName1,
-    String givenName1,
-    String familyName2,
-    String givenName2,
-  }) async {
-    if (isValidRegistrationName(familyName1) &&
-        isValidRegistrationName(givenName1) &&
+  Future<void> registerEvent() async {
+    if (isValidRegistrationName(familyName1.text) &&
+        isValidRegistrationName(givenName1.text) &&
         isValidRegistrationBarrio(barrio1) &&
         isValidRegistrationRelation(relation1)) {
-      final newContact1 =
-          formatPatientContact(familyName1, givenName1, barrio1, relation1);
+      final newContact1 = formatPatientContact(
+          familyName1.text, givenName1.text, barrio1, relation1);
       _patient.value.patient.contact == null
           ? _patient.value.patient =
               _patient.value.patient.copyWith(contact: [newContact1])
@@ -134,12 +142,12 @@ class ContactRegistrationController extends GetxController {
                   ? null
                   : _patient.value.patient.contact.add(newContact1);
 
-      if (isValidRegistrationName(familyName2) &&
-          isValidRegistrationName(givenName2) &&
+      if (isValidRegistrationName(familyName2.text) &&
+          isValidRegistrationName(givenName2.text) &&
           isValidRegistrationBarrio(barrio2) &&
           isValidRegistrationRelation(relation2)) {
-        final newContact2 =
-            formatPatientContact(familyName2, givenName2, barrio2, relation2);
+        final newContact2 = formatPatientContact(
+            familyName2.text, givenName2.text, barrio2, relation2);
         _patient.value.patient.contact == null
             ? _patient.value.patient =
                 _patient.value.patient.copyWith(contact: [newContact2])
@@ -156,10 +164,10 @@ class ContactRegistrationController extends GetxController {
         (r) => Get.offAllNamed(AppRoutes.PATIENT_HOME, arguments: r as Patient),
       );
     } else {
-      _familyNameError1.value = !isValidRegistrationName(familyName1)
+      _familyNameError1.value = !isValidRegistrationName(familyName1.text)
           ? 'Enter family name'
           : _familyNameError1.value;
-      _givenNameError1.value = !isValidRegistrationName(givenName1)
+      _givenNameError1.value = !isValidRegistrationName(givenName1.text)
           ? 'Enter other names'
           : _givenNameError1.value;
       _relationError1.value = !isValidRegistrationRelation(relation1)

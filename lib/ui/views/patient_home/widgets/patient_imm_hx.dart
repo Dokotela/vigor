@@ -247,7 +247,7 @@ Widget _nothing(Color newColor) => TableCell(
 
 Widget _due() => Container(
       color: Colors.orange,
-      child: Icon(Icons.error, color: Colors.yellow[300], size: 24),
+      child: Icon(Icons.access_alarm, color: Colors.orange, size: 24),
     );
 
 Widget _completed() => Container(

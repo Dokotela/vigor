@@ -15,23 +15,20 @@ class PatientRegistrationPage extends StatelessWidget {
     final labels = AppLocalizations.of(context);
     final PatientRegistrationController controller =
         Get.put(PatientRegistrationController());
-    final familyName =
-        TextEditingController(text: controller.initialFamilyName);
-    final givenName = TextEditingController(text: controller.initialGivenName);
 
-    return Scaffold(
-      resizeToAvoidBottomInset: false,
-      appBar: AppBar(
-        title: Text('Patient Information'.tr),
-      ),
-      body: GestureDetector(
-        onTap: () {
-          final currentFocus = FocusScope.of(context);
-          if (!currentFocus.hasPrimaryFocus) {
-            currentFocus.unfocus();
-          }
-        },
-        child: Padding(
+    return GestureDetector(
+      onTap: () {
+        final currentFocus = FocusScope.of(context);
+        if (!currentFocus.hasPrimaryFocus) {
+          currentFocus.unfocus();
+        }
+      },
+      child: Scaffold(
+        resizeToAvoidBottomInset: false,
+        appBar: AppBar(
+          title: Text('Patient Information'.tr),
+        ),
+        body: Padding(
           padding: const EdgeInsets.all(10.0),
           child: Center(
             child: Obx(
@@ -39,8 +36,8 @@ class PatientRegistrationPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
                   NamesInputWidget(
-                    familyName: familyName,
-                    givenName: givenName,
+                    familyName: controller.familyName,
+                    givenName: controller.givenName,
                     familyNameError: controller.familyNameError,
                     givenNameError: controller.givenNameError,
                   ),
@@ -66,11 +63,7 @@ class PatientRegistrationPage extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(16.0),
                       ),
-
-                      /// ToDo: add back in names
-                      onPressed: () => controller.registerEvent(
-                          familyName: familyName.text,
-                          givenName: givenName.text),
+                      onPressed: () => controller.registerEvent(),
                       child: Text('Register Patient'.tr),
                     ),
                   ),
@@ -79,8 +72,8 @@ class PatientRegistrationPage extends StatelessWidget {
             ),
           ),
         ),
+        bottomNavigationBar: bottomAppBar,
       ),
-      bottomNavigationBar: bottomAppBar,
     );
   }
 }
