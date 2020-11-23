@@ -26,7 +26,7 @@ class PatientImmHx extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text('1\n'),
-                        _completed,
+                        _completed(),
                       ],
                     ),
                   ),
@@ -35,7 +35,7 @@ class PatientImmHx extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text('2\n'),
-                        _completed,
+                        _completed(),
                       ],
                     ),
                   ),
@@ -44,7 +44,7 @@ class PatientImmHx extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text('3\n'),
-                        _completed,
+                        _completed(),
                       ],
                     ),
                   ),
@@ -53,7 +53,7 @@ class PatientImmHx extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text('4\n'),
-                        _overdue,
+                        _overdue(),
                       ],
                     ),
                   ),
@@ -213,11 +213,11 @@ List<Widget> _getContainers(String text, List<dynamic> color) {
     if (i == Colors.black || i == Colors.grey[100]) {
       cont.add(_nothing(i));
     } else if (i == Colors.green) {
-      cont.add(_completed);
+      cont.add(_completed());
     } else if (i == Colors.red) {
-      cont.add(_overdue);
+      cont.add(_overdue());
     } else if (i == Colors.yellow) {
-      cont.add(_due);
+      cont.add(_due());
     }
   }
   return cont;
@@ -228,17 +228,17 @@ Container _nothing(Color newColor) => Container(
       child: Text('\n'),
     );
 
-final _due = Container(
-  color: Colors.grey[100],
-  child: Icon(Icons.visibility, color: Colors.yellow[500]),
-);
+Container _due() => Container(
+      color: Colors.grey[100],
+      child: Icon(Icons.visibility, color: Colors.yellow[500]),
+    );
 
-final _completed = Container(
-  color: Colors.grey[100],
-  child: Icon(Icons.check_circle, color: Colors.green),
-);
+Container _completed() => Container(
+      color: Colors.grey[100],
+      child: Icon(Icons.check_circle, color: Colors.green),
+    );
 
-final _overdue = Container(
-  color: Colors.grey[100],
-  child: Icon(Icons.warning, color: Colors.red),
-);
+Container _overdue() => Container(
+      color: Colors.grey[100],
+      child: Icon(Icons.warning, color: Colors.red),
+    );

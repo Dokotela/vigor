@@ -14,7 +14,7 @@ class PatientHomeController extends GetxController
   final List<String> _tabsList = [
     'Vaccines',
     'Growth\nCurve',
-    'Milestones',
+    'Simplified Vaccines',
   ]; // todo: extract list, add internationalization
   TabController _tabController;
 
