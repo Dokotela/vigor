@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import '../../../controllers/local/patient_screens/patient_home_controller.dart';
 import '../../../localization.dart';
 import '../../../ui/styled_components/bottom_navigation_bar.dart';
+import 'patient_immunizations.dart';
 import 'widgets/info_banner.dart';
 import 'widgets/patient_growth_curve.dart';
 import 'widgets/patient_imm_hx.dart';
@@ -43,9 +44,10 @@ class PatientHomePage extends StatelessWidget {
               child: TabBarView(
                 controller: controller.tabController,
                 children: <Widget>[
-                  PatientImmHx(),
+                  PatientImmunizations(),
                   PatientGrowthCurve(),
-                  const Center(child: Text('Milestones Screen')),
+                  // Text('ImmHx'),
+                  PatientImmHx(),
                 ],
               ),
             ),
