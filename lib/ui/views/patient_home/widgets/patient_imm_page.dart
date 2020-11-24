@@ -1,9 +1,14 @@
+import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vax_cast/vax_cast.dart';
+import 'package:vigor/controllers/local/patient_home/patient_home_controller.dart';
 
 import 'dose_options.dart';
 
 class PatientImmPage extends StatelessWidget {
+  final PatientHomeController controller = Get.find();
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -118,7 +123,7 @@ class PatientImmPage extends StatelessWidget {
                   decoration: BoxDecoration(color: Colors.grey[100]),
                   children: [
                     _rowName('Anti-BCG\n'),
-                    DoseOptions.completed(),
+                    Obx(() => _valid('Tuberculosis', 0)),
                     DoseOptions.na(),
                     DoseOptions.na(),
                     DoseOptions.na(),
@@ -129,10 +134,10 @@ class PatientImmPage extends StatelessWidget {
                   decoration: BoxDecoration(color: Colors.grey[100]),
                   children: [
                     _rowName('Anti-Hepatitis B\n'),
-                    DoseOptions.completed(),
-                    DoseOptions.possible(),
-                    DoseOptions.possible(),
-                    DoseOptions.possible(),
+                    _valid('HepB', 0),
+                    _valid('HepB', 2),
+                    _valid('HepB', 4),
+                    _valid('HepB', 6),
                     DoseOptions.na(),
                     DoseOptions.na(),
                   ]),
@@ -233,6 +238,32 @@ class PatientImmPage extends StatelessWidget {
 
   Widget _vaxDose(String dose) =>
       TableCell(child: Text(dose, style: TextStyle(fontSize: 16)));
+
+  Widget _valid(String name, int months) {
+    if (controller.patient.immHx[name] == null) {
+      return DoseOptions.open();
+    }
+    if (controller.patient.immHx[name].value1 == 0) {
+      return DoseOptions.open();
+    }
+    while (controller.patient.immHx[name].value1 > 0) {
+      if (VaxDate.fromString(controller.birthDate()).change('$months months') <=
+          VaxDate.fromString(
+              controller.patient.immHx[name].value2[0].toJson())) {
+        controller.patient.immHx[name].value2.removeAt(0);
+        controller.patient.immHx[name] = Tuple2(
+            controller.patient.immHx[name].value1 - 1,
+            controller.patient.immHx[name].value2);
+        return DoseOptions.completed();
+      } else {
+        controller.patient.immHx[name].value2.removeAt(0);
+        controller.patient.immHx[name] = Tuple2(
+            controller.patient.immHx[name].value1 - 1,
+            controller.patient.immHx[name].value2);
+      }
+    }
+    return DoseOptions.open();
+  }
 
   Widget _rowName(String text) => TableCell(
         verticalAlignment: TableCellVerticalAlignment.middle,

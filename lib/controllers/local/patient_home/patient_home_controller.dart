@@ -4,14 +4,18 @@ import '../../../models/data/patient_model.dart';
 
 import 'shared/relative_age.dart';
 
-class PatientHomeController extends GetxController
-    with SingleGetTickerProviderMixin {
+class PatientHomeController extends GetxController {
   /// PROPERTIES
   final patient = PatientModel(patient: Get.arguments);
-  final RxInt _tabIndex = 0.obs;
 
-  /// SETTER FUNCTIONS
-  set tabIndex(int value) => _tabIndex.value = value;
+  /// Init
+  @override
+  Future onInit() async {
+    await patient.loadImmunizations();
+    patient.getDrRecommendation();
+    patient.immHx.forEach((k, v) => print('$k: ${v.value1} - ${v.value2}'));
+    super.onInit();
+  }
 
   /// GETTER FUNCTIONS
   String name() => patient.name();
@@ -19,8 +23,6 @@ class PatientHomeController extends GetxController
   String sex() => patient.sex();
   String birthDate() => patient.birthDate();
   String relativeAge() => sharedRelativeAge(patient.birthDate());
-
-  int get tabIndex => _tabIndex.value;
 
   /// EVENTS
   void editPatient() =>
