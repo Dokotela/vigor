@@ -25,7 +25,7 @@ class ContactRegistrationPage extends StatelessWidget {
       child: Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: AppBar(
-          title: Text('Patient Contacts'.tr),
+          title: Text(labels.general.contacts),
         ),
         body: Padding(
           padding: const EdgeInsets.all(10.0),
@@ -91,7 +91,7 @@ class ContactRegistrationPage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(16.0),
                       ),
                       onPressed: () => controller.registerEvent(),
-                      child: Text('Register Patient'.tr),
+                      child: Text(labels.registration.registerPatient),
                     ),
                   ),
                 ],

@@ -25,6 +25,7 @@ class PatientRegistrationController extends GetxController {
   final _barrio = 'Neighborhood'.obs;
   final _barrioError = ''.obs;
   final _barriosList = barrios.obs;
+  final _labels = Get.arguments;
 
   /// INIT
   @override
@@ -35,6 +36,8 @@ class PatientRegistrationController extends GetxController {
       _birthDate.value =
           DateTime.parse(_patient.value.patient.birthDate.toString());
       _barrio.value = _patient.value.barrio();
+    } else {
+      _barrio.value = _labels.general.address.neighborhood;
     }
     familyName.text = _patient.value.familyName();
     givenName.text = _patient.value.givenName();

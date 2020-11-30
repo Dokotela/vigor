@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../views.dart';
+import '../../../../routes/routes.dart';
 
 class LoginButtonWidget extends StatelessWidget {
   const LoginButtonWidget({
@@ -21,7 +21,7 @@ class LoginButtonWidget extends StatelessWidget {
       child: MaterialButton(
         minWidth: Get.width,
         padding: padding,
-        onPressed: () => Get.to<Widget>(HomePage()),
+        onPressed: () => Get.toNamed(AppRoutes.HOME),
         child: Text(login, textAlign: TextAlign.center),
       ),
     );

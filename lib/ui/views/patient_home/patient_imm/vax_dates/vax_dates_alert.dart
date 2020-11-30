@@ -1,26 +1,27 @@
 import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vigor/controllers/local/patient_home/patient_home_controller.dart';
-import 'package:vigor/routes/routes.dart';
 
-import 'vax_calendar.dart';
+import '../../../../../controllers/local/patient_home/patient_home_controller.dart';
+import '../../../../../routes/routes.dart';
+import '../widgets/vax_calendar.dart';
 import 'vax_dates_view_controller.dart';
 
 class VaxDatesAlert extends StatelessWidget {
   final PatientHomeController controller = Get.find();
-  final VaxDatesViewController vaxDates = Get.put(VaxDatesViewController());
+  final VaxDatesViewController viewController =
+      Get.put(VaxDatesViewController());
 
   @override
   Widget build(BuildContext context) {
-    vaxDates.setList = controller.immHx()[vaxDates.dz];
+    viewController.setList = controller.immHx()[viewController.dz];
     return Obx(() => AlertDialog(
-          title: Center(child: Text(vaxDates.text.value)),
+          title: Center(child: Text(viewController.text.value)),
           content: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: controller.immHx()[vaxDates.dz].isEmpty
+            children: controller.immHx()[viewController.dz].isEmpty
                 ? _noPrevious
-                : _getDates(vaxDates.dateList, context),
+                : _getDates(viewController.dateList, context),
           ),
         ));
   }
@@ -48,9 +49,10 @@ class VaxDatesAlert extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 20,
                   color: Colors.blue,
-                  decoration: vaxDates.deleteList[listOfDates.indexOf(date)]
-                      ? TextDecoration.lineThrough
-                      : null,
+                  decoration:
+                      viewController.deleteList[listOfDates.indexOf(date)]
+                          ? TextDecoration.lineThrough
+                          : null,
                 ),
               )),
           Material(
@@ -67,7 +69,7 @@ class VaxDatesAlert extends StatelessWidget {
             borderRadius: BorderRadius.circular(64.0),
             color: Colors.blue[600],
             child: MaterialButton(
-              onPressed: () => vaxDates.delete(listOfDates.indexOf(date)),
+              onPressed: () => viewController.delete(listOfDates.indexOf(date)),
               child: Text('Delete'),
             ),
           ),
@@ -77,9 +79,9 @@ class VaxDatesAlert extends StatelessWidget {
     }
     dateList.add(SizedBox(height: 24));
     dateList.add(VaxCalendarWidget(
-      selectNewDate: vaxDates.recordNew,
-      currentDate: vaxDates.currentDate,
-      displayDate: vaxDates.dateString,
+      selectNewDate: viewController.recordNew,
+      currentDate: viewController.currentDate,
+      displayDate: viewController.dateString,
     ));
     dateList.add(SizedBox(height: 32));
     dateList.add(

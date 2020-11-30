@@ -7,8 +7,6 @@ import 'controllers/locale_controller.dart';
 import 'controllers/theme_controller.dart';
 import 'localization.dart';
 import 'routes/routes.dart';
-import 'services/i_fhir_db.dart';
-import 'services/i_fhir_server.dart';
 import 'ui/styled_components/styled_loading.dart';
 import 'ui/views/views.dart';
 

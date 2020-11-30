@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../../localization.dart';
+import '../../../../../localization.dart';
 
 class VaxCalendarWidget extends StatelessWidget {
   const VaxCalendarWidget({

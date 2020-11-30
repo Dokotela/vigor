@@ -65,8 +65,10 @@ class AppLocalizations {
         mySchedule: "My Schedule",
         newPatient: "New Patient",
         newSurvey: "New Survey",
+        contacts: "Patient Contacts",
         relationship: "Relationship",
         submitShare: "Submit/Share",
+        patientInformation: "Patient Information",
         address: AppLocalizations_Labels_General_Address(
           city: "City",
           country: "Country",
@@ -194,8 +196,10 @@ class AppLocalizations {
         mySchedule: "Mi horario",
         newPatient: "Paciente nuevo",
         newSurvey: "nueva Encuesta",
+        contacts: "contactos de pacientes",
         relationship: "Relación",
         submitShare: "Presentar / Compartir",
+        patientInformation: "Información del paciente",
         address: AppLocalizations_Labels_General_Address(
           city: "Ciudad",
           country: "País",
@@ -323,8 +327,10 @@ class AppLocalizations {
         mySchedule: "جدولي",
         newPatient: "مريض جديد",
         newSurvey: "مسح جديد",
+        contacts: "المريض اتصالات",
         relationship: "صلة",
         submitShare: "إرسال / حصة",
+        patientInformation: "معلومات المريض",
         address: AppLocalizations_Labels_General_Address(
           city: "مدينة",
           country: "بلد",
@@ -452,8 +458,10 @@ class AppLocalizations {
         mySchedule: "मेरे अनुसूची",
         newPatient: "नए रोगी",
         newSurvey: "नए सर्वेक्षण",
+        contacts: "रोगी संपर्क",
         relationship: "संबंध",
         submitShare: "जमा करें / शेयर",
+        patientInformation: "रोगी के बारे में जानकारी",
         address: AppLocalizations_Labels_General_Address(
           city: "Faridabad",
           country: "देश",
@@ -581,8 +589,10 @@ class AppLocalizations {
         mySchedule: "Мое расписание",
         newPatient: "Новый пациент",
         newSurvey: "повторная съемка",
+        contacts: "Пациент Контакты",
         relationship: "отношения",
         submitShare: "Отправить / Share",
+        patientInformation: "Информация о пациенте",
         address: AppLocalizations_Labels_General_Address(
           city: "город",
           country: "Страна",
@@ -710,8 +720,10 @@ class AppLocalizations {
         mySchedule: "আমার সময়সূচি",
         newPatient: "নিউ রোগীর",
         newSurvey: "নতুন জরিপ",
+        contacts: "রোগীর যোগাযোগ",
         relationship: "সম্পর্ক",
         submitShare: "জমা দিন / শেয়ার",
+        patientInformation: "রোগীর তথ্য",
         address: AppLocalizations_Labels_General_Address(
           city: "শহর",
           country: "দেশ",
@@ -839,8 +851,10 @@ class AppLocalizations {
         mySchedule: "အကြှနျုပျ၏ဇယား",
         newPatient: "နယူးလူနာ",
         newSurvey: "နယူးစစ်တမ်း",
+        contacts: "လူနာဆက်သွယ်ရန်",
         relationship: "relationship",
         submitShare: "Submit / ဝေမျှမယ်",
+        patientInformation: "လူနာသတင်းအချက်အလက်",
         address: AppLocalizations_Labels_General_Address(
           city: "မြို့",
           country: "ပြည်",
@@ -968,8 +982,10 @@ class AppLocalizations {
         mySchedule: "我的日程表",
         newPatient: "新患者",
         newSurvey: "新调查",
+        contacts: "病人的接触",
         relationship: "关系",
         submitShare: "提交/股",
+        patientInformation: "患者信息",
         address: AppLocalizations_Labels_General_Address(
           city: "市",
           country: "国家",
@@ -1097,8 +1113,10 @@ class AppLocalizations {
         mySchedule: "我的日程表",
         newPatient: "新患者",
         newSurvey: "新調查",
+        contacts: "病人的接觸",
         relationship: "關係",
         submitShare: "提交/股",
+        patientInformation: "患者信息",
         address: AppLocalizations_Labels_General_Address(
           city: "市",
           country: "國家",
@@ -1226,8 +1244,10 @@ class AppLocalizations {
         mySchedule: "برنامه من",
         newPatient: "بیمار جدید",
         newSurvey: "نظرسنجی جدید",
+        contacts: "بیمار اطلاعات تماس",
         relationship: "ارتباط",
         submitShare: "ارسال / اشتراک",
+        patientInformation: "اطلاعات بیمار",
         address: AppLocalizations_Labels_General_Address(
           city: "شهرستان",
           country: "کشور",
@@ -1355,8 +1375,10 @@ class AppLocalizations {
         mySchedule: "Mon emploi du temps",
         newPatient: "nouveau patient",
         newSurvey: "Une nouvelle enquête",
+        contacts: "Contacts patients",
         relationship: "Relation",
         submitShare: "Déposer / Partager",
+        patientInformation: "L'information des patients",
         address: AppLocalizations_Labels_General_Address(
           city: "Ville",
           country: "Pays",
@@ -1484,8 +1506,10 @@ class AppLocalizations {
         mySchedule: "Mein Terminplan",
         newPatient: "Neuer Patient",
         newSurvey: "neue Umfrage",
+        contacts: "Patienten-Kontakte",
         relationship: "Beziehung",
         submitShare: "Senden / Share",
+        patientInformation: "Informationen zum Patienten",
         address: AppLocalizations_Labels_General_Address(
           city: "Stadt",
           country: "Land",
@@ -1613,8 +1637,10 @@ class AppLocalizations {
         mySchedule: "Jadwal saya",
         newPatient: "Pasien baru",
         newSurvey: "Survei baru",
+        contacts: "Kontak pasien",
         relationship: "Hubungan",
         submitShare: "Menyerahkan / Share",
+        patientInformation: "Informasi pasien",
         address: AppLocalizations_Labels_General_Address(
           city: "Kota",
           country: "Negara",
@@ -1742,8 +1768,10 @@ class AppLocalizations {
         mySchedule: "私のスケジュール",
         newPatient: "新しい患者",
         newSurvey: "新しい調査",
+        contacts: "患者のコンタクト",
         relationship: "関係",
         submitShare: "送信/共有",
+        patientInformation: "患者情報",
         address: AppLocalizations_Labels_General_Address(
           city: "市",
           country: "国",
@@ -1871,8 +1899,10 @@ class AppLocalizations {
         mySchedule: "កាលវិភាគ​របស់​ខ្ញុំ",
         newPatient: "ជម្ងឺថ្មី",
         newSurvey: "ការស្ទង់មតិថ្មី",
+        contacts: "ទំនាក់ទំនងអ្នកជម្ងឺ",
         relationship: "ទំនាក់ទំនង",
         submitShare: "ដាក់ស្នើ / ចែករំលែក",
+        patientInformation: "ពអ្នកជំងឺ",
         address: AppLocalizations_Labels_General_Address(
           city: "ទីក្រុង",
           country: "ប្រទេស",
@@ -2000,8 +2030,10 @@ class AppLocalizations {
         mySchedule: "내 일정",
         newPatient: "새로운 환자",
         newSurvey: "새로운 설문 조사",
+        contacts: "환자 연락처",
         relationship: "관계",
         submitShare: "전송 / 공유",
+        patientInformation: "환자 정보",
         address: AppLocalizations_Labels_General_Address(
           city: "시티",
           country: "국가",
@@ -2129,8 +2161,10 @@ class AppLocalizations {
         mySchedule: "ຕາຕະລາງຂອງຂ້າພະເຈົ້າ",
         newPatient: "ອົດທົນໃຫມ່",
         newSurvey: "ການສໍາຫຼວດໃຫມ່",
+        contacts: "ຕິດຕໍ່ຄົນເຈັບ",
         relationship: "ຄວາມສໍາພັນ",
         submitShare: "ຍື່ນສະເຫນີ / Share",
+        patientInformation: "ຂໍ້ມູນຜູ້ປ່ວຍ",
         address: AppLocalizations_Labels_General_Address(
           city: "ເມືອງ",
           country: "ປະເທດ",
@@ -2258,8 +2292,10 @@ class AppLocalizations {
         mySchedule: "माझे वेळापत्रक",
         newPatient: "नवीन रुग्णांच्या",
         newSurvey: "नवीन सर्वेक्षण",
+        contacts: "रुग्णांच्या संपर्क",
         relationship: "संबंध",
         submitShare: "सबमिट करा / शेअर",
+        patientInformation: "रुग्णांच्या माहिती",
         address: AppLocalizations_Labels_General_Address(
           city: "सिटी",
           country: "देश",
@@ -2387,8 +2423,10 @@ class AppLocalizations {
         mySchedule: "मेरो तालिका",
         newPatient: "नयाँ रोगी",
         newSurvey: "नयाँ सर्वेक्षण",
+        contacts: "रोगी सम्पर्क",
         relationship: "सम्बन्ध",
         submitShare: "पेश / शेयर",
+        patientInformation: "रोगी सूचना",
         address: AppLocalizations_Labels_General_Address(
           city: "शहर",
           country: "देश",
@@ -2516,8 +2554,10 @@ class AppLocalizations {
         mySchedule: "Meu horário",
         newPatient: "New Patient",
         newSurvey: "nova pesquisa",
+        contacts: "paciente Contactos",
         relationship: "Relação",
         submitShare: "Enviar / Share",
+        patientInformation: "Informação do paciente",
         address: AppLocalizations_Labels_General_Address(
           city: "Cidade",
           country: "País",
@@ -2645,8 +2685,10 @@ class AppLocalizations {
         mySchedule: "ਮੇਰੀ ਤਹਿ",
         newPatient: "ਨਿਊ ਮਰੀਜ਼",
         newSurvey: "ਨਿਊ ਸਰਵੇ",
+        contacts: "ਮਰੀਜ਼ ਸੰਪਰਕ",
         relationship: "ਰਿਸ਼ਤਾ",
         submitShare: "ਪੇਸ਼ ਕਰੋ / share",
+        patientInformation: "ਮਰੀਜ਼ ਜਾਣਕਾਰੀ",
         address: AppLocalizations_Labels_General_Address(
           city: "ਸਿਟੀ",
           country: "ਦੇਸ਼",
@@ -2774,8 +2816,10 @@ class AppLocalizations {
         mySchedule: "My Schedule",
         newPatient: "bukaanka New",
         newSurvey: "New Survey",
+        contacts: "Nala Xiriir bukaanka",
         relationship: "xiriirka",
         submitShare: "Gudbi / Share",
+        patientInformation: "Macluumaadka bukaanka",
         address: AppLocalizations_Labels_General_Address(
           city: "City",
           country: "Country",
@@ -2903,8 +2947,10 @@ class AppLocalizations {
         mySchedule: "Ratiba yangu",
         newPatient: "mgonjwa New",
         newSurvey: "Survey New",
+        contacts: "Mawasiliano mgonjwa",
         relationship: "uhusiano",
         submitShare: "Wasilisha / Shiriki",
+        patientInformation: "Taarifa mgonjwa",
         address: AppLocalizations_Labels_General_Address(
           city: "City",
           country: "Nchi",
@@ -3032,8 +3078,10 @@ class AppLocalizations {
         mySchedule: "Aking Talaan",
         newPatient: "bagong Pasyente",
         newSurvey: "bagong Survey",
+        contacts: "pasyente Contact Lens",
         relationship: "Relasyon",
         submitShare: "Isumite / Share",
+        patientInformation: "pasyente Impormasyon",
         address: AppLocalizations_Labels_General_Address(
           city: "lungsod",
           country: "bansa",
@@ -3161,8 +3209,10 @@ class AppLocalizations {
         mySchedule: "ตารางของฉัน",
         newPatient: "ผู้ป่วยใหม่",
         newSurvey: "การสำรวจใหม่",
+        contacts: "รายชื่อผู้ป่วย",
         relationship: "ความสัมพันธ์",
         submitShare: "ส่ง / หุ้น",
+        patientInformation: "ข้อมูลสำหรับผู้ป่วย",
         address: AppLocalizations_Labels_General_Address(
           city: "เมือง",
           country: "ประเทศ",
@@ -3290,8 +3340,10 @@ class AppLocalizations {
         mySchedule: "Mening jadvali",
         newPatient: "Yangi kasal",
         newSurvey: "Yangi tadqiqot",
+        contacts: "Bemor Aloqa",
         relationship: "munosabatlar",
         submitShare: "Submit / Share",
+        patientInformation: "Bemor Axborot",
         address: AppLocalizations_Labels_General_Address(
           city: "shahar",
           country: "mamlakat",
@@ -3419,8 +3471,10 @@ class AppLocalizations {
         mySchedule: "Thời gian biểu của tôi",
         newPatient: "Bệnh nhân mới",
         newSurvey: "Khảo sát mới",
+        contacts: "bệnh nhân Liên hệ",
         relationship: "Mối quan hệ",
         submitShare: "Gửi / Chia sẻ",
+        patientInformation: "Thông tin bệnh nhân",
         address: AppLocalizations_Labels_General_Address(
           city: "thành phố",
           country: "Quốc gia",
@@ -3953,8 +4007,10 @@ class AppLocalizations_Labels_General {
       this.mySchedule,
       this.newPatient,
       this.newSurvey,
+      this.contacts,
       this.relationship,
       this.submitShare,
+      this.patientInformation,
       this.address,
       this.name,
       this.relation,
@@ -3977,9 +4033,13 @@ class AppLocalizations_Labels_General {
 
   final String newSurvey;
 
+  final String contacts;
+
   final String relationship;
 
   final String submitShare;
+
+  final String patientInformation;
 
   final AppLocalizations_Labels_General_Address address;
 
@@ -4009,10 +4069,14 @@ class AppLocalizations_Labels_General {
         return newPatient;
       case 'newSurvey':
         return newSurvey;
+      case 'contacts':
+        return contacts;
       case 'relationship':
         return relationship;
       case 'submitShare':
         return submitShare;
+      case 'patientInformation':
+        return patientInformation;
       default:
         return '';
     }

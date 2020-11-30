@@ -2,13 +2,14 @@ import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:vax_cast/vax_cast.dart';
-import 'package:vigor/controllers/local/patient_home/patient_home_controller.dart';
-import 'package:vigor/routes/routes.dart';
 
-import 'dose_options.dart';
+import '../../../../controllers/local/patient_home/patient_home_controller.dart';
+import '../../../../routes/routes.dart';
+import 'widgets/dose_options.dart';
 
 class PatientImmPage extends StatelessWidget {
   final PatientHomeController controller = Get.find();
+  final _displayVaxDates = <String, List<FhirDateTime>>{};
   final _greyBoxDecoration = BoxDecoration(color: Colors.grey[100]);
 
   @override
@@ -17,8 +18,9 @@ class PatientImmPage extends StatelessWidget {
       future: controller.loadImmunizations(),
       builder: (BuildContext context, AsyncSnapshot snapshot) {
         if (snapshot.hasData) {
-          final immHx = controller.immHx();
-          immHx.forEach((k, v) => print('$k: $v'));
+          controller
+              .immHx()
+              .forEach((v, k) => _displayVaxDates[v] = k.toList());
           return Padding(
             padding: const EdgeInsets.all(4.0),
             child: Column(
@@ -115,7 +117,7 @@ class PatientImmPage extends StatelessWidget {
                     ),
                     TableRow(decoration: _greyBoxDecoration, children: [
                       _rowName('Anti-BCG\n', 'Tuberculosis', context),
-                      _valid('Tuberculosis', 0, immHx),
+                      _valid('Tuberculosis', 0),
                       DoseOptions.na(),
                       DoseOptions.na(),
                       DoseOptions.na(),
@@ -124,7 +126,7 @@ class PatientImmPage extends StatelessWidget {
                     ]),
                     TableRow(decoration: _greyBoxDecoration, children: [
                       _rowName('Anti-Hepatitis B\n', 'HepB', context),
-                      _valid('HepB', 0, immHx),
+                      _valid('HepB', 0),
                       DoseOptions.possible(),
                       DoseOptions.possible(),
                       DoseOptions.possible(),
@@ -134,8 +136,8 @@ class PatientImmPage extends StatelessWidget {
                     TableRow(decoration: _greyBoxDecoration, children: [
                       _rowName('Anti-Rotavirus\n', 'Rotavirus', context),
                       DoseOptions.na(),
-                      _valid('Rotavirus', 2, immHx),
-                      _valid('Rotavirus', 4, immHx),
+                      _valid('Rotavirus', 2),
+                      _valid('Rotavirus', 4),
                       DoseOptions.na(),
                       DoseOptions.na(),
                       DoseOptions.na(),
@@ -143,44 +145,44 @@ class PatientImmPage extends StatelessWidget {
                     TableRow(decoration: _greyBoxDecoration, children: [
                       _rowName('Anti-Polio\n', 'Polio', context),
                       DoseOptions.na(),
-                      _valid('Polio', 2, immHx),
-                      _valid('Polio', 4, immHx),
-                      _valid('Polio', 6, immHx),
-                      _valid('Polio', 18, immHx),
-                      _valid('Polio', 48, immHx),
+                      _valid('Polio', 2),
+                      _valid('Polio', 4),
+                      _valid('Polio', 6),
+                      _valid('Polio', 18),
+                      _valid('Polio', 48),
                     ]),
                     TableRow(decoration: _greyBoxDecoration, children: [
                       _rowName(
                           'Pentavalente (DPT/HB/Hib)', 'Pentavalente', context),
                       DoseOptions.na(),
-                      _valid('Pentavalente', 2, immHx),
-                      _valid('Pentavalente', 4, immHx),
-                      _valid('Pentavalente', 6, immHx),
+                      _valid('Pentavalente', 2),
+                      _valid('Pentavalente', 4),
+                      _valid('Pentavalente', 6),
                       DoseOptions.na(),
                       DoseOptions.na(),
                     ]),
                     TableRow(decoration: _greyBoxDecoration, children: [
                       _rowName('Anti-Neumococo', 'Pneumococcal', context),
                       DoseOptions.na(),
-                      _valid('Pneumococcal', 2, immHx),
-                      _valid('Pneumococcal', 4, immHx),
+                      _valid('Pneumococcal', 2),
+                      _valid('Pneumococcal', 4),
                       DoseOptions.na(),
-                      _valid('Pneumococcal', 12, immHx),
+                      _valid('Pneumococcal', 12),
                       DoseOptions.na(),
                     ]),
                     TableRow(decoration: _greyBoxDecoration, children: [
                       _rowName('Influenza', 'Influenza', context),
                       DoseOptions.na(),
-                      _valid('Influenza', 6, immHx),
-                      _valid('Influenza', 12, immHx),
-                      _valid('Influenza', 24, immHx),
-                      _valid('Influenza', 36, immHx),
-                      _valid('Influenza', 48, immHx),
+                      _valid('Influenza', 6),
+                      _valid('Influenza', 12),
+                      _valid('Influenza', 24),
+                      _valid('Influenza', 36),
+                      _valid('Influenza', 48),
                     ]),
                     TableRow(decoration: _greyBoxDecoration, children: [
                       _rowName('SRP\n', 'MMR', context),
                       DoseOptions.na(),
-                      _valid('MMR', 12, immHx),
+                      _valid('MMR', 12),
                       DoseOptions.na(),
                       DoseOptions.na(),
                       DoseOptions.na(),
@@ -192,15 +194,15 @@ class PatientImmPage extends StatelessWidget {
                       DoseOptions.possible(),
                       DoseOptions.possible(),
                       DoseOptions.possible(),
-                      _valid('DTP', 18, immHx),
-                      _valid('DTP', 48, immHx),
+                      _valid('DTP', 18),
+                      _valid('DTP', 48),
                     ]),
                     TableRow(
                       decoration: _greyBoxDecoration,
                       children: [
                         _rowName('SR\n', 'MR', context),
                         DoseOptions.na(),
-                        // _valid('MR', 12, immHx),
+                        // _valid('MR', 12),
                         DoseOptions.possible(),
                         DoseOptions.na(),
                         DoseOptions.na(),
@@ -223,11 +225,10 @@ class PatientImmPage extends StatelessWidget {
   Widget _vaxDose(String dose) =>
       TableCell(child: Text(dose, style: TextStyle(fontSize: 16)));
 
-  Widget _valid(String name, int months, Map<String, Set<FhirDateTime>> immHx) {
-    var editImmHx = immHx[name].toSet();
-    if (editImmHx == null) {
+  Widget _valid(String name, int months) {
+    if (_displayVaxDates[name] == null) {
       return DoseOptions.open();
-    } else if (editImmHx.isEmpty) {
+    } else if (_displayVaxDates[name].isEmpty) {
       if (VaxDate.fromString(controller.birthDate()).change('$months months') <=
           VaxDate.now()) {
         return DoseOptions.overdue();
@@ -235,13 +236,15 @@ class PatientImmPage extends StatelessWidget {
         return DoseOptions.open();
       }
     }
-    while (editImmHx.isNotEmpty) {
+
+    while (_displayVaxDates[name].isNotEmpty) {
       if (VaxDate.fromString(controller.birthDate()).change('$months months') <=
-          VaxDate.fromString(editImmHx.first.toJson())) {
-        editImmHx.remove(editImmHx.first);
+          VaxDate.fromString(_displayVaxDates[name].first.toJson())) {
+        _displayVaxDates[name].remove(_displayVaxDates[name].first);
+
         return DoseOptions.completed();
       } else {
-        editImmHx.remove(editImmHx.first);
+        _displayVaxDates[name].remove(_displayVaxDates[name].first);
       }
     }
     if (VaxDate.fromString(controller.birthDate()).change('$months months') <=

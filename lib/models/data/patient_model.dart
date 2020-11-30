@@ -1,4 +1,3 @@
-import 'package:dartz/dartz.dart';
 import 'package:fhir/r4.dart';
 import 'package:get/get.dart';
 import 'package:vax_cast/vax_cast.dart';
@@ -33,7 +32,7 @@ class PatientModel {
   Map<String, List<Immunization>> pastImmMap;
   Map<String, Set<FhirDateTime>> immHx;
 
-  Future<bool> loadImmunizations() async {
+  Future loadImmunizations() async {
     final iFhirDb = IFhirDb();
     await iFhirDb
         .returnPatientImmunizationHistory(patient.id.toString())
@@ -44,7 +43,6 @@ class PatientModel {
               (resource) => pastImmunizations.add(resource as Immunization)));
     });
     immHx = IDrVaxCast.drVaxCast(immunizations: pastImmunizations);
-    return true;
   }
 
   void createHx() {
