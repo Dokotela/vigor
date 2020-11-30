@@ -1,4 +1,3 @@
-import 'package:dartz/dartz.dart';
 import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:get/get.dart';
 import 'package:vigor/routes/routes.dart';
@@ -6,7 +5,7 @@ import '../../../models/data/patient_model.dart';
 
 import 'shared/relative_age.dart';
 
-class PatientHomeController extends GetxController {
+class EnterVaxDatesController extends GetxController {
   /// PROPERTIES
   final _patient = PatientModel(patient: Get.arguments).obs;
 

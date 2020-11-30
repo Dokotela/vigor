@@ -33,6 +33,13 @@ class _$DbFailureTearOff {
       error: error,
     );
   }
+
+// ignore: unused_element
+  UnableToDeleteAll unableToDeleteAll({String error}) {
+    return UnableToDeleteAll(
+      error: error,
+    );
+  }
 }
 
 /// @nodoc
@@ -48,12 +55,14 @@ mixin _$DbFailure {
     @required Result unableToSave(String error),
     @required Result resourceAlreadyPresent(String error),
     @required Result unableToObtainList(String error),
+    @required Result unableToDeleteAll(String error),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result unableToSave(String error),
     Result resourceAlreadyPresent(String error),
     Result unableToObtainList(String error),
+    Result unableToDeleteAll(String error),
     @required Result orElse(),
   });
   @optionalTypeArgs
@@ -61,12 +70,14 @@ mixin _$DbFailure {
     @required Result unableToSave(UnableToSave value),
     @required Result resourceAlreadyPresent(ResourceAlreadyPresent value),
     @required Result unableToObtainList(UnableToObtainList value),
+    @required Result unableToDeleteAll(UnableToDeleteAll value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result unableToSave(UnableToSave value),
     Result resourceAlreadyPresent(ResourceAlreadyPresent value),
     Result unableToObtainList(UnableToObtainList value),
+    Result unableToDeleteAll(UnableToDeleteAll value),
     @required Result orElse(),
   });
 
@@ -161,10 +172,12 @@ class _$UnableToSave implements UnableToSave {
     @required Result unableToSave(String error),
     @required Result resourceAlreadyPresent(String error),
     @required Result unableToObtainList(String error),
+    @required Result unableToDeleteAll(String error),
   }) {
     assert(unableToSave != null);
     assert(resourceAlreadyPresent != null);
     assert(unableToObtainList != null);
+    assert(unableToDeleteAll != null);
     return unableToSave(error);
   }
 
@@ -174,6 +187,7 @@ class _$UnableToSave implements UnableToSave {
     Result unableToSave(String error),
     Result resourceAlreadyPresent(String error),
     Result unableToObtainList(String error),
+    Result unableToDeleteAll(String error),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -189,10 +203,12 @@ class _$UnableToSave implements UnableToSave {
     @required Result unableToSave(UnableToSave value),
     @required Result resourceAlreadyPresent(ResourceAlreadyPresent value),
     @required Result unableToObtainList(UnableToObtainList value),
+    @required Result unableToDeleteAll(UnableToDeleteAll value),
   }) {
     assert(unableToSave != null);
     assert(resourceAlreadyPresent != null);
     assert(unableToObtainList != null);
+    assert(unableToDeleteAll != null);
     return unableToSave(this);
   }
 
@@ -202,6 +218,7 @@ class _$UnableToSave implements UnableToSave {
     Result unableToSave(UnableToSave value),
     Result resourceAlreadyPresent(ResourceAlreadyPresent value),
     Result unableToObtainList(UnableToObtainList value),
+    Result unableToDeleteAll(UnableToDeleteAll value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -287,10 +304,12 @@ class _$ResourceAlreadyPresent implements ResourceAlreadyPresent {
     @required Result unableToSave(String error),
     @required Result resourceAlreadyPresent(String error),
     @required Result unableToObtainList(String error),
+    @required Result unableToDeleteAll(String error),
   }) {
     assert(unableToSave != null);
     assert(resourceAlreadyPresent != null);
     assert(unableToObtainList != null);
+    assert(unableToDeleteAll != null);
     return resourceAlreadyPresent(error);
   }
 
@@ -300,6 +319,7 @@ class _$ResourceAlreadyPresent implements ResourceAlreadyPresent {
     Result unableToSave(String error),
     Result resourceAlreadyPresent(String error),
     Result unableToObtainList(String error),
+    Result unableToDeleteAll(String error),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -315,10 +335,12 @@ class _$ResourceAlreadyPresent implements ResourceAlreadyPresent {
     @required Result unableToSave(UnableToSave value),
     @required Result resourceAlreadyPresent(ResourceAlreadyPresent value),
     @required Result unableToObtainList(UnableToObtainList value),
+    @required Result unableToDeleteAll(UnableToDeleteAll value),
   }) {
     assert(unableToSave != null);
     assert(resourceAlreadyPresent != null);
     assert(unableToObtainList != null);
+    assert(unableToDeleteAll != null);
     return resourceAlreadyPresent(this);
   }
 
@@ -328,6 +350,7 @@ class _$ResourceAlreadyPresent implements ResourceAlreadyPresent {
     Result unableToSave(UnableToSave value),
     Result resourceAlreadyPresent(ResourceAlreadyPresent value),
     Result unableToObtainList(UnableToObtainList value),
+    Result unableToDeleteAll(UnableToDeleteAll value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -412,10 +435,12 @@ class _$UnableToObtainList implements UnableToObtainList {
     @required Result unableToSave(String error),
     @required Result resourceAlreadyPresent(String error),
     @required Result unableToObtainList(String error),
+    @required Result unableToDeleteAll(String error),
   }) {
     assert(unableToSave != null);
     assert(resourceAlreadyPresent != null);
     assert(unableToObtainList != null);
+    assert(unableToDeleteAll != null);
     return unableToObtainList(error);
   }
 
@@ -425,6 +450,7 @@ class _$UnableToObtainList implements UnableToObtainList {
     Result unableToSave(String error),
     Result resourceAlreadyPresent(String error),
     Result unableToObtainList(String error),
+    Result unableToDeleteAll(String error),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -440,10 +466,12 @@ class _$UnableToObtainList implements UnableToObtainList {
     @required Result unableToSave(UnableToSave value),
     @required Result resourceAlreadyPresent(ResourceAlreadyPresent value),
     @required Result unableToObtainList(UnableToObtainList value),
+    @required Result unableToDeleteAll(UnableToDeleteAll value),
   }) {
     assert(unableToSave != null);
     assert(resourceAlreadyPresent != null);
     assert(unableToObtainList != null);
+    assert(unableToDeleteAll != null);
     return unableToObtainList(this);
   }
 
@@ -453,6 +481,7 @@ class _$UnableToObtainList implements UnableToObtainList {
     Result unableToSave(UnableToSave value),
     Result resourceAlreadyPresent(ResourceAlreadyPresent value),
     Result unableToObtainList(UnableToObtainList value),
+    Result unableToDeleteAll(UnableToDeleteAll value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -470,4 +499,135 @@ abstract class UnableToObtainList implements DbFailure {
   String get error;
   @override
   $UnableToObtainListCopyWith<UnableToObtainList> get copyWith;
+}
+
+/// @nodoc
+abstract class $UnableToDeleteAllCopyWith<$Res>
+    implements $DbFailureCopyWith<$Res> {
+  factory $UnableToDeleteAllCopyWith(
+          UnableToDeleteAll value, $Res Function(UnableToDeleteAll) then) =
+      _$UnableToDeleteAllCopyWithImpl<$Res>;
+  @override
+  $Res call({String error});
+}
+
+/// @nodoc
+class _$UnableToDeleteAllCopyWithImpl<$Res>
+    extends _$DbFailureCopyWithImpl<$Res>
+    implements $UnableToDeleteAllCopyWith<$Res> {
+  _$UnableToDeleteAllCopyWithImpl(
+      UnableToDeleteAll _value, $Res Function(UnableToDeleteAll) _then)
+      : super(_value, (v) => _then(v as UnableToDeleteAll));
+
+  @override
+  UnableToDeleteAll get _value => super._value as UnableToDeleteAll;
+
+  @override
+  $Res call({
+    Object error = freezed,
+  }) {
+    return _then(UnableToDeleteAll(
+      error: error == freezed ? _value.error : error as String,
+    ));
+  }
+}
+
+/// @nodoc
+class _$UnableToDeleteAll implements UnableToDeleteAll {
+  const _$UnableToDeleteAll({this.error});
+
+  @override
+  final String error;
+
+  @override
+  String toString() {
+    return 'DbFailure.unableToDeleteAll(error: $error)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is UnableToDeleteAll &&
+            (identical(other.error, error) ||
+                const DeepCollectionEquality().equals(other.error, error)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(error);
+
+  @override
+  $UnableToDeleteAllCopyWith<UnableToDeleteAll> get copyWith =>
+      _$UnableToDeleteAllCopyWithImpl<UnableToDeleteAll>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result unableToSave(String error),
+    @required Result resourceAlreadyPresent(String error),
+    @required Result unableToObtainList(String error),
+    @required Result unableToDeleteAll(String error),
+  }) {
+    assert(unableToSave != null);
+    assert(resourceAlreadyPresent != null);
+    assert(unableToObtainList != null);
+    assert(unableToDeleteAll != null);
+    return unableToDeleteAll(error);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result unableToSave(String error),
+    Result resourceAlreadyPresent(String error),
+    Result unableToObtainList(String error),
+    Result unableToDeleteAll(String error),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (unableToDeleteAll != null) {
+      return unableToDeleteAll(error);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result unableToSave(UnableToSave value),
+    @required Result resourceAlreadyPresent(ResourceAlreadyPresent value),
+    @required Result unableToObtainList(UnableToObtainList value),
+    @required Result unableToDeleteAll(UnableToDeleteAll value),
+  }) {
+    assert(unableToSave != null);
+    assert(resourceAlreadyPresent != null);
+    assert(unableToObtainList != null);
+    assert(unableToDeleteAll != null);
+    return unableToDeleteAll(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result unableToSave(UnableToSave value),
+    Result resourceAlreadyPresent(ResourceAlreadyPresent value),
+    Result unableToObtainList(UnableToObtainList value),
+    Result unableToDeleteAll(UnableToDeleteAll value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (unableToDeleteAll != null) {
+      return unableToDeleteAll(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UnableToDeleteAll implements DbFailure {
+  const factory UnableToDeleteAll({String error}) = _$UnableToDeleteAll;
+
+  @override
+  String get error;
+  @override
+  $UnableToDeleteAllCopyWith<UnableToDeleteAll> get copyWith;
 }

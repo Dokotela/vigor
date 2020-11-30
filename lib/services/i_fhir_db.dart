@@ -53,4 +53,13 @@ class IFhirDb {
     }
     return right(resultList);
   }
+
+  Future<Either<DbFailure, Unit>> deleteAll() async {
+    try {
+      await resourceDao.deleteAllResources(null);
+    } catch (error) {
+      return left(DbFailure.unableToDeleteAll(error: error.toString()));
+    }
+    return right(unit);
+  }
 }

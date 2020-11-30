@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 abstract class DoseOptions {
   static Widget open() => Container(
         color: Colors.grey[100],
-        child: Text('\n'),
+        child: Text(' \n'),
       );
 
   static Widget due() => Container(
@@ -23,11 +23,11 @@ abstract class DoseOptions {
 
   static Widget na() => Container(
         color: Colors.black,
-        child: Text('\n'),
+        child: Text(' \n'),
       );
 
   static Widget possible() => Container(
         color: Colors.grey[400],
-        child: Text('\n'),
+        child: Text(' \n'),
       );
 }

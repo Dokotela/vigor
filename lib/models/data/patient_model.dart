@@ -22,7 +22,7 @@ class PatientModel {
     pastImmunizations ??= <Immunization>[];
     immEvaluations ??= <ImmunizationEvaluation>[];
     pastImmMap ??= <String, List<Immunization>>{};
-    immHx ??= <String, Tuple2<int, List<FhirDateTime>>>{};
+    immHx ??= <String, Set<FhirDateTime>>{};
   }
 
   Patient patient;
@@ -31,9 +31,9 @@ class PatientModel {
   List<ImmunizationEvaluation> immEvaluations;
   ImmunizationRecommendation recommendation;
   Map<String, List<Immunization>> pastImmMap;
-  Map<String, Tuple2<int, List<FhirDateTime>>> immHx;
+  Map<String, Set<FhirDateTime>> immHx;
 
-  Future loadImmunizations() async {
+  Future<bool> loadImmunizations() async {
     final iFhirDb = IFhirDb();
     await iFhirDb
         .returnPatientImmunizationHistory(patient.id.toString())
@@ -43,6 +43,8 @@ class PatientModel {
           (r) => r.forEach(
               (resource) => pastImmunizations.add(resource as Immunization)));
     });
+    immHx = IDrVaxCast.drVaxCast(immunizations: pastImmunizations);
+    return true;
   }
 
   void createHx() {
@@ -63,9 +65,6 @@ class PatientModel {
       }
     }
   }
-
-  void getDrRecommendation() =>
-      immHx = IDrVaxCast.drVaxCast(immunizations: pastImmunizations);
 
   Future getImmunizationRecommendation() async {
     final returnValues = await IVaxCast.vaxCast(

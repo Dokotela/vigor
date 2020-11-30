@@ -9,4 +9,5 @@ abstract class DbFailure with _$DbFailure {
       ResourceAlreadyPresent;
   const factory DbFailure.unableToObtainList({String error}) =
       UnableToObtainList;
+  const factory DbFailure.unableToDeleteAll({String error}) = UnableToDeleteAll;
 }

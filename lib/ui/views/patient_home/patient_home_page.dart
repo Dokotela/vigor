@@ -4,8 +4,8 @@ import 'package:get/get.dart';
 import '../../../controllers/local/patient_home/patient_home_controller.dart';
 import '../../../localization.dart';
 import '../../../ui/styled_components/bottom_navigation_bar.dart';
+import 'patient_imm/patient_imm_page.dart';
 import 'widgets/info_banner.dart';
-import 'widgets/patient_imm_page.dart';
 
 class PatientHomePage extends StatelessWidget {
   @override
@@ -21,7 +21,7 @@ class PatientHomePage extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(controller.patient.name(),
+              Text(controller.name(),
                   style: TextStyle(color: Colors.white, fontSize: 28)),
               Icon(Icons.edit, color: Colors.white),
             ],

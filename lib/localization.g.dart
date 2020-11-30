@@ -57,6 +57,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        age: "Age",
         allPatients: "All Patients",
         birthDate: "Birthdate",
         dateofBirth: "Date of Birth",
@@ -185,6 +186,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        age: "Edad",
         allPatients: "todos los pacientes",
         birthDate: "Fecha de nacimiento",
         dateofBirth: "Fecha de nacimiento",
@@ -313,6 +315,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        age: "عمر",
         allPatients: "كل المرضى",
         birthDate: "تاريخ الولادة",
         dateofBirth: "تاريخ الولادة",
@@ -376,7 +379,7 @@ class AppLocalizations {
         immunizations: "التطعيمات",
         deworming: "للتخلص من الديدان",
         vaccine: "لقاح",
-        vaccines: "#VALUE!",
+        vaccines: "اللقاحات",
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "سجل المريض",
@@ -441,6 +444,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        age: "आयु",
         allPatients: "सभी मरीजों को",
         birthDate: "जन्म दिन",
         dateofBirth: "जन्म की तारीख",
@@ -569,6 +573,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        age: "Возраст",
         allPatients: "Все пациенты",
         birthDate: "Дата рождения",
         dateofBirth: "Дата рождения",
@@ -697,6 +702,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        age: "বয়স",
         allPatients: "সব রোগীদের",
         birthDate: "জন্ম তারিখ",
         dateofBirth: "জন্ম তারিখ",
@@ -825,6 +831,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        age: "အသက်အရွယ်",
         allPatients: "အားလုံးလူနာများ",
         birthDate: "မွေးရက်",
         dateofBirth: "မွေးရက်",
@@ -953,6 +960,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        age: "年龄",
         allPatients: "所有患者",
         birthDate: "生日",
         dateofBirth: "出生日期",
@@ -1081,6 +1089,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        age: "年齡",
         allPatients: "所有患者",
         birthDate: "生日",
         dateofBirth: "出生日期",
@@ -1209,6 +1218,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        age: "سن",
         allPatients: "همه بیماران",
         birthDate: "تاریخ تولد",
         dateofBirth: "تاریخ تولد",
@@ -1337,6 +1347,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        age: "Âge",
         allPatients: "tous les patients",
         birthDate: "Date de naissance",
         dateofBirth: "Date de naissance",
@@ -1465,6 +1476,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        age: "Alter",
         allPatients: "alle Patienten",
         birthDate: "Geburtsdatum",
         dateofBirth: "Geburtsdatum",
@@ -1593,6 +1605,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        age: "Usia",
         allPatients: "semua Pasien",
         birthDate: "Tanggal lahir",
         dateofBirth: "Tanggal lahir",
@@ -1721,6 +1734,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        age: "年齢",
         allPatients: "すべての患者",
         birthDate: "誕生日",
         dateofBirth: "生年月日",
@@ -1849,6 +1863,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        age: "អាយុ",
         allPatients: "អ្នកជំងឺទាំងអស់",
         birthDate: "ថ្ងៃខែ​ឆ្នាំ​កំណើត",
         dateofBirth: "ថ្ងៃខែ​ឆ្នាំ​កំណើត",
@@ -1977,6 +1992,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        age: "나이",
         allPatients: "모든 환자",
         birthDate: "생일",
         dateofBirth: "생년월일",
@@ -2105,6 +2121,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        age: "ອາຍຸ",
         allPatients: "ຄົນເຈັບທັງຫມົດ",
         birthDate: "ວັນເດືອນປີເກີດ",
         dateofBirth: "ວັນ​ເດືອນ​ປີ​ເກີດ",
@@ -2233,6 +2250,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        age: "वय",
         allPatients: "सर्व रुग्णांना",
         birthDate: "जन्मदिनांक",
         dateofBirth: "जन्म तारीख",
@@ -2361,6 +2379,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        age: "उमेर",
         allPatients: "सबै विरामी",
         birthDate: "जन्म मिति",
         dateofBirth: "जन्म मिति",
@@ -2401,7 +2420,7 @@ class AppLocalizations {
           sister: "बहिनी",
           son: "छोरा",
           title: "सम्बन्ध",
-          uncle: "चाचा",
+          uncle: "मामा",
         ),
         search: AppLocalizations_Labels_General_Search(
           search: "खोज",
@@ -2482,13 +2501,14 @@ class AppLocalizations {
           friday: "Sexta-feira",
           monday: "Segunda-feira",
           saturday: "sábado",
-          sunday: "domingo",
+          sunday: "Domigo",
           thursday: "quinta-feira",
           tuesday: "terça",
           wednesday: "quarta-feira",
         ),
       ),
       general: AppLocalizations_Labels_General(
+        age: "Era",
         allPatients: "Todos os pacientes",
         birthDate: "Data de nascimento",
         dateofBirth: "Data de nascimento",
@@ -2617,6 +2637,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        age: "ਉੁਮਰ",
         allPatients: "ਸਾਰੇ ਮਰੀਜ਼",
         birthDate: "ਜਨਮ ਮਿਤੀ",
         dateofBirth: "ਜਨਮ ਤਾਰੀਖ",
@@ -2745,6 +2766,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        age: "Age",
         allPatients: "All Bukaanka",
         birthDate: "Taariiqda dhalasha",
         dateofBirth: "Taariikhda Dhalashada",
@@ -2873,6 +2895,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        age: "umri",
         allPatients: "Wagonjwa wote",
         birthDate: "Tarehe ya kuzaliwa",
         dateofBirth: "Tarehe ya kuzaliwa",
@@ -3001,6 +3024,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        age: "edad",
         allPatients: "Ang lahat ng mga pasyente",
         birthDate: "Araw ng kapanganakan",
         dateofBirth: "Araw ng kapanganakan",
@@ -3129,6 +3153,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        age: "อายุ",
         allPatients: "ผู้ป่วยทั้งหมด",
         birthDate: "วันที่เกิด",
         dateofBirth: "วันเกิด",
@@ -3257,6 +3282,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        age: "yosh",
         allPatients: "barcha bemorlar",
         birthDate: "Tug'ilgan sana",
         dateofBirth: "Tug'ilgan sana",
@@ -3385,6 +3411,7 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
+        age: "Tuổi tác",
         allPatients: "Tất cả các bệnh nhân",
         birthDate: "Ngày sinh",
         dateofBirth: "Ngày sinh",
@@ -3918,7 +3945,8 @@ class AppLocalizations_Labels_General_SexAtBirth {
 
 class AppLocalizations_Labels_General {
   const AppLocalizations_Labels_General(
-      {this.allPatients,
+      {this.age,
+      this.allPatients,
       this.birthDate,
       this.dateofBirth,
       this.editSurvey,
@@ -3932,6 +3960,8 @@ class AppLocalizations_Labels_General {
       this.relation,
       this.search,
       this.sexAtBirth});
+
+  final String age;
 
   final String allPatients;
 
@@ -3963,6 +3993,8 @@ class AppLocalizations_Labels_General {
 
   String getByKey(String key) {
     switch (key) {
+      case 'age':
+        return age;
       case 'allPatients':
         return allPatients;
       case 'birthDate':
