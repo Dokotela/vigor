@@ -28,6 +28,7 @@ class PatientHomeController extends GetxController {
   String relativeAge() => sharedRelativeAge(_patient.value.birthDate());
   Map<String, Set<FhirDateTime>> immHx() => _patient.value.immHx;
   Future loadImmunizations() async => await _patient.value.loadImmunizations();
+  PatientModel actualPatient() => _patient.value;
 
   /// EVENTS
   void editPatient() =>

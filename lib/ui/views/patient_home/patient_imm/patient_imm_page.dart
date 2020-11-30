@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:vax_cast/vax_cast.dart';
 import 'package:vigor/controllers/local/patient_home/patient_home_controller.dart';
+import 'package:vigor/routes/routes.dart';
 
 import 'dose_options.dart';
-import 'enter_vax_dates.dart';
 
 class PatientImmPage extends StatelessWidget {
   final PatientHomeController controller = Get.find();
@@ -262,12 +262,7 @@ class PatientImmPage extends StatelessWidget {
       materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
       color: Colors.grey[100],
       child: Text(text, style: TextStyle(fontSize: 15)),
-      onPressed: () => showDialog(
-        context: context,
-        builder: (BuildContext context) {
-          return EnterVaxDates(text: text, dz: dz);
-        },
-      ),
+      onPressed: () => Get.toNamed(AppRoutes.VAX_DATES, arguments: [text, dz]),
     );
   }
 }

@@ -8,4 +8,5 @@ abstract class AppRoutes {
   static const CONTACT_REGISTRATION = '/contact_registration';
   static const PATIENT_SEARCH = '/patient_search';
   static const PATIENT_HOME = '/patient_home';
+  static const VAX_DATES = '/patient_home/vax_dates';
 }
