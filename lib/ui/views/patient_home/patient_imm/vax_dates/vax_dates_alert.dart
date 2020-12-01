@@ -80,8 +80,10 @@ class VaxDatesAlert extends StatelessWidget {
     dateList.add(SizedBox(height: 24));
     dateList.add(VaxCalendarWidget(
       selectNewDate: viewController.recordNew,
+      addNewDate: controller.recordNew,
       currentDate: viewController.currentDate,
       displayDate: viewController.dateString,
+      disease: viewController.dz.value,
     ));
     dateList.add(SizedBox(height: 32));
     dateList.add(

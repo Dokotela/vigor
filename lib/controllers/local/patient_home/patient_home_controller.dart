@@ -31,4 +31,7 @@ class PatientHomeController extends GetxController {
   /// EVENTS
   void editPatient() =>
       Get.toNamed(AppRoutes.PATIENT_REGISTRATION, arguments: _patient.value);
+
+  void recordNew(DateTime newDate, String dz) =>
+      _fullVaxDates[dz].add(FhirDateTime(newDate));
 }

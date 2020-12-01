@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:get/get.dart';
 
 class BarrioWidget extends StatelessWidget {
   const BarrioWidget({
@@ -36,12 +35,12 @@ class BarrioWidget extends StatelessWidget {
                   );
                 }).toList(),
                 hint: Text(
-                  displayBarrio.tr,
+                  displayBarrio,
                 ),
                 onChanged: (newVal) => setBarrio(newVal)),
           ),
           Text(
-            dispBarrioError.tr,
+            dispBarrioError,
             style: const TextStyle(fontSize: 12.0, color: Colors.red),
           ),
         ],

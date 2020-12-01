@@ -6,12 +6,16 @@ import '../../../../../localization.dart';
 class VaxCalendarWidget extends StatelessWidget {
   const VaxCalendarWidget({
     @required this.selectNewDate,
+    @required this.addNewDate,
     @required this.currentDate,
     @required this.displayDate,
+    @required this.disease,
   });
   final Function selectNewDate;
+  final Function addNewDate;
   final DateTime currentDate;
   final String displayDate;
+  final String disease;
 
   @override
   Widget build(BuildContext context) {
@@ -29,12 +33,15 @@ class VaxCalendarWidget extends StatelessWidget {
         initialDate: currentDate,
         firstDate: DateTime(1900, 1, 1),
         lastDate: DateTime(2999, 12, 31),
-      ).then((date) => selectNewDate(date ?? currentDate)),
+      ).then((date) {
+        selectNewDate(date ?? currentDate);
+        addNewDate(date ?? currentDate, disease);
+      }),
       child: Row(
         children: [
           const Icon(Icons.calendar_today, size: 64.0),
           Text(
-            'new date:\n $displayDate',
+            'Add date of vaccine:\n $displayDate',
             style: Get.theme.textTheme.headline6,
             textAlign: TextAlign.center,
           ),

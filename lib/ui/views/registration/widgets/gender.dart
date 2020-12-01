@@ -36,18 +36,16 @@ class GenderSelectionWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Radio(
-                value:
-                    'female', // todo: extract to strings.dart or /_internal/constants
+                value: labels.general.sexAtBirth.female,
                 groupValue: curGender,
-                onChanged: (String gender) => setGender(gender),
+                onChanged: (_) => setGender('female'),
               ),
               Text(labels.general.sexAtBirth.female,
                   style: Get.theme.textTheme.headline6),
               Radio(
-                value:
-                    'male', // todo: extract to strings.dart or /_internal/constants
+                value: labels.general.sexAtBirth.male,
                 groupValue: curGender,
-                onChanged: (String gender) => setGender(gender),
+                onChanged: (_) => setGender('male'),
               ),
               Text(labels.general.sexAtBirth.male,
                   style: Get.theme.textTheme.headline6),
