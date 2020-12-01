@@ -10,14 +10,12 @@ import '../../services/i_vax_cast.dart';
 class PatientModel {
   PatientModel({
     this.patient,
-    this.medsAdministered,
     this.pastImmunizations,
     this.immEvaluations,
     this.recommendation,
     this.pastImmMap,
     this.immHx,
   }) {
-    medsAdministered ??= <MedicationAdministration>[];
     pastImmunizations ??= <Immunization>[];
     immEvaluations ??= <ImmunizationEvaluation>[];
     pastImmMap ??= <String, List<Immunization>>{};
@@ -25,7 +23,6 @@ class PatientModel {
   }
 
   Patient patient;
-  List<MedicationAdministration> medsAdministered;
   List<Immunization> pastImmunizations;
   List<ImmunizationEvaluation> immEvaluations;
   ImmunizationRecommendation recommendation;

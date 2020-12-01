@@ -20,24 +20,25 @@ class PatientRegistrationController extends GetxController {
     DateTime.now().month,
     DateTime.now().day + 1,
   ).obs;
-  final _gender = 'female'.obs;
+  final _gender = true.obs;
   final _birthDateError = ''.obs;
-  final _barrio = 'Neighborhood'.obs;
+  final _barrio = ''.obs;
   final _barrioError = ''.obs;
   final _barriosList = barrios.obs;
-  final _labels = Get.arguments;
+  final labels = Get.arguments[0];
 
   /// INIT
   @override
   void onInit() {
-    if (Get.arguments != null) {
-      _patient.value = Get.arguments ?? PatientModel().obs;
-      _gender.value = basicEnumToString(_patient.value.sex());
+    if (Get.arguments[1] != null) {
+      _patient.value = Get.arguments[1];
+      _gender.value = _patient.value.patient.gender == PatientGender.female;
       _birthDate.value =
           DateTime.parse(_patient.value.patient.birthDate.toString());
       _barrio.value = _patient.value.barrio();
     } else {
-      _barrio.value = _labels.general.address.neighborhood;
+      _gender.value = true;
+      _barrio.value = labels.general.address.neighborhood;
     }
     familyName.text = _patient.value.familyName();
     givenName.text = _patient.value.givenName();
@@ -46,7 +47,7 @@ class PatientRegistrationController extends GetxController {
   }
 
   /// GETTER FUNCTIONS
-  String get gender => _gender.value;
+  bool get gender => _gender.value;
   DateTime get birthDate => _birthDate.value;
   String get birthDateString => dateFromDateTime(_birthDate.value);
   String get barrio => _barrio.value;
@@ -57,7 +58,7 @@ class PatientRegistrationController extends GetxController {
   List<String> get barriosList => _barriosList;
 
   /// EVENTS
-  void genderEvent(String gender) => _gender.value = gender;
+  void genderEvent(bool gender) => _gender.value = gender;
 
   void birthDateEvent(DateTime birthDate) => _birthDate.value = birthDate;
 
@@ -78,9 +79,7 @@ class PatientRegistrationController extends GetxController {
                     ],
                     birthDate: Date(birthDate),
                     address: [Address(district: barrio)],
-                    gender: gender == 'female'
-                        ? PatientGender.female
-                        : PatientGender.male)
+                    gender: gender ? PatientGender.female : PatientGender.male)
                 : _patient.value.patient.copyWith(
                     name: [
                       HumanName(
@@ -96,16 +95,16 @@ class PatientRegistrationController extends GetxController {
             Get.toNamed(AppRoutes.CONTACT_REGISTRATION,
                 arguments: _patient.value);
           } else {
-            _barrioError.value = 'Please select neighborhood';
+            _barrioError.value = labels.general.neighborhoodError;
           }
         } else {
-          _birthDateError.value = 'Cannot be future date';
+          _birthDateError.value = labels.general.birthDateError;
         }
       } else {
-        _givenNameError.value = 'Enter other names';
+        _givenNameError.value = labels.general.givenNameError;
       }
     } else {
-      _familyNameError.value = 'Enter family name';
+      _familyNameError.value = labels.general.familyNameError;
     }
   }
 }

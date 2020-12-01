@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vigor/routes/routes.dart';
 
 import '../../../controllers/local/patient_search/patient_search_controller.dart';
 import '../../../localization.dart';
@@ -20,7 +21,7 @@ class PatientSearchPage extends StatelessWidget {
         title: Text(labels.app.title),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(4.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
@@ -37,22 +38,23 @@ class PatientSearchPage extends StatelessWidget {
                   ),
                 ),
                 const Spacer(),
-                // Container(
-                //   height: 60.0,
-                //   width: 130.0,
-                //   child: RaisedButton(
-                //     color: Colors.grey,
-                //     shape: RoundedRectangleBorder(
-                //       borderRadius: BorderRadius.circular(16.0),
-                //     ),
-                //     onPressed: () => Get.to(PatientRegistrationView()),
-                //     child: Text(
-                //       'Register New Patient'.tr,
-                //       textAlign: TextAlign.center,
-                //       style: const TextStyle(fontSize: 18.0),
-                //     ),
-                //   ),
-                // ),
+                Container(
+                  height: 60.0,
+                  width: 130.0,
+                  child: RaisedButton(
+                    color: Colors.grey,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16.0),
+                    ),
+                    onPressed: () =>
+                        Get.toNamed(AppRoutes.PATIENT_REGISTRATION),
+                    child: Text(
+                      'Register New Patient'.tr,
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(fontSize: 18.0),
+                    ),
+                  ),
+                ),
               ],
             ),
             Divider(

@@ -69,6 +69,10 @@ class AppLocalizations {
         relationship: "Relationship",
         submitShare: "Submit/Share",
         patientInformation: "Patient Information",
+        neighborhoodError: "Please select neighborhood",
+        birthDateError: "Cannot be future date",
+        givenNameError: "Enter other names",
+        familyNameError: "Enter family name",
         address: AppLocalizations_Labels_General_Address(
           city: "City",
           country: "Country",
@@ -200,6 +204,10 @@ class AppLocalizations {
         relationship: "Relación",
         submitShare: "Presentar / Compartir",
         patientInformation: "Información del paciente",
+        neighborhoodError: "Por favor, seleccione el barrio",
+        birthDateError: "No puede ser fecha futura",
+        givenNameError: "Introducir otros nombres",
+        familyNameError: "Introduce el nombre de la familia",
         address: AppLocalizations_Labels_General_Address(
           city: "Ciudad",
           country: "País",
@@ -331,6 +339,10 @@ class AppLocalizations {
         relationship: "صلة",
         submitShare: "إرسال / حصة",
         patientInformation: "معلومات المريض",
+        neighborhoodError: "يرجى اختيار حي",
+        birthDateError: "لا يمكن أن يكون تاريخ المستقبل",
+        givenNameError: "إدخال أسماء أخرى",
+        familyNameError: "أدخل اسم العائلة",
         address: AppLocalizations_Labels_General_Address(
           city: "مدينة",
           country: "بلد",
@@ -462,6 +474,10 @@ class AppLocalizations {
         relationship: "संबंध",
         submitShare: "जमा करें / शेयर",
         patientInformation: "रोगी के बारे में जानकारी",
+        neighborhoodError: "कृपया पड़ोस का चयन",
+        birthDateError: "भविष्य की तारीख नहीं किया जा सकता",
+        givenNameError: "अन्य नाम दर्ज",
+        familyNameError: "परिवार का नाम दर्ज करें",
         address: AppLocalizations_Labels_General_Address(
           city: "Faridabad",
           country: "देश",
@@ -593,6 +609,10 @@ class AppLocalizations {
         relationship: "отношения",
         submitShare: "Отправить / Share",
         patientInformation: "Информация о пациенте",
+        neighborhoodError: "Выберите район",
+        birthDateError: "Не может быть дата в будущем",
+        givenNameError: "Введите другие имена",
+        familyNameError: "Введите фамилию",
         address: AppLocalizations_Labels_General_Address(
           city: "город",
           country: "Страна",
@@ -724,6 +744,10 @@ class AppLocalizations {
         relationship: "সম্পর্ক",
         submitShare: "জমা দিন / শেয়ার",
         patientInformation: "রোগীর তথ্য",
+        neighborhoodError: "দয়া করে আশপাশ নির্বাচন",
+        birthDateError: "ভবিষ্যতে তারিখে হতে পারে না",
+        givenNameError: "অন্যান্য নামগুলি লিখুন",
+        familyNameError: "পারিবারিক নাম লিখুন",
         address: AppLocalizations_Labels_General_Address(
           city: "শহর",
           country: "দেশ",
@@ -855,6 +879,10 @@ class AppLocalizations {
         relationship: "relationship",
         submitShare: "Submit / ဝေမျှမယ်",
         patientInformation: "လူနာသတင်းအချက်အလက်",
+        neighborhoodError: "ရပ်ကွက်အတွင်းကို select ပေးပါ",
+        birthDateError: "အနာဂတ်နေ့စွဲမဖွစျနိုငျ",
+        givenNameError: "သည်အခြားအမည်များကိုရိုက်ထည့်ပါ",
+        familyNameError: "မိသားစုနာမည်ရိုက်ထည့်ပါ",
         address: AppLocalizations_Labels_General_Address(
           city: "မြို့",
           country: "ပြည်",
@@ -986,6 +1014,10 @@ class AppLocalizations {
         relationship: "关系",
         submitShare: "提交/股",
         patientInformation: "患者信息",
+        neighborhoodError: "请选择附近",
+        birthDateError: "不能是未来的日期",
+        givenNameError: "输入其他名称",
+        familyNameError: "输入姓氏",
         address: AppLocalizations_Labels_General_Address(
           city: "市",
           country: "国家",
@@ -1117,6 +1149,10 @@ class AppLocalizations {
         relationship: "關係",
         submitShare: "提交/股",
         patientInformation: "患者信息",
+        neighborhoodError: "請選擇附近",
+        birthDateError: "不能是未來的日期",
+        givenNameError: "輸入其他名稱",
+        familyNameError: "輸入姓氏",
         address: AppLocalizations_Labels_General_Address(
           city: "市",
           country: "國家",
@@ -1248,6 +1284,10 @@ class AppLocalizations {
         relationship: "ارتباط",
         submitShare: "ارسال / اشتراک",
         patientInformation: "اطلاعات بیمار",
+        neighborhoodError: "لطفا محله را انتخاب کنید",
+        birthDateError: "نمی تواند تاریخ آینده",
+        givenNameError: "نام های دیگر را وارد کنید",
+        familyNameError: "نام خانوادگی را وارد کنید",
         address: AppLocalizations_Labels_General_Address(
           city: "شهرستان",
           country: "کشور",
@@ -1379,6 +1419,10 @@ class AppLocalizations {
         relationship: "Relation",
         submitShare: "Déposer / Partager",
         patientInformation: "L'information des patients",
+        neighborhoodError: "S'il vous plaît sélectionner quartier",
+        birthDateError: "Ne peut pas être date ultérieure",
+        givenNameError: "Entrez les autres noms",
+        familyNameError: "Entrez le nom de famille",
         address: AppLocalizations_Labels_General_Address(
           city: "Ville",
           country: "Pays",
@@ -1510,6 +1554,10 @@ class AppLocalizations {
         relationship: "Beziehung",
         submitShare: "Senden / Share",
         patientInformation: "Informationen zum Patienten",
+        neighborhoodError: "Bitte wählen Sie Nachbarschaft",
+        birthDateError: "Kann nicht Datum in der Zukunft sein",
+        givenNameError: "Geben Sie andere Namen",
+        familyNameError: "Geben Sie Namen",
         address: AppLocalizations_Labels_General_Address(
           city: "Stadt",
           country: "Land",
@@ -1641,6 +1689,10 @@ class AppLocalizations {
         relationship: "Hubungan",
         submitShare: "Menyerahkan / Share",
         patientInformation: "Informasi pasien",
+        neighborhoodError: "Silakan pilih lingkungan",
+        birthDateError: "Tidak bisa masa mendatang",
+        givenNameError: "Masukkan nama lain",
+        familyNameError: "Masukkan nama keluarga",
         address: AppLocalizations_Labels_General_Address(
           city: "Kota",
           country: "Negara",
@@ -1772,6 +1824,10 @@ class AppLocalizations {
         relationship: "関係",
         submitShare: "送信/共有",
         patientInformation: "患者情報",
+        neighborhoodError: "近所を選択してください",
+        birthDateError: "将来の日付にすることはできません",
+        givenNameError: "他の名前を入力します。",
+        familyNameError: "家族の名前を入力します。",
         address: AppLocalizations_Labels_General_Address(
           city: "市",
           country: "国",
@@ -1903,6 +1959,10 @@ class AppLocalizations {
         relationship: "ទំនាក់ទំនង",
         submitShare: "ដាក់ស្នើ / ចែករំលែក",
         patientInformation: "ពអ្នកជំងឺ",
+        neighborhoodError: "សូមជ្រើសសង្កាត់",
+        birthDateError: "មិនអាចជាកាលបរិច្ឆេទនាពេលអនាគត",
+        givenNameError: "បញ្ចូលឈ្មោះផ្សេងទៀត",
+        familyNameError: "បញ្ចូលឈ្មោះគ្រួសារ",
         address: AppLocalizations_Labels_General_Address(
           city: "ទីក្រុង",
           country: "ប្រទេស",
@@ -2034,6 +2094,10 @@ class AppLocalizations {
         relationship: "관계",
         submitShare: "전송 / 공유",
         patientInformation: "환자 정보",
+        neighborhoodError: "지역을 선택하세요",
+        birthDateError: "미래의 일이 될 수 없습니다",
+        givenNameError: "다른 이름을 입력",
+        familyNameError: "가족의 이름을 입력합니다",
         address: AppLocalizations_Labels_General_Address(
           city: "시티",
           country: "국가",
@@ -2165,6 +2229,10 @@ class AppLocalizations {
         relationship: "ຄວາມສໍາພັນ",
         submitShare: "ຍື່ນສະເຫນີ / Share",
         patientInformation: "ຂໍ້ມູນຜູ້ປ່ວຍ",
+        neighborhoodError: "ກະລຸນາເລືອກບ້ານ",
+        birthDateError: "ບໍ່ສາມາດທີ່ໃນອະນາຄົດ",
+        givenNameError: "ກະລຸນາໃສ່ຊື່ອື່ນ",
+        familyNameError: "ກະລຸນາໃສ່ນາມສະກຸນ",
         address: AppLocalizations_Labels_General_Address(
           city: "ເມືອງ",
           country: "ປະເທດ",
@@ -2296,6 +2364,10 @@ class AppLocalizations {
         relationship: "संबंध",
         submitShare: "सबमिट करा / शेअर",
         patientInformation: "रुग्णांच्या माहिती",
+        neighborhoodError: "कृपया शेजारच्या निवडा",
+        birthDateError: "भविष्यातील तारीख असणे करू शकत नाही",
+        givenNameError: "इतर नावे प्रविष्ट करा",
+        familyNameError: "कुटुंब नाव प्रविष्ट करा",
         address: AppLocalizations_Labels_General_Address(
           city: "सिटी",
           country: "देश",
@@ -2427,6 +2499,10 @@ class AppLocalizations {
         relationship: "सम्बन्ध",
         submitShare: "पेश / शेयर",
         patientInformation: "रोगी सूचना",
+        neighborhoodError: "कृपया छिमेकी चयन",
+        birthDateError: "भविष्य मिति हुन सक्दैन",
+        givenNameError: "अन्य नाम प्रविष्ट गर्नुहोस्",
+        familyNameError: "परिवारको नाम प्रविष्ट गर्नुहोस्",
         address: AppLocalizations_Labels_General_Address(
           city: "शहर",
           country: "देश",
@@ -2558,6 +2634,10 @@ class AppLocalizations {
         relationship: "Relação",
         submitShare: "Enviar / Share",
         patientInformation: "Informação do paciente",
+        neighborhoodError: "Por favor seleccione bairro",
+        birthDateError: "não pode ter data futura",
+        givenNameError: "Introduzir outros nomes",
+        familyNameError: "Insira o nome de família",
         address: AppLocalizations_Labels_General_Address(
           city: "Cidade",
           country: "País",
@@ -2689,6 +2769,10 @@ class AppLocalizations {
         relationship: "ਰਿਸ਼ਤਾ",
         submitShare: "ਪੇਸ਼ ਕਰੋ / share",
         patientInformation: "ਮਰੀਜ਼ ਜਾਣਕਾਰੀ",
+        neighborhoodError: "ਕਿਰਪਾ ਕਰਕੇ ਇਲਾਕੇ ਦੀ ਚੋਣ ਕਰੋ",
+        birthDateError: "ਭਵਿੱਖ ਦੀ ਮਿਤੀ ਨਾ ਹੋ ਸਕਦਾ ਹੈ",
+        givenNameError: "ਹੋਰ ਨਾਮ ਦਰਜ ਕਰੋ",
+        familyNameError: "ਪਰਿਵਾਰ ਦਾ ਨਾਮ ਦਰਜ ਕਰੋ",
         address: AppLocalizations_Labels_General_Address(
           city: "ਸਿਟੀ",
           country: "ਦੇਸ਼",
@@ -2820,6 +2904,10 @@ class AppLocalizations {
         relationship: "xiriirka",
         submitShare: "Gudbi / Share",
         patientInformation: "Macluumaadka bukaanka",
+        neighborhoodError: "Fadlan dooro xaafadda",
+        birthDateError: "ma noqon karo taariikhda mustaqbalka",
+        givenNameError: "Ku qor magacyada kale",
+        familyNameError: "Ku qor magaca qoyska",
         address: AppLocalizations_Labels_General_Address(
           city: "City",
           country: "Country",
@@ -2951,6 +3039,10 @@ class AppLocalizations {
         relationship: "uhusiano",
         submitShare: "Wasilisha / Shiriki",
         patientInformation: "Taarifa mgonjwa",
+        neighborhoodError: "Tafadhali chagua kitongoji",
+        birthDateError: "Haiwezi kuwa siku za tarehe",
+        givenNameError: "Andika majina mengine",
+        familyNameError: "Weka jina la familia",
         address: AppLocalizations_Labels_General_Address(
           city: "City",
           country: "Nchi",
@@ -3082,6 +3174,10 @@ class AppLocalizations {
         relationship: "Relasyon",
         submitShare: "Isumite / Share",
         patientInformation: "pasyente Impormasyon",
+        neighborhoodError: "Mangyaring piliin ang kapitbahayan",
+        birthDateError: "Hindi maaaring maging hinaharap na petsa",
+        givenNameError: "Ipasok ang iba pang mga pangalan",
+        familyNameError: "Ipasok ang pangalan ng pamilya",
         address: AppLocalizations_Labels_General_Address(
           city: "lungsod",
           country: "bansa",
@@ -3213,6 +3309,10 @@ class AppLocalizations {
         relationship: "ความสัมพันธ์",
         submitShare: "ส่ง / หุ้น",
         patientInformation: "ข้อมูลสำหรับผู้ป่วย",
+        neighborhoodError: "กรุณาเลือกเขต",
+        birthDateError: "ไม่สามารถเป็นวันที่ในอนาคต",
+        givenNameError: "ใส่ชื่ออื่น ๆ",
+        familyNameError: "ใส่ชื่อครอบครัว",
         address: AppLocalizations_Labels_General_Address(
           city: "เมือง",
           country: "ประเทศ",
@@ -3344,6 +3444,10 @@ class AppLocalizations {
         relationship: "munosabatlar",
         submitShare: "Submit / Share",
         patientInformation: "Bemor Axborot",
+        neighborhoodError: "mahalla tanlang Iltimos,",
+        birthDateError: "kelajakda sana bo'lishi mumkin emas",
+        givenNameError: "Boshqa nomlari kiriting",
+        familyNameError: "oila nomini kiriting",
         address: AppLocalizations_Labels_General_Address(
           city: "shahar",
           country: "mamlakat",
@@ -3475,6 +3579,10 @@ class AppLocalizations {
         relationship: "Mối quan hệ",
         submitShare: "Gửi / Chia sẻ",
         patientInformation: "Thông tin bệnh nhân",
+        neighborhoodError: "Vui lòng chọn khu phố",
+        birthDateError: "Không thể ngày trong tương lai",
+        givenNameError: "Nhập tên khác",
+        familyNameError: "Nhập tên gia đình",
         address: AppLocalizations_Labels_General_Address(
           city: "thành phố",
           country: "Quốc gia",
@@ -4011,6 +4119,10 @@ class AppLocalizations_Labels_General {
       this.relationship,
       this.submitShare,
       this.patientInformation,
+      this.neighborhoodError,
+      this.birthDateError,
+      this.givenNameError,
+      this.familyNameError,
       this.address,
       this.name,
       this.relation,
@@ -4040,6 +4152,14 @@ class AppLocalizations_Labels_General {
   final String submitShare;
 
   final String patientInformation;
+
+  final String neighborhoodError;
+
+  final String birthDateError;
+
+  final String givenNameError;
+
+  final String familyNameError;
 
   final AppLocalizations_Labels_General_Address address;
 
@@ -4077,6 +4197,14 @@ class AppLocalizations_Labels_General {
         return submitShare;
       case 'patientInformation':
         return patientInformation;
+      case 'neighborhoodError':
+        return neighborhoodError;
+      case 'birthDateError':
+        return birthDateError;
+      case 'givenNameError':
+        return givenNameError;
+      case 'familyNameError':
+        return familyNameError;
       default:
         return '';
     }

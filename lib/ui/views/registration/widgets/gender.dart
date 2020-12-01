@@ -9,12 +9,17 @@ class GenderSelectionWidget extends StatelessWidget {
     @required this.setGender,
   });
 
-  final String curGender;
+  final bool curGender;
   final Function setGender;
 
   @override
   Widget build(BuildContext context) {
     final labels = AppLocalizations.of(context);
+
+    /// turns the boolean into the string for the radio buttons
+    String _whichGender(bool curGender) => curGender
+        ? labels.general.sexAtBirth.female
+        : labels.general.sexAtBirth.male;
 
     return Container(
       decoration: BoxDecoration(
@@ -35,17 +40,22 @@ class GenderSelectionWidget extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              /// displays translated word for female, checks if current value
+              /// is true or false, true is female, false is male
               Radio(
                 value: labels.general.sexAtBirth.female,
-                groupValue: curGender,
-                onChanged: (_) => setGender('female'),
+                groupValue: _whichGender(curGender),
+                onChanged: (_) => setGender(true),
               ),
               Text(labels.general.sexAtBirth.female,
                   style: Get.theme.textTheme.headline6),
+
+              /// displays translated word for male, checks if current value
+              /// is true or false, true is female, false is male
               Radio(
                 value: labels.general.sexAtBirth.male,
-                groupValue: curGender,
-                onChanged: (_) => setGender('male'),
+                groupValue: _whichGender(curGender),
+                onChanged: (_) => setGender(false),
               ),
               Text(labels.general.sexAtBirth.male,
                   style: Get.theme.textTheme.headline6),

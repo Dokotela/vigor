@@ -23,6 +23,8 @@ class NamesInputWidget extends StatelessWidget {
     return Container(
       child: Column(
         children: <Widget>[
+          /// error is blank at first, only is shown after the registration
+          /// button is pushed, names must be at least 2 characters
           TextFormField(
             controller: familyName,
             decoration: InputDecoration(
@@ -30,6 +32,9 @@ class NamesInputWidget extends StatelessWidget {
               errorText: familyNameError.tr,
             ),
           ),
+
+          /// error is blank at first, only is shown after the registration
+          /// button is pushed, names must be at least 2 characters
           TextFormField(
             controller: givenName,
             decoration: InputDecoration(

@@ -9,6 +9,7 @@ class PatientSearchController extends GetxController {
   /// PROPERTIES
   final _fullPatientList = <Resource>[].obs;
   final _activePatientList = <Resource>[].obs;
+  final labels = Get.arguments;
 
   ///INIT
   @override
@@ -65,6 +66,6 @@ class PatientSearchController extends GetxController {
               ? ''
               : (b as Patient).address[0]?.district ?? ''));
 
-  void selectPatient(int index) =>
-      Get.toNamed(AppRoutes.PATIENT_HOME, arguments: _activePatientList[index]);
+  void selectPatient(int index) => Get.toNamed(AppRoutes.PATIENT_HOME,
+      arguments: [labels, _activePatientList[index]]);
 }
