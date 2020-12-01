@@ -5,71 +5,52 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import '../_internal/utils/theme_mode_util.dart';
-import '../ui/themes.dart';
+import '../ui/settings/themes.dart';
 
 class ThemeController extends GetxController {
   static ThemeController get to => Get.find();
 
-  final themeString = ''.obs;
+  final _themeMode = ThemeMode.system.obs;
   final store = GetStorage();
-  ThemeMode _themeMode;
+  final _key = 'theme';
 
-  ThemeMode get themeMode => _themeMode;
-  String get currentTheme => themeString.value;
+  ThemeMode get themeMode => _themeMode.value;
 
   @override
-  Future<void> onReady() async {
-    await getThemeModeFromStore();
+  void onReady() {
+    getThemeModeFromStore();
     super.onReady();
   }
 
-  Future<void> setThemeMode(ThemeMode obj) async {
-    themeString.value = ThemeModeUtil().convertThemeModeToString(obj);
-    _themeMode = obj;
-    Get.changeThemeMode(_themeMode);
-    await store.write('theme', themeString);
+  void getThemeModeFromStore() =>
+      _themeMode.value = _isDarkMode() ? ThemeMode.dark : ThemeMode.light;
+
+  bool _isDarkMode() => store.read(_key) ?? false;
+
+  void setThemeMode(ThemeMode theme) {
+    Get.changeThemeMode(theme);
+    store.write(_key, theme != ThemeMode.dark);
     update();
-  }
-
-  ThemeMode getThemeModeFromString(String themeString) {
-    ThemeMode _setThemeMode = ThemeMode.system;
-    // print(themeString);
-    if (themeString == 'light') {
-      _setThemeMode = ThemeMode.light;
-    }
-    if (themeString == 'dark') {
-      _setThemeMode = ThemeMode.dark;
-    }
-    return _setThemeMode;
-  }
-
-  Future<void> getThemeModeFromStore() async {
-    final String _themeString = await store.read('theme') ?? 'system';
-    setThemeMode(getThemeModeFromString(_themeString));
   }
 
   // checks whether darkmode is set via system or previously by user
   bool get isDarkModeOn {
-    if (currentTheme == 'system') {
+    if (themeMode == ThemeMode.system) {
       if (WidgetsBinding.instance.window.platformBrightness ==
           Brightness.dark) {
         return true;
       }
-    }
-    if (currentTheme == 'dark') {
+    } else if (themeMode == ThemeMode.dark) {
       return true;
     }
     return false;
   }
 
   // App Themes (Light vs Dark)
-  final AppTheme _lightTheme = AppTheme.fromType(ThemeType.Prapare);
-  AppTheme get lightTheme => _lightTheme;
-  final AppTheme _darkTheme = AppTheme.fromType(ThemeType.Prapare_Dark);
-  AppTheme get darkTheme => _darkTheme;
+  AppTheme get lightTheme => AppTheme.fromType(ThemeType.Vigor);
+  AppTheme get darkTheme => AppTheme.fromType(ThemeType.Vigor_Dark);
 
   AppTheme getAppThemeFromBrightness(Brightness b) {
-    return (b == Brightness.dark) ? _darkTheme : _lightTheme;
+    return (b == Brightness.dark) ? darkTheme : lightTheme;
   }
 }

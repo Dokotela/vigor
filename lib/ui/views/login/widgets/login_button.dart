@@ -17,7 +17,7 @@ class LoginButtonWidget extends StatelessWidget {
     return Material(
       elevation: 5.0,
       borderRadius: BorderRadius.circular(64.0),
-      color: Colors.blue[600],
+      color: Colors.blue,
       child: MaterialButton(
         minWidth: Get.width,
         padding: padding,
