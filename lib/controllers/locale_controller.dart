@@ -6,64 +6,57 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
-import '../_internal/constants/menu_options.dart';
+import '../_internal/constants/languages.dart';
 import '../localization.dart';
 import '../models/data/menu_option.dart';
 
 class LocaleController extends GetxController {
   static LocaleController get to => Get.find();
 
+  /// PROPERTIES
   final language = ''.obs;
   final store = GetStorage();
   final List<MenuOption> languageOptions = availableLanguages;
 
-  String get currentLanguage => language.value;
-
+  /// INIT
   @override
-  Future onReady() async {
+  Future onInit() async {
     setInitialLocalLanguage();
-    super.onReady();
+    super.onInit();
   }
 
-  // Retrieves and Sets language based on device settings
-  void setInitialLocalLanguage() {
-    if ((currentLanguageStore.value == '') ||
-        (currentLanguageStore.value == null)) {
-      String _deviceLanguage = ui.window.locale.toString();
-      _deviceLanguage =
-          _deviceLanguage.substring(0, 2); //only get 1st 2 characters
-      // print(ui.window.locale.toString());
-      updateLanguage(_deviceLanguage);
-    }
-  }
-
-// Gets current language stored
-  RxString get currentLanguageStore {
-    language.value = store.read('language');
-    return language;
-  }
+  /// GETTER Functions
+  String get currentLanguage => language.value;
+  // Gets current language stored
+  String currentLanguageStore() => store.read('language') ?? '';
 
   // gets the language locale app is set to
   Locale get getLocale {
-    if ((currentLanguageStore.value == '') ||
-        (currentLanguageStore.value == null)) {
+    if (currentLanguageStore().isEmpty) {
       language.value = defaultLanguage;
       updateLanguage(defaultLanguage);
     }
     // gets the default language key (from the translation language system)
-    Locale _updatedLocal = AppLocalizations.languages.keys.first;
     // looks for matching language key stored and sets to it
-    AppLocalizations.languages.keys.forEach((locale) {
-      if (locale.languageCode == currentLanguage) {
-        _updatedLocal = locale;
-      }
-    });
-    // print('getLocale: ' + _updatedLocal.toString());
-    return _updatedLocal;
+
+    return AppLocalizations.languages.keys.firstWhere(
+        (locale) => locale.languageCode == currentLanguage,
+        orElse: () => AppLocalizations.languages.keys.first);
   }
 
-// updates the language stored
-  Future<void> updateLanguage(String value) async {
+  /// SETTER Functions
+  // Retrieves and Sets language based on device settings
+  void setInitialLocalLanguage() {
+    if (currentLanguageStore().isEmpty) {
+      String _deviceLanguage = ui.window.locale.toString();
+      // print(ui.window.locale.toString());
+      //only get 1st 2 characters
+      updateLanguage(_deviceLanguage.substring(0, 2));
+    }
+  }
+
+  // updates the language stored
+  Future updateLanguage(String value) async {
     language.value = value;
     await store.write('language', value);
     Get.updateLocale(getLocale);

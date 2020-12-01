@@ -18,7 +18,7 @@ class AppLocalizations {
         chooseTheme: "Choose Theme",
         settings: "App Settings",
         system: "System",
-        title: "Prapare",
+        title: "Vigor",
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "Cancel",
@@ -153,7 +153,7 @@ class AppLocalizations {
         chooseTheme: "Escoge un tema",
         settings: "Ajustes de Aplicacion",
         system: "Sistema",
-        title: "Prapare",
+        title: "Vigor",
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "Cancelar",
@@ -288,7 +288,7 @@ class AppLocalizations {
         chooseTheme: "اختيار موضوع",
         settings: "إعدادات التطبيقات",
         system: "النظام",
-        title: "Prapare",
+        title: "Vigor",
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "إلغاء",
@@ -423,7 +423,7 @@ class AppLocalizations {
         chooseTheme: "थीम चुनें",
         settings: "एप्लिकेशन सेटिंग",
         system: "प्रणाली",
-        title: "Prapare",
+        title: "Vigor",
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "रद्द करना",
@@ -558,7 +558,7 @@ class AppLocalizations {
         chooseTheme: "Выбрать тему",
         settings: "Настройки приложения",
         system: "система",
-        title: "Prapare",
+        title: "Vigor",
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "Отмена",
@@ -610,7 +610,7 @@ class AppLocalizations {
         submitShare: "Отправить / Share",
         patientInformation: "Информация о пациенте",
         neighborhoodError: "Выберите район",
-        birthDateError: "Не может быть дата в будущем",
+        birthDateError: "Не может быть дата будущего",
         givenNameError: "Введите другие имена",
         familyNameError: "Введите фамилию",
         address: AppLocalizations_Labels_General_Address(
@@ -693,7 +693,7 @@ class AppLocalizations {
         chooseTheme: "থিম চয়ন করুন",
         settings: "অ্যাপ সেটিংস",
         system: "পদ্ধতি",
-        title: "Prapare",
+        title: "Vigor",
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "বাতিল",
@@ -828,7 +828,7 @@ class AppLocalizations {
         chooseTheme: "အဓိကအကြောင်းအရာ Choose",
         settings: "App ကိုချိန်ညှိမှုများ",
         system: "စံနစ်",
-        title: "Prapare",
+        title: "Vigor",
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "Cancel",
@@ -963,7 +963,7 @@ class AppLocalizations {
         chooseTheme: "选择主题",
         settings: "应用程序设置",
         system: "系统",
-        title: "Prapare",
+        title: "Vigor",
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "取消",
@@ -1098,7 +1098,7 @@ class AppLocalizations {
         chooseTheme: "選擇主題",
         settings: "應用程序設置",
         system: "系統",
-        title: "Prapare",
+        title: "Vigor",
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "取消",
@@ -1233,7 +1233,7 @@ class AppLocalizations {
         chooseTheme: "انتخاب موضوع",
         settings: "تنظیمات برنامه",
         system: "سیستم",
-        title: "Prapare",
+        title: "Vigor",
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "لغو کردن",
@@ -1368,7 +1368,7 @@ class AppLocalizations {
         chooseTheme: "choisir un thème",
         settings: "paramètres d'application",
         system: "Système",
-        title: "Prapare",
+        title: "Vigor",
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "Annuler",
@@ -1503,7 +1503,7 @@ class AppLocalizations {
         chooseTheme: "Wähle das Thema",
         settings: "App Einstellungen",
         system: "System",
-        title: "Prapare",
+        title: "Vigor",
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "Stornieren",
@@ -1638,7 +1638,7 @@ class AppLocalizations {
         chooseTheme: "Pilih Tema",
         settings: "Pengaturan aplikasi",
         system: "Sistem",
-        title: "Prapare",
+        title: "Vigor",
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "Membatalkan",
@@ -1773,7 +1773,7 @@ class AppLocalizations {
         chooseTheme: "テーマを選択してください",
         settings: "アプリの設定",
         system: "システム",
-        title: "Prapare",
+        title: "Vigor",
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "キャンセル",
@@ -1908,7 +1908,7 @@ class AppLocalizations {
         chooseTheme: "ជ្រើសស្បែក",
         settings: "ការកំណត់កម្មវិធី",
         system: "ប្រព័ន្ធ",
-        title: "Prapare",
+        title: "Vigor",
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "បោះបង់",
@@ -2043,7 +2043,7 @@ class AppLocalizations {
         chooseTheme: "테마를 선택",
         settings: "앱 설정",
         system: "체계",
-        title: "Prapare",
+        title: "Vigor",
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "취소",
@@ -2178,7 +2178,7 @@ class AppLocalizations {
         chooseTheme: "ເລືອກຫົວຂໍ້",
         settings: "Settings app",
         system: "ລະບົບ",
-        title: "Prapare",
+        title: "Vigor",
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "ຍົກເລີກການ",
@@ -2313,7 +2313,7 @@ class AppLocalizations {
         chooseTheme: "थीम निवडा",
         settings: "App सेटिंग्ज",
         system: "प्रणाली",
-        title: "Prapare",
+        title: "Vigor",
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "रद्द करा",
@@ -2448,7 +2448,7 @@ class AppLocalizations {
         chooseTheme: "विषयवस्तु रोज्न",
         settings: "अनुप्रयोग सेटिङ",
         system: "सिस्टम",
-        title: "Prapare",
+        title: "Vigor",
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "रद्द",
@@ -2583,7 +2583,7 @@ class AppLocalizations {
         chooseTheme: "Escolha Tema",
         settings: "Configurações do aplicativo",
         system: "Sistema",
-        title: "Prapare",
+        title: "Vigor",
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "Cancelar",
@@ -2718,7 +2718,7 @@ class AppLocalizations {
         chooseTheme: "ਥੀਮ ਚੁਣੋ",
         settings: "ਐਪ ਸੈਟਿੰਗ",
         system: "ਸਿਸਟਮ",
-        title: "Prapare",
+        title: "Vigor",
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "ਰੱਦ ਕਰੋ",
@@ -2853,7 +2853,7 @@ class AppLocalizations {
         chooseTheme: "Dooro Theme",
         settings: "app Settings",
         system: "System",
-        title: "Prapare",
+        title: "Vigor",
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "Jooji",
@@ -2988,7 +2988,7 @@ class AppLocalizations {
         chooseTheme: "Chagua Theme",
         settings: "programu ya Mipangilio",
         system: "Mfumo",
-        title: "Prapare",
+        title: "Vigor",
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "kufuta",
@@ -3123,7 +3123,7 @@ class AppLocalizations {
         chooseTheme: "Pumili ng Theme",
         settings: "Mga Setting ng app",
         system: "sistema",
-        title: "Prapare",
+        title: "Vigor",
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "kanselahin",
@@ -3258,7 +3258,7 @@ class AppLocalizations {
         chooseTheme: "กรุณาเลือกธีม",
         settings: "การตั้งค่า App",
         system: "ระบบ",
-        title: "Prapare",
+        title: "Vigor",
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "ยกเลิก",
@@ -3393,7 +3393,7 @@ class AppLocalizations {
         chooseTheme: "Mavzuni tanlash",
         settings: "App Sozlamalar",
         system: "tizim",
-        title: "Prapare",
+        title: "Vigor",
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "Bekor qilish",
@@ -3528,7 +3528,7 @@ class AppLocalizations {
         chooseTheme: "Chọn Theme",
         settings: "App Cài đặt",
         system: "hệ thống",
-        title: "Prapare",
+        title: "Vigor",
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "hủy bỏ",

@@ -2,9 +2,7 @@ import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vigor/controllers/locale_controller.dart';
 import 'package:vigor/ui/settings/settings_dialog.dart';
-import 'package:vigor/ui/styled_components/action_button.dart';
 import 'package:vigor/ui/styled_components/thin_action_button.dart';
 
 import '../../../localization.dart';

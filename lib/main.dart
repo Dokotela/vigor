@@ -22,16 +22,11 @@ Future<void> _initServices() async {
   await GetStorage.init();
   Get.put<LocaleController>(LocaleController());
   Get.put<ThemeController>(ThemeController());
-  // await IFhirDb().deleteAll();
-  // var server = IFhirServer();
-  // await server.syncWithServer();
 }
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    ThemeController.to.getThemeModeFromStore();
-
     return GetBuilder<LocaleController>(
       builder: (localeService) {
         return StyledLoading(

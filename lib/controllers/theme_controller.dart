@@ -10,47 +10,52 @@ import '../ui/settings/themes.dart';
 class ThemeController extends GetxController {
   static ThemeController get to => Get.find();
 
+  /// PROPERTIES
   final _themeMode = ThemeMode.system.obs;
   final store = GetStorage();
   final _key = 'theme';
 
-  ThemeMode get themeMode => _themeMode.value;
-
+  /// INIT
+  /// ONREADY
   @override
-  void onReady() {
-    getThemeModeFromStore();
-    super.onReady();
+  Future onInit() async {
+    await getThemeModeFromStore();
+    super.onInit();
   }
 
-  void getThemeModeFromStore() =>
-      _themeMode.value = _isDarkMode() ? ThemeMode.dark : ThemeMode.light;
+  /// GETTER Functions
+  Future getThemeModeFromStore() async {
+    _themeMode.value = _isDarkMode() ? ThemeMode.dark : ThemeMode.light;
+    await setThemeMode(_themeMode.value);
+  }
 
   bool _isDarkMode() => store.read(_key) ?? false;
+  // App Themes (Light vs Dark)
+  ThemeMode get themeMode => _themeMode.value;
+  AppTheme get lightTheme => AppTheme.fromType(ThemeType.Vigor);
+  AppTheme get darkTheme => AppTheme.fromType(ThemeType.Vigor_Dark);
+  AppTheme getAppThemeFromBrightness(Brightness b) {
+    return (b == Brightness.dark) ? darkTheme : lightTheme;
+  }
 
-  void setThemeMode(ThemeMode theme) {
-    Get.changeThemeMode(theme);
-    store.write(_key, theme != ThemeMode.dark);
+  /// SETTER Functions
+  Future<void> setThemeMode(ThemeMode theme) async {
+    _themeMode.value = theme;
+    Get.changeThemeMode(_themeMode.value);
+    await store.write(_key, theme != ThemeMode.dark);
     update();
   }
 
   // checks whether darkmode is set via system or previously by user
   bool get isDarkModeOn {
-    if (themeMode == ThemeMode.system) {
+    if (_themeMode.value == ThemeMode.system) {
       if (WidgetsBinding.instance.window.platformBrightness ==
           Brightness.dark) {
         return true;
       }
-    } else if (themeMode == ThemeMode.dark) {
+    } else if (_themeMode.value == ThemeMode.dark) {
       return true;
     }
     return false;
-  }
-
-  // App Themes (Light vs Dark)
-  AppTheme get lightTheme => AppTheme.fromType(ThemeType.Vigor);
-  AppTheme get darkTheme => AppTheme.fromType(ThemeType.Vigor_Dark);
-
-  AppTheme getAppThemeFromBrightness(Brightness b) {
-    return (b == Brightness.dark) ? darkTheme : lightTheme;
   }
 }

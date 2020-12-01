@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vigor/_internal/utils/theme_mode_util.dart';
+
 import 'package:vigor/models/data/menu_option.dart';
 
 import '../../localization.dart';
@@ -9,8 +9,7 @@ import 'settings_controller.dart';
 /// this was taken directly from John's repo: https://github.com/FireJuun/prapare
 /// specifically, https://github.com/FireJuun/prapare/blob/main/lib/ui/views/settings/settings_dialog.dart
 
-Future<void> settingsDialog() async =>
-    await Get.dialog(_SettingsDialogContent());
+void settingsDialog() => Get.dialog(_SettingsDialogContent());
 
 class _SettingsDialogContent extends StatelessWidget {
   @override
@@ -20,23 +19,23 @@ class _SettingsDialogContent extends StatelessWidget {
     //todo: extract into controller
     final List<MenuOption> themeOptions = [
       MenuOption(
-        key: 'light',
+        key: ThemeMode.light,
         englishValue: 'light',
         value: labels.settings.light,
         icon: Icons.brightness_low,
       ),
       MenuOption(
-        key: 'dark',
+        key: ThemeMode.dark,
         englishValue: 'dark',
         value: labels.settings.dark,
         icon: Icons.brightness_3,
       ),
-      MenuOption(
-        key: 'system',
-        englishValue: 'system',
-        value: labels.settings.system,
-        icon: Icons.brightness_4,
-      ),
+      // MenuOption(
+      //   key: ThemeMode.system,
+      //   englishValue: 'system',
+      //   value: labels.settings.system,
+      //   icon: Icons.brightness_4,
+      // ),
     ];
 
     final TextTheme textTheme = context.textTheme;
@@ -61,11 +60,11 @@ class _SettingsDialogContent extends StatelessWidget {
                     ...themeOptions.map(
                       (e) => RadioListTile(
                         title: Text(e.value, style: textTheme.bodyText1),
-                        subtitle: (controller.rxLanguage == 'en')
+                        subtitle: (controller.language == 'en')
                             ? null
                             : Text(e.englishValue, style: textTheme.bodyText2),
-                        value: ThemeModeUtil().convertStringToThemeMode(e.key),
-                        groupValue: controller.rxThemeMode,
+                        value: e.key,
+                        groupValue: controller.themeMode,
                         onChanged: (newValue) =>
                             controller.setThemeMode(newValue),
                       ),
@@ -82,9 +81,8 @@ class _SettingsDialogContent extends StatelessWidget {
                             subtitle: Text(e.englishValue,
                                 style: textTheme.bodyText2),
                             value: e.key,
-                            groupValue: controller.rxLanguage,
-                            onChanged: (value) async =>
-                                await controller.setLocale(value),
+                            groupValue: controller.language,
+                            onChanged: (value) => controller.setLocale(value),
                           ),
                         ),
                   ],
