@@ -10,7 +10,6 @@ import 'patient_imm/patient_imm_page.dart';
 class PatientHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final labels = AppLocalizations.of(context);
     final PatientHomeController controller = Get.put(PatientHomeController());
 
     return Scaffold(

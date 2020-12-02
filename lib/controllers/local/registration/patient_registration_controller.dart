@@ -31,7 +31,7 @@ class PatientRegistrationController extends GetxController {
   /// INIT
   @override
   void onInit() {
-    if (Get.arguments == null) {
+    if (Get.arguments != null) {
       _patient.value = Get.arguments;
       _gender.value = _patient.value.patient.gender == PatientGender.female;
       _birthDate.value =

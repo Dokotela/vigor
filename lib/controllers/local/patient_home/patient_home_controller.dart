@@ -7,9 +7,8 @@ import 'shared/relative_age.dart';
 
 class PatientHomeController extends GetxController {
   /// PROPERTIES
-  final _patient = PatientModel(patient: Get.arguments[1]).obs;
+  final _patient = PatientModel(patient: Get.arguments).obs;
   final _fullVaxDates = <String, Set<FhirDateTime>>{}.obs;
-  final labels = Get.arguments[0];
 
   /// INIT
 
@@ -30,8 +29,8 @@ class PatientHomeController extends GetxController {
   }
 
   /// EVENTS
-  void editPatient() => Get.toNamed(AppRoutes.PATIENT_REGISTRATION,
-      arguments: [labels, _patient.value]);
+  void editPatient() =>
+      Get.toNamed(AppRoutes.PATIENT_REGISTRATION, arguments: _patient.value);
 
   void recordNew(DateTime newDate, String dz) =>
       _fullVaxDates[dz].add(FhirDateTime(newDate));

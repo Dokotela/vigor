@@ -1,11 +1,12 @@
 import 'package:fhir/r4.dart';
+import 'package:vigor/_internal/constants/relationship_types.dart';
 
 PatientContact formatPatientContact(
         String family, String given, String barrio, String relationship) =>
     PatientContact(
       name: HumanName(family: family, given: [given]),
       address: Address(district: barrio),
-      relationship: _mapRelationship(relationship),
+      relationship: _mapRelationship(relationshipLabelToString(relationship)),
     );
 
 List<CodeableConcept> _mapRelationship(String relationship) {

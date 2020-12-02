@@ -36,13 +36,13 @@ class RelationWidget extends StatelessWidget {
                   );
                 }).toList(),
                 hint: Text(
-                  displayRelation.tr,
+                  displayRelation,
                   style: Get.textTheme.headline6,
                 ),
                 onChanged: (newVal) => setRelation(newVal)),
           ),
           Text(
-            dispRelationError.tr,
+            dispRelationError,
             style: const TextStyle(fontSize: 12.0, color: Colors.red),
           ),
         ],

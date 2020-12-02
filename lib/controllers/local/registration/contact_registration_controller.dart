@@ -112,11 +112,12 @@ class ContactRegistrationController extends GetxController {
     for (var relationship
         in _patient.value.patient.contact[number].relationship) {
       for (var relation in relationship.coding) {
-        if (relationshipTypes().contains(relation.display.toLowerCase())) {
-          return relation.display.toLowerCase();
+        if (relationshipTypes().contains(
+            relationshipStringToLabel(relation.display.toLowerCase()))) {
+          return relation.display;
         } else if (relationshipTypes()
             .contains(relation.code.toString().toLowerCase())) {
-          return relation.code.toString().toLowerCase();
+          return relation.code.toString();
         }
       }
     }
@@ -130,6 +131,8 @@ class ContactRegistrationController extends GetxController {
   void relation2Event(String relation2) => _relation2.value = relation2;
 
   Future<void> registerEvent() async {
+    print(relation1);
+    print(isValidRegistrationRelation(relation1));
     if (isValidRegistrationName(familyName1.text) &&
         isValidRegistrationName(givenName1.text) &&
         isValidRegistrationBarrio(barrio1) &&

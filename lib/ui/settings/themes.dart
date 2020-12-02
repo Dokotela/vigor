@@ -32,7 +32,7 @@ class AppTheme {
   /// Default constructor
   AppTheme({
     this.isDark = false,
-    this.bg1 = _AppColors.greySurface,
+    this.bg1 = Colors.white,
     this.bg2 = _AppColors.bannerBlue,
     this.surface = Colors.white,
     this.primary = _AppColors.bannerBlue,
@@ -46,7 +46,7 @@ class AppTheme {
     this.heading5 = _AppColors.grey,
     this.error = _AppColors.redDarkMode,
     this.focus = _AppColors.grey,
-    this.txt = _AppColors.textLight,
+    this.txt = Colors.black,
     this.accentTxt = _AppColors.textDark,
   });
 

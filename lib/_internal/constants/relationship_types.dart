@@ -20,9 +20,9 @@ List<String> relationshipTypes() {
   ];
 }
 
-Map<String, String> relationshipLabelToString() {
+String relationshipLabelToString(String label) {
   final labels = AppLocalizations.of(Get.context);
-  return {
+  final labelToString = {
     labels.general.relation.mother: 'mother',
     labels.general.relation.grandmother: 'grandmother',
     labels.general.relation.aunt: 'aunt',
@@ -37,11 +37,12 @@ Map<String, String> relationshipLabelToString() {
     labels.general.relation.nephew: 'nephew',
     labels.general.relation.other: 'other',
   };
+  return labelToString[label];
 }
 
-Map<String, String> relationshipStringToLabel() {
+String relationshipStringToLabel(String string) {
   final labels = AppLocalizations.of(Get.context);
-  return {
+  final stringToLabel = {
     'mother': labels.general.relation.mother,
     'grandmother': labels.general.relation.grandmother,
     'aunt': labels.general.relation.aunt,
@@ -56,4 +57,5 @@ Map<String, String> relationshipStringToLabel() {
     'nephew': labels.general.relation.nephew,
     'other': labels.general.relation.other,
   };
+  return stringToLabel[string];
 }

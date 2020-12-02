@@ -24,7 +24,6 @@ class LocaleController extends GetxController {
   /// INIT
   @override
   Future onInit() async {
-    await store.write('language', '');
     setInitialLocalLanguage();
     super.onInit();
   }
