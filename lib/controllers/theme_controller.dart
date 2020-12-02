@@ -7,6 +7,9 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import '../ui/settings/themes.dart';
 
+/// As usual, mostly stolen from John.
+/// https://github.com/FireJuun/prapare/blob/main/lib/controllers/theme_controller.dart
+
 class ThemeController extends GetxController {
   static ThemeController get to => Get.find();
 
@@ -34,9 +37,13 @@ class ThemeController extends GetxController {
   ThemeMode get themeMode => _themeMode.value;
   AppTheme get lightTheme => AppTheme.fromType(ThemeType.Vigor);
   AppTheme get darkTheme => AppTheme.fromType(ThemeType.Vigor_Dark);
-  AppTheme getAppThemeFromBrightness(Brightness b) {
-    return (b == Brightness.dark) ? darkTheme : lightTheme;
-  }
+  AppTheme getAppTheme(Brightness b) => _themeMode.value == ThemeMode.light
+      ? lightTheme
+      : _themeMode.value == ThemeMode.dark
+          ? darkTheme
+          : b == Brightness.light
+              ? lightTheme
+              : darkTheme;
 
   /// SETTER Functions
   Future<void> setThemeMode(ThemeMode theme) async {

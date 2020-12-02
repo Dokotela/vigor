@@ -10,6 +10,9 @@ import '../_internal/constants/languages.dart';
 import '../localization.dart';
 import '../models/data/menu_option.dart';
 
+/// As usual, mostly stolen from John.
+/// https://github.com/FireJuun/prapare/blob/main/lib/controllers/locale_controller.dart
+
 class LocaleController extends GetxController {
   static LocaleController get to => Get.find();
 
