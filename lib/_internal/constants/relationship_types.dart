@@ -16,10 +16,11 @@ List<String> relationshipTypes() {
     labels.general.relation.brother,
     labels.general.relation.son,
     labels.general.relation.nephew,
+    labels.general.relation.other,
   ];
 }
 
-Map<String, String> relationshipMap() {
+Map<String, String> relationshipLabelToString() {
   final labels = AppLocalizations.of(Get.context);
   return {
     labels.general.relation.mother: 'mother',
@@ -34,5 +35,25 @@ Map<String, String> relationshipMap() {
     labels.general.relation.brother: 'brother',
     labels.general.relation.son: 'son',
     labels.general.relation.nephew: 'nephew',
+    labels.general.relation.other: 'other',
+  };
+}
+
+Map<String, String> relationshipStringToLabel() {
+  final labels = AppLocalizations.of(Get.context);
+  return {
+    'mother': labels.general.relation.mother,
+    'grandmother': labels.general.relation.grandmother,
+    'aunt': labels.general.relation.aunt,
+    'sister': labels.general.relation.sister,
+    'daughter': labels.general.relation.daughter,
+    'niece': labels.general.relation.niece,
+    'father': labels.general.relation.father,
+    'grandfather': labels.general.relation.grandfather,
+    'uncle': labels.general.relation.uncle,
+    'brother': labels.general.relation.brother,
+    'son': labels.general.relation.son,
+    'nephew': labels.general.relation.nephew,
+    'other': labels.general.relation.other,
   };
 }

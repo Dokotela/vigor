@@ -57,7 +57,7 @@ class ContactRegistrationController extends GetxController {
 
   // GETTERS
   List<String> get barriosList => barrios;
-  List<String> get relationList => relationship_types;
+  List<String> get relationList => relationshipTypes();
 
   String get familyNameError1 => _familyNameError1.value;
   String get givenNameError1 => _givenNameError1.value;
@@ -112,9 +112,9 @@ class ContactRegistrationController extends GetxController {
     for (var relationship
         in _patient.value.patient.contact[number].relationship) {
       for (var relation in relationship.coding) {
-        if (relationship_types.contains(relation.display.toLowerCase())) {
+        if (relationshipTypes().contains(relation.display.toLowerCase())) {
           return relation.display.toLowerCase();
-        } else if (relationship_types
+        } else if (relationshipTypes()
             .contains(relation.code.toString().toLowerCase())) {
           return relation.code.toString().toLowerCase();
         }

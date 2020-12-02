@@ -135,16 +135,6 @@ class AppTheme {
 class _AppColors {
   static const Color bannerBlue = Color(0xFF0D47A1);
 
-  static const Color greenSurface = Color(0xFFDAE7DB);
-  //this is the pale faded green color of the background of the survey in light theme
-  static const Color greenSurfaceDark = Color(0xFF202021);
-  static const Color green = Color(0xFF689E80);
-  //this is the medium green color used for the PRAPARE banner and the button on the home screen
-  static const Color greenDark = Color(0xFF32494e);
-  //in contrast, this is the color used just for the button shadow on the home screen, NOT for the PRAPARE banner
-//todo figure out why "green" is the color for both the button shadow
-//on the home view as well as the banner color behind the PRAPARE logo
-//on the survey views, but greenDark is ONLY used for the button, not the banner
   static const Color orange = Color(0xFFE1994C);
   //this is the orange color only used for the surface of the "New Survey" button on the home screen
   static const Color orangeDark = Color(0xFFd1893C);
@@ -168,16 +158,12 @@ class _AppColors {
 
   //this is the dark mode "social and emotional health" banner
   static const Color greySurface = Color(0xFFE4E4E3);
-  //this is the light mode color used for the home view background and the settings menu background
-  static const Color greySurfaceDark = Color(0xff484847);
   //not currently being used
   static const Color grey = Color(0xFF636463);
   //this is the light mode "optional measures" banner
   static const Color greyDarkMode = Color(0xFF868686);
   //this is the dark mode "optional measures" banner
   static const Color blackSurface = Color(0xff050505);
-  //this is the dark mode "PRAPARE" banner color - 052505
-  static const Color blackSurfaceDark = Color(0xFFE4E4E3);
   //not currently being used
   static const Color blackBackground = Color(0xff181818);
   //this is the dark mode color used for the home view background and the settings menu

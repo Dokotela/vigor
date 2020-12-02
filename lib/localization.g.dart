@@ -73,6 +73,7 @@ class AppLocalizations {
         birthDateError: "Cannot be future date",
         givenNameError: "Enter other names",
         familyNameError: "Enter family name",
+        relationshipError: "Please select relationship",
         address: AppLocalizations_Labels_General_Address(
           city: "City",
           country: "Country",
@@ -105,6 +106,7 @@ class AppLocalizations {
           son: "Son",
           title: "Relation",
           uncle: "Uncle",
+          other: "Other",
         ),
         search: AppLocalizations_Labels_General_Search(
           search: "Search",
@@ -208,6 +210,7 @@ class AppLocalizations {
         birthDateError: "No puede ser fecha futura",
         givenNameError: "Introducir otros nombres",
         familyNameError: "Introduce el nombre de la familia",
+        relationshipError: "Por favor seleccione la relación",
         address: AppLocalizations_Labels_General_Address(
           city: "Ciudad",
           country: "País",
@@ -240,6 +243,7 @@ class AppLocalizations {
           son: "Hijo",
           title: "Relación",
           uncle: "Tío",
+          other: "Otro",
         ),
         search: AppLocalizations_Labels_General_Search(
           search: "Buscar",
@@ -343,6 +347,7 @@ class AppLocalizations {
         birthDateError: "لا يمكن أن يكون تاريخ المستقبل",
         givenNameError: "إدخال أسماء أخرى",
         familyNameError: "أدخل اسم العائلة",
+        relationshipError: "الرجاء تحديد العلاقة",
         address: AppLocalizations_Labels_General_Address(
           city: "مدينة",
           country: "بلد",
@@ -375,6 +380,7 @@ class AppLocalizations {
           son: "ابن",
           title: "علاقة",
           uncle: "اخو الام",
+          other: "آخر",
         ),
         search: AppLocalizations_Labels_General_Search(
           search: "بحث",
@@ -478,6 +484,7 @@ class AppLocalizations {
         birthDateError: "भविष्य की तारीख नहीं किया जा सकता",
         givenNameError: "अन्य नाम दर्ज",
         familyNameError: "परिवार का नाम दर्ज करें",
+        relationshipError: "कृपया संबंध का चयन",
         address: AppLocalizations_Labels_General_Address(
           city: "Faridabad",
           country: "देश",
@@ -510,6 +517,7 @@ class AppLocalizations {
           son: "बेटा",
           title: "रिश्ता",
           uncle: "चाचा",
+          other: "अन्य",
         ),
         search: AppLocalizations_Labels_General_Search(
           search: "खोज",
@@ -610,9 +618,10 @@ class AppLocalizations {
         submitShare: "Отправить / Share",
         patientInformation: "Информация о пациенте",
         neighborhoodError: "Выберите район",
-        birthDateError: "Не может быть дата будущего",
+        birthDateError: "Не может быть дата в будущем",
         givenNameError: "Введите другие имена",
         familyNameError: "Введите фамилию",
+        relationshipError: "Пожалуйста, выберите отношения",
         address: AppLocalizations_Labels_General_Address(
           city: "город",
           country: "Страна",
@@ -645,6 +654,7 @@ class AppLocalizations {
           son: "Сын",
           title: "Связь",
           uncle: "Дядя",
+          other: "Другие",
         ),
         search: AppLocalizations_Labels_General_Search(
           search: "Поиск",
@@ -748,6 +758,7 @@ class AppLocalizations {
         birthDateError: "ভবিষ্যতে তারিখে হতে পারে না",
         givenNameError: "অন্যান্য নামগুলি লিখুন",
         familyNameError: "পারিবারিক নাম লিখুন",
+        relationshipError: "দয়া করে সম্পর্ক নির্বাচন",
         address: AppLocalizations_Labels_General_Address(
           city: "শহর",
           country: "দেশ",
@@ -780,6 +791,7 @@ class AppLocalizations {
           son: "পুত্র",
           title: "সম্পর্ক",
           uncle: "চাচা",
+          other: "অন্যান্য",
         ),
         search: AppLocalizations_Labels_General_Search(
           search: "অনুসন্ধান করুন",
@@ -883,6 +895,7 @@ class AppLocalizations {
         birthDateError: "အနာဂတ်နေ့စွဲမဖွစျနိုငျ",
         givenNameError: "သည်အခြားအမည်များကိုရိုက်ထည့်ပါ",
         familyNameError: "မိသားစုနာမည်ရိုက်ထည့်ပါ",
+        relationshipError: "ဆက်ဆံရေးမျိုးကိုရွေးချယ်ပါ ကျေးဇူးပြု.",
         address: AppLocalizations_Labels_General_Address(
           city: "မြို့",
           country: "ပြည်",
@@ -915,6 +928,7 @@ class AppLocalizations {
           son: "သား",
           title: "ဆှေမြိုး",
           uncle: "ဘကြီး",
+          other: "အခြား",
         ),
         search: AppLocalizations_Labels_General_Search(
           search: "ရှာဖှေ",
@@ -1018,6 +1032,7 @@ class AppLocalizations {
         birthDateError: "不能是未来的日期",
         givenNameError: "输入其他名称",
         familyNameError: "输入姓氏",
+        relationshipError: "请选择关系",
         address: AppLocalizations_Labels_General_Address(
           city: "市",
           country: "国家",
@@ -1050,6 +1065,7 @@ class AppLocalizations {
           son: "儿子",
           title: "关系",
           uncle: "叔叔",
+          other: "其他",
         ),
         search: AppLocalizations_Labels_General_Search(
           search: "搜索",
@@ -1153,6 +1169,7 @@ class AppLocalizations {
         birthDateError: "不能是未來的日期",
         givenNameError: "輸入其他名稱",
         familyNameError: "輸入姓氏",
+        relationshipError: "請選擇關係",
         address: AppLocalizations_Labels_General_Address(
           city: "市",
           country: "國家",
@@ -1185,6 +1202,7 @@ class AppLocalizations {
           son: "兒子",
           title: "關係",
           uncle: "叔叔",
+          other: "其他",
         ),
         search: AppLocalizations_Labels_General_Search(
           search: "搜索",
@@ -1288,6 +1306,7 @@ class AppLocalizations {
         birthDateError: "نمی تواند تاریخ آینده",
         givenNameError: "نام های دیگر را وارد کنید",
         familyNameError: "نام خانوادگی را وارد کنید",
+        relationshipError: "لطفا ارتباط را انتخاب کنید",
         address: AppLocalizations_Labels_General_Address(
           city: "شهرستان",
           country: "کشور",
@@ -1320,6 +1339,7 @@ class AppLocalizations {
           son: "فرزند پسر",
           title: "رابطه",
           uncle: "عمو یا دایی",
+          other: "دیگر",
         ),
         search: AppLocalizations_Labels_General_Search(
           search: "جستجو کردن",
@@ -1423,6 +1443,7 @@ class AppLocalizations {
         birthDateError: "Ne peut pas être date ultérieure",
         givenNameError: "Entrez les autres noms",
         familyNameError: "Entrez le nom de famille",
+        relationshipError: "S'il vous plaît choisir relation",
         address: AppLocalizations_Labels_General_Address(
           city: "Ville",
           country: "Pays",
@@ -1455,6 +1476,7 @@ class AppLocalizations {
           son: "Fils",
           title: "Relation",
           uncle: "Oncle",
+          other: "Autre",
         ),
         search: AppLocalizations_Labels_General_Search(
           search: "Chercher",
@@ -1558,6 +1580,7 @@ class AppLocalizations {
         birthDateError: "Kann nicht Datum in der Zukunft sein",
         givenNameError: "Geben Sie andere Namen",
         familyNameError: "Geben Sie Namen",
+        relationshipError: "Bitte wählen Sie Beziehung",
         address: AppLocalizations_Labels_General_Address(
           city: "Stadt",
           country: "Land",
@@ -1590,6 +1613,7 @@ class AppLocalizations {
           son: "Sohn",
           title: "Beziehung",
           uncle: "Onkel",
+          other: "Andere",
         ),
         search: AppLocalizations_Labels_General_Search(
           search: "Suche",
@@ -1693,6 +1717,7 @@ class AppLocalizations {
         birthDateError: "Tidak bisa masa mendatang",
         givenNameError: "Masukkan nama lain",
         familyNameError: "Masukkan nama keluarga",
+        relationshipError: "Silakan pilih hubungan",
         address: AppLocalizations_Labels_General_Address(
           city: "Kota",
           country: "Negara",
@@ -1725,6 +1750,7 @@ class AppLocalizations {
           son: "Putra",
           title: "Hubungan",
           uncle: "Paman",
+          other: "Lain",
         ),
         search: AppLocalizations_Labels_General_Search(
           search: "Cari",
@@ -1828,6 +1854,7 @@ class AppLocalizations {
         birthDateError: "将来の日付にすることはできません",
         givenNameError: "他の名前を入力します。",
         familyNameError: "家族の名前を入力します。",
+        relationshipError: "関係を選択してください",
         address: AppLocalizations_Labels_General_Address(
           city: "市",
           country: "国",
@@ -1860,6 +1887,7 @@ class AppLocalizations {
           son: "息子",
           title: "関係",
           uncle: "おじさん",
+          other: "他の",
         ),
         search: AppLocalizations_Labels_General_Search(
           search: "探す",
@@ -1963,6 +1991,7 @@ class AppLocalizations {
         birthDateError: "មិនអាចជាកាលបរិច្ឆេទនាពេលអនាគត",
         givenNameError: "បញ្ចូលឈ្មោះផ្សេងទៀត",
         familyNameError: "បញ្ចូលឈ្មោះគ្រួសារ",
+        relationshipError: "សូមជ្រើសទំនាក់ទំនង",
         address: AppLocalizations_Labels_General_Address(
           city: "ទីក្រុង",
           country: "ប្រទេស",
@@ -1995,6 +2024,7 @@ class AppLocalizations {
           son: "ព្រះបុត្រា",
           title: "ទំនាក់ទំនង",
           uncle: "ពូ",
+          other: "ផ្សេងទៀត",
         ),
         search: AppLocalizations_Labels_General_Search(
           search: "ស្វែងរក",
@@ -2098,6 +2128,7 @@ class AppLocalizations {
         birthDateError: "미래의 일이 될 수 없습니다",
         givenNameError: "다른 이름을 입력",
         familyNameError: "가족의 이름을 입력합니다",
+        relationshipError: "관계를 선택하세요",
         address: AppLocalizations_Labels_General_Address(
           city: "시티",
           country: "국가",
@@ -2130,6 +2161,7 @@ class AppLocalizations {
           son: "아들",
           title: "관계",
           uncle: "삼촌",
+          other: "다른",
         ),
         search: AppLocalizations_Labels_General_Search(
           search: "검색",
@@ -2233,6 +2265,7 @@ class AppLocalizations {
         birthDateError: "ບໍ່ສາມາດທີ່ໃນອະນາຄົດ",
         givenNameError: "ກະລຸນາໃສ່ຊື່ອື່ນ",
         familyNameError: "ກະລຸນາໃສ່ນາມສະກຸນ",
+        relationshipError: "ກະລຸນາເລືອກສໍາພັນ",
         address: AppLocalizations_Labels_General_Address(
           city: "ເມືອງ",
           country: "ປະເທດ",
@@ -2265,6 +2298,7 @@ class AppLocalizations {
           son: "ລູກຊາຍ",
           title: "Relation",
           uncle: "ລຸງ",
+          other: "ອື່ນ ໆ",
         ),
         search: AppLocalizations_Labels_General_Search(
           search: "ຄົ້ນຫາ",
@@ -2368,6 +2402,7 @@ class AppLocalizations {
         birthDateError: "भविष्यातील तारीख असणे करू शकत नाही",
         givenNameError: "इतर नावे प्रविष्ट करा",
         familyNameError: "कुटुंब नाव प्रविष्ट करा",
+        relationshipError: "कृपया संबंध निवडा",
         address: AppLocalizations_Labels_General_Address(
           city: "सिटी",
           country: "देश",
@@ -2400,6 +2435,7 @@ class AppLocalizations {
           son: "मुलगा",
           title: "नाते",
           uncle: "काका",
+          other: "इतर",
         ),
         search: AppLocalizations_Labels_General_Search(
           search: "शोधा",
@@ -2503,6 +2539,7 @@ class AppLocalizations {
         birthDateError: "भविष्य मिति हुन सक्दैन",
         givenNameError: "अन्य नाम प्रविष्ट गर्नुहोस्",
         familyNameError: "परिवारको नाम प्रविष्ट गर्नुहोस्",
+        relationshipError: "कृपया सम्बन्ध चयन",
         address: AppLocalizations_Labels_General_Address(
           city: "शहर",
           country: "देश",
@@ -2535,6 +2572,7 @@ class AppLocalizations {
           son: "छोरा",
           title: "सम्बन्ध",
           uncle: "मामा",
+          other: "अन्य",
         ),
         search: AppLocalizations_Labels_General_Search(
           search: "खोज",
@@ -2638,6 +2676,7 @@ class AppLocalizations {
         birthDateError: "não pode ter data futura",
         givenNameError: "Introduzir outros nomes",
         familyNameError: "Insira o nome de família",
+        relationshipError: "Por favor seleccione relacionamento",
         address: AppLocalizations_Labels_General_Address(
           city: "Cidade",
           country: "País",
@@ -2670,6 +2709,7 @@ class AppLocalizations {
           son: "Filho",
           title: "Relação",
           uncle: "Tio",
+          other: "De outros",
         ),
         search: AppLocalizations_Labels_General_Search(
           search: "Pesquisa",
@@ -2773,6 +2813,7 @@ class AppLocalizations {
         birthDateError: "ਭਵਿੱਖ ਦੀ ਮਿਤੀ ਨਾ ਹੋ ਸਕਦਾ ਹੈ",
         givenNameError: "ਹੋਰ ਨਾਮ ਦਰਜ ਕਰੋ",
         familyNameError: "ਪਰਿਵਾਰ ਦਾ ਨਾਮ ਦਰਜ ਕਰੋ",
+        relationshipError: "ਕਿਰਪਾ ਕਰਕੇ ਰਿਸ਼ਤਾ ਦੀ ਚੋਣ ਕਰੋ",
         address: AppLocalizations_Labels_General_Address(
           city: "ਸਿਟੀ",
           country: "ਦੇਸ਼",
@@ -2805,6 +2846,7 @@ class AppLocalizations {
           son: "ਪੁੱਤਰ",
           title: "ਸਬੰਧ",
           uncle: "ਅੰਕਲ",
+          other: "ਹੋਰ",
         ),
         search: AppLocalizations_Labels_General_Search(
           search: "ਖੋਜ",
@@ -2908,6 +2950,7 @@ class AppLocalizations {
         birthDateError: "ma noqon karo taariikhda mustaqbalka",
         givenNameError: "Ku qor magacyada kale",
         familyNameError: "Ku qor magaca qoyska",
+        relationshipError: "Fadlan dooro xiriir",
         address: AppLocalizations_Labels_General_Address(
           city: "City",
           country: "Country",
@@ -2940,6 +2983,7 @@ class AppLocalizations {
           son: "Wiilka",
           title: "Xiriirka",
           uncle: "adeer",
+          other: "kale",
         ),
         search: AppLocalizations_Labels_General_Search(
           search: "Raadi",
@@ -3043,6 +3087,7 @@ class AppLocalizations {
         birthDateError: "Haiwezi kuwa siku za tarehe",
         givenNameError: "Andika majina mengine",
         familyNameError: "Weka jina la familia",
+        relationshipError: "Tafadhali chagua uhusiano",
         address: AppLocalizations_Labels_General_Address(
           city: "City",
           country: "Nchi",
@@ -3075,6 +3120,7 @@ class AppLocalizations {
           son: "mwana",
           title: "uhusiano",
           uncle: "Uncle",
+          other: "Nyingine",
         ),
         search: AppLocalizations_Labels_General_Search(
           search: "Tafuta",
@@ -3178,6 +3224,7 @@ class AppLocalizations {
         birthDateError: "Hindi maaaring maging hinaharap na petsa",
         givenNameError: "Ipasok ang iba pang mga pangalan",
         familyNameError: "Ipasok ang pangalan ng pamilya",
+        relationshipError: "Mangyaring pumili relasyon",
         address: AppLocalizations_Labels_General_Address(
           city: "lungsod",
           country: "bansa",
@@ -3210,6 +3257,7 @@ class AppLocalizations {
           son: "anak",
           title: "kaugnayan",
           uncle: "Tiyuhin",
+          other: "iba",
         ),
         search: AppLocalizations_Labels_General_Search(
           search: "Hanapan",
@@ -3313,6 +3361,7 @@ class AppLocalizations {
         birthDateError: "ไม่สามารถเป็นวันที่ในอนาคต",
         givenNameError: "ใส่ชื่ออื่น ๆ",
         familyNameError: "ใส่ชื่อครอบครัว",
+        relationshipError: "กรุณาเลือกความสัมพันธ์",
         address: AppLocalizations_Labels_General_Address(
           city: "เมือง",
           country: "ประเทศ",
@@ -3345,6 +3394,7 @@ class AppLocalizations {
           son: "ลูกชาย",
           title: "ความสัมพันธ์",
           uncle: "ลุง",
+          other: "อื่น ๆ",
         ),
         search: AppLocalizations_Labels_General_Search(
           search: "ค้นหา",
@@ -3448,6 +3498,7 @@ class AppLocalizations {
         birthDateError: "kelajakda sana bo'lishi mumkin emas",
         givenNameError: "Boshqa nomlari kiriting",
         familyNameError: "oila nomini kiriting",
+        relationshipError: "munosabatlarni tanlang Iltimos,",
         address: AppLocalizations_Labels_General_Address(
           city: "shahar",
           country: "mamlakat",
@@ -3480,6 +3531,7 @@ class AppLocalizations {
           son: "o'g'il",
           title: "qarindosh",
           uncle: "Tog'a",
+          other: "boshqa",
         ),
         search: AppLocalizations_Labels_General_Search(
           search: "Qidirmoq",
@@ -3583,6 +3635,7 @@ class AppLocalizations {
         birthDateError: "Không thể ngày trong tương lai",
         givenNameError: "Nhập tên khác",
         familyNameError: "Nhập tên gia đình",
+        relationshipError: "Vui lòng chọn mối quan hệ",
         address: AppLocalizations_Labels_General_Address(
           city: "thành phố",
           country: "Quốc gia",
@@ -3615,6 +3668,7 @@ class AppLocalizations {
           son: "Con trai",
           title: "Quan hệ",
           uncle: "Chú",
+          other: "khác",
         ),
         search: AppLocalizations_Labels_General_Search(
           search: "Tìm kiếm",
@@ -3995,7 +4049,8 @@ class AppLocalizations_Labels_General_Relation {
       this.sister,
       this.son,
       this.title,
-      this.uncle});
+      this.uncle,
+      this.other});
 
   final String aunt;
 
@@ -4022,6 +4077,8 @@ class AppLocalizations_Labels_General_Relation {
   final String title;
 
   final String uncle;
+
+  final String other;
 
   String getByKey(String key) {
     switch (key) {
@@ -4051,6 +4108,8 @@ class AppLocalizations_Labels_General_Relation {
         return title;
       case 'uncle':
         return uncle;
+      case 'other':
+        return other;
       default:
         return '';
     }
@@ -4123,6 +4182,7 @@ class AppLocalizations_Labels_General {
       this.birthDateError,
       this.givenNameError,
       this.familyNameError,
+      this.relationshipError,
       this.address,
       this.name,
       this.relation,
@@ -4160,6 +4220,8 @@ class AppLocalizations_Labels_General {
   final String givenNameError;
 
   final String familyNameError;
+
+  final String relationshipError;
 
   final AppLocalizations_Labels_General_Address address;
 
@@ -4205,6 +4267,8 @@ class AppLocalizations_Labels_General {
         return givenNameError;
       case 'familyNameError':
         return familyNameError;
+      case 'relationshipError':
+        return relationshipError;
       default:
         return '';
     }

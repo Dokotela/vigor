@@ -10,4 +10,4 @@ bool isValidRegistrationBirthDate(DateTime date) =>
 bool isValidRegistrationBarrio(String barrio) => barrios.contains(barrio);
 
 bool isValidRegistrationRelation(String relation) =>
-    relationship_types.contains(relation);
+    relationshipTypes().contains(relation);
