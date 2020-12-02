@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import '../../../_internal/constants/constants.dart';
 import '../../../_internal/utils/utils.dart';
 import '../../../_internal/utils/validators.dart';
+import '../../../localization.dart';
 import '../../../models/data/patient_model.dart';
 import '../../../routes/routes.dart';
 
@@ -25,13 +26,13 @@ class PatientRegistrationController extends GetxController {
   final _barrio = ''.obs;
   final _barrioError = ''.obs;
   final _barriosList = barrios.obs;
-  final labels = Get.arguments[0];
+  final labels = AppLocalizations.of(Get.context);
 
   /// INIT
   @override
   void onInit() {
-    if (Get.arguments[1] != null) {
-      _patient.value = Get.arguments[1];
+    if (Get.arguments == null) {
+      _patient.value = Get.arguments;
       _gender.value = _patient.value.patient.gender == PatientGender.female;
       _birthDate.value =
           DateTime.parse(_patient.value.patient.birthDate.toString());
@@ -40,6 +41,7 @@ class PatientRegistrationController extends GetxController {
       _gender.value = true;
       _barrio.value = labels.general.address.neighborhood;
     }
+
     familyName.text = _patient.value.familyName();
     givenName.text = _patient.value.givenName();
 

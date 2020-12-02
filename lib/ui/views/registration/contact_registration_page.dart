@@ -91,7 +91,11 @@ class ContactRegistrationPage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(16.0),
                       ),
                       onPressed: () => controller.registerEvent(),
-                      child: Text(labels.registration.registerPatient),
+                      child: Text(
+                        labels.registration.registerPatient,
+                        style: Get.textTheme.bodyText1
+                            .copyWith(color: Colors.white),
+                      ),
                     ),
                   ),
                 ],

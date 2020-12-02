@@ -7,6 +7,7 @@ import 'controllers/locale_controller.dart';
 import 'controllers/theme_controller.dart';
 import 'localization.dart';
 import 'routes/routes.dart';
+import 'ui/settings/settings_controller.dart';
 import 'ui/styled_components/styled_loading.dart';
 import 'ui/views/views.dart';
 
@@ -22,6 +23,7 @@ Future<void> _initServices() async {
   await GetStorage.init();
   Get.put<LocaleController>(LocaleController());
   Get.put<ThemeController>(ThemeController());
+  Get.put<SettingsController>(SettingsController());
 }
 
 class MyApp extends StatelessWidget {

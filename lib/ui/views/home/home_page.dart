@@ -36,8 +36,7 @@ class HomePage extends StatelessWidget {
             /// Search the patients stored on the device
             ActionButton(
               buttonText: labels.general.allPatients,
-              onPressed: () =>
-                  Get.toNamed(AppRoutes.PATIENT_SEARCH, arguments: labels),
+              onPressed: () => Get.toNamed(AppRoutes.PATIENT_SEARCH),
             ),
             ActionButton(
               buttonText: labels.general.mySchedule,

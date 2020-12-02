@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vigor/ui/settings/settings_controller.dart';
 
 import '../../../../localization.dart';
 
@@ -19,6 +20,7 @@ class NamesInputWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final labels = AppLocalizations.of(context);
+    final theme = Get.put(SettingsController()).appTheme;
 
     return Container(
       child: Column(
@@ -31,6 +33,7 @@ class NamesInputWidget extends StatelessWidget {
               hintText: labels.general.name.familyName,
               errorText: familyNameError.tr,
             ),
+            style: Get.textTheme.headline6,
           ),
 
           /// error is blank at first, only is shown after the registration
@@ -41,6 +44,7 @@ class NamesInputWidget extends StatelessWidget {
               hintText: labels.general.name.otherNames,
               errorText: givenNameError.tr,
             ),
+            style: Get.textTheme.headline6,
           ),
         ],
       ),

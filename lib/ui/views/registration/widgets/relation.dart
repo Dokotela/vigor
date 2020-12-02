@@ -37,6 +37,7 @@ class RelationWidget extends StatelessWidget {
                 }).toList(),
                 hint: Text(
                   displayRelation.tr,
+                  style: Get.textTheme.headline6,
                 ),
                 onChanged: (newVal) => setRelation(newVal)),
           ),

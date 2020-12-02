@@ -37,19 +37,20 @@ class ThemeController extends GetxController {
   ThemeMode get themeMode => _themeMode.value;
   AppTheme get lightTheme => AppTheme.fromType(ThemeType.Vigor);
   AppTheme get darkTheme => AppTheme.fromType(ThemeType.Vigor_Dark);
-  AppTheme getAppTheme(Brightness b) => _themeMode.value == ThemeMode.light
-      ? lightTheme
-      : _themeMode.value == ThemeMode.dark
-          ? darkTheme
-          : b == Brightness.light
-              ? lightTheme
-              : darkTheme;
+  AppTheme getAppTheme({Brightness brightness}) =>
+      _themeMode.value == ThemeMode.light
+          ? lightTheme
+          : _themeMode.value == ThemeMode.dark
+              ? darkTheme
+              : brightness == Brightness.light
+                  ? lightTheme
+                  : darkTheme;
 
   /// SETTER Functions
   Future<void> setThemeMode(ThemeMode theme) async {
     _themeMode.value = theme;
     Get.changeThemeMode(_themeMode.value);
-    await store.write(_key, theme != ThemeMode.dark);
+    await store.write(_key, theme == ThemeMode.dark);
     update();
   }
 

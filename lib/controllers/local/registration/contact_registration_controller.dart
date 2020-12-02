@@ -5,30 +5,33 @@ import 'package:get/get.dart';
 import '../../../_internal/constants/constants.dart';
 import '../../../_internal/utils/utils.dart';
 import '../../../_internal/utils/validators.dart';
+import '../../../localization.dart';
 import '../../../models/data/patient_model.dart';
+
 import '../../../routes/routes.dart';
 import '../../../services/i_fhir_db.dart';
 
 class ContactRegistrationController extends GetxController {
   /// PROPERTIES
   final _patient = PatientModel().obs;
+  final labels = AppLocalizations.of(Get.context);
 
   final familyName1 = TextEditingController();
   final _familyNameError1 = ''.obs;
   final givenName1 = TextEditingController();
   final _givenNameError1 = ''.obs;
-  final _barrio1 = 'Neighborhood'.obs;
+  final _barrio1 = ''.obs;
   final _barrioError1 = ''.obs;
-  final _relation1 = 'Relationship'.obs;
+  final _relation1 = ''.obs;
   final _relationError1 = ''.obs;
 
   final familyName2 = TextEditingController();
   final _familyNameError2 = ''.obs;
   final givenName2 = TextEditingController();
   final _givenNameError2 = ''.obs;
-  final _barrio2 = 'Neighborhood'.obs;
+  final _barrio2 = ''.obs;
   final _barrioError2 = ''.obs;
-  final _relation2 = 'Relationship'.obs;
+  final _relation2 = ''.obs;
   final _relationError2 = ''.obs;
 
   /// INIT
@@ -91,20 +94,20 @@ class ContactRegistrationController extends GetxController {
                   : _patient.value.patient.contact[number].name.family;
 
   String _contactBarrio(int number) => _patient?.value?.patient?.contact == null
-      ? 'Neighborhood'
+      ? labels.general.address.neighborhood
       : _patient.value.patient.contact.length < number + 1
-          ? 'Neighborhood'
+          ? labels.general.address.neighborhood
           : _patient?.value?.patient?.contact[number]?.address?.district ??
-              'Neighborhood';
+              labels.general.address.neighborhood;
 
   String _contactRelation(int number) {
     if (_patient?.value?.patient?.contact == null) {
-      return 'Relationship';
+      return labels.general.relationship;
     } else if (_patient.value.patient.contact.length < number + 1) {
-      return 'Relationship';
+      return labels.general.relationship;
     } else if (_patient?.value?.patient?.contact[number]?.relationship ==
         null) {
-      return 'Relationship';
+      return labels.general.relationship;
     }
     for (var relationship
         in _patient.value.patient.contact[number].relationship) {
@@ -117,7 +120,7 @@ class ContactRegistrationController extends GetxController {
         }
       }
     }
-    return 'Relationship';
+    return labels.general.relationship;
   }
 
   // EVENTS
@@ -165,16 +168,16 @@ class ContactRegistrationController extends GetxController {
       );
     } else {
       _familyNameError1.value = !isValidRegistrationName(familyName1.text)
-          ? 'Enter family name'
+          ? labels.general.familyNameError
           : _familyNameError1.value;
       _givenNameError1.value = !isValidRegistrationName(givenName1.text)
-          ? 'Enter other names'
+          ? labels.general.givenNameError
           : _givenNameError1.value;
       _relationError1.value = !isValidRegistrationRelation(relation1)
           ? 'Please select relationship'
           : '';
       _barrioError1.value = !isValidRegistrationBarrio(barrio1)
-          ? 'Please select neighborhood'
+          ? labels.general.neighborhoodError
           : '';
     }
   }

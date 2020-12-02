@@ -24,6 +24,7 @@ class LocaleController extends GetxController {
   /// INIT
   @override
   Future onInit() async {
+    await store.write('language', '');
     setInitialLocalLanguage();
     super.onInit();
   }
@@ -52,7 +53,7 @@ class LocaleController extends GetxController {
   void setInitialLocalLanguage() {
     if (currentLanguageStore().isEmpty) {
       String _deviceLanguage = ui.window.locale.toString();
-      // print(ui.window.locale.toString());
+      print(ui.window.locale.toString());
       //only get 1st 2 characters
       updateLanguage(_deviceLanguage.substring(0, 2));
     }

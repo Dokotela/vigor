@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vigor/ui/settings/settings_dialog.dart';
 import '../views/views.dart';
 
 BottomAppBar bottomAppBar = BottomAppBar(
@@ -10,6 +11,10 @@ BottomAppBar bottomAppBar = BottomAppBar(
       IconButton(
         icon: const Icon(Icons.arrow_back, color: Colors.white),
         onPressed: () => Get.back(),
+      ),
+      IconButton(
+        icon: const Icon(Icons.settings, color: Colors.white),
+        onPressed: () => settingsDialog(),
       ),
       IconButton(
         icon: const Icon(Icons.home, color: Colors.white),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vigor/ui/settings/settings_controller.dart';
 
 import '../../../controllers/local/registration/patient_registration_controller.dart';
 import '../../styled_components/bottom_navigation_bar.dart';
@@ -11,8 +12,8 @@ import 'widgets/names.dart';
 class PatientRegistrationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final PatientRegistrationController controller =
-        Get.put(PatientRegistrationController());
+    final controller = Get.put(PatientRegistrationController());
+    final appTheme = Get.put(SettingsController()).appTheme;
 
     return GestureDetector(
       onTap: () {
@@ -79,8 +80,11 @@ class PatientRegistrationPage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(16.0),
                       ),
                       onPressed: () => controller.registerEvent(),
-                      child:
-                          Text(controller.labels.registration.registerPatient),
+                      child: Text(
+                        controller.labels.registration.registerPatient,
+                        style: Get.textTheme.bodyText1
+                            .copyWith(color: Colors.white),
+                      ),
                     ),
                   ),
                 ],

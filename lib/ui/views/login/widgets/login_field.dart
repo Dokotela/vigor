@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class LoginFieldWidget extends StatelessWidget {
   const LoginFieldWidget({
@@ -18,6 +19,7 @@ class LoginFieldWidget extends StatelessWidget {
       decoration: InputDecoration(
         contentPadding: padding,
         hintText: hint,
+        hintStyle: Get.theme.textTheme.headline6,
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0)),
         focusedBorder:
             OutlineInputBorder(borderRadius: BorderRadius.circular(32.0)),

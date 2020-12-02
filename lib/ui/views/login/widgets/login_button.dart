@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vigor/controllers/theme_controller.dart';
+import 'package:vigor/ui/settings/settings_controller.dart';
 
 import '../../../../routes/routes.dart';
 
@@ -15,8 +15,7 @@ class LoginButtonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final appTheme =
-        Get.put(ThemeController()).getAppTheme(context.theme.brightness);
+    final appTheme = Get.put(SettingsController()).appTheme;
     return Material(
       elevation: 5.0,
       borderRadius: BorderRadius.circular(64.0),

@@ -1,7 +1,6 @@
 import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:vigor/ui/settings/settings_dialog.dart';
 import 'package:vigor/ui/styled_components/thin_action_button.dart';
 
@@ -23,35 +22,28 @@ class LoginView extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(title: Text(labels.app.title)),
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              /// Widget that displays the flags country as a map of that country
-              FlagWidget(_country),
+      body: ListView(
+        // mainAxisAlignment: MainAxisAlignment.start,
+        // crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          /// Widget that displays the flags country as a map of that country
+          FlagWidget(_country),
 
-              ///specific text with formatting for that country's app title
-              SplashTitleWidget(_country),
-              const SizedBox(height: 30.0),
+          ///specific text with formatting for that country's app title
+          SplashTitleWidget(_country),
+          const SizedBox(height: 30.0),
 
-              /// ToDo: make a real login
-              LoginFieldWidget(
-                  hint: labels.auth.userName,
-                  obscure: false,
-                  padding: _padding),
-              const SizedBox(height: 15.0),
-              LoginFieldWidget(
-                  hint: labels.auth.password, obscure: true, padding: _padding),
-              const SizedBox(height: 15.0),
-              LoginButtonWidget(login: labels.auth.signIn, padding: _padding),
-              ThinActionButton(
-                  buttonText: labels.settings.title, onPressed: settingsDialog),
-            ],
-          ),
-        ),
+          /// ToDo: make a real login
+          LoginFieldWidget(
+              hint: labels.auth.userName, obscure: false, padding: _padding),
+          const SizedBox(height: 15.0),
+          LoginFieldWidget(
+              hint: labels.auth.password, obscure: true, padding: _padding),
+          const SizedBox(height: 15.0),
+          LoginButtonWidget(login: labels.auth.signIn, padding: _padding),
+          ThinActionButton(
+              buttonText: labels.settings.title, onPressed: settingsDialog),
+        ],
       ),
     );
   }

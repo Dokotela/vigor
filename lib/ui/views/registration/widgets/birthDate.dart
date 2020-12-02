@@ -35,12 +35,13 @@ class BirthDateWidget extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
               const Icon(Icons.calendar_today, size: 64.0),
               Column(
                 children: [
                   Text(
-                    '${labels.general.dateofBirth} $displayBirthDate',
+                    '${labels.general.dateofBirth}\n$displayBirthDate',
                     style: Get.theme.textTheme.headline6,
                     textAlign: TextAlign.center,
                   ),
