@@ -1,4 +1,5 @@
 import '../constants/constants.dart';
+import 'relationship_types.dart';
 
 bool isValidRegistrationName(String name) => name.length >= 2;
 

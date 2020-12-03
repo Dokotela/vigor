@@ -26,8 +26,4 @@ final appPages = [
     name: AppRoutes.PATIENT_HOME,
     page: () => PatientHomePage(),
   ),
-  GetPage(
-    name: AppRoutes.VAX_DATES,
-    page: () => VaxDatesAlert(),
-  ),
 ];

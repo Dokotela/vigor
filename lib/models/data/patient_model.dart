@@ -1,32 +1,31 @@
 import 'package:fhir/r4.dart';
 import 'package:get/get.dart';
-import 'package:vax_cast/vax_cast.dart';
+import 'package:vigor/_internal/constants/dr_vax_cvx_map.dart';
 
 import '../../_internal/utils/utils.dart';
 import '../../services/i_dr_vax_cast.dart';
 import '../../services/i_fhir_db.dart';
-import '../../services/i_vax_cast.dart';
 
 class PatientModel {
   PatientModel({
     this.patient,
     this.pastImmunizations,
-    this.immEvaluations,
-    this.recommendation,
-    this.pastImmMap,
+    // this.immEvaluations,
+    // this.recommendation,
+    // this.pastImmMap,
     this.immHx,
   }) {
     pastImmunizations ??= <Immunization>[];
-    immEvaluations ??= <ImmunizationEvaluation>[];
-    pastImmMap ??= <String, List<Immunization>>{};
+    // immEvaluations ??= <ImmunizationEvaluation>[];
+    // pastImmMap ??= <String, List<Immunization>>{};
     immHx ??= <String, Set<FhirDateTime>>{};
   }
 
   Patient patient;
   List<Immunization> pastImmunizations;
-  List<ImmunizationEvaluation> immEvaluations;
-  ImmunizationRecommendation recommendation;
-  Map<String, List<Immunization>> pastImmMap;
+  // List<ImmunizationEvaluation> immEvaluations;
+  // ImmunizationRecommendation recommendation;
+  // Map<String, List<Immunization>> pastImmMap;
   Map<String, Set<FhirDateTime>> immHx;
 
   Future loadImmunizations() async {
@@ -42,39 +41,54 @@ class PatientModel {
     immHx = IDrVaxCast.drVaxCast(immunizations: pastImmunizations);
   }
 
-  void createHx() {
-    for (var imm in pastImmunizations) {
-      final cvx = imm.vaccineCode.coding
-          .firstWhere(
-              (coding) =>
-                  coding.system == FhirUri('http://hl7.org/fhir/sid/cvx'),
-              orElse: () => null)
-          ?.code
-          ?.toString();
-      if (cvx != null) {
-        for (var ag in simpleCvxMap[cvx].antigens) {
-          pastImmMap.containsKey(ag)
-              ? pastImmMap[ag].add(imm)
-              : pastImmMap[ag] = [imm];
-        }
-      }
-    }
+  Future addNewVaccine(String cvx, FhirDateTime date) async {
+    final immunization = Immunization(
+        status: Code('completed'),
+        patient: Reference(reference: 'Patient/${patient.id}'),
+        occurrenceDateTime: date,
+        vaccineCode: cvxToCoding[cvx]);
+    pastImmunizations.add(immunization);
+    immHx = IDrVaxCast.drVaxCast(immunizations: pastImmunizations);
+    final iFhirDb = IFhirDb();
+    await iFhirDb.save(immunization);
   }
 
-  Future getImmunizationRecommendation() async {
-    final returnValues = await IVaxCast.vaxCast(
-        patient: patient,
-        immunizations: pastImmunizations,
-        assessmentDate: Date(DateTime.now().toIso8601String()));
-    for (final parameter in returnValues.parameter) {
-      if (parameter.name == 'evaluation') {
-        immEvaluations.add(parameter.resource);
-      }
-      if (parameter.name == 'recommendation') {
-        recommendation = parameter.resource;
-      }
-    }
-  }
+  /// These two functions both make full use of the vax_cast package to allow
+  /// complex vaccine forecasting
+
+  //   void createHx() {
+  //   for (var imm in pastImmunizations) {
+  //     final cvx = imm.vaccineCode.coding
+  //         .firstWhere(
+  //             (coding) =>
+  //                 coding.system == FhirUri('http://hl7.org/fhir/sid/cvx'),
+  //             orElse: () => null)
+  //         ?.code
+  //         ?.toString();
+  //     if (cvx != null) {
+  //       for (var ag in simpleCvxMap[cvx].antigens) {
+  //         pastImmMap.containsKey(ag)
+  //             ? pastImmMap[ag].add(imm)
+  //             : pastImmMap[ag] = [imm];
+  //       }
+  //     }
+  //   }
+  // }
+
+  // Future getImmunizationRecommendation() async {
+  //   final returnValues = await IVaxCast.vaxCast(
+  //       patient: patient,
+  //       immunizations: pastImmunizations,
+  //       assessmentDate: Date(DateTime.now().toIso8601String()));
+  //   for (final parameter in returnValues.parameter) {
+  //     if (parameter.name == 'evaluation') {
+  //       immEvaluations.add(parameter.resource);
+  //     }
+  //     if (parameter.name == 'recommendation') {
+  //       recommendation = parameter.resource;
+  //     }
+  //   }
+  // }
 
   String name() => lastCommaGivenName(patient);
   String familyName() => patient?.name == null ? '' : patient.name[0].family;

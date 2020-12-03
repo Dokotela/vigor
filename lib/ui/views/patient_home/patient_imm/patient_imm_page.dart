@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:vax_cast/vax_cast.dart';
 
 import '../../../../controllers/local/patient_home/patient_home_controller.dart';
-import '../../../../routes/routes.dart';
 import 'widgets/dose_options.dart';
 
 class PatientImmPage extends StatelessWidget {
@@ -25,192 +24,125 @@ class PatientImmPage extends StatelessWidget {
             padding: const EdgeInsets.all(4.0),
             child: Column(
               children: [
-                Table(
-                  defaultVerticalAlignment: TableCellVerticalAlignment.bottom,
-                  border: TableBorder.symmetric(
-                      inside: BorderSide(width: 1, color: Colors.white),
-                      outside: BorderSide(width: 1, color: Colors.white)),
-                  columnWidths: {
-                    0: FixedColumnWidth(Get.width / 3),
-                  },
-                  children: [
-                    TableRow(
-                      decoration: _greyBoxDecoration,
-                      children: [
-                        TableCell(
-                            child: Text('Deworming',
-                                style: TextStyle(fontSize: 18))),
-                        TableCell(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [Text('1\n'), DoseOptions.completed()],
-                          ),
-                        ),
-                        TableCell(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [Text('2\n'), DoseOptions.completed()],
-                          ),
-                        ),
-                        TableCell(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [Text('3\n'), DoseOptions.completed()],
-                          ),
-                        ),
-                        TableCell(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [Text('4\n'), DoseOptions.overdue()],
-                          ),
-                        ),
-                        TableCell(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: const [Text('5\n')],
-                          ),
-                        ),
-                        TableCell(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: const [Text('6\n')],
-                          ),
-                        ),
-                      ],
-                    ),
-                    TableRow(
-                      decoration: _greyBoxDecoration,
-                      children: [
-                        TableCell(
-                            child: Text('Doses\n',
-                                style: TextStyle(fontSize: 18))),
-                        TableCell(child: Text('7\n')),
-                        TableCell(child: Text('8\n')),
-                        TableCell(child: Text('9\n')),
-                        TableCell(child: Text('10\n')),
-                        TableCell(child: Text('11\n')),
-                        TableCell(child: Text('12\n')),
-                      ],
-                    ),
-                  ],
-                ),
-                Table(
-                  defaultVerticalAlignment: TableCellVerticalAlignment.bottom,
-                  border: TableBorder.symmetric(
-                      inside: BorderSide(width: 1, color: Colors.white),
-                      outside: BorderSide(width: 1, color: Colors.white)),
-                  columnWidths: {
-                    0: FixedColumnWidth(Get.width / 3),
-                  },
-                  children: [
-                    TableRow(
-                      decoration: _greyBoxDecoration,
-                      children: [
-                        TableCell(child: Text('')),
-                        _vaxDose('Dosis RN'),
-                        _vaxDose('1ra Dosis'),
-                        _vaxDose('2da Dosis'),
-                        _vaxDose('3rd Dosis'),
-                        _vaxDose('1er Ref'),
-                        _vaxDose('2da Ref'),
-                      ],
-                    ),
-                    TableRow(decoration: _greyBoxDecoration, children: [
-                      _rowName('Anti-BCG\n', 'Tuberculosis', context),
-                      _valid('Tuberculosis', 0),
-                      DoseOptions.na(),
-                      DoseOptions.na(),
-                      DoseOptions.na(),
-                      DoseOptions.na(),
-                      DoseOptions.na(),
-                    ]),
-                    TableRow(decoration: _greyBoxDecoration, children: [
-                      _rowName('Anti-Hepatitis B\n', 'HepB', context),
-                      _valid('HepB', 0),
-                      DoseOptions.possible(),
-                      DoseOptions.possible(),
-                      DoseOptions.possible(),
-                      DoseOptions.na(),
-                      DoseOptions.na(),
-                    ]),
-                    TableRow(decoration: _greyBoxDecoration, children: [
-                      _rowName('Anti-Rotavirus\n', 'Rotavirus', context),
-                      DoseOptions.na(),
-                      _valid('Rotavirus', 2),
-                      _valid('Rotavirus', 4),
-                      DoseOptions.na(),
-                      DoseOptions.na(),
-                      DoseOptions.na(),
-                    ]),
-                    TableRow(decoration: _greyBoxDecoration, children: [
-                      _rowName('Anti-Polio\n', 'Polio', context),
-                      DoseOptions.na(),
-                      _valid('Polio', 2),
-                      _valid('Polio', 4),
-                      _valid('Polio', 6),
-                      _valid('Polio', 18),
-                      _valid('Polio', 48),
-                    ]),
-                    TableRow(decoration: _greyBoxDecoration, children: [
-                      _rowName(
-                          'Pentavalente (DPT/HB/Hib)', 'Pentavalente', context),
-                      DoseOptions.na(),
-                      _valid('Pentavalente', 2),
-                      _valid('Pentavalente', 4),
-                      _valid('Pentavalente', 6),
-                      DoseOptions.na(),
-                      DoseOptions.na(),
-                    ]),
-                    TableRow(decoration: _greyBoxDecoration, children: [
-                      _rowName('Anti-Neumococo', 'Pneumococcal', context),
-                      DoseOptions.na(),
-                      _valid('Pneumococcal', 2),
-                      _valid('Pneumococcal', 4),
-                      DoseOptions.na(),
-                      _valid('Pneumococcal', 12),
-                      DoseOptions.na(),
-                    ]),
-                    TableRow(decoration: _greyBoxDecoration, children: [
-                      _rowName('Influenza', 'Influenza', context),
-                      DoseOptions.na(),
-                      _valid('Influenza', 6),
-                      _valid('Influenza', 12),
-                      _valid('Influenza', 24),
-                      _valid('Influenza', 36),
-                      _valid('Influenza', 48),
-                    ]),
-                    TableRow(decoration: _greyBoxDecoration, children: [
-                      _rowName('SRP\n', 'MMR', context),
-                      DoseOptions.na(),
-                      _valid('MMR', 12),
-                      DoseOptions.na(),
-                      DoseOptions.na(),
-                      DoseOptions.na(),
-                      DoseOptions.na(),
-                    ]),
-                    TableRow(decoration: _greyBoxDecoration, children: [
-                      _rowName('DPT\n', 'DTP', context),
-                      DoseOptions.na(),
-                      DoseOptions.possible(),
-                      DoseOptions.possible(),
-                      DoseOptions.possible(),
-                      _valid('DTP', 18),
-                      _valid('DTP', 48),
-                    ]),
-                    TableRow(
-                      decoration: _greyBoxDecoration,
-                      children: [
-                        _rowName('SR\n', 'MR', context),
+                Obx(
+                  () => Table(
+                    defaultVerticalAlignment: TableCellVerticalAlignment.bottom,
+                    border: TableBorder.symmetric(
+                        inside: BorderSide(width: 1, color: Colors.white),
+                        outside: BorderSide(width: 1, color: Colors.white)),
+                    columnWidths: {
+                      0: FixedColumnWidth(Get.width / 3),
+                    },
+                    children: [
+                      TableRow(
+                        decoration: _greyBoxDecoration,
+                        children: [
+                          TableCell(child: Text('')),
+                          _vaxDose('Dosis RN'),
+                          _vaxDose('1ra Dosis'),
+                          _vaxDose('2da Dosis'),
+                          _vaxDose('3rd Dosis'),
+                          _vaxDose('1er Ref'),
+                          _vaxDose('2da Ref'),
+                        ],
+                      ),
+                      TableRow(decoration: _greyBoxDecoration, children: [
+                        _rowName('Anti-BCG\n', 'Tuberculosis', context),
+                        _valid('Tuberculosis', 0),
                         DoseOptions.na(),
-                        // _valid('MR', 12),
+                        DoseOptions.na(),
+                        DoseOptions.na(),
+                        DoseOptions.na(),
+                        DoseOptions.na(),
+                      ]),
+                      TableRow(decoration: _greyBoxDecoration, children: [
+                        _rowName('Anti-Hepatitis B\n', 'HepB', context),
+                        _valid('HepB', 0),
+                        DoseOptions.possible(),
+                        DoseOptions.possible(),
                         DoseOptions.possible(),
                         DoseOptions.na(),
                         DoseOptions.na(),
+                      ]),
+                      TableRow(decoration: _greyBoxDecoration, children: [
+                        _rowName('Anti-Rotavirus\n', 'Rotavirus', context),
+                        DoseOptions.na(),
+                        _valid('Rotavirus', 2),
+                        _valid('Rotavirus', 4),
                         DoseOptions.na(),
                         DoseOptions.na(),
-                      ],
-                    ),
-                  ],
+                        DoseOptions.na(),
+                      ]),
+                      TableRow(decoration: _greyBoxDecoration, children: [
+                        _rowName('Anti-Polio\n', 'Polio', context),
+                        DoseOptions.na(),
+                        _valid('Polio', 2),
+                        _valid('Polio', 4),
+                        _valid('Polio', 6),
+                        _valid('Polio', 18),
+                        _valid('Polio', 48),
+                      ]),
+                      TableRow(decoration: _greyBoxDecoration, children: [
+                        _rowName('Pentavalente (DPT/HB/Hib)', 'Pentavalente',
+                            context),
+                        DoseOptions.na(),
+                        _valid('Pentavalente', 2),
+                        _valid('Pentavalente', 4),
+                        _valid('Pentavalente', 6),
+                        DoseOptions.na(),
+                        DoseOptions.na(),
+                      ]),
+                      TableRow(decoration: _greyBoxDecoration, children: [
+                        _rowName('Anti-Neumococo', 'Pneumococcal', context),
+                        DoseOptions.na(),
+                        _valid('Pneumococcal', 2),
+                        _valid('Pneumococcal', 4),
+                        DoseOptions.na(),
+                        _valid('Pneumococcal', 12),
+                        DoseOptions.na(),
+                      ]),
+                      TableRow(decoration: _greyBoxDecoration, children: [
+                        _rowName('Influenza', 'Influenza', context),
+                        DoseOptions.na(),
+                        _valid('Influenza', 6),
+                        _valid('Influenza', 12),
+                        _valid('Influenza', 24),
+                        _valid('Influenza', 36),
+                        _valid('Influenza', 48),
+                      ]),
+                      TableRow(decoration: _greyBoxDecoration, children: [
+                        _rowName('SRP\n', 'MMR', context),
+                        DoseOptions.na(),
+                        _valid('MMR', 12),
+                        DoseOptions.na(),
+                        DoseOptions.na(),
+                        DoseOptions.na(),
+                        DoseOptions.na(),
+                      ]),
+                      TableRow(decoration: _greyBoxDecoration, children: [
+                        _rowName('DPT\n', 'DTP', context),
+                        DoseOptions.na(),
+                        DoseOptions.possible(),
+                        DoseOptions.possible(),
+                        DoseOptions.possible(),
+                        _valid('DTP', 18),
+                        _valid('DTP', 48),
+                      ]),
+                      TableRow(
+                        decoration: _greyBoxDecoration,
+                        children: [
+                          _rowName('SR\n', 'MR', context),
+                          DoseOptions.na(),
+                          // _valid('MR', 12),
+                          DoseOptions.possible(),
+                          DoseOptions.na(),
+                          DoseOptions.na(),
+                          DoseOptions.na(),
+                          DoseOptions.na(),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),
@@ -265,7 +197,7 @@ class PatientImmPage extends StatelessWidget {
       materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
       color: Colors.grey[100],
       child: Text(text, style: TextStyle(fontSize: 15)),
-      onPressed: () => Get.toNamed(AppRoutes.VAX_DATES, arguments: [text, dz]),
+      onPressed: () => controller.displayDatesDialog(text, dz),
     );
   }
 }
