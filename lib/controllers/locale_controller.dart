@@ -20,6 +20,7 @@ class LocaleController extends GetxController {
   final language = ''.obs;
   final store = GetStorage();
   final List<MenuOption> languageOptions = availableLanguages;
+  final String _language = 'vigorLanguage';
 
   /// INIT
   @override
@@ -31,7 +32,7 @@ class LocaleController extends GetxController {
   /// GETTER Functions
   String get currentLanguage => language.value;
   // Gets current language stored
-  String currentLanguageStore() => store.read('language') ?? '';
+  String currentLanguageStore() => store.read(_language) ?? '';
 
   // gets the language locale app is set to
   Locale get getLocale {
@@ -55,13 +56,15 @@ class LocaleController extends GetxController {
       print(ui.window.locale.toString());
       //only get 1st 2 characters
       updateLanguage(_deviceLanguage.substring(0, 2));
+    } else {
+      updateLanguage(currentLanguageStore());
     }
   }
 
   // updates the language stored
   Future updateLanguage(String value) async {
     language.value = value;
-    await store.write('language', value);
+    await store.write(_language, value);
     Get.updateLocale(getLocale);
     update();
   }

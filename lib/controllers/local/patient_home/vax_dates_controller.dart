@@ -32,6 +32,8 @@ class VaxDatesController extends GetxController {
     _text.value = text;
     _dz.value = dz;
     dateList.value = controller.immHx()[dz].toList();
+    deleteList.value = <FhirDateTime>[];
+    newList.value = <FhirDateTime>[];
   }
 
   set setList(Set<FhirDateTime> dates) {

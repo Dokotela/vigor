@@ -16,7 +16,7 @@ class ThemeController extends GetxController {
   /// PROPERTIES
   final _themeMode = ThemeMode.system.obs;
   final store = GetStorage();
-  final _key = 'theme';
+  final _key = 'vigorTheme';
 
   /// INIT
   /// ONREADY

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../controllers/local/patient_home/patient_home_controller.dart';
-import '../../../localization.dart';
 import '../../../ui/styled_components/bottom_navigation_bar.dart';
 import '../../styled_components/info_banner.dart';
 import 'patient_imm/patient_imm_page.dart';
