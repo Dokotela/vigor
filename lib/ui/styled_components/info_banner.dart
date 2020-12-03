@@ -31,12 +31,23 @@ class InfoBannerWidget extends StatelessWidget {
               '${labels.general.birthDate}: $birthDate', 'Age: $relativeAge')
         ]),
         _spacerV(),
-        Row(children: [
-          _flexTwo('${labels.general.sexAtBirth.title}: $sex', 'ID: $id')
-        ]),
+        Row(children: [_flexOne('${labels.general.sexAtBirth.title}: $sex')]),
+        _spacerV(),
+        Row(children: [_flexOne('ID: $id')]),
+        _spacerV(),
         _spacerV(),
       ],
     );
+  }
+
+  Widget _flexOne(String text3) {
+    return Flexible(
+        flex: 2,
+        child: Row(
+          children: [
+            _sharedText(text3, textAlign: TextAlign.left),
+          ],
+        ));
   }
 
   // Two widgets within a row, left is not flexible

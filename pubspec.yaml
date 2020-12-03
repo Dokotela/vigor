@@ -18,17 +18,17 @@ dependencies:
   dartz: ^0.9.2
   fhir: ^0.0.11
   fhir_db: ^0.0.2
-  flutter_sheet_localization: ^2.0.0
+  flutter_sheet_localization: ^2.0.1
   flutter_svg: ^0.19.1
   freezed_annotation: ^0.12.0
-  get: ^3.15.0
+  get: ^3.21.3
   get_storage: ^1.3.2
   google_fonts: ^1.1.1
   http: ^0.12.2
   intl: ^0.16.1
   path_provider: ^1.6.24
-  photo_view: ^0.10.2
-  timeago: ^2.0.28
+  photo_view: ^0.10.3
+  timeago: ^2.0.29
   translator: ^0.1.5
   vax_cast:
     git:

@@ -186,7 +186,7 @@ class PatientImmPage extends StatelessWidget {
         VaxDate.now()) {
       return DoseOptions.overdue();
     } else if (VaxDate.fromString(controller.birthDate())
-            .change('${months + 1} months') <=
+            .change('${months + 2} months') <=
         VaxDate.now()) {
       return DoseOptions.due();
     } else {
