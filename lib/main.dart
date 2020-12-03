@@ -4,10 +4,11 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
 import 'controllers/locale_controller.dart';
+import 'controllers/settings_controller.dart';
 import 'controllers/theme_controller.dart';
 import 'localization.dart';
 import 'routes/routes.dart';
-import 'ui/settings/settings_controller.dart';
+
 import 'ui/styled_components/styled_loading.dart';
 import 'ui/views/views.dart';
 
@@ -21,8 +22,6 @@ Future main() async {
 // Theme uses GetxService so that it isn't closed during app lifecycle
 Future<void> _initServices() async {
   await GetStorage.init();
-  Get.put<LocaleController>(LocaleController());
-  Get.put<ThemeController>(ThemeController());
   Get.put<SettingsController>(SettingsController());
 }
 
@@ -44,9 +43,9 @@ class MyApp extends StatelessWidget {
                 .toList(), // <- Supported locales
 
             // *** THEMES ***
-            theme: ThemeController.to.lightTheme.themeData,
-            darkTheme: ThemeController.to.darkTheme.themeData,
-            themeMode: ThemeController.to.themeMode,
+            theme: SettingsController.to.theme,
+            darkTheme: SettingsController.to.darkTheme,
+            themeMode: SettingsController.to.themeMode,
 
             // *** ROUTES ***
             // initialRoute: "/",

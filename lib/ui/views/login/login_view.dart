@@ -2,26 +2,20 @@ import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vigor/routes/app_pages.dart';
-import 'package:vigor/ui/settings/settings_controller.dart';
-import 'package:vigor/ui/settings/settings_dialog.dart';
-import 'package:vigor/ui/styled_components/thin_action_button.dart';
+import 'package:vigor/controllers/settings_dialog.dart';
+import 'package:vigor/routes/routes.dart';
 
 import '../../../localization.dart';
 import 'widgets/flag.dart';
-import 'widgets/login_button.dart';
-import 'widgets/login_field.dart';
 import 'widgets/splash_title.dart';
 
 class LoginView extends StatelessWidget {
-  static const _padding = EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0);
-
   @override
   Widget build(BuildContext context) {
     final AppLocalizations_Labels labels = AppLocalizations.of(context);
-    final user = TextEditingController();
-    final password = TextEditingController();
-    final appTheme = Get.put(SettingsController()).appTheme;
+    final _sizedBox = SizedBox(height: Get.height * .05);
+    final _padding = EdgeInsets.fromLTRB(
+        Get.width / 20, Get.width / 30, Get.width / 20, Get.width / 30);
 
     /// ToDo: make localization work by country
     final _country = ui.window.locale.countryCode;
@@ -44,65 +38,56 @@ class LoginView extends StatelessWidget {
 
             ///specific text with formatting for that country's app title
             SplashTitleWidget(_country),
-            const SizedBox(height: 30.0),
 
             /// ToDo: make a real login
             TextField(
-              controller: user,
               obscureText: false,
               decoration: InputDecoration(
-                contentPadding: _padding,
                 hintText: labels.auth.userName,
-                hintStyle: Get.theme.textTheme.headline6,
                 border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(32.0)),
-                focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(32.0)),
+                    borderRadius: BorderRadius.circular(Get.width / 10)),
               ),
             ),
-            // LoginFieldWidget(
-            //     hint: labels.auth.userName, obscure: false, padding: _padding),
-            const SizedBox(height: 15.0),
-            // LoginFieldWidget(
-            //     hint: labels.auth.password, obscure: true, padding: _padding),
+
+            _sizedBox,
+
             TextField(
-              controller: password,
-              obscureText: false,
+              obscureText: true,
               decoration: InputDecoration(
-                contentPadding: _padding,
                 hintText: labels.auth.password,
-                hintStyle: Get.theme.textTheme.headline6,
                 border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(32.0)),
-                focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(32.0)),
+                    borderRadius: BorderRadius.circular(Get.width / 10)),
               ),
             ),
-            const SizedBox(height: 15.0),
-            Material(
-              elevation: 5.0,
-              borderRadius: BorderRadius.circular(64.0),
-              color: appTheme.bg2,
-              child: MaterialButton(
-                minWidth: Get.width,
-                padding: _padding,
-                onPressed: () {
-                  print(user.text);
-                  print(password.text);
-                  if (user.text == 'enfermera' && password.text == '12345') {
-                    Get.toNamed(AppRoutes.HOME);
-                  } else {
-                    Get.snackbar(
-                        'Error', 'Either username or password incorrect',
-                        snackPosition: SnackPosition.BOTTOM);
-                  }
-                },
-                child: Text(labels.auth.signIn, textAlign: TextAlign.center),
+
+            _sizedBox,
+            RaisedButton(
+              padding: _padding,
+              color: Get.theme.primaryColor,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(Get.width / 10)),
+              onPressed: () => Get.toNamed(AppRoutes.HOME),
+              child: Text(
+                labels.auth.signIn,
+                style: Get.theme.textTheme.headline6
+                    .copyWith(color: Get.theme.primaryColorLight),
               ),
             ),
-            // LoginButtonWidget(login: labels.auth.signIn, padding: _padding),
-            ThinActionButton(
-                buttonText: labels.settings.title, onPressed: settingsDialog),
+
+            _sizedBox,
+
+            RaisedButton(
+              padding: _padding,
+              color: Get.theme.primaryColor,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(Get.width / 10)),
+              onPressed: settingsDialog,
+              child: Text(
+                labels.settings.title,
+                style: Get.theme.textTheme.headline6
+                    .copyWith(color: Get.theme.primaryColorLight),
+              ),
+            ),
           ],
         ),
       ),

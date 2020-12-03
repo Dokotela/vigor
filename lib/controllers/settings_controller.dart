@@ -4,8 +4,6 @@ import 'package:vigor/controllers/locale_controller.dart';
 import 'package:vigor/controllers/theme_controller.dart';
 import 'package:vigor/models/data/menu_option.dart';
 
-import 'themes.dart';
-
 /// this was taken directly from John's repo: https://github.com/FireJuun/prapare
 /// specifically, https://github.com/FireJuun/prapare/blob/main/lib/ui/views/settings/settings_controller.dart
 ///
@@ -13,14 +11,17 @@ class SettingsController extends GetxController {
   static SettingsController get to => Get.find();
 
   /// PROPERTIES
-  final ThemeController _themeController = Get.find();
-  final LocaleController _localeController = Get.find();
+  final ThemeController _themeController =
+      Get.put<ThemeController>(ThemeController());
+  final LocaleController _localeController =
+      Get.put<LocaleController>(LocaleController());
 
   /// GETTER Functions
   List<MenuOption> getlanguageOptions() => _localeController.languageOptions;
-  ThemeMode get themeMode => _themeController.themeMode;
   String get language => _localeController.currentLanguage;
-  AppTheme get appTheme => _themeController.getAppTheme();
+  ThemeMode get themeMode => _themeController.themeMode;
+  ThemeData get theme => _themeController.lightTheme;
+  ThemeData get darkTheme => _themeController.darkTheme;
 
   /// SETTER Functions
   Future setThemeMode(ThemeMode obj) async =>

@@ -5,7 +5,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import '../ui/settings/themes.dart';
+import 'package:vigor/ui/theme/app_theme.dart';
 
 /// As usual, mostly stolen from John.
 /// https://github.com/FireJuun/prapare/blob/main/lib/controllers/theme_controller.dart
@@ -35,9 +35,9 @@ class ThemeController extends GetxController {
   bool _isDarkMode() => store.read(_key) ?? false;
   // App Themes (Light vs Dark)
   ThemeMode get themeMode => _themeMode.value;
-  AppTheme get lightTheme => AppTheme.fromType(ThemeType.Vigor);
-  AppTheme get darkTheme => AppTheme.fromType(ThemeType.Vigor_Dark);
-  AppTheme getAppTheme({Brightness brightness}) =>
+  ThemeData get lightTheme => appTheme(t: ThemeType.Vigor_Light);
+  ThemeData get darkTheme => appTheme(t: ThemeType.Vigor_Dark);
+  ThemeData getAppTheme({Brightness brightness}) =>
       _themeMode.value == ThemeMode.light
           ? lightTheme
           : _themeMode.value == ThemeMode.dark

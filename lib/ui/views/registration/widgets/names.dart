@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vigor/ui/settings/settings_controller.dart';
+import 'package:vigor/controllers/settings_controller.dart';
 
 import '../../../../localization.dart';
 
@@ -20,7 +20,6 @@ class NamesInputWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final labels = AppLocalizations.of(context);
-    final theme = Get.put(SettingsController()).appTheme;
 
     return Container(
       child: Column(

@@ -18,7 +18,6 @@ class ThinActionButton extends StatelessWidget {
     return ButtonTheme.fromButtonThemeData(
       data: Get.theme.buttonTheme.copyWith(minWidth: Get.width / 2),
       child: RaisedButton(
-        // color: viewController.appTheme.bg2,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
         onPressed: onPressed,
         padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 16),
