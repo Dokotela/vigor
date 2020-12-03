@@ -170,9 +170,14 @@ class PatientImmPage extends StatelessWidget {
     while (_displayVaxDates[name].isNotEmpty) {
       if (VaxDate.fromString(controller.birthDate()).change('$months months') <=
           VaxDate.fromString(_displayVaxDates[name].first.toJson())) {
-        _displayVaxDates[name].remove(_displayVaxDates[name].first);
-
-        return DoseOptions.completed();
+        if (VaxDate.fromString(_displayVaxDates[name].first.toJson()) ==
+            VaxDate.fromString(VaxDate.now().toString())) {
+          _displayVaxDates[name].remove(_displayVaxDates[name].first);
+          return DoseOptions.completedToday();
+        } else {
+          _displayVaxDates[name].remove(_displayVaxDates[name].first);
+          return DoseOptions.completed();
+        }
       } else {
         _displayVaxDates[name].remove(_displayVaxDates[name].first);
       }

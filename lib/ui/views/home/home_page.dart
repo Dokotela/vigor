@@ -29,8 +29,7 @@ class HomePage extends StatelessWidget {
             /// Registration for a new patient
             ActionButton(
               buttonText: labels.general.newPatient,
-              onPressed: () => Get.toNamed(AppRoutes.PATIENT_REGISTRATION,
-                  arguments: [labels, null]),
+              onPressed: () => Get.toNamed(AppRoutes.PATIENT_REGISTRATION),
             ),
 
             /// Search the patients stored on the device

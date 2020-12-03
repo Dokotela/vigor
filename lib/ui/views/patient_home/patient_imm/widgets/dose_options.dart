@@ -16,6 +16,12 @@ abstract class DoseOptions {
         child: Icon(Icons.check_circle, color: Colors.green, size: 24),
       );
 
+  static Widget completedToday() => Container(
+        child: Icon(Icons.check_circle, color: Colors.green, size: 24),
+        decoration: BoxDecoration(
+            color: Colors.grey[100], border: Border.all(color: Colors.green)),
+      );
+
   static Widget overdue() => Container(
         color: Colors.grey[100],
         child: Icon(Icons.warning, color: Colors.red, size: 24),

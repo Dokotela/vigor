@@ -1,6 +1,9 @@
 import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:vigor/routes/app_pages.dart';
+import 'package:vigor/ui/settings/settings_controller.dart';
 import 'package:vigor/ui/settings/settings_dialog.dart';
 import 'package:vigor/ui/styled_components/thin_action_button.dart';
 
@@ -16,6 +19,9 @@ class LoginView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final AppLocalizations_Labels labels = AppLocalizations.of(context);
+    final user = TextEditingController();
+    final password = TextEditingController();
+    final appTheme = Get.put(SettingsController()).appTheme;
 
     /// ToDo: make localization work by country
     final _country = ui.window.locale.countryCode;
@@ -34,13 +40,59 @@ class LoginView extends StatelessWidget {
           const SizedBox(height: 30.0),
 
           /// ToDo: make a real login
-          LoginFieldWidget(
-              hint: labels.auth.userName, obscure: false, padding: _padding),
+          TextField(
+            controller: user,
+            obscureText: false,
+            decoration: InputDecoration(
+              contentPadding: _padding,
+              hintText: labels.auth.userName,
+              hintStyle: Get.theme.textTheme.headline6,
+              border:
+                  OutlineInputBorder(borderRadius: BorderRadius.circular(32.0)),
+              focusedBorder:
+                  OutlineInputBorder(borderRadius: BorderRadius.circular(32.0)),
+            ),
+          ),
+          // LoginFieldWidget(
+          //     hint: labels.auth.userName, obscure: false, padding: _padding),
           const SizedBox(height: 15.0),
-          LoginFieldWidget(
-              hint: labels.auth.password, obscure: true, padding: _padding),
+          // LoginFieldWidget(
+          //     hint: labels.auth.password, obscure: true, padding: _padding),
+          TextField(
+            controller: password,
+            obscureText: false,
+            decoration: InputDecoration(
+              contentPadding: _padding,
+              hintText: labels.auth.password,
+              hintStyle: Get.theme.textTheme.headline6,
+              border:
+                  OutlineInputBorder(borderRadius: BorderRadius.circular(32.0)),
+              focusedBorder:
+                  OutlineInputBorder(borderRadius: BorderRadius.circular(32.0)),
+            ),
+          ),
           const SizedBox(height: 15.0),
-          LoginButtonWidget(login: labels.auth.signIn, padding: _padding),
+          Material(
+            elevation: 5.0,
+            borderRadius: BorderRadius.circular(64.0),
+            color: appTheme.bg2,
+            child: MaterialButton(
+              minWidth: Get.width,
+              padding: _padding,
+              onPressed: () {
+                print(user.text);
+                print(password.text);
+                if (user.text == 'enfermera' && password.text == '12345') {
+                  Get.toNamed(AppRoutes.HOME);
+                } else {
+                  Get.snackbar('Error', 'Either username or password incorrect',
+                      snackPosition: SnackPosition.BOTTOM);
+                }
+              },
+              child: Text(labels.auth.signIn, textAlign: TextAlign.center),
+            ),
+          ),
+          // LoginButtonWidget(login: labels.auth.signIn, padding: _padding),
           ThinActionButton(
               buttonText: labels.settings.title, onPressed: settingsDialog),
         ],
