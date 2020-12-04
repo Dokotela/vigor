@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vigor/ui/styled_components/app_bar.dart';
 
 import '../../../controllers/local/patient_home/patient_home_controller.dart';
 import '../../../ui/styled_components/bottom_navigation_bar.dart';
@@ -13,31 +14,21 @@ class PatientHomePage extends StatelessWidget {
 
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(
-        title: FlatButton(
+      appBar: VigorAppBar(
+        title: controller.name(),
+        leading: IconButton(
+          icon: const Icon(Icons.edit, color: Colors.white),
           onPressed: () => controller.editPatient(),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(controller.name(),
-                  style: TextStyle(color: Colors.white, fontSize: 28)),
-              Icon(Icons.edit, color: Colors.white),
-            ],
-          ),
         ),
       ),
       body: SafeArea(
         child: Column(
           children: [
-            FlatButton(
-              color: Colors.white,
-              onPressed: () => controller.editPatient(),
-              child: InfoBannerWidget(
-                id: controller.id(),
-                birthDate: controller.birthDate(),
-                relativeAge: controller.relativeAge(),
-                sex: controller.sex(),
-              ),
+            InfoBannerWidget(
+              id: controller.id(),
+              birthDate: controller.birthDate(),
+              relativeAge: controller.relativeAge(),
+              sex: controller.sex(),
             ),
             PatientImmPage(),
           ],

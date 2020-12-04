@@ -50,9 +50,9 @@ ThemeData get lightTheme {
     accentTextTheme: _buildTextTheme().apply(bodyColor: Colors.white),
     materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
     textSelectionHandleColor: Colors.transparent,
-    buttonColor: Color(0xff00a086),
-    cursorColor: Color(0xff00a086),
-    highlightColor: Color(0xff00a086),
-    toggleableActiveColor: Color(0xff00a086),
+    buttonColor: Color(0xff353AE0),
+    cursorColor: Color(0xff353AE0),
+    highlightColor: Color(0xff353AE0),
+    toggleableActiveColor: Color(0xff353AE0),
   );
 }

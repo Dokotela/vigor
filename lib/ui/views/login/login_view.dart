@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:vigor/controllers/settings_dialog.dart';
 import 'package:vigor/routes/routes.dart';
+import 'package:vigor/ui/styled_components/app_bar.dart';
 
 import '../../../localization.dart';
 import 'widgets/flag.dart';
@@ -28,7 +29,7 @@ class LoginView extends StatelessWidget {
         }
       },
       child: Scaffold(
-        appBar: AppBar(title: Text(labels.app.title)),
+        appBar: VigorAppBar(title: labels.app.title),
         body: ListView(
           children: <Widget>[
             /// Widget that displays the flags country as a map of that country
@@ -59,6 +60,7 @@ class LoginView extends StatelessWidget {
             ),
 
             _sizedBox,
+
             RaisedButton(
               padding: _padding,
               color: Get.theme.primaryColor,

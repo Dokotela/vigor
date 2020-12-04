@@ -51,8 +51,6 @@ class ThemeController extends GetxController {
     _themeMode.value = theme;
     Get.changeThemeMode(_themeMode.value);
     await store.write(_key, theme == ThemeMode.dark);
-    print(theme);
-    print(_themeMode.value);
     update();
   }
 

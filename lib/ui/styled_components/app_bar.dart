@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:vigor/controllers/settings_dialog.dart';
 
 class VigorAppBar extends AppBar {
-  VigorAppBar({@required String title})
+  VigorAppBar({@required String title, Widget leading})
       : super(
             title: Text(
               title,
@@ -11,6 +11,7 @@ class VigorAppBar extends AppBar {
                   Get.theme.textTheme.headline4.copyWith(color: Colors.white),
             ),
             elevation: 5,
+            leading: leading,
             automaticallyImplyLeading: false,
             actions: [
               IconButton(
