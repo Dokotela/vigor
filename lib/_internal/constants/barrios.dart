@@ -1,9 +1,9 @@
 const barrios = <String>[
-  'Filiu',
-  'La 41',
-  'Carretera',
-  'Villa Verde',
   'Cachipero',
-  'Puerto Rico',
+  'Carretera',
+  'Filiu',
   'Kilombo',
+  'La 41',
+  'Puerto Rico',
+  'Villa Verde',
 ];

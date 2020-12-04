@@ -7,10 +7,12 @@ class GenderSelectionWidget extends StatelessWidget {
   const GenderSelectionWidget({
     @required this.curGender,
     @required this.setGender,
+    @required this.genderError,
   });
 
   final int curGender;
   final Function setGender;
+  final String genderError;
 
   @override
   Widget build(BuildContext context) {
@@ -67,6 +69,11 @@ class GenderSelectionWidget extends StatelessWidget {
               Text(labels.general.sexAtBirth.male,
                   style: Get.theme.textTheme.headline6),
             ],
+          ),
+          Text(
+            genderError,
+            style: Get.theme.textTheme.caption
+                .copyWith(color: Get.theme.colorScheme.error),
           ),
         ],
       ),

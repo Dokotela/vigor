@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vigor/ui/styled_components/action_button.dart';
+import 'package:vigor/ui/styled_components/app_bar.dart';
 
 import '../../../controllers/local/registration/contact_registration_controller.dart';
 import '../../../localization.dart';
@@ -24,79 +26,44 @@ class ContactRegistrationPage extends StatelessWidget {
       },
       child: Scaffold(
         resizeToAvoidBottomInset: false,
-        appBar: AppBar(
-          title: Text(labels.general.contacts),
-        ),
+        appBar: VigorAppBar(title: labels.general.contacts),
         body: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(0.0),
           child: Center(
             child: Obx(
               () => Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
                   NamesInputWidget(
-                    familyName: controller.familyName1,
-                    givenName: controller.givenName1,
-                    familyNameError: controller.familyNameError1,
-                    givenNameError: controller.givenNameError1,
+                    familyName: controller.familyName,
+                    givenName: controller.givenName,
+                    familyNameError: controller.familyNameError,
+                    givenNameError: controller.givenNameError,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       BarrioWidget(
                         barriosList: controller.barriosList,
-                        displayBarrio: controller.barrio1,
-                        setBarrio: controller.barrio1Event,
-                        dispBarrioError: controller.barrioError1,
+                        displayBarrio: controller.barrio,
+                        setBarrio: controller.barrioEvent,
+                        dispBarrioError: controller.barrioError,
                       ),
                       RelationWidget(
                         relationList: controller.relationList,
-                        displayRelation: controller.relation1,
-                        setRelation: controller.relation1Event,
-                        dispRelationError: controller.relationError1,
+                        displayRelation: controller.relation,
+                        setRelation: controller.relationEvent,
+                        dispRelationError: controller.relationError,
                       ),
                     ],
                   ),
                   Divider(
                     color: Colors.blue[900],
-                    thickness: 10,
+                    thickness: 0,
                   ),
-                  NamesInputWidget(
-                    familyName: controller.familyName2,
-                    givenName: controller.givenName2,
-                    familyNameError: controller.familyNameError2,
-                    givenNameError: controller.givenNameError2,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      BarrioWidget(
-                        barriosList: controller.barriosList,
-                        displayBarrio: controller.barrio2,
-                        setBarrio: controller.barrio2Event,
-                        dispBarrioError: controller.barrioError2,
-                      ),
-                      RelationWidget(
-                        relationList: controller.relationList,
-                        displayRelation: controller.relation2,
-                        setRelation: controller.relation2Event,
-                        dispRelationError: controller.relationError2,
-                      ),
-                    ],
-                  ),
-                  ButtonTheme(
-                    minWidth: double.infinity,
-                    child: RaisedButton(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16.0),
-                      ),
-                      onPressed: () => controller.registerEvent(),
-                      child: Text(
-                        labels.registration.registerPatient,
-                        style: Get.textTheme.bodyText1
-                            .copyWith(color: Colors.white),
-                      ),
-                    ),
+                  ActionButton(
+                    buttonText: labels.registration.registerPatient,
+                    onPressed: controller.registerEvent,
                   ),
                 ],
               ),

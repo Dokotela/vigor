@@ -17,62 +17,39 @@ class ContactRegistrationController extends GetxController {
   final _patient = PatientModel().obs;
   final labels = AppLocalizations.of(Get.context);
 
-  final familyName1 = TextEditingController();
-  final _familyNameError1 = ''.obs;
-  final givenName1 = TextEditingController();
-  final _givenNameError1 = ''.obs;
-  final _barrio1 = ''.obs;
-  final _barrioError1 = ''.obs;
-  final _relation1 = ''.obs;
-  final _relationError1 = ''.obs;
-
-  final familyName2 = TextEditingController();
-  final _familyNameError2 = ''.obs;
-  final givenName2 = TextEditingController();
-  final _givenNameError2 = ''.obs;
-  final _barrio2 = ''.obs;
-  final _barrioError2 = ''.obs;
-  final _relation2 = ''.obs;
-  final _relationError2 = ''.obs;
+  final familyName = TextEditingController();
+  final _familyNameError = ''.obs;
+  final givenName = TextEditingController();
+  final _givenNameError = ''.obs;
+  final _barrio = ''.obs;
+  final _barrioError = ''.obs;
+  final _relation = ''.obs;
+  final _relationError = ''.obs;
 
   /// INIT
   @override
   void onInit() {
     _patient.value = Get.arguments;
-    _barrio1.value = _contactBarrio(0);
-    _relation1.value = _contactRelation(0);
-    _barrio2.value = _contactBarrio(1);
-    _relation2.value = _contactRelation(1);
-    familyName1.text = _familyName(0);
-    givenName1.text = _givenName(0);
-    familyName2.text = _familyName(1);
-    givenName2.text = _givenName(1);
-
+    _barrio.value = _contactBarrio(0);
+    _relation.value = _contactRelation(0);
+    familyName.text = _familyName(0);
+    givenName.text = _givenName(0);
     super.onInit();
   }
 
-  String get initialGivenName2 => _givenName(1);
-  String get initialFamilyName2 => _familyName(1);
-  String get initialGivenName1 => _givenName(0);
-  String get initialFamilyName1 => _familyName(0);
+  String get initialGivenName => _givenName(0);
+  String get initialFamilyName => _familyName(0);
 
   // GETTERS
   List<String> get barriosList => barrios;
   List<String> get relationList => relationshipTypes();
 
-  String get familyNameError1 => _familyNameError1.value;
-  String get givenNameError1 => _givenNameError1.value;
-  String get barrio1 => _barrio1.value;
-  String get barrioError1 => _barrioError1.value;
-  String get relation1 => _relation1.value;
-  String get relationError1 => _relationError1.value;
-
-  String get familyNameError2 => _familyNameError2.value;
-  String get givenNameError2 => _givenNameError2.value;
-  String get barrio2 => _barrio2.value;
-  String get barrioError2 => _barrioError2.value;
-  String get relation2 => _relation2.value;
-  String get relationError2 => _relationError2.value;
+  String get familyNameError => _familyNameError.value;
+  String get givenNameError => _givenNameError.value;
+  String get barrio => _barrio.value;
+  String get barrioError => _barrioError.value;
+  String get relation => _relation.value;
+  String get relationError => _relationError.value;
 
   String _givenName(int number) => _patient?.value?.patient?.contact == null
       ? ''
@@ -126,44 +103,24 @@ class ContactRegistrationController extends GetxController {
   }
 
   // EVENTS
-  void barrio1Event(String barrio1) => _barrio1.value = barrio1;
-  void barrio2Event(String barrio2) => _barrio2.value = barrio2;
-  void relation1Event(String relation1) => _relation1.value = relation1;
-  void relation2Event(String relation2) => _relation2.value = relation2;
+  void barrioEvent(String barrio) => _barrio.value = barrio;
+  void relationEvent(String relation) => _relation.value = relation;
 
   Future<void> registerEvent() async {
-    print(relation1);
-    print(isValidRegistrationRelation(relation1));
-    if (isValidRegistrationName(familyName1.text) &&
-        isValidRegistrationName(givenName1.text) &&
-        isValidRegistrationBarrio(barrio1) &&
-        isValidRegistrationRelation(relation1)) {
-      final newContact1 = formatPatientContact(
-          familyName1.text, givenName1.text, barrio1, relation1);
+    if (isValidRegistrationName(familyName.text) &&
+        isValidRegistrationName(givenName.text) &&
+        isValidRegistrationBarrio(barrio) &&
+        isValidRegistrationRelation(relation)) {
+      final newContact = formatPatientContact(
+          familyName.text, givenName.text, barrio, relation);
       _patient.value.patient.contact == null
           ? _patient.value.patient =
-              _patient.value.patient.copyWith(contact: [newContact1])
+              _patient.value.patient.copyWith(contact: [newContact])
           : _patient.value.patient.contact.isEmpty
-              ? _patient.value.patient.contact.add(newContact1)
-              : _patient.value.patient.contact.contains(newContact1)
+              ? _patient.value.patient.contact.add(newContact)
+              : _patient.value.patient.contact.contains(newContact)
                   ? null
-                  : _patient.value.patient.contact.add(newContact1);
-
-      if (isValidRegistrationName(familyName2.text) &&
-          isValidRegistrationName(givenName2.text) &&
-          isValidRegistrationBarrio(barrio2) &&
-          isValidRegistrationRelation(relation2)) {
-        final newContact2 = formatPatientContact(
-            familyName2.text, givenName2.text, barrio2, relation2);
-        _patient.value.patient.contact == null
-            ? _patient.value.patient =
-                _patient.value.patient.copyWith(contact: [newContact2])
-            : _patient.value.patient.contact.isEmpty
-                ? _patient.value.patient.contact.add(newContact2)
-                : _patient.value.patient.contact.contains(newContact2)
-                    ? null
-                    : _patient.value.patient.contact.add(newContact2);
-      }
+                  : _patient.value.patient.contact.add(newContact);
 
       final saveResult = await IFhirDb().save(_patient.value.patient);
       saveResult.fold(
@@ -171,16 +128,16 @@ class ContactRegistrationController extends GetxController {
         (r) => Get.offAllNamed(AppRoutes.PATIENT_HOME, arguments: r as Patient),
       );
     } else {
-      _familyNameError1.value = !isValidRegistrationName(familyName1.text)
+      _familyNameError.value = !isValidRegistrationName(familyName.text)
           ? labels.general.familyNameError
-          : _familyNameError1.value;
-      _givenNameError1.value = !isValidRegistrationName(givenName1.text)
+          : _familyNameError.value;
+      _givenNameError.value = !isValidRegistrationName(givenName.text)
           ? labels.general.givenNameError
-          : _givenNameError1.value;
-      _relationError1.value = !isValidRegistrationRelation(relation1)
+          : _givenNameError.value;
+      _relationError.value = !isValidRegistrationRelation(relation)
           ? 'Please select relationship'
           : '';
-      _barrioError1.value = !isValidRegistrationBarrio(barrio1)
+      _barrioError.value = !isValidRegistrationBarrio(barrio)
           ? labels.general.neighborhoodError
           : '';
     }

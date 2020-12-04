@@ -39,6 +39,7 @@ class _SettingsDialogContent extends StatelessWidget {
     ];
 
     final TextTheme textTheme = context.textTheme;
+    final SettingsController controller = Get.find();
     return Dialog(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 24.0),
@@ -47,18 +48,17 @@ class _SettingsDialogContent extends StatelessWidget {
             Center(
                 child: Text(labels.app.settings, style: textTheme.headline5)),
             Expanded(
-              child: GetX<SettingsController>(
-                init: SettingsController(),
-                builder: (controller) => ListView(
-                  children: <Widget>[
-                    const SizedBox(height: 24),
+              child: ListView(
+                children: <Widget>[
+                  const SizedBox(height: 24),
 
-                    // *** CHOOSE THEME ***
-                    Center(
-                        child: Text(labels.app.chooseTheme,
-                            style: textTheme.bodyText1)),
-                    ...themeOptions.map(
-                      (e) => RadioListTile(
+                  // *** CHOOSE THEME ***
+                  Center(
+                      child: Text(labels.app.chooseTheme,
+                          style: textTheme.bodyText1)),
+                  ...themeOptions.map(
+                    (e) => Obx(
+                      () => RadioListTile(
                         title: Text(e.value, style: textTheme.bodyText1),
                         subtitle: (controller.language == 'en')
                             ? null
@@ -69,24 +69,24 @@ class _SettingsDialogContent extends StatelessWidget {
                             controller.setThemeMode(newValue),
                       ),
                     ),
-                    const SizedBox(height: 24),
+                  ),
+                  const SizedBox(height: 24),
 
-                    // *** CHOOSE LANGUAGE ***
-                    Center(
-                        child: Text(labels.app.chooseLanguage,
-                            style: textTheme.bodyText1)),
-                    ...controller.getlanguageOptions().map(
-                          (e) => RadioListTile(
-                            title: Text(e.value, style: textTheme.bodyText1),
-                            subtitle: Text(e.englishValue,
-                                style: textTheme.bodyText2),
-                            value: e.key,
-                            groupValue: controller.language,
-                            onChanged: (value) => controller.setLocale(value),
-                          ),
+                  // *** CHOOSE LANGUAGE ***
+                  Center(
+                      child: Text(labels.app.chooseLanguage,
+                          style: textTheme.bodyText1)),
+                  ...controller.getlanguageOptions().map(
+                        (e) => RadioListTile(
+                          title: Text(e.value, style: textTheme.bodyText1),
+                          subtitle:
+                              Text(e.englishValue, style: textTheme.bodyText2),
+                          value: e.key,
+                          groupValue: controller.language,
+                          onChanged: (value) => controller.setLocale(value),
                         ),
-                  ],
-                ),
+                      ),
+                ],
               ),
             ),
             TextButton(

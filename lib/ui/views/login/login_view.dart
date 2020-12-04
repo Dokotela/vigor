@@ -30,8 +30,6 @@ class LoginView extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(title: Text(labels.app.title)),
         body: ListView(
-          // mainAxisAlignment: MainAxisAlignment.start,
-          // crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             /// Widget that displays the flags country as a map of that country
             FlagWidget(_country),
@@ -70,7 +68,7 @@ class LoginView extends StatelessWidget {
               child: Text(
                 labels.auth.signIn,
                 style: Get.theme.textTheme.headline6
-                    .copyWith(color: Get.theme.primaryColorLight),
+                    .copyWith(color: Get.theme.colorScheme.onPrimary),
               ),
             ),
 
@@ -85,7 +83,7 @@ class LoginView extends StatelessWidget {
               child: Text(
                 labels.settings.title,
                 style: Get.theme.textTheme.headline6
-                    .copyWith(color: Get.theme.primaryColorLight),
+                    .copyWith(color: Get.theme.colorScheme.onPrimary),
               ),
             ),
           ],

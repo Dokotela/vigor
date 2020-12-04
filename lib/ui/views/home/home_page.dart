@@ -16,7 +16,6 @@ class HomePage extends StatelessWidget {
       appBar: VigorAppBar(title: labels.vigor.title),
       body: Container(
         constraints: const BoxConstraints.expand(),
-        color: Get.theme.primaryColor,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -33,8 +32,7 @@ class HomePage extends StatelessWidget {
               onPressed: () => Get.toNamed(AppRoutes.PATIENT_SEARCH),
             ),
             ActionButton(
-              buttonText: 'Summary report',
-              //labels.medical.summaryReport,
+              buttonText: labels.medical.summaryReport,
             ),
           ],
         ),

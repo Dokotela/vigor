@@ -23,6 +23,7 @@ class PatientRegistrationController extends GetxController {
   ).obs;
   final _birthDateString = ''.obs;
   final _gender = 0.obs;
+  final _genderError = ''.obs;
   final _birthDateError = ''.obs;
   final _barrio = ''.obs;
   final _barrioError = ''.obs;
@@ -52,6 +53,7 @@ class PatientRegistrationController extends GetxController {
 
   /// GETTER FUNCTIONS
   int get gender => _gender.value;
+  String get genderError => _genderError.value;
   DateTime get birthDate => _birthDate.value;
   String get birthDateString => _birthDateString.value;
   String get barrio => _barrio.value;
@@ -72,47 +74,50 @@ class PatientRegistrationController extends GetxController {
   void barrioEvent(String barrio) => _barrio.value = barrio;
 
   void registerEvent() {
-    if (isValidRegistrationName(familyName.text)) {
-      if (isValidRegistrationName(givenName.text)) {
-        if (isValidRegistrationBirthDate(birthDate)) {
-          if (isValidRegistrationBarrio(barrio)) {
-            _patient.value.patient = _patient.value.patient == null
-                ? Patient(
-                    name: [
-                      HumanName(
-                        family: familyName.text,
-                        given: [givenName.text],
-                      )
-                    ],
-                    birthDate: Date(birthDate),
-                    address: [Address(district: barrio)],
-                    gender:
-                        gender == 1 ? PatientGender.female : PatientGender.male)
-                : _patient.value.patient.copyWith(
-                    name: [
-                      HumanName(
-                        family: familyName.text,
-                        given: [givenName.text],
-                      )
-                    ],
-                    birthDate: Date(birthDate),
-                    address: [Address(district: barrio)],
-                    gender: gender == 1
-                        ? PatientGender.female
-                        : PatientGender.male);
-            Get.toNamed(AppRoutes.CONTACT_REGISTRATION,
-                arguments: _patient.value);
-          } else {
-            _barrioError.value = labels.general.neighborhoodError;
-          }
-        } else {
-          _birthDateError.value = labels.general.birthDateError;
-        }
-      } else {
+    if (isValidRegistrationName(familyName.text) &&
+        isValidRegistrationName(givenName.text) &&
+        isValidRegistrationBirthDate(birthDate) &&
+        isValidRegistrationBarrio(barrio) &&
+        isValidGenderInt(gender)) {
+      _patient.value.patient = _patient.value.patient == null
+          ? Patient(
+              name: [
+                HumanName(
+                  family: familyName.text,
+                  given: [givenName.text],
+                )
+              ],
+              birthDate: Date(birthDate),
+              address: [Address(district: barrio)],
+              gender: gender == 1 ? PatientGender.female : PatientGender.male)
+          : _patient.value.patient.copyWith(
+              name: [
+                HumanName(
+                  family: familyName.text,
+                  given: [givenName.text],
+                )
+              ],
+              birthDate: Date(birthDate),
+              address: [Address(district: barrio)],
+              gender: gender == 1 ? PatientGender.female : PatientGender.male);
+      Get.toNamed(AppRoutes.CONTACT_REGISTRATION, arguments: _patient.value);
+    } else {
+      if (!isValidRegistrationName(familyName.text)) {
+        _familyNameError.value = labels.general.familyNameError;
+      }
+      if (!isValidRegistrationName(givenName.text)) {
         _givenNameError.value = labels.general.givenNameError;
       }
-    } else {
-      _familyNameError.value = labels.general.familyNameError;
+      if (!isValidRegistrationBirthDate(birthDate)) {
+        _birthDateError.value = labels.general.birthDateError;
+      }
+      if (!isValidRegistrationBarrio(barrio)) {
+        _barrioError.value = labels.general.neighborhoodError;
+      }
+      if (!isValidGenderInt(gender)) {
+        _genderError.value = 'Please select gender';
+        //labels.general.genderError;
+      }
     }
   }
 }

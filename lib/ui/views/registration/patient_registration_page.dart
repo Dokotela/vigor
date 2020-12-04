@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vigor/ui/styled_components/app_bar.dart';
 
 import '../../../controllers/local/registration/patient_registration_controller.dart';
 import '../../styled_components/bottom_navigation_bar.dart';
@@ -22,9 +23,8 @@ class PatientRegistrationPage extends StatelessWidget {
       },
       child: Scaffold(
         resizeToAvoidBottomInset: false,
-        appBar: AppBar(
-          title: Text(controller.labels.general.patientInformation),
-        ),
+        appBar:
+            VigorAppBar(title: controller.labels.general.patientInformation),
         body: Padding(
           padding: const EdgeInsets.all(10.0),
           child: Center(
@@ -47,6 +47,7 @@ class PatientRegistrationPage extends StatelessWidget {
                   GenderSelectionWidget(
                     curGender: controller.gender,
                     setGender: controller.genderEvent,
+                    genderError: controller.genderError,
                   ),
 
                   /// reusable widget for entering birthdate, arguments are

@@ -5,6 +5,8 @@ bool isValidRegistrationName(String name) => name.length >= 2;
 
 bool isValidRegistrationGender(String gender) => gender.contains(gender);
 
+bool isValidGenderInt(int gender) => gender > 0;
+
 bool isValidRegistrationBirthDate(DateTime date) =>
     DateTime.now().isAfter(date);
 

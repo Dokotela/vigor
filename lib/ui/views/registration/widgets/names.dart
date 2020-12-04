@@ -40,7 +40,7 @@ class NamesInputWidget extends StatelessWidget {
           TextFormField(
             controller: givenName,
             decoration: InputDecoration(
-              hintText: labels.general.name.otherNames,
+              hintText: labels.general.name.givenNames,
               errorText: givenNameError.tr,
             ),
             style: Get.textTheme.headline6,
