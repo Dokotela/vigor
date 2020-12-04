@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vigor/ui/styled_components/app_bar.dart';
 
 import '../../../localization.dart';
 import '../../../routes/routes.dart';
@@ -12,13 +13,7 @@ class HomePage extends StatelessWidget {
     final labels = AppLocalizations.of(context);
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          labels.vigor.title,
-          style: Get.theme.textTheme.headline3.apply(color: Colors.white),
-        ),
-        elevation: 0,
-      ),
+      appBar: VigorAppBar(title: labels.vigor.title),
       body: Container(
         constraints: const BoxConstraints.expand(),
         color: Get.theme.primaryColor,
@@ -38,7 +33,8 @@ class HomePage extends StatelessWidget {
               onPressed: () => Get.toNamed(AppRoutes.PATIENT_SEARCH),
             ),
             ActionButton(
-              buttonText: labels.general.mySchedule,
+              buttonText: 'Summary report',
+              //labels.medical.summaryReport,
             ),
           ],
         ),

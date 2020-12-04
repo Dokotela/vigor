@@ -21,7 +21,8 @@ class PatientRegistrationController extends GetxController {
     DateTime.now().month,
     DateTime.now().day + 1,
   ).obs;
-  final _gender = true.obs;
+  final _birthDateString = ''.obs;
+  final _gender = 0.obs;
   final _birthDateError = ''.obs;
   final _barrio = ''.obs;
   final _barrioError = ''.obs;
@@ -33,12 +34,13 @@ class PatientRegistrationController extends GetxController {
   void onInit() {
     if (Get.arguments != null) {
       _patient.value = Get.arguments;
-      _gender.value = _patient.value.patient.gender == PatientGender.female;
+      _gender.value =
+          _patient.value.patient.gender == PatientGender.female ? 1 : 2;
       _birthDate.value =
           DateTime.parse(_patient.value.patient.birthDate.toString());
       _barrio.value = _patient.value.barrio();
+      _birthDateString.value = dateFromDateTime(_birthDate.value);
     } else {
-      _gender.value = true;
       _barrio.value = labels.general.address.neighborhood;
     }
 
@@ -49,9 +51,9 @@ class PatientRegistrationController extends GetxController {
   }
 
   /// GETTER FUNCTIONS
-  bool get gender => _gender.value;
+  int get gender => _gender.value;
   DateTime get birthDate => _birthDate.value;
-  String get birthDateString => dateFromDateTime(_birthDate.value);
+  String get birthDateString => _birthDateString.value;
   String get barrio => _barrio.value;
   String get familyNameError => _familyNameError.value;
   String get givenNameError => _givenNameError.value;
@@ -60,9 +62,12 @@ class PatientRegistrationController extends GetxController {
   List<String> get barriosList => _barriosList;
 
   /// EVENTS
-  void genderEvent(bool gender) => _gender.value = gender;
+  void genderEvent(int gender) => _gender.value = gender;
 
-  void birthDateEvent(DateTime birthDate) => _birthDate.value = birthDate;
+  void birthDateEvent(DateTime birthDate) {
+    _birthDate.value = birthDate;
+    _birthDateString.value = dateFromDateTime(_birthDate.value);
+  }
 
   void barrioEvent(String barrio) => _barrio.value = barrio;
 
@@ -81,7 +86,8 @@ class PatientRegistrationController extends GetxController {
                     ],
                     birthDate: Date(birthDate),
                     address: [Address(district: barrio)],
-                    gender: gender ? PatientGender.female : PatientGender.male)
+                    gender:
+                        gender == 1 ? PatientGender.female : PatientGender.male)
                 : _patient.value.patient.copyWith(
                     name: [
                       HumanName(
@@ -91,7 +97,7 @@ class PatientRegistrationController extends GetxController {
                     ],
                     birthDate: Date(birthDate),
                     address: [Address(district: barrio)],
-                    gender: gender == 'female'
+                    gender: gender == 1
                         ? PatientGender.female
                         : PatientGender.male);
             Get.toNamed(AppRoutes.CONTACT_REGISTRATION,

@@ -84,7 +84,7 @@ class PatientSearchPage extends StatelessWidget {
                       onPressed: () => viewController.switchColor2(),
                       // todo: handle singular/pleural as extension
                       /// spec: https://github.com/aloisdeniel/flutter_sheet_localization
-                      child: Text(labels.medical.vaccines)),
+                      child: Text(labels.medical.vaccines.title)),
                 ],
               ),
             ),

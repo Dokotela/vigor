@@ -74,6 +74,7 @@ class AppLocalizations {
         givenNameError: "Enter other names",
         familyNameError: "Enter family name",
         relationshipError: "Please select relationship",
+        nextPage: "Next Page",
         address: AppLocalizations_Labels_General_Address(
           city: "City",
           country: "Country",
@@ -85,9 +86,9 @@ class AppLocalizations {
           title: "Address",
         ),
         name: AppLocalizations_Labels_General_Name(
-          familyName: "Family Name",
+          familyName: "Family/Last Name",
           firstName: "First Name",
-          givenNames: "Given Names",
+          givenNames: "First/Given Names",
           lastName: "Last Name",
           name: "Name",
           otherNames: "Other Names",
@@ -129,7 +130,14 @@ class AppLocalizations {
         immunizations: "Immunizations",
         deworming: "Deworming",
         vaccine: "Vaccine",
-        vaccines: "Vaccines",
+        summaryReport: "Summary Report",
+        vaccines: AppLocalizations_Labels_Medical_Vaccines(
+          title: "Vaccines",
+          none: "No previous vaccines of this type given",
+          dateGiven: "Date Given",
+          certify: "Click to certify dates",
+          addDate: "Add date of vaccine:",
+        ),
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "Register Patient",
@@ -211,6 +219,7 @@ class AppLocalizations {
         givenNameError: "Introducir otros nombres",
         familyNameError: "Introduce el nombre de la familia",
         relationshipError: "Por favor seleccione la relación",
+        nextPage: "Siguiente página",
         address: AppLocalizations_Labels_General_Address(
           city: "Ciudad",
           country: "País",
@@ -222,9 +231,9 @@ class AppLocalizations {
           title: "Habla a",
         ),
         name: AppLocalizations_Labels_General_Name(
-          familyName: "Apellido",
+          familyName: "Familia / Apellido",
           firstName: "Nombre de pila",
-          givenNames: "Nombres dados",
+          givenNames: "First / Nombre de pila",
           lastName: "Apellido",
           name: "Nombre",
           otherNames: "Otros nombres",
@@ -266,7 +275,14 @@ class AppLocalizations {
         immunizations: "inmunizaciones",
         deworming: "desparasitación",
         vaccine: "Vacuna",
-        vaccines: "Vacunas",
+        summaryReport: "Informe resumido",
+        vaccines: AppLocalizations_Labels_Medical_Vaccines(
+          title: "Vacunas",
+          none: "No hay vacunas anteriores de este tipo dado",
+          dateGiven: "Dada la fecha",
+          certify: "Haga clic para certificar fechas",
+          addDate: "Añadir la fecha de la vacuna:",
+        ),
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "Registro de Pacientes",
@@ -348,6 +364,7 @@ class AppLocalizations {
         givenNameError: "إدخال أسماء أخرى",
         familyNameError: "أدخل اسم العائلة",
         relationshipError: "الرجاء تحديد العلاقة",
+        nextPage: "الصفحة التالية",
         address: AppLocalizations_Labels_General_Address(
           city: "مدينة",
           country: "بلد",
@@ -359,9 +376,9 @@ class AppLocalizations {
           title: "عنوان",
         ),
         name: AppLocalizations_Labels_General_Name(
-          familyName: "اسم العائلة",
+          familyName: "الأسرة / اسم العائلة",
           firstName: "الاسم الاول",
-          givenNames: "أسماء مسماه",
+          givenNames: "أولا / أسماء نظرا",
           lastName: "الكنية",
           name: "اسم",
           otherNames: "اسماء اخرى",
@@ -403,7 +420,14 @@ class AppLocalizations {
         immunizations: "التطعيمات",
         deworming: "للتخلص من الديدان",
         vaccine: "لقاح",
-        vaccines: "اللقاحات",
+        summaryReport: "تقرير ملخص",
+        vaccines: AppLocalizations_Labels_Medical_Vaccines(
+          title: "اللقاحات",
+          none: "لا اللقاحات السابقة من هذا نوع معين",
+          dateGiven: "تاريخ نظرا",
+          certify: "انقر للمصادقة على مواعيد",
+          addDate: "إضافة التاريخ من لقاح:",
+        ),
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "سجل المريض",
@@ -485,6 +509,7 @@ class AppLocalizations {
         givenNameError: "अन्य नाम दर्ज",
         familyNameError: "परिवार का नाम दर्ज करें",
         relationshipError: "कृपया संबंध का चयन",
+        nextPage: "अगला पृष्ठ",
         address: AppLocalizations_Labels_General_Address(
           city: "Faridabad",
           country: "देश",
@@ -496,9 +521,9 @@ class AppLocalizations {
           title: "पता",
         ),
         name: AppLocalizations_Labels_General_Name(
-          familyName: "परिवार का नाम",
+          familyName: "पारिवारिक / अंतिम नाम",
           firstName: "पहला नाम",
-          givenNames: "दिए गए नाम",
+          givenNames: "प्रथम / दिए गए नाम",
           lastName: "उपनाम",
           name: "नाम",
           otherNames: "दुसरे नाम",
@@ -540,7 +565,14 @@ class AppLocalizations {
         immunizations: "टीकाकरण",
         deworming: "स्वच्छ",
         vaccine: "टीका",
-        vaccines: "टीके",
+        summaryReport: "संक्षिप्त रिपोर्ट",
+        vaccines: AppLocalizations_Labels_Medical_Vaccines(
+          title: "टीके",
+          none: "इस प्रकार का कोई पिछले टीके दिए गए",
+          dateGiven: "दिनांक को देखते हुए",
+          certify: "दिनांक प्रमाणित करने के लिए क्लिक करें",
+          addDate: "टीके की तारीख जोड़ें:",
+        ),
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "रजिस्टर रोगी",
@@ -622,6 +654,7 @@ class AppLocalizations {
         givenNameError: "Введите другие имена",
         familyNameError: "Введите фамилию",
         relationshipError: "Пожалуйста, выберите отношения",
+        nextPage: "Следующая Страница",
         address: AppLocalizations_Labels_General_Address(
           city: "город",
           country: "Страна",
@@ -633,9 +666,9 @@ class AppLocalizations {
           title: "Адрес",
         ),
         name: AppLocalizations_Labels_General_Name(
-          familyName: "Фамилия",
+          familyName: "Семья / Фамилия",
           firstName: "Имя",
-          givenNames: "Второе имя",
+          givenNames: "Первый / Указанные имена",
           lastName: "Фамилия",
           name: "название",
           otherNames: "Другие имена",
@@ -677,7 +710,14 @@ class AppLocalizations {
         immunizations: "Иммунизация",
         deworming: "дегельминтация",
         vaccine: "вакцина",
-        vaccines: "Вакцина",
+        summaryReport: "Отчет",
+        vaccines: AppLocalizations_Labels_Medical_Vaccines(
+          title: "Вакцина",
+          none: "Нет предыдущих вакцин этого типа данные",
+          dateGiven: "Дата Учитывая",
+          certify: "Нажмите для подтверждения даты",
+          addDate: "Дата добавления вакцины:",
+        ),
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "Регистрация пациентов",
@@ -759,6 +799,7 @@ class AppLocalizations {
         givenNameError: "অন্যান্য নামগুলি লিখুন",
         familyNameError: "পারিবারিক নাম লিখুন",
         relationshipError: "দয়া করে সম্পর্ক নির্বাচন",
+        nextPage: "পরবর্তী পৃষ্ঠা",
         address: AppLocalizations_Labels_General_Address(
           city: "শহর",
           country: "দেশ",
@@ -770,9 +811,9 @@ class AppLocalizations {
           title: "ঠিকানা",
         ),
         name: AppLocalizations_Labels_General_Name(
-          familyName: "পারিবারিক নাম",
+          familyName: "পারিবারিক / শেষ নাম",
           firstName: "নামের প্রথম অংশ",
-          givenNames: "প্রদত্ত নাম",
+          givenNames: "প্রথম / দেওয়া নাম",
           lastName: "নামের শেষাংশ",
           name: "নাম",
           otherNames: "অন্য নামগুলো",
@@ -814,7 +855,14 @@ class AppLocalizations {
         immunizations: "ইমিউনাইজেশন",
         deworming: "ডিওয়ার্মিং",
         vaccine: "টীকা",
-        vaccines: "টিকা",
+        summaryReport: "সারসংক্ষেপ প্রতিবেদন",
+        vaccines: AppLocalizations_Labels_Medical_Vaccines(
+          title: "টিকা",
+          none: "এই ধরনের কোনো পূর্ববর্তী টিকা দেওয়া",
+          dateGiven: "তারিখ দেওয়া",
+          certify: "তারিখ প্রত্যয়ন করতে ক্লিক করুন",
+          addDate: "টিকা তারিখ যোগ করুন",
+        ),
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "নিবন্ধন রোগীর",
@@ -896,6 +944,7 @@ class AppLocalizations {
         givenNameError: "သည်အခြားအမည်များကိုရိုက်ထည့်ပါ",
         familyNameError: "မိသားစုနာမည်ရိုက်ထည့်ပါ",
         relationshipError: "ဆက်ဆံရေးမျိုးကိုရွေးချယ်ပါ ကျေးဇူးပြု.",
+        nextPage: "next ကို 's Page",
         address: AppLocalizations_Labels_General_Address(
           city: "မြို့",
           country: "ပြည်",
@@ -907,9 +956,9 @@ class AppLocalizations {
           title: "လိပ်စာ",
         ),
         name: AppLocalizations_Labels_General_Name(
-          familyName: "မိသားစုနာမည်",
+          familyName: "မိသားစု / နောက်ဆုံးအမည်",
           firstName: "နာမည်",
-          givenNames: "ပေးထားသောအမည်",
+          givenNames: "ပထမဦးစွာ / အားအမည်များ",
           lastName: "မျိုးနွယ်အမည်",
           name: "အမည်",
           otherNames: "အခြားအမည်များ",
@@ -951,7 +1000,14 @@ class AppLocalizations {
         immunizations: "ကာကွယ်ဆေးထိုးပေးခြင်း",
         deworming: "Deworming",
         vaccine: "ကာကွယ်ဆေး",
-        vaccines: "ကာကွယ်ဆေးများ",
+        summaryReport: "အကျဉ်းချုပ်အစီရင်ခံစာ",
+        vaccines: AppLocalizations_Labels_Medical_Vaccines(
+          title: "ကာကွယ်ဆေးများ",
+          none: "ပေးထားသောဒီအမျိုးအစားအဘယ်သူမျှမကယခင်ကာကွယ်ဆေး",
+          dateGiven: "နေ့စွဲအရ",
+          certify: "Certified ရက်စွဲများဖို့ကိုနှိပ်ပါ",
+          addDate: "ကာကွယ်ဆေးနေ့စွဲ Add:",
+        ),
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "မှတ်ပုံတင်မည်လူနာ",
@@ -1033,6 +1089,7 @@ class AppLocalizations {
         givenNameError: "输入其他名称",
         familyNameError: "输入姓氏",
         relationshipError: "请选择关系",
+        nextPage: "下一页",
         address: AppLocalizations_Labels_General_Address(
           city: "市",
           country: "国家",
@@ -1044,9 +1101,9 @@ class AppLocalizations {
           title: "地址",
         ),
         name: AppLocalizations_Labels_General_Name(
-          familyName: "姓",
+          familyName: "家庭/姓氏",
           firstName: "名字",
-          givenNames: "姓",
+          givenNames: "首先/赐名",
           lastName: "姓",
           name: "名称",
           otherNames: "其他名称",
@@ -1088,7 +1145,14 @@ class AppLocalizations {
         immunizations: "预防接种",
         deworming: "驱虫",
         vaccine: "疫苗",
-        vaccines: "疫苗",
+        summaryReport: "总结报告",
+        vaccines: AppLocalizations_Labels_Medical_Vaccines(
+          title: "疫苗",
+          none: "没有这种类型的疫苗以前给出",
+          dateGiven: "鉴于日期",
+          certify: "点击日期证明",
+          addDate: "加入疫苗的日期：",
+        ),
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "注册病人",
@@ -1170,6 +1234,7 @@ class AppLocalizations {
         givenNameError: "輸入其他名稱",
         familyNameError: "輸入姓氏",
         relationshipError: "請選擇關係",
+        nextPage: "下一頁",
         address: AppLocalizations_Labels_General_Address(
           city: "市",
           country: "國家",
@@ -1181,9 +1246,9 @@ class AppLocalizations {
           title: "地址",
         ),
         name: AppLocalizations_Labels_General_Name(
-          familyName: "姓",
+          familyName: "家庭/姓氏",
           firstName: "名字",
-          givenNames: "姓",
+          givenNames: "首先/賜名",
           lastName: "姓",
           name: "名稱",
           otherNames: "其他名稱",
@@ -1225,7 +1290,14 @@ class AppLocalizations {
         immunizations: "預防接種",
         deworming: "驅蟲",
         vaccine: "疫苗",
-        vaccines: "疫苗",
+        summaryReport: "總結報告",
+        vaccines: AppLocalizations_Labels_Medical_Vaccines(
+          title: "疫苗",
+          none: "沒有這種類型的疫苗以前給出",
+          dateGiven: "鑑於日期",
+          certify: "點擊日期證明",
+          addDate: "加入疫苗的日期：",
+        ),
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "註冊病人",
@@ -1307,6 +1379,7 @@ class AppLocalizations {
         givenNameError: "نام های دیگر را وارد کنید",
         familyNameError: "نام خانوادگی را وارد کنید",
         relationshipError: "لطفا ارتباط را انتخاب کنید",
+        nextPage: "صفحه بعد",
         address: AppLocalizations_Labels_General_Address(
           city: "شهرستان",
           country: "کشور",
@@ -1318,9 +1391,9 @@ class AppLocalizations {
           title: "نشانی",
         ),
         name: AppLocalizations_Labels_General_Name(
-          familyName: "نام خانوادگی",
+          familyName: "خانواده / نام خانوادگی",
           firstName: "نام کوچک",
-          givenNames: "اسامی با توجه به",
+          givenNames: "نخست / اسامی با توجه به",
           lastName: "نام خانوادگی",
           name: "نام",
           otherNames: "نامهای دیگر",
@@ -1362,7 +1435,14 @@ class AppLocalizations {
         immunizations: "ایمن سازی",
         deworming: "کرم زدایی",
         vaccine: "واکسن",
-        vaccines: "واکسن ها",
+        summaryReport: "خلاصه گزارش",
+        vaccines: AppLocalizations_Labels_Medical_Vaccines(
+          title: "واکسن ها",
+          none: "هیچ واکسن قبلی از این نوع داده",
+          dateGiven: "تاریخ داده شده",
+          certify: "به گواهی تاریخ کلیک کنید",
+          addDate: "تاریخ واکسن را اضافه کنید:",
+        ),
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "ثبت نام بیمار",
@@ -1444,6 +1524,7 @@ class AppLocalizations {
         givenNameError: "Entrez les autres noms",
         familyNameError: "Entrez le nom de famille",
         relationshipError: "S'il vous plaît choisir relation",
+        nextPage: "Page suivante",
         address: AppLocalizations_Labels_General_Address(
           city: "Ville",
           country: "Pays",
@@ -1455,9 +1536,9 @@ class AppLocalizations {
           title: "Adresse",
         ),
         name: AppLocalizations_Labels_General_Name(
-          familyName: "Nom de famille",
+          familyName: "Famille / Nom",
           firstName: "Prénom",
-          givenNames: "Prénoms",
+          givenNames: "Premières / Prénom",
           lastName: "Nom de famille",
           name: "Nom",
           otherNames: "Autres noms",
@@ -1499,7 +1580,14 @@ class AppLocalizations {
         immunizations: "immunisations",
         deworming: "déparasitage",
         vaccine: "Vaccin",
-        vaccines: "Vaccins",
+        summaryReport: "Rapport sommaire",
+        vaccines: AppLocalizations_Labels_Medical_Vaccines(
+          title: "Vaccins",
+          none: "Aucun vaccin précédent de ce type donné",
+          dateGiven: "Date Compte tenu",
+          certify: "Cliquez pour certifier les dates",
+          addDate: "Ajouter la date du vaccin:",
+        ),
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "registre des patients",
@@ -1581,6 +1669,7 @@ class AppLocalizations {
         givenNameError: "Geben Sie andere Namen",
         familyNameError: "Geben Sie Namen",
         relationshipError: "Bitte wählen Sie Beziehung",
+        nextPage: "Nächste Seite",
         address: AppLocalizations_Labels_General_Address(
           city: "Stadt",
           country: "Land",
@@ -1592,9 +1681,9 @@ class AppLocalizations {
           title: "Adresse",
         ),
         name: AppLocalizations_Labels_General_Name(
-          familyName: "Nachname",
+          familyName: "Familie / Last Name",
           firstName: "Vorname",
-          givenNames: "Vornamen",
+          givenNames: "Erste / Vorname",
           lastName: "Nachname",
           name: "Name",
           otherNames: "Andere Namen",
@@ -1636,7 +1725,14 @@ class AppLocalizations {
         immunizations: "Immunisierungen",
         deworming: "Entwurmung",
         vaccine: "Impfstoff",
-        vaccines: "Impfungen",
+        summaryReport: "Kurzbericht",
+        vaccines: AppLocalizations_Labels_Medical_Vaccines(
+          title: "Impfungen",
+          none: "Keine vorherigen Impfstoffe dieses Typs gegeben",
+          dateGiven: "Datum Gegeben",
+          certify: "Klicken Sie Daten zu bestätigen,",
+          addDate: "Erfassungsdatum des Impfstoffes:",
+        ),
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "Register Patienten",
@@ -1718,6 +1814,7 @@ class AppLocalizations {
         givenNameError: "Masukkan nama lain",
         familyNameError: "Masukkan nama keluarga",
         relationshipError: "Silakan pilih hubungan",
+        nextPage: "Halaman selanjutnya",
         address: AppLocalizations_Labels_General_Address(
           city: "Kota",
           country: "Negara",
@@ -1729,9 +1826,9 @@ class AppLocalizations {
           title: "Alamat",
         ),
         name: AppLocalizations_Labels_General_Name(
-          familyName: "Nama keluarga",
+          familyName: "Keluarga / Nama terakhir",
           firstName: "Nama depan",
-          givenNames: "Memberikan nama",
+          givenNames: "Pertama / Mengingat Nama",
           lastName: "Nama keluarga",
           name: "Nama",
           otherNames: "Nama lain",
@@ -1773,7 +1870,14 @@ class AppLocalizations {
         immunizations: "imunisasi",
         deworming: "cacingan",
         vaccine: "Vaksin",
-        vaccines: "Vaksin",
+        summaryReport: "Rangkuman laporan",
+        vaccines: AppLocalizations_Labels_Medical_Vaccines(
+          title: "Vaksin",
+          none: "Tidak ada vaksin sebelumnya jenis ini diberikan",
+          dateGiven: "Tanggal Mengingat",
+          certify: "Klik untuk mengesahkan tanggal",
+          addDate: "Menambahkan tanggal vaksin:",
+        ),
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "Pendaftaran Pasien",
@@ -1796,7 +1900,7 @@ class AppLocalizations {
     Locale.fromSubtags(languageCode: "ja"): AppLocalizations_Labels(
       app: AppLocalizations_Labels_App(
         chooseLanguage: "言語を選択",
-        chooseTheme: "テーマを選択してください",
+        chooseTheme: "テーマを選択します。",
         settings: "アプリの設定",
         system: "システム",
         title: "Vigor",
@@ -1855,6 +1959,7 @@ class AppLocalizations {
         givenNameError: "他の名前を入力します。",
         familyNameError: "家族の名前を入力します。",
         relationshipError: "関係を選択してください",
+        nextPage: "次のページ",
         address: AppLocalizations_Labels_General_Address(
           city: "市",
           country: "国",
@@ -1866,9 +1971,9 @@ class AppLocalizations {
           title: "住所",
         ),
         name: AppLocalizations_Labels_General_Name(
-          familyName: "苗字",
+          familyName: "家族/姓",
           firstName: "ファーストネーム",
-          givenNames: "名前",
+          givenNames: "まず/与えられた名前",
           lastName: "苗字",
           name: "名前",
           otherNames: "他の名前",
@@ -1910,7 +2015,14 @@ class AppLocalizations {
         immunizations: "予防接種",
         deworming: "駆虫",
         vaccine: "ワクチン",
-        vaccines: "ワクチン",
+        summaryReport: "概略報告",
+        vaccines: AppLocalizations_Labels_Medical_Vaccines(
+          title: "ワクチン",
+          none: "与えられたこのタイプの以前のワクチンありません",
+          dateGiven: "日付を考えます",
+          certify: "日付を証明するためにクリック",
+          addDate: "ワクチンの日付を追加します。",
+        ),
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "登録患者",
@@ -1992,6 +2104,7 @@ class AppLocalizations {
         givenNameError: "បញ្ចូលឈ្មោះផ្សេងទៀត",
         familyNameError: "បញ្ចូលឈ្មោះគ្រួសារ",
         relationshipError: "សូមជ្រើសទំនាក់ទំនង",
+        nextPage: "ទំ​ព​រ័​បន្ទាប់",
         address: AppLocalizations_Labels_General_Address(
           city: "ទីក្រុង",
           country: "ប្រទេស",
@@ -2003,9 +2116,9 @@ class AppLocalizations {
           title: "អាសយដ្ឋាន",
         ),
         name: AppLocalizations_Labels_General_Name(
-          familyName: "ឈ្មោះគ្រួសារ",
+          familyName: "គ្រួសារ / ឈ្មោះចុងក្រោយ",
           firstName: "ឈ្មោះជាលើកដំបូង",
-          givenNames: "ឈ្មោះ​ហៅក្រៅ",
+          givenNames: "ជាលើកដំបូង / ឈ្មោះដែលបានផ្ដល់",
           lastName: "នាមត្រកូល",
           name: "ឈ្មោះ",
           otherNames: "ឈ្មោះ​ដ៏​ទៃ​ទៀត",
@@ -2047,7 +2160,14 @@ class AppLocalizations {
         immunizations: "ចាក់ថ្នាំបង្ការរោគ",
         deworming: "Deworming",
         vaccine: "ថ្នាំបង្ការ",
-        vaccines: "វ៉ាក់សាំង",
+        summaryReport: "របាយការណ៍សង្ខេប",
+        vaccines: AppLocalizations_Labels_Medical_Vaccines(
+          title: "វ៉ាក់សាំង",
+          none: "គ្មានវ៉ាក់សាំងមុនប្រភេទនេះដែលបានផ្ដល់ឱ្យ",
+          dateGiven: "កាលបរិច្ឆេទដែលបានផ្ដល់",
+          certify: "ចុចដើម្បីបញ្ជាក់កាលបរិច្ឆេទ",
+          addDate: "បន្ថែមកាលបរិច្ឆេទនៃការចាក់វ៉ាក់សាំង:",
+        ),
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "ជម្ងឺចុះឈ្មោះ",
@@ -2129,6 +2249,7 @@ class AppLocalizations {
         givenNameError: "다른 이름을 입력",
         familyNameError: "가족의 이름을 입력합니다",
         relationshipError: "관계를 선택하세요",
+        nextPage: "다음 페이지",
         address: AppLocalizations_Labels_General_Address(
           city: "시티",
           country: "국가",
@@ -2140,9 +2261,9 @@ class AppLocalizations {
           title: "주소",
         ),
         name: AppLocalizations_Labels_General_Name(
-          familyName: "가족 이름",
+          familyName: "가족 / 성",
           firstName: "이름",
-          givenNames: "지정된 이름의",
+          givenNames: "먼저 / 감안할 때 이름",
           lastName: "성",
           name: "이름",
           otherNames: "다른 이름들",
@@ -2184,7 +2305,14 @@ class AppLocalizations {
         immunizations: "예방 접종",
         deworming: "구충제",
         vaccine: "백신",
-        vaccines: "백신",
+        summaryReport: "요약 보고서",
+        vaccines: AppLocalizations_Labels_Medical_Vaccines(
+          title: "백신",
+          none: "주어진 이러한 유형의 어떤 이전 백신 없습니다",
+          dateGiven: "날짜 감안할 때",
+          certify: "날짜를 증명하기 위해 클릭",
+          addDate: "백신의 날짜를 추가 :",
+        ),
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "등록 환자",
@@ -2266,6 +2394,7 @@ class AppLocalizations {
         givenNameError: "ກະລຸນາໃສ່ຊື່ອື່ນ",
         familyNameError: "ກະລຸນາໃສ່ນາມສະກຸນ",
         relationshipError: "ກະລຸນາເລືອກສໍາພັນ",
+        nextPage: "ຫນ້າຖັດໄປ",
         address: AppLocalizations_Labels_General_Address(
           city: "ເມືອງ",
           country: "ປະເທດ",
@@ -2277,9 +2406,9 @@ class AppLocalizations {
           title: "ທີ່ຢູ່",
         ),
         name: AppLocalizations_Labels_General_Name(
-          familyName: "ນາມ​ສະ​ກຸນ",
+          familyName: "ຄອບຄົວ / ນາມສະກຸນ",
           firstName: "ຊື່​ແທ້",
-          givenNames: "Names ເນື່ອງ",
+          givenNames: "ຫນ້າທໍາອິດ / Names ເນື່ອງ",
           lastName: "ນາມ​ສະ​ກຸນ",
           name: "ຊື່",
           otherNames: "ຊື່ອື່ນໆ",
@@ -2321,7 +2450,14 @@ class AppLocalizations {
         immunizations: "ພູມຕ້ານທານ",
         deworming: "Deworming",
         vaccine: "ສັກຢາວັກຊີນ",
-        vaccines: "ວັກ​ຊີນ​ປ້ອງ​ກັນ",
+        summaryReport: "ບົດລາຍງານສະຫຼຸບສັງລວມ",
+        vaccines: AppLocalizations_Labels_Medical_Vaccines(
+          title: "ວັກ​ຊີນ​ປ້ອງ​ກັນ",
+          none: "No ສັກຢາວັກຊີນທີ່ຜ່ານມາຂອງປະເພດນີ້ໄດ້ຮັບ",
+          dateGiven: "Date ເນື່ອງ",
+          certify: "ກົດເພື່ອຢັ້ງຢືນວັນ",
+          addDate: "ເພີ່ມວັນສັກຢາວັກຊີນ:",
+        ),
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "ອົດທົນຫມັກສະມາຊິກ",
@@ -2403,6 +2539,7 @@ class AppLocalizations {
         givenNameError: "इतर नावे प्रविष्ट करा",
         familyNameError: "कुटुंब नाव प्रविष्ट करा",
         relationshipError: "कृपया संबंध निवडा",
+        nextPage: "पुढील पृष्ठ",
         address: AppLocalizations_Labels_General_Address(
           city: "सिटी",
           country: "देश",
@@ -2414,9 +2551,9 @@ class AppLocalizations {
           title: "पत्ता",
         ),
         name: AppLocalizations_Labels_General_Name(
-          familyName: "कौटुंबिक नाव",
+          familyName: "कुटुंब / आडनाव",
           firstName: "पहिले नाव",
-          givenNames: "नावे दिली",
+          givenNames: "प्रथम / नावे",
           lastName: "आडनाव",
           name: "नाव",
           otherNames: "इतर नावे",
@@ -2458,7 +2595,14 @@ class AppLocalizations {
         immunizations: "लसीकरण",
         deworming: "माद्यांचे",
         vaccine: "लस",
-        vaccines: "लसीकरण",
+        summaryReport: "सारांश अहवाल",
+        vaccines: AppLocalizations_Labels_Medical_Vaccines(
+          title: "लसीकरण",
+          none: "दिलेल्या या प्रकारचे कोणतेही मागील लस",
+          dateGiven: "तारीख दिले",
+          certify: "तारखा प्रमाणित करण्यासाठी क्लिक करा",
+          addDate: "लस तारीख जोडा:",
+        ),
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "नोंदणी रुग्णांच्या",
@@ -2540,6 +2684,7 @@ class AppLocalizations {
         givenNameError: "अन्य नाम प्रविष्ट गर्नुहोस्",
         familyNameError: "परिवारको नाम प्रविष्ट गर्नुहोस्",
         relationshipError: "कृपया सम्बन्ध चयन",
+        nextPage: "अर्को पाना",
         address: AppLocalizations_Labels_General_Address(
           city: "शहर",
           country: "देश",
@@ -2551,9 +2696,9 @@ class AppLocalizations {
           title: "ठेगाना",
         ),
         name: AppLocalizations_Labels_General_Name(
-          familyName: "परिवार नाम",
+          familyName: "परिवार / अन्तिम नाम",
           firstName: "पहिलो नाम",
-          givenNames: "नामहरू",
+          givenNames: "पहिलो / नामहरू",
           lastName: "थर",
           name: "नाम",
           otherNames: "अरु नामहरु",
@@ -2595,7 +2740,14 @@ class AppLocalizations {
         immunizations: "प्रतिरक्षक",
         deworming: "Deworming",
         vaccine: "टीका",
-        vaccines: "औषधी",
+        summaryReport: "सारांश रिपोर्ट",
+        vaccines: AppLocalizations_Labels_Medical_Vaccines(
+          title: "औषधी",
+          none: "यस प्रकारका कुनै पनि अघिल्लो सुइहरु दिइएको",
+          dateGiven: "मिति दिइएको",
+          certify: "मिति प्रमाणित गर्न क्लिक गर्नुहोस्",
+          addDate: "टीका को मिति थप्न:",
+        ),
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "रजिस्टर रोगी",
@@ -2677,6 +2829,7 @@ class AppLocalizations {
         givenNameError: "Introduzir outros nomes",
         familyNameError: "Insira o nome de família",
         relationshipError: "Por favor seleccione relacionamento",
+        nextPage: "Próxima página",
         address: AppLocalizations_Labels_General_Address(
           city: "Cidade",
           country: "País",
@@ -2688,9 +2841,9 @@ class AppLocalizations {
           title: "Endereço",
         ),
         name: AppLocalizations_Labels_General_Name(
-          familyName: "Sobrenome",
+          familyName: "Família / Último Nome",
           firstName: "Primeiro nome",
-          givenNames: "Nomes dados",
+          givenNames: "Primeiro / Nomes",
           lastName: "Último nome",
           name: "Nome",
           otherNames: "Outros nomes",
@@ -2732,7 +2885,14 @@ class AppLocalizations {
         immunizations: "imunizações",
         deworming: "desparasitação",
         vaccine: "Vacina",
-        vaccines: "Vacinas",
+        summaryReport: "Relatório Resumido",
+        vaccines: AppLocalizations_Labels_Medical_Vaccines(
+          title: "Vacinas",
+          none: "Não há vacinas anteriores deste tipo de dado",
+          dateGiven: "data Dado",
+          certify: "Clique para certificar datas",
+          addDate: "Adicionar data de vacina:",
+        ),
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "Register paciente",
@@ -2814,6 +2974,7 @@ class AppLocalizations {
         givenNameError: "ਹੋਰ ਨਾਮ ਦਰਜ ਕਰੋ",
         familyNameError: "ਪਰਿਵਾਰ ਦਾ ਨਾਮ ਦਰਜ ਕਰੋ",
         relationshipError: "ਕਿਰਪਾ ਕਰਕੇ ਰਿਸ਼ਤਾ ਦੀ ਚੋਣ ਕਰੋ",
+        nextPage: "ਅਗਲੇ ਸਫ਼ੇ",
         address: AppLocalizations_Labels_General_Address(
           city: "ਸਿਟੀ",
           country: "ਦੇਸ਼",
@@ -2825,9 +2986,9 @@ class AppLocalizations {
           title: "ਪਤਾ",
         ),
         name: AppLocalizations_Labels_General_Name(
-          familyName: "ਖਾਨਦਾਨ ਦਾ ਨਾ",
+          familyName: "ਪਰਿਵਾਰਕ / ਆਖਰੀ ਨਾਮ",
           firstName: "ਪਹਿਲਾ ਨਾਂ",
-          givenNames: "ਦਿੱਤੇ ਹੋਏ ਨਾਂ",
+          givenNames: "ਪਹਿਲੀ / ਦਿੱਤੇ ਗਏ ਨਾਮ",
           lastName: "ਆਖੀਰਲਾ ਨਾਂਮ",
           name: "ਦਾ ਨਾਮ",
           otherNames: "ਹੋਰ ਨਾਮ",
@@ -2869,7 +3030,14 @@ class AppLocalizations {
         immunizations: "ਟੀਕਾਕਰਣ",
         deworming: "ਸ਼ੈੱਡ",
         vaccine: "ਵੈਕਸੀਨ",
-        vaccines: "ਟੀਕੇ",
+        summaryReport: "ਸਮਰੀ ਰਿਪੋਰਟ",
+        vaccines: AppLocalizations_Labels_Medical_Vaccines(
+          title: "ਟੀਕੇ",
+          none: "ਇਸ ਕਿਸਮ ਦੀ ਕੋਈ ਪਿਛਲੇ ਟੀਕੇ ਦਿੱਤੇ ਗਏ",
+          dateGiven: "ਮਿਤੀ",
+          certify: "ਦਰਜ ਤਸਦੀਕ ਕਰਨ ਲਈ ਕਲਿੱਕ ਕਰੋ",
+          addDate: "ਵੈਕਸੀਨ ਦੀ ਮਿਤੀ ਜੋੜੋ:",
+        ),
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "ਰਜਿਸਟਰ ਮਰੀਜ਼",
@@ -2951,6 +3119,7 @@ class AppLocalizations {
         givenNameError: "Ku qor magacyada kale",
         familyNameError: "Ku qor magaca qoyska",
         relationshipError: "Fadlan dooro xiriir",
+        nextPage: "Next Page",
         address: AppLocalizations_Labels_General_Address(
           city: "City",
           country: "Country",
@@ -2962,9 +3131,9 @@ class AppLocalizations {
           title: "Address",
         ),
         name: AppLocalizations_Labels_General_Name(
-          familyName: "Magaca qoyska",
+          familyName: "Qoyska / Magaca Dambe",
           firstName: "Magaca koowaad",
-          givenNames: "Marka la eego magacyada",
+          givenNames: "First / Names la eego",
           lastName: "Last Name",
           name: "magaca",
           otherNames: "Magacyada kale",
@@ -3006,7 +3175,14 @@ class AppLocalizations {
         immunizations: "tallaalada",
         deworming: "gooryaan",
         vaccine: "tallaalka",
-        vaccines: "Talaalo",
+        summaryReport: "Warbixinta Kooban",
+        vaccines: AppLocalizations_Labels_Medical_Vaccines(
+          title: "Talaalo",
+          none: "No tallaal hore oo noocan ah la siiyo",
+          dateGiven: "Taariikhda Marka la eego",
+          certify: "Guji si aad u cadeynayaa taariikhaha",
+          addDate: "Ku dar taariikhda tallaalka:",
+        ),
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "Register bukaanka",
@@ -3088,6 +3264,7 @@ class AppLocalizations {
         givenNameError: "Andika majina mengine",
         familyNameError: "Weka jina la familia",
         relationshipError: "Tafadhali chagua uhusiano",
+        nextPage: "Ukurasa unaofuata",
         address: AppLocalizations_Labels_General_Address(
           city: "City",
           country: "Nchi",
@@ -3099,9 +3276,9 @@ class AppLocalizations {
           title: "Anuani",
         ),
         name: AppLocalizations_Labels_General_Name(
-          familyName: "Jina la ukoo",
+          familyName: "Familia / Jina la Mwisho",
           firstName: "Jina la kwanza",
-          givenNames: "Majina kutokana",
+          givenNames: "Kwanza / Majina Kutokana",
           lastName: "Jina la familia",
           name: "jina",
           otherNames: "Majina Mengine",
@@ -3143,7 +3320,14 @@ class AppLocalizations {
         immunizations: "chanjo",
         deworming: "deworming",
         vaccine: "chanjo",
-        vaccines: "Chanjo",
+        summaryReport: "Ripoti ya muhtasari",
+        vaccines: AppLocalizations_Labels_Medical_Vaccines(
+          title: "Chanjo",
+          none: "Hakuna chanjo ya awali ya aina hii kutokana na",
+          dateGiven: "tarehe Kutokana",
+          certify: "Bofya ili kuthibitisha tarehe",
+          addDate: "Ongeza tarehe ya chanjo:",
+        ),
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "Daftari mgonjwa",
@@ -3225,6 +3409,7 @@ class AppLocalizations {
         givenNameError: "Ipasok ang iba pang mga pangalan",
         familyNameError: "Ipasok ang pangalan ng pamilya",
         relationshipError: "Mangyaring pumili relasyon",
+        nextPage: "Susunod na pahina",
         address: AppLocalizations_Labels_General_Address(
           city: "lungsod",
           country: "bansa",
@@ -3236,9 +3421,9 @@ class AppLocalizations {
           title: "address",
         ),
         name: AppLocalizations_Labels_General_Name(
-          familyName: "Apelyido",
+          familyName: "Family / Apelyido",
           firstName: "Pangalan",
-          givenNames: "Given Pangalan",
+          givenNames: "Una / Given Pangalan",
           lastName: "Huling pangalan",
           name: "pangalan",
           otherNames: "Ibang pangalan",
@@ -3280,7 +3465,14 @@ class AppLocalizations {
         immunizations: "Imunisasyon",
         deworming: "deworming",
         vaccine: "bakuna",
-        vaccines: "Mga bakuna",
+        summaryReport: "Buod ng Ulat",
+        vaccines: AppLocalizations_Labels_Medical_Vaccines(
+          title: "Mga bakuna",
+          none: "Walang nakaraang bakuna na may ganitong uri na ibinigay",
+          dateGiven: "Petsa Given",
+          certify: "I-click upang patunayan petsa",
+          addDate: "Magdagdag ng petsa ng bakuna:",
+        ),
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "Magrehistro Pasyente",
@@ -3362,6 +3554,7 @@ class AppLocalizations {
         givenNameError: "ใส่ชื่ออื่น ๆ",
         familyNameError: "ใส่ชื่อครอบครัว",
         relationshipError: "กรุณาเลือกความสัมพันธ์",
+        nextPage: "หน้าต่อไป",
         address: AppLocalizations_Labels_General_Address(
           city: "เมือง",
           country: "ประเทศ",
@@ -3373,9 +3566,9 @@ class AppLocalizations {
           title: "ที่อยู่",
         ),
         name: AppLocalizations_Labels_General_Name(
-          familyName: "นามสกุล",
+          familyName: "ครอบครัว / นามสกุล",
           firstName: "ชื่อจริง",
-          givenNames: "ชื่อจริง",
+          givenNames: "แรก / ชื่อจริง",
           lastName: "นามสกุล",
           name: "ชื่อ",
           otherNames: "ชื่ออื่น",
@@ -3417,7 +3610,14 @@ class AppLocalizations {
         immunizations: "การฉีดวัคซีน",
         deworming: "การถ่ายพยาธิ",
         vaccine: "วัคซีน",
-        vaccines: "วัคซีน",
+        summaryReport: "รายงานสรุป",
+        vaccines: AppLocalizations_Labels_Medical_Vaccines(
+          title: "วัคซีน",
+          none: "ไม่มีวัคซีนก่อนหน้าประเภทนี้ได้รับ",
+          dateGiven: "วันที่ที่กำหนด",
+          certify: "คลิ๊กเพื่อรับรองวัน",
+          addDate: "เพิ่มวันวัคซีน:",
+        ),
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "ผู้ป่วยที่ลงทะเบียน",
@@ -3499,6 +3699,7 @@ class AppLocalizations {
         givenNameError: "Boshqa nomlari kiriting",
         familyNameError: "oila nomini kiriting",
         relationshipError: "munosabatlarni tanlang Iltimos,",
+        nextPage: "Keyingi sahifa",
         address: AppLocalizations_Labels_General_Address(
           city: "shahar",
           country: "mamlakat",
@@ -3510,9 +3711,9 @@ class AppLocalizations {
           title: "manzil",
         ),
         name: AppLocalizations_Labels_General_Name(
-          familyName: "Familiya",
+          familyName: "Oila / sharifi",
           firstName: "Ism",
-          givenNames: "Ism va Sharif",
+          givenNames: "Birinchi / hisobga Ismlar",
           lastName: "Familiya",
           name: "ism",
           otherNames: "Boshqa Ismlar",
@@ -3554,7 +3755,14 @@ class AppLocalizations {
         immunizations: "emlash",
         deworming: "degelmintizatsiya,",
         vaccine: "vaktsina",
-        vaccines: "Vaksinalar",
+        summaryReport: "Xulosa hisoboti",
+        vaccines: AppLocalizations_Labels_Medical_Vaccines(
+          title: "Vaksinalar",
+          none: "berilgan Ushbu turdagi No oldingi vaksinalar",
+          dateGiven: "Sana hisobga",
+          certify: "xurmo tasdiqlash uchun bosing",
+          addDate: "emlash sana qo'shish:",
+        ),
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "Ro'yxatdan o'tish Bemor",
@@ -3636,6 +3844,7 @@ class AppLocalizations {
         givenNameError: "Nhập tên khác",
         familyNameError: "Nhập tên gia đình",
         relationshipError: "Vui lòng chọn mối quan hệ",
+        nextPage: "Trang tiếp theo",
         address: AppLocalizations_Labels_General_Address(
           city: "thành phố",
           country: "Quốc gia",
@@ -3647,9 +3856,9 @@ class AppLocalizations {
           title: "Địa chỉ",
         ),
         name: AppLocalizations_Labels_General_Name(
-          familyName: "Tên gia đình",
+          familyName: "Gia đình / Họ",
           firstName: "Tên đầu tiên",
-          givenNames: "Tên trao",
+          givenNames: "Đầu tiên / Với Tên",
           lastName: "tên họ",
           name: "Tên",
           otherNames: "Vài cái tên khác",
@@ -3691,7 +3900,14 @@ class AppLocalizations {
         immunizations: "chích ngừa",
         deworming: "tẩy giun",
         vaccine: "vắc-xin",
-        vaccines: "Vắc-xin",
+        summaryReport: "Báo cáo tổng hợp",
+        vaccines: AppLocalizations_Labels_Medical_Vaccines(
+          title: "Vắc-xin",
+          none: "Không loại vắc-xin trước đó thuộc loại này được",
+          dateGiven: "ngày Với",
+          certify: "Nhấn vào đây để xác nhận ngày",
+          addDate: "Thêm ngày vắc-xin:",
+        ),
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "Đăng ký bệnh nhân",
@@ -4183,6 +4399,7 @@ class AppLocalizations_Labels_General {
       this.givenNameError,
       this.familyNameError,
       this.relationshipError,
+      this.nextPage,
       this.address,
       this.name,
       this.relation,
@@ -4222,6 +4439,8 @@ class AppLocalizations_Labels_General {
   final String familyNameError;
 
   final String relationshipError;
+
+  final String nextPage;
 
   final AppLocalizations_Labels_General_Address address;
 
@@ -4269,6 +4488,8 @@ class AppLocalizations_Labels_General {
         return familyNameError;
       case 'relationshipError':
         return relationshipError;
+      case 'nextPage':
+        return nextPage;
       default:
         return '';
     }
@@ -4294,6 +4515,38 @@ class AppLocalizations_Labels_Language {
   }
 }
 
+class AppLocalizations_Labels_Medical_Vaccines {
+  const AppLocalizations_Labels_Medical_Vaccines(
+      {this.title, this.none, this.dateGiven, this.certify, this.addDate});
+
+  final String title;
+
+  final String none;
+
+  final String dateGiven;
+
+  final String certify;
+
+  final String addDate;
+
+  String getByKey(String key) {
+    switch (key) {
+      case 'title':
+        return title;
+      case 'none':
+        return none;
+      case 'dateGiven':
+        return dateGiven;
+      case 'certify':
+        return certify;
+      case 'addDate':
+        return addDate;
+      default:
+        return '';
+    }
+  }
+}
+
 class AppLocalizations_Labels_Medical {
   const AppLocalizations_Labels_Medical(
       {this.growth,
@@ -4301,6 +4554,7 @@ class AppLocalizations_Labels_Medical {
       this.immunizations,
       this.deworming,
       this.vaccine,
+      this.summaryReport,
       this.vaccines});
 
   final String growth;
@@ -4313,7 +4567,9 @@ class AppLocalizations_Labels_Medical {
 
   final String vaccine;
 
-  final String vaccines;
+  final String summaryReport;
+
+  final AppLocalizations_Labels_Medical_Vaccines vaccines;
 
   String getByKey(String key) {
     switch (key) {
@@ -4327,8 +4583,8 @@ class AppLocalizations_Labels_Medical {
         return deworming;
       case 'vaccine':
         return vaccine;
-      case 'vaccines':
-        return vaccines;
+      case 'summaryReport':
+        return summaryReport;
       default:
         return '';
     }

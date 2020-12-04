@@ -13,16 +13,15 @@ class ActionButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ButtonTheme.fromButtonThemeData(
-      data: Get.theme.buttonTheme.copyWith(minWidth: Get.width / 2),
-      child: RaisedButton(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-        onPressed: onPressed,
-        padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 16),
-        child: Text(
-          buttonText,
-          style: Get.theme.textTheme.headline4,
-        ),
+    return RaisedButton(
+      shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(Get.width / 10)),
+      onPressed: onPressed,
+      padding: EdgeInsets.symmetric(
+          horizontal: Get.width / 12, vertical: Get.width / 20),
+      child: Text(
+        buttonText,
+        style: Get.theme.textTheme.headline4,
       ),
     );
   }

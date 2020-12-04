@@ -79,7 +79,7 @@ class PatientRegistrationPage extends StatelessWidget {
                       ),
                       onPressed: () => controller.registerEvent(),
                       child: Text(
-                        controller.labels.registration.registerPatient,
+                        controller.labels.general.nextPage,
                         style: Get.textTheme.bodyText1
                             .copyWith(color: Colors.white),
                       ),

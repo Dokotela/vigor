@@ -9,7 +9,7 @@ class GenderSelectionWidget extends StatelessWidget {
     @required this.setGender,
   });
 
-  final bool curGender;
+  final int curGender;
   final Function setGender;
 
   @override
@@ -17,9 +17,16 @@ class GenderSelectionWidget extends StatelessWidget {
     final labels = AppLocalizations.of(context);
 
     /// turns the boolean into the string for the radio buttons
-    String _whichGender(bool curGender) => curGender
-        ? labels.general.sexAtBirth.female
-        : labels.general.sexAtBirth.male;
+    String _whichGender(int curGender) {
+      switch (curGender) {
+        case 1:
+          return labels.general.sexAtBirth.female;
+        case 2:
+          return labels.general.sexAtBirth.male;
+        default:
+          return '';
+      }
+    }
 
     return Container(
       decoration: BoxDecoration(
@@ -45,7 +52,7 @@ class GenderSelectionWidget extends StatelessWidget {
               Radio(
                 value: labels.general.sexAtBirth.female,
                 groupValue: _whichGender(curGender),
-                onChanged: (_) => setGender(true),
+                onChanged: (_) => setGender(1),
               ),
               Text(labels.general.sexAtBirth.female,
                   style: Get.theme.textTheme.headline6),
@@ -55,7 +62,7 @@ class GenderSelectionWidget extends StatelessWidget {
               Radio(
                 value: labels.general.sexAtBirth.male,
                 groupValue: _whichGender(curGender),
-                onChanged: (_) => setGender(false),
+                onChanged: (_) => setGender(2),
               ),
               Text(labels.general.sexAtBirth.male,
                   style: Get.theme.textTheme.headline6),
