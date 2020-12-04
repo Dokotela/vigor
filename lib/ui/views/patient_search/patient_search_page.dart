@@ -1,25 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:vigor/routes/routes.dart';
+import 'package:vigor/ui/styled_components/app_bar.dart';
 
 import '../../../controllers/local/patient_search/patient_search_controller.dart';
 import '../../../localization.dart';
 import '../../styled_components/bottom_navigation_bar.dart';
-import 'patient_search_view_controller.dart';
 
 class PatientSearchPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final labels = AppLocalizations.of(context);
-    final viewController = Get.put(PatientSearchViewController());
     final controller = Get.put(PatientSearchController());
     final searchName = TextEditingController();
+    final _padding = EdgeInsets.fromLTRB(0, 0, 0, 0);
 
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(
-        title: Text(labels.app.title),
-      ),
+      appBar: VigorAppBar(title: labels.general.search.search),
       body: Padding(
         padding: const EdgeInsets.all(4.0),
         child: Column(
@@ -27,6 +25,7 @@ class PatientSearchPage extends StatelessWidget {
           children: <Widget>[
             Row(
               children: [
+                Icon(Icons.search),
                 Flexible(
                   flex: 20,
                   child: TextFormField(
@@ -49,44 +48,13 @@ class PatientSearchPage extends StatelessWidget {
                     onPressed: () =>
                         Get.toNamed(AppRoutes.PATIENT_REGISTRATION),
                     child: Text(
-                      'Register New Patient'.tr,
+                      'New Patient',
                       textAlign: TextAlign.center,
                       style: const TextStyle(fontSize: 18.0),
                     ),
                   ),
                 ),
               ],
-            ),
-            Divider(
-              thickness: 4.0,
-              color: Colors.blue[900],
-            ),
-            Obx(
-              () => Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Text(labels.general.search.filter,
-                      style: const TextStyle(fontSize: 30.0)),
-                  RaisedButton(
-                      shape: RoundedRectangleBorder(
-                        side: BorderSide(color: Colors.blue[600]),
-                        borderRadius: BorderRadius.circular(16.0),
-                      ),
-                      color: viewController.color1,
-                      onPressed: () => viewController.switchColor1(),
-                      child: Text(labels.medical.deworming)),
-                  RaisedButton(
-                      shape: RoundedRectangleBorder(
-                        side: BorderSide(color: Colors.blue[600]),
-                        borderRadius: BorderRadius.circular(16.0),
-                      ),
-                      color: viewController.color2,
-                      onPressed: () => viewController.switchColor2(),
-                      // todo: handle singular/pleural as extension
-                      /// spec: https://github.com/aloisdeniel/flutter_sheet_localization
-                      child: Text(labels.medical.vaccines.title)),
-                ],
-              ),
             ),
             Divider(
               thickness: 4.0,
@@ -106,7 +74,7 @@ class PatientSearchPage extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  width: Get.width / 5,
+                  width: Get.width / 4,
                   child: RaisedButton(
                     onPressed: () => controller.sortByBirthdate(),
                     child: Text(
@@ -119,10 +87,7 @@ class PatientSearchPage extends StatelessWidget {
                   width: Get.width / 5,
                   child: RaisedButton(
                     onPressed: () => controller.sortByBarrio(),
-                    child: Text(
-                      labels.general.address.neighborhood,
-                      style: const TextStyle(fontSize: 14.0),
-                    ),
+                    child: Icon(Icons.location_on_outlined),
                   ),
                 ),
               ],
@@ -145,6 +110,7 @@ class PatientSearchPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Container(
+                          padding: _padding,
                           width: Get.width / 3,
                           child: Text(
                             controller.patientName(index),
@@ -152,18 +118,22 @@ class PatientSearchPage extends StatelessWidget {
                           ),
                         ),
                         Container(
-                          width: Get.width / 5,
+                          padding: _padding,
+                          width: Get.width / 4,
                           child: Text(
                             controller.patientDob(index),
                             style: const TextStyle(fontSize: 16.0),
+                            textAlign: TextAlign.center,
                           ),
                         ),
                         Container(
+                          padding: _padding,
                           width: Get.width / 5,
                           child: Text(
                             controller.patientBarrio(index),
                             overflow: TextOverflow.ellipsis,
                             style: const TextStyle(fontSize: 16.0),
+                            textAlign: TextAlign.center,
                           ),
                         ),
                       ],

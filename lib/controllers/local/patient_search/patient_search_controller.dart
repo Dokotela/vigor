@@ -10,6 +10,9 @@ class PatientSearchController extends GetxController {
   final _fullPatientList = <Resource>[].obs;
   final _activePatientList = <Resource>[].obs;
   final labels = Get.arguments;
+  final nameSort = true.obs;
+  final birthDateSort = false.obs;
+  final barrioSort = false.obs;
 
   ///INIT
   @override
@@ -38,7 +41,7 @@ class PatientSearchController extends GetxController {
   }
 
   void searchPatientByName(String name) {
-    _activePatientList.value = <Resource>[];
+    _activePatientList.assignAll(<Resource>[]);
     for (final patient in _fullPatientList) {
       if (lastCommaGivenName(patient as Patient)
           .toLowerCase()

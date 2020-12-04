@@ -26,7 +26,8 @@ class ContactRegistrationPage extends StatelessWidget {
       },
       child: Scaffold(
         resizeToAvoidBottomInset: false,
-        appBar: VigorAppBar(title: labels.general.contacts),
+        appBar: VigorAppBar(title: 'Add Guardian'),
+        //title: labels.general.contacts),
         body: Padding(
           padding: const EdgeInsets.all(0.0),
           child: Center(
@@ -57,6 +58,20 @@ class ContactRegistrationPage extends StatelessWidget {
                       ),
                     ],
                   ),
+                  ActionButton(
+                    buttonText: 'add guardian',
+                    onPressed: null,
+                  ),
+                  Divider(
+                    color: Colors.blue[900],
+                    thickness: 0,
+                  ),
+                  Text(
+                    'Guardians',
+                    style: TextStyle(fontSize: 20.0),
+                  ),
+                  Text('Guardian 1'),
+                  Text('Guardian 2'),
                   Divider(
                     color: Colors.blue[900],
                     thickness: 0,

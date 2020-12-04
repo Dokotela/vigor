@@ -5,10 +5,10 @@ import 'package:get_storage/get_storage.dart';
 
 import 'controllers/locale_controller.dart';
 import 'controllers/settings_controller.dart';
-import 'controllers/theme_controller.dart';
 import 'localization.dart';
 import 'routes/routes.dart';
 
+import 'services/i_fhir_server.dart';
 import 'ui/styled_components/styled_loading.dart';
 import 'ui/views/views.dart';
 
@@ -23,6 +23,7 @@ Future main() async {
 Future<void> _initServices() async {
   await GetStorage.init();
   Get.put<SettingsController>(SettingsController());
+  // IFhirServer().syncWithServer();
 }
 
 class MyApp extends StatelessWidget {

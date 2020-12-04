@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import '../views/views.dart';
 
 BottomAppBar bottomAppBar = BottomAppBar(
-  color: Colors.blue[900],
+  color: Get.theme.colorScheme.primary,
   child: Row(
     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
     children: [
@@ -24,7 +24,7 @@ BottomAppBar bottomAppBar = BottomAppBar(
 );
 
 BottomAppBar homeBottomAppBar = BottomAppBar(
-  color: Colors.blue[900],
+  color: Get.theme.colorScheme.primary,
   child: Row(
     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
     children: [

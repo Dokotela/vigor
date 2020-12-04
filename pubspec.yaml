@@ -28,6 +28,7 @@ dependencies:
   intl: ^0.16.1
   path_provider: ^1.6.24
   photo_view: ^0.10.3
+  table_sticky_headers: ^1.2.0
   timeago: ^2.0.29
   translator: ^0.1.5
   vax_cast:
