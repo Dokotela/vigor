@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:vigor/routes/routes.dart';
 import 'package:vigor/ui/styled_components/app_bar.dart';
+import 'package:vigor/ui/styled_components/thin_action_button.dart';
 
 import '../../../controllers/local/patient_search/patient_search_controller.dart';
 import '../../../localization.dart';
@@ -25,69 +26,74 @@ class PatientSearchPage extends StatelessWidget {
           children: <Widget>[
             Row(
               children: [
-                Icon(Icons.search),
-                Flexible(
-                  flex: 20,
+                Expanded(
                   child: TextFormField(
                     controller: searchName,
                     decoration: InputDecoration(
                       hintText: labels.general.search.searchName,
+                      hintStyle: Get.textTheme.headline5,
                     ),
                     onChanged: (value) => controller.searchPatientByName(value),
                   ),
                 ),
-                const Spacer(),
-                Container(
-                  height: 60.0,
-                  width: 130.0,
-                  child: RaisedButton(
-                    color: Colors.grey,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16.0),
-                    ),
-                    onPressed: () =>
-                        Get.toNamed(AppRoutes.PATIENT_REGISTRATION),
-                    child: Text(
-                      'New Patient',
-                      textAlign: TextAlign.center,
-                      style: const TextStyle(fontSize: 18.0),
-                    ),
-                  ),
-                ),
+                Icon(Icons.search, size: Get.width / 10),
               ],
+            ),
+            const Divider(),
+            ThinActionButton(
+              buttonText: labels.general.newPatient,
+              onPressed: () => Get.toNamed(AppRoutes.PATIENT_REGISTRATION),
             ),
             Divider(
               thickness: 4.0,
               color: Colors.blue[900],
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Container(
-                  width: Get.width / 3,
-                  child: RaisedButton(
+                  width: Get.width / 2.6,
+                  child: FlatButton(
                     onPressed: () => controller.sortByName(),
-                    child: Text(
-                      labels.general.name.name,
-                      style: const TextStyle(fontSize: 14.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Text(
+                          labels.general.name.name,
+                          style: Get.theme.textTheme.headline6,
+                        ),
+                        Icon(Icons.keyboard_arrow_down),
+                      ],
+                    ),
+                  ),
+                ),
+                Container(
+                  width: Get.width / 3,
+                  child: FlatButton(
+                    onPressed: () => controller.sortByBirthdate(),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Text(
+                          labels.general.birthDate,
+                          style: Get.theme.textTheme.headline6,
+                        ),
+                        Icon(Icons.keyboard_arrow_down),
+                      ],
                     ),
                   ),
                 ),
                 Container(
                   width: Get.width / 4,
-                  child: RaisedButton(
-                    onPressed: () => controller.sortByBirthdate(),
-                    child: Text(
-                      labels.general.birthDate,
-                      style: const TextStyle(fontSize: 14.0),
-                    ),
-                  ),
-                ),
-                Container(
-                  width: Get.width / 5,
-                  child: RaisedButton(
+                  child: FlatButton(
                     onPressed: () => controller.sortByBarrio(),
-                    child: Icon(Icons.location_on_outlined),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Icon(Icons.location_on_outlined),
+                        Icon(Icons.keyboard_arrow_down),
+                      ],
+                    ),
                   ),
                 ),
               ],
@@ -99,6 +105,7 @@ class PatientSearchPage extends StatelessWidget {
             Expanded(
               child: Obx(
                 () => ListView.separated(
+                  shrinkWrap: true,
                   itemCount: controller.currentListLength,
                   separatorBuilder: (context, index) => Divider(
                     thickness: 1.0,
@@ -107,32 +114,32 @@ class PatientSearchPage extends StatelessWidget {
                   itemBuilder: (context, index) => FlatButton(
                     onPressed: () => controller.selectPatient(index),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
+                        Container(
+                          padding: _padding,
+                          width: Get.width / 2.6,
+                          child: Text(
+                            controller.patientName(index),
+                            style: Get.theme.textTheme.headline6,
+                          ),
+                        ),
                         Container(
                           padding: _padding,
                           width: Get.width / 3,
                           child: Text(
-                            controller.patientName(index),
-                            style: const TextStyle(fontSize: 16.0),
+                            controller.patientDob(index),
+                            style: Get.theme.textTheme.headline6,
+                            textAlign: TextAlign.center,
                           ),
                         ),
                         Container(
                           padding: _padding,
                           width: Get.width / 4,
                           child: Text(
-                            controller.patientDob(index),
-                            style: const TextStyle(fontSize: 16.0),
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
-                        Container(
-                          padding: _padding,
-                          width: Get.width / 5,
-                          child: Text(
                             controller.patientBarrio(index),
                             overflow: TextOverflow.ellipsis,
-                            style: const TextStyle(fontSize: 16.0),
+                            style: Get.theme.textTheme.headline6,
                             textAlign: TextAlign.center,
                           ),
                         ),
