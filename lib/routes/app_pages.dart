@@ -23,7 +23,7 @@ final appPages = [
     page: () => PatientSearchPage(),
   ),
   GetPage(
-    name: AppRoutes.PATIENT_HOME,
+    name: AppRoutes.PATIENT_HOME_PAGE,
     page: () => PatientHomePage(),
   ),
 ];

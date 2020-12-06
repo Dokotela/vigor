@@ -1,6 +1,6 @@
 import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:get/get.dart';
-import 'package:vigor/ui/views/views.dart';
+import 'package:vigor/ui/views/patient_home/patient_imm/vax_dates_dialog.dart';
 
 import '../../../models/data/patient_model.dart';
 import '../../../routes/routes.dart';
@@ -25,7 +25,7 @@ class PatientHomeController extends GetxController {
   /// SETTER FUNCTIONS
   Future<bool> loadImmunizations() async {
     await _patient.value.loadImmunizations();
-    _fullVaxDates.value = _patient.value.immHx;
+    _fullVaxDates.assignAll(_patient.value.immHx);
     return true;
   }
 

@@ -125,7 +125,8 @@ class ContactRegistrationController extends GetxController {
       final saveResult = await IFhirDb().save(_patient.value.patient);
       saveResult.fold(
         (l) => Get.snackbar('Error', l.error),
-        (r) => Get.offAllNamed(AppRoutes.PATIENT_HOME, arguments: r as Patient),
+        (r) => Get.offAllNamed(AppRoutes.PATIENT_HOME_PAGE,
+            arguments: r as Patient),
       );
     } else {
       _familyNameError.value = !isValidRegistrationName(familyName.text)

@@ -106,6 +106,6 @@ class PatientSearchController extends GetxController {
           ? ''
           : (b as Patient).address[0]?.district ?? '');
 
-  void selectPatient(int index) =>
-      Get.toNamed(AppRoutes.PATIENT_HOME, arguments: _activePatientList[index]);
+  void selectPatient(int index) => Get.toNamed(AppRoutes.PATIENT_HOME_PAGE,
+      arguments: _activePatientList[index]);
 }
