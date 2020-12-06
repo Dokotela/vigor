@@ -1,53 +1,56 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vigor/controllers/settings_dialog.dart';
 import 'package:vigor/routes/routes.dart';
-import 'package:vigor/ui/styled_components/app_bar.dart';
-import 'package:vigor/ui/styled_components/thin_action_button.dart';
 
 import '../../../controllers/local/patient_search/patient_search_controller.dart';
 import '../../../localization.dart';
 import '../../styled_components/bottom_navigation_bar.dart';
+import 'patient_search_view_controller.dart';
 
 class PatientSearchPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final labels = AppLocalizations.of(context);
     final controller = Get.put(PatientSearchController());
+    final viewController = Get.put(PatientSearchViewController());
     final searchName = TextEditingController();
     final _padding = EdgeInsets.fromLTRB(0, 0, 0, 0);
 
-    return Scaffold(
-      resizeToAvoidBottomInset: false,
-      appBar: VigorAppBar(title: labels.general.search.search),
-      body: Padding(
-        padding: const EdgeInsets.all(4.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
+    return GestureDetector(
+      onTap: () {
+        final currentFocus = FocusScope.of(context);
+        if (!currentFocus.hasPrimaryFocus) {
+          currentFocus.unfocus();
+        }
+      },
+      child: Scaffold(
+        appBar: AppBar(
+          automaticallyImplyLeading: false,
+          actions: [
+            Icon(Icons.search, size: Get.width / 10),
+            Expanded(
+              child: TextFormField(
+                cursorColor: Get.theme.colorScheme.onPrimary,
+                controller: searchName,
+                style: Get.textTheme.headline5
+                    .copyWith(color: Get.theme.colorScheme.onPrimary),
+                decoration: InputDecoration(
+                    hintText: labels.general.search.search,
+                    hintStyle: Get.textTheme.headline5
+                        .copyWith(color: Get.theme.colorScheme.onPrimary)),
+                onChanged: (value) => controller.searchPatientByName(value),
+              ),
+            ),
+            IconButton(
+              icon:
+                  Icon(Icons.settings, color: Get.theme.colorScheme.onPrimary),
+              onPressed: () => settingsDialog(),
+            ),
+          ],
+        ),
+        body: Column(
           children: <Widget>[
-            Row(
-              children: [
-                Expanded(
-                  child: TextFormField(
-                    controller: searchName,
-                    decoration: InputDecoration(
-                      hintText: labels.general.search.searchName,
-                      hintStyle: Get.textTheme.headline5,
-                    ),
-                    onChanged: (value) => controller.searchPatientByName(value),
-                  ),
-                ),
-                Icon(Icons.search, size: Get.width / 10),
-              ],
-            ),
-            const Divider(),
-            ThinActionButton(
-              buttonText: labels.general.newPatient,
-              onPressed: () => Get.toNamed(AppRoutes.PATIENT_REGISTRATION),
-            ),
-            Divider(
-              thickness: 4.0,
-              color: Colors.blue[900],
-            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -56,42 +59,44 @@ class PatientSearchPage extends StatelessWidget {
                   child: FlatButton(
                     onPressed: () => controller.sortByName(),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Text(
-                          labels.general.name.name,
+                          'Patient',
                           style: Get.theme.textTheme.headline6,
                         ),
-                        Icon(Icons.keyboard_arrow_down),
+                        Obx(() => viewController.getOrder(controller.nameSort)),
                       ],
                     ),
                   ),
                 ),
                 Container(
-                  width: Get.width / 3,
+                  width: Get.width / 2.9,
                   child: FlatButton(
                     onPressed: () => controller.sortByBirthdate(),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Text(
                           labels.general.birthDate,
                           style: Get.theme.textTheme.headline6,
                         ),
-                        Icon(Icons.keyboard_arrow_down),
+                        Obx(() =>
+                            viewController.getOrder(controller.birthDateSort)),
                       ],
                     ),
                   ),
                 ),
                 Container(
-                  width: Get.width / 4,
+                  width: Get.width / 5,
                   child: FlatButton(
                     onPressed: () => controller.sortByBarrio(),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Icon(Icons.location_on_outlined),
-                        Icon(Icons.keyboard_arrow_down),
+                        Obx(() =>
+                            viewController.getOrder(controller.barrioSort)),
                       ],
                     ),
                   ),
@@ -105,7 +110,6 @@ class PatientSearchPage extends StatelessWidget {
             Expanded(
               child: Obx(
                 () => ListView.separated(
-                  shrinkWrap: true,
                   itemCount: controller.currentListLength,
                   separatorBuilder: (context, index) => Divider(
                     thickness: 1.0,
@@ -130,17 +134,15 @@ class PatientSearchPage extends StatelessWidget {
                           child: Text(
                             controller.patientDob(index),
                             style: Get.theme.textTheme.headline6,
-                            textAlign: TextAlign.center,
                           ),
                         ),
                         Container(
                           padding: _padding,
-                          width: Get.width / 4,
+                          width: Get.width / 5,
                           child: Text(
                             controller.patientBarrio(index),
                             overflow: TextOverflow.ellipsis,
                             style: Get.theme.textTheme.headline6,
-                            textAlign: TextAlign.center,
                           ),
                         ),
                       ],
@@ -151,8 +153,17 @@ class PatientSearchPage extends StatelessWidget {
             ),
           ],
         ),
+        floatingActionButton: FloatingActionButton(
+          elevation: 10.0,
+          backgroundColor: Get.theme.colorScheme.primary,
+          onPressed: () => Get.toNamed(AppRoutes.PATIENT_REGISTRATION),
+          child: Icon(
+            Icons.add,
+            color: Get.theme.colorScheme.onPrimary,
+          ),
+        ),
+        bottomNavigationBar: bottomAppBar,
       ),
-      bottomNavigationBar: bottomAppBar,
     );
   }
 }

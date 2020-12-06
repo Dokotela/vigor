@@ -10,9 +10,9 @@ class PatientSearchController extends GetxController {
   final _fullPatientList = <Resource>[].obs;
   final _activePatientList = <Resource>[].obs;
   final labels = Get.arguments;
-  final nameSort = true.obs;
-  final birthDateSort = false.obs;
-  final barrioSort = false.obs;
+  final _nameSort = 0.obs;
+  final _birthDateSort = 0.obs;
+  final _barrioSort = 0.obs;
 
   ///INIT
   @override
@@ -31,6 +31,9 @@ class PatientSearchController extends GetxController {
           ? ''
           : (_activePatientList[index] as Patient).address[0].district;
   int get currentListLength => _activePatientList.length;
+  int get nameSort => _nameSort.value;
+  int get birthDateSort => _birthDateSort.value;
+  int get barrioSort => _barrioSort.value;
 
   /// EVENTS
   Future _loadList() async {
@@ -51,23 +54,57 @@ class PatientSearchController extends GetxController {
     }
   }
 
-  void sortByName() =>
-      _activePatientList.sort((a, b) => lastCommaGivenName(a as Patient)
-          .toLowerCase()
-          .compareTo(lastCommaGivenName(b as Patient).toLowerCase()));
+  void sortByName() {
+    _birthDateSort.value = 0;
+    _barrioSort.value = 0;
+    if (_nameSort.value == 1) {
+      _nameSort.value = 2;
+      _activePatientList.sort((a, b) => _sortName(b, a));
+    } else {
+      _nameSort.value = 1;
+      _activePatientList.sort((a, b) => _sortName(a, b));
+    }
+  }
 
-  void sortByBirthdate() => _activePatientList.sort((a, b) =>
+  int _sortName(a, b) => lastCommaGivenName(a as Patient)
+      .toLowerCase()
+      .compareTo(lastCommaGivenName(b as Patient).toLowerCase());
+
+  void sortByBirthdate() {
+    _nameSort.value = 0;
+    _barrioSort.value = 0;
+    if (_birthDateSort.value == 1) {
+      _birthDateSort.value = 2;
+      _activePatientList.sort((a, b) => _sortPatient(b, a));
+    } else {
+      _birthDateSort.value = 1;
+      _activePatientList.sort((a, b) => _sortPatient(a, b));
+    }
+  }
+
+  int _sortPatient(a, b) =>
       (DateTime.tryParse((a as Patient).birthDate.toString()) ?? DateTime(1900))
           .compareTo((DateTime.tryParse((b as Patient).birthDate.toString())) ??
-              DateTime(1900)));
+              DateTime(1900));
 
-  void sortByBarrio() =>
-      _activePatientList.sort((a, b) => ((a as Patient)?.address == null
-              ? ''
-              : (a as Patient).address[0]?.district ?? '')
-          .compareTo((b as Patient)?.address == null
-              ? ''
-              : (b as Patient).address[0]?.district ?? ''));
+  void sortByBarrio() {
+    _nameSort.value = 0;
+    _birthDateSort.value = 0;
+    if (_barrioSort.value == 1) {
+      _barrioSort.value = 2;
+      _activePatientList.sort((a, b) => _sortBarrio(b, a));
+    } else {
+      _barrioSort.value = 1;
+      _activePatientList.sort((a, b) => _sortBarrio(a, b));
+    }
+  }
+
+  int _sortBarrio(a, b) => ((a as Patient)?.address == null
+          ? ''
+          : (a as Patient).address[0]?.district ?? '')
+      .compareTo((b as Patient)?.address == null
+          ? ''
+          : (b as Patient).address[0]?.district ?? '');
 
   void selectPatient(int index) =>
       Get.toNamed(AppRoutes.PATIENT_HOME, arguments: _activePatientList[index]);
