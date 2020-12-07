@@ -7,9 +7,14 @@ import '../../../routes/routes.dart';
 
 class PatientHomeController extends GetxController {
   /// PROPERTIES
-  final _patient = PatientModel(patient: Get.arguments).obs;
+  final _patient = PatientModel().obs;
 
   /// INIT
+  @override
+  void onInit() {
+    _patient.value = Get.arguments;
+    super.onInit();
+  }
 
   /// GETTER FUNCTIONS
   String name() => _patient.value.name();
@@ -26,5 +31,5 @@ class PatientHomeController extends GetxController {
       Get.toNamed(AppRoutes.PATIENT_REGISTRATION, arguments: _patient.value);
 
   void immPage() =>
-      Get.toNamed(AppRoutes.PATIENT_IMM_PAGE, arguments: _patient);
+      Get.toNamed(AppRoutes.PATIENT_IMM_PAGE, arguments: _patient.value);
 }

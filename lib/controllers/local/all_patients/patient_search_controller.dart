@@ -1,5 +1,6 @@
 import 'package:fhir/r4.dart';
 import 'package:get/get.dart';
+import 'package:vigor/models/data/patient_model.dart';
 
 import '../../../_internal/utils/utils.dart';
 import '../../../routes/routes.dart';
@@ -108,5 +109,5 @@ class PatientSearchController extends GetxController {
           : (b as Patient).address[0]?.district ?? '');
 
   void selectPatient(int index) => Get.toNamed(AppRoutes.PATIENT_HOME_PAGE,
-      arguments: _activePatientList[index]);
+      arguments: PatientModel(patient: _activePatientList[index]));
 }
