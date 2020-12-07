@@ -16,27 +16,35 @@ class PatientHomePage extends StatelessWidget {
     final PatientHomeController controller = Get.put(PatientHomeController());
 
     return Scaffold(
-      appBar: VigorAppBar(title: labels.vigor.title),
+      appBar: VigorAppBar(title: 'Patient Home'),
       body: Container(
         constraints: const BoxConstraints.expand(),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             InfoBannerWidget(
+              name: controller.name(),
               id: controller.id(),
               birthDate: controller.birthDate(),
               relativeAge: controller.relativeAge(),
               sex: controller.sex(),
             ),
-            // ActionButton(
-            //   buttonText: labels.general.newPatient,
-            //   onPressed: () => Get.toNamed(AppRoutes.PATIENT_REGISTRATION),
-            // ),
+            Divider(color: Get.theme.colorScheme.primary, thickness: 2.0),
+            SizedBox(height: 40.0),
+            ActionButton(
+              buttonText: labels.medical.immunizations,
+              onPressed: () => Get.toNamed(AppRoutes.PATIENT_REGISTRATION),
+            ),
+            SizedBox(height: 40.0),
+            ActionButton(
+              buttonText: labels.medical.deworming,
+              onPressed: () => null,
+            ),
           ],
         ),
       ),
-      bottomNavigationBar: homeBottomAppBar,
+      bottomNavigationBar: bottomAppBar,
     );
   }
 }

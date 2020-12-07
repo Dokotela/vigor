@@ -18,6 +18,7 @@ class PatientSearchController extends GetxController {
   @override
   Future onInit() async {
     await _loadList();
+    sortByName();
     super.onInit();
   }
 
