@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 
 import '../../../controllers/local/patient_home/patient_home_controller.dart';
 import '../../../localization.dart';
-import '../../../routes/routes.dart';
 import '../../../ui/styled_components/action_button.dart';
 import '../../../ui/styled_components/app_bar.dart';
 import '../../../ui/styled_components/bottom_navigation_bar.dart';
@@ -23,18 +22,28 @@ class PatientHomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            InfoBannerWidget(
-              name: controller.name(),
-              id: controller.id(),
-              birthDate: controller.birthDate(),
-              relativeAge: controller.relativeAge(),
-              sex: controller.sex(),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                IconButton(
+                  icon: Icon(Icons.edit,
+                      color: Get.theme.colorScheme.onBackground),
+                  onPressed: () => controller.editPatient(),
+                ),
+                InfoBannerWidget(
+                  name: controller.name(),
+                  id: controller.id(),
+                  birthDate: controller.birthDate(),
+                  relativeAge: controller.relativeAge(),
+                  sex: controller.sex(),
+                ),
+              ],
             ),
             Divider(color: Get.theme.colorScheme.primary, thickness: 2.0),
             SizedBox(height: 40.0),
             ActionButton(
               buttonText: labels.medical.immunizations,
-              onPressed: () => Get.toNamed(AppRoutes.PATIENT_REGISTRATION),
+              onPressed: () => controller.immPage(),
             ),
             SizedBox(height: 40.0),
             ActionButton(
