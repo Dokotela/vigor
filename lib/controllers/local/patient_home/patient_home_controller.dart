@@ -1,6 +1,6 @@
 import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:get/get.dart';
-import 'package:vigor/ui/views/patient_home/patient_imm/vax_dates_dialog.dart';
+// import 'package:vigor/ui/views/patient_home/patient_imm/vax_dates_dialog.dart';
 
 import '../../../models/data/patient_model.dart';
 import '../../../routes/routes.dart';
@@ -35,7 +35,7 @@ class PatientHomeController extends GetxController {
     update();
   }
 
-  void displayDatesDialog(String text, String dz) => vaxDatesDialog(text, dz);
+  // void displayDatesDialog(String text, String dz) => vaxDatesDialog(text, dz);
 
   void editPatient() =>
       Get.toNamed(AppRoutes.PATIENT_REGISTRATION, arguments: _patient.value);

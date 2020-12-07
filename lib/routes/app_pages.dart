@@ -26,4 +26,8 @@ final appPages = [
     name: AppRoutes.PATIENT_HOME_PAGE,
     page: () => PatientHomePage(),
   ),
+  // GetPage(
+  //   name: AppRoutes.PATIENT_IMM_PAGE,
+  //   page: () => PatientImmPage(),
+  // ),
 ];

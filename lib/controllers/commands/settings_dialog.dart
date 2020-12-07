@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 
 import 'package:vigor/models/data/menu_option.dart';
 
-import '../localization.dart';
+import '../../localization.dart';
 import 'settings_controller.dart';
 
 /// this was taken directly from John's repo: https://github.com/FireJuun/prapare

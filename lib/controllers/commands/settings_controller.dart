@@ -11,7 +11,7 @@ import 'package:vigor/_internal/constants/constants.dart';
 import 'package:vigor/models/data/menu_option.dart';
 import 'package:vigor/ui/theme/app_theme.dart';
 
-import '../localization.dart';
+import '../../localization.dart';
 
 /// Previously taken directly from John's repo:
 /// https://github.com/FireJuun/prapare

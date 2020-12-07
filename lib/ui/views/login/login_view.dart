@@ -2,7 +2,7 @@ import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vigor/controllers/settings_dialog.dart';
+import 'package:vigor/controllers/commands/settings_dialog.dart';
 import 'package:vigor/routes/routes.dart';
 import 'package:vigor/ui/styled_components/app_bar.dart';
 

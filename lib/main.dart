@@ -3,12 +3,9 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
-import 'controllers/locale_controller.dart';
-import 'controllers/settings_controller.dart';
+import 'controllers/commands/settings_controller.dart';
 import 'localization.dart';
 import 'routes/routes.dart';
-
-import 'services/i_fhir_server.dart';
 import 'ui/styled_components/styled_loading.dart';
 import 'ui/views/views.dart';
 
@@ -23,13 +20,12 @@ Future main() async {
 Future<void> _initServices() async {
   await GetStorage.init();
   Get.put<SettingsController>(SettingsController());
-  // IFhirServer().syncWithServer();
 }
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<LocaleController>(
+    return GetBuilder<SettingsController>(
       builder: (localeService) {
         return StyledLoading(
           child: GetMaterialApp(
@@ -44,7 +40,7 @@ class MyApp extends StatelessWidget {
                 .toList(), // <- Supported locales
 
             // *** THEMES ***
-            theme: SettingsController.to.theme,
+            theme: SettingsController.to.lightTheme,
             darkTheme: SettingsController.to.darkTheme,
             themeMode: SettingsController.to.themeMode,
 
