@@ -60,7 +60,7 @@ class _SettingsDialogContent extends StatelessWidget {
                     (e) => Obx(
                       () => RadioListTile(
                         title: Text(e.value, style: textTheme.bodyText1),
-                        subtitle: (controller.language == 'en')
+                        subtitle: (controller.currentLanguage == 'en')
                             ? null
                             : Text(e.englishValue, style: textTheme.bodyText2),
                         value: e.key,
@@ -76,16 +76,16 @@ class _SettingsDialogContent extends StatelessWidget {
                   Center(
                       child: Text(labels.app.chooseLanguage,
                           style: textTheme.bodyText1)),
-                  ...controller.getlanguageOptions().map(
-                        (e) => RadioListTile(
-                          title: Text(e.value, style: textTheme.bodyText1),
-                          subtitle:
-                              Text(e.englishValue, style: textTheme.bodyText2),
-                          value: e.key,
-                          groupValue: controller.language,
-                          onChanged: (value) => controller.setLocale(value),
-                        ),
-                      ),
+                  ...controller.languageOptions.map(
+                    (e) => RadioListTile(
+                      title: Text(e.value, style: textTheme.bodyText1),
+                      subtitle:
+                          Text(e.englishValue, style: textTheme.bodyText2),
+                      value: e.key,
+                      groupValue: controller.currentLanguage,
+                      onChanged: (value) => controller.updateLanguage(value),
+                    ),
+                  ),
                 ],
               ),
             ),
