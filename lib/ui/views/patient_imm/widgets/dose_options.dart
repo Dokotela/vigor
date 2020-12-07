@@ -1,8 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
+import 'package:vigor/_internal/constants/dose_display.dart';
 import 'package:vigor/_internal/utils/utils.dart';
-
-enum DoseDisplay { open, due, completed, completedToday, overdue, na, possible }
 
 Widget doseOptions(Either<DoseDisplay, String> display) {
   return display.fold(

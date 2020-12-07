@@ -31,6 +31,7 @@ dependencies:
   table_sticky_headers: ^1.2.0
   timeago: ^2.0.29
   translator: ^0.1.5
+  simple_tooltip: ^0.1.16
   vax_cast:
     git:
       url: git://github.com/Dokotela/vax_cast.git
