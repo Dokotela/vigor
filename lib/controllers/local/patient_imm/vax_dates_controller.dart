@@ -1,9 +1,9 @@
 import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:get/get.dart';
-import 'package:vigor/_internal/constants/dr_vax_cvx_map.dart';
 
+import '../../../_internal/constants/dr_vax_cvx_map.dart';
 import '../../../_internal/utils/utils.dart';
-import 'patient_home_controller.dart';
+import '../patient_home/patient_home_controller.dart';
 
 class VaxDatesController extends GetxController {
   /// PROPERTIES

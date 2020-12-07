@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vigor/controllers/local/patient_home/patient_home_controller.dart';
-import 'package:vigor/routes/routes.dart';
-import 'package:vigor/ui/styled_components/action_button.dart';
-import 'package:vigor/ui/styled_components/app_bar.dart';
-import 'package:vigor/ui/styled_components/bottom_navigation_bar.dart';
-import 'package:vigor/ui/styled_components/info_banner.dart';
 
+import '../../../controllers/local/patient_home/patient_home_controller.dart';
 import '../../../localization.dart';
+import '../../../routes/routes.dart';
+import '../../../ui/styled_components/action_button.dart';
+import '../../../ui/styled_components/app_bar.dart';
+import '../../../ui/styled_components/bottom_navigation_bar.dart';
+import '../../../ui/styled_components/info_banner.dart';
 
 class PatientHomePage extends StatelessWidget {
   @override

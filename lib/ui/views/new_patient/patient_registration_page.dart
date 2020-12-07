@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vigor/ui/styled_components/app_bar.dart';
 
-import '../../../controllers/local/registration/patient_registration_controller.dart';
+import '../../../controllers/local/new_patient/patient_registration_controller.dart';
+import '../../../ui/styled_components/app_bar.dart';
 import '../../styled_components/bottom_navigation_bar.dart';
 import 'widgets/barrio.dart';
 import 'widgets/birthDate.dart';

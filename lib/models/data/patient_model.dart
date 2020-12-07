@@ -1,7 +1,7 @@
 import 'package:fhir/r4.dart';
 import 'package:get/get.dart';
-import 'package:vigor/_internal/constants/dr_vax_cvx_map.dart';
 
+import '../../_internal/constants/dr_vax_cvx_map.dart';
 import '../../_internal/utils/utils.dart';
 import '../../services/i_dr_vax_cast.dart';
 import '../../services/i_fhir_db.dart';

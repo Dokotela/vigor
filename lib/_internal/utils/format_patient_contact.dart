@@ -1,5 +1,5 @@
 import 'package:fhir/r4.dart';
-import 'package:vigor/_internal/utils/relationship_types.dart';
+import '../../_internal/utils/relationship_types.dart';
 
 PatientContact formatPatientContact(
         String family, String given, String barrio, String relationship) =>

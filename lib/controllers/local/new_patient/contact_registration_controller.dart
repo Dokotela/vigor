@@ -1,14 +1,13 @@
 import 'package:fhir/r4.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vigor/_internal/utils/relationship_types.dart';
 
 import '../../../_internal/constants/constants.dart';
+import '../../../_internal/utils/relationship_types.dart';
 import '../../../_internal/utils/utils.dart';
 import '../../../_internal/utils/validators.dart';
 import '../../../localization.dart';
 import '../../../models/data/patient_model.dart';
-
 import '../../../routes/routes.dart';
 import '../../../services/i_fhir_db.dart';
 

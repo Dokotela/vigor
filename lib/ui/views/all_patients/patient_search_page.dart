@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vigor/controllers/commands/settings_dialog.dart';
-import 'package:vigor/routes/routes.dart';
 
-import '../../../controllers/local/patient_search/patient_search_controller.dart';
+import '../../../controllers/commands/settings_dialog.dart';
+import '../../../controllers/local/all_patients/patient_search_controller.dart';
 import '../../../localization.dart';
+import '../../../routes/routes.dart';
 import '../../styled_components/bottom_navigation_bar.dart';
 import 'patient_search_view_controller.dart';
 

@@ -7,11 +7,11 @@ import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:vigor/_internal/constants/constants.dart';
-import 'package:vigor/models/data/menu_option.dart';
-import 'package:vigor/ui/theme/app_theme.dart';
 
+import '../../_internal/constants/constants.dart';
 import '../../localization.dart';
+import '../../models/data/menu_option.dart';
+import '../../ui/theme/app_theme.dart';
 
 /// Previously taken directly from John's repo:
 /// https://github.com/FireJuun/prapare

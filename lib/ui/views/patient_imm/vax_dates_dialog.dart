@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vigor/_internal/utils/utils.dart';
-import 'package:vigor/controllers/local/patient_home/vax_dates_controller.dart';
+
+import '../../../_internal/utils/utils.dart';
+import '../../../controllers/local/patient_imm/vax_dates_controller.dart';
 
 void vaxDatesDialog(String text, String dz) =>
     Get.dialog(_VaxDatesDialog(text, dz));

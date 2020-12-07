@@ -2,11 +2,11 @@ import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vigor/controllers/commands/settings_dialog.dart';
-import 'package:vigor/routes/routes.dart';
-import 'package:vigor/ui/styled_components/app_bar.dart';
 
+import '../../../controllers/commands/settings_dialog.dart';
 import '../../../localization.dart';
+import '../../../routes/routes.dart';
+import '../../../ui/styled_components/app_bar.dart';
 import 'widgets/flag.dart';
 import 'widgets/splash_title.dart';
 

@@ -2,9 +2,9 @@ import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:get/get.dart';
 // import 'package:vigor/ui/views/patient_home/patient_imm/vax_dates_dialog.dart';
 
+import '../../../_internal/utils/relative_age.dart';
 import '../../../models/data/patient_model.dart';
 import '../../../routes/routes.dart';
-import 'shared/relative_age.dart';
 
 class PatientHomeController extends GetxController {
   /// PROPERTIES

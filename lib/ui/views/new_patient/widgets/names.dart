@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vigor/controllers/commands/settings_controller.dart';
 
 import '../../../../localization.dart';
 

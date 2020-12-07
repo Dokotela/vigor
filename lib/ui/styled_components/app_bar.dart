@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vigor/controllers/commands/settings_dialog.dart';
+
+import '../../controllers/commands/settings_dialog.dart';
 
 class VigorAppBar extends AppBar {
   VigorAppBar({@required String title, Widget leading})
