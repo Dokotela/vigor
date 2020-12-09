@@ -9,8 +9,6 @@ import 'widgets/dose_options.dart';
 
 class PatientImmPage extends StatelessWidget {
   final PatientImmController controller = Get.put(PatientImmController());
-  final _greyBoxDecoration = BoxDecoration(color: Colors.white);
-  final _whiteBoxDecoration = BoxDecoration(color: Colors.grey[300]);
 
   DataColumn _heading(String title) => DataColumn(
         label: Container(
@@ -66,104 +64,89 @@ class PatientImmPage extends StatelessWidget {
             child: Column(
               children: [
                 Container(
-                  child: FutureBuilder(
-                    future: controller.createDisplay(),
-                    builder: (BuildContext context, AsyncSnapshot snapshot) {
-                      if (snapshot.hasData) {
-                        return FittedBox(
-                          child: DataTable(
-                            showCheckboxColumn: false,
-                            horizontalMargin: 6,
-                            columnSpacing: 2,
-                            dividerThickness: 2,
-                            dataRowHeight: Get.height / 18,
-                            showBottomBorder: true,
-                            columns: [
-                              DataColumn(
-                                label: Container(
-                                  width: Get.width / 3,
-                                  child: Text(
-                                    'Dosis',
-                                    textAlign: TextAlign.center,
-                                    style: Get.textTheme.headline6,
+                  child: FittedBox(
+                    child: Obx(
+                      () => controller.isReady.value
+                          ? DataTable(
+                              showCheckboxColumn: false,
+                              horizontalMargin: 6,
+                              columnSpacing: 2,
+                              dividerThickness: 2,
+                              dataRowHeight: Get.height / 18,
+                              showBottomBorder: true,
+                              columns: [
+                                DataColumn(
+                                  label: Container(
+                                    width: Get.width / 3,
+                                    child: Text(
+                                      'Dosis',
+                                      textAlign: TextAlign.center,
+                                      style: Get.textTheme.headline6,
+                                    ),
                                   ),
                                 ),
-                              ),
-                              _heading('RN'),
-                              _heading('1ra'),
-                              _heading('2da'),
-                              _heading('3rd'),
-                              _heading('1er\nRef'),
-                              _heading('2da\nRef'),
-                            ],
-                            rows: [
-                              _getRow(
-                                'Anti-BCG',
-                                'Tuberculosis',
-                                context,
-                                _whiteBoxDecoration,
-                              ),
-                              _getRow(
-                                'Anti-Hepatitis B',
-                                'HepB',
-                                context,
-                                _greyBoxDecoration,
-                              ),
-                              _getRow(
-                                'Anti-Rotavirus',
-                                'Rotavirus',
-                                context,
-                                _whiteBoxDecoration,
-                              ),
-                              _getRow(
-                                'Anti-Polio',
-                                'Polio',
-                                context,
-                                _greyBoxDecoration,
-                              ),
-                              _getRow(
-                                'Pentavalente\n(DPT/HB/Hib)',
-                                'Pentavalente',
-                                context,
-                                _whiteBoxDecoration,
-                              ),
-                              _getRow(
-                                'Anti-Neumococo',
-                                'Pneumococcal',
-                                context,
-                                _greyBoxDecoration,
-                              ),
-                              _getRow(
-                                'Influenza',
-                                'Influenza',
-                                context,
-                                _whiteBoxDecoration,
-                              ),
-                              _getRow(
-                                'SRP',
-                                'MMR',
-                                context,
-                                _greyBoxDecoration,
-                              ),
-                              _getRow(
-                                'DPT',
-                                'DTP',
-                                context,
-                                _whiteBoxDecoration,
-                              ),
-                              _getRow(
-                                'SR',
-                                'MR',
-                                context,
-                                _greyBoxDecoration,
-                              ),
-                            ],
-                          ),
-                        );
-                      } else {
-                        return CircularProgressIndicator();
-                      }
-                    },
+                                _heading('RN'),
+                                _heading('1ra'),
+                                _heading('2da'),
+                                _heading('3rd'),
+                                _heading('1er\nRef'),
+                                _heading('2da\nRef'),
+                              ],
+                              rows: [
+                                _getRow(
+                                  'Anti-BCG',
+                                  'Tuberculosis',
+                                  context,
+                                ),
+                                _getRow(
+                                  'Anti-Hepatitis B',
+                                  'HepB',
+                                  context,
+                                ),
+                                _getRow(
+                                  'Anti-Rotavirus',
+                                  'Rotavirus',
+                                  context,
+                                ),
+                                _getRow(
+                                  'Anti-Polio',
+                                  'Polio',
+                                  context,
+                                ),
+                                _getRow(
+                                  'Pentavalente\n(DPT/HB/Hib)',
+                                  'Pentavalente',
+                                  context,
+                                ),
+                                _getRow(
+                                  'Anti-Neumococo',
+                                  'Pneumococcal',
+                                  context,
+                                ),
+                                _getRow(
+                                  'Influenza',
+                                  'Influenza',
+                                  context,
+                                ),
+                                _getRow(
+                                  'SRP',
+                                  'MMR',
+                                  context,
+                                ),
+                                _getRow(
+                                  'DPT',
+                                  'DTP',
+                                  context,
+                                ),
+                                _getRow(
+                                  'SR',
+                                  'MR',
+                                  context,
+                                ),
+                              ],
+                            )
+                          : CircularProgressIndicator(),
+                    ),
                   ),
                 ),
               ],
@@ -179,7 +162,6 @@ class PatientImmPage extends StatelessWidget {
     String text,
     String dz,
     BuildContext context,
-    BoxDecoration decoration,
   ) =>
       DataRow(
         cells: _getCells(text, dz, context),

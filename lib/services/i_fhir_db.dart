@@ -32,8 +32,14 @@ class IFhirDb {
 
   Future<Either<DbFailure, List<Resource>>> returnPatientImmunizationHistory(
       String patientId) async {
-    return await searchFunction(
+    var temp = await searchFunction(
         'Immunization', 'patient.reference', 'Patient/$patientId');
+    temp.fold((l) => print(l.error), (r) {
+      for (var t in r) {
+        print(t.toJson());
+      }
+    });
+    return temp;
   }
 
   Future<Either<DbFailure, List<Resource>>> returnPatientPastDeworming(

@@ -10,6 +10,7 @@ class PatientImmController extends GetxController {
   /// PROPERTIES
   final _patient = PatientModel().obs;
   final _display = VaccineDisplay().obs;
+  var isReady = false.obs;
 
   /// INIT
   @override
@@ -20,8 +21,8 @@ class PatientImmController extends GetxController {
     _display.value.fullVaxDates = _patient.value.immHx;
     _display.value.setDisplayDates();
     _display.value.checkValidityOfDoses();
-    print(_patient.value.pastImmunizations.length);
     super.onInit();
+    isReady.value = true;
   }
 
   /// GETTER FUNCTIONS
@@ -30,12 +31,10 @@ class PatientImmController extends GetxController {
   Map<String, Set<FhirDateTime>> immHx() => _display.value.fullVaxDates;
   Either<DoseDisplay, String> display(String dz, int number) =>
       _display.value.matrix[dz][number];
+
   PatientModel actualPatient() => _patient.value;
 
   /// SETTER FUNCTIONS
-  Future<bool> createDisplay() async {
-    return true;
-  }
 
   /// EVENTS
   Future newVaccine(String cvx, FhirDateTime date) async {

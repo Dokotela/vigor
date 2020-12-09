@@ -56,60 +56,62 @@ class VaxDatesPage extends StatelessWidget {
               height: Get.height / 2,
               child: controller.dateList.isEmpty
                   ? _noPrevious
-                  : ListView.separated(
-                      shrinkWrap: true,
-                      padding: const EdgeInsets.all(8),
-                      separatorBuilder: (BuildContext context, int index) =>
-                          const Divider(),
-                      itemCount: controller.dateList.length,
-                      itemBuilder: (BuildContext context, int index) => Obx(
-                        () => Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            Text(
-                              dateFromDateTime(
-                                  controller.dateList[index].current),
-                              style: TextStyle(
-                                fontSize: 20,
-                                decoration: controller.isDeleted(index)
-                                    ? TextDecoration.lineThrough
-                                    : null,
+                  : Obx(
+                      () => ListView.separated(
+                        shrinkWrap: true,
+                        padding: const EdgeInsets.all(8),
+                        separatorBuilder: (BuildContext context, int index) =>
+                            const Divider(),
+                        itemCount: controller.dateList.length,
+                        itemBuilder: (BuildContext context, int index) => Obx(
+                          () => Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              Text(
+                                dateFromDateTime(
+                                    controller.dateList[index].current),
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  decoration: controller.isDeleted(index)
+                                      ? TextDecoration.lineThrough
+                                      : null,
+                                ),
                               ),
-                            ),
-                            Material(
-                              elevation: 5.0,
-                              borderRadius: BorderRadius.circular(64.0),
-                              color: Get.theme.colorScheme.primary,
-                              child: IconButton(
-                                icon: Icon(Icons.edit,
-                                    color: Get.theme.colorScheme.onPrimary),
-                                onPressed: () => controller.isDeleted(index)
-                                    ? null
-                                    : showDatePicker(
-                                        context: Get.context,
-                                        locale: Get.locale,
-                                        initialDate:
-                                            controller.currentDate(index),
-                                        firstDate: DateTime(1900, 1, 1),
-                                        lastDate: DateTime(2999, 12, 31),
-                                      ).then(
-                                        (date) {
-                                          controller.editDate(index, date);
-                                        },
-                                      ),
+                              Material(
+                                elevation: 5.0,
+                                borderRadius: BorderRadius.circular(64.0),
+                                color: Get.theme.colorScheme.primary,
+                                child: IconButton(
+                                  icon: Icon(Icons.edit,
+                                      color: Get.theme.colorScheme.onPrimary),
+                                  onPressed: () => controller.isDeleted(index)
+                                      ? null
+                                      : showDatePicker(
+                                          context: Get.context,
+                                          locale: Get.locale,
+                                          initialDate:
+                                              controller.currentDate(index),
+                                          firstDate: DateTime(1900, 1, 1),
+                                          lastDate: DateTime(2999, 12, 31),
+                                        ).then(
+                                          (date) {
+                                            controller.editDate(index, date);
+                                          },
+                                        ),
+                                ),
                               ),
-                            ),
-                            Material(
-                              elevation: 5.0,
-                              borderRadius: BorderRadius.circular(64.0),
-                              color: Get.theme.colorScheme.primary,
-                              child: IconButton(
-                                icon: Icon(Icons.delete,
-                                    color: Get.theme.colorScheme.onPrimary),
-                                onPressed: () => controller.delete(index),
+                              Material(
+                                elevation: 5.0,
+                                borderRadius: BorderRadius.circular(64.0),
+                                color: Get.theme.colorScheme.primary,
+                                child: IconButton(
+                                  icon: Icon(Icons.delete,
+                                      color: Get.theme.colorScheme.onPrimary),
+                                  onPressed: () => controller.delete(index),
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     ),

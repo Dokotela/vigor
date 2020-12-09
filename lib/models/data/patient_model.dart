@@ -81,8 +81,10 @@ class PatientModel {
     if (index != -1) {
       pastImmunizations[index] =
           pastImmunizations[index].copyWith(status: Code('entered-in-error'));
+      print(pastImmunizations[index].toJson());
       final iFhirDb = IFhirDb();
-      await iFhirDb.save(immunization);
+      var temp = await iFhirDb.save(immunization);
+      temp.fold((l) => print(l.error), (r) => print(r.toJson()));
       pastImmunizations.removeAt(index);
       // print(pastImmunizations.length);
       immHx = IDrVaxCast.drVaxCast(immunizations: pastImmunizations);
