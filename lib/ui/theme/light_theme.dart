@@ -54,5 +54,6 @@ ThemeData get lightTheme {
     cursorColor: Color(0xff353AE0),
     highlightColor: Color(0xff353AE0),
     toggleableActiveColor: Color(0xff353AE0),
+    dividerColor: Colors.blue,
   );
 }

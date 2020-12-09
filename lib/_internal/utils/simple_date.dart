@@ -9,3 +9,6 @@ String dateFromFhirDateTime(FhirDateTime date) =>
     date.toString().substring(0, 10);
 
 String dateFromDateTime(DateTime date) => date.toString().substring(0, 10);
+
+DateTime dateTimeFromFhirDateTime(FhirDateTime date) =>
+    DateTime.parse(date.toJson());

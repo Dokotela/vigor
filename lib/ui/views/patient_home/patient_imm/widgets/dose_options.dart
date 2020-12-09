@@ -3,22 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:vigor/_internal/constants/dose_display.dart';
 import 'package:vigor/_internal/utils/utils.dart';
 
-Widget doseOptions(
-    Either<DoseDisplay, String> display, BoxDecoration decoration) {
+Widget doseOptions(Either<DoseDisplay, String> display) {
   return display.fold(
     (l) {
       switch (l) {
         case DoseDisplay.open:
-          return Container(
-            alignment: Alignment.center,
-            color: decoration.color,
-            child: Text(' \n'),
-          );
+          return Container();
 
         case DoseDisplay.due:
           return Container(
             alignment: Alignment.center,
-            color: decoration.color,
             child: Icon(Icons.access_time, color: Colors.orange, size: 24),
           );
 
@@ -35,26 +29,19 @@ Widget doseOptions(
         case DoseDisplay.overdue:
           return Container(
               alignment: Alignment.center,
-              color: decoration.color,
-              child: Icon(Icons.warning, color: Colors.red, size: 24));
+              child: Icon(
+                Icons.warning,
+                color: Colors.red,
+              ));
 
         case DoseDisplay.na:
-          return Container(
-              alignment: Alignment.center,
-              color: Colors.black,
-              child: Text(' \n'));
+          return Center(child: Container(color: Colors.black));
 
         case DoseDisplay.possible:
-          return Container(
-              alignment: Alignment.center,
-              color: decoration.color,
-              child: Text(' \n'));
+          return Container();
 
         default:
-          return Container(
-              alignment: Alignment.center,
-              color: decoration.color,
-              child: Text(' \n'));
+          return Container();
       }
     },
     (r) => Container(

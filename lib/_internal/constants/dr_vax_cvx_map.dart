@@ -14,12 +14,8 @@ final drVaxCvxMap = {
 };
 
 final cvxToCoding = {
-  '19': CodeableConcept(coding: [
-    Coding(
-        system: _system,
-        code: Code('19'),
-        display: 'Bacillus Calmette-Guerin vaccine')
-  ]),
+  '19': CodeableConcept(
+      coding: [Coding(system: _system, code: Code('19'), display: 'BCG')]),
   '08': CodeableConcept(coding: [
     Coding(
         system: _system,

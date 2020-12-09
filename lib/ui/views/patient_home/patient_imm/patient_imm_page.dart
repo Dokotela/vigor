@@ -1,0 +1,214 @@
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import '../../../../controllers/local/patient_home/patient_imm/patient_imm_controller.dart';
+import '../../../../localization.dart';
+import '../../../../ui/styled_components/app_bar.dart';
+import '../../../../ui/styled_components/bottom_navigation_bar.dart';
+import 'widgets/dose_options.dart';
+
+class PatientImmPage extends StatelessWidget {
+  final PatientImmController controller = Get.put(PatientImmController());
+  final _greyBoxDecoration = BoxDecoration(color: Colors.white);
+  final _whiteBoxDecoration = BoxDecoration(color: Colors.grey[300]);
+
+  DataColumn _heading(String title) => DataColumn(
+        label: Container(
+          width: Get.width / 10,
+          child: Text(
+            title,
+            textAlign: TextAlign.center,
+            style: Get.textTheme.headline6,
+          ),
+        ),
+      );
+
+  @override
+  Widget build(BuildContext context) {
+    final labels = AppLocalizations.of(context);
+
+    return Scaffold(
+      resizeToAvoidBottomInset: false,
+      appBar: VigorAppBar(title: labels.medical.immunizations),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SizedBox(height: 4.0),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              IconButton(
+                icon:
+                    Icon(Icons.edit, color: Get.theme.colorScheme.onBackground),
+                onPressed: () => controller.editPatient(),
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    '${labels.general.name.name}: ${controller.name()}',
+                    style: Get.textTheme.headline6
+                        .copyWith(fontSize: Get.width / 18),
+                  ),
+                  SizedBox(height: 4.0),
+                  Text(
+                    '${labels.general.birthDate}: ${controller.birthDate()}',
+                    style: Get.textTheme.headline6
+                        .copyWith(fontSize: Get.width / 18),
+                  ),
+                ],
+              ),
+            ],
+          ),
+          SizedBox(height: Get.height / 30),
+          Padding(
+            padding: const EdgeInsets.all(4.0),
+            child: Column(
+              children: [
+                Container(
+                  child: FutureBuilder(
+                    future: controller.createDisplay(),
+                    builder: (BuildContext context, AsyncSnapshot snapshot) {
+                      if (snapshot.hasData) {
+                        return FittedBox(
+                          child: DataTable(
+                            showCheckboxColumn: false,
+                            horizontalMargin: 6,
+                            columnSpacing: 2,
+                            dividerThickness: 2,
+                            dataRowHeight: Get.height / 18,
+                            showBottomBorder: true,
+                            columns: [
+                              DataColumn(
+                                label: Container(
+                                  width: Get.width / 3,
+                                  child: Text(
+                                    'Dosis',
+                                    textAlign: TextAlign.center,
+                                    style: Get.textTheme.headline6,
+                                  ),
+                                ),
+                              ),
+                              _heading('RN'),
+                              _heading('1ra'),
+                              _heading('2da'),
+                              _heading('3rd'),
+                              _heading('1er\nRef'),
+                              _heading('2da\nRef'),
+                            ],
+                            rows: [
+                              _getRow(
+                                'Anti-BCG',
+                                'Tuberculosis',
+                                context,
+                                _whiteBoxDecoration,
+                              ),
+                              _getRow(
+                                'Anti-Hepatitis B',
+                                'HepB',
+                                context,
+                                _greyBoxDecoration,
+                              ),
+                              _getRow(
+                                'Anti-Rotavirus',
+                                'Rotavirus',
+                                context,
+                                _whiteBoxDecoration,
+                              ),
+                              _getRow(
+                                'Anti-Polio',
+                                'Polio',
+                                context,
+                                _greyBoxDecoration,
+                              ),
+                              _getRow(
+                                'Pentavalente\n(DPT/HB/Hib)',
+                                'Pentavalente',
+                                context,
+                                _whiteBoxDecoration,
+                              ),
+                              _getRow(
+                                'Anti-Neumococo',
+                                'Pneumococcal',
+                                context,
+                                _greyBoxDecoration,
+                              ),
+                              _getRow(
+                                'Influenza',
+                                'Influenza',
+                                context,
+                                _whiteBoxDecoration,
+                              ),
+                              _getRow(
+                                'SRP',
+                                'MMR',
+                                context,
+                                _greyBoxDecoration,
+                              ),
+                              _getRow(
+                                'DPT',
+                                'DTP',
+                                context,
+                                _whiteBoxDecoration,
+                              ),
+                              _getRow(
+                                'SR',
+                                'MR',
+                                context,
+                                _greyBoxDecoration,
+                              ),
+                            ],
+                          ),
+                        );
+                      } else {
+                        return CircularProgressIndicator();
+                      }
+                    },
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+      bottomNavigationBar: bottomAppBar,
+    );
+  }
+
+  DataRow _getRow(
+    String text,
+    String dz,
+    BuildContext context,
+    BoxDecoration decoration,
+  ) =>
+      DataRow(
+        cells: _getCells(text, dz, context),
+        onSelectChanged: (value) => controller.editDates(text, dz),
+      );
+
+  List<DataCell> _getCells(
+    String text,
+    String dz,
+    BuildContext context,
+  ) =>
+      [
+        DataCell(
+          Container(
+            alignment: Alignment.center,
+            width: Get.width / 3,
+            child: Text(
+              text,
+              textAlign: TextAlign.center,
+              style:
+                  Get.textTheme.headline6.copyWith(fontSize: Get.height / 44),
+            ),
+          ),
+        ),
+        DataCell(doseOptions(controller.display(dz, 0))),
+        DataCell(doseOptions(controller.display(dz, 1))),
+        DataCell(doseOptions(controller.display(dz, 2))),
+        DataCell(doseOptions(controller.display(dz, 3))),
+        DataCell(doseOptions(controller.display(dz, 4))),
+        DataCell(doseOptions(controller.display(dz, 5))),
+      ];
+}

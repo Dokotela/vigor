@@ -30,27 +30,76 @@ class PatientModel {
 
   Future loadImmunizations() async {
     final iFhirDb = IFhirDb();
-    await iFhirDb
-        .returnPatientImmunizationHistory(patient.id.toString())
-        .then((result) {
-      result.fold(
+    await iFhirDb.returnPatientImmunizationHistory(patient.id.toString()).then(
+      (result) {
+        result.fold(
           (l) => Get.snackbar('Error', '${l.error}'),
           (r) => r.forEach(
-              (resource) => pastImmunizations.add(resource as Immunization)));
-    });
+            (resource) {
+              if ((resource as Immunization).status == Code('completed')) {
+                if (!pastImmunizations.contains(resource as Immunization)) {
+                  pastImmunizations.add(resource as Immunization);
+                }
+              }
+            },
+          ),
+        );
+      },
+    );
     immHx = IDrVaxCast.drVaxCast(immunizations: pastImmunizations);
   }
 
+  Immunization _newVax(String cvx, FhirDateTime date) => Immunization(
+      status: Code('completed'),
+      patient: Reference(reference: 'Patient/${patient.id}'),
+      occurrenceDateTime: date,
+      vaccineCode: cvxToCoding[cvx]);
+
+  int _vaxIndex(Immunization immunization) =>
+      pastImmunizations.indexWhere((vax) =>
+          vax.status == immunization.status &&
+          vax.patient == immunization.patient &&
+          vax.occurrenceDateTime == immunization.occurrenceDateTime &&
+          vax.vaccineCode == immunization.vaccineCode);
+
   Future addNewVaccine(String cvx, FhirDateTime date) async {
-    final immunization = Immunization(
-        status: Code('completed'),
-        patient: Reference(reference: 'Patient/${patient.id}'),
-        occurrenceDateTime: date,
-        vaccineCode: cvxToCoding[cvx]);
-    pastImmunizations.add(immunization);
-    immHx = IDrVaxCast.drVaxCast(immunizations: pastImmunizations);
-    final iFhirDb = IFhirDb();
-    await iFhirDb.save(immunization);
+    final immunization = _newVax(cvx, date);
+    if (_vaxIndex(immunization) == -1) {
+      final iFhirDb = IFhirDb();
+      await iFhirDb.save(immunization);
+      pastImmunizations.add(immunization);
+      immHx = IDrVaxCast.drVaxCast(immunizations: pastImmunizations);
+    }
+  }
+
+  Future deleteVaccine(String cvx, FhirDateTime date) async {
+    print('delete');
+    print(pastImmunizations.length);
+    final immunization = _newVax(cvx, date);
+    final index = _vaxIndex(immunization);
+    // print(index);
+    if (index != -1) {
+      pastImmunizations[index] =
+          pastImmunizations[index].copyWith(status: Code('entered-in-error'));
+      final iFhirDb = IFhirDb();
+      await iFhirDb.save(immunization);
+      pastImmunizations.removeAt(index);
+      // print(pastImmunizations.length);
+      immHx = IDrVaxCast.drVaxCast(immunizations: pastImmunizations);
+    }
+  }
+
+  Future updateVaccine(
+      String cvx, FhirDateTime current, FhirDateTime original) async {
+    final immunization = _newVax(cvx, original);
+    final index = _vaxIndex(immunization);
+    if (index != -1) {
+      pastImmunizations[index] =
+          pastImmunizations[index].copyWith(occurrenceDateTime: current);
+      final iFhirDb = IFhirDb();
+      await iFhirDb.save(immunization);
+      immHx = IDrVaxCast.drVaxCast(immunizations: pastImmunizations);
+    }
   }
 
   /// These two functions both make full use of the vax_cast package to allow

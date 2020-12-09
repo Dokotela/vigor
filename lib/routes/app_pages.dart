@@ -30,4 +30,8 @@ final appPages = [
     name: AppRoutes.PATIENT_IMM_PAGE,
     page: () => PatientImmPage(),
   ),
+  GetPage(
+    name: AppRoutes.VAX_DATES,
+    page: () => VaxDatesPage(),
+  ),
 ];

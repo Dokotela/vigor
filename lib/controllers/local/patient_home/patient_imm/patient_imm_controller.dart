@@ -5,7 +5,6 @@ import 'package:vigor/_internal/constants/constants.dart';
 import 'package:vigor/models/data/patient_model.dart';
 import 'package:vigor/models/data/vaccine_display.dart';
 import 'package:vigor/routes/routes.dart';
-import 'package:vigor/ui/views/patient_imm/vax_dates_dialog.dart';
 
 class PatientImmController extends GetxController {
   /// PROPERTIES
@@ -14,9 +13,14 @@ class PatientImmController extends GetxController {
 
   /// INIT
   @override
-  void onInit() {
+  Future onInit() async {
     _patient.value = Get.arguments;
     _display.value.birthdate = birthDate();
+    await _patient.value.loadImmunizations();
+    _display.value.fullVaxDates = _patient.value.immHx;
+    _display.value.setDisplayDates();
+    _display.value.checkValidityOfDoses();
+    print(_patient.value.pastImmunizations.length);
     super.onInit();
   }
 
@@ -30,23 +34,31 @@ class PatientImmController extends GetxController {
 
   /// SETTER FUNCTIONS
   Future<bool> createDisplay() async {
-    await _patient.value.loadImmunizations();
-    _display.value.fullVaxDates = _patient.value.immHx;
-    _display.value.setDisplayDates();
-    _display.value.checkValidityOfDoses();
     return true;
   }
 
   /// EVENTS
-  void displayDatesDialog(String text, String dz) => vaxDatesDialog(text, dz);
-
   Future newVaccine(String cvx, FhirDateTime date) async {
     await _patient.value.addNewVaccine(cvx, date);
     update();
   }
 
+  Future deleteVaccine(String cvx, FhirDateTime date) async {
+    await _patient.value.deleteVaccine(cvx, date);
+    update();
+  }
+
+  Future updateVaccine(
+      String cvx, FhirDateTime current, FhirDateTime original) async {
+    await _patient.value.updateVaccine(cvx, current, original);
+    update();
+  }
+
   void editPatient() =>
       Get.toNamed(AppRoutes.PATIENT_REGISTRATION, arguments: _patient.value);
+
+  void editDates(String text, String dz) =>
+      Get.toNamed(AppRoutes.VAX_DATES, arguments: [text, dz]);
 
   // void recordNew(DateTime newDate, String dz) =>
   //     _fullVaxDates[dz].add(FhirDateTime(newDate));
