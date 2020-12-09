@@ -6,12 +6,13 @@ import 'package:vigor/_internal/constants/constants.dart';
 class VaccineDisplay {
   VaccineDisplay();
 
-  static final _na = left(DoseDisplay.na);
-  static final _possible = left(DoseDisplay.possible);
-  static final _open = left(DoseDisplay.open);
+  static final Either<DoseDisplay, String> _na = left(DoseDisplay.na);
+  static final Either<DoseDisplay, String> _possible =
+      left(DoseDisplay.possible);
+  static final Either<DoseDisplay, String> _open = left(DoseDisplay.open);
   String birthdate;
-  Map<String, Set<FhirDateTime>> fullVaxDates;
-  Map<String, List<FhirDateTime>> displayVaxDates;
+  Map<String, Set<FhirDateTime>> fullVaxDates = {};
+  Map<String, List<FhirDateTime>> displayVaxDates = {};
   Map<String, List<Either<DoseDisplay, String>>> matrix = {
     'Tuberculosis': [_open, _na, _na, _na, _na, _na],
     'HepB': [_open, _possible, _possible, _possible, _na, _na],

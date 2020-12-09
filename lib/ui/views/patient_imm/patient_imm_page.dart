@@ -9,7 +9,8 @@ import 'widgets/dose_options.dart';
 
 class PatientImmPage extends StatelessWidget {
   final PatientImmController controller = Get.put(PatientImmController());
-  final _greyBoxDecoration = BoxDecoration(color: Colors.grey[100]);
+  final _greyBoxDecoration = BoxDecoration(color: Colors.white);
+  final _whiteBoxDecoration = BoxDecoration(color: Colors.white);
 
   @override
   Widget build(BuildContext context) {
@@ -60,7 +61,7 @@ class PatientImmPage extends StatelessWidget {
                       if (snapshot.hasData) {
                         return Table(
                           defaultVerticalAlignment:
-                              TableCellVerticalAlignment.bottom,
+                              TableCellVerticalAlignment.middle,
                           border: TableBorder.symmetric(
                               inside: BorderSide(width: 1, color: Colors.white),
                               outside:
@@ -82,42 +83,86 @@ class PatientImmPage extends StatelessWidget {
                               ],
                             ),
                             TableRow(
-                                decoration: _greyBoxDecoration,
+                                decoration: _whiteBoxDecoration,
                                 children: _getRow(
-                                    'Anti-BCG', 'Tuberculosis', context)),
+                                  'Anti-BCG',
+                                  'Tuberculosis',
+                                  context,
+                                  _whiteBoxDecoration,
+                                )),
                             TableRow(
                                 decoration: _greyBoxDecoration,
                                 children: _getRow(
-                                    'Anti-Hepatitis B', 'HepB', context)),
+                                  'Anti-Hepatitis B',
+                                  'HepB',
+                                  context,
+                                  _greyBoxDecoration,
+                                )),
                             TableRow(
-                                decoration: _greyBoxDecoration,
+                                decoration: _whiteBoxDecoration,
                                 children: _getRow(
-                                    'Anti-Rotavirus', 'Rotavirus', context)),
+                                  'Anti-Rotavirus',
+                                  'Rotavirus',
+                                  context,
+                                  _whiteBoxDecoration,
+                                )),
                             TableRow(
                               decoration: _greyBoxDecoration,
-                              children: _getRow('Anti-Polio', 'Polio', context),
+                              children: _getRow(
+                                'Anti-Polio',
+                                'Polio',
+                                context,
+                                _greyBoxDecoration,
+                              ),
                             ),
                             TableRow(
-                                decoration: _greyBoxDecoration,
-                                children: _getRow('Pentavalente (DPT/HB/Hib)',
-                                    'Pentavalente', context)),
+                                decoration: _whiteBoxDecoration,
+                                children: _getRow(
+                                  'Pentavalente (DPT/HB/Hib)',
+                                  'Pentavalente',
+                                  context,
+                                  _whiteBoxDecoration,
+                                )),
                             TableRow(
                                 decoration: _greyBoxDecoration,
                                 children: _getRow(
-                                    'Anti-Neumococo', 'Pneumococcal', context)),
+                                  'Anti-Neumococo',
+                                  'Pneumococcal',
+                                  context,
+                                  _greyBoxDecoration,
+                                )),
+                            TableRow(
+                                decoration: _whiteBoxDecoration,
+                                children: _getRow(
+                                  'Influenza',
+                                  'Influenza',
+                                  context,
+                                  _whiteBoxDecoration,
+                                )),
                             TableRow(
                                 decoration: _greyBoxDecoration,
-                                children:
-                                    _getRow('Influenza', 'Influenza', context)),
+                                children: _getRow(
+                                  'SRP',
+                                  'MMR',
+                                  context,
+                                  _greyBoxDecoration,
+                                )),
+                            TableRow(
+                                decoration: _whiteBoxDecoration,
+                                children: _getRow(
+                                  'DPT',
+                                  'DTP',
+                                  context,
+                                  _whiteBoxDecoration,
+                                )),
                             TableRow(
                                 decoration: _greyBoxDecoration,
-                                children: _getRow('SRP', 'MMR', context)),
-                            TableRow(
-                                decoration: _greyBoxDecoration,
-                                children: _getRow('DPT', 'DTP', context)),
-                            TableRow(
-                                decoration: _greyBoxDecoration,
-                                children: _getRow('SR', 'MR', context)),
+                                children: _getRow(
+                                  'SR',
+                                  'MR',
+                                  context,
+                                  _greyBoxDecoration,
+                                )),
                           ],
                         );
                       } else {
@@ -135,7 +180,13 @@ class PatientImmPage extends StatelessWidget {
     );
   }
 
-  List<Widget> _getRow(String text, String dz, BuildContext context) => [
+  List<Widget> _getRow(
+    String text,
+    String dz,
+    BuildContext context,
+    BoxDecoration decoration,
+  ) =>
+      [
         RaisedButton(
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(Get.width / 10)),
@@ -149,12 +200,12 @@ class PatientImmPage extends StatelessWidget {
           ),
           onPressed: () => controller.displayDatesDialog(text, dz),
         ),
-        doseOptions(controller.display(dz, 0)),
-        doseOptions(controller.display(dz, 1)),
-        doseOptions(controller.display(dz, 2)),
-        doseOptions(controller.display(dz, 3)),
-        doseOptions(controller.display(dz, 4)),
-        doseOptions(controller.display(dz, 5)),
+        doseOptions(controller.display(dz, 0), decoration),
+        doseOptions(controller.display(dz, 1), decoration),
+        doseOptions(controller.display(dz, 2), decoration),
+        doseOptions(controller.display(dz, 3), decoration),
+        doseOptions(controller.display(dz, 4), decoration),
+        doseOptions(controller.display(dz, 5), decoration),
       ];
 
   Widget _vaxDose(String dose) => TableCell(
