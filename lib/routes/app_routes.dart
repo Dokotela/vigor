@@ -4,7 +4,7 @@ abstract class AppRoutes {
   static const INITIAL = '/';
   static const LOGIN = '/login';
   static const HOME = '/home';
-  static const PATIENT_REGISTRATION = '/patient_registration';
+  static const NEW_PATIENT = '/new_patient';
   static const CONTACT_REGISTRATION = '/contact_registration';
   static const PATIENT_SEARCH = '/patient_search';
   static const PATIENT_HOME_PAGE = '/patient_home_page';

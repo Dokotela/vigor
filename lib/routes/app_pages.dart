@@ -11,8 +11,8 @@ final appPages = [
     page: () => LoginPage(),
   ),
   GetPage(
-    name: AppRoutes.PATIENT_REGISTRATION,
-    page: () => PatientRegistrationPage(),
+    name: AppRoutes.NEW_PATIENT,
+    page: () => NewPatientPage(),
   ),
   GetPage(
     name: AppRoutes.CONTACT_REGISTRATION,

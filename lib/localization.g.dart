@@ -64,7 +64,7 @@ class AppLocalizations {
         age: "Age",
         allPatients: "All Patients",
         birthDate: "Birthdate",
-        birthDateError: "Cannot be future date",
+        birthDateError: "Please enter birthdate",
         contacts: "Patient Contacts",
         dateofBirth: "Date of Birth",
         editSurvey: "Edit Survey",
@@ -148,6 +148,7 @@ class AppLocalizations {
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "Complete Patient Registration",
+        savePatient: "Save Patient",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "Dark",
@@ -216,7 +217,7 @@ class AppLocalizations {
         age: "Edad",
         allPatients: "todos los pacientes",
         birthDate: "Fecha de nacimiento",
-        birthDateError: "No puede ser fecha futura",
+        birthDateError: "Por favor, introduzca la fecha de nacimiento",
         contacts: "contactos de pacientes",
         dateofBirth: "Fecha de nacimiento",
         editSurvey: "Editar encuesta",
@@ -300,6 +301,7 @@ class AppLocalizations {
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "Registro de Pacientes completa",
+        savePatient: "Guardar paciente",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "Oscuro",
@@ -368,7 +370,7 @@ class AppLocalizations {
         age: "عمر",
         allPatients: "كل المرضى",
         birthDate: "تاريخ الولادة",
-        birthDateError: "لا يمكن أن يكون تاريخ المستقبل",
+        birthDateError: "يرجى إدخال تاريخ الميلاد",
         contacts: "المريض اتصالات",
         dateofBirth: "تاريخ الولادة",
         editSurvey: "تحرير مسح",
@@ -391,7 +393,7 @@ class AppLocalizations {
           county: "مقاطعة",
           district: "منطقة",
           neighborhood: "حي",
-          postalCode: "الرمز البريدي",
+          postalCode: "رمز بريدي",
           state: "حالة",
           title: "عنوان",
         ),
@@ -452,6 +454,7 @@ class AppLocalizations {
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "التسجيل الكامل المريض",
+        savePatient: "حفظ المريض",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "داكن",
@@ -520,7 +523,7 @@ class AppLocalizations {
         age: "आयु",
         allPatients: "सभी मरीजों को",
         birthDate: "जन्म दिन",
-        birthDateError: "भविष्य की तारीख नहीं किया जा सकता",
+        birthDateError: "जन्मतिथि दर्ज करें",
         contacts: "रोगी संपर्क",
         dateofBirth: "जन्म की तारीख",
         editSurvey: "सर्वे संपादित करें",
@@ -559,7 +562,7 @@ class AppLocalizations {
           aunt: "चाची",
           brother: "भाई",
           daughter: "बेटी",
-          father: "पिता",
+          father: "पिता जी",
           grandfather: "दादा",
           grandmother: "दादी मा",
           mother: "मां",
@@ -604,6 +607,7 @@ class AppLocalizations {
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "पूर्ण रोगी पंजीकरण",
+        savePatient: "रोगी को बचाने",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "अंधेरा",
@@ -672,7 +676,7 @@ class AppLocalizations {
         age: "Возраст",
         allPatients: "Все пациенты",
         birthDate: "Дата рождения",
-        birthDateError: "Не может быть дата в будущем",
+        birthDateError: "Пожалуйста, введите дату рождения",
         contacts: "Пациент Контакты",
         dateofBirth: "Дата рождения",
         editSurvey: "Изменить опрос",
@@ -717,7 +721,7 @@ class AppLocalizations {
           mother: "Мать",
           nephew: "Племянник",
           niece: "Племянница",
-          other: "разное",
+          other: "Другие",
           sister: "Сестра",
           son: "Сын",
           title: "Связь",
@@ -744,7 +748,7 @@ class AppLocalizations {
         growth: "рост",
         immunization: "иммунизация",
         immunizations: "Иммунизация",
-        summaryReport: "Сводный отчет",
+        summaryReport: "Отчет",
         vaccine: "вакцина",
         vaccines: AppLocalizations_Labels_Medical_Vaccines(
           addDate: "Дата добавления вакцины:",
@@ -756,6 +760,7 @@ class AppLocalizations {
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "Полное Пациент регистрации",
+        savePatient: "Сохранить пациента",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "Темно",
@@ -824,7 +829,7 @@ class AppLocalizations {
         age: "বয়স",
         allPatients: "সব রোগীদের",
         birthDate: "জন্ম তারিখ",
-        birthDateError: "ভবিষ্যতে তারিখে হতে পারে না",
+        birthDateError: "জন্মতারিখ লিখুন দয়া করে",
         contacts: "রোগীর যোগাযোগ",
         dateofBirth: "জন্ম তারিখ",
         editSurvey: "সার্ভে সম্পাদনা",
@@ -908,6 +913,7 @@ class AppLocalizations {
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "সম্পূর্ণ রোগীর নিবন্ধন",
+        savePatient: "রোগীর সংরক্ষণ",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "অন্ধকার",
@@ -976,7 +982,7 @@ class AppLocalizations {
         age: "အသက်အရွယ်",
         allPatients: "အားလုံးလူနာများ",
         birthDate: "မွေးရက်",
-        birthDateError: "အနာဂတ်နေ့စွဲမဖွစျနိုငျ",
+        birthDateError: "မွေးနေ့ရိုက်ထည့်ပေးပါ",
         contacts: "လူနာဆက်သွယ်ရန်",
         dateofBirth: "မွေးရက်",
         editSurvey: "Edit ကိုစစ်တမ်း",
@@ -1060,6 +1066,7 @@ class AppLocalizations {
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "အပြီးအစီးလူနာမှတ်ပုံတင်ခြင်း",
+        savePatient: "လူနာကြော်ငြာကို Save လုပ်ရန်",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "မှောငျမိုကျသော",
@@ -1128,7 +1135,7 @@ class AppLocalizations {
         age: "年龄",
         allPatients: "所有患者",
         birthDate: "生日",
-        birthDateError: "不能是未来的日期",
+        birthDateError: "请输入生日",
         contacts: "病人的接触",
         dateofBirth: "出生日期",
         editSurvey: "编辑调查",
@@ -1212,6 +1219,7 @@ class AppLocalizations {
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "完整的病人登记",
+        savePatient: "保存患者",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "黑暗",
@@ -1280,7 +1288,7 @@ class AppLocalizations {
         age: "年齡",
         allPatients: "所有患者",
         birthDate: "生日",
-        birthDateError: "不能是未來的日期",
+        birthDateError: "請輸入生日",
         contacts: "病人的接觸",
         dateofBirth: "出生日期",
         editSurvey: "編輯調查",
@@ -1364,6 +1372,7 @@ class AppLocalizations {
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "完整的病人登記",
+        savePatient: "保存患者",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "黑暗",
@@ -1432,7 +1441,7 @@ class AppLocalizations {
         age: "سن",
         allPatients: "همه بیماران",
         birthDate: "تاریخ تولد",
-        birthDateError: "نمی تواند تاریخ آینده",
+        birthDateError: "لطفا تاریخ تولد وارد",
         contacts: "بیمار اطلاعات تماس",
         dateofBirth: "تاریخ تولد",
         editSurvey: "بررسی ویرایش",
@@ -1516,6 +1525,7 @@ class AppLocalizations {
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "ثبت نام بیمار کامل",
+        savePatient: "ذخیره بیمار",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "تاریک",
@@ -1584,7 +1594,7 @@ class AppLocalizations {
         age: "Âge",
         allPatients: "tous les patients",
         birthDate: "Date de naissance",
-        birthDateError: "Ne peut pas être date ultérieure",
+        birthDateError: "S'il vous plaît entrer la date de naissance",
         contacts: "Contacts patients",
         dateofBirth: "Date de naissance",
         editSurvey: "Modifier enquête",
@@ -1668,6 +1678,7 @@ class AppLocalizations {
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "Inscription complète du patient",
+        savePatient: "Patient Enregistrer",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "Sombre",
@@ -1699,7 +1710,7 @@ class AppLocalizations {
         cancel: "Stornieren",
         changePassword: "Passwort ändern",
         email: "Email",
-        login: "Anmeldung",
+        login: "Einloggen",
         password: "Passwort",
         resetPassword: "Passwort zurücksetzen",
         signIn: "Einloggen",
@@ -1736,7 +1747,7 @@ class AppLocalizations {
         age: "Alter",
         allPatients: "alle Patienten",
         birthDate: "Geburtsdatum",
-        birthDateError: "Kann nicht Datum in der Zukunft sein",
+        birthDateError: "Bitte geben Sie birth",
         contacts: "Patienten-Kontakte",
         dateofBirth: "Geburtsdatum",
         editSurvey: "Umfrage bearbeiten",
@@ -1820,6 +1831,7 @@ class AppLocalizations {
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "Komplette Patientenregistrierung",
+        savePatient: "Speichern Patient",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "Dunkel",
@@ -1888,7 +1900,7 @@ class AppLocalizations {
         age: "Usia",
         allPatients: "semua Pasien",
         birthDate: "Tanggal lahir",
-        birthDateError: "Tidak bisa masa mendatang",
+        birthDateError: "Masukkan tanggal lahir",
         contacts: "Kontak pasien",
         dateofBirth: "Tanggal lahir",
         editSurvey: "mengedit Survey",
@@ -1972,6 +1984,7 @@ class AppLocalizations {
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "Pendaftaran Pasien lengkap",
+        savePatient: "Simpan Pasien",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "Gelap",
@@ -2040,7 +2053,7 @@ class AppLocalizations {
         age: "年齢",
         allPatients: "すべての患者",
         birthDate: "誕生日",
-        birthDateError: "将来の日付にすることはできません",
+        birthDateError: "誕生日を入力してください。",
         contacts: "患者のコンタクト",
         dateofBirth: "生年月日",
         editSurvey: "編集調査",
@@ -2124,6 +2137,7 @@ class AppLocalizations {
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "完全な患者登録",
+        savePatient: "患者の保存",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "闇",
@@ -2192,7 +2206,7 @@ class AppLocalizations {
         age: "អាយុ",
         allPatients: "អ្នកជំងឺទាំងអស់",
         birthDate: "ថ្ងៃខែ​ឆ្នាំ​កំណើត",
-        birthDateError: "មិនអាចជាកាលបរិច្ឆេទនាពេលអនាគត",
+        birthDateError: "សូមបញ្ចូលថ្ងៃខែឆ្នាំកំណើត",
         contacts: "ទំនាក់ទំនងអ្នកជម្ងឺ",
         dateofBirth: "ថ្ងៃខែ​ឆ្នាំ​កំណើត",
         editSurvey: "កែសម្រួលការស្ទង់មតិ",
@@ -2276,6 +2290,7 @@ class AppLocalizations {
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "ការចុះឈ្មោះអ្នកជម្ងឺបានបញ្ចប់",
+        savePatient: "រក្សាទុកអ្នកជម្ងឺ",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "ងងឹត",
@@ -2344,7 +2359,7 @@ class AppLocalizations {
         age: "나이",
         allPatients: "모든 환자",
         birthDate: "생일",
-        birthDateError: "미래의 일이 될 수 없습니다",
+        birthDateError: "생년월일을 입력 해주세요",
         contacts: "환자 연락처",
         dateofBirth: "생년월일",
         editSurvey: "편집 설문 조사",
@@ -2428,6 +2443,7 @@ class AppLocalizations {
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "전체 환자 등록",
+        savePatient: "저장 환자",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "어두운",
@@ -2496,7 +2512,7 @@ class AppLocalizations {
         age: "ອາຍຸ",
         allPatients: "ຄົນເຈັບທັງຫມົດ",
         birthDate: "ວັນເດືອນປີເກີດ",
-        birthDateError: "ບໍ່ສາມາດທີ່ໃນອະນາຄົດ",
+        birthDateError: "ກະລຸນາໃສ່ວັນເດືອນປີເກີດ",
         contacts: "ຕິດຕໍ່ຄົນເຈັບ",
         dateofBirth: "ວັນ​ເດືອນ​ປີ​ເກີດ",
         editSurvey: "ດັດແກ້ການສໍາຫຼວດ",
@@ -2580,6 +2596,7 @@ class AppLocalizations {
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "ການລົງທະບຽນຂອງຄົນເຈັບສໍາເລັດ",
+        savePatient: "ບັນທຶກຄົນເຈັບ",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "ຊ້ໍາ",
@@ -2648,7 +2665,7 @@ class AppLocalizations {
         age: "वय",
         allPatients: "सर्व रुग्णांना",
         birthDate: "जन्मदिनांक",
-        birthDateError: "भविष्यातील तारीख असणे करू शकत नाही",
+        birthDateError: "जन्मतारीख प्रविष्ट करा",
         contacts: "रुग्णांच्या संपर्क",
         dateofBirth: "जन्म तारीख",
         editSurvey: "सर्वेक्षण संपादित करा",
@@ -2732,6 +2749,7 @@ class AppLocalizations {
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "पूर्ण रुग्णांच्या नोंदणी",
+        savePatient: "रुग्णांच्या जतन करा",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "गडद",
@@ -2797,10 +2815,10 @@ class AppLocalizations {
         ),
       ),
       general: AppLocalizations_Labels_General(
-        age: "उमेर",
+        age: "उमेरको",
         allPatients: "सबै विरामी",
         birthDate: "जन्म मिति",
-        birthDateError: "भविष्य मिति हुन सक्दैन",
+        birthDateError: "कृपया जन्ममिति प्रविष्ट",
         contacts: "रोगी सम्पर्क",
         dateofBirth: "जन्म मिति",
         editSurvey: "सर्वेक्षण सम्पादन",
@@ -2884,6 +2902,7 @@ class AppLocalizations {
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "रोगी दर्ता पूरा",
+        savePatient: "रोगी सेव",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "गाढा",
@@ -2952,7 +2971,7 @@ class AppLocalizations {
         age: "Era",
         allPatients: "Todos os pacientes",
         birthDate: "Data de nascimento",
-        birthDateError: "não pode ter data futura",
+        birthDateError: "Por favor, indique data de nascimento",
         contacts: "paciente Contactos",
         dateofBirth: "Data de nascimento",
         editSurvey: "Editar questionário",
@@ -3036,11 +3055,12 @@ class AppLocalizations {
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "Registro completo do paciente",
+        savePatient: "Salvar paciente",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "Sombrio",
         language: "Língua",
-        light: "Leve",
+        light: "Luz",
         ok: "Está bem",
         signOut: "Sair",
         system: "Sistema",
@@ -3104,7 +3124,7 @@ class AppLocalizations {
         age: "ਉੁਮਰ",
         allPatients: "ਸਾਰੇ ਮਰੀਜ਼",
         birthDate: "ਜਨਮ ਮਿਤੀ",
-        birthDateError: "ਭਵਿੱਖ ਦੀ ਮਿਤੀ ਨਾ ਹੋ ਸਕਦਾ ਹੈ",
+        birthDateError: "ਜਨਮ ਦਿਓ ਜੀ",
         contacts: "ਮਰੀਜ਼ ਸੰਪਰਕ",
         dateofBirth: "ਜਨਮ ਤਾਰੀਖ",
         editSurvey: "ਸਰਵੇਖਣ ਸੋਧ",
@@ -3188,6 +3208,7 @@ class AppLocalizations {
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "ਮੁਕੰਮਲ ਮਰੀਜ਼ ਰਜਿਸਟਰੇਸ਼ਨ",
+        savePatient: "ਮਰੀਜ਼ ਸੰਭਾਲੋ",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "ਹਨੇਰ",
@@ -3256,7 +3277,7 @@ class AppLocalizations {
         age: "Age",
         allPatients: "All Bukaanka",
         birthDate: "Taariiqda dhalasha",
-        birthDateError: "ma noqon karo taariikhda mustaqbalka",
+        birthDateError: "Fadlan qor taariikhda dhalashada",
         contacts: "Nala Xiriir bukaanka",
         dateofBirth: "Taariikhda Dhalashada",
         editSurvey: "edit Survey",
@@ -3340,6 +3361,7 @@ class AppLocalizations {
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "Diiwaangelinta Bukaanka Buuxi",
+        savePatient: "Save bukaanka",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "Dark",
@@ -3408,7 +3430,7 @@ class AppLocalizations {
         age: "umri",
         allPatients: "Wagonjwa wote",
         birthDate: "Tarehe ya kuzaliwa",
-        birthDateError: "Haiwezi kuwa siku za tarehe",
+        birthDateError: "Tafadhali weka tarehe ya kuzaliwa",
         contacts: "Mawasiliano mgonjwa",
         dateofBirth: "Tarehe ya kuzaliwa",
         editSurvey: "Hariri Survey",
@@ -3492,6 +3514,7 @@ class AppLocalizations {
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "Complete Mgonjwa Usajili",
+        savePatient: "Save mgonjwa",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "Dark",
@@ -3560,7 +3583,7 @@ class AppLocalizations {
         age: "edad",
         allPatients: "Ang lahat ng mga pasyente",
         birthDate: "Araw ng kapanganakan",
-        birthDateError: "Hindi maaaring maging hinaharap na petsa",
+        birthDateError: "Mangyaring ipasok ang petsa ng kapanganakan",
         contacts: "pasyente Contact Lens",
         dateofBirth: "Araw ng kapanganakan",
         editSurvey: "I-edit ang Survey",
@@ -3644,6 +3667,7 @@ class AppLocalizations {
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "Kumpleto Registration Pasyente",
+        savePatient: "I-save ang Pasyente",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "madilim",
@@ -3712,7 +3736,7 @@ class AppLocalizations {
         age: "อายุ",
         allPatients: "ผู้ป่วยทั้งหมด",
         birthDate: "วันที่เกิด",
-        birthDateError: "ไม่สามารถเป็นวันที่ในอนาคต",
+        birthDateError: "โปรดป้อนวันเกิด",
         contacts: "รายชื่อผู้ป่วย",
         dateofBirth: "วันเกิด",
         editSurvey: "แก้ไขการสำรวจ",
@@ -3796,6 +3820,7 @@ class AppLocalizations {
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "ลงทะเบียนผู้ป่วยที่สมบูรณ์",
+        savePatient: "บันทึกของผู้ป่วย",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "มืด",
@@ -3864,7 +3889,7 @@ class AppLocalizations {
         age: "yosh",
         allPatients: "barcha bemorlar",
         birthDate: "Tug'ilgan sana",
-        birthDateError: "kelajakda sana bo'lishi mumkin emas",
+        birthDateError: "Tug'ilgan kun kiriting",
         contacts: "Bemor Aloqa",
         dateofBirth: "Tug'ilgan sana",
         editSurvey: "Edit Survey",
@@ -3948,6 +3973,7 @@ class AppLocalizations {
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "To'liq bemor Ro'yxatdan",
+        savePatient: "saqlash Bemor",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "Dark",
@@ -4016,7 +4042,7 @@ class AppLocalizations {
         age: "Tuổi tác",
         allPatients: "Tất cả các bệnh nhân",
         birthDate: "Ngày sinh",
-        birthDateError: "Không thể ngày trong tương lai",
+        birthDateError: "Vui lòng nhập ngày sinh",
         contacts: "bệnh nhân Liên hệ",
         dateofBirth: "Ngày sinh",
         editSurvey: "Sửa Khảo sát",
@@ -4100,6 +4126,7 @@ class AppLocalizations {
       ),
       registration: AppLocalizations_Labels_Registration(
         registerPatient: "Hoàn thành đăng ký bệnh nhân",
+        savePatient: "Lưu Bệnh nhân",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "Tối",
@@ -4817,14 +4844,19 @@ class AppLocalizations_Labels_Medical {
 }
 
 class AppLocalizations_Labels_Registration {
-  const AppLocalizations_Labels_Registration({this.registerPatient});
+  const AppLocalizations_Labels_Registration(
+      {this.registerPatient, this.savePatient});
 
   final String registerPatient;
+
+  final String savePatient;
 
   String getByKey(String key) {
     switch (key) {
       case 'registerPatient':
         return registerPatient;
+      case 'savePatient':
+        return savePatient;
       default:
         return '';
     }

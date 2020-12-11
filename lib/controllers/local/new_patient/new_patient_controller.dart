@@ -9,25 +9,21 @@ import '../../../localization.dart';
 import '../../../models/data/patient_model.dart';
 import '../../../routes/routes.dart';
 
-class PatientRegistrationController extends GetxController {
+class NewPatientController extends GetxController {
   /// PROPERTIES
   final _patient = PatientModel().obs;
   final familyName = TextEditingController();
   final _familyNameError = ''.obs;
   final givenName = TextEditingController();
   final _givenNameError = ''.obs;
-  final _birthDate = DateTime(
-    DateTime.now().year,
-    DateTime.now().month,
-    DateTime.now().day + 1,
-  ).obs;
+  final _birthDate = DateTime(1900, 1, 1).obs;
   final _birthDateString = ''.obs;
   final _gender = 0.obs;
   final _genderError = ''.obs;
   final _birthDateError = ''.obs;
   final _barrio = ''.obs;
   final _barrioError = ''.obs;
-  final _barriosList = barrios.obs;
+  final _barriosList = barrios;
   final labels = AppLocalizations.of(Get.context);
 
   /// INIT
@@ -41,8 +37,6 @@ class PatientRegistrationController extends GetxController {
           DateTime.parse(_patient.value.patient.birthDate.toString());
       _barrio.value = _patient.value.barrio();
       _birthDateString.value = dateFromDateTime(_birthDate.value);
-    } else {
-      _barrio.value = labels.general.address.neighborhood;
     }
 
     familyName.text = _patient.value.familyName();
@@ -54,8 +48,8 @@ class PatientRegistrationController extends GetxController {
   /// GETTER FUNCTIONS
   int get gender => _gender.value;
   String get genderError => _genderError.value;
-  DateTime get birthDate => _birthDate.value;
-  String get birthDateString => _birthDateString.value;
+  DateTime get date => _birthDate.value;
+  String get displayBirthDate => _birthDateString.value;
   String get barrio => _barrio.value;
   String get familyNameError => _familyNameError.value;
   String get givenNameError => _givenNameError.value;
@@ -66,8 +60,8 @@ class PatientRegistrationController extends GetxController {
   /// EVENTS
   void genderEvent(int gender) => _gender.value = gender;
 
-  void birthDateEvent(DateTime birthDate) {
-    _birthDate.value = birthDate;
+  void chooseBirthDate(DateTime birthDate) {
+    _birthDate.value = birthDate ?? _birthDate.value;
     _birthDateString.value = dateFromDateTime(_birthDate.value);
   }
 
@@ -76,7 +70,7 @@ class PatientRegistrationController extends GetxController {
   void registerEvent() {
     if (isValidRegistrationName(familyName.text) &&
         isValidRegistrationName(givenName.text) &&
-        isValidRegistrationBirthDate(birthDate) &&
+        isValidRegistrationBirthDate(_birthDate.value) &&
         isValidRegistrationBarrio(barrio) &&
         isValidGenderInt(gender)) {
       _patient.value.patient = _patient.value.patient == null
@@ -87,7 +81,7 @@ class PatientRegistrationController extends GetxController {
                   given: [givenName.text],
                 )
               ],
-              birthDate: Date(birthDate),
+              birthDate: Date(_birthDate.value),
               address: [Address(district: barrio)],
               gender: gender == 1 ? PatientGender.female : PatientGender.male)
           : _patient.value.patient.copyWith(
@@ -97,9 +91,10 @@ class PatientRegistrationController extends GetxController {
                   given: [givenName.text],
                 )
               ],
-              birthDate: Date(birthDate),
+              birthDate: Date(_birthDate.value),
               address: [Address(district: barrio)],
               gender: gender == 1 ? PatientGender.female : PatientGender.male);
+
       Get.toNamed(AppRoutes.CONTACT_REGISTRATION, arguments: _patient.value);
     } else {
       if (!isValidRegistrationName(familyName.text)) {
@@ -108,7 +103,7 @@ class PatientRegistrationController extends GetxController {
       if (!isValidRegistrationName(givenName.text)) {
         _givenNameError.value = labels.general.givenNameError;
       }
-      if (!isValidRegistrationBirthDate(birthDate)) {
+      if (!isValidRegistrationBirthDate(_birthDate.value)) {
         _birthDateError.value = labels.general.birthDateError;
       }
       if (!isValidRegistrationBarrio(barrio)) {

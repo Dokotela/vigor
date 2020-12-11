@@ -156,7 +156,7 @@ class PatientSearchPage extends StatelessWidget {
         floatingActionButton: FloatingActionButton(
           elevation: 10.0,
           backgroundColor: Get.theme.colorScheme.primary,
-          onPressed: () => Get.toNamed(AppRoutes.PATIENT_REGISTRATION),
+          onPressed: () => Get.toNamed(AppRoutes.NEW_PATIENT),
           child: Icon(
             Icons.add,
             color: Get.theme.colorScheme.onPrimary,

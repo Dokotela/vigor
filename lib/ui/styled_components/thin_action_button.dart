@@ -14,16 +14,19 @@ class ThinActionButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ButtonTheme.fromButtonThemeData(
-      data: Get.theme.buttonTheme.copyWith(minWidth: Get.width / 2),
+    return ButtonTheme(
+      minWidth: Get.width * .7,
       child: RaisedButton(
-        color: Get.theme.colorScheme.primary,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+        shape: RoundedRectangleBorder(
+            side: BorderSide(color: Get.theme.colorScheme.onPrimary),
+            borderRadius: BorderRadius.circular(Get.width / 20)),
         onPressed: onPressed,
-        padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 16),
+        padding: EdgeInsets.symmetric(
+            horizontal: Get.width / 12, vertical: Get.width / 30),
         child: Text(
           buttonText,
-          style: Get.theme.textTheme.headline6.copyWith(color: Colors.white),
+          style: Get.theme.textTheme.headline6
+              .copyWith(color: Get.theme.colorScheme.onPrimary),
         ),
       ),
     );

@@ -18,13 +18,13 @@ ThemeData get lightTheme {
 
       /// accent color that, when used sparingly, calls attention to parts of
       /// your app.
-      secondary: Color(0xff353AE0),
+      secondary: Color(0xffF60B0B),
 
       /// A darker version of the secondary color.
-      secondaryVariant: Color(0xffFF5733),
+      secondaryVariant: Color(0xff900C3F),
 
       /// color that's clearly legible when drawn on secondary
-      onSecondary: Colors.white,
+      onSecondary: Colors.black,
 
       ///  color that typically appears behind scrollable content.
       background: Colors.white,
@@ -54,6 +54,6 @@ ThemeData get lightTheme {
     cursorColor: Color(0xff353AE0),
     highlightColor: Color(0xff353AE0),
     toggleableActiveColor: Color(0xff353AE0),
-    dividerColor: Colors.blue,
+    dividerColor: Colors.black,
   );
 }

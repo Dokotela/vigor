@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
+import '../../../../localization.dart';
+
 class BarrioWidget extends StatelessWidget {
   const BarrioWidget({
     @required this.barriosList,
@@ -19,34 +21,39 @@ class BarrioWidget extends StatelessWidget {
 
   @override
   Widget build(Object context) {
-    return Container(
-      alignment: Alignment.center,
-      decoration: BoxDecoration(
-        border: Border.all(color: Colors.grey),
-        borderRadius: BorderRadius.circular(16.0),
-      ),
-      child: Column(
-        children: <Widget>[
-          DropdownButtonHideUnderline(
-            child: DropdownButton<String>(
+    final labels = AppLocalizations.of(context);
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          labels.general.address.neighborhood,
+          style: Get.textTheme.headline6,
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SizedBox(width: Get.width / 15),
+            DropdownButton<String>(
+                value: displayBarrio,
+                icon: Icon(Icons.keyboard_arrow_down),
                 items: barriosList.map((String barrio) {
                   return DropdownMenuItem<String>(
                     value: barrio,
-                    child: Text(barrio),
+                    child: Text(
+                      barrio,
+                      style: Get.textTheme.headline6,
+                    ),
                   );
                 }).toList(),
-                hint: Text(
-                  displayBarrio,
-                  style: Get.textTheme.headline6,
-                ),
                 onChanged: (newVal) => setBarrio(newVal)),
-          ),
-          Text(
-            dispBarrioError,
-            style: const TextStyle(fontSize: 12.0, color: Colors.red),
-          ),
-        ],
-      ),
+          ],
+        ),
+        Text(
+          dispBarrioError,
+          style: const TextStyle(fontSize: 12.0, color: Colors.red),
+        ),
+      ],
     );
   }
 }

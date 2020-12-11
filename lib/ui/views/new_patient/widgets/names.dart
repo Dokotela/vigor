@@ -28,8 +28,12 @@ class NamesInputWidget extends StatelessWidget {
           TextFormField(
             controller: familyName,
             decoration: InputDecoration(
-              hintText: labels.general.name.familyName,
-              errorText: familyNameError.tr,
+              labelText: labels.general.name.familyName,
+              labelStyle: TextStyle(color: context.theme.hintColor),
+              errorText: familyNameError == '' ? null : familyNameError,
+              focusedBorder: UnderlineInputBorder(
+                borderSide: BorderSide(color: Get.theme.colorScheme.onPrimary),
+              ),
             ),
             style: Get.textTheme.headline6,
           ),
@@ -39,8 +43,12 @@ class NamesInputWidget extends StatelessWidget {
           TextFormField(
             controller: givenName,
             decoration: InputDecoration(
-              hintText: labels.general.name.givenNames,
-              errorText: givenNameError.tr,
+              labelText: labels.general.name.givenNames,
+              labelStyle: TextStyle(color: context.theme.hintColor),
+              errorText: givenNameError == '' ? null : givenNameError,
+              focusedBorder: UnderlineInputBorder(
+                borderSide: BorderSide(color: Get.theme.colorScheme.onPrimary),
+              ),
             ),
             style: Get.textTheme.headline6,
           ),

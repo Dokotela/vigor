@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vigor/ui/styled_components/thin_action_button.dart';
 
-import '../../../controllers/local/new_patient/patient_registration_controller.dart';
-import '../../../ui/styled_components/app_bar.dart';
+import '../../../controllers/local/new_patient/new_patient_controller.dart';
+import '../../styled_components/app_bar.dart';
 import '../../styled_components/bottom_navigation_bar.dart';
 import 'widgets/barrio.dart';
 import 'widgets/birthDate.dart';
 import 'widgets/gender.dart';
 import 'widgets/names.dart';
 
-class PatientRegistrationPage extends StatelessWidget {
+class NewPatientPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final controller = Get.put(PatientRegistrationController());
+    final controller = Get.put(NewPatientController());
 
     return GestureDetector(
       onTap: () {
@@ -26,7 +27,7 @@ class PatientRegistrationPage extends StatelessWidget {
         appBar:
             VigorAppBar(title: controller.labels.general.patientInformation),
         body: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: EdgeInsets.all(Get.width / 10),
           child: Center(
             child: Obx(
               () => Column(
@@ -55,9 +56,9 @@ class PatientRegistrationPage extends StatelessWidget {
                   /// birthdate, the birthdate as a String, and then an error
                   /// message
                   BirthDateWidget(
-                    chooseBirthDate: controller.birthDateEvent,
-                    currentBirthDate: controller.birthDate,
-                    displayBirthDate: controller.birthDateString,
+                    date: controller.date,
+                    chooseBirthDate: controller.chooseBirthDate,
+                    displayBirthDate: controller.displayBirthDate,
                     dispBirthDateError: controller.birthDateError,
                   ),
 
@@ -72,19 +73,9 @@ class PatientRegistrationPage extends StatelessWidget {
                   ),
 
                   /// button to register patient
-                  ButtonTheme(
-                    minWidth: double.infinity,
-                    child: RaisedButton(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16.0),
-                      ),
-                      onPressed: () => controller.registerEvent(),
-                      child: Text(
-                        controller.labels.general.nextPage,
-                        style: Get.textTheme.bodyText1
-                            .copyWith(color: Colors.white),
-                      ),
-                    ),
+                  ThinActionButton(
+                    buttonText: controller.labels.general.nextPage,
+                    onPressed: () => controller.registerEvent(),
                   ),
                 ],
               ),

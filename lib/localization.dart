@@ -14,7 +14,7 @@ part 'localization.g.dart';
 // ignore_for_file: prefer_single_quotes
 // ignore_for_file: prefer_const_constructors
 
-const version = 18;
+const version = 20;
 
 /// See 1. to get DOCID and SHEETID
 /// the `1` is the generated version. You must increment it each time you want

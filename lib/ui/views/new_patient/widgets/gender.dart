@@ -31,26 +31,20 @@ class GenderSelectionWidget extends StatelessWidget {
     }
 
     return Container(
-      decoration: BoxDecoration(
-        border: Border.all(color: Colors.grey),
-        borderRadius: BorderRadius.circular(16.0),
-      ),
+      width: Get.width,
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Text(
-                labels.general.sexAtBirth.title,
-                style: Get.theme.textTheme.headline6,
-              ),
-            ],
+          Text(
+            labels.general.sexAtBirth.title,
+            style: Get.theme.textTheme.headline6,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               /// displays translated word for female, checks if current value
               /// is true or false, true is female, false is male
+
               Radio(
                 value: labels.general.sexAtBirth.female,
                 groupValue: _whichGender(curGender),

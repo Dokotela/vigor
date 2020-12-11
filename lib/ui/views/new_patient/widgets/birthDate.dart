@@ -5,13 +5,14 @@ import '../../../../localization.dart';
 
 class BirthDateWidget extends StatelessWidget {
   const BirthDateWidget({
+    @required this.date,
     @required this.chooseBirthDate,
-    @required this.currentBirthDate,
     @required this.displayBirthDate,
     @required this.dispBirthDateError,
   });
+
+  final DateTime date;
   final Function chooseBirthDate;
-  final DateTime currentBirthDate;
   final String displayBirthDate;
   final String dispBirthDateError;
 
@@ -19,43 +20,57 @@ class BirthDateWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final labels = AppLocalizations.of(context);
 
-    return RaisedButton(
-      shape: RoundedRectangleBorder(
-        side: const BorderSide(color: Colors.grey),
-        borderRadius: BorderRadius.circular(12.0),
-      ),
-      color: Colors.transparent,
-      onPressed: () => showDatePicker(
-        context: Get.context,
-        locale: Get.locale,
-        initialDate: currentBirthDate,
-        firstDate: DateTime(1900, 1, 1),
-        lastDate: DateTime(2999, 12, 31),
-      ).then((date) => chooseBirthDate(date ?? currentBirthDate)),
-      child: Column(
-        children: <Widget>[
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: <Widget>[
-              const Icon(Icons.calendar_today, size: 64.0),
-              Column(
-                children: [
-                  Text(
-                    '${labels.general.dateofBirth}\n$displayBirthDate',
-                    style: Get.theme.textTheme.headline6,
-                    textAlign: TextAlign.center,
-                  ),
-                  // todo: is this error text widget necessary?
-                  Text(
-                    dispBirthDateError.tr,
-                    style: const TextStyle(fontSize: 12.0, color: Colors.red),
-                  ),
-                ],
-              )
-            ],
-          ),
-        ],
-      ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          '${labels.general.dateofBirth}',
+          style: Get.theme.textTheme.headline6,
+          textAlign: TextAlign.center,
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            FlatButton(
+              onPressed: () => showDatePicker(
+                  context: Get.context,
+                  locale: Get.locale,
+                  initialDate:
+                      date == DateTime(1900, 1, 1) ? DateTime.now() : date,
+                  firstDate: DateTime(1900, 1, 1),
+                  lastDate: DateTime(2999, 12, 31),
+                  builder: (BuildContext context, child) {
+                    return Theme(
+                      data: Get.theme.copyWith(
+                        colorScheme: Get.theme.colorScheme.copyWith(
+                            primary: Get.theme.colorScheme.onPrimary,
+                            onPrimary: Get.theme.colorScheme.primary),
+                      ),
+                      child: child,
+                    );
+                  }).then((date) => chooseBirthDate(date)),
+              child: Container(
+                decoration: BoxDecoration(
+                  border: Border(bottom: BorderSide(color: Colors.grey[300])),
+                ),
+                child: Row(
+                  children: [
+                    date == DateTime(1900, 1, 1)
+                        ? Text('          ')
+                        : Text(displayBirthDate),
+                    SizedBox(width: Get.width / 20),
+                    Icon(Icons.keyboard_arrow_down),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+        Text(
+          dispBirthDateError.tr,
+          style: const TextStyle(fontSize: 12.0, color: Colors.red),
+        ),
+      ],
     );
   }
 }

@@ -54,7 +54,7 @@ class PatientImmController extends GetxController {
   }
 
   void editPatient() =>
-      Get.toNamed(AppRoutes.PATIENT_REGISTRATION, arguments: _patient.value);
+      Get.toNamed(AppRoutes.NEW_PATIENT, arguments: _patient.value);
 
   void editDates(String text, String dz) =>
       Get.toNamed(AppRoutes.VAX_DATES, arguments: [text, dz]);
