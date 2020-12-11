@@ -46,7 +46,7 @@ class MyApp extends StatelessWidget {
 
             // *** ROUTES ***
             // initialRoute: "/",
-            home: LoginView(),
+            home: LoginPage(),
             getPages: appPages,
             debugShowCheckedModeBanner: false,
             //defaultTransition: Transition.fade,

@@ -18,12 +18,16 @@ class AppLocalizations {
         chooseTheme: "Choose Theme",
         settings: "App Settings",
         system: "System",
-        title: "Vigor",
+        title: AppLocalizations_Labels_App_Title(
+          title: "Vigor",
+          saluddominicana: "Salud Dominicana",
+        ),
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "Cancel",
         changePassword: "Change Password",
         email: "Email",
+        login: "Login",
         password: "Password",
         resetPassword: "Reset Password",
         signIn: "Sign In",
@@ -60,21 +64,23 @@ class AppLocalizations {
         age: "Age",
         allPatients: "All Patients",
         birthDate: "Birthdate",
+        birthDateError: "Cannot be future date",
+        contacts: "Patient Contacts",
         dateofBirth: "Date of Birth",
         editSurvey: "Edit Survey",
+        familyNameError: "Enter family name",
+        genderError: "Please select gender",
+        givenNameError: "Enter other names",
         mySchedule: "My Schedule",
+        neighborhoodError: "Please select neighborhood",
         newPatient: "New Patient",
         newSurvey: "New Survey",
-        contacts: "Patient Contacts",
-        relationship: "Relationship",
-        submitShare: "Submit/Share",
-        patientInformation: "Patient Information",
-        neighborhoodError: "Please select neighborhood",
-        birthDateError: "Cannot be future date",
-        givenNameError: "Enter other names",
-        familyNameError: "Enter family name",
-        relationshipError: "Please select relationship",
         nextPage: "Next Page",
+        patient: "Patient",
+        patientInformation: "Patient Information",
+        relationship: "Relationship",
+        relationshipError: "Please select relationship",
+        submitShare: "Submit/Share",
         address: AppLocalizations_Labels_General_Address(
           city: "City",
           country: "Country",
@@ -103,16 +109,17 @@ class AppLocalizations {
           mother: "Mother",
           nephew: "Nephew",
           niece: "Niece",
+          other: "Other",
           sister: "Sister",
           son: "Son",
           title: "Relation",
           uncle: "Uncle",
-          other: "Other",
         ),
         search: AppLocalizations_Labels_General_Search(
+          filter: "Filter",
+          patientSearch: "Patient Search",
           search: "Search",
           searchName: "Search Name",
-          filter: "Filter",
         ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "Female",
@@ -125,22 +132,22 @@ class AppLocalizations {
         title: "English",
       ),
       medical: AppLocalizations_Labels_Medical(
+        deworming: "Deworming",
         growth: "Growth",
         immunization: "Immunization",
         immunizations: "Immunizations",
-        deworming: "Deworming",
-        vaccine: "Vaccine",
         summaryReport: "Summary Report",
+        vaccine: "Vaccine",
         vaccines: AppLocalizations_Labels_Medical_Vaccines(
-          title: "Vaccines",
-          none: "No previous vaccines of this type given",
-          dateGiven: "Date Given",
-          certify: "Click to certify dates",
           addDate: "Add date of vaccine:",
+          certify: "Click to certify dates",
+          dateGiven: "Date Given",
+          none: "No previous vaccines of this type given",
+          title: "Vaccines",
         ),
       ),
       registration: AppLocalizations_Labels_Registration(
-        registerPatient: "Register Patient",
+        registerPatient: "Complete Patient Registration",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "Dark",
@@ -163,12 +170,16 @@ class AppLocalizations {
         chooseTheme: "Escoge un tema",
         settings: "Ajustes de Aplicacion",
         system: "Sistema",
-        title: "Vigor",
+        title: AppLocalizations_Labels_App_Title(
+          title: "Vigor",
+          saluddominicana: "Salud Dominicana",
+        ),
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "Cancelar",
         changePassword: "Cambia la contraseña",
-        email: "Correo electrónico",
+        email: "Email",
+        login: "Iniciar sesión",
         password: "Contraseña",
         resetPassword: "Restablecer la contraseña",
         signIn: "Registrarse",
@@ -205,21 +216,23 @@ class AppLocalizations {
         age: "Edad",
         allPatients: "todos los pacientes",
         birthDate: "Fecha de nacimiento",
+        birthDateError: "No puede ser fecha futura",
+        contacts: "contactos de pacientes",
         dateofBirth: "Fecha de nacimiento",
         editSurvey: "Editar encuesta",
+        familyNameError: "Introduce el nombre de la familia",
+        genderError: "Por favor seleccione el género",
+        givenNameError: "Introducir otros nombres",
         mySchedule: "Mi horario",
+        neighborhoodError: "Por favor, seleccione el barrio",
         newPatient: "Paciente nuevo",
         newSurvey: "nueva Encuesta",
-        contacts: "contactos de pacientes",
-        relationship: "Relación",
-        submitShare: "Presentar / Compartir",
-        patientInformation: "Información del paciente",
-        neighborhoodError: "Por favor, seleccione el barrio",
-        birthDateError: "No puede ser fecha futura",
-        givenNameError: "Introducir otros nombres",
-        familyNameError: "Introduce el nombre de la familia",
-        relationshipError: "Por favor seleccione la relación",
         nextPage: "Siguiente página",
+        patient: "Paciente",
+        patientInformation: "Información del paciente",
+        relationship: "Relación",
+        relationshipError: "Por favor seleccione la relación",
+        submitShare: "Presentar / Compartir",
         address: AppLocalizations_Labels_General_Address(
           city: "Ciudad",
           country: "País",
@@ -231,8 +244,8 @@ class AppLocalizations {
           title: "Habla a",
         ),
         name: AppLocalizations_Labels_General_Name(
-          familyName: "Familia / Apellido",
-          firstName: "Nombre de pila",
+          familyName: "Familia / Apellido de tutor",
+          firstName: "Primero / Nombre de pila de tutor",
           givenNames: "First / Nombre de pila",
           lastName: "Apellido",
           name: "Nombre",
@@ -248,16 +261,17 @@ class AppLocalizations {
           mother: "Madre",
           nephew: "Sobrino",
           niece: "Sobrina",
+          other: "Otro",
           sister: "Hermana",
           son: "Hijo",
           title: "Relación",
           uncle: "Tío",
-          other: "Otro",
         ),
         search: AppLocalizations_Labels_General_Search(
+          filter: "Filtrar",
+          patientSearch: "Buscar paciente",
           search: "Buscar",
           searchName: "búsqueda por nombre",
-          filter: "Filtrar",
         ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "Hembra",
@@ -270,22 +284,22 @@ class AppLocalizations {
         title: "Español",
       ),
       medical: AppLocalizations_Labels_Medical(
+        deworming: "desparasitación",
         growth: "Crecimiento",
         immunization: "Inmunización",
         immunizations: "inmunizaciones",
-        deworming: "desparasitación",
-        vaccine: "Vacuna",
         summaryReport: "Informe resumido",
+        vaccine: "Vacuna",
         vaccines: AppLocalizations_Labels_Medical_Vaccines(
-          title: "Vacunas",
-          none: "No hay vacunas anteriores de este tipo dado",
-          dateGiven: "Dada la fecha",
-          certify: "Haga clic para certificar fechas",
           addDate: "Añadir la fecha de la vacuna:",
+          certify: "Haga clic para certificar fechas",
+          dateGiven: "Dada la fecha",
+          none: "No hay vacunas anteriores de este tipo dado",
+          title: "Vacunas",
         ),
       ),
       registration: AppLocalizations_Labels_Registration(
-        registerPatient: "Registro de Pacientes",
+        registerPatient: "Registro de Pacientes completa",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "Oscuro",
@@ -308,12 +322,16 @@ class AppLocalizations {
         chooseTheme: "اختيار موضوع",
         settings: "إعدادات التطبيقات",
         system: "النظام",
-        title: "Vigor",
+        title: AppLocalizations_Labels_App_Title(
+          title: "Vigor",
+          saluddominicana: "Salud Dominicana",
+        ),
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "إلغاء",
         changePassword: "غير كلمة السر",
         email: "البريد الإلكتروني",
+        login: "تسجيل الدخول",
         password: "كلمه السر",
         resetPassword: "إعادة تعيين كلمة المرور",
         signIn: "تسجيل الدخول",
@@ -350,28 +368,30 @@ class AppLocalizations {
         age: "عمر",
         allPatients: "كل المرضى",
         birthDate: "تاريخ الولادة",
+        birthDateError: "لا يمكن أن يكون تاريخ المستقبل",
+        contacts: "المريض اتصالات",
         dateofBirth: "تاريخ الولادة",
         editSurvey: "تحرير مسح",
+        familyNameError: "أدخل اسم العائلة",
+        genderError: "يرجى تحديد الجنس",
+        givenNameError: "إدخال أسماء أخرى",
         mySchedule: "جدولي",
+        neighborhoodError: "يرجى اختيار حي",
         newPatient: "مريض جديد",
         newSurvey: "مسح جديد",
-        contacts: "المريض اتصالات",
-        relationship: "صلة",
-        submitShare: "إرسال / حصة",
-        patientInformation: "معلومات المريض",
-        neighborhoodError: "يرجى اختيار حي",
-        birthDateError: "لا يمكن أن يكون تاريخ المستقبل",
-        givenNameError: "إدخال أسماء أخرى",
-        familyNameError: "أدخل اسم العائلة",
-        relationshipError: "الرجاء تحديد العلاقة",
         nextPage: "الصفحة التالية",
+        patient: "صبور",
+        patientInformation: "معلومات المريض",
+        relationship: "صلة",
+        relationshipError: "الرجاء تحديد العلاقة",
+        submitShare: "إرسال / حصة",
         address: AppLocalizations_Labels_General_Address(
           city: "مدينة",
           country: "بلد",
           county: "مقاطعة",
           district: "منطقة",
           neighborhood: "حي",
-          postalCode: "رمز بريدي",
+          postalCode: "الرمز البريدي",
           state: "حالة",
           title: "عنوان",
         ),
@@ -393,16 +413,17 @@ class AppLocalizations {
           mother: "أم",
           nephew: "ابن أخ",
           niece: "ابنة الاخ",
+          other: "آخر",
           sister: "أخت",
           son: "ابن",
           title: "علاقة",
           uncle: "اخو الام",
-          other: "آخر",
         ),
         search: AppLocalizations_Labels_General_Search(
+          filter: "منقي",
+          patientSearch: "المريض البحث",
           search: "بحث",
           searchName: "البحث اسم",
-          filter: "منقي",
         ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "أنثى",
@@ -415,22 +436,22 @@ class AppLocalizations {
         title: "عربى",
       ),
       medical: AppLocalizations_Labels_Medical(
+        deworming: "للتخلص من الديدان",
         growth: "نمو",
         immunization: "تحصين",
         immunizations: "التطعيمات",
-        deworming: "للتخلص من الديدان",
-        vaccine: "لقاح",
         summaryReport: "تقرير ملخص",
+        vaccine: "لقاح",
         vaccines: AppLocalizations_Labels_Medical_Vaccines(
-          title: "اللقاحات",
-          none: "لا اللقاحات السابقة من هذا نوع معين",
-          dateGiven: "تاريخ نظرا",
-          certify: "انقر للمصادقة على مواعيد",
           addDate: "إضافة التاريخ من لقاح:",
+          certify: "انقر للمصادقة على مواعيد",
+          dateGiven: "تاريخ نظرا",
+          none: "لا اللقاحات السابقة من هذا نوع معين",
+          title: "اللقاحات",
         ),
       ),
       registration: AppLocalizations_Labels_Registration(
-        registerPatient: "سجل المريض",
+        registerPatient: "التسجيل الكامل المريض",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "داكن",
@@ -453,12 +474,16 @@ class AppLocalizations {
         chooseTheme: "थीम चुनें",
         settings: "एप्लिकेशन सेटिंग",
         system: "प्रणाली",
-        title: "Vigor",
+        title: AppLocalizations_Labels_App_Title(
+          title: "Vigor",
+          saluddominicana: "Salud Dominicana",
+        ),
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "रद्द करना",
         changePassword: "पासवर्ड बदलें",
         email: "ईमेल",
+        login: "लॉग इन करें",
         password: "कुंजिका",
         resetPassword: "पासवर्ड रीसेट",
         signIn: "साइन इन करें",
@@ -495,21 +520,23 @@ class AppLocalizations {
         age: "आयु",
         allPatients: "सभी मरीजों को",
         birthDate: "जन्म दिन",
+        birthDateError: "भविष्य की तारीख नहीं किया जा सकता",
+        contacts: "रोगी संपर्क",
         dateofBirth: "जन्म की तारीख",
         editSurvey: "सर्वे संपादित करें",
+        familyNameError: "परिवार का नाम दर्ज करें",
+        genderError: "कृपया लिंग चुनें",
+        givenNameError: "अन्य नाम दर्ज",
         mySchedule: "मेरे अनुसूची",
+        neighborhoodError: "कृपया पड़ोस का चयन",
         newPatient: "नए रोगी",
         newSurvey: "नए सर्वेक्षण",
-        contacts: "रोगी संपर्क",
-        relationship: "संबंध",
-        submitShare: "जमा करें / शेयर",
-        patientInformation: "रोगी के बारे में जानकारी",
-        neighborhoodError: "कृपया पड़ोस का चयन",
-        birthDateError: "भविष्य की तारीख नहीं किया जा सकता",
-        givenNameError: "अन्य नाम दर्ज",
-        familyNameError: "परिवार का नाम दर्ज करें",
-        relationshipError: "कृपया संबंध का चयन",
         nextPage: "अगला पृष्ठ",
+        patient: "मरीज़",
+        patientInformation: "रोगी के बारे में जानकारी",
+        relationship: "संबंध",
+        relationshipError: "कृपया संबंध का चयन",
+        submitShare: "जमा करें / शेयर",
         address: AppLocalizations_Labels_General_Address(
           city: "Faridabad",
           country: "देश",
@@ -532,22 +559,23 @@ class AppLocalizations {
           aunt: "चाची",
           brother: "भाई",
           daughter: "बेटी",
-          father: "पिता जी",
+          father: "पिता",
           grandfather: "दादा",
           grandmother: "दादी मा",
           mother: "मां",
           nephew: "भतीजा",
           niece: "भांजी",
+          other: "अन्य",
           sister: "बहन",
           son: "बेटा",
           title: "रिश्ता",
           uncle: "चाचा",
-          other: "अन्य",
         ),
         search: AppLocalizations_Labels_General_Search(
+          filter: "फ़िल्टर",
+          patientSearch: "रोगी खोजें",
           search: "खोज",
           searchName: "खोजें नाम",
-          filter: "फ़िल्टर",
         ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "महिला",
@@ -560,22 +588,22 @@ class AppLocalizations {
         title: "हिंदी",
       ),
       medical: AppLocalizations_Labels_Medical(
+        deworming: "स्वच्छ",
         growth: "विकास",
         immunization: "प्रतिरक्षा",
         immunizations: "टीकाकरण",
-        deworming: "स्वच्छ",
-        vaccine: "टीका",
         summaryReport: "संक्षिप्त रिपोर्ट",
+        vaccine: "टीका",
         vaccines: AppLocalizations_Labels_Medical_Vaccines(
-          title: "टीके",
-          none: "इस प्रकार का कोई पिछले टीके दिए गए",
-          dateGiven: "दिनांक को देखते हुए",
-          certify: "दिनांक प्रमाणित करने के लिए क्लिक करें",
           addDate: "टीके की तारीख जोड़ें:",
+          certify: "दिनांक प्रमाणित करने के लिए क्लिक करें",
+          dateGiven: "दिनांक को देखते हुए",
+          none: "इस प्रकार का कोई पिछले टीके दिए गए",
+          title: "टीके",
         ),
       ),
       registration: AppLocalizations_Labels_Registration(
-        registerPatient: "रजिस्टर रोगी",
+        registerPatient: "पूर्ण रोगी पंजीकरण",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "अंधेरा",
@@ -598,12 +626,16 @@ class AppLocalizations {
         chooseTheme: "Выбрать тему",
         settings: "Настройки приложения",
         system: "система",
-        title: "Vigor",
+        title: AppLocalizations_Labels_App_Title(
+          title: "Vigor",
+          saluddominicana: "Salud Dominicana",
+        ),
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "Отмена",
         changePassword: "Сменить пароль",
         email: "Электронное письмо",
+        login: "Авторизоваться",
         password: "пароль",
         resetPassword: "Сброс пароля",
         signIn: "Войти в систему",
@@ -640,21 +672,23 @@ class AppLocalizations {
         age: "Возраст",
         allPatients: "Все пациенты",
         birthDate: "Дата рождения",
+        birthDateError: "Не может быть дата в будущем",
+        contacts: "Пациент Контакты",
         dateofBirth: "Дата рождения",
         editSurvey: "Изменить опрос",
+        familyNameError: "Введите фамилию",
+        genderError: "Пожалуйста, выберите пол",
+        givenNameError: "Введите другие имена",
         mySchedule: "Мое расписание",
+        neighborhoodError: "Выберите район",
         newPatient: "Новый пациент",
         newSurvey: "повторная съемка",
-        contacts: "Пациент Контакты",
-        relationship: "отношения",
-        submitShare: "Отправить / Share",
-        patientInformation: "Информация о пациенте",
-        neighborhoodError: "Выберите район",
-        birthDateError: "Не может быть дата в будущем",
-        givenNameError: "Введите другие имена",
-        familyNameError: "Введите фамилию",
-        relationshipError: "Пожалуйста, выберите отношения",
         nextPage: "Следующая Страница",
+        patient: "Терпеливый",
+        patientInformation: "Информация о пациенте",
+        relationship: "отношения",
+        relationshipError: "Пожалуйста, выберите отношения",
+        submitShare: "Отправить / Share",
         address: AppLocalizations_Labels_General_Address(
           city: "город",
           country: "Страна",
@@ -683,16 +717,17 @@ class AppLocalizations {
           mother: "Мать",
           nephew: "Племянник",
           niece: "Племянница",
+          other: "разное",
           sister: "Сестра",
           son: "Сын",
           title: "Связь",
           uncle: "Дядя",
-          other: "Другие",
         ),
         search: AppLocalizations_Labels_General_Search(
+          filter: "Фильтр",
+          patientSearch: "Поиск пациента",
           search: "Поиск",
           searchName: "Поиск Имя",
-          filter: "Фильтр",
         ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "женский",
@@ -705,22 +740,22 @@ class AppLocalizations {
         title: "русский",
       ),
       medical: AppLocalizations_Labels_Medical(
+        deworming: "дегельминтация",
         growth: "рост",
         immunization: "иммунизация",
         immunizations: "Иммунизация",
-        deworming: "дегельминтация",
+        summaryReport: "Сводный отчет",
         vaccine: "вакцина",
-        summaryReport: "Отчет",
         vaccines: AppLocalizations_Labels_Medical_Vaccines(
-          title: "Вакцина",
-          none: "Нет предыдущих вакцин этого типа данные",
-          dateGiven: "Дата Учитывая",
-          certify: "Нажмите для подтверждения даты",
           addDate: "Дата добавления вакцины:",
+          certify: "Нажмите для подтверждения даты",
+          dateGiven: "Дата Учитывая",
+          none: "Нет предыдущих вакцин этого типа данные",
+          title: "Вакцина",
         ),
       ),
       registration: AppLocalizations_Labels_Registration(
-        registerPatient: "Регистрация пациентов",
+        registerPatient: "Полное Пациент регистрации",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "Темно",
@@ -743,12 +778,16 @@ class AppLocalizations {
         chooseTheme: "থিম চয়ন করুন",
         settings: "অ্যাপ সেটিংস",
         system: "পদ্ধতি",
-        title: "Vigor",
+        title: AppLocalizations_Labels_App_Title(
+          title: "Vigor",
+          saluddominicana: "Salud Dominicana",
+        ),
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "বাতিল",
         changePassword: "পাসওয়ার্ড পরিবর্তন",
         email: "ইমেইল",
+        login: "প্রবেশ করুন",
         password: "পাসওয়ার্ড",
         resetPassword: "পাসওয়ার্ড রিসেট করুন",
         signIn: "সাইন ইন করুন",
@@ -785,21 +824,23 @@ class AppLocalizations {
         age: "বয়স",
         allPatients: "সব রোগীদের",
         birthDate: "জন্ম তারিখ",
+        birthDateError: "ভবিষ্যতে তারিখে হতে পারে না",
+        contacts: "রোগীর যোগাযোগ",
         dateofBirth: "জন্ম তারিখ",
         editSurvey: "সার্ভে সম্পাদনা",
+        familyNameError: "পারিবারিক নাম লিখুন",
+        genderError: "দয়া করে লিঙ্গ নির্বাচন করুন",
+        givenNameError: "অন্যান্য নামগুলি লিখুন",
         mySchedule: "আমার সময়সূচি",
+        neighborhoodError: "দয়া করে আশপাশ নির্বাচন",
         newPatient: "নিউ রোগীর",
         newSurvey: "নতুন জরিপ",
-        contacts: "রোগীর যোগাযোগ",
-        relationship: "সম্পর্ক",
-        submitShare: "জমা দিন / শেয়ার",
-        patientInformation: "রোগীর তথ্য",
-        neighborhoodError: "দয়া করে আশপাশ নির্বাচন",
-        birthDateError: "ভবিষ্যতে তারিখে হতে পারে না",
-        givenNameError: "অন্যান্য নামগুলি লিখুন",
-        familyNameError: "পারিবারিক নাম লিখুন",
-        relationshipError: "দয়া করে সম্পর্ক নির্বাচন",
         nextPage: "পরবর্তী পৃষ্ঠা",
+        patient: "রোগী",
+        patientInformation: "রোগীর তথ্য",
+        relationship: "সম্পর্ক",
+        relationshipError: "দয়া করে সম্পর্ক নির্বাচন",
+        submitShare: "জমা দিন / শেয়ার",
         address: AppLocalizations_Labels_General_Address(
           city: "শহর",
           country: "দেশ",
@@ -828,16 +869,17 @@ class AppLocalizations {
           mother: "মা",
           nephew: "ভাইপো",
           niece: "ভাইঝি",
+          other: "অন্যান্য",
           sister: "বোন",
           son: "পুত্র",
           title: "সম্পর্ক",
           uncle: "চাচা",
-          other: "অন্যান্য",
         ),
         search: AppLocalizations_Labels_General_Search(
+          filter: "ছাঁকনি",
+          patientSearch: "রোগীর অনুসন্ধান",
           search: "অনুসন্ধান করুন",
           searchName: "অনুসন্ধান নাম",
-          filter: "ছাঁকনি",
         ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "মহিলা",
@@ -850,22 +892,22 @@ class AppLocalizations {
         title: "বাংলা",
       ),
       medical: AppLocalizations_Labels_Medical(
+        deworming: "ডিওয়ার্মিং",
         growth: "উন্নতি",
         immunization: "টিকাদান",
         immunizations: "ইমিউনাইজেশন",
-        deworming: "ডিওয়ার্মিং",
-        vaccine: "টীকা",
         summaryReport: "সারসংক্ষেপ প্রতিবেদন",
+        vaccine: "টীকা",
         vaccines: AppLocalizations_Labels_Medical_Vaccines(
-          title: "টিকা",
-          none: "এই ধরনের কোনো পূর্ববর্তী টিকা দেওয়া",
-          dateGiven: "তারিখ দেওয়া",
-          certify: "তারিখ প্রত্যয়ন করতে ক্লিক করুন",
           addDate: "টিকা তারিখ যোগ করুন",
+          certify: "তারিখ প্রত্যয়ন করতে ক্লিক করুন",
+          dateGiven: "তারিখ দেওয়া",
+          none: "এই ধরনের কোনো পূর্ববর্তী টিকা দেওয়া",
+          title: "টিকা",
         ),
       ),
       registration: AppLocalizations_Labels_Registration(
-        registerPatient: "নিবন্ধন রোগীর",
+        registerPatient: "সম্পূর্ণ রোগীর নিবন্ধন",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "অন্ধকার",
@@ -888,12 +930,16 @@ class AppLocalizations {
         chooseTheme: "အဓိကအကြောင်းအရာ Choose",
         settings: "App ကိုချိန်ညှိမှုများ",
         system: "စံနစ်",
-        title: "Vigor",
+        title: AppLocalizations_Labels_App_Title(
+          title: "Vigor",
+          saluddominicana: "Salud Dominicana",
+        ),
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "Cancel",
         changePassword: "စကားဝှက်ကိုပြောင်းရန်",
         email: "အီးမေးလ်ပို့ရန်",
+        login: "လော့ဂ်အင်",
         password: "Password ကို",
         resetPassword: "လျှို့ဝှတ်နံပါတ်အားမူလအတိုင်းပြန်လုပ်သည်",
         signIn: "ဆိုင်းအင်လုပ်ခြင်း",
@@ -930,21 +976,23 @@ class AppLocalizations {
         age: "အသက်အရွယ်",
         allPatients: "အားလုံးလူနာများ",
         birthDate: "မွေးရက်",
+        birthDateError: "အနာဂတ်နေ့စွဲမဖွစျနိုငျ",
+        contacts: "လူနာဆက်သွယ်ရန်",
         dateofBirth: "မွေးရက်",
         editSurvey: "Edit ကိုစစ်တမ်း",
+        familyNameError: "မိသားစုနာမည်ရိုက်ထည့်ပါ",
+        genderError: "ကျားမကို select ပေးပါ",
+        givenNameError: "သည်အခြားအမည်များကိုရိုက်ထည့်ပါ",
         mySchedule: "အကြှနျုပျ၏ဇယား",
+        neighborhoodError: "ရပ်ကွက်အတွင်းကို select ပေးပါ",
         newPatient: "နယူးလူနာ",
         newSurvey: "နယူးစစ်တမ်း",
-        contacts: "လူနာဆက်သွယ်ရန်",
-        relationship: "relationship",
-        submitShare: "Submit / ဝေမျှမယ်",
-        patientInformation: "လူနာသတင်းအချက်အလက်",
-        neighborhoodError: "ရပ်ကွက်အတွင်းကို select ပေးပါ",
-        birthDateError: "အနာဂတ်နေ့စွဲမဖွစျနိုငျ",
-        givenNameError: "သည်အခြားအမည်များကိုရိုက်ထည့်ပါ",
-        familyNameError: "မိသားစုနာမည်ရိုက်ထည့်ပါ",
-        relationshipError: "ဆက်ဆံရေးမျိုးကိုရွေးချယ်ပါ ကျေးဇူးပြု.",
         nextPage: "next ကို 's Page",
+        patient: "လူနာ",
+        patientInformation: "လူနာသတင်းအချက်အလက်",
+        relationship: "relationship",
+        relationshipError: "ဆက်ဆံရေးမျိုးကိုရွေးချယ်ပါ ကျေးဇူးပြု.",
+        submitShare: "Submit / ဝေမျှမယ်",
         address: AppLocalizations_Labels_General_Address(
           city: "မြို့",
           country: "ပြည်",
@@ -973,16 +1021,17 @@ class AppLocalizations {
           mother: "မိခင်",
           nephew: "တူ",
           niece: "တူမ",
+          other: "အခြား",
           sister: "အစ်မ",
           son: "သား",
           title: "ဆှေမြိုး",
           uncle: "ဘကြီး",
-          other: "အခြား",
         ),
         search: AppLocalizations_Labels_General_Search(
+          filter: "ရေစစ်",
+          patientSearch: "လူနာရှာရန်",
           search: "ရှာဖှေ",
           searchName: "ရှာရန်အမည်",
-          filter: "ရေစစ်",
         ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "အမြိုးသမီး",
@@ -995,22 +1044,22 @@ class AppLocalizations {
         title: "မြန်မာ",
       ),
       medical: AppLocalizations_Labels_Medical(
+        deworming: "Deworming",
         growth: "တိုးတက်မှုနှုန်း",
         immunization: "ကာကွယ်ဆေးထိုး",
         immunizations: "ကာကွယ်ဆေးထိုးပေးခြင်း",
-        deworming: "Deworming",
-        vaccine: "ကာကွယ်ဆေး",
         summaryReport: "အကျဉ်းချုပ်အစီရင်ခံစာ",
+        vaccine: "ကာကွယ်ဆေး",
         vaccines: AppLocalizations_Labels_Medical_Vaccines(
-          title: "ကာကွယ်ဆေးများ",
-          none: "ပေးထားသောဒီအမျိုးအစားအဘယ်သူမျှမကယခင်ကာကွယ်ဆေး",
-          dateGiven: "နေ့စွဲအရ",
-          certify: "Certified ရက်စွဲများဖို့ကိုနှိပ်ပါ",
           addDate: "ကာကွယ်ဆေးနေ့စွဲ Add:",
+          certify: "Certified ရက်စွဲများဖို့ကိုနှိပ်ပါ",
+          dateGiven: "နေ့စွဲအရ",
+          none: "ပေးထားသောဒီအမျိုးအစားအဘယ်သူမျှမကယခင်ကာကွယ်ဆေး",
+          title: "ကာကွယ်ဆေးများ",
         ),
       ),
       registration: AppLocalizations_Labels_Registration(
-        registerPatient: "မှတ်ပုံတင်မည်လူနာ",
+        registerPatient: "အပြီးအစီးလူနာမှတ်ပုံတင်ခြင်း",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "မှောငျမိုကျသော",
@@ -1033,12 +1082,16 @@ class AppLocalizations {
         chooseTheme: "选择主题",
         settings: "应用程序设置",
         system: "系统",
-        title: "Vigor",
+        title: AppLocalizations_Labels_App_Title(
+          title: "Vigor",
+          saluddominicana: "Salud Dominicana",
+        ),
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "取消",
         changePassword: "更改密码",
         email: "电子邮件",
+        login: "登录",
         password: "密码",
         resetPassword: "重设密码",
         signIn: "登入",
@@ -1075,21 +1128,23 @@ class AppLocalizations {
         age: "年龄",
         allPatients: "所有患者",
         birthDate: "生日",
+        birthDateError: "不能是未来的日期",
+        contacts: "病人的接触",
         dateofBirth: "出生日期",
         editSurvey: "编辑调查",
+        familyNameError: "输入姓氏",
+        genderError: "请选择性别",
+        givenNameError: "输入其他名称",
         mySchedule: "我的日程表",
+        neighborhoodError: "请选择附近",
         newPatient: "新患者",
         newSurvey: "新调查",
-        contacts: "病人的接触",
-        relationship: "关系",
-        submitShare: "提交/股",
-        patientInformation: "患者信息",
-        neighborhoodError: "请选择附近",
-        birthDateError: "不能是未来的日期",
-        givenNameError: "输入其他名称",
-        familyNameError: "输入姓氏",
-        relationshipError: "请选择关系",
         nextPage: "下一页",
+        patient: "患者",
+        patientInformation: "患者信息",
+        relationship: "关系",
+        relationshipError: "请选择关系",
+        submitShare: "提交/股",
         address: AppLocalizations_Labels_General_Address(
           city: "市",
           country: "国家",
@@ -1118,16 +1173,17 @@ class AppLocalizations {
           mother: "母亲",
           nephew: "外甥",
           niece: "侄女",
+          other: "其他",
           sister: "妹妹",
           son: "儿子",
           title: "关系",
           uncle: "叔叔",
-          other: "其他",
         ),
         search: AppLocalizations_Labels_General_Search(
+          filter: "过滤",
+          patientSearch: "患者搜索",
           search: "搜索",
           searchName: "搜索产品名称",
-          filter: "过滤",
         ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "女",
@@ -1140,22 +1196,22 @@ class AppLocalizations {
         title: "简体中文）",
       ),
       medical: AppLocalizations_Labels_Medical(
+        deworming: "驱虫",
         growth: "发展",
         immunization: "免疫接种",
         immunizations: "预防接种",
-        deworming: "驱虫",
-        vaccine: "疫苗",
         summaryReport: "总结报告",
+        vaccine: "疫苗",
         vaccines: AppLocalizations_Labels_Medical_Vaccines(
-          title: "疫苗",
-          none: "没有这种类型的疫苗以前给出",
-          dateGiven: "鉴于日期",
-          certify: "点击日期证明",
           addDate: "加入疫苗的日期：",
+          certify: "点击日期证明",
+          dateGiven: "鉴于日期",
+          none: "没有这种类型的疫苗以前给出",
+          title: "疫苗",
         ),
       ),
       registration: AppLocalizations_Labels_Registration(
-        registerPatient: "注册病人",
+        registerPatient: "完整的病人登记",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "黑暗",
@@ -1178,12 +1234,16 @@ class AppLocalizations {
         chooseTheme: "選擇主題",
         settings: "應用程序設置",
         system: "系統",
-        title: "Vigor",
+        title: AppLocalizations_Labels_App_Title(
+          title: "Vigor",
+          saluddominicana: "Salud Dominicana",
+        ),
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "取消",
         changePassword: "更改密碼",
         email: "電子郵件",
+        login: "登錄",
         password: "密碼",
         resetPassword: "重設密碼",
         signIn: "登入",
@@ -1220,21 +1280,23 @@ class AppLocalizations {
         age: "年齡",
         allPatients: "所有患者",
         birthDate: "生日",
+        birthDateError: "不能是未來的日期",
+        contacts: "病人的接觸",
         dateofBirth: "出生日期",
         editSurvey: "編輯調查",
+        familyNameError: "輸入姓氏",
+        genderError: "請選擇性別",
+        givenNameError: "輸入其他名稱",
         mySchedule: "我的日程表",
+        neighborhoodError: "請選擇附近",
         newPatient: "新患者",
         newSurvey: "新調查",
-        contacts: "病人的接觸",
-        relationship: "關係",
-        submitShare: "提交/股",
-        patientInformation: "患者信息",
-        neighborhoodError: "請選擇附近",
-        birthDateError: "不能是未來的日期",
-        givenNameError: "輸入其他名稱",
-        familyNameError: "輸入姓氏",
-        relationshipError: "請選擇關係",
         nextPage: "下一頁",
+        patient: "患者",
+        patientInformation: "患者信息",
+        relationship: "關係",
+        relationshipError: "請選擇關係",
+        submitShare: "提交/股",
         address: AppLocalizations_Labels_General_Address(
           city: "市",
           country: "國家",
@@ -1263,16 +1325,17 @@ class AppLocalizations {
           mother: "母親",
           nephew: "外甥",
           niece: "侄女",
+          other: "其他",
           sister: "妹妹",
           son: "兒子",
           title: "關係",
           uncle: "叔叔",
-          other: "其他",
         ),
         search: AppLocalizations_Labels_General_Search(
+          filter: "過濾",
+          patientSearch: "患者搜索",
           search: "搜索",
           searchName: "搜索產品名稱",
-          filter: "過濾",
         ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "女",
@@ -1285,22 +1348,22 @@ class AppLocalizations {
         title: "中國傳統的）",
       ),
       medical: AppLocalizations_Labels_Medical(
+        deworming: "驅蟲",
         growth: "發展",
         immunization: "免疫接種",
         immunizations: "預防接種",
-        deworming: "驅蟲",
-        vaccine: "疫苗",
         summaryReport: "總結報告",
+        vaccine: "疫苗",
         vaccines: AppLocalizations_Labels_Medical_Vaccines(
-          title: "疫苗",
-          none: "沒有這種類型的疫苗以前給出",
-          dateGiven: "鑑於日期",
-          certify: "點擊日期證明",
           addDate: "加入疫苗的日期：",
+          certify: "點擊日期證明",
+          dateGiven: "鑑於日期",
+          none: "沒有這種類型的疫苗以前給出",
+          title: "疫苗",
         ),
       ),
       registration: AppLocalizations_Labels_Registration(
-        registerPatient: "註冊病人",
+        registerPatient: "完整的病人登記",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "黑暗",
@@ -1323,12 +1386,16 @@ class AppLocalizations {
         chooseTheme: "انتخاب موضوع",
         settings: "تنظیمات برنامه",
         system: "سیستم",
-        title: "Vigor",
+        title: AppLocalizations_Labels_App_Title(
+          title: "Vigor",
+          saluddominicana: "Salud Dominicana",
+        ),
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "لغو کردن",
         changePassword: "تغییر رمز عبور",
         email: "پست الکترونیک",
+        login: "وارد شدن",
         password: "کلمه عبور",
         resetPassword: "بازیابی رمز عبور",
         signIn: "ورود",
@@ -1365,21 +1432,23 @@ class AppLocalizations {
         age: "سن",
         allPatients: "همه بیماران",
         birthDate: "تاریخ تولد",
+        birthDateError: "نمی تواند تاریخ آینده",
+        contacts: "بیمار اطلاعات تماس",
         dateofBirth: "تاریخ تولد",
         editSurvey: "بررسی ویرایش",
+        familyNameError: "نام خانوادگی را وارد کنید",
+        genderError: "لطفا جنسیت را انتخاب کنید",
+        givenNameError: "نام های دیگر را وارد کنید",
         mySchedule: "برنامه من",
+        neighborhoodError: "لطفا محله را انتخاب کنید",
         newPatient: "بیمار جدید",
         newSurvey: "نظرسنجی جدید",
-        contacts: "بیمار اطلاعات تماس",
-        relationship: "ارتباط",
-        submitShare: "ارسال / اشتراک",
-        patientInformation: "اطلاعات بیمار",
-        neighborhoodError: "لطفا محله را انتخاب کنید",
-        birthDateError: "نمی تواند تاریخ آینده",
-        givenNameError: "نام های دیگر را وارد کنید",
-        familyNameError: "نام خانوادگی را وارد کنید",
-        relationshipError: "لطفا ارتباط را انتخاب کنید",
         nextPage: "صفحه بعد",
+        patient: "صبور",
+        patientInformation: "اطلاعات بیمار",
+        relationship: "ارتباط",
+        relationshipError: "لطفا ارتباط را انتخاب کنید",
+        submitShare: "ارسال / اشتراک",
         address: AppLocalizations_Labels_General_Address(
           city: "شهرستان",
           country: "کشور",
@@ -1408,16 +1477,17 @@ class AppLocalizations {
           mother: "مادر",
           nephew: "پسر خواهر یا برادر",
           niece: "دختر برادر یا خواهر و غیره",
+          other: "دیگر",
           sister: "خواهر",
           son: "فرزند پسر",
           title: "رابطه",
           uncle: "عمو یا دایی",
-          other: "دیگر",
         ),
         search: AppLocalizations_Labels_General_Search(
+          filter: "صافی",
+          patientSearch: "بیمار جستجو",
           search: "جستجو کردن",
           searchName: "جستجو نام",
-          filter: "صافی",
         ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "زن",
@@ -1430,22 +1500,22 @@ class AppLocalizations {
         title: "فارسی",
       ),
       medical: AppLocalizations_Labels_Medical(
+        deworming: "کرم زدایی",
         growth: "رشد",
         immunization: "ایمن سازی",
         immunizations: "ایمن سازی",
-        deworming: "کرم زدایی",
-        vaccine: "واکسن",
         summaryReport: "خلاصه گزارش",
+        vaccine: "واکسن",
         vaccines: AppLocalizations_Labels_Medical_Vaccines(
-          title: "واکسن ها",
-          none: "هیچ واکسن قبلی از این نوع داده",
-          dateGiven: "تاریخ داده شده",
-          certify: "به گواهی تاریخ کلیک کنید",
           addDate: "تاریخ واکسن را اضافه کنید:",
+          certify: "به گواهی تاریخ کلیک کنید",
+          dateGiven: "تاریخ داده شده",
+          none: "هیچ واکسن قبلی از این نوع داده",
+          title: "واکسن ها",
         ),
       ),
       registration: AppLocalizations_Labels_Registration(
-        registerPatient: "ثبت نام بیمار",
+        registerPatient: "ثبت نام بیمار کامل",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "تاریک",
@@ -1468,12 +1538,16 @@ class AppLocalizations {
         chooseTheme: "choisir un thème",
         settings: "paramètres d'application",
         system: "Système",
-        title: "Vigor",
+        title: AppLocalizations_Labels_App_Title(
+          title: "Vigor",
+          saluddominicana: "Salud Dominicana",
+        ),
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "Annuler",
         changePassword: "Changer le mot de passe",
         email: "Email",
+        login: "S'identifier",
         password: "Mot de passe",
         resetPassword: "réinitialiser le mot de passe",
         signIn: "Se connecter",
@@ -1491,7 +1565,7 @@ class AppLocalizations {
           july: "juillet",
           june: "juin",
           march: "Mars",
-          may: "Mai",
+          may: "Peut",
           november: "novembre",
           october: "octobre",
           september: "septembre",
@@ -1510,21 +1584,23 @@ class AppLocalizations {
         age: "Âge",
         allPatients: "tous les patients",
         birthDate: "Date de naissance",
+        birthDateError: "Ne peut pas être date ultérieure",
+        contacts: "Contacts patients",
         dateofBirth: "Date de naissance",
         editSurvey: "Modifier enquête",
+        familyNameError: "Entrez le nom de famille",
+        genderError: "S'il vous plaît sélectionner le genre",
+        givenNameError: "Entrez les autres noms",
         mySchedule: "Mon emploi du temps",
+        neighborhoodError: "S'il vous plaît sélectionner quartier",
         newPatient: "nouveau patient",
         newSurvey: "Une nouvelle enquête",
-        contacts: "Contacts patients",
-        relationship: "Relation",
-        submitShare: "Déposer / Partager",
-        patientInformation: "L'information des patients",
-        neighborhoodError: "S'il vous plaît sélectionner quartier",
-        birthDateError: "Ne peut pas être date ultérieure",
-        givenNameError: "Entrez les autres noms",
-        familyNameError: "Entrez le nom de famille",
-        relationshipError: "S'il vous plaît choisir relation",
         nextPage: "Page suivante",
+        patient: "Patient",
+        patientInformation: "L'information des patients",
+        relationship: "Relation",
+        relationshipError: "S'il vous plaît choisir relation",
+        submitShare: "Déposer / Partager",
         address: AppLocalizations_Labels_General_Address(
           city: "Ville",
           country: "Pays",
@@ -1553,19 +1629,20 @@ class AppLocalizations {
           mother: "Mère",
           nephew: "Neveu",
           niece: "Nièce",
+          other: "Autre",
           sister: "Sœur",
           son: "Fils",
           title: "Relation",
           uncle: "Oncle",
-          other: "Autre",
         ),
         search: AppLocalizations_Labels_General_Search(
+          filter: "Filtre",
+          patientSearch: "Recherche des patients",
           search: "Chercher",
           searchName: "Recherche Nom",
-          filter: "Filtre",
         ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
-          female: "Femelle",
+          female: "Femme",
           male: "Masculin",
           title: "Sexe à la naissance",
         ),
@@ -1575,22 +1652,22 @@ class AppLocalizations {
         title: "français",
       ),
       medical: AppLocalizations_Labels_Medical(
+        deworming: "déparasitage",
         growth: "Croissance",
         immunization: "Immunisation",
         immunizations: "immunisations",
-        deworming: "déparasitage",
-        vaccine: "Vaccin",
         summaryReport: "Rapport sommaire",
+        vaccine: "Vaccin",
         vaccines: AppLocalizations_Labels_Medical_Vaccines(
-          title: "Vaccins",
-          none: "Aucun vaccin précédent de ce type donné",
-          dateGiven: "Date Compte tenu",
-          certify: "Cliquez pour certifier les dates",
           addDate: "Ajouter la date du vaccin:",
+          certify: "Cliquez pour certifier les dates",
+          dateGiven: "Date Compte tenu",
+          none: "Aucun vaccin précédent de ce type donné",
+          title: "Vaccins",
         ),
       ),
       registration: AppLocalizations_Labels_Registration(
-        registerPatient: "registre des patients",
+        registerPatient: "Inscription complète du patient",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "Sombre",
@@ -1613,12 +1690,16 @@ class AppLocalizations {
         chooseTheme: "Wähle das Thema",
         settings: "App Einstellungen",
         system: "System",
-        title: "Vigor",
+        title: AppLocalizations_Labels_App_Title(
+          title: "Vigor",
+          saluddominicana: "Salud Dominicana",
+        ),
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "Stornieren",
         changePassword: "Passwort ändern",
         email: "Email",
+        login: "Anmeldung",
         password: "Passwort",
         resetPassword: "Passwort zurücksetzen",
         signIn: "Einloggen",
@@ -1655,36 +1736,38 @@ class AppLocalizations {
         age: "Alter",
         allPatients: "alle Patienten",
         birthDate: "Geburtsdatum",
+        birthDateError: "Kann nicht Datum in der Zukunft sein",
+        contacts: "Patienten-Kontakte",
         dateofBirth: "Geburtsdatum",
         editSurvey: "Umfrage bearbeiten",
+        familyNameError: "Geben Sie Namen",
+        genderError: "Bitte wähle ein Geschlecht",
+        givenNameError: "Geben Sie andere Namen",
         mySchedule: "Mein Terminplan",
+        neighborhoodError: "Bitte wählen Sie Nachbarschaft",
         newPatient: "Neuer Patient",
         newSurvey: "neue Umfrage",
-        contacts: "Patienten-Kontakte",
-        relationship: "Beziehung",
-        submitShare: "Senden / Share",
-        patientInformation: "Informationen zum Patienten",
-        neighborhoodError: "Bitte wählen Sie Nachbarschaft",
-        birthDateError: "Kann nicht Datum in der Zukunft sein",
-        givenNameError: "Geben Sie andere Namen",
-        familyNameError: "Geben Sie Namen",
-        relationshipError: "Bitte wählen Sie Beziehung",
         nextPage: "Nächste Seite",
+        patient: "Geduldig",
+        patientInformation: "Informationen zum Patienten",
+        relationship: "Beziehung",
+        relationshipError: "Bitte wählen Sie Beziehung",
+        submitShare: "Senden / Share",
         address: AppLocalizations_Labels_General_Address(
           city: "Stadt",
           country: "Land",
           county: "Bezirk",
           district: "Kreis",
-          neighborhood: "Gegend",
+          neighborhood: "Nachbarschaft",
           postalCode: "Postleitzahl",
           state: "Zustand",
           title: "Adresse",
         ),
         name: AppLocalizations_Labels_General_Name(
-          familyName: "Familie / Last Name",
+          familyName: "Familie / Nachname",
           firstName: "Vorname",
           givenNames: "Erste / Vorname",
-          lastName: "Nachname",
+          lastName: "Familienname, Nachname",
           name: "Name",
           otherNames: "Andere Namen",
         ),
@@ -1698,16 +1781,17 @@ class AppLocalizations {
           mother: "Mutter",
           nephew: "Neffe",
           niece: "Nichte",
+          other: "Andere",
           sister: "Schwester",
           son: "Sohn",
           title: "Beziehung",
           uncle: "Onkel",
-          other: "Andere",
         ),
         search: AppLocalizations_Labels_General_Search(
+          filter: "Filter",
+          patientSearch: "Patientensuche",
           search: "Suche",
           searchName: "Suchen Name",
-          filter: "Filter",
         ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "Weiblich",
@@ -1720,22 +1804,22 @@ class AppLocalizations {
         title: "Deutsche",
       ),
       medical: AppLocalizations_Labels_Medical(
+        deworming: "Entwurmung",
         growth: "Wachstum",
         immunization: "Immunisierung",
         immunizations: "Immunisierungen",
-        deworming: "Entwurmung",
-        vaccine: "Impfstoff",
         summaryReport: "Kurzbericht",
+        vaccine: "Impfstoff",
         vaccines: AppLocalizations_Labels_Medical_Vaccines(
-          title: "Impfungen",
-          none: "Keine vorherigen Impfstoffe dieses Typs gegeben",
-          dateGiven: "Datum Gegeben",
-          certify: "Klicken Sie Daten zu bestätigen,",
           addDate: "Erfassungsdatum des Impfstoffes:",
+          certify: "Klicken Sie Daten zu bestätigen,",
+          dateGiven: "Datum Gegeben",
+          none: "Keine vorherigen Impfstoffe dieses Typs gegeben",
+          title: "Impfungen",
         ),
       ),
       registration: AppLocalizations_Labels_Registration(
-        registerPatient: "Register Patienten",
+        registerPatient: "Komplette Patientenregistrierung",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "Dunkel",
@@ -1758,12 +1842,16 @@ class AppLocalizations {
         chooseTheme: "Pilih Tema",
         settings: "Pengaturan aplikasi",
         system: "Sistem",
-        title: "Vigor",
+        title: AppLocalizations_Labels_App_Title(
+          title: "Vigor",
+          saluddominicana: "Salud Dominicana",
+        ),
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "Membatalkan",
         changePassword: "Ganti kata sandi",
         email: "Surel",
+        login: "Gabung",
         password: "Kata sandi",
         resetPassword: "Reset password",
         signIn: "Masuk",
@@ -1800,21 +1888,23 @@ class AppLocalizations {
         age: "Usia",
         allPatients: "semua Pasien",
         birthDate: "Tanggal lahir",
+        birthDateError: "Tidak bisa masa mendatang",
+        contacts: "Kontak pasien",
         dateofBirth: "Tanggal lahir",
         editSurvey: "mengedit Survey",
+        familyNameError: "Masukkan nama keluarga",
+        genderError: "Silakan pilih jenis kelamin",
+        givenNameError: "Masukkan nama lain",
         mySchedule: "Jadwal saya",
+        neighborhoodError: "Silakan pilih lingkungan",
         newPatient: "Pasien baru",
         newSurvey: "Survei baru",
-        contacts: "Kontak pasien",
-        relationship: "Hubungan",
-        submitShare: "Menyerahkan / Share",
-        patientInformation: "Informasi pasien",
-        neighborhoodError: "Silakan pilih lingkungan",
-        birthDateError: "Tidak bisa masa mendatang",
-        givenNameError: "Masukkan nama lain",
-        familyNameError: "Masukkan nama keluarga",
-        relationshipError: "Silakan pilih hubungan",
         nextPage: "Halaman selanjutnya",
+        patient: "Sabar",
+        patientInformation: "Informasi pasien",
+        relationship: "Hubungan",
+        relationshipError: "Silakan pilih hubungan",
+        submitShare: "Menyerahkan / Share",
         address: AppLocalizations_Labels_General_Address(
           city: "Kota",
           country: "Negara",
@@ -1843,16 +1933,17 @@ class AppLocalizations {
           mother: "Ibu",
           nephew: "Keponakan",
           niece: "Keponakan",
+          other: "Lain",
           sister: "Saudara",
           son: "Putra",
           title: "Hubungan",
           uncle: "Paman",
-          other: "Lain",
         ),
         search: AppLocalizations_Labels_General_Search(
+          filter: "Saring",
+          patientSearch: "Cari pasien",
           search: "Cari",
           searchName: "Nama Cari",
-          filter: "Saring",
         ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "Perempuan",
@@ -1865,22 +1956,22 @@ class AppLocalizations {
         title: "bahasa Indonesia",
       ),
       medical: AppLocalizations_Labels_Medical(
+        deworming: "cacingan",
         growth: "Pertumbuhan",
         immunization: "Imunisasi",
         immunizations: "imunisasi",
-        deworming: "cacingan",
-        vaccine: "Vaksin",
         summaryReport: "Rangkuman laporan",
+        vaccine: "Vaksin",
         vaccines: AppLocalizations_Labels_Medical_Vaccines(
-          title: "Vaksin",
-          none: "Tidak ada vaksin sebelumnya jenis ini diberikan",
-          dateGiven: "Tanggal Mengingat",
-          certify: "Klik untuk mengesahkan tanggal",
           addDate: "Menambahkan tanggal vaksin:",
+          certify: "Klik untuk mengesahkan tanggal",
+          dateGiven: "Tanggal Mengingat",
+          none: "Tidak ada vaksin sebelumnya jenis ini diberikan",
+          title: "Vaksin",
         ),
       ),
       registration: AppLocalizations_Labels_Registration(
-        registerPatient: "Pendaftaran Pasien",
+        registerPatient: "Pendaftaran Pasien lengkap",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "Gelap",
@@ -1900,15 +1991,19 @@ class AppLocalizations {
     Locale.fromSubtags(languageCode: "ja"): AppLocalizations_Labels(
       app: AppLocalizations_Labels_App(
         chooseLanguage: "言語を選択",
-        chooseTheme: "テーマを選択します。",
+        chooseTheme: "テーマを選択してください",
         settings: "アプリの設定",
         system: "システム",
-        title: "Vigor",
+        title: AppLocalizations_Labels_App_Title(
+          title: "Vigor",
+          saluddominicana: "Salud Dominicana",
+        ),
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "キャンセル",
         changePassword: "パスワードを変更する",
         email: "Eメール",
+        login: "ログインする",
         password: "パスワード",
         resetPassword: "パスワードを再設定する",
         signIn: "サインイン",
@@ -1945,21 +2040,23 @@ class AppLocalizations {
         age: "年齢",
         allPatients: "すべての患者",
         birthDate: "誕生日",
+        birthDateError: "将来の日付にすることはできません",
+        contacts: "患者のコンタクト",
         dateofBirth: "生年月日",
         editSurvey: "編集調査",
+        familyNameError: "家族の名前を入力します。",
+        genderError: "性別を選択してください",
+        givenNameError: "他の名前を入力します。",
         mySchedule: "私のスケジュール",
+        neighborhoodError: "近所を選択してください",
         newPatient: "新しい患者",
         newSurvey: "新しい調査",
-        contacts: "患者のコンタクト",
-        relationship: "関係",
-        submitShare: "送信/共有",
-        patientInformation: "患者情報",
-        neighborhoodError: "近所を選択してください",
-        birthDateError: "将来の日付にすることはできません",
-        givenNameError: "他の名前を入力します。",
-        familyNameError: "家族の名前を入力します。",
-        relationshipError: "関係を選択してください",
         nextPage: "次のページ",
+        patient: "患者",
+        patientInformation: "患者情報",
+        relationship: "関係",
+        relationshipError: "関係を選択してください",
+        submitShare: "送信/共有",
         address: AppLocalizations_Labels_General_Address(
           city: "市",
           country: "国",
@@ -1988,16 +2085,17 @@ class AppLocalizations {
           mother: "母",
           nephew: "甥",
           niece: "姪",
+          other: "他の",
           sister: "シスター",
           son: "息子",
           title: "関係",
           uncle: "おじさん",
-          other: "他の",
         ),
         search: AppLocalizations_Labels_General_Search(
+          filter: "フィルタ",
+          patientSearch: "患者検索",
           search: "探す",
           searchName: "検索名前",
-          filter: "フィルタ",
         ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "女性",
@@ -2010,22 +2108,22 @@ class AppLocalizations {
         title: "日本語",
       ),
       medical: AppLocalizations_Labels_Medical(
+        deworming: "駆虫",
         growth: "成長",
         immunization: "免疫",
         immunizations: "予防接種",
-        deworming: "駆虫",
-        vaccine: "ワクチン",
         summaryReport: "概略報告",
+        vaccine: "ワクチン",
         vaccines: AppLocalizations_Labels_Medical_Vaccines(
-          title: "ワクチン",
-          none: "与えられたこのタイプの以前のワクチンありません",
-          dateGiven: "日付を考えます",
-          certify: "日付を証明するためにクリック",
           addDate: "ワクチンの日付を追加します。",
+          certify: "日付を証明するためにクリック",
+          dateGiven: "日付を考えます",
+          none: "与えられたこのタイプの以前のワクチンありません",
+          title: "ワクチン",
         ),
       ),
       registration: AppLocalizations_Labels_Registration(
-        registerPatient: "登録患者",
+        registerPatient: "完全な患者登録",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "闇",
@@ -2048,12 +2146,16 @@ class AppLocalizations {
         chooseTheme: "ជ្រើសស្បែក",
         settings: "ការកំណត់កម្មវិធី",
         system: "ប្រព័ន្ធ",
-        title: "Vigor",
+        title: AppLocalizations_Labels_App_Title(
+          title: "Vigor",
+          saluddominicana: "Salud Dominicana",
+        ),
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "បោះបង់",
         changePassword: "ផ្លាស់ប្តូរពាក្យសម្ងាត់",
         email: "អ៊ីម៉ែល",
+        login: "ចូល",
         password: "ការពាក្យសម្ងាត់",
         resetPassword: "ពាក្យសម្ងាត់កំណត់ឡើងវិញ",
         signIn: "ចូល",
@@ -2090,21 +2192,23 @@ class AppLocalizations {
         age: "អាយុ",
         allPatients: "អ្នកជំងឺទាំងអស់",
         birthDate: "ថ្ងៃខែ​ឆ្នាំ​កំណើត",
+        birthDateError: "មិនអាចជាកាលបរិច្ឆេទនាពេលអនាគត",
+        contacts: "ទំនាក់ទំនងអ្នកជម្ងឺ",
         dateofBirth: "ថ្ងៃខែ​ឆ្នាំ​កំណើត",
         editSurvey: "កែសម្រួលការស្ទង់មតិ",
+        familyNameError: "បញ្ចូលឈ្មោះគ្រួសារ",
+        genderError: "សូមជ្រើសយេនឌ័រ",
+        givenNameError: "បញ្ចូលឈ្មោះផ្សេងទៀត",
         mySchedule: "កាលវិភាគ​របស់​ខ្ញុំ",
+        neighborhoodError: "សូមជ្រើសសង្កាត់",
         newPatient: "ជម្ងឺថ្មី",
         newSurvey: "ការស្ទង់មតិថ្មី",
-        contacts: "ទំនាក់ទំនងអ្នកជម្ងឺ",
-        relationship: "ទំនាក់ទំនង",
-        submitShare: "ដាក់ស្នើ / ចែករំលែក",
-        patientInformation: "ពអ្នកជំងឺ",
-        neighborhoodError: "សូមជ្រើសសង្កាត់",
-        birthDateError: "មិនអាចជាកាលបរិច្ឆេទនាពេលអនាគត",
-        givenNameError: "បញ្ចូលឈ្មោះផ្សេងទៀត",
-        familyNameError: "បញ្ចូលឈ្មោះគ្រួសារ",
-        relationshipError: "សូមជ្រើសទំនាក់ទំនង",
         nextPage: "ទំ​ព​រ័​បន្ទាប់",
+        patient: "អ្នកជំងឺ",
+        patientInformation: "ពអ្នកជំងឺ",
+        relationship: "ទំនាក់ទំនង",
+        relationshipError: "សូមជ្រើសទំនាក់ទំនង",
+        submitShare: "ដាក់ស្នើ / ចែករំលែក",
         address: AppLocalizations_Labels_General_Address(
           city: "ទីក្រុង",
           country: "ប្រទេស",
@@ -2133,16 +2237,17 @@ class AppLocalizations {
           mother: "ម្តាយ",
           nephew: "ក្មួយប្រុស",
           niece: "ក្មួយស្រី",
+          other: "ផ្សេងទៀត",
           sister: "បងស្រី",
           son: "ព្រះបុត្រា",
           title: "ទំនាក់ទំនង",
           uncle: "ពូ",
-          other: "ផ្សេងទៀត",
         ),
         search: AppLocalizations_Labels_General_Search(
+          filter: "តម្រង",
+          patientSearch: "ស្វែងរកអ្នកជម្ងឺ",
           search: "ស្វែងរក",
           searchName: "ស្វែងរកឈ្មោះ",
-          filter: "តម្រង",
         ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "ស្រី",
@@ -2155,22 +2260,22 @@ class AppLocalizations {
         title: "ភាសាខ្មែរ",
       ),
       medical: AppLocalizations_Labels_Medical(
+        deworming: "Deworming",
         growth: "កំណើន",
         immunization: "ចាក់ថ្នាំបង្ការរោគ",
         immunizations: "ចាក់ថ្នាំបង្ការរោគ",
-        deworming: "Deworming",
-        vaccine: "ថ្នាំបង្ការ",
         summaryReport: "របាយការណ៍សង្ខេប",
+        vaccine: "ថ្នាំបង្ការ",
         vaccines: AppLocalizations_Labels_Medical_Vaccines(
-          title: "វ៉ាក់សាំង",
-          none: "គ្មានវ៉ាក់សាំងមុនប្រភេទនេះដែលបានផ្ដល់ឱ្យ",
-          dateGiven: "កាលបរិច្ឆេទដែលបានផ្ដល់",
-          certify: "ចុចដើម្បីបញ្ជាក់កាលបរិច្ឆេទ",
           addDate: "បន្ថែមកាលបរិច្ឆេទនៃការចាក់វ៉ាក់សាំង:",
+          certify: "ចុចដើម្បីបញ្ជាក់កាលបរិច្ឆេទ",
+          dateGiven: "កាលបរិច្ឆេទដែលបានផ្ដល់",
+          none: "គ្មានវ៉ាក់សាំងមុនប្រភេទនេះដែលបានផ្ដល់ឱ្យ",
+          title: "វ៉ាក់សាំង",
         ),
       ),
       registration: AppLocalizations_Labels_Registration(
-        registerPatient: "ជម្ងឺចុះឈ្មោះ",
+        registerPatient: "ការចុះឈ្មោះអ្នកជម្ងឺបានបញ្ចប់",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "ងងឹត",
@@ -2193,12 +2298,16 @@ class AppLocalizations {
         chooseTheme: "테마를 선택",
         settings: "앱 설정",
         system: "체계",
-        title: "Vigor",
+        title: AppLocalizations_Labels_App_Title(
+          title: "Vigor",
+          saluddominicana: "Salud Dominicana",
+        ),
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "취소",
         changePassword: "암호 변경",
         email: "이메일",
+        login: "로그인",
         password: "암호",
         resetPassword: "암호를 재설정",
         signIn: "에 서명",
@@ -2235,21 +2344,23 @@ class AppLocalizations {
         age: "나이",
         allPatients: "모든 환자",
         birthDate: "생일",
+        birthDateError: "미래의 일이 될 수 없습니다",
+        contacts: "환자 연락처",
         dateofBirth: "생년월일",
         editSurvey: "편집 설문 조사",
+        familyNameError: "가족의 이름을 입력합니다",
+        genderError: "성별을 선택하세요",
+        givenNameError: "다른 이름을 입력",
         mySchedule: "내 일정",
+        neighborhoodError: "지역을 선택하세요",
         newPatient: "새로운 환자",
         newSurvey: "새로운 설문 조사",
-        contacts: "환자 연락처",
-        relationship: "관계",
-        submitShare: "전송 / 공유",
-        patientInformation: "환자 정보",
-        neighborhoodError: "지역을 선택하세요",
-        birthDateError: "미래의 일이 될 수 없습니다",
-        givenNameError: "다른 이름을 입력",
-        familyNameError: "가족의 이름을 입력합니다",
-        relationshipError: "관계를 선택하세요",
         nextPage: "다음 페이지",
+        patient: "환자",
+        patientInformation: "환자 정보",
+        relationship: "관계",
+        relationshipError: "관계를 선택하세요",
+        submitShare: "전송 / 공유",
         address: AppLocalizations_Labels_General_Address(
           city: "시티",
           country: "국가",
@@ -2278,16 +2389,17 @@ class AppLocalizations {
           mother: "어머니",
           nephew: "조카",
           niece: "조카딸",
+          other: "다른",
           sister: "여자 형제",
           son: "아들",
           title: "관계",
           uncle: "삼촌",
-          other: "다른",
         ),
         search: AppLocalizations_Labels_General_Search(
+          filter: "필터",
+          patientSearch: "환자 검색",
           search: "검색",
           searchName: "이름으로 검색",
-          filter: "필터",
         ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "여자",
@@ -2300,22 +2412,22 @@ class AppLocalizations {
         title: "한국어",
       ),
       medical: AppLocalizations_Labels_Medical(
+        deworming: "구충제",
         growth: "성장",
         immunization: "면제",
         immunizations: "예방 접종",
-        deworming: "구충제",
-        vaccine: "백신",
         summaryReport: "요약 보고서",
+        vaccine: "백신",
         vaccines: AppLocalizations_Labels_Medical_Vaccines(
-          title: "백신",
-          none: "주어진 이러한 유형의 어떤 이전 백신 없습니다",
-          dateGiven: "날짜 감안할 때",
-          certify: "날짜를 증명하기 위해 클릭",
           addDate: "백신의 날짜를 추가 :",
+          certify: "날짜를 증명하기 위해 클릭",
+          dateGiven: "날짜 감안할 때",
+          none: "주어진 이러한 유형의 어떤 이전 백신 없습니다",
+          title: "백신",
         ),
       ),
       registration: AppLocalizations_Labels_Registration(
-        registerPatient: "등록 환자",
+        registerPatient: "전체 환자 등록",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "어두운",
@@ -2338,12 +2450,16 @@ class AppLocalizations {
         chooseTheme: "ເລືອກຫົວຂໍ້",
         settings: "Settings app",
         system: "ລະບົບ",
-        title: "Vigor",
+        title: AppLocalizations_Labels_App_Title(
+          title: "Vigor",
+          saluddominicana: "Salud Dominicana",
+        ),
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "ຍົກເລີກການ",
         changePassword: "ປ່ຽນ​ລະ​ຫັດ​ຜ່ານ",
         email: "Email",
+        login: "ເຂົ້າ​ສູ່​ລະ​ບົບ",
         password: "ລະຫັດຜ່ານ",
         resetPassword: "Reset Password",
         signIn: "ເຂົ້າ​ສູ່​ລະ​ບົບ",
@@ -2380,21 +2496,23 @@ class AppLocalizations {
         age: "ອາຍຸ",
         allPatients: "ຄົນເຈັບທັງຫມົດ",
         birthDate: "ວັນເດືອນປີເກີດ",
+        birthDateError: "ບໍ່ສາມາດທີ່ໃນອະນາຄົດ",
+        contacts: "ຕິດຕໍ່ຄົນເຈັບ",
         dateofBirth: "ວັນ​ເດືອນ​ປີ​ເກີດ",
         editSurvey: "ດັດແກ້ການສໍາຫຼວດ",
+        familyNameError: "ກະລຸນາໃສ່ນາມສະກຸນ",
+        genderError: "ກະລຸນາເລືອກບົດບາດຍິງຊາຍ",
+        givenNameError: "ກະລຸນາໃສ່ຊື່ອື່ນ",
         mySchedule: "ຕາຕະລາງຂອງຂ້າພະເຈົ້າ",
+        neighborhoodError: "ກະລຸນາເລືອກບ້ານ",
         newPatient: "ອົດທົນໃຫມ່",
         newSurvey: "ການສໍາຫຼວດໃຫມ່",
-        contacts: "ຕິດຕໍ່ຄົນເຈັບ",
-        relationship: "ຄວາມສໍາພັນ",
-        submitShare: "ຍື່ນສະເຫນີ / Share",
-        patientInformation: "ຂໍ້ມູນຜູ້ປ່ວຍ",
-        neighborhoodError: "ກະລຸນາເລືອກບ້ານ",
-        birthDateError: "ບໍ່ສາມາດທີ່ໃນອະນາຄົດ",
-        givenNameError: "ກະລຸນາໃສ່ຊື່ອື່ນ",
-        familyNameError: "ກະລຸນາໃສ່ນາມສະກຸນ",
-        relationshipError: "ກະລຸນາເລືອກສໍາພັນ",
         nextPage: "ຫນ້າຖັດໄປ",
+        patient: "ຄົນເຈັບ",
+        patientInformation: "ຂໍ້ມູນຜູ້ປ່ວຍ",
+        relationship: "ຄວາມສໍາພັນ",
+        relationshipError: "ກະລຸນາເລືອກສໍາພັນ",
+        submitShare: "ຍື່ນສະເຫນີ / Share",
         address: AppLocalizations_Labels_General_Address(
           city: "ເມືອງ",
           country: "ປະເທດ",
@@ -2423,16 +2541,17 @@ class AppLocalizations {
           mother: "ແມ່",
           nephew: "ຫລານຊາຍ",
           niece: "ຫລານສາວ",
+          other: "ອື່ນ ໆ",
           sister: "ເອື້ອຍ",
           son: "ລູກຊາຍ",
           title: "Relation",
           uncle: "ລຸງ",
-          other: "ອື່ນ ໆ",
         ),
         search: AppLocalizations_Labels_General_Search(
+          filter: "ການກັ່ນຕອງ",
+          patientSearch: "ຄົ້ນຫາຄົນເຈັບ",
           search: "ຄົ້ນຫາ",
           searchName: "ຄົ້ນຫາຊື່",
-          filter: "ການກັ່ນຕອງ",
         ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "ຍິງ",
@@ -2445,22 +2564,22 @@ class AppLocalizations {
         title: "ລາວ",
       ),
       medical: AppLocalizations_Labels_Medical(
+        deworming: "Deworming",
         growth: "ການຂະຫຍາຍຕົວ",
         immunization: "ປ້ອງກັນພະຍາດ",
         immunizations: "ພູມຕ້ານທານ",
-        deworming: "Deworming",
-        vaccine: "ສັກຢາວັກຊີນ",
         summaryReport: "ບົດລາຍງານສະຫຼຸບສັງລວມ",
+        vaccine: "ສັກຢາວັກຊີນ",
         vaccines: AppLocalizations_Labels_Medical_Vaccines(
-          title: "ວັກ​ຊີນ​ປ້ອງ​ກັນ",
-          none: "No ສັກຢາວັກຊີນທີ່ຜ່ານມາຂອງປະເພດນີ້ໄດ້ຮັບ",
-          dateGiven: "Date ເນື່ອງ",
-          certify: "ກົດເພື່ອຢັ້ງຢືນວັນ",
           addDate: "ເພີ່ມວັນສັກຢາວັກຊີນ:",
+          certify: "ກົດເພື່ອຢັ້ງຢືນວັນ",
+          dateGiven: "Date ເນື່ອງ",
+          none: "No ສັກຢາວັກຊີນທີ່ຜ່ານມາຂອງປະເພດນີ້ໄດ້ຮັບ",
+          title: "ວັກ​ຊີນ​ປ້ອງ​ກັນ",
         ),
       ),
       registration: AppLocalizations_Labels_Registration(
-        registerPatient: "ອົດທົນຫມັກສະມາຊິກ",
+        registerPatient: "ການລົງທະບຽນຂອງຄົນເຈັບສໍາເລັດ",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "ຊ້ໍາ",
@@ -2483,12 +2602,16 @@ class AppLocalizations {
         chooseTheme: "थीम निवडा",
         settings: "App सेटिंग्ज",
         system: "प्रणाली",
-        title: "Vigor",
+        title: AppLocalizations_Labels_App_Title(
+          title: "Vigor",
+          saluddominicana: "Salud Dominicana",
+        ),
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "रद्द करा",
         changePassword: "पासवर्ड बदला",
         email: "ईमेल",
+        login: "लॉग-इन",
         password: "पासवर्ड",
         resetPassword: "पासवर्ड रीसेट करा",
         signIn: "साइन इन करा",
@@ -2525,21 +2648,23 @@ class AppLocalizations {
         age: "वय",
         allPatients: "सर्व रुग्णांना",
         birthDate: "जन्मदिनांक",
+        birthDateError: "भविष्यातील तारीख असणे करू शकत नाही",
+        contacts: "रुग्णांच्या संपर्क",
         dateofBirth: "जन्म तारीख",
         editSurvey: "सर्वेक्षण संपादित करा",
+        familyNameError: "कुटुंब नाव प्रविष्ट करा",
+        genderError: "कृपया लिंग निवडा",
+        givenNameError: "इतर नावे प्रविष्ट करा",
         mySchedule: "माझे वेळापत्रक",
+        neighborhoodError: "कृपया शेजारच्या निवडा",
         newPatient: "नवीन रुग्णांच्या",
         newSurvey: "नवीन सर्वेक्षण",
-        contacts: "रुग्णांच्या संपर्क",
-        relationship: "संबंध",
-        submitShare: "सबमिट करा / शेअर",
-        patientInformation: "रुग्णांच्या माहिती",
-        neighborhoodError: "कृपया शेजारच्या निवडा",
-        birthDateError: "भविष्यातील तारीख असणे करू शकत नाही",
-        givenNameError: "इतर नावे प्रविष्ट करा",
-        familyNameError: "कुटुंब नाव प्रविष्ट करा",
-        relationshipError: "कृपया संबंध निवडा",
         nextPage: "पुढील पृष्ठ",
+        patient: "रुग्णांच्या",
+        patientInformation: "रुग्णांच्या माहिती",
+        relationship: "संबंध",
+        relationshipError: "कृपया संबंध निवडा",
+        submitShare: "सबमिट करा / शेअर",
         address: AppLocalizations_Labels_General_Address(
           city: "सिटी",
           country: "देश",
@@ -2568,16 +2693,17 @@ class AppLocalizations {
           mother: "आई",
           nephew: "भाचा",
           niece: "भाची",
+          other: "इतर",
           sister: "बहीण",
           son: "मुलगा",
           title: "नाते",
           uncle: "काका",
-          other: "इतर",
         ),
         search: AppLocalizations_Labels_General_Search(
+          filter: "फिल्टर",
+          patientSearch: "रुग्णांच्या शोध",
           search: "शोधा",
           searchName: "शोध नाव",
-          filter: "फिल्टर",
         ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "स्त्री",
@@ -2590,22 +2716,22 @@ class AppLocalizations {
         title: "मराठी",
       ),
       medical: AppLocalizations_Labels_Medical(
+        deworming: "माद्यांचे",
         growth: "वाढ",
         immunization: "लसीकरण",
         immunizations: "लसीकरण",
-        deworming: "माद्यांचे",
-        vaccine: "लस",
         summaryReport: "सारांश अहवाल",
+        vaccine: "लस",
         vaccines: AppLocalizations_Labels_Medical_Vaccines(
-          title: "लसीकरण",
-          none: "दिलेल्या या प्रकारचे कोणतेही मागील लस",
-          dateGiven: "तारीख दिले",
-          certify: "तारखा प्रमाणित करण्यासाठी क्लिक करा",
           addDate: "लस तारीख जोडा:",
+          certify: "तारखा प्रमाणित करण्यासाठी क्लिक करा",
+          dateGiven: "तारीख दिले",
+          none: "दिलेल्या या प्रकारचे कोणतेही मागील लस",
+          title: "लसीकरण",
         ),
       ),
       registration: AppLocalizations_Labels_Registration(
-        registerPatient: "नोंदणी रुग्णांच्या",
+        registerPatient: "पूर्ण रुग्णांच्या नोंदणी",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "गडद",
@@ -2628,12 +2754,16 @@ class AppLocalizations {
         chooseTheme: "विषयवस्तु रोज्न",
         settings: "अनुप्रयोग सेटिङ",
         system: "सिस्टम",
-        title: "Vigor",
+        title: AppLocalizations_Labels_App_Title(
+          title: "Vigor",
+          saluddominicana: "Salud Dominicana",
+        ),
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "रद्द",
         changePassword: "पासवर्ड परिवर्तन",
         email: "इमेल",
+        login: "लग - इन",
         password: "पासवर्ड",
         resetPassword: "पासवर्ड रिसेट",
         signIn: "साइन",
@@ -2670,21 +2800,23 @@ class AppLocalizations {
         age: "उमेर",
         allPatients: "सबै विरामी",
         birthDate: "जन्म मिति",
+        birthDateError: "भविष्य मिति हुन सक्दैन",
+        contacts: "रोगी सम्पर्क",
         dateofBirth: "जन्म मिति",
         editSurvey: "सर्वेक्षण सम्पादन",
+        familyNameError: "परिवारको नाम प्रविष्ट गर्नुहोस्",
+        genderError: "कृपया लिङ्ग चयन",
+        givenNameError: "अन्य नाम प्रविष्ट गर्नुहोस्",
         mySchedule: "मेरो तालिका",
+        neighborhoodError: "कृपया छिमेकी चयन",
         newPatient: "नयाँ रोगी",
         newSurvey: "नयाँ सर्वेक्षण",
-        contacts: "रोगी सम्पर्क",
-        relationship: "सम्बन्ध",
-        submitShare: "पेश / शेयर",
-        patientInformation: "रोगी सूचना",
-        neighborhoodError: "कृपया छिमेकी चयन",
-        birthDateError: "भविष्य मिति हुन सक्दैन",
-        givenNameError: "अन्य नाम प्रविष्ट गर्नुहोस्",
-        familyNameError: "परिवारको नाम प्रविष्ट गर्नुहोस्",
-        relationshipError: "कृपया सम्बन्ध चयन",
         nextPage: "अर्को पाना",
+        patient: "बिरामी",
+        patientInformation: "रोगी सूचना",
+        relationship: "सम्बन्ध",
+        relationshipError: "कृपया सम्बन्ध चयन",
+        submitShare: "पेश / शेयर",
         address: AppLocalizations_Labels_General_Address(
           city: "शहर",
           country: "देश",
@@ -2713,16 +2845,17 @@ class AppLocalizations {
           mother: "आमा",
           nephew: "भान्जा",
           niece: "भान्जी",
+          other: "अन्य",
           sister: "बहिनी",
           son: "छोरा",
           title: "सम्बन्ध",
           uncle: "मामा",
-          other: "अन्य",
         ),
         search: AppLocalizations_Labels_General_Search(
+          filter: "फिल्टर",
+          patientSearch: "रोगी खोज",
           search: "खोज",
           searchName: "खोज नाम",
-          filter: "फिल्टर",
         ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "महिला",
@@ -2735,22 +2868,22 @@ class AppLocalizations {
         title: "नेपाली",
       ),
       medical: AppLocalizations_Labels_Medical(
+        deworming: "Deworming",
         growth: "वृद्धि",
         immunization: "खोप",
         immunizations: "प्रतिरक्षक",
-        deworming: "Deworming",
-        vaccine: "टीका",
         summaryReport: "सारांश रिपोर्ट",
+        vaccine: "टीका",
         vaccines: AppLocalizations_Labels_Medical_Vaccines(
-          title: "औषधी",
-          none: "यस प्रकारका कुनै पनि अघिल्लो सुइहरु दिइएको",
-          dateGiven: "मिति दिइएको",
-          certify: "मिति प्रमाणित गर्न क्लिक गर्नुहोस्",
           addDate: "टीका को मिति थप्न:",
+          certify: "मिति प्रमाणित गर्न क्लिक गर्नुहोस्",
+          dateGiven: "मिति दिइएको",
+          none: "यस प्रकारका कुनै पनि अघिल्लो सुइहरु दिइएको",
+          title: "औषधी",
         ),
       ),
       registration: AppLocalizations_Labels_Registration(
-        registerPatient: "रजिस्टर रोगी",
+        registerPatient: "रोगी दर्ता पूरा",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "गाढा",
@@ -2773,12 +2906,16 @@ class AppLocalizations {
         chooseTheme: "Escolha Tema",
         settings: "Configurações do aplicativo",
         system: "Sistema",
-        title: "Vigor",
+        title: AppLocalizations_Labels_App_Title(
+          title: "Vigor",
+          saluddominicana: "Salud Dominicana",
+        ),
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "Cancelar",
         changePassword: "Mudar senha",
         email: "O email",
+        login: "Conecte-se",
         password: "Senha",
         resetPassword: "Password Reset",
         signIn: "Assinar em",
@@ -2815,21 +2952,23 @@ class AppLocalizations {
         age: "Era",
         allPatients: "Todos os pacientes",
         birthDate: "Data de nascimento",
+        birthDateError: "não pode ter data futura",
+        contacts: "paciente Contactos",
         dateofBirth: "Data de nascimento",
         editSurvey: "Editar questionário",
+        familyNameError: "Insira o nome de família",
+        genderError: "Por favor selecione um gênero",
+        givenNameError: "Introduzir outros nomes",
         mySchedule: "Meu horário",
+        neighborhoodError: "Por favor seleccione bairro",
         newPatient: "New Patient",
         newSurvey: "nova pesquisa",
-        contacts: "paciente Contactos",
-        relationship: "Relação",
-        submitShare: "Enviar / Share",
-        patientInformation: "Informação do paciente",
-        neighborhoodError: "Por favor seleccione bairro",
-        birthDateError: "não pode ter data futura",
-        givenNameError: "Introduzir outros nomes",
-        familyNameError: "Insira o nome de família",
-        relationshipError: "Por favor seleccione relacionamento",
         nextPage: "Próxima página",
+        patient: "Paciente",
+        patientInformation: "Informação do paciente",
+        relationship: "Relação",
+        relationshipError: "Por favor seleccione relacionamento",
+        submitShare: "Enviar / Share",
         address: AppLocalizations_Labels_General_Address(
           city: "Cidade",
           country: "País",
@@ -2858,16 +2997,17 @@ class AppLocalizations {
           mother: "Mãe",
           nephew: "Sobrinho",
           niece: "Sobrinha",
+          other: "De outros",
           sister: "Irmã",
           son: "Filho",
           title: "Relação",
           uncle: "Tio",
-          other: "De outros",
         ),
         search: AppLocalizations_Labels_General_Search(
+          filter: "Filtro",
+          patientSearch: "paciente Pesquisa",
           search: "Pesquisa",
           searchName: "pesquisa por nome",
-          filter: "Filtro",
         ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "Fêmea",
@@ -2880,27 +3020,27 @@ class AppLocalizations {
         title: "Português",
       ),
       medical: AppLocalizations_Labels_Medical(
+        deworming: "desparasitação",
         growth: "Crescimento",
         immunization: "Imunização",
         immunizations: "imunizações",
-        deworming: "desparasitação",
-        vaccine: "Vacina",
         summaryReport: "Relatório Resumido",
+        vaccine: "Vacina",
         vaccines: AppLocalizations_Labels_Medical_Vaccines(
-          title: "Vacinas",
-          none: "Não há vacinas anteriores deste tipo de dado",
-          dateGiven: "data Dado",
-          certify: "Clique para certificar datas",
           addDate: "Adicionar data de vacina:",
+          certify: "Clique para certificar datas",
+          dateGiven: "data Dado",
+          none: "Não há vacinas anteriores deste tipo de dado",
+          title: "Vacinas",
         ),
       ),
       registration: AppLocalizations_Labels_Registration(
-        registerPatient: "Register paciente",
+        registerPatient: "Registro completo do paciente",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "Sombrio",
         language: "Língua",
-        light: "Luz",
+        light: "Leve",
         ok: "Está bem",
         signOut: "Sair",
         system: "Sistema",
@@ -2918,12 +3058,16 @@ class AppLocalizations {
         chooseTheme: "ਥੀਮ ਚੁਣੋ",
         settings: "ਐਪ ਸੈਟਿੰਗ",
         system: "ਸਿਸਟਮ",
-        title: "Vigor",
+        title: AppLocalizations_Labels_App_Title(
+          title: "Vigor",
+          saluddominicana: "Salud Dominicana",
+        ),
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "ਰੱਦ ਕਰੋ",
         changePassword: "ਪਾਸਵਰਡ ਬਦਲੋ",
         email: "ਈ - ਮੇਲ",
+        login: "ਲਾਗਿਨ",
         password: "ਪਾਸਵਰਡ",
         resetPassword: "ਮੁੜ ਪਾਸਵਰਡ",
         signIn: "ਸਾਈਨ - ਇਨ",
@@ -2960,21 +3104,23 @@ class AppLocalizations {
         age: "ਉੁਮਰ",
         allPatients: "ਸਾਰੇ ਮਰੀਜ਼",
         birthDate: "ਜਨਮ ਮਿਤੀ",
+        birthDateError: "ਭਵਿੱਖ ਦੀ ਮਿਤੀ ਨਾ ਹੋ ਸਕਦਾ ਹੈ",
+        contacts: "ਮਰੀਜ਼ ਸੰਪਰਕ",
         dateofBirth: "ਜਨਮ ਤਾਰੀਖ",
         editSurvey: "ਸਰਵੇਖਣ ਸੋਧ",
+        familyNameError: "ਪਰਿਵਾਰ ਦਾ ਨਾਮ ਦਰਜ ਕਰੋ",
+        genderError: "ਕਿਰਪਾ ਕਰਕੇ ਲਿੰਗ ਚੁਣੋ",
+        givenNameError: "ਹੋਰ ਨਾਮ ਦਰਜ ਕਰੋ",
         mySchedule: "ਮੇਰੀ ਤਹਿ",
+        neighborhoodError: "ਕਿਰਪਾ ਕਰਕੇ ਇਲਾਕੇ ਦੀ ਚੋਣ ਕਰੋ",
         newPatient: "ਨਿਊ ਮਰੀਜ਼",
         newSurvey: "ਨਿਊ ਸਰਵੇ",
-        contacts: "ਮਰੀਜ਼ ਸੰਪਰਕ",
-        relationship: "ਰਿਸ਼ਤਾ",
-        submitShare: "ਪੇਸ਼ ਕਰੋ / share",
-        patientInformation: "ਮਰੀਜ਼ ਜਾਣਕਾਰੀ",
-        neighborhoodError: "ਕਿਰਪਾ ਕਰਕੇ ਇਲਾਕੇ ਦੀ ਚੋਣ ਕਰੋ",
-        birthDateError: "ਭਵਿੱਖ ਦੀ ਮਿਤੀ ਨਾ ਹੋ ਸਕਦਾ ਹੈ",
-        givenNameError: "ਹੋਰ ਨਾਮ ਦਰਜ ਕਰੋ",
-        familyNameError: "ਪਰਿਵਾਰ ਦਾ ਨਾਮ ਦਰਜ ਕਰੋ",
-        relationshipError: "ਕਿਰਪਾ ਕਰਕੇ ਰਿਸ਼ਤਾ ਦੀ ਚੋਣ ਕਰੋ",
         nextPage: "ਅਗਲੇ ਸਫ਼ੇ",
+        patient: "ਮਰੀਜ਼",
+        patientInformation: "ਮਰੀਜ਼ ਜਾਣਕਾਰੀ",
+        relationship: "ਰਿਸ਼ਤਾ",
+        relationshipError: "ਕਿਰਪਾ ਕਰਕੇ ਰਿਸ਼ਤਾ ਦੀ ਚੋਣ ਕਰੋ",
+        submitShare: "ਪੇਸ਼ ਕਰੋ / share",
         address: AppLocalizations_Labels_General_Address(
           city: "ਸਿਟੀ",
           country: "ਦੇਸ਼",
@@ -3003,16 +3149,17 @@ class AppLocalizations {
           mother: "ਮਾਤਾ",
           nephew: "ਭਤੀਜੇ",
           niece: "ਭਤੀਜੀ",
+          other: "ਹੋਰ",
           sister: "ਭੈਣ",
           son: "ਪੁੱਤਰ",
           title: "ਸਬੰਧ",
           uncle: "ਅੰਕਲ",
-          other: "ਹੋਰ",
         ),
         search: AppLocalizations_Labels_General_Search(
+          filter: "ਫਿਲਟਰ",
+          patientSearch: "ਮਰੀਜ਼ ਦੀ ਖੋਜ ਕਰੋ",
           search: "ਖੋਜ",
           searchName: "ਖੋਜ ਦਾ ਨਾਮ",
-          filter: "ਫਿਲਟਰ",
         ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "ਔਰਤ",
@@ -3025,22 +3172,22 @@ class AppLocalizations {
         title: "ਪੰਜਾਬੀ ਦੇ",
       ),
       medical: AppLocalizations_Labels_Medical(
+        deworming: "ਸ਼ੈੱਡ",
         growth: "ਵਿਕਾਸ",
         immunization: "ਟੀਕਾਕਰਣ",
         immunizations: "ਟੀਕਾਕਰਣ",
-        deworming: "ਸ਼ੈੱਡ",
-        vaccine: "ਵੈਕਸੀਨ",
         summaryReport: "ਸਮਰੀ ਰਿਪੋਰਟ",
+        vaccine: "ਵੈਕਸੀਨ",
         vaccines: AppLocalizations_Labels_Medical_Vaccines(
-          title: "ਟੀਕੇ",
-          none: "ਇਸ ਕਿਸਮ ਦੀ ਕੋਈ ਪਿਛਲੇ ਟੀਕੇ ਦਿੱਤੇ ਗਏ",
-          dateGiven: "ਮਿਤੀ",
-          certify: "ਦਰਜ ਤਸਦੀਕ ਕਰਨ ਲਈ ਕਲਿੱਕ ਕਰੋ",
           addDate: "ਵੈਕਸੀਨ ਦੀ ਮਿਤੀ ਜੋੜੋ:",
+          certify: "ਦਰਜ ਤਸਦੀਕ ਕਰਨ ਲਈ ਕਲਿੱਕ ਕਰੋ",
+          dateGiven: "ਮਿਤੀ",
+          none: "ਇਸ ਕਿਸਮ ਦੀ ਕੋਈ ਪਿਛਲੇ ਟੀਕੇ ਦਿੱਤੇ ਗਏ",
+          title: "ਟੀਕੇ",
         ),
       ),
       registration: AppLocalizations_Labels_Registration(
-        registerPatient: "ਰਜਿਸਟਰ ਮਰੀਜ਼",
+        registerPatient: "ਮੁਕੰਮਲ ਮਰੀਜ਼ ਰਜਿਸਟਰੇਸ਼ਨ",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "ਹਨੇਰ",
@@ -3063,12 +3210,16 @@ class AppLocalizations {
         chooseTheme: "Dooro Theme",
         settings: "app Settings",
         system: "System",
-        title: "Vigor",
+        title: AppLocalizations_Labels_App_Title(
+          title: "Vigor",
+          saluddominicana: "Salud Dominicana",
+        ),
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "Jooji",
         changePassword: "Badalida Lambarka sirta ah",
         email: "email",
+        login: "login",
         password: "password",
         resetPassword: "Password keddibna",
         signIn: "Gal In",
@@ -3105,21 +3256,23 @@ class AppLocalizations {
         age: "Age",
         allPatients: "All Bukaanka",
         birthDate: "Taariiqda dhalasha",
+        birthDateError: "ma noqon karo taariikhda mustaqbalka",
+        contacts: "Nala Xiriir bukaanka",
         dateofBirth: "Taariikhda Dhalashada",
         editSurvey: "edit Survey",
+        familyNameError: "Ku qor magaca qoyska",
+        genderError: "Fadlan dooro jinsiga",
+        givenNameError: "Ku qor magacyada kale",
         mySchedule: "My Schedule",
+        neighborhoodError: "Fadlan dooro xaafadda",
         newPatient: "bukaanka New",
         newSurvey: "New Survey",
-        contacts: "Nala Xiriir bukaanka",
-        relationship: "xiriirka",
-        submitShare: "Gudbi / Share",
-        patientInformation: "Macluumaadka bukaanka",
-        neighborhoodError: "Fadlan dooro xaafadda",
-        birthDateError: "ma noqon karo taariikhda mustaqbalka",
-        givenNameError: "Ku qor magacyada kale",
-        familyNameError: "Ku qor magaca qoyska",
-        relationshipError: "Fadlan dooro xiriir",
         nextPage: "Next Page",
+        patient: "bukaanka",
+        patientInformation: "Macluumaadka bukaanka",
+        relationship: "xiriirka",
+        relationshipError: "Fadlan dooro xiriir",
+        submitShare: "Gudbi / Share",
         address: AppLocalizations_Labels_General_Address(
           city: "City",
           country: "Country",
@@ -3148,16 +3301,17 @@ class AppLocalizations {
           mother: "Hooyo",
           nephew: "adeer",
           niece: "walaasha",
+          other: "kale",
           sister: "Sister",
           son: "Wiilka",
           title: "Xiriirka",
           uncle: "adeer",
-          other: "kale",
         ),
         search: AppLocalizations_Labels_General_Search(
+          filter: "filter",
+          patientSearch: "Search bukaanka",
           search: "Raadi",
           searchName: "Search Name",
-          filter: "filter",
         ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "Dheddig",
@@ -3170,22 +3324,22 @@ class AppLocalizations {
         title: "Soomaali",
       ),
       medical: AppLocalizations_Labels_Medical(
+        deworming: "gooryaan",
         growth: "Kobaca",
         immunization: "Talaalka",
         immunizations: "tallaalada",
-        deworming: "gooryaan",
-        vaccine: "tallaalka",
         summaryReport: "Warbixinta Kooban",
+        vaccine: "tallaalka",
         vaccines: AppLocalizations_Labels_Medical_Vaccines(
-          title: "Talaalo",
-          none: "No tallaal hore oo noocan ah la siiyo",
-          dateGiven: "Taariikhda Marka la eego",
-          certify: "Guji si aad u cadeynayaa taariikhaha",
           addDate: "Ku dar taariikhda tallaalka:",
+          certify: "Guji si aad u cadeynayaa taariikhaha",
+          dateGiven: "Taariikhda Marka la eego",
+          none: "No tallaal hore oo noocan ah la siiyo",
+          title: "Talaalo",
         ),
       ),
       registration: AppLocalizations_Labels_Registration(
-        registerPatient: "Register bukaanka",
+        registerPatient: "Diiwaangelinta Bukaanka Buuxi",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "Dark",
@@ -3208,12 +3362,16 @@ class AppLocalizations {
         chooseTheme: "Chagua Theme",
         settings: "programu ya Mipangilio",
         system: "Mfumo",
-        title: "Vigor",
+        title: AppLocalizations_Labels_App_Title(
+          title: "Vigor",
+          saluddominicana: "Salud Dominicana",
+        ),
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "kufuta",
         changePassword: "Badilisha neno la siri",
         email: "Barua pepe",
+        login: "Ingia",
         password: "password",
         resetPassword: "Rudisha siri",
         signIn: "Weka sahihi",
@@ -3250,21 +3408,23 @@ class AppLocalizations {
         age: "umri",
         allPatients: "Wagonjwa wote",
         birthDate: "Tarehe ya kuzaliwa",
+        birthDateError: "Haiwezi kuwa siku za tarehe",
+        contacts: "Mawasiliano mgonjwa",
         dateofBirth: "Tarehe ya kuzaliwa",
         editSurvey: "Hariri Survey",
+        familyNameError: "Weka jina la familia",
+        genderError: "Tafadhali chagua jinsia",
+        givenNameError: "Andika majina mengine",
         mySchedule: "Ratiba yangu",
+        neighborhoodError: "Tafadhali chagua kitongoji",
         newPatient: "mgonjwa New",
         newSurvey: "Survey New",
-        contacts: "Mawasiliano mgonjwa",
-        relationship: "uhusiano",
-        submitShare: "Wasilisha / Shiriki",
-        patientInformation: "Taarifa mgonjwa",
-        neighborhoodError: "Tafadhali chagua kitongoji",
-        birthDateError: "Haiwezi kuwa siku za tarehe",
-        givenNameError: "Andika majina mengine",
-        familyNameError: "Weka jina la familia",
-        relationshipError: "Tafadhali chagua uhusiano",
         nextPage: "Ukurasa unaofuata",
+        patient: "mgonjwa",
+        patientInformation: "Taarifa mgonjwa",
+        relationship: "uhusiano",
+        relationshipError: "Tafadhali chagua uhusiano",
+        submitShare: "Wasilisha / Shiriki",
         address: AppLocalizations_Labels_General_Address(
           city: "City",
           country: "Nchi",
@@ -3293,16 +3453,17 @@ class AppLocalizations {
           mother: "mama",
           nephew: "mpwa",
           niece: "mpwa",
+          other: "Nyingine",
           sister: "dada",
           son: "mwana",
           title: "uhusiano",
           uncle: "Uncle",
-          other: "Nyingine",
         ),
         search: AppLocalizations_Labels_General_Search(
+          filter: "filter",
+          patientSearch: "mgonjwa Search",
           search: "Tafuta",
           searchName: "Search Jina",
-          filter: "filter",
         ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "mwanamke",
@@ -3315,22 +3476,22 @@ class AppLocalizations {
         title: "Kiswahili",
       ),
       medical: AppLocalizations_Labels_Medical(
+        deworming: "deworming",
         growth: "ukuaji",
         immunization: "Chanjo",
         immunizations: "chanjo",
-        deworming: "deworming",
-        vaccine: "chanjo",
         summaryReport: "Ripoti ya muhtasari",
+        vaccine: "chanjo",
         vaccines: AppLocalizations_Labels_Medical_Vaccines(
-          title: "Chanjo",
-          none: "Hakuna chanjo ya awali ya aina hii kutokana na",
-          dateGiven: "tarehe Kutokana",
-          certify: "Bofya ili kuthibitisha tarehe",
           addDate: "Ongeza tarehe ya chanjo:",
+          certify: "Bofya ili kuthibitisha tarehe",
+          dateGiven: "tarehe Kutokana",
+          none: "Hakuna chanjo ya awali ya aina hii kutokana na",
+          title: "Chanjo",
         ),
       ),
       registration: AppLocalizations_Labels_Registration(
-        registerPatient: "Daftari mgonjwa",
+        registerPatient: "Complete Mgonjwa Usajili",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "Dark",
@@ -3353,12 +3514,16 @@ class AppLocalizations {
         chooseTheme: "Pumili ng Theme",
         settings: "Mga Setting ng app",
         system: "sistema",
-        title: "Vigor",
+        title: AppLocalizations_Labels_App_Title(
+          title: "Vigor",
+          saluddominicana: "Salud Dominicana",
+        ),
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "kanselahin",
         changePassword: "Palitan ANG password",
         email: "email",
+        login: "Mag log in",
         password: "password",
         resetPassword: "I-reset ang Password",
         signIn: "Mag-sign in",
@@ -3395,21 +3560,23 @@ class AppLocalizations {
         age: "edad",
         allPatients: "Ang lahat ng mga pasyente",
         birthDate: "Araw ng kapanganakan",
+        birthDateError: "Hindi maaaring maging hinaharap na petsa",
+        contacts: "pasyente Contact Lens",
         dateofBirth: "Araw ng kapanganakan",
         editSurvey: "I-edit ang Survey",
+        familyNameError: "Ipasok ang pangalan ng pamilya",
+        genderError: "Mangyaring pumili ng kasarian",
+        givenNameError: "Ipasok ang iba pang mga pangalan",
         mySchedule: "Aking Talaan",
+        neighborhoodError: "Mangyaring piliin ang kapitbahayan",
         newPatient: "bagong Pasyente",
         newSurvey: "bagong Survey",
-        contacts: "pasyente Contact Lens",
-        relationship: "Relasyon",
-        submitShare: "Isumite / Share",
-        patientInformation: "pasyente Impormasyon",
-        neighborhoodError: "Mangyaring piliin ang kapitbahayan",
-        birthDateError: "Hindi maaaring maging hinaharap na petsa",
-        givenNameError: "Ipasok ang iba pang mga pangalan",
-        familyNameError: "Ipasok ang pangalan ng pamilya",
-        relationshipError: "Mangyaring pumili relasyon",
         nextPage: "Susunod na pahina",
+        patient: "pasyente",
+        patientInformation: "pasyente Impormasyon",
+        relationship: "Relasyon",
+        relationshipError: "Mangyaring pumili relasyon",
+        submitShare: "Isumite / Share",
         address: AppLocalizations_Labels_General_Address(
           city: "lungsod",
           country: "bansa",
@@ -3438,16 +3605,17 @@ class AppLocalizations {
           mother: "ina",
           nephew: "pamangking lalaki",
           niece: "pamangking babae",
+          other: "iba",
           sister: "Ate",
           son: "anak",
           title: "kaugnayan",
           uncle: "Tiyuhin",
-          other: "iba",
         ),
         search: AppLocalizations_Labels_General_Search(
+          filter: "Filter",
+          patientSearch: "pasyente Paghahanap",
           search: "Hanapan",
           searchName: "Search Pangalan",
-          filter: "Filter",
         ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "babae",
@@ -3460,22 +3628,22 @@ class AppLocalizations {
         title: "Tagalog",
       ),
       medical: AppLocalizations_Labels_Medical(
+        deworming: "deworming",
         growth: "paglaki",
         immunization: "pagbibigay ng kabal",
         immunizations: "Imunisasyon",
-        deworming: "deworming",
-        vaccine: "bakuna",
         summaryReport: "Buod ng Ulat",
+        vaccine: "bakuna",
         vaccines: AppLocalizations_Labels_Medical_Vaccines(
-          title: "Mga bakuna",
-          none: "Walang nakaraang bakuna na may ganitong uri na ibinigay",
-          dateGiven: "Petsa Given",
-          certify: "I-click upang patunayan petsa",
           addDate: "Magdagdag ng petsa ng bakuna:",
+          certify: "I-click upang patunayan petsa",
+          dateGiven: "Petsa Given",
+          none: "Walang nakaraang bakuna na may ganitong uri na ibinigay",
+          title: "Mga bakuna",
         ),
       ),
       registration: AppLocalizations_Labels_Registration(
-        registerPatient: "Magrehistro Pasyente",
+        registerPatient: "Kumpleto Registration Pasyente",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "madilim",
@@ -3498,12 +3666,16 @@ class AppLocalizations {
         chooseTheme: "กรุณาเลือกธีม",
         settings: "การตั้งค่า App",
         system: "ระบบ",
-        title: "Vigor",
+        title: AppLocalizations_Labels_App_Title(
+          title: "Vigor",
+          saluddominicana: "Salud Dominicana",
+        ),
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "ยกเลิก",
         changePassword: "เปลี่ยนรหัสผ่าน",
         email: "อีเมล์",
+        login: "เข้าสู่ระบบ",
         password: "รหัสผ่าน",
         resetPassword: "รีเซ็ตรหัสผ่าน",
         signIn: "เข้าสู่ระบบ",
@@ -3540,21 +3712,23 @@ class AppLocalizations {
         age: "อายุ",
         allPatients: "ผู้ป่วยทั้งหมด",
         birthDate: "วันที่เกิด",
+        birthDateError: "ไม่สามารถเป็นวันที่ในอนาคต",
+        contacts: "รายชื่อผู้ป่วย",
         dateofBirth: "วันเกิด",
         editSurvey: "แก้ไขการสำรวจ",
+        familyNameError: "ใส่ชื่อครอบครัว",
+        genderError: "กรุณาเลือกเพศ",
+        givenNameError: "ใส่ชื่ออื่น ๆ",
         mySchedule: "ตารางของฉัน",
+        neighborhoodError: "กรุณาเลือกเขต",
         newPatient: "ผู้ป่วยใหม่",
         newSurvey: "การสำรวจใหม่",
-        contacts: "รายชื่อผู้ป่วย",
-        relationship: "ความสัมพันธ์",
-        submitShare: "ส่ง / หุ้น",
-        patientInformation: "ข้อมูลสำหรับผู้ป่วย",
-        neighborhoodError: "กรุณาเลือกเขต",
-        birthDateError: "ไม่สามารถเป็นวันที่ในอนาคต",
-        givenNameError: "ใส่ชื่ออื่น ๆ",
-        familyNameError: "ใส่ชื่อครอบครัว",
-        relationshipError: "กรุณาเลือกความสัมพันธ์",
         nextPage: "หน้าต่อไป",
+        patient: "อดทน",
+        patientInformation: "ข้อมูลสำหรับผู้ป่วย",
+        relationship: "ความสัมพันธ์",
+        relationshipError: "กรุณาเลือกความสัมพันธ์",
+        submitShare: "ส่ง / หุ้น",
         address: AppLocalizations_Labels_General_Address(
           city: "เมือง",
           country: "ประเทศ",
@@ -3583,16 +3757,17 @@ class AppLocalizations {
           mother: "แม่",
           nephew: "หลานชาย",
           niece: "หลานสาว",
+          other: "อื่น ๆ",
           sister: "น้องสาว",
           son: "ลูกชาย",
           title: "ความสัมพันธ์",
           uncle: "ลุง",
-          other: "อื่น ๆ",
         ),
         search: AppLocalizations_Labels_General_Search(
+          filter: "กรอง",
+          patientSearch: "ค้นหาผู้ป่วย",
           search: "ค้นหา",
           searchName: "ค้นหาชื่อ",
-          filter: "กรอง",
         ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "หญิง",
@@ -3605,22 +3780,22 @@ class AppLocalizations {
         title: "ไทย",
       ),
       medical: AppLocalizations_Labels_Medical(
+        deworming: "การถ่ายพยาธิ",
         growth: "การเจริญเติบโต",
         immunization: "การทำให้รอดจาก",
         immunizations: "การฉีดวัคซีน",
-        deworming: "การถ่ายพยาธิ",
-        vaccine: "วัคซีน",
         summaryReport: "รายงานสรุป",
+        vaccine: "วัคซีน",
         vaccines: AppLocalizations_Labels_Medical_Vaccines(
-          title: "วัคซีน",
-          none: "ไม่มีวัคซีนก่อนหน้าประเภทนี้ได้รับ",
-          dateGiven: "วันที่ที่กำหนด",
-          certify: "คลิ๊กเพื่อรับรองวัน",
           addDate: "เพิ่มวันวัคซีน:",
+          certify: "คลิ๊กเพื่อรับรองวัน",
+          dateGiven: "วันที่ที่กำหนด",
+          none: "ไม่มีวัคซีนก่อนหน้าประเภทนี้ได้รับ",
+          title: "วัคซีน",
         ),
       ),
       registration: AppLocalizations_Labels_Registration(
-        registerPatient: "ผู้ป่วยที่ลงทะเบียน",
+        registerPatient: "ลงทะเบียนผู้ป่วยที่สมบูรณ์",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "มืด",
@@ -3643,12 +3818,16 @@ class AppLocalizations {
         chooseTheme: "Mavzuni tanlash",
         settings: "App Sozlamalar",
         system: "tizim",
-        title: "Vigor",
+        title: AppLocalizations_Labels_App_Title(
+          title: "Vigor",
+          saluddominicana: "Salud Dominicana",
+        ),
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "Bekor qilish",
         changePassword: "Kalit so'zni o'zgartirish",
         email: "Email",
+        login: "Kirish",
         password: "parol",
         resetPassword: "Reset Parol",
         signIn: "Tizimga kirish",
@@ -3685,21 +3864,23 @@ class AppLocalizations {
         age: "yosh",
         allPatients: "barcha bemorlar",
         birthDate: "Tug'ilgan sana",
+        birthDateError: "kelajakda sana bo'lishi mumkin emas",
+        contacts: "Bemor Aloqa",
         dateofBirth: "Tug'ilgan sana",
         editSurvey: "Edit Survey",
+        familyNameError: "oila nomini kiriting",
+        genderError: "Jinsni tanlang",
+        givenNameError: "Boshqa nomlari kiriting",
         mySchedule: "Mening jadvali",
+        neighborhoodError: "mahalla tanlang Iltimos,",
         newPatient: "Yangi kasal",
         newSurvey: "Yangi tadqiqot",
-        contacts: "Bemor Aloqa",
-        relationship: "munosabatlar",
-        submitShare: "Submit / Share",
-        patientInformation: "Bemor Axborot",
-        neighborhoodError: "mahalla tanlang Iltimos,",
-        birthDateError: "kelajakda sana bo'lishi mumkin emas",
-        givenNameError: "Boshqa nomlari kiriting",
-        familyNameError: "oila nomini kiriting",
-        relationshipError: "munosabatlarni tanlang Iltimos,",
         nextPage: "Keyingi sahifa",
+        patient: "kasal",
+        patientInformation: "Bemor Axborot",
+        relationship: "munosabatlar",
+        relationshipError: "munosabatlarni tanlang Iltimos,",
+        submitShare: "Submit / Share",
         address: AppLocalizations_Labels_General_Address(
           city: "shahar",
           country: "mamlakat",
@@ -3728,16 +3909,17 @@ class AppLocalizations {
           mother: "Ona",
           nephew: "jiyan",
           niece: "jiyan",
+          other: "boshqa",
           sister: "singil",
           son: "o'g'il",
           title: "qarindosh",
           uncle: "Tog'a",
-          other: "boshqa",
         ),
         search: AppLocalizations_Labels_General_Search(
+          filter: "filter",
+          patientSearch: "Bemor Qidiruv",
           search: "Qidirmoq",
           searchName: "Qidiruv nomi",
-          filter: "filter",
         ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "ayol",
@@ -3750,22 +3932,22 @@ class AppLocalizations {
         title: "O'zbekiston",
       ),
       medical: AppLocalizations_Labels_Medical(
+        deworming: "degelmintizatsiya,",
         growth: "o'sish",
         immunization: "emlash",
         immunizations: "emlash",
-        deworming: "degelmintizatsiya,",
-        vaccine: "vaktsina",
         summaryReport: "Xulosa hisoboti",
+        vaccine: "vaktsina",
         vaccines: AppLocalizations_Labels_Medical_Vaccines(
-          title: "Vaksinalar",
-          none: "berilgan Ushbu turdagi No oldingi vaksinalar",
-          dateGiven: "Sana hisobga",
-          certify: "xurmo tasdiqlash uchun bosing",
           addDate: "emlash sana qo'shish:",
+          certify: "xurmo tasdiqlash uchun bosing",
+          dateGiven: "Sana hisobga",
+          none: "berilgan Ushbu turdagi No oldingi vaksinalar",
+          title: "Vaksinalar",
         ),
       ),
       registration: AppLocalizations_Labels_Registration(
-        registerPatient: "Ro'yxatdan o'tish Bemor",
+        registerPatient: "To'liq bemor Ro'yxatdan",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "Dark",
@@ -3788,12 +3970,16 @@ class AppLocalizations {
         chooseTheme: "Chọn Theme",
         settings: "App Cài đặt",
         system: "hệ thống",
-        title: "Vigor",
+        title: AppLocalizations_Labels_App_Title(
+          title: "Vigor",
+          saluddominicana: "Salud Dominicana",
+        ),
       ),
       auth: AppLocalizations_Labels_Auth(
         cancel: "hủy bỏ",
         changePassword: "Đổi mật khẩu",
         email: "E-mail",
+        login: "Đăng nhập",
         password: "Mật khẩu",
         resetPassword: "Đặt lại mật khẩu",
         signIn: "Đăng nhập",
@@ -3830,21 +4016,23 @@ class AppLocalizations {
         age: "Tuổi tác",
         allPatients: "Tất cả các bệnh nhân",
         birthDate: "Ngày sinh",
+        birthDateError: "Không thể ngày trong tương lai",
+        contacts: "bệnh nhân Liên hệ",
         dateofBirth: "Ngày sinh",
         editSurvey: "Sửa Khảo sát",
+        familyNameError: "Nhập tên gia đình",
+        genderError: "Vui lòng chọn giới tính",
+        givenNameError: "Nhập tên khác",
         mySchedule: "Thời gian biểu của tôi",
+        neighborhoodError: "Vui lòng chọn khu phố",
         newPatient: "Bệnh nhân mới",
         newSurvey: "Khảo sát mới",
-        contacts: "bệnh nhân Liên hệ",
-        relationship: "Mối quan hệ",
-        submitShare: "Gửi / Chia sẻ",
-        patientInformation: "Thông tin bệnh nhân",
-        neighborhoodError: "Vui lòng chọn khu phố",
-        birthDateError: "Không thể ngày trong tương lai",
-        givenNameError: "Nhập tên khác",
-        familyNameError: "Nhập tên gia đình",
-        relationshipError: "Vui lòng chọn mối quan hệ",
         nextPage: "Trang tiếp theo",
+        patient: "Kiên nhẫn",
+        patientInformation: "Thông tin bệnh nhân",
+        relationship: "Mối quan hệ",
+        relationshipError: "Vui lòng chọn mối quan hệ",
+        submitShare: "Gửi / Chia sẻ",
         address: AppLocalizations_Labels_General_Address(
           city: "thành phố",
           country: "Quốc gia",
@@ -3873,16 +4061,17 @@ class AppLocalizations {
           mother: "Mẹ",
           nephew: "Cháu trai",
           niece: "cháu gái",
+          other: "khác",
           sister: "Em gái",
           son: "Con trai",
           title: "Quan hệ",
           uncle: "Chú",
-          other: "khác",
         ),
         search: AppLocalizations_Labels_General_Search(
+          filter: "Lọc",
+          patientSearch: "bệnh nhân Tìm kiếm",
           search: "Tìm kiếm",
           searchName: "Tim kiêm tên",
-          filter: "Lọc",
         ),
         sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
           female: "Giống cái",
@@ -3895,22 +4084,22 @@ class AppLocalizations {
         title: "Tiếng Việt",
       ),
       medical: AppLocalizations_Labels_Medical(
+        deworming: "tẩy giun",
         growth: "sự phát triển",
         immunization: "Tiêm chủng",
         immunizations: "chích ngừa",
-        deworming: "tẩy giun",
-        vaccine: "vắc-xin",
         summaryReport: "Báo cáo tổng hợp",
+        vaccine: "vắc-xin",
         vaccines: AppLocalizations_Labels_Medical_Vaccines(
-          title: "Vắc-xin",
-          none: "Không loại vắc-xin trước đó thuộc loại này được",
-          dateGiven: "ngày Với",
-          certify: "Nhấn vào đây để xác nhận ngày",
           addDate: "Thêm ngày vắc-xin:",
+          certify: "Nhấn vào đây để xác nhận ngày",
+          dateGiven: "ngày Với",
+          none: "Không loại vắc-xin trước đó thuộc loại này được",
+          title: "Vắc-xin",
         ),
       ),
       registration: AppLocalizations_Labels_Registration(
-        registerPatient: "Đăng ký bệnh nhân",
+        registerPatient: "Hoàn thành đăng ký bệnh nhân",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "Tối",
@@ -3935,6 +4124,25 @@ class AppLocalizations {
       Localizations.of<AppLocalizations>(context, AppLocalizations)?.labels;
 }
 
+class AppLocalizations_Labels_App_Title {
+  const AppLocalizations_Labels_App_Title({this.title, this.saluddominicana});
+
+  final String title;
+
+  final String saluddominicana;
+
+  String getByKey(String key) {
+    switch (key) {
+      case 'title':
+        return title;
+      case 'saluddominicana':
+        return saluddominicana;
+      default:
+        return '';
+    }
+  }
+}
+
 class AppLocalizations_Labels_App {
   const AppLocalizations_Labels_App(
       {this.chooseLanguage,
@@ -3951,7 +4159,7 @@ class AppLocalizations_Labels_App {
 
   final String system;
 
-  final String title;
+  final AppLocalizations_Labels_App_Title title;
 
   String getByKey(String key) {
     switch (key) {
@@ -3963,8 +4171,6 @@ class AppLocalizations_Labels_App {
         return settings;
       case 'system':
         return system;
-      case 'title':
-        return title;
       default:
         return '';
     }
@@ -3976,6 +4182,7 @@ class AppLocalizations_Labels_Auth {
       {this.cancel,
       this.changePassword,
       this.email,
+      this.login,
       this.password,
       this.resetPassword,
       this.signIn,
@@ -3988,6 +4195,8 @@ class AppLocalizations_Labels_Auth {
   final String changePassword;
 
   final String email;
+
+  final String login;
 
   final String password;
 
@@ -4009,6 +4218,8 @@ class AppLocalizations_Labels_Auth {
         return changePassword;
       case 'email':
         return email;
+      case 'login':
+        return login;
       case 'password':
         return password;
       case 'resetPassword':
@@ -4262,11 +4473,11 @@ class AppLocalizations_Labels_General_Relation {
       this.mother,
       this.nephew,
       this.niece,
+      this.other,
       this.sister,
       this.son,
       this.title,
-      this.uncle,
-      this.other});
+      this.uncle});
 
   final String aunt;
 
@@ -4286,6 +4497,8 @@ class AppLocalizations_Labels_General_Relation {
 
   final String niece;
 
+  final String other;
+
   final String sister;
 
   final String son;
@@ -4293,8 +4506,6 @@ class AppLocalizations_Labels_General_Relation {
   final String title;
 
   final String uncle;
-
-  final String other;
 
   String getByKey(String key) {
     switch (key) {
@@ -4316,6 +4527,8 @@ class AppLocalizations_Labels_General_Relation {
         return nephew;
       case 'niece':
         return niece;
+      case 'other':
+        return other;
       case 'sister':
         return sister;
       case 'son':
@@ -4324,8 +4537,6 @@ class AppLocalizations_Labels_General_Relation {
         return title;
       case 'uncle':
         return uncle;
-      case 'other':
-        return other;
       default:
         return '';
     }
@@ -4334,22 +4545,26 @@ class AppLocalizations_Labels_General_Relation {
 
 class AppLocalizations_Labels_General_Search {
   const AppLocalizations_Labels_General_Search(
-      {this.search, this.searchName, this.filter});
+      {this.filter, this.patientSearch, this.search, this.searchName});
+
+  final String filter;
+
+  final String patientSearch;
 
   final String search;
 
   final String searchName;
 
-  final String filter;
-
   String getByKey(String key) {
     switch (key) {
+      case 'filter':
+        return filter;
+      case 'patientSearch':
+        return patientSearch;
       case 'search':
         return search;
       case 'searchName':
         return searchName;
-      case 'filter':
-        return filter;
       default:
         return '';
     }
@@ -4385,21 +4600,23 @@ class AppLocalizations_Labels_General {
       {this.age,
       this.allPatients,
       this.birthDate,
+      this.birthDateError,
+      this.contacts,
       this.dateofBirth,
       this.editSurvey,
+      this.familyNameError,
+      this.genderError,
+      this.givenNameError,
       this.mySchedule,
+      this.neighborhoodError,
       this.newPatient,
       this.newSurvey,
-      this.contacts,
-      this.relationship,
-      this.submitShare,
-      this.patientInformation,
-      this.neighborhoodError,
-      this.birthDateError,
-      this.givenNameError,
-      this.familyNameError,
-      this.relationshipError,
       this.nextPage,
+      this.patient,
+      this.patientInformation,
+      this.relationship,
+      this.relationshipError,
+      this.submitShare,
       this.address,
       this.name,
       this.relation,
@@ -4412,35 +4629,39 @@ class AppLocalizations_Labels_General {
 
   final String birthDate;
 
+  final String birthDateError;
+
+  final String contacts;
+
   final String dateofBirth;
 
   final String editSurvey;
 
+  final String familyNameError;
+
+  final String genderError;
+
+  final String givenNameError;
+
   final String mySchedule;
+
+  final String neighborhoodError;
 
   final String newPatient;
 
   final String newSurvey;
 
-  final String contacts;
+  final String nextPage;
 
-  final String relationship;
-
-  final String submitShare;
+  final String patient;
 
   final String patientInformation;
 
-  final String neighborhoodError;
-
-  final String birthDateError;
-
-  final String givenNameError;
-
-  final String familyNameError;
+  final String relationship;
 
   final String relationshipError;
 
-  final String nextPage;
+  final String submitShare;
 
   final AppLocalizations_Labels_General_Address address;
 
@@ -4460,36 +4681,40 @@ class AppLocalizations_Labels_General {
         return allPatients;
       case 'birthDate':
         return birthDate;
+      case 'birthDateError':
+        return birthDateError;
+      case 'contacts':
+        return contacts;
       case 'dateofBirth':
         return dateofBirth;
       case 'editSurvey':
         return editSurvey;
+      case 'familyNameError':
+        return familyNameError;
+      case 'genderError':
+        return genderError;
+      case 'givenNameError':
+        return givenNameError;
       case 'mySchedule':
         return mySchedule;
+      case 'neighborhoodError':
+        return neighborhoodError;
       case 'newPatient':
         return newPatient;
       case 'newSurvey':
         return newSurvey;
-      case 'contacts':
-        return contacts;
-      case 'relationship':
-        return relationship;
-      case 'submitShare':
-        return submitShare;
-      case 'patientInformation':
-        return patientInformation;
-      case 'neighborhoodError':
-        return neighborhoodError;
-      case 'birthDateError':
-        return birthDateError;
-      case 'givenNameError':
-        return givenNameError;
-      case 'familyNameError':
-        return familyNameError;
-      case 'relationshipError':
-        return relationshipError;
       case 'nextPage':
         return nextPage;
+      case 'patient':
+        return patient;
+      case 'patientInformation':
+        return patientInformation;
+      case 'relationship':
+        return relationship;
+      case 'relationshipError':
+        return relationshipError;
+      case 'submitShare':
+        return submitShare;
       default:
         return '';
     }
@@ -4517,30 +4742,30 @@ class AppLocalizations_Labels_Language {
 
 class AppLocalizations_Labels_Medical_Vaccines {
   const AppLocalizations_Labels_Medical_Vaccines(
-      {this.title, this.none, this.dateGiven, this.certify, this.addDate});
-
-  final String title;
-
-  final String none;
-
-  final String dateGiven;
-
-  final String certify;
+      {this.addDate, this.certify, this.dateGiven, this.none, this.title});
 
   final String addDate;
 
+  final String certify;
+
+  final String dateGiven;
+
+  final String none;
+
+  final String title;
+
   String getByKey(String key) {
     switch (key) {
-      case 'title':
-        return title;
-      case 'none':
-        return none;
-      case 'dateGiven':
-        return dateGiven;
-      case 'certify':
-        return certify;
       case 'addDate':
         return addDate;
+      case 'certify':
+        return certify;
+      case 'dateGiven':
+        return dateGiven;
+      case 'none':
+        return none;
+      case 'title':
+        return title;
       default:
         return '';
     }
@@ -4549,13 +4774,15 @@ class AppLocalizations_Labels_Medical_Vaccines {
 
 class AppLocalizations_Labels_Medical {
   const AppLocalizations_Labels_Medical(
-      {this.growth,
+      {this.deworming,
+      this.growth,
       this.immunization,
       this.immunizations,
-      this.deworming,
-      this.vaccine,
       this.summaryReport,
+      this.vaccine,
       this.vaccines});
+
+  final String deworming;
 
   final String growth;
 
@@ -4563,28 +4790,26 @@ class AppLocalizations_Labels_Medical {
 
   final String immunizations;
 
-  final String deworming;
+  final String summaryReport;
 
   final String vaccine;
-
-  final String summaryReport;
 
   final AppLocalizations_Labels_Medical_Vaccines vaccines;
 
   String getByKey(String key) {
     switch (key) {
+      case 'deworming':
+        return deworming;
       case 'growth':
         return growth;
       case 'immunization':
         return immunization;
       case 'immunizations':
         return immunizations;
-      case 'deworming':
-        return deworming;
-      case 'vaccine':
-        return vaccine;
       case 'summaryReport':
         return summaryReport;
+      case 'vaccine':
+        return vaccine;
       default:
         return '';
     }

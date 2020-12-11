@@ -16,15 +16,15 @@ class ActionButton extends StatelessWidget {
     return ButtonTheme(
       minWidth: Get.width * .7,
       child: RaisedButton(
-        color: Get.theme.colorScheme.primary,
         shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(Get.width / 10)),
+            side: BorderSide(color: Get.theme.colorScheme.onPrimary),
+            borderRadius: BorderRadius.circular(Get.width / 20)),
         onPressed: onPressed,
         padding: EdgeInsets.symmetric(
             horizontal: Get.width / 12, vertical: Get.width / 20),
         child: Text(
           buttonText,
-          style: Get.theme.textTheme.headline5
+          style: Get.theme.textTheme.headline6
               .copyWith(color: Get.theme.colorScheme.onPrimary),
         ),
       ),

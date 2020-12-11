@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
     final labels = AppLocalizations.of(context);
 
     return Scaffold(
-      appBar: VigorAppBar(title: labels.vigor.title),
+      appBar: VigorAppBar(title: labels.app.title.saluddominicana),
       body: Container(
         constraints: const BoxConstraints.expand(),
         child: Column(
@@ -37,7 +37,7 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: homeBottomAppBar,
+      bottomNavigationBar: bottomAppBar,
     );
   }
 }

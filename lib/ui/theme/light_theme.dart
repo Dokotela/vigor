@@ -8,23 +8,23 @@ ThemeData get lightTheme {
       brightness: Brightness.light,
 
       /// color displayed most frequently across your app’s screens and components
-      primary: Color(0xff353AE0),
+      primary: Colors.white,
 
       /// darker version of the primary color
-      primaryVariant: Color(0xff0F1274),
+      primaryVariant: Colors.white,
 
       /// color that's clearly legible when drawn on primary
-      onPrimary: Colors.white,
+      onPrimary: Color(0xff353AE0),
 
       /// accent color that, when used sparingly, calls attention to parts of
       /// your app.
-      secondary: Color(0xffFFC300),
+      secondary: Color(0xff353AE0),
 
       /// A darker version of the secondary color.
       secondaryVariant: Color(0xffFF5733),
 
       /// color that's clearly legible when drawn on secondary
-      onSecondary: Colors.black,
+      onSecondary: Colors.white,
 
       ///  color that typically appears behind scrollable content.
       background: Colors.white,

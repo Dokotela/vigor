@@ -2,36 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../views/views.dart';
 
-BottomAppBar bottomAppBar = BottomAppBar(
-  color: Get.theme.colorScheme.primary,
-  child: Row(
-    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-    children: [
-      IconButton(
-        icon: const Icon(Icons.arrow_back, color: Colors.white),
-        onPressed: () => Get.back(),
-      ),
-      IconButton(
-        icon: const Icon(Icons.home, color: Colors.white),
-        onPressed: () => Get.offAll<Widget>(HomePage()),
-      ),
-      IconButton(
-        icon: const Icon(Icons.exit_to_app, color: Colors.white),
-        onPressed: () => Get.offAll<Widget>(LoginView()),
-      ),
-    ],
-  ),
-);
-
-BottomAppBar homeBottomAppBar = BottomAppBar(
-  color: Get.theme.colorScheme.primary,
-  child: Row(
-    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-    children: [
-      IconButton(
-        icon: const Icon(Icons.exit_to_app, color: Colors.white),
-        onPressed: () => Get.offAll<Widget>(LoginView()),
-      ),
-    ],
-  ),
+BottomNavigationBar bottomAppBar = BottomNavigationBar(
+  items: [
+    BottomNavigationBarItem(
+      icon: Icon(Icons.arrow_back, color: Get.theme.colorScheme.onPrimary),
+      label: 'Back',
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.home, color: Get.theme.colorScheme.onPrimary),
+      label: 'Home',
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.exit_to_app, color: Get.theme.colorScheme.onPrimary),
+      label: 'Logout',
+    ),
+  ],
+  onTap: (index) => index == 0
+      ? Get.back()
+      : index == 1
+          ? Get.offAll<Widget>(HomePage())
+          : Get.offAll<Widget>(LoginPage()),
 );

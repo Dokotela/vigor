@@ -8,15 +8,14 @@ class VigorAppBar extends AppBar {
       : super(
             title: Text(
               title,
-              style:
-                  Get.theme.textTheme.headline4.copyWith(color: Colors.white),
+              style: Get.theme.textTheme.headline5,
             ),
-            elevation: 5,
+            elevation: 1,
             leading: leading,
             automaticallyImplyLeading: false,
             actions: [
               IconButton(
-                icon: const Icon(Icons.settings, color: Colors.white),
+                icon: const Icon(Icons.settings),
                 onPressed: () => settingsDialog(),
               ),
             ]);

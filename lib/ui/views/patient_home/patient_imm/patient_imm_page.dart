@@ -181,8 +181,8 @@ class PatientImmPage extends StatelessWidget {
             child: Text(
               text,
               textAlign: TextAlign.center,
-              style:
-                  Get.textTheme.headline6.copyWith(fontSize: Get.height / 44),
+              style: Get.textTheme.headline6
+                  .copyWith(fontSize: Get.height / 44, color: Colors.blue),
             ),
           ),
         ),

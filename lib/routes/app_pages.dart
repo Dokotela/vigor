@@ -8,7 +8,7 @@ final appPages = [
   GetPage(name: AppRoutes.HOME, page: () => HomePage()),
   GetPage(
     name: AppRoutes.LOGIN,
-    page: () => LoginView(),
+    page: () => LoginPage(),
   ),
   GetPage(
     name: AppRoutes.PATIENT_REGISTRATION,
