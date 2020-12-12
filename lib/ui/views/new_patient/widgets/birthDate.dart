@@ -5,13 +5,13 @@ import '../../../../localization.dart';
 
 class BirthDateWidget extends StatelessWidget {
   const BirthDateWidget({
-    @required this.date,
+    @required this.birthDate,
     @required this.chooseBirthDate,
     @required this.displayBirthDate,
     @required this.dispBirthDateError,
   });
 
-  final DateTime date;
+  final DateTime birthDate;
   final Function chooseBirthDate;
   final String displayBirthDate;
   final String dispBirthDateError;
@@ -23,20 +23,21 @@ class BirthDateWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          '${labels.general.dateofBirth}',
-          style: Get.theme.textTheme.headline6,
-          textAlign: TextAlign.center,
-        ),
         Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
+            Text(
+              '${labels.general.dateofBirth}',
+              style: Get.theme.textTheme.bodyText1,
+              textAlign: TextAlign.center,
+            ),
             FlatButton(
               onPressed: () => showDatePicker(
                   context: Get.context,
                   locale: Get.locale,
-                  initialDate:
-                      date == DateTime(1900, 1, 1) ? DateTime.now() : date,
+                  initialDate: birthDate == DateTime(1900, 1, 1)
+                      ? DateTime.now()
+                      : birthDate,
                   firstDate: DateTime(1900, 1, 1),
                   lastDate: DateTime(2999, 12, 31),
                   builder: (BuildContext context, child) {
@@ -55,10 +56,15 @@ class BirthDateWidget extends StatelessWidget {
                 ),
                 child: Row(
                   children: [
-                    date == DateTime(1900, 1, 1)
-                        ? Text('          ')
-                        : Text(displayBirthDate),
-                    SizedBox(width: Get.width / 20),
+                    birthDate == DateTime(1900, 1, 1)
+                        ? Text(
+                            '           ',
+                            style: Get.theme.textTheme.bodyText1,
+                          )
+                        : Text(
+                            displayBirthDate,
+                            style: Get.theme.textTheme.bodyText1,
+                          ),
                     Icon(Icons.keyboard_arrow_down),
                   ],
                 ),

@@ -15,12 +15,12 @@ final appPages = [
     page: () => NewPatientPage(),
   ),
   GetPage(
-    name: AppRoutes.CONTACT_REGISTRATION,
-    page: () => ContactRegistrationPage(),
+    name: AppRoutes.CONTACTS,
+    page: () => ContactsPage(),
   ),
   GetPage(
-    name: AppRoutes.PATIENT_SEARCH,
-    page: () => PatientSearchPage(),
+    name: AppRoutes.ALL_PATIENTS,
+    page: () => AllPatientsPage(),
   ),
   GetPage(
     name: AppRoutes.PATIENT_HOME_PAGE,

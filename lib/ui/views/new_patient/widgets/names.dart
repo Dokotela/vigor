@@ -29,7 +29,7 @@ class NamesInputWidget extends StatelessWidget {
             controller: familyName,
             decoration: InputDecoration(
               labelText: labels.general.name.familyName,
-              labelStyle: TextStyle(color: context.theme.hintColor),
+              labelStyle: Get.textTheme.bodyText1,
               errorText: familyNameError == '' ? null : familyNameError,
               focusedBorder: UnderlineInputBorder(
                 borderSide: BorderSide(color: Get.theme.colorScheme.onPrimary),
@@ -44,7 +44,7 @@ class NamesInputWidget extends StatelessWidget {
             controller: givenName,
             decoration: InputDecoration(
               labelText: labels.general.name.givenNames,
-              labelStyle: TextStyle(color: context.theme.hintColor),
+              labelStyle: Get.textTheme.bodyText1,
               errorText: givenNameError == '' ? null : givenNameError,
               focusedBorder: UnderlineInputBorder(
                 borderSide: BorderSide(color: Get.theme.colorScheme.onPrimary),

@@ -5,12 +5,14 @@ import '../../../../localization.dart';
 
 class GenderSelectionWidget extends StatelessWidget {
   const GenderSelectionWidget({
-    @required this.curGender,
+    @required this.genderTypes,
+    @required this.displayGender,
     @required this.setGender,
     @required this.genderError,
   });
 
-  final int curGender;
+  final List<String> genderTypes;
+  final String displayGender;
   final Function setGender;
   final String genderError;
 
@@ -18,59 +20,41 @@ class GenderSelectionWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final labels = AppLocalizations.of(context);
 
-    /// turns the boolean into the string for the radio buttons
-    String _whichGender(int curGender) {
-      switch (curGender) {
-        case 1:
-          return labels.general.sexAtBirth.female;
-        case 2:
-          return labels.general.sexAtBirth.male;
-        default:
-          return '';
-      }
-    }
-
-    return Container(
-      width: Get.width,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Text(
-            labels.general.sexAtBirth.title,
-            style: Get.theme.textTheme.headline6,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              /// displays translated word for female, checks if current value
-              /// is true or false, true is female, false is male
-
-              Radio(
-                value: labels.general.sexAtBirth.female,
-                groupValue: _whichGender(curGender),
-                onChanged: (_) => setGender(1),
-              ),
-              Text(labels.general.sexAtBirth.female,
-                  style: Get.theme.textTheme.headline6),
-
-              /// displays translated word for male, checks if current value
-              /// is true or false, true is female, false is male
-              Radio(
-                value: labels.general.sexAtBirth.male,
-                groupValue: _whichGender(curGender),
-                onChanged: (_) => setGender(2),
-              ),
-              Text(labels.general.sexAtBirth.male,
-                  style: Get.theme.textTheme.headline6),
-            ],
-          ),
-          Text(
-            genderError,
-            style: Get.theme.textTheme.caption
-                .copyWith(color: Get.theme.colorScheme.error),
-          ),
-        ],
-      ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            Text(
+              labels.general.sexAtBirth.title,
+              style: Get.theme.textTheme.bodyText1,
+            ),
+            SizedBox(width: Get.width / 15),
+            DropdownButton<String>(
+              value: displayGender,
+              icon: Icon(Icons.keyboard_arrow_down),
+              items: genderTypes.map(
+                (String gender) {
+                  return DropdownMenuItem<String>(
+                    value: gender,
+                    child: Text(
+                      gender,
+                      style: Get.textTheme.bodyText1,
+                    ),
+                  );
+                },
+              ).toList(),
+              onChanged: (newVal) => setGender(newVal),
+            ),
+          ],
+        ),
+        Text(
+          genderError,
+          style: Get.theme.textTheme.caption
+              .copyWith(color: Get.theme.colorScheme.error),
+        ),
+      ],
     );
   }
 }

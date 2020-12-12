@@ -8,7 +8,7 @@ import '../../../routes/routes.dart';
 import '../../styled_components/bottom_navigation_bar.dart';
 import 'patient_search_view_controller.dart';
 
-class PatientSearchPage extends StatelessWidget {
+class AllPatientsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final labels = AppLocalizations.of(context);

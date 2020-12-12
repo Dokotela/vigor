@@ -11,7 +11,7 @@ import '../../../models/data/patient_model.dart';
 import '../../../routes/routes.dart';
 import '../../../services/i_fhir_db.dart';
 
-class ContactRegistrationController extends GetxController {
+class ContactsController extends GetxController {
   /// PROPERTIES
   final _patient = PatientModel().obs;
   final labels = AppLocalizations.of(Get.context);
