@@ -1,5 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:fhir/primitive_types/primitive_types.dart';
+import 'package:fhir/r4.dart';
 import 'package:get/get.dart';
 import 'package:vigor/_internal/constants/constants.dart';
 import 'package:vigor/models/data/patient_model.dart';
@@ -28,7 +29,7 @@ class PatientImmController extends GetxController {
   /// GETTER FUNCTIONS
   String name() => _patient.value.name();
   String birthDate() => _patient.value.birthDate();
-  Map<String, Set<FhirDateTime>> immHx() => _display.value.fullVaxDates;
+  Map<String, Set<Immunization>> immHx() => _display.value.fullVaxDates;
   Either<DoseDisplay, String> display(String dz, int number) =>
       _display.value.matrix[dz][number];
 
@@ -42,16 +43,16 @@ class PatientImmController extends GetxController {
     update();
   }
 
-  Future deleteVaccine(String cvx, FhirDateTime date) async {
-    await _patient.value.deleteVaccine(cvx, date);
-    update();
-  }
+  // Future deleteVaccine(String cvx, FhirDateTime date) async {
+  //   await _patient.value.deleteVaccine(cvx, date);
+  //   update();
+  // }
 
-  Future updateVaccine(
-      String cvx, FhirDateTime current, FhirDateTime original) async {
-    await _patient.value.updateVaccine(cvx, current, original);
-    update();
-  }
+  // Future updateVaccine(
+  //     String cvx, FhirDateTime current, FhirDateTime original) async {
+  //   await _patient.value.updateVaccine(cvx, current, original);
+  //   update();
+  // }
 
   void editPatient() =>
       Get.toNamed(AppRoutes.NEW_PATIENT, arguments: _patient.value);

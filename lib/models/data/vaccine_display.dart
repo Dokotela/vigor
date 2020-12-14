@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:fhir/primitive_types/primitive_types.dart';
+import 'package:fhir/r4.dart';
 import 'package:vax_cast/vax_cast.dart';
 import 'package:vigor/_internal/constants/constants.dart';
 
@@ -11,8 +11,8 @@ class VaccineDisplay {
       left(DoseDisplay.possible);
   static final Either<DoseDisplay, String> _open = left(DoseDisplay.open);
   String birthdate;
-  Map<String, Set<FhirDateTime>> fullVaxDates = {};
-  Map<String, List<FhirDateTime>> displayVaxDates = {};
+  Map<String, Set<Immunization>> fullVaxDates = {};
+  Map<String, List<Immunization>> displayVaxDates = {};
   Map<String, List<Either<DoseDisplay, String>>> matrix = {
     'Tuberculosis': [_open, _na, _na, _na, _na, _na],
     'HepB': [_open, _possible, _possible, _possible, _na, _na],
@@ -70,13 +70,16 @@ class VaccineDisplay {
 
     while (displayVaxDates[name].isNotEmpty) {
       if (VaxDate.fromString(birthdate).change('$months months') <=
-          VaxDate.fromString(displayVaxDates[name].first.toJson())) {
-        if (VaxDate.fromString(displayVaxDates[name].first.toJson()) ==
+          VaxDate.fromString(
+              displayVaxDates[name].first.occurrenceDateTime.toJson())) {
+        if (VaxDate.fromString(
+                displayVaxDates[name].first.occurrenceDateTime.toJson()) ==
             VaxDate.fromString(VaxDate.now().toString())) {
           displayVaxDates[name].remove(displayVaxDates[name].first);
           return left(DoseDisplay.completedToday);
         } else {
-          final date = displayVaxDates[name].first.toJson();
+          final date =
+              displayVaxDates[name].first.occurrenceDateTime.toString();
           displayVaxDates[name].remove(displayVaxDates[name].first);
           return right(date);
         }

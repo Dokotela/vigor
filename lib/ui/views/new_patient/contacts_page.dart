@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vigor/routes/routes.dart';
 import 'package:vigor/ui/styled_components/add_new.dart';
 import 'package:vigor/ui/styled_components/styled_components.dart';
 
@@ -17,28 +18,65 @@ class ContactsPage extends StatelessWidget {
     final ContactsController controller = Get.put(ContactsController());
     final viewController = Get.put(ContactsViewController());
 
-    final addNew = AlertDialog(
-      title: Text('New Contact'),
-      content: Obx(
-        () => Column(
-          children: [
-            NamesInputWidget(
-              familyName: controller.familyName,
-              givenName: controller.givenName,
-              familyNameError: controller.familyNameError,
-              givenNameError: controller.givenNameError,
+    Widget addNew() {
+      controller.setupForNewContact();
+      return AlertDialog(
+        title: Text('New Contact'),
+        content: Obx(
+          () => GestureDetector(
+            onTap: () {
+              final currentFocus = FocusScope.of(context);
+              if (!currentFocus.hasPrimaryFocus) {
+                currentFocus.unfocus();
+              }
+            },
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  NamesInputWidget(
+                    familyName: controller.familyName,
+                    givenName: controller.givenName,
+                    familyNameError: controller.familyNameError,
+                    givenNameError: controller.givenNameError,
+                  ),
+                  DropDownSelection(
+                    title: labels.general.relationship,
+                    selectionList: controller.relationTypes,
+                    display: controller.relation,
+                    selectNew: controller.selectRelation,
+                    error: controller.relationError,
+                  ),
+                  DropDownSelection(
+                    title: labels.general.address.neighborhood,
+                    selectionList: controller.barriosList,
+                    display: controller.barrio,
+                    selectNew: controller.selectBarrio,
+                    error: controller.barrioError,
+                  ),
+                ],
+              ),
             ),
-            DropDownSelection(
-              title: labels.general.address.neighborhood,
-              selectionList: controller.barriosList,
-              display: controller.barrio,
-              selectNew: controller.selectBarrio,
-              error: controller.barrioError,
-            ),
-          ],
+          ),
         ),
-      ),
-    );
+        actions: [
+          TextButton(
+            child: Text(
+              'Cancel',
+              style: TextStyle(color: Get.theme.colorScheme.onPrimary),
+            ),
+            onPressed: () => Get.back(),
+          ),
+          TextButton(
+            child: Text(
+              'Add',
+              style: TextStyle(color: Get.theme.colorScheme.onPrimary),
+            ),
+            onPressed: () async => controller.addNewContact(),
+          ),
+        ],
+      );
+    }
 
     return GestureDetector(
       onTap: () {
@@ -62,7 +100,7 @@ class ContactsPage extends StatelessWidget {
                         order1: viewController.getOrder(controller.nameSort),
                         entry1: controller.contactName,
                         label2: Text(
-                          labels.general.birthDate,
+                          'Relation',
                           style: Get.theme.textTheme.headline6,
                         ),
                         sortCol2: controller.sortByRelation,
@@ -78,10 +116,15 @@ class ContactsPage extends StatelessWidget {
                       ),
               ),
             ),
+            ThinActionButton(
+              buttonText: 'Complete',
+              onPressed: () async => Get.toNamed(AppRoutes.PATIENT_HOME_PAGE,
+                  arguments: controller.patient),
+            ),
           ],
         ),
-        floatingActionButton: AddNew(() async => await Get.dialog(addNew)),
-        bottomNavigationBar: bottomAppBar,
+        floatingActionButton: AddNew(() async => await Get.dialog(addNew())),
+        bottomNavigationBar: bottomAppBar(),
       ),
     );
   }

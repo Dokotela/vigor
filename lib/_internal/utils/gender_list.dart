@@ -4,7 +4,6 @@ import '../../localization.dart';
 List<String> genderList() {
   final labels = AppLocalizations.of(Get.context);
   return <String>[
-    '',
     labels.general.sexAtBirth.female,
     labels.general.sexAtBirth.male,
   ];

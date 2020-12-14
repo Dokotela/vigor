@@ -2,10 +2,10 @@ import 'package:fhir/r4.dart';
 import 'package:vax_cast/vax_cast.dart';
 
 abstract class IDrVaxCast {
-  static Map<String, Set<FhirDateTime>> drVaxCast({
+  static Map<String, Set<Immunization>> drVaxCast({
     List<Immunization> immunizations,
   }) {
-    var immHx = <String, Set<FhirDateTime>>{
+    var immHx = <String, Set<Immunization>>{
       'Tuberculosis': {},
       'HepB': {},
       'Rotavirus': {},
@@ -22,14 +22,14 @@ abstract class IDrVaxCast {
       var agByCvx = simpleCvxMap[imm.vaccineCode.coding[0].code.toString()];
       for (var ag in agByCvx.antigens) {
         if (immHx.keys.contains(ag)) {
-          immHx[ag].add(imm.occurrenceDateTime);
+          immHx[ag].add(imm);
         }
       }
       var cvx = imm.vaccineCode.coding[0].code.toString();
       if (cvx == '198' || cvx == '102' || cvx == '132' || cvx == '146') {
-        immHx['Pentavalente'].add(imm.occurrenceDateTime);
+        immHx['Pentavalente'].add(imm);
       } else if (cvx == '03' || cvx == '94') {
-        immHx['MMR'].add(imm.occurrenceDateTime);
+        immHx['MMR'].add(imm);
       } else if (cvx == '01' ||
           cvx == '20' ||
           cvx == '22' ||
@@ -40,9 +40,9 @@ abstract class IDrVaxCast {
           cvx == '120' ||
           cvx == '130' ||
           cvx == '170') {
-        immHx['DTP'].add(imm.occurrenceDateTime);
+        immHx['DTP'].add(imm);
       } else if (cvx == '04') {
-        immHx['MR'].add(imm.occurrenceDateTime);
+        immHx['MR'].add(imm);
       }
     }
     for (var k in immHx.keys) {

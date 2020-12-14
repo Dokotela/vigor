@@ -1,4 +1,5 @@
 import 'package:fhir/primitive_types/primitive_types.dart';
+import 'package:fhir/r4.dart';
 import 'package:get/get.dart';
 import 'package:vigor/_internal/constants/constants.dart';
 import 'package:vigor/_internal/utils/utils.dart';
@@ -20,8 +21,9 @@ class VaxDatesController extends GetxController {
     final startList = controller.immHx()[dz].toList();
     startList.forEach((entry) {
       final newEntry = DateEdit(
-        current: dateTimeFromFhirDateTime(entry),
-        original: dateTimeFromFhirDateTime(entry),
+        immunization: entry,
+        current: dateTimeFromFhirDateTime(entry.occurrenceDateTime),
+        original: dateTimeFromFhirDateTime(entry.occurrenceDateTime),
         deleted: false,
         updated: false,
         added: false,
@@ -43,12 +45,9 @@ class VaxDatesController extends GetxController {
   void delete(int index) =>
       dateList[index] = dateList[index]..deleted = !dateList[index].deleted;
 
-  void addNew() => dateList.add(DateEdit(
-      current: DateTime.now(),
-      original: DateTime.now(),
-      deleted: false,
-      updated: false,
-      added: true));
+  Future addNew() async {
+    controller.newVaccine(drVaxCvxMap[_dz.value], FhirDateTime(DateTime.now()));
+  }
 
   void editDate(int index, DateTime newDate) {
     if (newDate != null) {
@@ -65,13 +64,14 @@ class VaxDatesController extends GetxController {
           await controller.newVaccine(
               drVaxCvxMap[_dz.value], FhirDateTime(date.current));
         }
-      } else if (date.deleted) {
-        await controller.deleteVaccine(
-            drVaxCvxMap[_dz.value], FhirDateTime(date.current));
-      } else if (date.updated) {
-        await controller.updateVaccine(drVaxCvxMap[_dz.value],
-            FhirDateTime(date.current), FhirDateTime(date.original));
       }
+      // } else if (date.deleted) {
+      //   await controller.deleteVaccine(
+      //       drVaxCvxMap[_dz.value], FhirDateTime(date.current));
+      // } else if (date.updated) {
+      //   await controller.updateVaccine(drVaxCvxMap[_dz.value],
+      //       FhirDateTime(date.current), FhirDateTime(date.original));
+      // }
     }
     Get.back();
     Get.back();
@@ -79,9 +79,16 @@ class VaxDatesController extends GetxController {
 }
 
 class DateEdit {
-  DateEdit(
-      {this.current, this.original, this.deleted, this.updated, this.added});
+  DateEdit({
+    this.immunization,
+    this.current,
+    this.original,
+    this.deleted,
+    this.updated,
+    this.added,
+  });
 
+  Immunization immunization;
   DateTime current;
   DateTime original;
   bool deleted;

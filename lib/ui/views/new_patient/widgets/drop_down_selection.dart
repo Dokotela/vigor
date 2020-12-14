@@ -18,6 +18,8 @@ class DropDownSelection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var newList = selectionList.toList();
+    newList.insert(0, '');
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
@@ -32,7 +34,7 @@ class DropDownSelection extends StatelessWidget {
             DropdownButton<String>(
               value: display,
               icon: Icon(Icons.keyboard_arrow_down),
-              items: selectionList.map(
+              items: newList.map(
                 (String selection) {
                   return DropdownMenuItem<String>(
                     value: selection,
@@ -43,7 +45,8 @@ class DropDownSelection extends StatelessWidget {
                   );
                 },
               ).toList(),
-              onChanged: (newVal) => selectNew(newVal),
+              onChanged: (newVal) =>
+                  newVal != null && newVal != '' ? selectNew(newVal) : null,
             ),
           ],
         ),

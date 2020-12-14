@@ -85,7 +85,7 @@ class AllPatientsPage extends StatelessWidget {
           ],
         ),
         floatingActionButton: AddNew(() => Get.toNamed(AppRoutes.NEW_PATIENT)),
-        bottomNavigationBar: bottomAppBar,
+        bottomNavigationBar: bottomAppBar(),
       ),
     );
   }

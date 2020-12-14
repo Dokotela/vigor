@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vigor/ui/styled_components/styled_components.dart';
 
 import '../../../../controllers/local/patient_home/patient_imm/patient_imm_controller.dart';
 import '../../../../localization.dart';
@@ -32,31 +33,10 @@ class PatientImmPage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(height: 4.0),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              IconButton(
-                icon:
-                    Icon(Icons.edit, color: Get.theme.colorScheme.onBackground),
-                onPressed: () => controller.editPatient(),
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    '${labels.general.name.name}: ${controller.name()}',
-                    style: Get.textTheme.headline6
-                        .copyWith(fontSize: Get.width / 18),
-                  ),
-                  SizedBox(height: 4.0),
-                  Text(
-                    '${labels.general.birthDate}: ${controller.birthDate()}',
-                    style: Get.textTheme.headline6
-                        .copyWith(fontSize: Get.width / 18),
-                  ),
-                ],
-              ),
-            ],
+          MinInfoBanner(
+            editPatient: () => controller.editPatient(),
+            name: controller.name(),
+            birthDate: controller.birthDate(),
           ),
           SizedBox(height: Get.height / 30),
           Padding(
@@ -154,7 +134,7 @@ class PatientImmPage extends StatelessWidget {
           ),
         ],
       ),
-      bottomNavigationBar: bottomAppBar,
+      bottomNavigationBar: bottomAppBar(),
     );
   }
 

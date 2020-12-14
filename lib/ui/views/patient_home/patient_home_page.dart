@@ -53,7 +53,7 @@ class PatientHomePage extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: bottomAppBar,
+      bottomNavigationBar: bottomAppBar(),
     );
   }
 }

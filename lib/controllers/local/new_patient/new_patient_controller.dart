@@ -13,6 +13,7 @@ import '../../../routes/routes.dart';
 class NewPatientController extends GetxController {
   /// PROPERTIES
   final _patient = PatientModel().obs;
+  final newPatient = Get.arguments == null;
   final familyName = TextEditingController();
   final _familyNameError = ''.obs;
   final givenName = TextEditingController();
@@ -31,6 +32,7 @@ class NewPatientController extends GetxController {
   /// INIT
   @override
   void onInit() {
+    print(newPatient);
     if (Get.arguments != null) {
       _patient.value = Get.arguments;
       _gender.value = _patient.value.patient.gender == PatientGender.female
@@ -110,7 +112,8 @@ class NewPatientController extends GetxController {
         (l) => Get.snackbar('Error', l.error),
         (r) {
           _patient.value.patient = r;
-          Get.toNamed(AppRoutes.CONTACTS, arguments: _patient.value);
+          Get.toNamed(AppRoutes.CONTACTS,
+              arguments: [_patient.value, newPatient]);
         },
       );
     } else {

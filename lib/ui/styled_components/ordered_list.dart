@@ -44,7 +44,7 @@ class OrderedList extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Container(
-              width: Get.width / 2.6,
+              width: Get.width * .35,
               child: FlatButton(
                 onPressed: () => sortCol1(),
                 child: Row(
@@ -54,7 +54,7 @@ class OrderedList extends StatelessWidget {
               ),
             ),
             Container(
-              width: Get.width / 2.9,
+              width: Get.width * .3,
               child: FlatButton(
                 onPressed: () => sortCol2(),
                 child: Row(
@@ -64,7 +64,7 @@ class OrderedList extends StatelessWidget {
               ),
             ),
             Container(
-              width: Get.width / 5,
+              width: Get.width * .25,
               child: FlatButton(
                 onPressed: () => sortCol3(),
                 child: Row(
@@ -92,13 +92,13 @@ class OrderedList extends StatelessWidget {
                 children: [
                   Container(
                     padding: _padding,
-                    width: Get.width / 2.6,
+                    width: Get.width * .35,
                     child: Text(entry1(index),
                         style: Get.theme.textTheme.headline6),
                   ),
                   Container(
                     padding: _padding,
-                    width: Get.width / 3,
+                    width: Get.width * .3,
                     child: Text(
                       entry2(index),
                       style: Get.theme.textTheme.headline6,
@@ -106,7 +106,7 @@ class OrderedList extends StatelessWidget {
                   ),
                   Container(
                     padding: _padding,
-                    width: Get.width / 5,
+                    width: Get.width * .25,
                     child: Text(
                       entry3(index),
                       overflow: TextOverflow.ellipsis,

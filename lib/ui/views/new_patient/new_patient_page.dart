@@ -25,7 +25,10 @@ class NewPatientPage extends StatelessWidget {
       },
       child: Scaffold(
         resizeToAvoidBottomInset: false,
-        appBar: VigorAppBar(title: controller.labels.general.newPatient),
+        appBar: VigorAppBar(
+            title: controller.newPatient
+                ? controller.labels.general.newPatient
+                : 'Patient Information'),
         body: Container(
           child: Center(
             child: Container(
@@ -79,7 +82,7 @@ class NewPatientPage extends StatelessWidget {
 
                     /// button to register patient
                     ThinActionButton(
-                      buttonText: controller.labels.registration.savePatient,
+                      buttonText: 'Save',
                       onPressed: () => controller.registerEvent(),
                     ),
                   ],
@@ -88,7 +91,7 @@ class NewPatientPage extends StatelessWidget {
             ),
           ),
         ),
-        bottomNavigationBar: bottomAppBar,
+        bottomNavigationBar: bottomAppBar(),
       ),
     );
   }

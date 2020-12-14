@@ -2,6 +2,7 @@ import 'package:fhir/r4.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:vigor/_internal/constants/constants.dart';
+import 'package:vigor/services/i_fhir_db.dart';
 
 import '../../../_internal/utils/relationship_types.dart';
 import '../../../_internal/utils/utils.dart';
@@ -13,8 +14,11 @@ class ContactsController extends GetxController {
   final _patient = PatientModel().obs;
   final labels = AppLocalizations.of(Get.context);
   final _contactsList = <PatientContact>[].obs;
+  final _relationTypes = relationshipTypes();
   final _nameSort = 0.obs;
+  final _relation = ''.obs;
   final _relationSort = 0.obs;
+  final _relationError = ''.obs;
   final _barrioSort = 0.obs;
   final familyName = TextEditingController();
   final _familyNameError = ''.obs;
@@ -23,20 +27,25 @@ class ContactsController extends GetxController {
   final _barrio = ''.obs;
   final _barrioError = ''.obs;
   final _barriosList = barrios;
+  final newPatient = Get.arguments[1];
 
   /// INIT
   @override
   void onInit() {
-    _patient.value = Get.arguments;
+    _patient.value = Get.arguments[0];
     _contactsList.addAllNonNull(_patient.value.patient.contact);
     super.onInit();
   }
 
   // GETTERS
+  PatientModel get patient => _patient.value;
   int get nameSort => _nameSort.value;
   int get relationSort => _relationSort.value;
   int get barrioSort => _barrioSort.value;
+  String get relation => _relation.value;
   int get currentListLength => _contactsList.length;
+  List<String> get relationTypes => _relationTypes;
+  String get relationError => _relationError.value;
 
   String get familyNameError => _familyNameError.value;
   String get givenNameError => _givenNameError.value;
@@ -77,49 +86,17 @@ class ContactsController extends GetxController {
           : _contactsList[index].address?.district ??
               labels.general.address.neighborhood;
 
-  String _givenName(int number) => _patient?.value?.patient?.contact == null
-      ? ''
-      : _patient.value.patient.contact.length < number + 1
-          ? ''
-          : _patient.value.patient.contact[number].name == null
-              ? ''
-              : _patient.value.patient.contact[number].name.given == null
-                  ? ''
-                  : _patient.value.patient.contact[number].name.given[0];
-
-  String _familyName(int number) => _patient?.value?.patient?.contact == null
-      ? ''
-      : _patient.value.patient.contact.length < number + 1
-          ? ''
-          : _patient.value.patient.contact[number].name == null
-              ? ''
-              : _patient.value.patient.contact[number].name.family == null
-                  ? ''
-                  : _patient.value.patient.contact[number].name.family;
-
-  String _contactRelation(int number) {
-    if (_patient?.value?.patient?.contact == null) {
-      return labels.general.relationship;
-    } else if (_patient.value.patient.contact.length < number + 1) {
-      return labels.general.relationship;
-    } else if (_patient?.value?.patient?.contact[number]?.relationship ==
-        null) {
-      return labels.general.relationship;
-    }
-    for (var relationship
-        in _patient.value.patient.contact[number].relationship) {
-      for (var relation in relationship.coding) {
-        if (relationshipTypes().contains(
-            relationshipStringToLabel(relation.display.toLowerCase()))) {
-          return relation.display;
-        } else if (relationshipTypes()
-            .contains(relation.code.toString().toLowerCase())) {
-          return relation.code.toString();
-        }
-      }
-    }
-    return labels.general.relationship;
+  // SETTERS
+  void setupForNewContact() {
+    _barrio.value = '';
+    _relation.value = '';
+    familyName.text = '';
+    givenName.text = '';
   }
+
+  void selectBarrio(String barrio) => _barrio.value = barrio;
+
+  void selectRelation(String relation) => _relation.value = relation;
 
   // EVENTS
   void sortByName() {
@@ -192,5 +169,27 @@ class ContactsController extends GetxController {
   int _sortBarrio(PatientContact a, PatientContact b) =>
       (a?.address?.district ?? '').compareTo(b?.address?.district ?? '');
 
-  void selectBarrio(String barrio) => _barrio.value = barrio;
+  Future addNewContact() async {
+    var contact = formatPatientContact(
+      familyName.text,
+      givenName.text,
+      _barrio.value,
+      _relation.value,
+    );
+    _patient.value.patient.contact == null
+        ? _patient.value.patient =
+            _patient.value.patient.copyWith(contact: [contact])
+        : _patient.value.patient.contact.add(contact);
+    final saveResult = await IFhirDb().save(_patient.value.patient);
+    saveResult.fold(
+      (l) => Get.snackbar('Error', l.error),
+      (r) {
+        _patient.value.patient = r;
+        _contactsList.clear();
+        _contactsList.addAllNonNull(_patient.value.patient.contact);
+        update();
+        Get.back();
+      },
+    );
+  }
 }
