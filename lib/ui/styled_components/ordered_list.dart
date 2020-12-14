@@ -41,7 +41,6 @@ class OrderedList extends StatelessWidget {
     final _padding = EdgeInsets.fromLTRB(0, 0, 0, 0);
 
     return Column(
-      mainAxisSize: MainAxisSize.min,
       children: <Widget>[
         Row(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -78,16 +77,15 @@ class OrderedList extends StatelessWidget {
             ),
           ],
         ),
-        const Divider(
-          thickness: 4.0,
-          color: Colors.transparent,
-        ),
+        Divider(thickness: 3.0),
         Expanded(
           child: ListView.separated(
+            scrollDirection: Axis.vertical,
+            shrinkWrap: true,
             itemCount: listLength,
             separatorBuilder: (context, index) => Divider(
               thickness: 1.0,
-              color: Colors.blue[900],
+              color: Get.theme.colorScheme.onPrimary,
             ),
             itemBuilder: (context, index) => FlatButton(
               onPressed: () => selectEntry(index),

@@ -33,27 +33,27 @@ class InfoBannerWidget extends StatelessWidget {
         children: <Widget>[
           Text(
             '${labels.general.name.name}: $name',
-            style: Get.textTheme.headline6.copyWith(fontSize: Get.width / 18),
+            style: Get.textTheme.headline6.copyWith(fontSize: Get.width / 20),
           ),
           _spacerV,
           Text(
             '${labels.general.birthDate}: $birthDate',
-            style: Get.textTheme.headline6.copyWith(fontSize: Get.width / 18),
+            style: Get.textTheme.headline6.copyWith(fontSize: Get.width / 20),
           ),
           _spacerV,
           Text(
             'Age: $relativeAge',
-            style: Get.textTheme.headline6.copyWith(fontSize: Get.width / 18),
+            style: Get.textTheme.headline6.copyWith(fontSize: Get.width / 20),
           ),
           _spacerV,
           Text(
             '${labels.general.sexAtBirth.title}: $sex',
-            style: Get.textTheme.headline6.copyWith(fontSize: Get.width / 18),
+            style: Get.textTheme.headline6.copyWith(fontSize: Get.width / 20),
           ),
           _spacerV,
           Text(
             'ID: $id',
-            style: Get.textTheme.headline6.copyWith(fontSize: Get.width / 18),
+            style: Get.textTheme.headline6.copyWith(fontSize: Get.width / 20),
           ),
         ],
       ),
