@@ -24,6 +24,11 @@ class PatientImmController extends GetxController {
     isReady.value = true;
   }
 
+  @override
+  void update([List<String> ids, bool condition = true]) {
+    super.update();
+  }
+
   /// GETTER FUNCTIONS
   String name() => _patient.value.name();
   String birthDate() => _patient.value.birthDate();
@@ -46,12 +51,14 @@ class PatientImmController extends GetxController {
   Future addNew(String cvx, FhirDateTime date) async {
     await _patient.value.addNewVaccine(cvx, date);
     setDisplay();
+    update();
   }
 
-  // Future deleteVaccine(String cvx, FhirDateTime date) async {
-  //   await _patient.value.deleteVaccine(cvx, date);
-  //   update();
-  // }
+  Future deleteVaccine(Immunization vax) async {
+    await _patient.value.deleteVaccine(vax);
+    setDisplay();
+    update();
+  }
 
   // Future updateVaccine(
   //     String cvx, FhirDateTime current, FhirDateTime original) async {

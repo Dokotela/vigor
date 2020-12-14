@@ -3,7 +3,6 @@ import 'package:fhir/r4.dart';
 import 'package:get/get.dart';
 import 'package:vigor/_internal/constants/constants.dart';
 import 'package:vigor/_internal/utils/utils.dart';
-import 'package:vigor/routes/routes.dart';
 
 import '../patient_imm_controller.dart';
 
@@ -44,8 +43,11 @@ class VaxDatesController extends GetxController {
     updateImmList();
   }
 
-  void delete(int index) => '';
-  // dateList[index] = dateList[index]..deleted = !dateList[index].deleted;
+  Future delete(int index) async {
+    await controller.deleteVaccine(immList[index]);
+    updateImmList();
+    Get.back();
+  }
 
   void editDate(int index, DateTime newDate) {
     // if (newDate != null) {
@@ -54,27 +56,4 @@ class VaxDatesController extends GetxController {
     //     ..updated = true;
     // }
   }
-
-  Future accept() async {
-    // for (var date in dateList) {
-    //   if (date.added) {
-    //     if (!date.deleted) {
-    //       await controller.newVaccine(
-    //           drVaxCvxMap[_dz.value], FhirDateTime(date.current));
-    //     }
-    //   }
-    //   // } else if (date.deleted) {
-    //   //   await controller.deleteVaccine(
-    //   //       drVaxCvxMap[_dz.value], FhirDateTime(date.current));
-    //   // } else if (date.updated) {
-    //   //   await controller.updateVaccine(drVaxCvxMap[_dz.value],
-    //   //       FhirDateTime(date.current), FhirDateTime(date.original));
-    //   // }
-    // }
-    Get.back();
-    Get.back();
-  }
-
-  void immunizationPage() => Get.toNamed(AppRoutes.PATIENT_IMM_PAGE,
-      arguments: controller.actualPatient());
 }

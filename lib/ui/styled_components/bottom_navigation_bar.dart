@@ -20,7 +20,9 @@ BottomNavigationBar bottomAppBar(
         ),
       ],
       onTap: (index) => index == 0
-          ? backFunction ?? Get.back()
+          ? backFunction == null
+              ? Get.back()
+              : backFunction()
           : index == 1
               ? homeFunction ?? Get.offAll<Widget>(HomePage())
               : Get.offAll<Widget>(LoginPage()),

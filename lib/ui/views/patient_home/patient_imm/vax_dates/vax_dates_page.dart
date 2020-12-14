@@ -28,10 +28,10 @@ class VaxDatesPage extends StatelessWidget {
             ),
             Container(
               height: Get.height / 2,
-              child: controller.immList.isEmpty
-                  ? _noPrevious
-                  : Obx(
-                      () => ListView.separated(
+              child: Obx(
+                () => controller.immList.isEmpty
+                    ? _noPrevious
+                    : ListView.separated(
                         shrinkWrap: true,
                         padding: const EdgeInsets.all(8),
                         separatorBuilder: (BuildContext context, int index) =>
@@ -74,22 +74,43 @@ class VaxDatesPage extends StatelessWidget {
                                 child: IconButton(
                                   icon: Icon(Icons.delete,
                                       color: Get.theme.colorScheme.onPrimary),
-                                  onPressed: () => controller.delete(index),
+                                  onPressed: () => Get.dialog(delete(index)),
                                 ),
                               ),
                             ],
                           ),
                         ),
                       ),
-                    ),
+              ),
             ),
           ],
         ),
       ),
       floatingActionButton: AddNew(() async => await controller.addNew()),
-      bottomNavigationBar: bottomAppBar(),
+      bottomNavigationBar: bottomAppBar(backFunction: Get.back),
     );
   }
+
+  Widget delete(int index) => AlertDialog(
+        title: Text('Delete Immunization'),
+        content: Text('Are you sure you want to delete this immunization?'),
+        actions: [
+          TextButton(
+            child: Text(
+              'Cancel',
+              style: TextStyle(color: Get.theme.colorScheme.onPrimary),
+            ),
+            onPressed: () => Get.back(),
+          ),
+          TextButton(
+            child: Text(
+              'Delete',
+              style: TextStyle(color: Get.theme.colorScheme.onPrimary),
+            ),
+            onPressed: () async => await controller.delete(index),
+          ),
+        ],
+      );
 
   static const _noPrevious = Text(
     'No previous vaccines of this type given',

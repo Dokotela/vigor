@@ -63,24 +63,23 @@ class PatientModel {
     immHx = IDrVaxCast.drVaxCast(immunizations: pastImmunizations);
   }
 
-  // Future deleteVaccine(String cvx, FhirDateTime date) async {
-  //   print('delete');
-  //   print(pastImmunizations.length);
-  //   final immunization = _newVax(cvx, date);
-  //   final index = _vaxIndex(immunization);
-  //   // print(index);
-  //   if (index != -1) {
-  //     pastImmunizations[index] =
-  //         pastImmunizations[index].copyWith(status: Code('entered-in-error'));
-  //     print(pastImmunizations[index].toJson());
-  //     final iFhirDb = IFhirDb();
-  //     var temp = await iFhirDb.save(immunization);
-  //     temp.fold((l) => print(l.error), (r) => print(r.toJson()));
-  //     pastImmunizations.removeAt(index);
-  //     // print(pastImmunizations.length);
-  //     immHx = IDrVaxCast.drVaxCast(immunizations: pastImmunizations);
-  //   }
-  // }
+  Future deleteVaccine(Immunization vax) async {
+    final index =
+        pastImmunizations.indexWhere((vaccine) => vaccine.id == vax.id);
+
+    if (index != -1) {
+      pastImmunizations[index] =
+          pastImmunizations[index].copyWith(status: Code('entered-in-error'));
+      final iFhirDb = IFhirDb();
+      var deleted = await iFhirDb.save(pastImmunizations[index]);
+      deleted.fold(
+        (l) => print(l.error),
+        (r) => pastImmunizations.removeAt(index),
+      );
+
+      immHx = IDrVaxCast.drVaxCast(immunizations: pastImmunizations);
+    }
+  }
 
   // Future updateVaccine(
   //     String cvx, FhirDateTime current, FhirDateTime original) async {
