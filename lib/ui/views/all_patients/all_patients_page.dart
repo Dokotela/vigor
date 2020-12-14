@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vigor/ui/styled_components/styled_components.dart';
 
-import '../../../controllers/commands/settings_dialog.dart';
 import '../../../controllers/local/all_patients/patient_search_controller.dart';
 import '../../../localization.dart';
 import '../../../routes/routes.dart';
@@ -25,143 +25,51 @@ class AllPatientsPage extends StatelessWidget {
         }
       },
       child: Scaffold(
-        appBar: AppBar(
-          automaticallyImplyLeading: false,
-          actions: [
-            Icon(Icons.search, size: Get.width / 10),
-            Expanded(
-              child: TextFormField(
-                cursorColor: Get.theme.colorScheme.onPrimary,
-                controller: searchName,
-                style: Get.textTheme.headline5
-                    .copyWith(color: Get.theme.colorScheme.onPrimary),
-                decoration: InputDecoration(
-                    hintText: labels.general.search.search,
-                    hintStyle: Get.textTheme.headline5
-                        .copyWith(color: Get.theme.colorScheme.onPrimary)),
-                onChanged: (value) => controller.searchPatientByName(value),
-              ),
-            ),
-            IconButton(
-              icon:
-                  Icon(Icons.settings, color: Get.theme.colorScheme.onPrimary),
-              onPressed: () => settingsDialog(),
-            ),
-          ],
-        ),
-        body: Column(
-          children: <Widget>[
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Container(
-                  width: Get.width / 2.6,
-                  child: FlatButton(
-                    onPressed: () => controller.sortByName(),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Patient',
-                          style: Get.theme.textTheme.headline6,
-                        ),
-                        Obx(() => viewController.getOrder(controller.nameSort)),
-                      ],
-                    ),
-                  ),
-                ),
-                Container(
-                  width: Get.width / 2.9,
-                  child: FlatButton(
-                    onPressed: () => controller.sortByBirthdate(),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Text(
-                          labels.general.birthDate,
-                          style: Get.theme.textTheme.headline6,
-                        ),
-                        Obx(() =>
-                            viewController.getOrder(controller.birthDateSort)),
-                      ],
-                    ),
-                  ),
-                ),
-                Container(
-                  width: Get.width / 5,
-                  child: FlatButton(
-                    onPressed: () => controller.sortByBarrio(),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Icon(Icons.location_on_outlined),
-                        Obx(() =>
-                            viewController.getOrder(controller.barrioSort)),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            const Divider(
-              thickness: 4.0,
-              color: Colors.transparent,
-            ),
-            Expanded(
-              child: Obx(
-                () => ListView.separated(
-                  itemCount: controller.currentListLength,
-                  separatorBuilder: (context, index) => Divider(
-                    thickness: 1.0,
-                    color: Colors.blue[900],
-                  ),
-                  itemBuilder: (context, index) => FlatButton(
-                    onPressed: () => controller.selectPatient(index),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Container(
-                          padding: _padding,
-                          width: Get.width / 2.6,
-                          child: Text(
-                            controller.patientName(index),
-                            style: Get.theme.textTheme.headline6,
-                          ),
-                        ),
-                        Container(
-                          padding: _padding,
-                          width: Get.width / 3,
-                          child: Text(
-                            controller.patientDob(index),
-                            style: Get.theme.textTheme.headline6,
-                          ),
-                        ),
-                        Container(
-                          padding: _padding,
-                          width: Get.width / 5,
-                          child: Text(
-                            controller.patientBarrio(index),
-                            overflow: TextOverflow.ellipsis,
-                            style: Get.theme.textTheme.headline6,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
-        floatingActionButton: FloatingActionButton(
-          elevation: 10.0,
-          backgroundColor: Get.theme.colorScheme.primary,
-          onPressed: () => Get.toNamed(AppRoutes.NEW_PATIENT),
-          child: Icon(
-            Icons.add,
-            color: Get.theme.colorScheme.onPrimary,
+        appBar: VigorAppBar(title: 'All Patients'),
+        //   automaticallyImplyLeading: false,
+        //   actions: [
+        //     Icon(Icons.search, size: Get.width / 10),
+        //     Expanded(
+        //       child: TextFormField(
+        //         cursorColor: Get.theme.colorScheme.onPrimary,
+        //         controller: searchName,
+        //         style: Get.textTheme.headline5
+        //             .copyWith(color: Get.theme.colorScheme.onPrimary),
+        //         decoration: InputDecoration(
+        //             hintText: labels.general.search.search,
+        //             hintStyle: Get.textTheme.headline5
+        //                 .copyWith(color: Get.theme.colorScheme.onPrimary)),
+        //         onChanged: (value) => controller.searchPatientByName(value),
+        //       ),
+        //     ),
+        //     IconButton(
+        //       icon:
+        //           Icon(Icons.settings, color: Get.theme.colorScheme.onPrimary),
+        //       onPressed: () => settingsDialog(),
+        //     ),
+        //   ],
+        // ),
+        body: OrderedList(
+          label1: Text('Patient', style: Get.theme.textTheme.headline6),
+          sortCol1: controller.sortByName,
+          order1: viewController.getOrder(controller.nameSort),
+          entry1: controller.patientName,
+          label2: Text(
+            labels.general.birthDate,
+            style: Get.theme.textTheme.headline6,
           ),
+          sortCol2: controller.sortByBirthdate,
+          order2: viewController.getOrder(controller.birthDateSort),
+          entry2: controller.patientDob,
+          label3: Icon(Icons.location_on_outlined),
+          sortCol3: controller.sortByBarrio,
+          order3: viewController.getOrder(controller.barrioSort),
+          entry3: controller.patientBarrio,
+          listLength: controller.currentListLength,
+          selectEntry: controller.selectPatient,
+          addNew: () => Get.toNamed(AppRoutes.NEW_PATIENT),
         ),
+
         bottomNavigationBar: bottomAppBar,
       ),
     );

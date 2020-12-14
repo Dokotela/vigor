@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'bottom_navigation_bar.dart';
-
 class OrderedList extends StatelessWidget {
   const OrderedList({
     @required this.label1,
@@ -19,7 +17,7 @@ class OrderedList extends StatelessWidget {
     @required this.entry3,
     @required this.listLength,
     @required this.selectEntry,
-    @required this.onPressed,
+    @required this.addNew,
   });
 
   final Widget label1;
@@ -36,113 +34,106 @@ class OrderedList extends StatelessWidget {
   final Function entry3;
   final int listLength;
   final Function selectEntry;
-  final Function onPressed;
+  final Function addNew;
 
   @override
   Widget build(BuildContext context) {
     final _padding = EdgeInsets.fromLTRB(0, 0, 0, 0);
 
-    return GestureDetector(
-      onTap: () {
-        final currentFocus = FocusScope.of(context);
-        if (!currentFocus.hasPrimaryFocus) {
-          currentFocus.unfocus();
-        }
-      },
-      child: Scaffold(
-        body: Column(
-          children: <Widget>[
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Container(
-                  width: Get.width / 2.6,
-                  child: FlatButton(
-                    onPressed: sortCol1,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [label1, Obx(() => order1)],
-                    ),
-                  ),
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Container(
+              width: Get.width / 2.6,
+              child: FlatButton(
+                onPressed: () => sortCol1(),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [label1, order1],
                 ),
-                Container(
-                  width: Get.width / 2.9,
-                  child: FlatButton(
-                    onPressed: sortCol2,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [label2, Obx(() => order2)],
-                    ),
-                  ),
-                ),
-                Container(
-                  width: Get.width / 5,
-                  child: FlatButton(
-                    onPressed: sortCol3,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [label3, Obx(() => order3)],
-                    ),
-                  ),
-                ),
-              ],
+              ),
             ),
-            const Divider(
-              thickness: 4.0,
-              color: Colors.transparent,
+            Container(
+              width: Get.width / 2.9,
+              child: FlatButton(
+                onPressed: () => sortCol2(),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [label2, order2],
+                ),
+              ),
             ),
-            Expanded(
-              child: Obx(
-                () => ListView.separated(
-                  itemCount: listLength,
-                  separatorBuilder: (context, index) => Divider(
-                    thickness: 1.0,
-                    color: Colors.blue[900],
-                  ),
-                  itemBuilder: (context, index) => FlatButton(
-                    onPressed: () => selectEntry(index),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Container(
-                          padding: _padding,
-                          width: Get.width / 2.6,
-                          child: Text(entry1(index),
-                              style: Get.theme.textTheme.headline6),
-                        ),
-                        Container(
-                          padding: _padding,
-                          width: Get.width / 3,
-                          child: Text(
-                            entry2(index),
-                            style: Get.theme.textTheme.headline6,
-                          ),
-                        ),
-                        Container(
-                          padding: _padding,
-                          width: Get.width / 5,
-                          child: Text(
-                            entry3(index),
-                            overflow: TextOverflow.ellipsis,
-                            style: Get.theme.textTheme.headline6,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+            Container(
+              width: Get.width / 5,
+              child: FlatButton(
+                onPressed: () => sortCol3(),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [label3, order3],
                 ),
               ),
             ),
           ],
         ),
-        floatingActionButton: FloatingActionButton(
-          elevation: 10.0,
-          backgroundColor: Get.theme.colorScheme.primary,
-          onPressed: onPressed,
-          child: Icon(Icons.add, color: Get.theme.colorScheme.onPrimary),
+        const Divider(
+          thickness: 4.0,
+          color: Colors.transparent,
         ),
-        bottomNavigationBar: bottomAppBar,
-      ),
+        Expanded(
+          child: ListView.separated(
+            itemCount: listLength,
+            separatorBuilder: (context, index) => Divider(
+              thickness: 1.0,
+              color: Colors.blue[900],
+            ),
+            itemBuilder: (context, index) => FlatButton(
+              onPressed: () => selectEntry(index),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Container(
+                    padding: _padding,
+                    width: Get.width / 2.6,
+                    child: Text(entry1(index),
+                        style: Get.theme.textTheme.headline6),
+                  ),
+                  Container(
+                    padding: _padding,
+                    width: Get.width / 3,
+                    child: Text(
+                      entry2(index),
+                      style: Get.theme.textTheme.headline6,
+                    ),
+                  ),
+                  Container(
+                    padding: _padding,
+                    width: Get.width / 5,
+                    child: Text(
+                      entry3(index),
+                      overflow: TextOverflow.ellipsis,
+                      style: Get.theme.textTheme.headline6,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            FloatingActionButton(
+              elevation: 10.0,
+              backgroundColor: Get.theme.colorScheme.onPrimary,
+              onPressed: addNew,
+              child: Icon(Icons.add, color: Get.theme.colorScheme.primary),
+            ),
+          ],
+        ),
+      ],
     );
   }
 }
