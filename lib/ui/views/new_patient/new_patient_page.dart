@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:vigor/ui/styled_components/thin_action_button.dart';
-import 'package:vigor/ui/views/new_patient/widgets/drop_down_selection.dart';
+import 'package:vigor/ui/styled_components/drop_down_selection.dart';
 
 import '../../../controllers/local/new_patient/new_patient_controller.dart';
 import '../../../localization.dart';
@@ -83,7 +83,7 @@ class NewPatientPage extends StatelessWidget {
                     /// button to register patient
                     ThinActionButton(
                       buttonText: 'Save',
-                      onPressed: () => controller.registerEvent(),
+                      onPressed: () => controller.save(),
                     ),
                   ],
                 ),

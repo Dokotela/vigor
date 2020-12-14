@@ -19,9 +19,7 @@ class PatientImmController extends GetxController {
     _patient.value = Get.arguments;
     _display.value.birthdate = birthDate();
     await _patient.value.loadImmunizations();
-    _display.value.fullVaxDates = _patient.value.immHx;
-    _display.value.setDisplayDates();
-    _display.value.checkValidityOfDoses();
+    setDisplay();
     super.onInit();
     isReady.value = true;
   }
@@ -36,11 +34,18 @@ class PatientImmController extends GetxController {
   PatientModel actualPatient() => _patient.value;
 
   /// SETTER FUNCTIONS
+  Future loadImmunizations() => _patient.value.loadImmunizations();
+
+  void setDisplay() {
+    _display.value.fullVaxDates = _patient.value.immHx;
+    _display.value.setDisplayDates();
+    _display.value.checkValidityOfDoses();
+  }
 
   /// EVENTS
-  Future newVaccine(String cvx, FhirDateTime date) async {
+  Future addNew(String cvx, FhirDateTime date) async {
     await _patient.value.addNewVaccine(cvx, date);
-    update();
+    setDisplay();
   }
 
   // Future deleteVaccine(String cvx, FhirDateTime date) async {

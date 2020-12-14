@@ -34,11 +34,6 @@ class IFhirDb {
       String patientId) async {
     var temp = await searchFunction(
         'Immunization', 'patient.reference', 'Patient/$patientId');
-    temp.fold((l) => print(l.error), (r) {
-      for (var t in r) {
-        print(t.toJson());
-      }
-    });
     return temp;
   }
 

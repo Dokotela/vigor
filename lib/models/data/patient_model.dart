@@ -57,8 +57,9 @@ class PatientModel {
 
   Future addNewVaccine(String cvx, FhirDateTime date) async {
     final immunization = _newVax(cvx, date);
-    await IFhirDb().save(immunization);
-    pastImmunizations.add(immunization);
+    final newImm = await IFhirDb().save(immunization);
+    newImm.fold((l) => Get.snackbar('Error', l.error),
+        (r) => pastImmunizations.add(r as Immunization));
     immHx = IDrVaxCast.drVaxCast(immunizations: pastImmunizations);
   }
 

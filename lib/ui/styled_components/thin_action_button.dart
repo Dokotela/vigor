@@ -7,15 +7,17 @@ class ThinActionButton extends StatelessWidget {
   const ThinActionButton({
     @required this.buttonText,
     this.onPressed,
+    this.width,
   });
 
   final String buttonText;
   final Function onPressed;
+  final double width;
 
   @override
   Widget build(BuildContext context) {
     return ButtonTheme(
-      minWidth: Get.width * .7,
+      minWidth: width ?? Get.width * .7,
       child: RaisedButton(
         shape: RoundedRectangleBorder(
             side: BorderSide(color: Get.theme.colorScheme.onPrimary),

@@ -14,25 +14,28 @@ class NewPatientController extends GetxController {
   /// PROPERTIES
   final _patient = PatientModel().obs;
   final newPatient = Get.arguments == null;
+  final labels = AppLocalizations.of(Get.context);
+
   final familyName = TextEditingController();
   final _familyNameError = ''.obs;
   final givenName = TextEditingController();
   final _givenNameError = ''.obs;
+
   final _birthDate = DateTime(1900, 1, 1).obs;
   final _birthDateString = ''.obs;
   final _birthDateError = ''.obs;
+
   final _gender = ''.obs;
   final _genderError = ''.obs;
   final _genderTypes = genderList();
+
   final _barrio = ''.obs;
   final _barrioError = ''.obs;
   final _barriosList = barrios;
-  final labels = AppLocalizations.of(Get.context);
 
   /// INIT
   @override
   void onInit() {
-    print(newPatient);
     if (Get.arguments != null) {
       _patient.value = Get.arguments;
       _gender.value = _patient.value.patient.gender == PatientGender.female
@@ -64,7 +67,7 @@ class NewPatientController extends GetxController {
   String get barrio => _barrio.value;
   String get barrioError => _barrioError.value;
 
-  /// EVENTS
+  /// SETTERS
   void setGender(String gender) => _gender.value = gender;
 
   void chooseBirthDate(DateTime birthDate) {
@@ -74,7 +77,8 @@ class NewPatientController extends GetxController {
 
   void selectBarrio(String barrio) => _barrio.value = barrio;
 
-  Future registerEvent() async {
+  ///EVENTS
+  Future save() async {
     if (isValidRegistrationName(familyName.text) &&
         isValidRegistrationName(givenName.text) &&
         isValidRegistrationBirthDate(_birthDate.value) &&
@@ -112,8 +116,7 @@ class NewPatientController extends GetxController {
         (l) => Get.snackbar('Error', l.error),
         (r) {
           _patient.value.patient = r;
-          Get.toNamed(AppRoutes.CONTACTS,
-              arguments: [_patient.value, newPatient]);
+          Get.toNamed(AppRoutes.CONTACTS, arguments: _patient.value);
         },
       );
     } else {

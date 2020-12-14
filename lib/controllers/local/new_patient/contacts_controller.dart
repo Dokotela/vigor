@@ -14,45 +14,39 @@ class ContactsController extends GetxController {
   final _patient = PatientModel().obs;
   final labels = AppLocalizations.of(Get.context);
   final _contactsList = <PatientContact>[].obs;
-  final _relationTypes = relationshipTypes();
+
+  /// these 3 variables allow sorting by their header
   final _nameSort = 0.obs;
-  final _relation = ''.obs;
   final _relationSort = 0.obs;
-  final _relationError = ''.obs;
   final _barrioSort = 0.obs;
+
+  /// these are the fields that are used the in popup dialog
   final familyName = TextEditingController();
   final _familyNameError = ''.obs;
   final givenName = TextEditingController();
   final _givenNameError = ''.obs;
+  final relationTypes = relationshipTypes();
+  final _relation = ''.obs;
+  final _relationError = ''.obs;
+  final barriosList = barrios;
   final _barrio = ''.obs;
   final _barrioError = ''.obs;
-  final _barriosList = barrios;
-  final newPatient = Get.arguments[1];
 
   /// INIT
   @override
   void onInit() {
-    _patient.value = Get.arguments[0];
+    _patient.value = Get.arguments;
     _contactsList.addAllNonNull(_patient.value.patient.contact);
     super.onInit();
   }
 
   // GETTERS
   PatientModel get patient => _patient.value;
+  int get currentListLength => _contactsList.length;
+
   int get nameSort => _nameSort.value;
   int get relationSort => _relationSort.value;
   int get barrioSort => _barrioSort.value;
-  String get relation => _relation.value;
-  int get currentListLength => _contactsList.length;
-  List<String> get relationTypes => _relationTypes;
-  String get relationError => _relationError.value;
-
-  String get familyNameError => _familyNameError.value;
-  String get givenNameError => _givenNameError.value;
-
-  List<String> get barriosList => _barriosList;
-  String get barrio => _barrio.value;
-  String get barrioError => _barrioError.value;
 
   String contactName(int index) =>
       lastCommaGivenName([_contactsList[index].name]);
@@ -85,6 +79,15 @@ class ContactsController extends GetxController {
           ? labels.general.address.neighborhood
           : _contactsList[index].address?.district ??
               labels.general.address.neighborhood;
+
+  String get familyNameError => _familyNameError.value;
+  String get givenNameError => _givenNameError.value;
+
+  String get relation => _relation.value;
+  String get relationError => _relationError.value;
+
+  String get barrio => _barrio.value;
+  String get barrioError => _barrioError.value;
 
   // SETTERS
   void setupForNewContact() {

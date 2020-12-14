@@ -20,9 +20,15 @@ class VaxDatesPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            SizedBox(height: 4.0),
+            MinInfoBanner(
+              editPatient: () => controller.controller.editPatient(),
+              name: controller.controller.name(),
+              birthDate: controller.controller.birthDate(),
+            ),
             Container(
               height: Get.height / 2,
-              child: controller.dateList.isEmpty
+              child: controller.immList.isEmpty
                   ? _noPrevious
                   : Obx(
                       () => ListView.separated(
@@ -30,19 +36,15 @@ class VaxDatesPage extends StatelessWidget {
                         padding: const EdgeInsets.all(8),
                         separatorBuilder: (BuildContext context, int index) =>
                             const Divider(),
-                        itemCount: controller.dateList.length,
+                        itemCount: controller.immList.length,
                         itemBuilder: (BuildContext context, int index) => Obx(
                           () => Row(
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
                               Text(
-                                dateFromDateTime(
-                                    controller.dateList[index].current),
+                                controller.dateString(index),
                                 style: TextStyle(
                                   fontSize: 20,
-                                  decoration: controller.isDeleted(index)
-                                      ? TextDecoration.lineThrough
-                                      : null,
                                 ),
                               ),
                               Material(
@@ -52,20 +54,17 @@ class VaxDatesPage extends StatelessWidget {
                                 child: IconButton(
                                   icon: Icon(Icons.edit,
                                       color: Get.theme.colorScheme.onPrimary),
-                                  onPressed: () => controller.isDeleted(index)
-                                      ? null
-                                      : showDatePicker(
-                                          context: Get.context,
-                                          locale: Get.locale,
-                                          initialDate:
-                                              controller.currentDate(index),
-                                          firstDate: DateTime(1900, 1, 1),
-                                          lastDate: DateTime(2999, 12, 31),
-                                        ).then(
-                                          (date) {
-                                            controller.editDate(index, date);
-                                          },
-                                        ),
+                                  onPressed: () => showDatePicker(
+                                    context: Get.context,
+                                    locale: Get.locale,
+                                    initialDate: controller.currentDate(index),
+                                    firstDate: DateTime(1900, 1, 1),
+                                    lastDate: DateTime(2999, 12, 31),
+                                  ).then(
+                                    (date) {
+                                      controller.editDate(index, date);
+                                    },
+                                  ),
                                 ),
                               ),
                               Material(
@@ -83,20 +82,6 @@ class VaxDatesPage extends StatelessWidget {
                         ),
                       ),
                     ),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                FlatButton(
-                  child: Text(
-                    'Cancel',
-                    style: TextStyle(
-                      color: Get.theme.colorScheme.primary,
-                    ),
-                  ),
-                  onPressed: () => Get.back(),
-                ),
-              ],
             ),
           ],
         ),

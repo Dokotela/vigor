@@ -1,6 +1,7 @@
 export 'action_button.dart';
 export 'app_bar.dart';
 export 'bottom_navigation_bar.dart';
+export 'drop_down_selection.dart';
 export 'info_banner.dart';
 export 'min_info_banner.dart';
 export 'ordered_list.dart';

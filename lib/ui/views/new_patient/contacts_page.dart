@@ -88,6 +88,7 @@ class ContactsPage extends StatelessWidget {
       child: Scaffold(
         appBar: VigorAppBar(title: 'Contacts'),
         body: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(
               child: Obx(
@@ -117,10 +118,12 @@ class ContactsPage extends StatelessWidget {
               ),
             ),
             ThinActionButton(
-              buttonText: 'Complete',
+              buttonText: 'Patient Home',
               onPressed: () async => Get.toNamed(AppRoutes.PATIENT_HOME_PAGE,
                   arguments: controller.patient),
+              width: Get.width * .5,
             ),
+            SizedBox(height: Get.height * .03),
           ],
         ),
         floatingActionButton: AddNew(() async => await Get.dialog(addNew())),
