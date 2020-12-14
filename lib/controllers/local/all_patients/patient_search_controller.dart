@@ -25,7 +25,7 @@ class PatientSearchController extends GetxController {
 
   /// GETTER FUNCTIONS
   String patientName(int index) =>
-      lastCommaGivenName(_activePatientList[index] as Patient);
+      lastCommaGivenName((_activePatientList[index] as Patient).name);
   String patientDob(int index) =>
       dateFromFhirDate((_activePatientList[index] as Patient).birthDate);
   String patientBarrio(int index) =>
@@ -48,7 +48,7 @@ class PatientSearchController extends GetxController {
   void searchPatientByName(String name) {
     _activePatientList.assignAll(<Resource>[]);
     for (final patient in _fullPatientList) {
-      if (lastCommaGivenName(patient as Patient)
+      if (lastCommaGivenName((patient as Patient).name)
           .toLowerCase()
           .contains(name.toLowerCase())) {
         _activePatientList.add(patient);
@@ -68,9 +68,9 @@ class PatientSearchController extends GetxController {
     }
   }
 
-  int _sortName(a, b) => lastCommaGivenName(a as Patient)
+  int _sortName(Patient a, Patient b) => lastCommaGivenName(a.name)
       .toLowerCase()
-      .compareTo(lastCommaGivenName(b as Patient).toLowerCase());
+      .compareTo(lastCommaGivenName(b.name).toLowerCase());
 
   void sortByBirthdate() {
     _nameSort.value = 0;

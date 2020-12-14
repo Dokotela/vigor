@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vigor/ui/styled_components/styled_components.dart';
 
 import '../../../controllers/local/new_patient/contacts_controller.dart';
 import '../../../localization.dart';
-import '../../styled_components/action_button.dart';
 import '../../styled_components/app_bar.dart';
 import '../../styled_components/bottom_navigation_bar.dart';
 import 'contacts_view_controller.dart';
-import 'widgets/barrio.dart';
-import 'widgets/names.dart';
-import 'widgets/relation.dart';
 
 class ContactsPage extends StatelessWidget {
   @override
@@ -17,7 +14,6 @@ class ContactsPage extends StatelessWidget {
     final labels = AppLocalizations.of(context);
     final ContactsController controller = Get.put(ContactsController());
     final viewController = Get.put(ContactsViewController());
-    final _padding = EdgeInsets.fromLTRB(0, 0, 0, 0);
 
     return GestureDetector(
       onTap: () {
@@ -27,8 +23,36 @@ class ContactsPage extends StatelessWidget {
         }
       },
       child: Scaffold(
-        resizeToAvoidBottomInset: false,
         appBar: VigorAppBar(title: 'Contacts'),
+        body: Column(
+          children: [
+            Expanded(
+              child: Obx(
+                () => OrderedList(
+                  label1: Text('Patient', style: Get.theme.textTheme.headline6),
+                  sortCol1: controller.sortByName,
+                  order1: viewController.getOrder(controller.nameSort),
+                  entry1: controller.contactName,
+                  label2: Text(
+                    labels.general.birthDate,
+                    style: Get.theme.textTheme.headline6,
+                  ),
+                  sortCol2: controller.sortByRelation,
+                  order2: viewController.getOrder(controller.relationSort),
+                  entry2: controller.contactRelation,
+                  label3: Icon(Icons.location_on_outlined),
+                  sortCol3: controller.sortByBarrio,
+                  order3: viewController.getOrder(controller.barrioSort),
+                  entry3: controller.contactBarrio,
+                  listLength: controller.currentListLength,
+                  selectEntry: null,
+                  addNew: null,
+                ),
+              ),
+            ),
+          ],
+        ),
+        bottomNavigationBar: bottomAppBar,
         // body: Column(
         //   children: <Widget>[
         //     Row(
@@ -142,7 +166,6 @@ class ContactsPage extends StatelessWidget {
         //     color: Get.theme.colorScheme.onPrimary,
         //   ),
         // ),
-        bottomNavigationBar: bottomAppBar,
       ),
     );
   }

@@ -141,7 +141,7 @@ class PatientModel {
   //   }
   // }
 
-  String name() => lastCommaGivenName(patient);
+  String name() => lastCommaGivenName(patient.name);
   String familyName() => patient?.name == null ? '' : patient.name[0].family;
   String givenName() => patient?.name == null
       ? ''

@@ -1,10 +1,11 @@
 import 'package:fhir/r4.dart';
+import 'package:vigor/ui/views/new_patient/widgets/names.dart';
 
-String lastCommaGivenName(Patient patient) {
-  if (patient.name == null) {
+String lastCommaGivenName(List<HumanName> names) {
+  if (NamesInputWidget == null) {
     return '';
   } else {
-    final name = patient.name[0];
+    final name = names[0];
     String nameString = '${name?.family ?? ''},';
     if (name?.given != null) {
       for (final givenName in name.given) {
