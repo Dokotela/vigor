@@ -1,25 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../../localization.dart';
-
-class GenderSelectionWidget extends StatelessWidget {
-  const GenderSelectionWidget({
-    @required this.genderTypes,
-    @required this.displayGender,
-    @required this.setGender,
-    @required this.genderError,
+class DropDownSelection extends StatelessWidget {
+  const DropDownSelection({
+    @required this.title,
+    @required this.selectionList,
+    @required this.display,
+    @required this.selectNew,
+    @required this.error,
   });
 
-  final List<String> genderTypes;
-  final String displayGender;
-  final Function setGender;
-  final String genderError;
+  final String title;
+  final List<String> selectionList;
+  final String display;
+  final Function selectNew;
+  final String error;
 
   @override
   Widget build(BuildContext context) {
-    final labels = AppLocalizations.of(context);
-
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
@@ -27,30 +25,30 @@ class GenderSelectionWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             Text(
-              labels.general.sexAtBirth.title,
+              title,
               style: Get.theme.textTheme.bodyText1,
             ),
             SizedBox(width: Get.width / 15),
             DropdownButton<String>(
-              value: displayGender,
+              value: display,
               icon: Icon(Icons.keyboard_arrow_down),
-              items: genderTypes.map(
-                (String gender) {
+              items: selectionList.map(
+                (String selection) {
                   return DropdownMenuItem<String>(
-                    value: gender,
+                    value: selection,
                     child: Text(
-                      gender,
+                      selection,
                       style: Get.textTheme.bodyText1,
                     ),
                   );
                 },
               ).toList(),
-              onChanged: (newVal) => setGender(newVal),
+              onChanged: (newVal) => selectNew(newVal),
             ),
           ],
         ),
         Text(
-          genderError,
+          error,
           style: Get.theme.textTheme.caption
               .copyWith(color: Get.theme.colorScheme.error),
         ),

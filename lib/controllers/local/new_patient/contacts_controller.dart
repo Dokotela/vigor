@@ -1,5 +1,7 @@
 import 'package:fhir/r4.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vigor/_internal/constants/constants.dart';
 
 import '../../../_internal/utils/relationship_types.dart';
 import '../../../_internal/utils/utils.dart';
@@ -14,12 +16,19 @@ class ContactsController extends GetxController {
   final _nameSort = 0.obs;
   final _relationSort = 0.obs;
   final _barrioSort = 0.obs;
+  final familyName = TextEditingController();
+  final _familyNameError = ''.obs;
+  final givenName = TextEditingController();
+  final _givenNameError = ''.obs;
+  final _barrio = ''.obs;
+  final _barrioError = ''.obs;
+  final _barriosList = barrios;
 
   /// INIT
   @override
   void onInit() {
     _patient.value = Get.arguments;
-    _contactsList.addAll(_patient.value.patient.contact);
+    _contactsList.addAllNonNull(_patient.value.patient.contact);
     super.onInit();
   }
 
@@ -28,6 +37,13 @@ class ContactsController extends GetxController {
   int get relationSort => _relationSort.value;
   int get barrioSort => _barrioSort.value;
   int get currentListLength => _contactsList.length;
+
+  String get familyNameError => _familyNameError.value;
+  String get givenNameError => _givenNameError.value;
+
+  List<String> get barriosList => _barriosList;
+  String get barrio => _barrio.value;
+  String get barrioError => _barrioError.value;
 
   String contactName(int index) =>
       lastCommaGivenName([_contactsList[index].name]);
@@ -175,4 +191,6 @@ class ContactsController extends GetxController {
 
   int _sortBarrio(PatientContact a, PatientContact b) =>
       (a?.address?.district ?? '').compareTo(b?.address?.district ?? '');
+
+  void selectBarrio(String barrio) => _barrio.value = barrio;
 }

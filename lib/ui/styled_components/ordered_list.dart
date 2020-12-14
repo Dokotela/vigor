@@ -17,7 +17,6 @@ class OrderedList extends StatelessWidget {
     @required this.entry3,
     @required this.listLength,
     @required this.selectEntry,
-    @required this.addNew,
   });
 
   final Widget label1;
@@ -34,7 +33,6 @@ class OrderedList extends StatelessWidget {
   final Function entry3;
   final int listLength;
   final Function selectEntry;
-  final Function addNew;
 
   @override
   Widget build(BuildContext context) {
@@ -119,17 +117,6 @@ class OrderedList extends StatelessWidget {
               ),
             ),
           ),
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            FloatingActionButton(
-              elevation: 10.0,
-              backgroundColor: Get.theme.colorScheme.onPrimary,
-              onPressed: addNew,
-              child: Icon(Icons.add, color: Get.theme.colorScheme.primary),
-            ),
-          ],
         ),
       ],
     );

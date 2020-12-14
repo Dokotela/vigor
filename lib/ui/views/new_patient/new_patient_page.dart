@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:vigor/ui/styled_components/thin_action_button.dart';
+import 'package:vigor/ui/views/new_patient/widgets/drop_down_selection.dart';
 
 import '../../../controllers/local/new_patient/new_patient_controller.dart';
+import '../../../localization.dart';
 import '../../styled_components/app_bar.dart';
 import '../../styled_components/bottom_navigation_bar.dart';
-import 'widgets/barrio.dart';
 import 'widgets/birthDate.dart';
-import 'widgets/gender.dart';
 import 'widgets/names.dart';
 
 class NewPatientPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(NewPatientController());
+    final labels = AppLocalizations.of(context);
 
     return GestureDetector(
       onTap: () {
@@ -44,11 +45,12 @@ class NewPatientPage extends StatelessWidget {
                     /// reusable widget for entering gender at birth, is passed a
                     /// boolean (true = female, false = male), and then the
                     /// controller function to change it
-                    GenderSelectionWidget(
-                      genderTypes: controller.genderTypes,
-                      displayGender: controller.gender,
-                      setGender: controller.setGender,
-                      genderError: controller.genderError,
+                    DropDownSelection(
+                      title: labels.general.sexAtBirth.title,
+                      selectionList: controller.genderTypes,
+                      display: controller.gender,
+                      selectNew: controller.setGender,
+                      error: controller.genderError,
                     ),
 
                     /// reusable widget for entering birthdate, arguments are
@@ -65,11 +67,12 @@ class NewPatientPage extends StatelessWidget {
                     /// reusable widget for selecting neighborhood, includes the
                     /// list of neighborhoods, which one to display, the event
                     /// to change it, and the error message
-                    BarrioWidget(
-                      barriosList: controller.barriosList,
-                      displayBarrio: controller.barrio,
-                      setBarrio: controller.barrioEvent,
-                      dispBarrioError: controller.barrioError,
+                    DropDownSelection(
+                      title: labels.general.address.neighborhood,
+                      selectionList: controller.barriosList,
+                      display: controller.barrio,
+                      selectNew: controller.selectBarrio,
+                      error: controller.barrioError,
                     ),
 
                     SizedBox(height: Get.height / 15),

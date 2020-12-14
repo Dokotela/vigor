@@ -70,7 +70,7 @@ class NewPatientController extends GetxController {
     _birthDateString.value = dateFromDateTime(_birthDate.value);
   }
 
-  void barrioEvent(String barrio) => _barrio.value = barrio;
+  void selectBarrio(String barrio) => _barrio.value = barrio;
 
   Future registerEvent() async {
     if (isValidRegistrationName(familyName.text) &&
@@ -106,10 +106,13 @@ class NewPatientController extends GetxController {
             );
 
       final saveResult = await IFhirDb().save(_patient.value.patient);
-      saveResult.fold((l) => Get.snackbar('Error', l.error), (r) {
-        _patient.value.patient = r;
-        Get.toNamed(AppRoutes.CONTACTS, arguments: _patient.value);
-      });
+      saveResult.fold(
+        (l) => Get.snackbar('Error', l.error),
+        (r) {
+          _patient.value.patient = r;
+          Get.toNamed(AppRoutes.CONTACTS, arguments: _patient.value);
+        },
+      );
     } else {
       if (!isValidRegistrationName(familyName.text)) {
         _familyNameError.value = labels.general.familyNameError;

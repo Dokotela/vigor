@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vigor/ui/styled_components/add_new.dart';
 import 'package:vigor/ui/styled_components/styled_components.dart';
 
 import '../../../controllers/local/all_patients/patient_search_controller.dart';
@@ -15,7 +16,6 @@ class AllPatientsPage extends StatelessWidget {
     final controller = Get.put(PatientSearchController());
     final viewController = Get.put(PatientSearchViewController());
     final searchName = TextEditingController();
-    final _padding = EdgeInsets.fromLTRB(0, 0, 0, 0);
 
     return GestureDetector(
       onTap: () {
@@ -79,12 +79,12 @@ class AllPatientsPage extends StatelessWidget {
                   entry3: controller.patientBarrio,
                   listLength: controller.currentListLength,
                   selectEntry: controller.selectPatient,
-                  addNew: () => Get.toNamed(AppRoutes.NEW_PATIENT),
                 ),
               ),
             ),
           ],
         ),
+        floatingActionButton: AddNew(() => Get.toNamed(AppRoutes.NEW_PATIENT)),
         bottomNavigationBar: bottomAppBar,
       ),
     );
