@@ -81,18 +81,18 @@ class PatientModel {
     }
   }
 
-  // Future updateVaccine(
-  //     String cvx, FhirDateTime current, FhirDateTime original) async {
-  //   final immunization = _newVax(cvx, original);
-  //   final index = _vaxIndex(immunization);
-  //   if (index != -1) {
-  //     pastImmunizations[index] =
-  //         pastImmunizations[index].copyWith(occurrenceDateTime: current);
-  //     final iFhirDb = IFhirDb();
-  //     await iFhirDb.save(immunization);
-  //     immHx = IDrVaxCast.drVaxCast(immunizations: pastImmunizations);
-  //   }
-  // }
+  Future editDate(Immunization vax, DateTime newDate) async {
+    final index =
+        pastImmunizations.indexWhere((vaccine) => vaccine.id == vax.id);
+
+    if (index != -1) {
+      pastImmunizations[index] = pastImmunizations[index]
+          .copyWith(occurrenceDateTime: FhirDateTime(newDate));
+      final iFhirDb = IFhirDb();
+      await iFhirDb.save(pastImmunizations[index]);
+      immHx = IDrVaxCast.drVaxCast(immunizations: pastImmunizations);
+    }
+  }
 
   /// These two functions both make full use of the vax_cast package to allow
   /// complex vaccine forecasting

@@ -11,7 +11,7 @@ class PatientImmController extends GetxController {
   /// PROPERTIES
   final _patient = PatientModel().obs;
   final _display = VaccineDisplay().obs;
-  var isReady = false.obs;
+  final _isReady = false.obs;
 
   /// INIT
   @override
@@ -21,13 +21,11 @@ class PatientImmController extends GetxController {
     await _patient.value.loadImmunizations();
     setDisplay();
     super.onInit();
-    isReady.value = true;
+    _isReady.value = true;
   }
 
-  @override
-  void update([List<String> ids, bool condition = true]) {
-    super.update();
-  }
+  /// because I can't get the onInit to load otherwise
+  bool isReady() => _isReady.value;
 
   /// GETTER FUNCTIONS
   String name() => _patient.value.name();
@@ -42,9 +40,11 @@ class PatientImmController extends GetxController {
   Future loadImmunizations() => _patient.value.loadImmunizations();
 
   void setDisplay() {
+    _isReady.value = false;
     _display.value.fullVaxDates = _patient.value.immHx;
     _display.value.setDisplayDates();
     _display.value.checkValidityOfDoses();
+    _isReady.value = true;
   }
 
   /// EVENTS
@@ -60,11 +60,10 @@ class PatientImmController extends GetxController {
     update();
   }
 
-  // Future updateVaccine(
-  //     String cvx, FhirDateTime current, FhirDateTime original) async {
-  //   await _patient.value.updateVaccine(cvx, current, original);
-  //   update();
-  // }
+  Future editDate(Immunization vax, DateTime newDate) async {
+    await _patient.value.editDate(vax, newDate);
+    update();
+  }
 
   void editPatient() =>
       Get.toNamed(AppRoutes.NEW_PATIENT, arguments: _patient.value);

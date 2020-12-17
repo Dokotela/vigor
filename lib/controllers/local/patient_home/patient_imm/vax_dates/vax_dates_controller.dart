@@ -49,11 +49,9 @@ class VaxDatesController extends GetxController {
     Get.back();
   }
 
-  void editDate(int index, DateTime newDate) {
-    // if (newDate != null) {
-    //   dateList[index] = dateList[index]
-    //     ..current = newDate
-    //     ..updated = true;
-    // }
+  Future editDate(int index, DateTime newDate) async {
+    if (newDate != null) {
+      await controller.editDate(immList[index], newDate);
+    }
   }
 }
