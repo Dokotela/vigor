@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:vigor/ui/styled_components/add_new.dart';
 import 'package:vigor/ui/styled_components/styled_components.dart';
 
-import '../../../../../_internal/utils/utils.dart';
 import '../../../../../controllers/local/patient_home/patient_imm/vax_dates/vax_dates_controller.dart';
 
 class VaxDatesPage extends StatelessWidget {
