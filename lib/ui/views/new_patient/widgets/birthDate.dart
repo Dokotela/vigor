@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vigor/ui/styled_components/styled_components.dart';
 
 import '../../../../localization.dart';
 
@@ -32,24 +33,11 @@ class BirthDateWidget extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             FlatButton(
-              onPressed: () => showDatePicker(
-                  context: Get.context,
-                  locale: Get.locale,
+              onPressed: () => showMyDatePicker(
                   initialDate: birthDate == DateTime(1900, 1, 1)
                       ? DateTime.now()
                       : birthDate,
-                  firstDate: DateTime(1900, 1, 1),
-                  lastDate: DateTime(2999, 12, 31),
-                  builder: (BuildContext context, child) {
-                    return Theme(
-                      data: Get.theme.copyWith(
-                        colorScheme: Get.theme.colorScheme.copyWith(
-                            primary: Get.theme.colorScheme.onPrimary,
-                            onPrimary: Get.theme.colorScheme.primary),
-                      ),
-                      child: child,
-                    );
-                  }).then((date) => chooseBirthDate(date)),
+                  function: chooseBirthDate),
               child: Container(
                 decoration: BoxDecoration(
                   border: Border(bottom: BorderSide(color: Colors.grey[300])),

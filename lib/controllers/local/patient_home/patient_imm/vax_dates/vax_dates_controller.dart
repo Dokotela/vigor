@@ -53,5 +53,6 @@ class VaxDatesController extends GetxController {
     if (newDate != null) {
       await controller.editDate(immList[index], newDate);
     }
+    updateImmList();
   }
 }

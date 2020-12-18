@@ -62,6 +62,7 @@ class PatientImmController extends GetxController {
 
   Future editDate(Immunization vax, DateTime newDate) async {
     await _patient.value.editDate(vax, newDate);
+    setDisplay();
     update();
   }
 

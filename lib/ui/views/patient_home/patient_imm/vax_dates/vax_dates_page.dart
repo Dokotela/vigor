@@ -52,17 +52,11 @@ class VaxDatesPage extends StatelessWidget {
                                 child: IconButton(
                                   icon: Icon(Icons.edit,
                                       color: Get.theme.colorScheme.onPrimary),
-                                  onPressed: () => showDatePicker(
-                                    context: Get.context,
-                                    locale: Get.locale,
-                                    initialDate: controller.currentDate(index),
-                                    firstDate: DateTime(1900, 1, 1),
-                                    lastDate: DateTime(2999, 12, 31),
-                                  ).then(
-                                    (date) {
-                                      controller.editDate(index, date);
-                                    },
-                                  ),
+                                  onPressed: () => showMyDatePicker(
+                                      initialDate:
+                                          controller.currentDate(index),
+                                      function: controller.editDate,
+                                      index: index),
                                 ),
                               ),
                               Material(
