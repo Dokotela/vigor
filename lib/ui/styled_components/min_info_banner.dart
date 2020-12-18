@@ -5,12 +5,10 @@ import '../../localization.dart';
 
 class MinInfoBanner extends StatelessWidget {
   const MinInfoBanner({
-    @required this.editPatient,
     @required this.name,
     @required this.birthDate,
   });
 
-  final Function editPatient;
   final String name;
   final String birthDate;
 
@@ -21,10 +19,6 @@ class MinInfoBanner extends StatelessWidget {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        IconButton(
-          icon: Icon(Icons.edit, color: Get.theme.colorScheme.onBackground),
-          onPressed: editPatient,
-        ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

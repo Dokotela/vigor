@@ -63,7 +63,6 @@ class PatientImmPage extends StatelessWidget {
         children: [
           SizedBox(height: 4.0),
           MinInfoBanner(
-            editPatient: () => controller.editPatient(),
             name: controller.name(),
             birthDate: controller.birthDate(),
           ),
