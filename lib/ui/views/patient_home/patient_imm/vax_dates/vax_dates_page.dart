@@ -21,7 +21,6 @@ class VaxDatesPage extends StatelessWidget {
           children: [
             SizedBox(height: 4.0),
             MinInfoBanner(
-              editPatient: () => controller.controller.editPatient(),
               name: controller.controller.name(),
               birthDate: controller.controller.birthDate(),
             ),
