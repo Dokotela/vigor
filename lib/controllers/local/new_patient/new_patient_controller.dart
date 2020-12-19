@@ -1,6 +1,8 @@
+import 'package:dartz/dartz.dart';
 import 'package:fhir/r4.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vigor/models/failures/db_failures.dart';
 import 'package:vigor/services/i_fhir_db.dart';
 
 import '../../../_internal/constants/constants.dart';
@@ -78,7 +80,7 @@ class NewPatientController extends GetxController {
   void selectBarrio(String barrio) => _barrio.value = barrio;
 
   ///EVENTS
-  Future save() async {
+  Future<Either<DbFailure, Unit>> save() async {
     if (isValidRegistrationName(familyName.text) &&
         isValidRegistrationName(givenName.text) &&
         isValidRegistrationBirthDate(_birthDate.value) &&
@@ -112,11 +114,11 @@ class NewPatientController extends GetxController {
             );
 
       final saveResult = await IFhirDb().save(_patient.value.patient);
-      saveResult.fold(
-        (l) => Get.snackbar('Error', l.error),
+      return saveResult.fold(
+        (l) => left(l),
         (r) {
           _patient.value.patient = r;
-          Get.toNamed(AppRoutes.CONTACTS, arguments: _patient.value);
+          return right(unit);
         },
       );
     } else {
@@ -135,6 +137,10 @@ class NewPatientController extends GetxController {
       if (!isValidGender(gender)) {
         _genderError.value = labels.gender.error;
       }
+      return left(DbFailure.unableToSave(error: labels.general.completeError));
     }
   }
+
+  void completeRegistration() =>
+      Get.toNamed(AppRoutes.CONTACTS, arguments: _patient.value);
 }

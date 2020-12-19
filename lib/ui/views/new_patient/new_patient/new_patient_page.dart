@@ -83,7 +83,25 @@ class NewPatientPage extends StatelessWidget {
                     /// button to register patient
                     ThinActionButton(
                       buttonText: labels.actions.save,
-                      onPressed: () => controller.save(),
+                      onPressed: () async {
+                        final saveAttempt = await controller.save();
+                        saveAttempt.fold(
+                          (l) => Get.snackbar('Error', l.error),
+                          (r) async {
+                            showDialog(
+                              context: context,
+                              builder: (context) {
+                                Future.delayed(Duration(seconds: 1), () {
+                                  controller.completeRegistration();
+                                });
+                                return AlertDialog(
+                                  title: Text(labels.registration.completed),
+                                );
+                              },
+                            );
+                          },
+                        );
+                      },
                     ),
                   ],
                 ),

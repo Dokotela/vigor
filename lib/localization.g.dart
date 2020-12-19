@@ -66,6 +66,9 @@ class AppLocalizations {
         male: "Male",
         title: "Sex at Birth",
       ),
+      general: AppLocalizations_Labels_General(
+        completeError: "Please complete all required fields.",
+      ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "English",
         title: "English",
@@ -109,6 +112,9 @@ class AppLocalizations {
       ),
       patient: AppLocalizations_Labels_Patient(
         title: "Patient",
+      ),
+      registration: AppLocalizations_Labels_Registration(
+        completed: "Patient saved successfuly. Please enter their contacts.",
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: "Aunt",
@@ -191,6 +197,9 @@ class AppLocalizations {
         male: "Masculino",
         title: "El sexo en el nacimiento",
       ),
+      general: AppLocalizations_Labels_General(
+        completeError: "Por favor completa todos los campos requeridos.",
+      ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "Inglés",
         title: "Inglés",
@@ -234,6 +243,10 @@ class AppLocalizations {
       ),
       patient: AppLocalizations_Labels_Patient(
         title: "Paciente",
+      ),
+      registration: AppLocalizations_Labels_Registration(
+        completed:
+            "Paciente salvó exitosamente. Por favor, introduzca sus contactos.",
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: "Tía",
@@ -316,6 +329,9 @@ class AppLocalizations {
         male: "الذكر",
         title: "الجنس عند الولادة",
       ),
+      general: AppLocalizations_Labels_General(
+        completeError: "يرجى تعبئة جميع الحقول المطلوبة.",
+      ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "الإنجليزية",
         title: "الإنجليزية",
@@ -359,6 +375,9 @@ class AppLocalizations {
       ),
       patient: AppLocalizations_Labels_Patient(
         title: "صبور",
+      ),
+      registration: AppLocalizations_Labels_Registration(
+        completed: "حفظ المريض بنجاح. الرجاء إدخال اتصالاتهم.",
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: "عمة",
@@ -441,6 +460,9 @@ class AppLocalizations {
         male: "पुरुष",
         title: "जन्म के समय लिंग",
       ),
+      general: AppLocalizations_Labels_General(
+        completeError: "सभी आवश्यक क्षेत्रों को पूरा करें।",
+      ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "अंग्रेज़ी",
         title: "अंग्रेज़ी",
@@ -484,6 +506,9 @@ class AppLocalizations {
       ),
       patient: AppLocalizations_Labels_Patient(
         title: "मरीज़",
+      ),
+      registration: AppLocalizations_Labels_Registration(
+        completed: "रोगी सफलतापूर्वक बचा लिया। अपने संपर्कों दर्ज करें।",
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: "चाची",
@@ -566,6 +591,9 @@ class AppLocalizations {
         male: "мужчина",
         title: "Пол при рождении",
       ),
+      general: AppLocalizations_Labels_General(
+        completeError: "Пожалуйста заполните все поля.",
+      ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "английский",
         title: "английский",
@@ -609,6 +637,10 @@ class AppLocalizations {
       ),
       patient: AppLocalizations_Labels_Patient(
         title: "Терпеливый",
+      ),
+      registration: AppLocalizations_Labels_Registration(
+        completed:
+            "Пациент сохранен успешно. Пожалуйста, введите свои контактные данные.",
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: "тетка",
@@ -691,6 +723,9 @@ class AppLocalizations {
         male: "পুরুষ",
         title: "জন্মের সময় যৌন",
       ),
+      general: AppLocalizations_Labels_General(
+        completeError: "সমস্ত প্রয়োজনীয় ক্ষেত্রগুলি পূরণ করুন দয়া করে.",
+      ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "ইংরেজি",
         title: "ইংরেজি",
@@ -734,6 +769,10 @@ class AppLocalizations {
       ),
       patient: AppLocalizations_Labels_Patient(
         title: "রোগী",
+      ),
+      registration: AppLocalizations_Labels_Registration(
+        completed:
+            "রোগীর successfuly সংরক্ষিত হয়েছে। তাদের পরিচিতি লিখুন দয়া করে।",
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: "মাসি",
@@ -816,6 +855,9 @@ class AppLocalizations {
         male: "အထီး",
         title: "မွေးဖွားခြင်းမှာလိင်",
       ),
+      general: AppLocalizations_Labels_General(
+        completeError: "အားလုံးလိုအပ်သောကွက်လပ်များကိုဖြည့်စွက်ပေးပါ။",
+      ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "အင်္ဂလိပ်",
         title: "အင်္ဂလိပ်",
@@ -859,6 +901,10 @@ class AppLocalizations {
       ),
       patient: AppLocalizations_Labels_Patient(
         title: "လူနာ",
+      ),
+      registration: AppLocalizations_Labels_Registration(
+        completed:
+            "လူနာ successfuly ကယ်တင်ခြင်းသို့ရောက်ရ၏။ သူတို့ရဲ့အဆက်အသွယ်ရိုက်ထည့်ပေးပါ။",
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: "အဒေါ်",
@@ -941,6 +987,9 @@ class AppLocalizations {
         male: "男",
         title: "性别出生",
       ),
+      general: AppLocalizations_Labels_General(
+        completeError: "请填写所有必填字段。",
+      ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "英语",
         title: "英语",
@@ -984,6 +1033,9 @@ class AppLocalizations {
       ),
       patient: AppLocalizations_Labels_Patient(
         title: "患者",
+      ),
+      registration: AppLocalizations_Labels_Registration(
+        completed: "患者successfuly保存。请输入自己的人脉。",
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: "姨",
@@ -1066,6 +1118,9 @@ class AppLocalizations {
         male: "男",
         title: "性別出生",
       ),
+      general: AppLocalizations_Labels_General(
+        completeError: "請填寫所有必填字段。",
+      ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "英語",
         title: "英語",
@@ -1109,6 +1164,9 @@ class AppLocalizations {
       ),
       patient: AppLocalizations_Labels_Patient(
         title: "患者",
+      ),
+      registration: AppLocalizations_Labels_Registration(
+        completed: "患者successfuly保存。請輸入自己的人脈。",
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: "姨",
@@ -1191,6 +1249,9 @@ class AppLocalizations {
         male: "نر",
         title: "جنسی در هنگام تولد",
       ),
+      general: AppLocalizations_Labels_General(
+        completeError: "لطفا تمام فیلد های مورد نیاز را تکمیل کنید.",
+      ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "انگلیسی",
         title: "انگلیسی",
@@ -1235,6 +1296,10 @@ class AppLocalizations {
       ),
       patient: AppLocalizations_Labels_Patient(
         title: "صبور",
+      ),
+      registration: AppLocalizations_Labels_Registration(
+        completed:
+            "بیمار با موفقیت ذخیره شده است. لطفا اطلاعات تماس خود را وارد کنید.",
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: "عمه",
@@ -1317,6 +1382,9 @@ class AppLocalizations {
         male: "Masculin",
         title: "Sexe à la naissance",
       ),
+      general: AppLocalizations_Labels_General(
+        completeError: "S'il-vous-plaît complétez tous les champs requis.",
+      ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "Anglais",
         title: "Anglais",
@@ -1360,6 +1428,10 @@ class AppLocalizations {
       ),
       patient: AppLocalizations_Labels_Patient(
         title: "Patient",
+      ),
+      registration: AppLocalizations_Labels_Registration(
+        completed:
+            "Le patient a sauvé avec succès. S'il vous plaît entrer leurs contacts.",
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: "Tante",
@@ -1442,6 +1514,9 @@ class AppLocalizations {
         male: "Männlich",
         title: "Sex bei Geburt",
       ),
+      general: AppLocalizations_Labels_General(
+        completeError: "Bitte füllen Sie alle Pflichtfelder aus.",
+      ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "Englisch",
         title: "Englisch",
@@ -1485,6 +1560,10 @@ class AppLocalizations {
       ),
       patient: AppLocalizations_Labels_Patient(
         title: "Geduldig",
+      ),
+      registration: AppLocalizations_Labels_Registration(
+        completed:
+            "Patient gerettet successfuly. Bitte geben Sie ihre Kontakte.",
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: "Tante",
@@ -1567,6 +1646,9 @@ class AppLocalizations {
         male: "Pria",
         title: "Seks di Lahir",
       ),
+      general: AppLocalizations_Labels_General(
+        completeError: "Lengkapi semua bidang yang diperlukan.",
+      ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "Inggris",
         title: "Inggris",
@@ -1610,6 +1692,9 @@ class AppLocalizations {
       ),
       patient: AppLocalizations_Labels_Patient(
         title: "Sabar",
+      ),
+      registration: AppLocalizations_Labels_Registration(
+        completed: "Pasien disimpan successfuly. Masukkan kontak mereka.",
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: "Bibi",
@@ -1692,6 +1777,9 @@ class AppLocalizations {
         male: "男性",
         title: "出生時のセックス",
       ),
+      general: AppLocalizations_Labels_General(
+        completeError: "すべての必須フィールドを入力してください。",
+      ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "英語",
         title: "英語",
@@ -1735,6 +1823,9 @@ class AppLocalizations {
       ),
       patient: AppLocalizations_Labels_Patient(
         title: "患者",
+      ),
+      registration: AppLocalizations_Labels_Registration(
+        completed: "患者はsuccessfuly保存しました。自分の連絡先を入力してください。",
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: "叔母",
@@ -1817,6 +1908,9 @@ class AppLocalizations {
         male: "បុរស",
         title: "ការរួមភេទនៅកំណើត",
       ),
+      general: AppLocalizations_Labels_General(
+        completeError: "សូមបំពេញវាលដែលទាមទារទាំងអស់។",
+      ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "ភាសាអង់គ្លេស",
         title: "ភាសាអង់គ្លេស",
@@ -1860,6 +1954,10 @@ class AppLocalizations {
       ),
       patient: AppLocalizations_Labels_Patient(
         title: "អ្នកជំងឺ",
+      ),
+      registration: AppLocalizations_Labels_Registration(
+        completed:
+            "អ្នកជម្ងឺដែលបានរក្សាទុក successfuly ។ សូមបញ្ចូលទំនាក់ទំនងរបស់ពួកគេ។",
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: "មីង",
@@ -1942,6 +2040,9 @@ class AppLocalizations {
         male: "남성",
         title: "출생에서 섹스",
       ),
+      general: AppLocalizations_Labels_General(
+        completeError: "모든 필수 필드를 작성하십시오.",
+      ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "영어",
         title: "영어",
@@ -1985,6 +2086,9 @@ class AppLocalizations {
       ),
       patient: AppLocalizations_Labels_Patient(
         title: "환자",
+      ),
+      registration: AppLocalizations_Labels_Registration(
+        completed: "환자는 successfuly 저장. 자신의 연락처를 입력 해주세요.",
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: "이모",
@@ -2067,6 +2171,9 @@ class AppLocalizations {
         male: "ຜູ້​ຊາຍ",
         title: "ເພດໃນເວລາເກີດ",
       ),
+      general: AppLocalizations_Labels_General(
+        completeError: "ກະລຸນາເຮັດສໍາເລັດທົ່ງຕ້ອງທັງຫມົດ.",
+      ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "ພາສາອັງກິດ",
         title: "ພາສາອັງກິດ",
@@ -2111,6 +2218,9 @@ class AppLocalizations {
       ),
       patient: AppLocalizations_Labels_Patient(
         title: "ຄົນເຈັບ",
+      ),
+      registration: AppLocalizations_Labels_Registration(
+        completed: "ຄົນເຈັບໄວ້ລຽບຮ້ອຍ. ກະລຸນາໃສ່ລາຍຊື່ຂອງເຂົາເຈົ້າ.",
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: "ປ້າ",
@@ -2193,6 +2303,9 @@ class AppLocalizations {
         male: "पुरुष",
         title: "जन्म येथे लिंग",
       ),
+      general: AppLocalizations_Labels_General(
+        completeError: "सर्व आवश्यक फील्ड पूर्ण करा.",
+      ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "इंग्रजी",
         title: "इंग्रजी",
@@ -2236,6 +2349,10 @@ class AppLocalizations {
       ),
       patient: AppLocalizations_Labels_Patient(
         title: "रुग्णांच्या",
+      ),
+      registration: AppLocalizations_Labels_Registration(
+        completed:
+            "रुग्णांच्या successfuly जतन. त्यांच्या संपर्क प्रविष्ट करा.",
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: "काकू",
@@ -2318,6 +2435,9 @@ class AppLocalizations {
         male: "पुरुष",
         title: "जन्म मा सेक्स",
       ),
+      general: AppLocalizations_Labels_General(
+        completeError: "कृपया सबै आवश्यक क्षेत्रहरू पूरा गर्नुहोस्।",
+      ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "अंग्रेजी",
         title: "अंग्रेजी",
@@ -2361,6 +2481,10 @@ class AppLocalizations {
       ),
       patient: AppLocalizations_Labels_Patient(
         title: "बिरामी",
+      ),
+      registration: AppLocalizations_Labels_Registration(
+        completed:
+            "रोगी successfuly सुरक्षित गरियो। आफ्नो सम्पर्क प्रविष्ट गर्नुहोस्।",
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: "चाची",
@@ -2443,6 +2567,9 @@ class AppLocalizations {
         male: "Masculino",
         title: "Sex at Birth",
       ),
+      general: AppLocalizations_Labels_General(
+        completeError: "Por favor, preencha todos os campos obrigatórios.",
+      ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "Inglês",
         title: "Inglês",
@@ -2486,6 +2613,10 @@ class AppLocalizations {
       ),
       patient: AppLocalizations_Labels_Patient(
         title: "Paciente",
+      ),
+      registration: AppLocalizations_Labels_Registration(
+        completed:
+            "Paciente salvas com sucesso. Por favor, indique seus contatos.",
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: "Tia",
@@ -2568,6 +2699,9 @@ class AppLocalizations {
         male: "ਮਰਦ",
         title: "ਜਨਮ ਤੇ ਲਿੰਗ",
       ),
+      general: AppLocalizations_Labels_General(
+        completeError: "ਸਭ ਲੋੜੀਦੇ ਖੇਤਰ ਨੂੰ ਪੂਰਾ ਕਰੋ.",
+      ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "ਅੰਗਰੇਜ਼ੀ",
         title: "ਅੰਗਰੇਜ਼ੀ",
@@ -2611,6 +2745,9 @@ class AppLocalizations {
       ),
       patient: AppLocalizations_Labels_Patient(
         title: "ਮਰੀਜ਼",
+      ),
+      registration: AppLocalizations_Labels_Registration(
+        completed: "ਮਰੀਜ਼ successfuly ਬਚਾਇਆ. ਆਪਣੇ ਸੰਪਰਕ ਦਿਓ ਜੀ.",
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: "ਮਾਸੀ",
@@ -2693,6 +2830,9 @@ class AppLocalizations {
         male: "Male",
         title: "Sex at Dhalashada",
       ),
+      general: AppLocalizations_Labels_General(
+        completeError: "Fadlan soo buuxi beeraha oo dhan looga baahan yahay.",
+      ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "English",
         title: "English",
@@ -2736,6 +2876,10 @@ class AppLocalizations {
       ),
       patient: AppLocalizations_Labels_Patient(
         title: "bukaanka",
+      ),
+      registration: AppLocalizations_Labels_Registration(
+        completed:
+            "Bukaanka successfuly badbaadiyey. Fadlan gali xiriirada ay.",
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: "eedaday",
@@ -2818,6 +2962,9 @@ class AppLocalizations {
         male: "Mwanaume",
         title: "Sex katika Uzazi",
       ),
+      general: AppLocalizations_Labels_General(
+        completeError: "Tafadhali jaza sehemu zote zinazohitajika.",
+      ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "english",
         title: "english",
@@ -2861,6 +3008,10 @@ class AppLocalizations {
       ),
       patient: AppLocalizations_Labels_Patient(
         title: "mgonjwa",
+      ),
+      registration: AppLocalizations_Labels_Registration(
+        completed:
+            "Mgonjwa kuokolewa kikamilifu. Tafadhali weka mawasiliano yao.",
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: "shangazi",
@@ -2943,6 +3094,9 @@ class AppLocalizations {
         male: "lalaki",
         title: "Sex sa Kapanganakan",
       ),
+      general: AppLocalizations_Labels_General(
+        completeError: "Pakikumpleto ang lahat ng mga kinakailangang field.",
+      ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "Ingles",
         title: "Ingles",
@@ -2986,6 +3140,10 @@ class AppLocalizations {
       ),
       patient: AppLocalizations_Labels_Patient(
         title: "pasyente",
+      ),
+      registration: AppLocalizations_Labels_Registration(
+        completed:
+            "Pasyente-save Matagumpay. Mangyaring ipasok ang kanilang mga contact.",
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: "Tiya",
@@ -3068,6 +3226,9 @@ class AppLocalizations {
         male: "ชาย",
         title: "เพศที่เกิด",
       ),
+      general: AppLocalizations_Labels_General(
+        completeError: "กรุณากรอกข้อมูลที่จำเป็นทั้งหมด.",
+      ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "อังกฤษ",
         title: "อังกฤษ",
@@ -3112,6 +3273,10 @@ class AppLocalizations {
       ),
       patient: AppLocalizations_Labels_Patient(
         title: "อดทน",
+      ),
+      registration: AppLocalizations_Labels_Registration(
+        completed:
+            "ผู้ป่วยที่บันทึกไว้เรียบร้อย กรุณากรอกชื่อผู้ติดต่อของพวกเขา",
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: "ป้า",
@@ -3194,6 +3359,9 @@ class AppLocalizations {
         male: "erkak",
         title: "Tug'ilgan da jinsi",
       ),
+      general: AppLocalizations_Labels_General(
+        completeError: "Barcha maydonlarni to'ldiring.",
+      ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "Ingliz tili",
         title: "Ingliz tili",
@@ -3237,6 +3405,10 @@ class AppLocalizations {
       ),
       patient: AppLocalizations_Labels_Patient(
         title: "kasal",
+      ),
+      registration: AppLocalizations_Labels_Registration(
+        completed:
+            "Bemor muvaffaqiyat najot berdik. ularning aloqalarni kiriting.",
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: "amma",
@@ -3319,6 +3491,9 @@ class AppLocalizations {
         male: "Nam giới",
         title: "Số giới tính khi sinh",
       ),
+      general: AppLocalizations_Labels_General(
+        completeError: "Hoàn thành hết tất cả các hạng mục được yêu cầu.",
+      ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "Tiếng Anh",
         title: "Tiếng Anh",
@@ -3362,6 +3537,10 @@ class AppLocalizations {
       ),
       patient: AppLocalizations_Labels_Patient(
         title: "Kiên nhẫn",
+      ),
+      registration: AppLocalizations_Labels_Registration(
+        completed:
+            "Bệnh nhân Đã lưu thành công. Vui lòng nhập địa chỉ liên lạc của họ.",
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: "Cô",
@@ -3665,6 +3844,21 @@ class AppLocalizations_Labels_Gender {
   }
 }
 
+class AppLocalizations_Labels_General {
+  const AppLocalizations_Labels_General({this.completeError});
+
+  final String completeError;
+
+  String getByKey(String key) {
+    switch (key) {
+      case 'completeError':
+        return completeError;
+      default:
+        return '';
+    }
+  }
+}
+
 class AppLocalizations_Labels_Language {
   const AppLocalizations_Labels_Language({this.inEnglish, this.title});
 
@@ -3891,6 +4085,21 @@ class AppLocalizations_Labels_Patient {
   }
 }
 
+class AppLocalizations_Labels_Registration {
+  const AppLocalizations_Labels_Registration({this.completed});
+
+  final String completed;
+
+  String getByKey(String key) {
+    switch (key) {
+      case 'completed':
+        return completed;
+      default:
+        return '';
+    }
+  }
+}
+
 class AppLocalizations_Labels_Relationships {
   const AppLocalizations_Labels_Relationships(
       {this.aunt,
@@ -4034,11 +4243,13 @@ class AppLocalizations_Labels {
       this.contacts,
       this.dateOfBirth,
       this.gender,
+      this.general,
       this.language,
       this.medical,
       this.name,
       this.pages,
       this.patient,
+      this.registration,
       this.relationships,
       this.settings});
 
@@ -4060,6 +4271,8 @@ class AppLocalizations_Labels {
 
   final AppLocalizations_Labels_Gender gender;
 
+  final AppLocalizations_Labels_General general;
+
   final AppLocalizations_Labels_Language language;
 
   final AppLocalizations_Labels_Medical medical;
@@ -4069,6 +4282,8 @@ class AppLocalizations_Labels {
   final AppLocalizations_Labels_Pages pages;
 
   final AppLocalizations_Labels_Patient patient;
+
+  final AppLocalizations_Labels_Registration registration;
 
   final AppLocalizations_Labels_Relationships relationships;
 
