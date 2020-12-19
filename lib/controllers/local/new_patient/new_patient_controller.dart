@@ -39,8 +39,8 @@ class NewPatientController extends GetxController {
     if (Get.arguments != null) {
       _patient.value = Get.arguments;
       _gender.value = _patient.value.patient.gender == PatientGender.female
-          ? labels.sexAtBirth.female
-          : labels.sexAtBirth.male;
+          ? labels.gender.female
+          : labels.gender.male;
       _birthDate.value =
           DateTime.parse(_patient.value.patient.birthDate.toString());
       _barrio.value = _patient.value.barrio();
@@ -94,7 +94,7 @@ class NewPatientController extends GetxController {
               ],
               birthDate: Date(_birthDate.value),
               address: [Address(district: barrio)],
-              gender: gender == labels.sexAtBirth.female
+              gender: gender == labels.gender.female
                   ? PatientGender.female
                   : PatientGender.male)
           : _patient.value.patient.copyWith(
@@ -106,7 +106,7 @@ class NewPatientController extends GetxController {
               ],
               birthDate: Date(_birthDate.value),
               address: [Address(district: barrio)],
-              gender: gender == labels.sexAtBirth.female
+              gender: gender == labels.gender.female
                   ? PatientGender.female
                   : PatientGender.male,
             );

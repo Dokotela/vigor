@@ -28,7 +28,7 @@ class BirthDateWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              '${labels.dateofBirth.title}',
+              '${labels.dateOfBirth.title}',
               style: Get.theme.textTheme.bodyText1,
               textAlign: TextAlign.center,
             ),

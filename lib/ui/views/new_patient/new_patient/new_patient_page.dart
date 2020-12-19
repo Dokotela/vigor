@@ -49,7 +49,7 @@ class NewPatientPage extends StatelessWidget {
                     /// boolean (true = female, false = male), and then the
                     /// controller function to change it
                     DropDownSelection(
-                      title: labels.sexAtBirth.title,
+                      title: labels.gender.title,
                       selectionList: controller.genderTypes,
                       display: controller.gender,
                       selectNew: controller.setGender,
@@ -71,7 +71,7 @@ class NewPatientPage extends StatelessWidget {
                     /// list of neighborhoods, which one to display, the event
                     /// to change it, and the error message
                     DropDownSelection(
-                      title: labels.address.neighborhood,
+                      title: labels.address.neighborhood.title,
                       selectionList: controller.barriosList,
                       display: controller.barrio,
                       selectNew: controller.selectBarrio,

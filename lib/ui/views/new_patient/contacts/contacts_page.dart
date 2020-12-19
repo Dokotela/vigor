@@ -101,7 +101,7 @@ class ContactsPage extends StatelessWidget {
                         order1: viewController.getOrder(controller.nameSort),
                         entry1: controller.contactName,
                         label2: Text(
-                          labels.general.relation.title,
+                          labels.relationships.title,
                           style: Get.theme.textTheme.headline6,
                         ),
                         sortCol2: controller.sortByRelation,

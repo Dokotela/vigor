@@ -53,11 +53,11 @@ class ContactsController extends GetxController {
 
   String contactRelation(int index) {
     if (_contactsList.isEmpty) {
-      return labels.general.relationship;
+      return labels.relationships.title;
     } else if (_contactsList[index] == null) {
-      return labels.general.relationship;
+      return labels.relationships.title;
     } else if (_contactsList[index].relationship == null) {
-      return labels.general.relationship;
+      return labels.relationships.title;
     }
     for (var relationship in _contactsList[index].relationship) {
       for (var relation in relationship.coding) {
@@ -70,15 +70,15 @@ class ContactsController extends GetxController {
         }
       }
     }
-    return labels.general.relationship;
+    return labels.relationships.title;
   }
 
   String contactBarrio(int index) => _contactsList.isEmpty
-      ? labels.general.address.neighborhood
+      ? labels.address.neighborhood.title
       : _contactsList[index] == null
-          ? labels.general.address.neighborhood
+          ? labels.address.neighborhood.title
           : _contactsList[index].address?.district ??
-              labels.general.address.neighborhood;
+              labels.address.neighborhood.title;
 
   String get familyNameError => _familyNameError.value;
   String get givenNameError => _givenNameError.value;

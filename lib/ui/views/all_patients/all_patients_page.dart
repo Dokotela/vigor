@@ -25,7 +25,7 @@ class AllPatientsPage extends StatelessWidget {
         }
       },
       child: Scaffold(
-        appBar: VigorAppBar(title: labels.general.allPatients),
+        appBar: VigorAppBar(title: labels.pages.allPatients),
         body: Column(
           children: [
             Container(
@@ -53,7 +53,7 @@ class AllPatientsPage extends StatelessWidget {
                           color: Get.theme.colorScheme.onPrimary,
                         ),
                         hintStyle: Get.textTheme.headline6,
-                        hintText: labels.general.search.search),
+                        hintText: labels.actions.search),
                     onChanged: (value) => controller.searchPatientByName(value),
                   ),
                 ),
@@ -62,13 +62,13 @@ class AllPatientsPage extends StatelessWidget {
             Expanded(
               child: Obx(
                 () => OrderedList(
-                  label1: Text(labels.general.patient,
+                  label1: Text(labels.patient.title,
                       style: Get.theme.textTheme.headline6),
                   sortCol1: controller.sortByName,
                   order1: viewController.getOrder(controller.nameSort),
                   entry1: controller.patientName,
                   label2: Text(
-                    labels.general.birthDate,
+                    labels.birthDate.title,
                     style: Get.theme.textTheme.headline6,
                   ),
                   sortCol2: controller.sortByBirthdate,

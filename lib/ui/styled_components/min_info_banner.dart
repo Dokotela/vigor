@@ -23,12 +23,12 @@ class MinInfoBanner extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              '${labels.general.name.name}: $name',
+              '${labels.name.title}: $name',
               style: Get.textTheme.headline6.copyWith(fontSize: Get.width / 18),
             ),
             SizedBox(height: 4.0),
             Text(
-              '${labels.general.birthDate}: $birthDate',
+              '${labels.birthDate.title}: $birthDate',
               style: Get.textTheme.headline6.copyWith(fontSize: Get.width / 18),
             ),
           ],

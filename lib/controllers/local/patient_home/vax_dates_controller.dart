@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:vigor/_internal/constants/constants.dart';
 import 'package:vigor/_internal/utils/utils.dart';
 
-import '../patient_imm_controller.dart';
+import 'patient_imm_controller.dart';
 
 class VaxDatesController extends GetxController {
   /// PROPERTIES

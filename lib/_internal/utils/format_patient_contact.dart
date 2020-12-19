@@ -13,21 +13,21 @@ PatientContact formatPatientContact(
 List<CodeableConcept> _mapRelationship(String relationship) {
   final labels = AppLocalizations.of(Get.context);
   Map<String, List<CodeableConcept>> mapRelationToCode = {
-    labels.general.relation.mother: _getCodeableConcept('72705000', 'Mother'),
-    labels.general.relation.grandmother:
+    labels.relationships.mother: _getCodeableConcept('72705000', 'Mother'),
+    labels.relationships.grandmother:
         _getCodeableConcept('113157001', 'Grandmother'),
-    labels.general.relation.aunt: _getCodeableConcept('25211005', 'Aunt'),
-    labels.general.relation.sister: _getCodeableConcept('27733009', 'Sister'),
-    labels.general.relation.daughter: _getCodeableConcept('394738000', 'Other'),
-    labels.general.relation.niece: _getCodeableConcept('394738000', 'Other'),
-    labels.general.relation.father: _getCodeableConcept('66839005', 'Father'),
-    labels.general.relation.grandfather:
+    labels.relationships.aunt: _getCodeableConcept('25211005', 'Aunt'),
+    labels.relationships.sister: _getCodeableConcept('27733009', 'Sister'),
+    labels.relationships.daughter: _getCodeableConcept('394738000', 'Other'),
+    labels.relationships.niece: _getCodeableConcept('394738000', 'Other'),
+    labels.relationships.father: _getCodeableConcept('66839005', 'Father'),
+    labels.relationships.grandfather:
         _getCodeableConcept('34871008', 'Grandfather'),
-    labels.general.relation.uncle: _getCodeableConcept('38048003', 'Uncle'),
-    labels.general.relation.brother: _getCodeableConcept('70924004', 'Brother'),
-    labels.general.relation.son: _getCodeableConcept('394738000', 'Other'),
-    labels.general.relation.nephew: _getCodeableConcept('394738000', 'Other'),
-    labels.general.relation.other: _getCodeableConcept('394738000', 'Other'),
+    labels.relationships.uncle: _getCodeableConcept('38048003', 'Uncle'),
+    labels.relationships.brother: _getCodeableConcept('70924004', 'Brother'),
+    labels.relationships.son: _getCodeableConcept('394738000', 'Other'),
+    labels.relationships.nephew: _getCodeableConcept('394738000', 'Other'),
+    labels.relationships.other: _getCodeableConcept('394738000', 'Other'),
   };
   return mapRelationToCode[relationship] ??
       _getCodeableConcept('394738000', 'Other');

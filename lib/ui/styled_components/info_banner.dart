@@ -31,12 +31,12 @@ class InfoBannerWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
-            '${labels.general.name.name}: $name',
+            '${labels.name.title}: $name',
             style: Get.textTheme.headline6.copyWith(fontSize: Get.width / 20),
           ),
           _spacerV,
           Text(
-            '${labels.general.birthDate}: $birthDate',
+            '${labels.birthDate.title}: $birthDate',
             style: Get.textTheme.headline6.copyWith(fontSize: Get.width / 20),
           ),
           _spacerV,
@@ -46,7 +46,7 @@ class InfoBannerWidget extends StatelessWidget {
           ),
           _spacerV,
           Text(
-            '${labels.general.sexAtBirth.title}: $sex',
+            '${labels.gender.title}: $sex',
             style: Get.textTheme.headline6.copyWith(fontSize: Get.width / 20),
           ),
           _spacerV,

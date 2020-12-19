@@ -13,119 +13,53 @@ class AppLocalizations {
 
   static final Map<Locale, AppLocalizations_Labels> languages = {
     Locale.fromSubtags(languageCode: "en"): AppLocalizations_Labels(
+      actions: AppLocalizations_Labels_Actions(
+        add: "Add",
+        cancel: "Cancel",
+        save: "Save",
+        search: "Search",
+        submit: "Submit",
+      ),
+      address: AppLocalizations_Labels_Address(
+        neighborhood: AppLocalizations_Labels_Address_Neighborhood(
+          error: "Please select neighborhood",
+          title: "Neighborhood",
+        ),
+      ),
+      age: AppLocalizations_Labels_Age(
+        title: "Age",
+      ),
       app: AppLocalizations_Labels_App(
         chooseLanguage: "Choose Language",
         chooseTheme: "Choose Theme",
         settings: "App Settings",
         system: "System",
         title: AppLocalizations_Labels_App_Title(
-          title: "Vigor",
           saluddominicana: "Salud Dominicana",
+          title: "Vigor",
         ),
       ),
       auth: AppLocalizations_Labels_Auth(
-        cancel: "Cancel",
-        changePassword: "Change Password",
-        email: "Email",
         login: "Login",
         password: "Password",
-        resetPassword: "Reset Password",
-        signIn: "Sign In",
-        signUp: "Sign Up",
-        submit: "Submit",
         userName: "Username",
       ),
-      dates: AppLocalizations_Labels_Dates(
-        month: AppLocalizations_Labels_Dates_Month(
-          april: "April",
-          august: "August",
-          december: "December",
-          february: "February",
-          january: "January",
-          july: "July",
-          june: "June",
-          march: "March",
-          may: "May",
-          november: "November",
-          october: "October",
-          september: "September",
-        ),
-        weekday: AppLocalizations_Labels_Dates_Weekday(
-          friday: "Friday",
-          monday: "Monday",
-          saturday: "Saturday",
-          sunday: "Sunday",
-          thursday: "Thursday",
-          tuesday: "Tuesday",
-          wednesday: "Wednesday",
-        ),
+      birthDate: AppLocalizations_Labels_BirthDate(
+        error: "Please enter birthdate",
+        title: "Birthdate",
       ),
-      general: AppLocalizations_Labels_General(
-        age: "Age",
-        allPatients: "All Patients",
-        birthDate: "Birthdate",
-        birthDateError: "Please enter birthdate",
-        contacts: "Patient Contacts",
-        dateofBirth: "Date of Birth",
-        editSurvey: "Edit Survey",
-        familyNameError: "Enter family name",
-        genderError: "Please select gender",
-        givenNameError: "Enter other names",
-        mySchedule: "My Schedule",
-        neighborhoodError: "Please select neighborhood",
-        newPatient: "New Patient",
-        newSurvey: "New Survey",
-        nextPage: "Next Page",
-        patient: "Patient",
-        patientInformation: "Patient Information",
-        relationship: "Relationship",
-        relationshipError: "Please select relationship",
-        submitShare: "Submit/Share",
-        address: AppLocalizations_Labels_General_Address(
-          city: "City",
-          country: "Country",
-          county: "County",
-          district: "District",
-          neighborhood: "Neighborhood",
-          postalCode: "Postal Code",
-          state: "State",
-          title: "Address",
-        ),
-        name: AppLocalizations_Labels_General_Name(
-          familyName: "Family/Last Name",
-          firstName: "First Name",
-          givenNames: "First/Given Names",
-          lastName: "Last Name",
-          name: "Name",
-          otherNames: "Other Names",
-        ),
-        relation: AppLocalizations_Labels_General_Relation(
-          aunt: "Aunt",
-          brother: "Brother",
-          daughter: "Daughter",
-          father: "Father",
-          grandfather: "Grandfather",
-          grandmother: "Grandmother",
-          mother: "Mother",
-          nephew: "Nephew",
-          niece: "Niece",
-          other: "Other",
-          sister: "Sister",
-          son: "Son",
-          title: "Relation",
-          uncle: "Uncle",
-        ),
-        search: AppLocalizations_Labels_General_Search(
-          filter: "Filter",
-          patientSearch: "Patient Search",
-          search: "Search",
-          searchName: "Search Name",
-        ),
-        sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
-          female: "Female",
-          male: "Male",
-          title: "Sex at Birth",
-        ),
+      contacts: AppLocalizations_Labels_Contacts(
+        newContact: "New Contact",
+        noContactsAdded: "No contacts have been added.",
+      ),
+      dateOfBirth: AppLocalizations_Labels_DateOfBirth(
+        title: "Date of Birth",
+      ),
+      gender: AppLocalizations_Labels_Gender(
+        error: "Please select gender",
+        female: "Female",
+        male: "Male",
+        title: "Sex at Birth",
       ),
       language: AppLocalizations_Labels_Language(
         inEnglish: "English",
@@ -146,143 +80,104 @@ class AppLocalizations {
           title: "Vaccines",
         ),
       ),
-      registration: AppLocalizations_Labels_Registration(
-        registerPatient: "Complete Patient Registration",
-        savePatient: "Save Patient",
+      name: AppLocalizations_Labels_Name(
+        familyName: "Family/Last Name",
+        familyNameError: "Enter family name",
+        firstName: "First Name",
+        givenNameError: "Enter given names",
+        givenNames: "First/Given Names",
+        lastName: "Last Name",
+        otherNames: "Other Names",
+        title: "Name",
+      ),
+      pages: AppLocalizations_Labels_Pages(
+        allPatients: "All Patients",
+        contacts: "Contacts",
+        login: "Login",
+        newPatient: "New Patient",
+        patientHome: "Patient Home",
+        patientInformation: "Patient Information",
+        summaryReport: "Summary Report",
+      ),
+      relationships: AppLocalizations_Labels_Relationships(
+        daughter: "Daughter",
+        error: "Please select relationship",
+        father: "Father",
+        grandfather: "Grandfather",
+        grandmother: "Grandmother",
+        mother: "Mother",
+        nephew: "Nephew",
+        niece: "Niece",
+        other: "Other",
+        relation: "Relation",
+        sister: "Sister",
+        son: "Son",
+        title: "Relationship",
+        uncle: "Uncle",
+        aunt: "Aunt",
+        brother: "Brother",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "Dark",
         language: "Language",
         light: "Light",
-        ok: "Ok",
-        signOut: "Sign Out",
         system: "System",
         theme: "Theme",
         title: "Settings",
-        updateProfile: "Update Profile",
-      ),
-      vigor: AppLocalizations_Labels_Vigor(
-        title: "Vigor",
       ),
     ),
     Locale.fromSubtags(languageCode: "es"): AppLocalizations_Labels(
+      actions: AppLocalizations_Labels_Actions(
+        add: "Añadir",
+        cancel: "Cancelar",
+        save: "Salvar",
+        search: "Buscar",
+        submit: "Enviar",
+      ),
+      address: AppLocalizations_Labels_Address(
+        neighborhood: AppLocalizations_Labels_Address_Neighborhood(
+          error: "Por favor, seleccione el barrio",
+          title: "Barrio",
+        ),
+      ),
+      age: AppLocalizations_Labels_Age(
+        title: "Años",
+      ),
       app: AppLocalizations_Labels_App(
         chooseLanguage: "Elige lengua",
         chooseTheme: "Escoge un tema",
         settings: "Ajustes de Aplicacion",
         system: "Sistema",
         title: AppLocalizations_Labels_App_Title(
-          title: "Vigor",
           saluddominicana: "Salud Dominicana",
+          title: "Vigor",
         ),
       ),
       auth: AppLocalizations_Labels_Auth(
-        cancel: "Cancelar",
-        changePassword: "Cambia la contraseña",
-        email: "Email",
         login: "Iniciar sesión",
         password: "Contraseña",
-        resetPassword: "Restablecer la contraseña",
-        signIn: "Registrarse",
-        signUp: "Regístrate",
-        submit: "Enviar",
         userName: "Nombre de usuario",
       ),
-      dates: AppLocalizations_Labels_Dates(
-        month: AppLocalizations_Labels_Dates_Month(
-          april: "abril",
-          august: "agosto",
-          december: "diciembre",
-          february: "febrero",
-          january: "enero",
-          july: "julio",
-          june: "junio",
-          march: "marzo",
-          may: "Mayo",
-          november: "noviembre",
-          october: "octubre",
-          september: "septiembre",
-        ),
-        weekday: AppLocalizations_Labels_Dates_Weekday(
-          friday: "viernes",
-          monday: "lunes",
-          saturday: "sábado",
-          sunday: "domingo",
-          thursday: "jueves",
-          tuesday: "martes",
-          wednesday: "miércoles",
-        ),
+      birthDate: AppLocalizations_Labels_BirthDate(
+        error: "Por favor, introduzca la fecha de nacimiento",
+        title: "Fecha de nacimiento",
       ),
-      general: AppLocalizations_Labels_General(
-        age: "Edad",
-        allPatients: "todos los pacientes",
-        birthDate: "Fecha de nacimiento",
-        birthDateError: "Por favor, introduzca la fecha de nacimiento",
-        contacts: "contactos de pacientes",
-        dateofBirth: "Fecha de nacimiento",
-        editSurvey: "Editar encuesta",
-        familyNameError: "Introduce el nombre de la familia",
-        genderError: "Por favor seleccione el género",
-        givenNameError: "Introducir otros nombres",
-        mySchedule: "Mi horario",
-        neighborhoodError: "Por favor, seleccione el barrio",
-        newPatient: "Paciente nuevo",
-        newSurvey: "nueva Encuesta",
-        nextPage: "Siguiente página",
-        patient: "Paciente",
-        patientInformation: "Información del paciente",
-        relationship: "Relación",
-        relationshipError: "Por favor seleccione la relación",
-        submitShare: "Presentar / Compartir",
-        address: AppLocalizations_Labels_General_Address(
-          city: "Ciudad",
-          country: "País",
-          county: "Condado",
-          district: "Distrito",
-          neighborhood: "Barrio",
-          postalCode: "Código postal",
-          state: "Estado",
-          title: "Habla a",
-        ),
-        name: AppLocalizations_Labels_General_Name(
-          familyName: "Familia / Apellido de tutor",
-          firstName: "Primero / Nombre de pila de tutor",
-          givenNames: "First / Nombre de pila",
-          lastName: "Apellido",
-          name: "Nombre",
-          otherNames: "Otros nombres",
-        ),
-        relation: AppLocalizations_Labels_General_Relation(
-          aunt: "Tía",
-          brother: "Hermano",
-          daughter: "Hija",
-          father: "Padre",
-          grandfather: "Abuelo",
-          grandmother: "Abuela",
-          mother: "Madre",
-          nephew: "Sobrino",
-          niece: "Sobrina",
-          other: "Otro",
-          sister: "Hermana",
-          son: "Hijo",
-          title: "Relación",
-          uncle: "Tío",
-        ),
-        search: AppLocalizations_Labels_General_Search(
-          filter: "Filtrar",
-          patientSearch: "Buscar paciente",
-          search: "Buscar",
-          searchName: "búsqueda por nombre",
-        ),
-        sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
-          female: "Hembra",
-          male: "Masculino",
-          title: "El sexo en el nacimiento",
-        ),
+      contacts: AppLocalizations_Labels_Contacts(
+        newContact: "Nuevo contacto",
+        noContactsAdded: "No se han añadido contactos.",
+      ),
+      dateOfBirth: AppLocalizations_Labels_DateOfBirth(
+        title: "Fecha de nacimiento",
+      ),
+      gender: AppLocalizations_Labels_Gender(
+        error: "Por favor seleccione el género",
+        female: "Hembra",
+        male: "Masculino",
+        title: "El sexo en el nacimiento",
       ),
       language: AppLocalizations_Labels_Language(
-        inEnglish: "Spanish",
-        title: "Español",
+        inEnglish: "Inglés",
+        title: "Inglés",
       ),
       medical: AppLocalizations_Labels_Medical(
         deworming: "desparasitación",
@@ -299,143 +194,104 @@ class AppLocalizations {
           title: "Vacunas",
         ),
       ),
-      registration: AppLocalizations_Labels_Registration(
-        registerPatient: "Registro de Pacientes completa",
-        savePatient: "Guardar paciente",
+      name: AppLocalizations_Labels_Name(
+        familyName: "Familia / Apellido",
+        familyNameError: "Introduce el nombre de la familia",
+        firstName: "Primer nombre",
+        givenNameError: "Introduzca nombres dados",
+        givenNames: "First / Nombre de pila",
+        lastName: "Apellido",
+        otherNames: "Otros nombres",
+        title: "Nombre",
+      ),
+      pages: AppLocalizations_Labels_Pages(
+        allPatients: "todos los pacientes",
+        contacts: "contactos",
+        login: "Iniciar sesión",
+        newPatient: "Paciente nuevo",
+        patientHome: "Inicio del paciente",
+        patientInformation: "Información del paciente",
+        summaryReport: "Informe resumido",
+      ),
+      relationships: AppLocalizations_Labels_Relationships(
+        daughter: "Hija",
+        error: "Por favor seleccione la relación",
+        father: "Padre",
+        grandfather: "Abuelo",
+        grandmother: "Abuela",
+        mother: "Madre",
+        nephew: "Sobrino",
+        niece: "Sobrina",
+        other: "Otro",
+        relation: "Relación",
+        sister: "Hermana",
+        son: "Hijo",
+        title: "Relación",
+        uncle: "Tío",
+        aunt: "Tía",
+        brother: "Hermano",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "Oscuro",
         language: "Idioma",
         light: "Ligero",
-        ok: "Okay",
-        signOut: "Desconectar",
         system: "Sistema",
         theme: "Tema",
         title: "ajustes",
-        updateProfile: "Actualización del perfil",
-      ),
-      vigor: AppLocalizations_Labels_Vigor(
-        title: "Vigor",
       ),
     ),
     Locale.fromSubtags(languageCode: "ar"): AppLocalizations_Labels(
+      actions: AppLocalizations_Labels_Actions(
+        add: "إضافة",
+        cancel: "إلغاء",
+        save: "حفظ",
+        search: "بحث",
+        submit: "إرسال",
+      ),
+      address: AppLocalizations_Labels_Address(
+        neighborhood: AppLocalizations_Labels_Address_Neighborhood(
+          error: "يرجى اختيار حي",
+          title: "حي",
+        ),
+      ),
+      age: AppLocalizations_Labels_Age(
+        title: "عمر",
+      ),
       app: AppLocalizations_Labels_App(
         chooseLanguage: "اختيار اللغة",
         chooseTheme: "اختيار موضوع",
         settings: "إعدادات التطبيقات",
         system: "النظام",
         title: AppLocalizations_Labels_App_Title(
-          title: "Vigor",
-          saluddominicana: "Salud Dominicana",
+          saluddominicana: "السعود الدومينيكان",
+          title: "قوة",
         ),
       ),
       auth: AppLocalizations_Labels_Auth(
-        cancel: "إلغاء",
-        changePassword: "غير كلمة السر",
-        email: "البريد الإلكتروني",
         login: "تسجيل الدخول",
         password: "كلمه السر",
-        resetPassword: "إعادة تعيين كلمة المرور",
-        signIn: "تسجيل الدخول",
-        signUp: "سجل",
-        submit: "إرسال",
         userName: "اسم المستخدم",
       ),
-      dates: AppLocalizations_Labels_Dates(
-        month: AppLocalizations_Labels_Dates_Month(
-          april: "أبريل",
-          august: "أغسطس",
-          december: "ديسمبر",
-          february: "شهر فبراير",
-          january: "كانون الثاني",
-          july: "يوليو",
-          june: "يونيو",
-          march: "مارس",
-          may: "مايو",
-          november: "شهر نوفمبر",
-          october: "اكتوبر",
-          september: "سبتمبر",
-        ),
-        weekday: AppLocalizations_Labels_Dates_Weekday(
-          friday: "يوم الجمعة",
-          monday: "يوم الاثنين",
-          saturday: "يوم السبت",
-          sunday: "الأحد",
-          thursday: "الخميس",
-          tuesday: "الثلاثاء",
-          wednesday: "الأربعاء",
-        ),
+      birthDate: AppLocalizations_Labels_BirthDate(
+        error: "يرجى إدخال تاريخ الميلاد",
+        title: "تاريخ الولادة",
       ),
-      general: AppLocalizations_Labels_General(
-        age: "عمر",
-        allPatients: "كل المرضى",
-        birthDate: "تاريخ الولادة",
-        birthDateError: "يرجى إدخال تاريخ الميلاد",
-        contacts: "المريض اتصالات",
-        dateofBirth: "تاريخ الولادة",
-        editSurvey: "تحرير مسح",
-        familyNameError: "أدخل اسم العائلة",
-        genderError: "يرجى تحديد الجنس",
-        givenNameError: "إدخال أسماء أخرى",
-        mySchedule: "جدولي",
-        neighborhoodError: "يرجى اختيار حي",
-        newPatient: "مريض جديد",
-        newSurvey: "مسح جديد",
-        nextPage: "الصفحة التالية",
-        patient: "صبور",
-        patientInformation: "معلومات المريض",
-        relationship: "صلة",
-        relationshipError: "الرجاء تحديد العلاقة",
-        submitShare: "إرسال / حصة",
-        address: AppLocalizations_Labels_General_Address(
-          city: "مدينة",
-          country: "بلد",
-          county: "مقاطعة",
-          district: "منطقة",
-          neighborhood: "حي",
-          postalCode: "رمز بريدي",
-          state: "حالة",
-          title: "عنوان",
-        ),
-        name: AppLocalizations_Labels_General_Name(
-          familyName: "الأسرة / اسم العائلة",
-          firstName: "الاسم الاول",
-          givenNames: "أولا / أسماء نظرا",
-          lastName: "الكنية",
-          name: "اسم",
-          otherNames: "اسماء اخرى",
-        ),
-        relation: AppLocalizations_Labels_General_Relation(
-          aunt: "عمة",
-          brother: "شقيق",
-          daughter: "ابنة",
-          father: "الآب",
-          grandfather: "جد",
-          grandmother: "جدة",
-          mother: "أم",
-          nephew: "ابن أخ",
-          niece: "ابنة الاخ",
-          other: "آخر",
-          sister: "أخت",
-          son: "ابن",
-          title: "علاقة",
-          uncle: "اخو الام",
-        ),
-        search: AppLocalizations_Labels_General_Search(
-          filter: "منقي",
-          patientSearch: "المريض البحث",
-          search: "بحث",
-          searchName: "البحث اسم",
-        ),
-        sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
-          female: "أنثى",
-          male: "الذكر",
-          title: "الجنس عند الولادة",
-        ),
+      contacts: AppLocalizations_Labels_Contacts(
+        newContact: "جهة اتصال جديدة",
+        noContactsAdded: "لم يتم إضافة أي اتصالات.",
+      ),
+      dateOfBirth: AppLocalizations_Labels_DateOfBirth(
+        title: "تاريخ الولادة",
+      ),
+      gender: AppLocalizations_Labels_Gender(
+        error: "يرجى تحديد الجنس",
+        female: "أنثى",
+        male: "الذكر",
+        title: "الجنس عند الولادة",
       ),
       language: AppLocalizations_Labels_Language(
-        inEnglish: "Arabic",
-        title: "عربى",
+        inEnglish: "الإنجليزية",
+        title: "الإنجليزية",
       ),
       medical: AppLocalizations_Labels_Medical(
         deworming: "للتخلص من الديدان",
@@ -452,143 +308,104 @@ class AppLocalizations {
           title: "اللقاحات",
         ),
       ),
-      registration: AppLocalizations_Labels_Registration(
-        registerPatient: "التسجيل الكامل المريض",
-        savePatient: "حفظ المريض",
+      name: AppLocalizations_Labels_Name(
+        familyName: "الأسرة / اسم العائلة",
+        familyNameError: "أدخل اسم العائلة",
+        firstName: "الاسم الاول",
+        givenNameError: "إدخال أسماء معينة",
+        givenNames: "أولا / أسماء نظرا",
+        lastName: "الكنية",
+        otherNames: "اسماء اخرى",
+        title: "اسم",
+      ),
+      pages: AppLocalizations_Labels_Pages(
+        allPatients: "كل المرضى",
+        contacts: "جهات الاتصال",
+        login: "تسجيل الدخول",
+        newPatient: "مريض جديد",
+        patientHome: "الصفحة الرئيسية المريض",
+        patientInformation: "معلومات المريض",
+        summaryReport: "تقرير ملخص",
+      ),
+      relationships: AppLocalizations_Labels_Relationships(
+        daughter: "ابنة",
+        error: "الرجاء تحديد العلاقة",
+        father: "الآب",
+        grandfather: "جد",
+        grandmother: "جدة",
+        mother: "أم",
+        nephew: "ابن شقيق",
+        niece: "ابنة الاخ",
+        other: "آخر",
+        relation: "علاقة",
+        sister: "أخت",
+        son: "ابن",
+        title: "صلة",
+        uncle: "اخو الام",
+        aunt: "عمة",
+        brother: "شقيق",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "داكن",
         language: "لغة",
         light: "ضوء",
-        ok: "حسنا",
-        signOut: "خروج",
         system: "النظام",
         theme: "موضوع",
         title: "إعدادات",
-        updateProfile: "تحديث الملف",
-      ),
-      vigor: AppLocalizations_Labels_Vigor(
-        title: "قوة",
       ),
     ),
     Locale.fromSubtags(languageCode: "hi"): AppLocalizations_Labels(
+      actions: AppLocalizations_Labels_Actions(
+        add: "जोड़ना",
+        cancel: "रद्द करना",
+        save: "सहेजें",
+        search: "खोज",
+        submit: "प्रस्तुत",
+      ),
+      address: AppLocalizations_Labels_Address(
+        neighborhood: AppLocalizations_Labels_Address_Neighborhood(
+          error: "कृपया पड़ोस का चयन",
+          title: "आस - पड़ोस",
+        ),
+      ),
+      age: AppLocalizations_Labels_Age(
+        title: "उम्र",
+      ),
       app: AppLocalizations_Labels_App(
         chooseLanguage: "भाषा चुनें",
         chooseTheme: "थीम चुनें",
         settings: "एप्लिकेशन सेटिंग",
         system: "प्रणाली",
         title: AppLocalizations_Labels_App_Title(
-          title: "Vigor",
           saluddominicana: "Salud Dominicana",
+          title: "ताक़त",
         ),
       ),
       auth: AppLocalizations_Labels_Auth(
-        cancel: "रद्द करना",
-        changePassword: "पासवर्ड बदलें",
-        email: "ईमेल",
         login: "लॉग इन करें",
         password: "कुंजिका",
-        resetPassword: "पासवर्ड रीसेट",
-        signIn: "साइन इन करें",
-        signUp: "साइन अप करें",
-        submit: "प्रस्तुत",
         userName: "उपयोगकर्ता नाम",
       ),
-      dates: AppLocalizations_Labels_Dates(
-        month: AppLocalizations_Labels_Dates_Month(
-          april: "अप्रैल",
-          august: "अगस्त",
-          december: "दिसंबर",
-          february: "फरवरी",
-          january: "जनवरी",
-          july: "जुलाई",
-          june: "जून",
-          march: "मार्च",
-          may: "मई",
-          november: "नवंबर",
-          october: "अक्टूबर",
-          september: "सितंबर",
-        ),
-        weekday: AppLocalizations_Labels_Dates_Weekday(
-          friday: "शुक्रवार",
-          monday: "सोमवार",
-          saturday: "शनिवार",
-          sunday: "रविवार",
-          thursday: "गुरूवार",
-          tuesday: "मंगलवार",
-          wednesday: "बुधवार",
-        ),
+      birthDate: AppLocalizations_Labels_BirthDate(
+        error: "जन्मतिथि दर्ज करें",
+        title: "जन्म दिन",
       ),
-      general: AppLocalizations_Labels_General(
-        age: "आयु",
-        allPatients: "सभी मरीजों को",
-        birthDate: "जन्म दिन",
-        birthDateError: "जन्मतिथि दर्ज करें",
-        contacts: "रोगी संपर्क",
-        dateofBirth: "जन्म की तारीख",
-        editSurvey: "सर्वे संपादित करें",
-        familyNameError: "परिवार का नाम दर्ज करें",
-        genderError: "कृपया लिंग चुनें",
-        givenNameError: "अन्य नाम दर्ज",
-        mySchedule: "मेरे अनुसूची",
-        neighborhoodError: "कृपया पड़ोस का चयन",
-        newPatient: "नए रोगी",
-        newSurvey: "नए सर्वेक्षण",
-        nextPage: "अगला पृष्ठ",
-        patient: "मरीज़",
-        patientInformation: "रोगी के बारे में जानकारी",
-        relationship: "संबंध",
-        relationshipError: "कृपया संबंध का चयन",
-        submitShare: "जमा करें / शेयर",
-        address: AppLocalizations_Labels_General_Address(
-          city: "Faridabad",
-          country: "देश",
-          county: "काउंटी",
-          district: "जिला",
-          neighborhood: "आस - पड़ोस",
-          postalCode: "डाक कोड",
-          state: "राज्य",
-          title: "पता",
-        ),
-        name: AppLocalizations_Labels_General_Name(
-          familyName: "पारिवारिक / अंतिम नाम",
-          firstName: "पहला नाम",
-          givenNames: "प्रथम / दिए गए नाम",
-          lastName: "उपनाम",
-          name: "नाम",
-          otherNames: "दुसरे नाम",
-        ),
-        relation: AppLocalizations_Labels_General_Relation(
-          aunt: "चाची",
-          brother: "भाई",
-          daughter: "बेटी",
-          father: "पिता जी",
-          grandfather: "दादा",
-          grandmother: "दादी मा",
-          mother: "मां",
-          nephew: "भतीजा",
-          niece: "भांजी",
-          other: "अन्य",
-          sister: "बहन",
-          son: "बेटा",
-          title: "रिश्ता",
-          uncle: "चाचा",
-        ),
-        search: AppLocalizations_Labels_General_Search(
-          filter: "फ़िल्टर",
-          patientSearch: "रोगी खोजें",
-          search: "खोज",
-          searchName: "खोजें नाम",
-        ),
-        sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
-          female: "महिला",
-          male: "नर",
-          title: "जन्म के समय लिंग",
-        ),
+      contacts: AppLocalizations_Labels_Contacts(
+        newContact: "नया कॉन्ट्रैक्ट",
+        noContactsAdded: "कोई संपर्क नहीं जोड़ा गया है।",
+      ),
+      dateOfBirth: AppLocalizations_Labels_DateOfBirth(
+        title: "जन्म की तारीख",
+      ),
+      gender: AppLocalizations_Labels_Gender(
+        error: "कृपया लिंग चुनें",
+        female: "महिला",
+        male: "पुरुष",
+        title: "जन्म के समय लिंग",
       ),
       language: AppLocalizations_Labels_Language(
-        inEnglish: "Hindi",
-        title: "हिंदी",
+        inEnglish: "अंग्रेज़ी",
+        title: "अंग्रेज़ी",
       ),
       medical: AppLocalizations_Labels_Medical(
         deworming: "स्वच्छ",
@@ -605,150 +422,111 @@ class AppLocalizations {
           title: "टीके",
         ),
       ),
-      registration: AppLocalizations_Labels_Registration(
-        registerPatient: "पूर्ण रोगी पंजीकरण",
-        savePatient: "रोगी को बचाने",
+      name: AppLocalizations_Labels_Name(
+        familyName: "पारिवारिक / अंतिम नाम",
+        familyNameError: "परिवार का नाम दर्ज करें",
+        firstName: "पहला नाम",
+        givenNameError: "दिए गए नाम दर्ज करें",
+        givenNames: "प्रथम / दिए गए नाम",
+        lastName: "उपनाम",
+        otherNames: "दुसरे नाम",
+        title: "नाम",
+      ),
+      pages: AppLocalizations_Labels_Pages(
+        allPatients: "सभी मरीजों को",
+        contacts: "संपर्क",
+        login: "लॉग इन करें",
+        newPatient: "नए रोगी",
+        patientHome: "रोगी होम",
+        patientInformation: "रोगी के बारे में जानकारी",
+        summaryReport: "संक्षिप्त रिपोर्ट",
+      ),
+      relationships: AppLocalizations_Labels_Relationships(
+        daughter: "बेटी",
+        error: "कृपया संबंध का चयन",
+        father: "पिता",
+        grandfather: "दादा",
+        grandmother: "दादी मा",
+        mother: "मां",
+        nephew: "भतीजा",
+        niece: "भांजी",
+        other: "अन्य",
+        relation: "रिश्ता",
+        sister: "बहन",
+        son: "बेटा",
+        title: "संबंध",
+        uncle: "चाचा",
+        aunt: "चाची",
+        brother: "भाई",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "अंधेरा",
         language: "भाषा: हिन्दी",
         light: "रोशनी",
-        ok: "ठीक",
-        signOut: "प्रस्थान करें",
         system: "प्रणाली",
         theme: "विषय",
         title: "समायोजन",
-        updateProfile: "प्रोफ़ाइल अपडेट करें",
-      ),
-      vigor: AppLocalizations_Labels_Vigor(
-        title: "ताक़त",
       ),
     ),
     Locale.fromSubtags(languageCode: "ru"): AppLocalizations_Labels(
+      actions: AppLocalizations_Labels_Actions(
+        add: "Добавить",
+        cancel: "отменить",
+        save: "Сохранить",
+        search: "Поиск",
+        submit: "Разместить",
+      ),
+      address: AppLocalizations_Labels_Address(
+        neighborhood: AppLocalizations_Labels_Address_Neighborhood(
+          error: "Выберите район",
+          title: "окрестности",
+        ),
+      ),
+      age: AppLocalizations_Labels_Age(
+        title: "Возраст",
+      ),
       app: AppLocalizations_Labels_App(
         chooseLanguage: "Выберите язык",
         chooseTheme: "Выбрать тему",
         settings: "Настройки приложения",
         system: "система",
         title: AppLocalizations_Labels_App_Title(
-          title: "Vigor",
-          saluddominicana: "Salud Dominicana",
+          saluddominicana: "Салюд Доминикане",
+          title: "сила",
         ),
       ),
       auth: AppLocalizations_Labels_Auth(
-        cancel: "Отмена",
-        changePassword: "Сменить пароль",
-        email: "Электронное письмо",
         login: "Авторизоваться",
         password: "пароль",
-        resetPassword: "Сброс пароля",
-        signIn: "Войти в систему",
-        signUp: "Подписаться",
-        submit: "представить",
         userName: "имя пользователя",
       ),
-      dates: AppLocalizations_Labels_Dates(
-        month: AppLocalizations_Labels_Dates_Month(
-          april: "апреля",
-          august: "августейший",
-          december: "Декабрь",
-          february: "февраль",
-          january: "январь",
-          july: "июль",
-          june: "июнь",
-          march: "Март",
-          may: "май",
-          november: "ноябрь",
-          october: "октября",
-          september: "сентябрь",
-        ),
-        weekday: AppLocalizations_Labels_Dates_Weekday(
-          friday: "пятница",
-          monday: "понедельник",
-          saturday: "суббота",
-          sunday: "Воскресенье",
-          thursday: "Четверг",
-          tuesday: "вторник",
-          wednesday: "среда",
-        ),
+      birthDate: AppLocalizations_Labels_BirthDate(
+        error: "Пожалуйста, введите дату рождения",
+        title: "День рождения",
       ),
-      general: AppLocalizations_Labels_General(
-        age: "Возраст",
-        allPatients: "Все пациенты",
-        birthDate: "Дата рождения",
-        birthDateError: "Пожалуйста, введите дату рождения",
-        contacts: "Пациент Контакты",
-        dateofBirth: "Дата рождения",
-        editSurvey: "Изменить опрос",
-        familyNameError: "Введите фамилию",
-        genderError: "Пожалуйста, выберите пол",
-        givenNameError: "Введите другие имена",
-        mySchedule: "Мое расписание",
-        neighborhoodError: "Выберите район",
-        newPatient: "Новый пациент",
-        newSurvey: "повторная съемка",
-        nextPage: "Следующая Страница",
-        patient: "Терпеливый",
-        patientInformation: "Информация о пациенте",
-        relationship: "отношения",
-        relationshipError: "Пожалуйста, выберите отношения",
-        submitShare: "Отправить / Share",
-        address: AppLocalizations_Labels_General_Address(
-          city: "город",
-          country: "Страна",
-          county: "округ",
-          district: "район",
-          neighborhood: "окрестности",
-          postalCode: "Почтовый Код",
-          state: "состояние",
-          title: "Адрес",
-        ),
-        name: AppLocalizations_Labels_General_Name(
-          familyName: "Семья / Фамилия",
-          firstName: "Имя",
-          givenNames: "Первый / Указанные имена",
-          lastName: "Фамилия",
-          name: "название",
-          otherNames: "Другие имена",
-        ),
-        relation: AppLocalizations_Labels_General_Relation(
-          aunt: "тетка",
-          brother: "Родной брат",
-          daughter: "Дочь",
-          father: "Отец",
-          grandfather: "Дедушка",
-          grandmother: "Бабушка",
-          mother: "Мать",
-          nephew: "Племянник",
-          niece: "Племянница",
-          other: "Другие",
-          sister: "Сестра",
-          son: "Сын",
-          title: "Связь",
-          uncle: "Дядя",
-        ),
-        search: AppLocalizations_Labels_General_Search(
-          filter: "Фильтр",
-          patientSearch: "Поиск пациента",
-          search: "Поиск",
-          searchName: "Поиск Имя",
-        ),
-        sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
-          female: "женский",
-          male: "мужчина",
-          title: "Пол при рождении",
-        ),
+      contacts: AppLocalizations_Labels_Contacts(
+        newContact: "Новый контакт",
+        noContactsAdded: "Нет контактов, которые были добавлены.",
+      ),
+      dateOfBirth: AppLocalizations_Labels_DateOfBirth(
+        title: "Дата рождения",
+      ),
+      gender: AppLocalizations_Labels_Gender(
+        error: "Пожалуйста, выберите пол",
+        female: "женский",
+        male: "мужчина",
+        title: "Пол при рождении",
       ),
       language: AppLocalizations_Labels_Language(
-        inEnglish: "Russian",
-        title: "русский",
+        inEnglish: "английский",
+        title: "английский",
       ),
       medical: AppLocalizations_Labels_Medical(
         deworming: "дегельминтация",
         growth: "рост",
         immunization: "иммунизация",
         immunizations: "Иммунизация",
-        summaryReport: "Отчет",
+        summaryReport: "Сводный отчет",
         vaccine: "вакцина",
         vaccines: AppLocalizations_Labels_Medical_Vaccines(
           addDate: "Дата добавления вакцины:",
@@ -758,143 +536,104 @@ class AppLocalizations {
           title: "Вакцина",
         ),
       ),
-      registration: AppLocalizations_Labels_Registration(
-        registerPatient: "Полное Пациент регистрации",
-        savePatient: "Сохранить пациента",
+      name: AppLocalizations_Labels_Name(
+        familyName: "Семья / Фамилия",
+        familyNameError: "Введите фамилию",
+        firstName: "Имя",
+        givenNameError: "Введите данные имена",
+        givenNames: "Первый / Указанные имена",
+        lastName: "Фамилия",
+        otherNames: "Другие названия",
+        title: "имя",
+      ),
+      pages: AppLocalizations_Labels_Pages(
+        allPatients: "Все пациенты",
+        contacts: "контакты",
+        login: "Авторизоваться",
+        newPatient: "Новый пациент",
+        patientHome: "Главная пациента",
+        patientInformation: "Информация о пациенте",
+        summaryReport: "Сводный отчет",
+      ),
+      relationships: AppLocalizations_Labels_Relationships(
+        daughter: "Дочь",
+        error: "Пожалуйста, выберите отношения",
+        father: "Отец",
+        grandfather: "Дед",
+        grandmother: "Бабушка",
+        mother: "Мать",
+        nephew: "Племянник",
+        niece: "Племянница",
+        other: "разное",
+        relation: "Связь",
+        sister: "Сестра",
+        son: "Сын",
+        title: "отношения",
+        uncle: "Дядя",
+        aunt: "тетка",
+        brother: "Родной брат",
       ),
       settings: AppLocalizations_Labels_Settings(
-        dark: "Темно",
+        dark: "Тьма",
         language: "язык",
-        light: "Легкий",
-        ok: "ОК",
-        signOut: "Выход",
+        light: "Свет",
         system: "система",
         theme: "тема",
         title: "настройки",
-        updateProfile: "Обновить профиль",
-      ),
-      vigor: AppLocalizations_Labels_Vigor(
-        title: "сила",
       ),
     ),
     Locale.fromSubtags(languageCode: "bn"): AppLocalizations_Labels(
+      actions: AppLocalizations_Labels_Actions(
+        add: "যোগ",
+        cancel: "বাতিল",
+        save: "সংরক্ষণ",
+        search: "অনুসন্ধান করুন",
+        submit: "জমা দিন",
+      ),
+      address: AppLocalizations_Labels_Address(
+        neighborhood: AppLocalizations_Labels_Address_Neighborhood(
+          error: "দয়া করে আশপাশ নির্বাচন",
+          title: "আশপাশ",
+        ),
+      ),
+      age: AppLocalizations_Labels_Age(
+        title: "বয়স",
+      ),
       app: AppLocalizations_Labels_App(
         chooseLanguage: "ভাষা নির্বাচন করুন",
         chooseTheme: "থিম চয়ন করুন",
         settings: "অ্যাপ সেটিংস",
         system: "পদ্ধতি",
         title: AppLocalizations_Labels_App_Title(
-          title: "Vigor",
           saluddominicana: "Salud Dominicana",
+          title: "তেজ",
         ),
       ),
       auth: AppLocalizations_Labels_Auth(
-        cancel: "বাতিল",
-        changePassword: "পাসওয়ার্ড পরিবর্তন",
-        email: "ইমেইল",
         login: "প্রবেশ করুন",
         password: "পাসওয়ার্ড",
-        resetPassword: "পাসওয়ার্ড রিসেট করুন",
-        signIn: "সাইন ইন করুন",
-        signUp: "নিবন্ধন করুন",
-        submit: "জমা দিন",
         userName: "ব্যবহারকারীর নাম",
       ),
-      dates: AppLocalizations_Labels_Dates(
-        month: AppLocalizations_Labels_Dates_Month(
-          april: "এপ্রিল",
-          august: "অগাস্ট",
-          december: "ডিসেম্বর",
-          february: "ফেব্রুয়ারি",
-          january: "জানুয়ারী",
-          july: "জুলাই",
-          june: "জুন",
-          march: "মার্চ",
-          may: "মে",
-          november: "নভেম্বর",
-          october: "অক্টোবর",
-          september: "সেপ্টেম্বর",
-        ),
-        weekday: AppLocalizations_Labels_Dates_Weekday(
-          friday: "শুক্রবার",
-          monday: "সোমবার",
-          saturday: "শনিবার",
-          sunday: "রবিবার",
-          thursday: "বৃহস্পতিবার",
-          tuesday: "মঙ্গলবার",
-          wednesday: "বুধবার",
-        ),
+      birthDate: AppLocalizations_Labels_BirthDate(
+        error: "জন্মতারিখ লিখুন দয়া করে",
+        title: "জন্ম তারিখ",
       ),
-      general: AppLocalizations_Labels_General(
-        age: "বয়স",
-        allPatients: "সব রোগীদের",
-        birthDate: "জন্ম তারিখ",
-        birthDateError: "জন্মতারিখ লিখুন দয়া করে",
-        contacts: "রোগীর যোগাযোগ",
-        dateofBirth: "জন্ম তারিখ",
-        editSurvey: "সার্ভে সম্পাদনা",
-        familyNameError: "পারিবারিক নাম লিখুন",
-        genderError: "দয়া করে লিঙ্গ নির্বাচন করুন",
-        givenNameError: "অন্যান্য নামগুলি লিখুন",
-        mySchedule: "আমার সময়সূচি",
-        neighborhoodError: "দয়া করে আশপাশ নির্বাচন",
-        newPatient: "নিউ রোগীর",
-        newSurvey: "নতুন জরিপ",
-        nextPage: "পরবর্তী পৃষ্ঠা",
-        patient: "রোগী",
-        patientInformation: "রোগীর তথ্য",
-        relationship: "সম্পর্ক",
-        relationshipError: "দয়া করে সম্পর্ক নির্বাচন",
-        submitShare: "জমা দিন / শেয়ার",
-        address: AppLocalizations_Labels_General_Address(
-          city: "শহর",
-          country: "দেশ",
-          county: "বিভাগ",
-          district: "জেলা",
-          neighborhood: "আশপাশ",
-          postalCode: "পোস্ট অফিসের নাম্বার",
-          state: "রাষ্ট্র",
-          title: "ঠিকানা",
-        ),
-        name: AppLocalizations_Labels_General_Name(
-          familyName: "পারিবারিক / শেষ নাম",
-          firstName: "নামের প্রথম অংশ",
-          givenNames: "প্রথম / দেওয়া নাম",
-          lastName: "নামের শেষাংশ",
-          name: "নাম",
-          otherNames: "অন্য নামগুলো",
-        ),
-        relation: AppLocalizations_Labels_General_Relation(
-          aunt: "মাসি",
-          brother: "ভাই",
-          daughter: "কন্যা",
-          father: "পিতা",
-          grandfather: "পিতামহ",
-          grandmother: "নানী",
-          mother: "মা",
-          nephew: "ভাইপো",
-          niece: "ভাইঝি",
-          other: "অন্যান্য",
-          sister: "বোন",
-          son: "পুত্র",
-          title: "সম্পর্ক",
-          uncle: "চাচা",
-        ),
-        search: AppLocalizations_Labels_General_Search(
-          filter: "ছাঁকনি",
-          patientSearch: "রোগীর অনুসন্ধান",
-          search: "অনুসন্ধান করুন",
-          searchName: "অনুসন্ধান নাম",
-        ),
-        sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
-          female: "মহিলা",
-          male: "পুরুষ",
-          title: "জন্মের সময় যৌন",
-        ),
+      contacts: AppLocalizations_Labels_Contacts(
+        newContact: "নতুন কন্টাক্ট",
+        noContactsAdded: "কোনো পরিচিতি যোগ করা হয়েছে।",
+      ),
+      dateOfBirth: AppLocalizations_Labels_DateOfBirth(
+        title: "জন্ম তারিখ",
+      ),
+      gender: AppLocalizations_Labels_Gender(
+        error: "দয়া করে লিঙ্গ নির্বাচন করুন",
+        female: "মহিলা",
+        male: "পুরুষ",
+        title: "জন্মের সময় যৌন",
       ),
       language: AppLocalizations_Labels_Language(
-        inEnglish: "Bengali",
-        title: "বাংলা",
+        inEnglish: "ইংরেজি",
+        title: "ইংরেজি",
       ),
       medical: AppLocalizations_Labels_Medical(
         deworming: "ডিওয়ার্মিং",
@@ -911,143 +650,104 @@ class AppLocalizations {
           title: "টিকা",
         ),
       ),
-      registration: AppLocalizations_Labels_Registration(
-        registerPatient: "সম্পূর্ণ রোগীর নিবন্ধন",
-        savePatient: "রোগীর সংরক্ষণ",
+      name: AppLocalizations_Labels_Name(
+        familyName: "পারিবারিক / শেষ নাম",
+        familyNameError: "পারিবারিক নাম লিখুন",
+        firstName: "নামের প্রথম অংশ",
+        givenNameError: "প্রদত্ত নাম লিখুন",
+        givenNames: "প্রথম / দেওয়া নাম",
+        lastName: "নামের শেষাংশ",
+        otherNames: "অন্য নামগুলো",
+        title: "নাম",
+      ),
+      pages: AppLocalizations_Labels_Pages(
+        allPatients: "সব রোগীদের",
+        contacts: "যোগাযোগ",
+        login: "প্রবেশ করুন",
+        newPatient: "নিউ রোগীর",
+        patientHome: "রোগীর বাড়ি",
+        patientInformation: "রোগীর তথ্য",
+        summaryReport: "সারসংক্ষেপ প্রতিবেদন",
+      ),
+      relationships: AppLocalizations_Labels_Relationships(
+        daughter: "কন্যা",
+        error: "দয়া করে সম্পর্ক নির্বাচন",
+        father: "পিতা",
+        grandfather: "পিতামহ",
+        grandmother: "নানী",
+        mother: "মা",
+        nephew: "ভাইপো",
+        niece: "ভাইঝি",
+        other: "অন্যান্য",
+        relation: "সম্পর্ক",
+        sister: "বোন",
+        son: "পুত্র",
+        title: "সম্পর্ক",
+        uncle: "চাচা",
+        aunt: "মাসি",
+        brother: "ভাই",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "অন্ধকার",
         language: "ভাষা",
         light: "আলো",
-        ok: "ঠিক আছে",
-        signOut: "সাইন আউট",
         system: "পদ্ধতি",
         theme: "বিষয়",
         title: "সেটিংস",
-        updateProfile: "হালনাগাদ প্রফাইল",
-      ),
-      vigor: AppLocalizations_Labels_Vigor(
-        title: "তেজ",
       ),
     ),
     Locale.fromSubtags(languageCode: "my"): AppLocalizations_Labels(
+      actions: AppLocalizations_Labels_Actions(
+        add: "add",
+        cancel: "Cancel",
+        save: "ကြော်ငြာကို Save လုပ်ရန်",
+        search: "ရှာဖှေ",
+        submit: "Submit",
+      ),
+      address: AppLocalizations_Labels_Address(
+        neighborhood: AppLocalizations_Labels_Address_Neighborhood(
+          error: "ရပ်ကွက်အတွင်းကို select ပေးပါ",
+          title: "ရပ်ကွက်ထဲ",
+        ),
+      ),
+      age: AppLocalizations_Labels_Age(
+        title: "အသက်အရွယ်",
+      ),
       app: AppLocalizations_Labels_App(
         chooseLanguage: "ဘာသာစကားများကိုရွေးချယ်ပါ",
         chooseTheme: "အဓိကအကြောင်းအရာ Choose",
         settings: "App ကိုချိန်ညှိမှုများ",
         system: "စံနစ်",
         title: AppLocalizations_Labels_App_Title(
-          title: "Vigor",
-          saluddominicana: "Salud Dominicana",
+          saluddominicana: "Salud ဒိုမီနီကာ",
+          title: "သန်စွမ်း",
         ),
       ),
       auth: AppLocalizations_Labels_Auth(
-        cancel: "Cancel",
-        changePassword: "စကားဝှက်ကိုပြောင်းရန်",
-        email: "အီးမေးလ်ပို့ရန်",
         login: "လော့ဂ်အင်",
         password: "Password ကို",
-        resetPassword: "လျှို့ဝှတ်နံပါတ်အားမူလအတိုင်းပြန်လုပ်သည်",
-        signIn: "ဆိုင်းအင်လုပ်ခြင်း",
-        signUp: "ဆိုင်းအပ်",
-        submit: "Submit",
         userName: "username",
       ),
-      dates: AppLocalizations_Labels_Dates(
-        month: AppLocalizations_Labels_Dates_Month(
-          april: "ဧပြီလ",
-          august: "သြဂုတ်လ",
-          december: "ဒီဇင်ဘာလ",
-          february: "ဖေဖေါ်ဝါရီလ",
-          january: "ဇန္နဝါရီလ",
-          july: "ဇူလိုင်လ",
-          june: "ဇွန်လ",
-          march: "မတ်လ",
-          may: "မေလ",
-          november: "နိုဝင်ဘာလ",
-          october: "အောက်တိုဘာလ",
-          september: "စက်တင်ဘာလ",
-        ),
-        weekday: AppLocalizations_Labels_Dates_Weekday(
-          friday: "သောကြာနေ့",
-          monday: "တနင်္လာနေ့",
-          saturday: "စနေနေ့",
-          sunday: "တနင်္ဂနွေ",
-          thursday: "ကြာသပတေးနေ့",
-          tuesday: "အင်္ဂါနေ့",
-          wednesday: "ဗုဒ္ဓဟူးနေ့",
-        ),
+      birthDate: AppLocalizations_Labels_BirthDate(
+        error: "မွေးနေ့ရိုက်ထည့်ပေးပါ",
+        title: "မွေးရက်",
       ),
-      general: AppLocalizations_Labels_General(
-        age: "အသက်အရွယ်",
-        allPatients: "အားလုံးလူနာများ",
-        birthDate: "မွေးရက်",
-        birthDateError: "မွေးနေ့ရိုက်ထည့်ပေးပါ",
-        contacts: "လူနာဆက်သွယ်ရန်",
-        dateofBirth: "မွေးရက်",
-        editSurvey: "Edit ကိုစစ်တမ်း",
-        familyNameError: "မိသားစုနာမည်ရိုက်ထည့်ပါ",
-        genderError: "ကျားမကို select ပေးပါ",
-        givenNameError: "သည်အခြားအမည်များကိုရိုက်ထည့်ပါ",
-        mySchedule: "အကြှနျုပျ၏ဇယား",
-        neighborhoodError: "ရပ်ကွက်အတွင်းကို select ပေးပါ",
-        newPatient: "နယူးလူနာ",
-        newSurvey: "နယူးစစ်တမ်း",
-        nextPage: "next ကို 's Page",
-        patient: "လူနာ",
-        patientInformation: "လူနာသတင်းအချက်အလက်",
-        relationship: "relationship",
-        relationshipError: "ဆက်ဆံရေးမျိုးကိုရွေးချယ်ပါ ကျေးဇူးပြု.",
-        submitShare: "Submit / ဝေမျှမယ်",
-        address: AppLocalizations_Labels_General_Address(
-          city: "မြို့",
-          country: "ပြည်",
-          county: "ကောင်တီ",
-          district: "နယ်",
-          neighborhood: "ရပ်ကွက်ထဲ",
-          postalCode: "စာတိုက်သင်္ကေတ",
-          state: "ပြည်နယ်",
-          title: "လိပ်စာ",
-        ),
-        name: AppLocalizations_Labels_General_Name(
-          familyName: "မိသားစု / နောက်ဆုံးအမည်",
-          firstName: "နာမည်",
-          givenNames: "ပထမဦးစွာ / အားအမည်များ",
-          lastName: "မျိုးနွယ်အမည်",
-          name: "အမည်",
-          otherNames: "အခြားအမည်များ",
-        ),
-        relation: AppLocalizations_Labels_General_Relation(
-          aunt: "အဒေါ်",
-          brother: "အစ်ကို",
-          daughter: "သမီး",
-          father: "ဖခင်",
-          grandfather: "အဘိုး",
-          grandmother: "အဖွါး",
-          mother: "မိခင်",
-          nephew: "တူ",
-          niece: "တူမ",
-          other: "အခြား",
-          sister: "အစ်မ",
-          son: "သား",
-          title: "ဆှေမြိုး",
-          uncle: "ဘကြီး",
-        ),
-        search: AppLocalizations_Labels_General_Search(
-          filter: "ရေစစ်",
-          patientSearch: "လူနာရှာရန်",
-          search: "ရှာဖှေ",
-          searchName: "ရှာရန်အမည်",
-        ),
-        sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
-          female: "အမြိုးသမီး",
-          male: "အထီး",
-          title: "မွေးဖွားခြင်းမှာလိင်",
-        ),
+      contacts: AppLocalizations_Labels_Contacts(
+        newContact: "နယူးဆက်သွယ်ပါ",
+        noContactsAdded: "အဘယ်သူမျှမအဆက်အသွယ်ထည့်ပြီးပါပြီ။",
+      ),
+      dateOfBirth: AppLocalizations_Labels_DateOfBirth(
+        title: "မွေးရက်",
+      ),
+      gender: AppLocalizations_Labels_Gender(
+        error: "ကျားမကို select ပေးပါ",
+        female: "အမြိုးသမီး",
+        male: "အထီး",
+        title: "မွေးဖွားခြင်းမှာလိင်",
       ),
       language: AppLocalizations_Labels_Language(
-        inEnglish: "Burmese",
-        title: "မြန်မာ",
+        inEnglish: "အင်္ဂလိပ်",
+        title: "အင်္ဂလိပ်",
       ),
       medical: AppLocalizations_Labels_Medical(
         deworming: "Deworming",
@@ -1064,143 +764,104 @@ class AppLocalizations {
           title: "ကာကွယ်ဆေးများ",
         ),
       ),
-      registration: AppLocalizations_Labels_Registration(
-        registerPatient: "အပြီးအစီးလူနာမှတ်ပုံတင်ခြင်း",
-        savePatient: "လူနာကြော်ငြာကို Save လုပ်ရန်",
+      name: AppLocalizations_Labels_Name(
+        familyName: "မိသားစု / နောက်ဆုံးအမည်",
+        familyNameError: "မိသားစုနာမည်ရိုက်ထည့်ပါ",
+        firstName: "နာမည်",
+        givenNameError: "ပေးထားသောအမည်များကိုရိုက်ထည့်ပါ",
+        givenNames: "ပထမဦးစွာ / အားအမည်များ",
+        lastName: "မျိုးနွယ်အမည်",
+        otherNames: "အခြားအမည်များ",
+        title: "အမည်",
+      ),
+      pages: AppLocalizations_Labels_Pages(
+        allPatients: "အားလုံးလူနာများ",
+        contacts: "ဆက်သွယ်ရန်",
+        login: "လော့ဂ်အင်",
+        newPatient: "နယူးလူနာ",
+        patientHome: "လူနာမူလစာမျက်နှာ",
+        patientInformation: "လူနာသတင်းအချက်အလက်",
+        summaryReport: "အကျဉ်းချုပ်အစီရင်ခံစာ",
+      ),
+      relationships: AppLocalizations_Labels_Relationships(
+        daughter: "သမီး",
+        error: "ဆက်ဆံရေးမျိုးကိုရွေးချယ်ပါ ကျေးဇူးပြု.",
+        father: "ဖခင်",
+        grandfather: "အဘိုး",
+        grandmother: "အဖွါး",
+        mother: "မိခင်",
+        nephew: "တူ",
+        niece: "တူမ",
+        other: "အခြား",
+        relation: "ဆှေမြိုး",
+        sister: "အစ်မ",
+        son: "သား",
+        title: "relationship",
+        uncle: "ဘကြီး",
+        aunt: "အဒေါ်",
+        brother: "အစ်ကို",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "မှောငျမိုကျသော",
         language: "ဘာသာစကား",
         light: "အလင်း",
-        ok: "ရလား",
-        signOut: "ဆိုင်းအောက်",
         system: "စံနစ်",
         theme: "အကွောငျး",
         title: "Settings များ",
-        updateProfile: "Update ကိုကိုယ်ရေးဖိုင်",
-      ),
-      vigor: AppLocalizations_Labels_Vigor(
-        title: "သန်စွမ်း",
       ),
     ),
     Locale.fromSubtags(languageCode: "zh_CN"): AppLocalizations_Labels(
+      actions: AppLocalizations_Labels_Actions(
+        add: "加",
+        cancel: "取消",
+        save: "保存",
+        search: "搜索",
+        submit: "提交",
+      ),
+      address: AppLocalizations_Labels_Address(
+        neighborhood: AppLocalizations_Labels_Address_Neighborhood(
+          error: "请选择附近",
+          title: "邻里",
+        ),
+      ),
+      age: AppLocalizations_Labels_Age(
+        title: "年龄",
+      ),
       app: AppLocalizations_Labels_App(
         chooseLanguage: "选择语言",
         chooseTheme: "选择主题",
         settings: "应用程序设置",
         system: "系统",
         title: AppLocalizations_Labels_App_Title(
-          title: "Vigor",
-          saluddominicana: "Salud Dominicana",
+          saluddominicana: "每期多米尼加",
+          title: "活力",
         ),
       ),
       auth: AppLocalizations_Labels_Auth(
-        cancel: "取消",
-        changePassword: "更改密码",
-        email: "电子邮件",
         login: "登录",
         password: "密码",
-        resetPassword: "重设密码",
-        signIn: "登入",
-        signUp: "注册",
-        submit: "提交",
         userName: "用户名",
       ),
-      dates: AppLocalizations_Labels_Dates(
-        month: AppLocalizations_Labels_Dates_Month(
-          april: "四月",
-          august: "八月",
-          december: "十二月",
-          february: "二月",
-          january: "一月",
-          july: "七月",
-          june: "六月",
-          march: "游行",
-          may: "可能",
-          november: "十一月",
-          october: "十月",
-          september: "九月",
-        ),
-        weekday: AppLocalizations_Labels_Dates_Weekday(
-          friday: "星期五",
-          monday: "星期一",
-          saturday: "星期六",
-          sunday: "星期日",
-          thursday: "星期四",
-          tuesday: "星期二",
-          wednesday: "星期三",
-        ),
+      birthDate: AppLocalizations_Labels_BirthDate(
+        error: "请输入生日",
+        title: "生日",
       ),
-      general: AppLocalizations_Labels_General(
-        age: "年龄",
-        allPatients: "所有患者",
-        birthDate: "生日",
-        birthDateError: "请输入生日",
-        contacts: "病人的接触",
-        dateofBirth: "出生日期",
-        editSurvey: "编辑调查",
-        familyNameError: "输入姓氏",
-        genderError: "请选择性别",
-        givenNameError: "输入其他名称",
-        mySchedule: "我的日程表",
-        neighborhoodError: "请选择附近",
-        newPatient: "新患者",
-        newSurvey: "新调查",
-        nextPage: "下一页",
-        patient: "患者",
-        patientInformation: "患者信息",
-        relationship: "关系",
-        relationshipError: "请选择关系",
-        submitShare: "提交/股",
-        address: AppLocalizations_Labels_General_Address(
-          city: "市",
-          country: "国家",
-          county: "县",
-          district: "区",
-          neighborhood: "邻里",
-          postalCode: "邮政编码",
-          state: "州",
-          title: "地址",
-        ),
-        name: AppLocalizations_Labels_General_Name(
-          familyName: "家庭/姓氏",
-          firstName: "名字",
-          givenNames: "首先/赐名",
-          lastName: "姓",
-          name: "名称",
-          otherNames: "其他名称",
-        ),
-        relation: AppLocalizations_Labels_General_Relation(
-          aunt: "姑妈",
-          brother: "哥哥",
-          daughter: "女儿",
-          father: "父亲",
-          grandfather: "祖父",
-          grandmother: "祖母",
-          mother: "母亲",
-          nephew: "外甥",
-          niece: "侄女",
-          other: "其他",
-          sister: "妹妹",
-          son: "儿子",
-          title: "关系",
-          uncle: "叔叔",
-        ),
-        search: AppLocalizations_Labels_General_Search(
-          filter: "过滤",
-          patientSearch: "患者搜索",
-          search: "搜索",
-          searchName: "搜索产品名称",
-        ),
-        sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
-          female: "女",
-          male: "男",
-          title: "性别出生",
-        ),
+      contacts: AppLocalizations_Labels_Contacts(
+        newContact: "新联系人",
+        noContactsAdded: "没有联系人已被添加。",
+      ),
+      dateOfBirth: AppLocalizations_Labels_DateOfBirth(
+        title: "出生日期",
+      ),
+      gender: AppLocalizations_Labels_Gender(
+        error: "请选择性别",
+        female: "女",
+        male: "男",
+        title: "性别出生",
       ),
       language: AppLocalizations_Labels_Language(
-        inEnglish: "Chinese (Simplified)",
-        title: "简体中文）",
+        inEnglish: "英语",
+        title: "英语",
       ),
       medical: AppLocalizations_Labels_Medical(
         deworming: "驱虫",
@@ -1217,143 +878,104 @@ class AppLocalizations {
           title: "疫苗",
         ),
       ),
-      registration: AppLocalizations_Labels_Registration(
-        registerPatient: "完整的病人登记",
-        savePatient: "保存患者",
+      name: AppLocalizations_Labels_Name(
+        familyName: "家庭/姓氏",
+        familyNameError: "输入姓氏",
+        firstName: "名字",
+        givenNameError: "输入赐名",
+        givenNames: "首先/赐名",
+        lastName: "姓",
+        otherNames: "其他名称",
+        title: "名称",
+      ),
+      pages: AppLocalizations_Labels_Pages(
+        allPatients: "所有患者",
+        contacts: "往来",
+        login: "登录",
+        newPatient: "新患者",
+        patientHome: "患者首页",
+        patientInformation: "患者信息",
+        summaryReport: "总结报告",
+      ),
+      relationships: AppLocalizations_Labels_Relationships(
+        daughter: "女儿",
+        error: "请选择关系",
+        father: "父亲",
+        grandfather: "祖父",
+        grandmother: "祖母",
+        mother: "母亲",
+        nephew: "外甥",
+        niece: "侄女",
+        other: "其他",
+        relation: "关系",
+        sister: "妹妹",
+        son: "儿子",
+        title: "关系",
+        uncle: "叔叔",
+        aunt: "姨",
+        brother: "哥哥",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "黑暗",
         language: "语言",
         light: "光",
-        ok: "好",
-        signOut: "登出",
         system: "系统",
         theme: "主题",
         title: "设置",
-        updateProfile: "更新配置文件",
-      ),
-      vigor: AppLocalizations_Labels_Vigor(
-        title: "活力",
       ),
     ),
     Locale.fromSubtags(languageCode: "zh_TW"): AppLocalizations_Labels(
+      actions: AppLocalizations_Labels_Actions(
+        add: "加",
+        cancel: "取消",
+        save: "保存",
+        search: "搜索",
+        submit: "提交",
+      ),
+      address: AppLocalizations_Labels_Address(
+        neighborhood: AppLocalizations_Labels_Address_Neighborhood(
+          error: "請選擇附近",
+          title: "鄰里",
+        ),
+      ),
+      age: AppLocalizations_Labels_Age(
+        title: "年齡",
+      ),
       app: AppLocalizations_Labels_App(
         chooseLanguage: "選擇語言",
         chooseTheme: "選擇主題",
         settings: "應用程序設置",
         system: "系統",
         title: AppLocalizations_Labels_App_Title(
-          title: "Vigor",
-          saluddominicana: "Salud Dominicana",
+          saluddominicana: "每期多米尼加",
+          title: "活力",
         ),
       ),
       auth: AppLocalizations_Labels_Auth(
-        cancel: "取消",
-        changePassword: "更改密碼",
-        email: "電子郵件",
         login: "登錄",
         password: "密碼",
-        resetPassword: "重設密碼",
-        signIn: "登入",
-        signUp: "註冊",
-        submit: "提交",
         userName: "用戶名",
       ),
-      dates: AppLocalizations_Labels_Dates(
-        month: AppLocalizations_Labels_Dates_Month(
-          april: "四月",
-          august: "八月",
-          december: "十二月",
-          february: "二月",
-          january: "一月",
-          july: "七月",
-          june: "六月",
-          march: "遊行",
-          may: "可能",
-          november: "十一月",
-          october: "十月",
-          september: "九月",
-        ),
-        weekday: AppLocalizations_Labels_Dates_Weekday(
-          friday: "星期五",
-          monday: "星期一",
-          saturday: "星期六",
-          sunday: "星期日",
-          thursday: "星期四",
-          tuesday: "星期二",
-          wednesday: "星期三",
-        ),
+      birthDate: AppLocalizations_Labels_BirthDate(
+        error: "請輸入生日",
+        title: "生日",
       ),
-      general: AppLocalizations_Labels_General(
-        age: "年齡",
-        allPatients: "所有患者",
-        birthDate: "生日",
-        birthDateError: "請輸入生日",
-        contacts: "病人的接觸",
-        dateofBirth: "出生日期",
-        editSurvey: "編輯調查",
-        familyNameError: "輸入姓氏",
-        genderError: "請選擇性別",
-        givenNameError: "輸入其他名稱",
-        mySchedule: "我的日程表",
-        neighborhoodError: "請選擇附近",
-        newPatient: "新患者",
-        newSurvey: "新調查",
-        nextPage: "下一頁",
-        patient: "患者",
-        patientInformation: "患者信息",
-        relationship: "關係",
-        relationshipError: "請選擇關係",
-        submitShare: "提交/股",
-        address: AppLocalizations_Labels_General_Address(
-          city: "市",
-          country: "國家",
-          county: "縣",
-          district: "區",
-          neighborhood: "鄰里",
-          postalCode: "郵政編碼",
-          state: "州",
-          title: "地址",
-        ),
-        name: AppLocalizations_Labels_General_Name(
-          familyName: "家庭/姓氏",
-          firstName: "名字",
-          givenNames: "首先/賜名",
-          lastName: "姓",
-          name: "名稱",
-          otherNames: "其他名稱",
-        ),
-        relation: AppLocalizations_Labels_General_Relation(
-          aunt: "姑媽",
-          brother: "哥哥",
-          daughter: "女兒",
-          father: "父親",
-          grandfather: "祖父",
-          grandmother: "祖母",
-          mother: "母親",
-          nephew: "外甥",
-          niece: "侄女",
-          other: "其他",
-          sister: "妹妹",
-          son: "兒子",
-          title: "關係",
-          uncle: "叔叔",
-        ),
-        search: AppLocalizations_Labels_General_Search(
-          filter: "過濾",
-          patientSearch: "患者搜索",
-          search: "搜索",
-          searchName: "搜索產品名稱",
-        ),
-        sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
-          female: "女",
-          male: "男",
-          title: "性別出生",
-        ),
+      contacts: AppLocalizations_Labels_Contacts(
+        newContact: "新聯繫人",
+        noContactsAdded: "沒有聯繫人已被添加。",
+      ),
+      dateOfBirth: AppLocalizations_Labels_DateOfBirth(
+        title: "出生日期",
+      ),
+      gender: AppLocalizations_Labels_Gender(
+        error: "請選擇性別",
+        female: "女",
+        male: "男",
+        title: "性別出生",
       ),
       language: AppLocalizations_Labels_Language(
-        inEnglish: "Chinese (Traditional)",
-        title: "中國傳統的）",
+        inEnglish: "英語",
+        title: "英語",
       ),
       medical: AppLocalizations_Labels_Medical(
         deworming: "驅蟲",
@@ -1370,143 +992,104 @@ class AppLocalizations {
           title: "疫苗",
         ),
       ),
-      registration: AppLocalizations_Labels_Registration(
-        registerPatient: "完整的病人登記",
-        savePatient: "保存患者",
+      name: AppLocalizations_Labels_Name(
+        familyName: "家庭/姓氏",
+        familyNameError: "輸入姓氏",
+        firstName: "名字",
+        givenNameError: "輸入賜名",
+        givenNames: "首先/賜名",
+        lastName: "姓",
+        otherNames: "其他名稱",
+        title: "名稱",
+      ),
+      pages: AppLocalizations_Labels_Pages(
+        allPatients: "所有患者",
+        contacts: "往來",
+        login: "登錄",
+        newPatient: "新患者",
+        patientHome: "患者首頁",
+        patientInformation: "患者信息",
+        summaryReport: "總結報告",
+      ),
+      relationships: AppLocalizations_Labels_Relationships(
+        daughter: "女兒",
+        error: "請選擇關係",
+        father: "父親",
+        grandfather: "祖父",
+        grandmother: "祖母",
+        mother: "母親",
+        nephew: "外甥",
+        niece: "侄女",
+        other: "其他",
+        relation: "關係",
+        sister: "妹妹",
+        son: "兒子",
+        title: "關係",
+        uncle: "叔叔",
+        aunt: "姨",
+        brother: "哥哥",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "黑暗",
         language: "語言",
         light: "光",
-        ok: "好",
-        signOut: "登出",
         system: "系統",
         theme: "主題",
         title: "設置",
-        updateProfile: "更新配置文件",
-      ),
-      vigor: AppLocalizations_Labels_Vigor(
-        title: "活力",
       ),
     ),
     Locale.fromSubtags(languageCode: "fa"): AppLocalizations_Labels(
+      actions: AppLocalizations_Labels_Actions(
+        add: "اضافه کردن",
+        cancel: "لغو کردن",
+        save: "صرفه جویی",
+        search: "جستجو کردن",
+        submit: "ارسال",
+      ),
+      address: AppLocalizations_Labels_Address(
+        neighborhood: AppLocalizations_Labels_Address_Neighborhood(
+          error: "لطفا محله را انتخاب کنید",
+          title: "همسایگی",
+        ),
+      ),
+      age: AppLocalizations_Labels_Age(
+        title: "سن",
+      ),
       app: AppLocalizations_Labels_App(
         chooseLanguage: "زبان را انتخاب کنید",
         chooseTheme: "انتخاب موضوع",
         settings: "تنظیمات برنامه",
         system: "سیستم",
         title: AppLocalizations_Labels_App_Title(
-          title: "Vigor",
-          saluddominicana: "Salud Dominicana",
+          saluddominicana: "SALUD دومینیکن",
+          title: "قدرت",
         ),
       ),
       auth: AppLocalizations_Labels_Auth(
-        cancel: "لغو کردن",
-        changePassword: "تغییر رمز عبور",
-        email: "پست الکترونیک",
         login: "وارد شدن",
         password: "کلمه عبور",
-        resetPassword: "بازیابی رمز عبور",
-        signIn: "ورود",
-        signUp: "ثبت نام",
-        submit: "ارسال",
         userName: "نام کاربری",
       ),
-      dates: AppLocalizations_Labels_Dates(
-        month: AppLocalizations_Labels_Dates_Month(
-          april: "آوریل",
-          august: "اوت",
-          december: "دسامبر",
-          february: "فوریه",
-          january: "ژانویه",
-          july: "جولای",
-          june: "ژوئن",
-          march: "مارس",
-          may: "ممکن است",
-          november: "نوامبر",
-          october: "اکتبر",
-          september: "سپتامبر",
-        ),
-        weekday: AppLocalizations_Labels_Dates_Weekday(
-          friday: "جمعه",
-          monday: "دوشنبه",
-          saturday: "شنبه",
-          sunday: "یکشنبه",
-          thursday: "پنج شنبه",
-          tuesday: "سهشنبه",
-          wednesday: "چهار شنبه",
-        ),
+      birthDate: AppLocalizations_Labels_BirthDate(
+        error: "لطفا تاریخ تولد وارد",
+        title: "تاریخ تولد",
       ),
-      general: AppLocalizations_Labels_General(
-        age: "سن",
-        allPatients: "همه بیماران",
-        birthDate: "تاریخ تولد",
-        birthDateError: "لطفا تاریخ تولد وارد",
-        contacts: "بیمار اطلاعات تماس",
-        dateofBirth: "تاریخ تولد",
-        editSurvey: "بررسی ویرایش",
-        familyNameError: "نام خانوادگی را وارد کنید",
-        genderError: "لطفا جنسیت را انتخاب کنید",
-        givenNameError: "نام های دیگر را وارد کنید",
-        mySchedule: "برنامه من",
-        neighborhoodError: "لطفا محله را انتخاب کنید",
-        newPatient: "بیمار جدید",
-        newSurvey: "نظرسنجی جدید",
-        nextPage: "صفحه بعد",
-        patient: "صبور",
-        patientInformation: "اطلاعات بیمار",
-        relationship: "ارتباط",
-        relationshipError: "لطفا ارتباط را انتخاب کنید",
-        submitShare: "ارسال / اشتراک",
-        address: AppLocalizations_Labels_General_Address(
-          city: "شهرستان",
-          country: "کشور",
-          county: "شهرستان",
-          district: "ناحیه",
-          neighborhood: "همسایگی",
-          postalCode: "کد پستی",
-          state: "دولت",
-          title: "نشانی",
-        ),
-        name: AppLocalizations_Labels_General_Name(
-          familyName: "خانواده / نام خانوادگی",
-          firstName: "نام کوچک",
-          givenNames: "نخست / اسامی با توجه به",
-          lastName: "نام خانوادگی",
-          name: "نام",
-          otherNames: "نامهای دیگر",
-        ),
-        relation: AppLocalizations_Labels_General_Relation(
-          aunt: "عمه",
-          brother: "برادر",
-          daughter: "فرزند دختر",
-          father: "پدر",
-          grandfather: "پدر بزرگ",
-          grandmother: "مادر بزرگ",
-          mother: "مادر",
-          nephew: "پسر خواهر یا برادر",
-          niece: "دختر برادر یا خواهر و غیره",
-          other: "دیگر",
-          sister: "خواهر",
-          son: "فرزند پسر",
-          title: "رابطه",
-          uncle: "عمو یا دایی",
-        ),
-        search: AppLocalizations_Labels_General_Search(
-          filter: "صافی",
-          patientSearch: "بیمار جستجو",
-          search: "جستجو کردن",
-          searchName: "جستجو نام",
-        ),
-        sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
-          female: "زن",
-          male: "نر",
-          title: "جنسی در هنگام تولد",
-        ),
+      contacts: AppLocalizations_Labels_Contacts(
+        newContact: "تماس جدید",
+        noContactsAdded: "بدون تماس اضافه شده است.",
+      ),
+      dateOfBirth: AppLocalizations_Labels_DateOfBirth(
+        title: "تاریخ تولد",
+      ),
+      gender: AppLocalizations_Labels_Gender(
+        error: "لطفا جنسیت را انتخاب کنید",
+        female: "زن",
+        male: "نر",
+        title: "جنسی در هنگام تولد",
       ),
       language: AppLocalizations_Labels_Language(
-        inEnglish: "Farsi",
-        title: "فارسی",
+        inEnglish: "انگلیسی",
+        title: "انگلیسی",
       ),
       medical: AppLocalizations_Labels_Medical(
         deworming: "کرم زدایی",
@@ -1523,143 +1106,104 @@ class AppLocalizations {
           title: "واکسن ها",
         ),
       ),
-      registration: AppLocalizations_Labels_Registration(
-        registerPatient: "ثبت نام بیمار کامل",
-        savePatient: "ذخیره بیمار",
+      name: AppLocalizations_Labels_Name(
+        familyName: "خانواده / نام خانوادگی",
+        familyNameError: "نام خانوادگی را وارد کنید",
+        firstName: "نام کوچک",
+        givenNameError: "نام داده شده را وارد کنید",
+        givenNames: "نخست / اسامی با توجه به",
+        lastName: "نام خانوادگی",
+        otherNames: "نامهای دیگر",
+        title: "نام",
+      ),
+      pages: AppLocalizations_Labels_Pages(
+        allPatients: "همه بیماران",
+        contacts: "مخاطب",
+        login: "وارد شدن",
+        newPatient: "بیمار جدید",
+        patientHome: "صفحه اصلی بیمار",
+        patientInformation: "اطلاعات بیمار",
+        summaryReport: "خلاصه گزارش",
+      ),
+      relationships: AppLocalizations_Labels_Relationships(
+        daughter: "فرزند دختر",
+        error: "لطفا ارتباط را انتخاب کنید",
+        father: "پدر",
+        grandfather: "بابا بزرگ",
+        grandmother: "مادر بزرگ",
+        mother: "مادر",
+        nephew: "پسر خواهر یا برادر",
+        niece: "دختر برادر یا خواهر و غیره",
+        other: "دیگر",
+        relation: "رابطه",
+        sister: "خواهر",
+        son: "فرزند پسر",
+        title: "ارتباط",
+        uncle: "دایی",
+        aunt: "عمه",
+        brother: "برادر",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "تاریک",
         language: "زبان",
         light: "سبک",
-        ok: "خوب",
-        signOut: "خروج از سیستم",
         system: "سیستم",
         theme: "موضوع",
         title: "تنظیمات",
-        updateProfile: "بروزرسانی پروفایل",
-      ),
-      vigor: AppLocalizations_Labels_Vigor(
-        title: "قدرت",
       ),
     ),
     Locale.fromSubtags(languageCode: "fr"): AppLocalizations_Labels(
+      actions: AppLocalizations_Labels_Actions(
+        add: "Ajouter",
+        cancel: "Annuler",
+        save: "sauver",
+        search: "Chercher",
+        submit: "Soumettre",
+      ),
+      address: AppLocalizations_Labels_Address(
+        neighborhood: AppLocalizations_Labels_Address_Neighborhood(
+          error: "S'il vous plaît sélectionner quartier",
+          title: "quartier",
+        ),
+      ),
+      age: AppLocalizations_Labels_Age(
+        title: "Âge",
+      ),
       app: AppLocalizations_Labels_App(
         chooseLanguage: "Choisissez la langue",
         chooseTheme: "choisir un thème",
         settings: "paramètres d'application",
         system: "Système",
         title: AppLocalizations_Labels_App_Title(
-          title: "Vigor",
           saluddominicana: "Salud Dominicana",
+          title: "Vigueur",
         ),
       ),
       auth: AppLocalizations_Labels_Auth(
-        cancel: "Annuler",
-        changePassword: "Changer le mot de passe",
-        email: "Email",
         login: "S'identifier",
         password: "Mot de passe",
-        resetPassword: "réinitialiser le mot de passe",
-        signIn: "Se connecter",
-        signUp: "S'inscrire",
-        submit: "Soumettre",
         userName: "Nom d'utilisateur",
       ),
-      dates: AppLocalizations_Labels_Dates(
-        month: AppLocalizations_Labels_Dates_Month(
-          april: "avril",
-          august: "août",
-          december: "décembre",
-          february: "février",
-          january: "janvier",
-          july: "juillet",
-          june: "juin",
-          march: "Mars",
-          may: "Peut",
-          november: "novembre",
-          october: "octobre",
-          september: "septembre",
-        ),
-        weekday: AppLocalizations_Labels_Dates_Weekday(
-          friday: "Vendredi",
-          monday: "Lundi",
-          saturday: "samedi",
-          sunday: "dimanche",
-          thursday: "Jeudi",
-          tuesday: "Mardi",
-          wednesday: "Mercredi",
-        ),
+      birthDate: AppLocalizations_Labels_BirthDate(
+        error: "S'il vous plaît entrer la date de naissance",
+        title: "Date de naissance",
       ),
-      general: AppLocalizations_Labels_General(
-        age: "Âge",
-        allPatients: "tous les patients",
-        birthDate: "Date de naissance",
-        birthDateError: "S'il vous plaît entrer la date de naissance",
-        contacts: "Contacts patients",
-        dateofBirth: "Date de naissance",
-        editSurvey: "Modifier enquête",
-        familyNameError: "Entrez le nom de famille",
-        genderError: "S'il vous plaît sélectionner le genre",
-        givenNameError: "Entrez les autres noms",
-        mySchedule: "Mon emploi du temps",
-        neighborhoodError: "S'il vous plaît sélectionner quartier",
-        newPatient: "nouveau patient",
-        newSurvey: "Une nouvelle enquête",
-        nextPage: "Page suivante",
-        patient: "Patient",
-        patientInformation: "L'information des patients",
-        relationship: "Relation",
-        relationshipError: "S'il vous plaît choisir relation",
-        submitShare: "Déposer / Partager",
-        address: AppLocalizations_Labels_General_Address(
-          city: "Ville",
-          country: "Pays",
-          county: "Comté",
-          district: "District",
-          neighborhood: "quartier",
-          postalCode: "code postal",
-          state: "Etat",
-          title: "Adresse",
-        ),
-        name: AppLocalizations_Labels_General_Name(
-          familyName: "Famille / Nom",
-          firstName: "Prénom",
-          givenNames: "Premières / Prénom",
-          lastName: "Nom de famille",
-          name: "Nom",
-          otherNames: "Autres noms",
-        ),
-        relation: AppLocalizations_Labels_General_Relation(
-          aunt: "Tante",
-          brother: "Frère",
-          daughter: "Fille",
-          father: "Père",
-          grandfather: "Grand-père",
-          grandmother: "Grand-mère",
-          mother: "Mère",
-          nephew: "Neveu",
-          niece: "Nièce",
-          other: "Autre",
-          sister: "Sœur",
-          son: "Fils",
-          title: "Relation",
-          uncle: "Oncle",
-        ),
-        search: AppLocalizations_Labels_General_Search(
-          filter: "Filtre",
-          patientSearch: "Recherche des patients",
-          search: "Chercher",
-          searchName: "Recherche Nom",
-        ),
-        sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
-          female: "Femme",
-          male: "Masculin",
-          title: "Sexe à la naissance",
-        ),
+      contacts: AppLocalizations_Labels_Contacts(
+        newContact: "Nouveau contact",
+        noContactsAdded: "Aucun contact n'a été ajouté.",
+      ),
+      dateOfBirth: AppLocalizations_Labels_DateOfBirth(
+        title: "Date de naissance",
+      ),
+      gender: AppLocalizations_Labels_Gender(
+        error: "S'il vous plaît sélectionner le genre",
+        female: "Femme",
+        male: "Masculin",
+        title: "Sexe à la naissance",
       ),
       language: AppLocalizations_Labels_Language(
-        inEnglish: "French",
-        title: "français",
+        inEnglish: "Anglais",
+        title: "Anglais",
       ),
       medical: AppLocalizations_Labels_Medical(
         deworming: "déparasitage",
@@ -1676,143 +1220,104 @@ class AppLocalizations {
           title: "Vaccins",
         ),
       ),
-      registration: AppLocalizations_Labels_Registration(
-        registerPatient: "Inscription complète du patient",
-        savePatient: "Patient Enregistrer",
+      name: AppLocalizations_Labels_Name(
+        familyName: "Famille / Nom",
+        familyNameError: "Entrez le nom de famille",
+        firstName: "Prénom",
+        givenNameError: "Entrez les noms donnés",
+        givenNames: "Premières / Prénom",
+        lastName: "Nom de famille",
+        otherNames: "Autres noms",
+        title: "Nom",
+      ),
+      pages: AppLocalizations_Labels_Pages(
+        allPatients: "tous les patients",
+        contacts: "Contacts",
+        login: "S'identifier",
+        newPatient: "nouveau patient",
+        patientHome: "Accueil des patients",
+        patientInformation: "L'information des patients",
+        summaryReport: "Rapport sommaire",
+      ),
+      relationships: AppLocalizations_Labels_Relationships(
+        daughter: "Fille",
+        error: "S'il vous plaît choisir relation",
+        father: "Père",
+        grandfather: "Grand-père",
+        grandmother: "Grand-mère",
+        mother: "Mère",
+        nephew: "Neveu",
+        niece: "Nièce",
+        other: "Autre",
+        relation: "Relation",
+        sister: "Sœur",
+        son: "Fils",
+        title: "Relation",
+        uncle: "Oncle",
+        aunt: "Tante",
+        brother: "Frère",
       ),
       settings: AppLocalizations_Labels_Settings(
-        dark: "Sombre",
+        dark: "Foncé",
         language: "Langue",
         light: "Lumière",
-        ok: "D'accord",
-        signOut: "Déconnexion",
         system: "Système",
         theme: "Thème",
         title: "Réglages",
-        updateProfile: "Mettre à jour le profil",
-      ),
-      vigor: AppLocalizations_Labels_Vigor(
-        title: "Vigueur",
       ),
     ),
     Locale.fromSubtags(languageCode: "de"): AppLocalizations_Labels(
+      actions: AppLocalizations_Labels_Actions(
+        add: "Hinzufügen",
+        cancel: "Stornieren",
+        save: "sparen",
+        search: "Suche",
+        submit: "einreichen",
+      ),
+      address: AppLocalizations_Labels_Address(
+        neighborhood: AppLocalizations_Labels_Address_Neighborhood(
+          error: "Bitte wählen Sie Nachbarschaft",
+          title: "Nachbarschaft",
+        ),
+      ),
+      age: AppLocalizations_Labels_Age(
+        title: "Alter",
+      ),
       app: AppLocalizations_Labels_App(
         chooseLanguage: "Sprache wählen",
         chooseTheme: "Wähle das Thema",
         settings: "App Einstellungen",
         system: "System",
         title: AppLocalizations_Labels_App_Title(
-          title: "Vigor",
           saluddominicana: "Salud Dominicana",
+          title: "Kraft",
         ),
       ),
       auth: AppLocalizations_Labels_Auth(
-        cancel: "Stornieren",
-        changePassword: "Passwort ändern",
-        email: "Email",
-        login: "Einloggen",
+        login: "Anmeldung",
         password: "Passwort",
-        resetPassword: "Passwort zurücksetzen",
-        signIn: "Einloggen",
-        signUp: "Anmelden",
-        submit: "einreichen",
         userName: "Nutzername",
       ),
-      dates: AppLocalizations_Labels_Dates(
-        month: AppLocalizations_Labels_Dates_Month(
-          april: "April",
-          august: "August",
-          december: "Dezember",
-          february: "Februar",
-          january: "Januar",
-          july: "Juli",
-          june: "Juni",
-          march: "März",
-          may: "Kann",
-          november: "November",
-          october: "Oktober",
-          september: "September",
-        ),
-        weekday: AppLocalizations_Labels_Dates_Weekday(
-          friday: "Freitag",
-          monday: "Montag",
-          saturday: "Samstag",
-          sunday: "Sonntag",
-          thursday: "Donnerstag",
-          tuesday: "Dienstag",
-          wednesday: "Mittwoch",
-        ),
+      birthDate: AppLocalizations_Labels_BirthDate(
+        error: "Bitte geben Sie birth",
+        title: "Geburtsdatum",
       ),
-      general: AppLocalizations_Labels_General(
-        age: "Alter",
-        allPatients: "alle Patienten",
-        birthDate: "Geburtsdatum",
-        birthDateError: "Bitte geben Sie birth",
-        contacts: "Patienten-Kontakte",
-        dateofBirth: "Geburtsdatum",
-        editSurvey: "Umfrage bearbeiten",
-        familyNameError: "Geben Sie Namen",
-        genderError: "Bitte wähle ein Geschlecht",
-        givenNameError: "Geben Sie andere Namen",
-        mySchedule: "Mein Terminplan",
-        neighborhoodError: "Bitte wählen Sie Nachbarschaft",
-        newPatient: "Neuer Patient",
-        newSurvey: "neue Umfrage",
-        nextPage: "Nächste Seite",
-        patient: "Geduldig",
-        patientInformation: "Informationen zum Patienten",
-        relationship: "Beziehung",
-        relationshipError: "Bitte wählen Sie Beziehung",
-        submitShare: "Senden / Share",
-        address: AppLocalizations_Labels_General_Address(
-          city: "Stadt",
-          country: "Land",
-          county: "Bezirk",
-          district: "Kreis",
-          neighborhood: "Nachbarschaft",
-          postalCode: "Postleitzahl",
-          state: "Zustand",
-          title: "Adresse",
-        ),
-        name: AppLocalizations_Labels_General_Name(
-          familyName: "Familie / Nachname",
-          firstName: "Vorname",
-          givenNames: "Erste / Vorname",
-          lastName: "Familienname, Nachname",
-          name: "Name",
-          otherNames: "Andere Namen",
-        ),
-        relation: AppLocalizations_Labels_General_Relation(
-          aunt: "Tante",
-          brother: "Bruder",
-          daughter: "Tochter",
-          father: "Vater",
-          grandfather: "Großvater",
-          grandmother: "Oma",
-          mother: "Mutter",
-          nephew: "Neffe",
-          niece: "Nichte",
-          other: "Andere",
-          sister: "Schwester",
-          son: "Sohn",
-          title: "Beziehung",
-          uncle: "Onkel",
-        ),
-        search: AppLocalizations_Labels_General_Search(
-          filter: "Filter",
-          patientSearch: "Patientensuche",
-          search: "Suche",
-          searchName: "Suchen Name",
-        ),
-        sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
-          female: "Weiblich",
-          male: "Männlich",
-          title: "Sex bei Geburt",
-        ),
+      contacts: AppLocalizations_Labels_Contacts(
+        newContact: "Neuer Kontakt",
+        noContactsAdded: "Keine Kontakte wurden hinzugefügt.",
+      ),
+      dateOfBirth: AppLocalizations_Labels_DateOfBirth(
+        title: "Geburtsdatum",
+      ),
+      gender: AppLocalizations_Labels_Gender(
+        error: "Bitte wähle ein Geschlecht",
+        female: "Weiblich",
+        male: "Männlich",
+        title: "Sex bei Geburt",
       ),
       language: AppLocalizations_Labels_Language(
-        inEnglish: "German",
-        title: "Deutsche",
+        inEnglish: "Englisch",
+        title: "Englisch",
       ),
       medical: AppLocalizations_Labels_Medical(
         deworming: "Entwurmung",
@@ -1829,143 +1334,104 @@ class AppLocalizations {
           title: "Impfungen",
         ),
       ),
-      registration: AppLocalizations_Labels_Registration(
-        registerPatient: "Komplette Patientenregistrierung",
-        savePatient: "Speichern Patient",
+      name: AppLocalizations_Labels_Name(
+        familyName: "Familie / Nachname",
+        familyNameError: "Geben Sie Namen",
+        firstName: "Vorname",
+        givenNameError: "Geben Sie Vornamen",
+        givenNames: "Erste / Vorname",
+        lastName: "Familienname, Nachname",
+        otherNames: "Andere Namen",
+        title: "Name",
+      ),
+      pages: AppLocalizations_Labels_Pages(
+        allPatients: "alle Patienten",
+        contacts: "Impressum",
+        login: "Anmeldung",
+        newPatient: "Neuer Patient",
+        patientHome: "Patient nach Hause",
+        patientInformation: "Informationen zum Patienten",
+        summaryReport: "Kurzbericht",
+      ),
+      relationships: AppLocalizations_Labels_Relationships(
+        daughter: "Tochter",
+        error: "Bitte wählen Sie Beziehung",
+        father: "Vater",
+        grandfather: "Großvater",
+        grandmother: "Oma",
+        mother: "Mutter",
+        nephew: "Neffe",
+        niece: "Nichte",
+        other: "Andere",
+        relation: "Beziehung",
+        sister: "Schwester",
+        son: "Sohn",
+        title: "Beziehung",
+        uncle: "Onkel",
+        aunt: "Tante",
+        brother: "Bruder",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "Dunkel",
         language: "Sprache",
         light: "Licht",
-        ok: "OK",
-        signOut: "Ausloggen",
         system: "System",
         theme: "Thema",
         title: "die Einstellungen",
-        updateProfile: "Profil aktualisieren",
-      ),
-      vigor: AppLocalizations_Labels_Vigor(
-        title: "Kraft",
       ),
     ),
     Locale.fromSubtags(languageCode: "id"): AppLocalizations_Labels(
+      actions: AppLocalizations_Labels_Actions(
+        add: "Menambahkan",
+        cancel: "Membatalkan",
+        save: "Menyimpan",
+        search: "Cari",
+        submit: "Kirimkan",
+      ),
+      address: AppLocalizations_Labels_Address(
+        neighborhood: AppLocalizations_Labels_Address_Neighborhood(
+          error: "Silakan pilih lingkungan",
+          title: "Lingkungan",
+        ),
+      ),
+      age: AppLocalizations_Labels_Age(
+        title: "Usia",
+      ),
       app: AppLocalizations_Labels_App(
         chooseLanguage: "Pilih bahasa",
         chooseTheme: "Pilih Tema",
         settings: "Pengaturan aplikasi",
         system: "Sistem",
         title: AppLocalizations_Labels_App_Title(
-          title: "Vigor",
           saluddominicana: "Salud Dominicana",
+          title: "Semangat",
         ),
       ),
       auth: AppLocalizations_Labels_Auth(
-        cancel: "Membatalkan",
-        changePassword: "Ganti kata sandi",
-        email: "Surel",
         login: "Gabung",
         password: "Kata sandi",
-        resetPassword: "Reset password",
-        signIn: "Masuk",
-        signUp: "Daftar",
-        submit: "Kirimkan",
         userName: "Nama pengguna",
       ),
-      dates: AppLocalizations_Labels_Dates(
-        month: AppLocalizations_Labels_Dates_Month(
-          april: "April",
-          august: "Agustus",
-          december: "Desember",
-          february: "Februari",
-          january: "Januari",
-          july: "Juli",
-          june: "Juni",
-          march: "Maret",
-          may: "Mungkin",
-          november: "November",
-          october: "Oktober",
-          september: "September",
-        ),
-        weekday: AppLocalizations_Labels_Dates_Weekday(
-          friday: "Jumat",
-          monday: "Senin",
-          saturday: "Sabtu",
-          sunday: "Minggu",
-          thursday: "Kamis",
-          tuesday: "Selasa",
-          wednesday: "Rabu",
-        ),
+      birthDate: AppLocalizations_Labels_BirthDate(
+        error: "Masukkan tanggal lahir",
+        title: "Tanggal lahir",
       ),
-      general: AppLocalizations_Labels_General(
-        age: "Usia",
-        allPatients: "semua Pasien",
-        birthDate: "Tanggal lahir",
-        birthDateError: "Masukkan tanggal lahir",
-        contacts: "Kontak pasien",
-        dateofBirth: "Tanggal lahir",
-        editSurvey: "mengedit Survey",
-        familyNameError: "Masukkan nama keluarga",
-        genderError: "Silakan pilih jenis kelamin",
-        givenNameError: "Masukkan nama lain",
-        mySchedule: "Jadwal saya",
-        neighborhoodError: "Silakan pilih lingkungan",
-        newPatient: "Pasien baru",
-        newSurvey: "Survei baru",
-        nextPage: "Halaman selanjutnya",
-        patient: "Sabar",
-        patientInformation: "Informasi pasien",
-        relationship: "Hubungan",
-        relationshipError: "Silakan pilih hubungan",
-        submitShare: "Menyerahkan / Share",
-        address: AppLocalizations_Labels_General_Address(
-          city: "Kota",
-          country: "Negara",
-          county: "daerah",
-          district: "Distrik",
-          neighborhood: "Lingkungan",
-          postalCode: "Kode Pos",
-          state: "Negara",
-          title: "Alamat",
-        ),
-        name: AppLocalizations_Labels_General_Name(
-          familyName: "Keluarga / Nama terakhir",
-          firstName: "Nama depan",
-          givenNames: "Pertama / Mengingat Nama",
-          lastName: "Nama keluarga",
-          name: "Nama",
-          otherNames: "Nama lain",
-        ),
-        relation: AppLocalizations_Labels_General_Relation(
-          aunt: "Bibi",
-          brother: "Saudara",
-          daughter: "Putri",
-          father: "Ayah",
-          grandfather: "Kakek",
-          grandmother: "Nenek",
-          mother: "Ibu",
-          nephew: "Keponakan",
-          niece: "Keponakan",
-          other: "Lain",
-          sister: "Saudara",
-          son: "Putra",
-          title: "Hubungan",
-          uncle: "Paman",
-        ),
-        search: AppLocalizations_Labels_General_Search(
-          filter: "Saring",
-          patientSearch: "Cari pasien",
-          search: "Cari",
-          searchName: "Nama Cari",
-        ),
-        sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
-          female: "Perempuan",
-          male: "Pria",
-          title: "Seks di Lahir",
-        ),
+      contacts: AppLocalizations_Labels_Contacts(
+        newContact: "Kontak baru",
+        noContactsAdded: "Tidak ada kontak telah ditambahkan.",
+      ),
+      dateOfBirth: AppLocalizations_Labels_DateOfBirth(
+        title: "Tanggal lahir",
+      ),
+      gender: AppLocalizations_Labels_Gender(
+        error: "Silakan pilih jenis kelamin",
+        female: "Perempuan",
+        male: "Pria",
+        title: "Seks di Lahir",
       ),
       language: AppLocalizations_Labels_Language(
-        inEnglish: "Indonesian",
-        title: "bahasa Indonesia",
+        inEnglish: "Inggris",
+        title: "Inggris",
       ),
       medical: AppLocalizations_Labels_Medical(
         deworming: "cacingan",
@@ -1982,143 +1448,104 @@ class AppLocalizations {
           title: "Vaksin",
         ),
       ),
-      registration: AppLocalizations_Labels_Registration(
-        registerPatient: "Pendaftaran Pasien lengkap",
-        savePatient: "Simpan Pasien",
+      name: AppLocalizations_Labels_Name(
+        familyName: "Keluarga / Nama terakhir",
+        familyNameError: "Masukkan nama keluarga",
+        firstName: "Nama depan",
+        givenNameError: "Masukkan nama yang diberikan",
+        givenNames: "Pertama / Mengingat Nama",
+        lastName: "Nama keluarga",
+        otherNames: "Nama lain",
+        title: "Nama",
+      ),
+      pages: AppLocalizations_Labels_Pages(
+        allPatients: "semua Pasien",
+        contacts: "kontak",
+        login: "Gabung",
+        newPatient: "Pasien baru",
+        patientHome: "pasien Rumah",
+        patientInformation: "Informasi pasien",
+        summaryReport: "Rangkuman laporan",
+      ),
+      relationships: AppLocalizations_Labels_Relationships(
+        daughter: "Putri",
+        error: "Silakan pilih hubungan",
+        father: "Ayah",
+        grandfather: "Kakek",
+        grandmother: "Nenek",
+        mother: "Ibu",
+        nephew: "Keponakan",
+        niece: "Keponakan",
+        other: "Lain",
+        relation: "Hubungan",
+        sister: "Saudara",
+        son: "Putra",
+        title: "Hubungan",
+        uncle: "Paman",
+        aunt: "Bibi",
+        brother: "Saudara",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "Gelap",
         language: "Bahasa",
         light: "Cahaya",
-        ok: "Baik",
-        signOut: "Keluar",
         system: "Sistem",
         theme: "Tema",
         title: "pengaturan",
-        updateProfile: "Memperbaharui profil",
-      ),
-      vigor: AppLocalizations_Labels_Vigor(
-        title: "Semangat",
       ),
     ),
     Locale.fromSubtags(languageCode: "ja"): AppLocalizations_Labels(
+      actions: AppLocalizations_Labels_Actions(
+        add: "追加",
+        cancel: "キャンセル",
+        save: "保存する",
+        search: "探す",
+        submit: "参加する",
+      ),
+      address: AppLocalizations_Labels_Address(
+        neighborhood: AppLocalizations_Labels_Address_Neighborhood(
+          error: "近所を選択してください",
+          title: "ご近所",
+        ),
+      ),
+      age: AppLocalizations_Labels_Age(
+        title: "年齢",
+      ),
       app: AppLocalizations_Labels_App(
         chooseLanguage: "言語を選択",
         chooseTheme: "テーマを選択してください",
         settings: "アプリの設定",
         system: "システム",
         title: AppLocalizations_Labels_App_Title(
-          title: "Vigor",
-          saluddominicana: "Salud Dominicana",
+          saluddominicana: "サルードミニカーナ",
+          title: "活力",
         ),
       ),
       auth: AppLocalizations_Labels_Auth(
-        cancel: "キャンセル",
-        changePassword: "パスワードを変更する",
-        email: "Eメール",
         login: "ログインする",
         password: "パスワード",
-        resetPassword: "パスワードを再設定する",
-        signIn: "サインイン",
-        signUp: "サインアップ",
-        submit: "参加する",
         userName: "ユーザー名",
       ),
-      dates: AppLocalizations_Labels_Dates(
-        month: AppLocalizations_Labels_Dates_Month(
-          april: "四月",
-          august: "八月",
-          december: "12月",
-          february: "2月",
-          january: "1月",
-          july: "七月",
-          june: "六月",
-          march: "行進",
-          may: "五月",
-          november: "十一月",
-          october: "10月",
-          september: "九月",
-        ),
-        weekday: AppLocalizations_Labels_Dates_Weekday(
-          friday: "金曜日",
-          monday: "月曜",
-          saturday: "土曜日",
-          sunday: "日曜日",
-          thursday: "木曜日",
-          tuesday: "火曜日",
-          wednesday: "水曜日",
-        ),
+      birthDate: AppLocalizations_Labels_BirthDate(
+        error: "誕生日を入力してください。",
+        title: "誕生日",
       ),
-      general: AppLocalizations_Labels_General(
-        age: "年齢",
-        allPatients: "すべての患者",
-        birthDate: "誕生日",
-        birthDateError: "誕生日を入力してください。",
-        contacts: "患者のコンタクト",
-        dateofBirth: "生年月日",
-        editSurvey: "編集調査",
-        familyNameError: "家族の名前を入力します。",
-        genderError: "性別を選択してください",
-        givenNameError: "他の名前を入力します。",
-        mySchedule: "私のスケジュール",
-        neighborhoodError: "近所を選択してください",
-        newPatient: "新しい患者",
-        newSurvey: "新しい調査",
-        nextPage: "次のページ",
-        patient: "患者",
-        patientInformation: "患者情報",
-        relationship: "関係",
-        relationshipError: "関係を選択してください",
-        submitShare: "送信/共有",
-        address: AppLocalizations_Labels_General_Address(
-          city: "市",
-          country: "国",
-          county: "郡",
-          district: "地区",
-          neighborhood: "ご近所",
-          postalCode: "郵便番号",
-          state: "状態",
-          title: "住所",
-        ),
-        name: AppLocalizations_Labels_General_Name(
-          familyName: "家族/姓",
-          firstName: "ファーストネーム",
-          givenNames: "まず/与えられた名前",
-          lastName: "苗字",
-          name: "名前",
-          otherNames: "他の名前",
-        ),
-        relation: AppLocalizations_Labels_General_Relation(
-          aunt: "叔母",
-          brother: "兄",
-          daughter: "娘",
-          father: "お父さん",
-          grandfather: "祖父",
-          grandmother: "祖母",
-          mother: "母",
-          nephew: "甥",
-          niece: "姪",
-          other: "他の",
-          sister: "シスター",
-          son: "息子",
-          title: "関係",
-          uncle: "おじさん",
-        ),
-        search: AppLocalizations_Labels_General_Search(
-          filter: "フィルタ",
-          patientSearch: "患者検索",
-          search: "探す",
-          searchName: "検索名前",
-        ),
-        sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
-          female: "女性",
-          male: "男性",
-          title: "出生時のセックス",
-        ),
+      contacts: AppLocalizations_Labels_Contacts(
+        newContact: "新しい連絡先",
+        noContactsAdded: "いいえ連絡先が追加されていません。",
+      ),
+      dateOfBirth: AppLocalizations_Labels_DateOfBirth(
+        title: "生年月日",
+      ),
+      gender: AppLocalizations_Labels_Gender(
+        error: "性別を選択してください",
+        female: "女性",
+        male: "男性",
+        title: "出生時のセックス",
       ),
       language: AppLocalizations_Labels_Language(
-        inEnglish: "Japanese",
-        title: "日本語",
+        inEnglish: "英語",
+        title: "英語",
       ),
       medical: AppLocalizations_Labels_Medical(
         deworming: "駆虫",
@@ -2135,143 +1562,104 @@ class AppLocalizations {
           title: "ワクチン",
         ),
       ),
-      registration: AppLocalizations_Labels_Registration(
-        registerPatient: "完全な患者登録",
-        savePatient: "患者の保存",
+      name: AppLocalizations_Labels_Name(
+        familyName: "家族/姓",
+        familyNameError: "家族の名前を入力します。",
+        firstName: "ファーストネーム",
+        givenNameError: "与えられた名前を入力します。",
+        givenNames: "まず/与えられた名前",
+        lastName: "苗字",
+        otherNames: "他の名前",
+        title: "名前",
+      ),
+      pages: AppLocalizations_Labels_Pages(
+        allPatients: "すべての患者",
+        contacts: "コンタクト",
+        login: "ログインする",
+        newPatient: "新しい患者",
+        patientHome: "患者ホーム",
+        patientInformation: "患者情報",
+        summaryReport: "概略報告",
+      ),
+      relationships: AppLocalizations_Labels_Relationships(
+        daughter: "娘",
+        error: "関係を選択してください",
+        father: "お父さん",
+        grandfather: "祖父",
+        grandmother: "祖母",
+        mother: "母",
+        nephew: "甥",
+        niece: "姪",
+        other: "他の",
+        relation: "関係",
+        sister: "シスター",
+        son: "息子",
+        title: "関係",
+        uncle: "おじさん",
+        aunt: "叔母",
+        brother: "兄",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "闇",
         language: "言語",
         light: "光",
-        ok: "OK",
-        signOut: "サインアウト",
         system: "システム",
         theme: "テーマ",
         title: "設定",
-        updateProfile: "プロフィールを更新",
-      ),
-      vigor: AppLocalizations_Labels_Vigor(
-        title: "活力",
       ),
     ),
     Locale.fromSubtags(languageCode: "km"): AppLocalizations_Labels(
+      actions: AppLocalizations_Labels_Actions(
+        add: "បន្ថែម",
+        cancel: "បោះបង់",
+        save: "រក្សាទុក",
+        search: "ស្វែងរក",
+        submit: "ដាក់ស្នើ",
+      ),
+      address: AppLocalizations_Labels_Address(
+        neighborhood: AppLocalizations_Labels_Address_Neighborhood(
+          error: "សូមជ្រើសសង្កាត់",
+          title: "អ្នកជិតខាង",
+        ),
+      ),
+      age: AppLocalizations_Labels_Age(
+        title: "អាយុ",
+      ),
       app: AppLocalizations_Labels_App(
         chooseLanguage: "ជ្រើសរើសភាសា",
         chooseTheme: "ជ្រើសស្បែក",
         settings: "ការកំណត់កម្មវិធី",
         system: "ប្រព័ន្ធ",
         title: AppLocalizations_Labels_App_Title(
-          title: "Vigor",
           saluddominicana: "Salud Dominicana",
+          title: "ភាពរឹងមាំខាង",
         ),
       ),
       auth: AppLocalizations_Labels_Auth(
-        cancel: "បោះបង់",
-        changePassword: "ផ្លាស់ប្តូរពាក្យសម្ងាត់",
-        email: "អ៊ីម៉ែល",
         login: "ចូល",
         password: "ការពាក្យសម្ងាត់",
-        resetPassword: "ពាក្យសម្ងាត់កំណត់ឡើងវិញ",
-        signIn: "ចូល",
-        signUp: "ចុះ​ឈ្មោះ",
-        submit: "ដាក់ស្នើ",
         userName: "ឈ្មោះ​អ្នកប្រើប្រាស់",
       ),
-      dates: AppLocalizations_Labels_Dates(
-        month: AppLocalizations_Labels_Dates_Month(
-          april: "ខែមេសា",
-          august: "ខែសីហា",
-          december: "ខែធ្នូ",
-          february: "ខែកុម្ភៈ",
-          january: "ខែមករា",
-          july: "ខែកក្កដា",
-          june: "ខែមិថុនា",
-          march: "ខែមីនា",
-          may: "ឧសភា",
-          november: "ខែវិច្ឆិកា",
-          october: "ខែតុលា",
-          september: "ខែកញ្ញា",
-        ),
-        weekday: AppLocalizations_Labels_Dates_Weekday(
-          friday: "ថ្ងៃសុក្រ",
-          monday: "ថ្ងៃចន្ទ",
-          saturday: "ថ្ងៃសៅរ៍",
-          sunday: "កាលពីថ្ងៃអាទិត្យ",
-          thursday: "ថ្ងៃព្រហស្បតិ៍",
-          tuesday: "ថ្ងៃអង្គារ",
-          wednesday: "ថ្ងៃពុធ",
-        ),
+      birthDate: AppLocalizations_Labels_BirthDate(
+        error: "សូមបញ្ចូលថ្ងៃខែឆ្នាំកំណើត",
+        title: "ថ្ងៃខែ​ឆ្នាំ​កំណើត",
       ),
-      general: AppLocalizations_Labels_General(
-        age: "អាយុ",
-        allPatients: "អ្នកជំងឺទាំងអស់",
-        birthDate: "ថ្ងៃខែ​ឆ្នាំ​កំណើត",
-        birthDateError: "សូមបញ្ចូលថ្ងៃខែឆ្នាំកំណើត",
-        contacts: "ទំនាក់ទំនងអ្នកជម្ងឺ",
-        dateofBirth: "ថ្ងៃខែ​ឆ្នាំ​កំណើត",
-        editSurvey: "កែសម្រួលការស្ទង់មតិ",
-        familyNameError: "បញ្ចូលឈ្មោះគ្រួសារ",
-        genderError: "សូមជ្រើសយេនឌ័រ",
-        givenNameError: "បញ្ចូលឈ្មោះផ្សេងទៀត",
-        mySchedule: "កាលវិភាគ​របស់​ខ្ញុំ",
-        neighborhoodError: "សូមជ្រើសសង្កាត់",
-        newPatient: "ជម្ងឺថ្មី",
-        newSurvey: "ការស្ទង់មតិថ្មី",
-        nextPage: "ទំ​ព​រ័​បន្ទាប់",
-        patient: "អ្នកជំងឺ",
-        patientInformation: "ពអ្នកជំងឺ",
-        relationship: "ទំនាក់ទំនង",
-        relationshipError: "សូមជ្រើសទំនាក់ទំនង",
-        submitShare: "ដាក់ស្នើ / ចែករំលែក",
-        address: AppLocalizations_Labels_General_Address(
-          city: "ទីក្រុង",
-          country: "ប្រទេស",
-          county: "ខោនធី",
-          district: "ស្រុក",
-          neighborhood: "អ្នកជិតខាង",
-          postalCode: "លេខ​កូដ​ប្រៃ​ស​ណី​យ",
-          state: "រដ្ឋ",
-          title: "អាសយដ្ឋាន",
-        ),
-        name: AppLocalizations_Labels_General_Name(
-          familyName: "គ្រួសារ / ឈ្មោះចុងក្រោយ",
-          firstName: "ឈ្មោះជាលើកដំបូង",
-          givenNames: "ជាលើកដំបូង / ឈ្មោះដែលបានផ្ដល់",
-          lastName: "នាមត្រកូល",
-          name: "ឈ្មោះ",
-          otherNames: "ឈ្មោះ​ដ៏​ទៃ​ទៀត",
-        ),
-        relation: AppLocalizations_Labels_General_Relation(
-          aunt: "មីង",
-          brother: "បងប្រុស",
-          daughter: "កូនស្រី",
-          father: "ព្រះបិតា",
-          grandfather: "ជីតា",
-          grandmother: "លោកយាយ",
-          mother: "ម្តាយ",
-          nephew: "ក្មួយប្រុស",
-          niece: "ក្មួយស្រី",
-          other: "ផ្សេងទៀត",
-          sister: "បងស្រី",
-          son: "ព្រះបុត្រា",
-          title: "ទំនាក់ទំនង",
-          uncle: "ពូ",
-        ),
-        search: AppLocalizations_Labels_General_Search(
-          filter: "តម្រង",
-          patientSearch: "ស្វែងរកអ្នកជម្ងឺ",
-          search: "ស្វែងរក",
-          searchName: "ស្វែងរកឈ្មោះ",
-        ),
-        sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
-          female: "ស្រី",
-          male: "បុរស",
-          title: "ការរួមភេទនៅកំណើត",
-        ),
+      contacts: AppLocalizations_Labels_Contacts(
+        newContact: "ទំនាក់ទំនងថ្មី",
+        noContactsAdded: "គ្មានទំនាក់ទំនងត្រូវបានបន្ថែម។",
+      ),
+      dateOfBirth: AppLocalizations_Labels_DateOfBirth(
+        title: "ថ្ងៃខែ​ឆ្នាំ​កំណើត",
+      ),
+      gender: AppLocalizations_Labels_Gender(
+        error: "សូមជ្រើសយេនឌ័រ",
+        female: "ស្រី",
+        male: "បុរស",
+        title: "ការរួមភេទនៅកំណើត",
       ),
       language: AppLocalizations_Labels_Language(
-        inEnglish: "Khmer",
-        title: "ភាសាខ្មែរ",
+        inEnglish: "ភាសាអង់គ្លេស",
+        title: "ភាសាអង់គ្លេស",
       ),
       medical: AppLocalizations_Labels_Medical(
         deworming: "Deworming",
@@ -2288,143 +1676,104 @@ class AppLocalizations {
           title: "វ៉ាក់សាំង",
         ),
       ),
-      registration: AppLocalizations_Labels_Registration(
-        registerPatient: "ការចុះឈ្មោះអ្នកជម្ងឺបានបញ្ចប់",
-        savePatient: "រក្សាទុកអ្នកជម្ងឺ",
+      name: AppLocalizations_Labels_Name(
+        familyName: "គ្រួសារ / ឈ្មោះចុងក្រោយ",
+        familyNameError: "បញ្ចូលឈ្មោះគ្រួសារ",
+        firstName: "ឈ្មោះជាលើកដំបូង",
+        givenNameError: "ឈ្មោះដែលបានផ្ដល់ឱ្យបញ្ចូល",
+        givenNames: "ជាលើកដំបូង / ឈ្មោះដែលបានផ្ដល់",
+        lastName: "នាមត្រកូល",
+        otherNames: "ឈ្មោះ​ដ៏​ទៃ​ទៀត",
+        title: "ឈ្មោះ",
+      ),
+      pages: AppLocalizations_Labels_Pages(
+        allPatients: "អ្នកជំងឺទាំងអស់",
+        contacts: "ទំនាក់ទំនង",
+        login: "ចូល",
+        newPatient: "ជម្ងឺថ្មី",
+        patientHome: "ទំព័រដើមអ្នកជម្ងឺ",
+        patientInformation: "ពអ្នកជំងឺ",
+        summaryReport: "របាយការណ៍សង្ខេប",
+      ),
+      relationships: AppLocalizations_Labels_Relationships(
+        daughter: "កូនស្រី",
+        error: "សូមជ្រើសទំនាក់ទំនង",
+        father: "ព្រះបិតា",
+        grandfather: "ជីតា",
+        grandmother: "លោកយាយ",
+        mother: "ម្តាយ",
+        nephew: "ក្មួយប្រុស",
+        niece: "ក្មួយស្រី",
+        other: "ផ្សេងទៀត",
+        relation: "ទំនាក់ទំនង",
+        sister: "បងស្រី",
+        son: "ព្រះបុត្រា",
+        title: "ទំនាក់ទំនង",
+        uncle: "ពូ",
+        aunt: "មីង",
+        brother: "បងប្រុស",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "ងងឹត",
         language: "ភាសា",
         light: "ពន្លឺ",
-        ok: "យល់ព្រម",
-        signOut: "ចាកចេញ",
         system: "ប្រព័ន្ធ",
         theme: "ស្បែក",
         title: "ការកំណត់",
-        updateProfile: "ទម្រង់ធ្វើឱ្យទាន់សម័យ",
-      ),
-      vigor: AppLocalizations_Labels_Vigor(
-        title: "ភាពរឹងមាំខាង",
       ),
     ),
     Locale.fromSubtags(languageCode: "ko"): AppLocalizations_Labels(
+      actions: AppLocalizations_Labels_Actions(
+        add: "더하다",
+        cancel: "취소",
+        save: "저장",
+        search: "검색",
+        submit: "제출",
+      ),
+      address: AppLocalizations_Labels_Address(
+        neighborhood: AppLocalizations_Labels_Address_Neighborhood(
+          error: "지역을 선택하세요",
+          title: "이웃",
+        ),
+      ),
+      age: AppLocalizations_Labels_Age(
+        title: "나이",
+      ),
       app: AppLocalizations_Labels_App(
         chooseLanguage: "언어 선택",
         chooseTheme: "테마를 선택",
         settings: "앱 설정",
         system: "체계",
         title: AppLocalizations_Labels_App_Title(
-          title: "Vigor",
-          saluddominicana: "Salud Dominicana",
+          saluddominicana: "건배 도미니카 나",
+          title: "활기",
         ),
       ),
       auth: AppLocalizations_Labels_Auth(
-        cancel: "취소",
-        changePassword: "암호 변경",
-        email: "이메일",
         login: "로그인",
         password: "암호",
-        resetPassword: "암호를 재설정",
-        signIn: "에 서명",
-        signUp: "가입하기",
-        submit: "제출",
         userName: "사용자 이름",
       ),
-      dates: AppLocalizations_Labels_Dates(
-        month: AppLocalizations_Labels_Dates_Month(
-          april: "4 월",
-          august: "팔월",
-          december: "12 월",
-          february: "이월",
-          january: "일월",
-          july: "칠월",
-          june: "유월",
-          march: "행진",
-          may: "할 수있다",
-          november: "십일월",
-          october: "십월",
-          september: "구월",
-        ),
-        weekday: AppLocalizations_Labels_Dates_Weekday(
-          friday: "금요일",
-          monday: "월요일",
-          saturday: "토요일",
-          sunday: "일요일",
-          thursday: "목요일",
-          tuesday: "화요일",
-          wednesday: "수요일",
-        ),
+      birthDate: AppLocalizations_Labels_BirthDate(
+        error: "생년월일을 입력 해주세요",
+        title: "생일",
       ),
-      general: AppLocalizations_Labels_General(
-        age: "나이",
-        allPatients: "모든 환자",
-        birthDate: "생일",
-        birthDateError: "생년월일을 입력 해주세요",
-        contacts: "환자 연락처",
-        dateofBirth: "생년월일",
-        editSurvey: "편집 설문 조사",
-        familyNameError: "가족의 이름을 입력합니다",
-        genderError: "성별을 선택하세요",
-        givenNameError: "다른 이름을 입력",
-        mySchedule: "내 일정",
-        neighborhoodError: "지역을 선택하세요",
-        newPatient: "새로운 환자",
-        newSurvey: "새로운 설문 조사",
-        nextPage: "다음 페이지",
-        patient: "환자",
-        patientInformation: "환자 정보",
-        relationship: "관계",
-        relationshipError: "관계를 선택하세요",
-        submitShare: "전송 / 공유",
-        address: AppLocalizations_Labels_General_Address(
-          city: "시티",
-          country: "국가",
-          county: "군",
-          district: "지구",
-          neighborhood: "이웃",
-          postalCode: "우편 번호",
-          state: "상태",
-          title: "주소",
-        ),
-        name: AppLocalizations_Labels_General_Name(
-          familyName: "가족 / 성",
-          firstName: "이름",
-          givenNames: "먼저 / 감안할 때 이름",
-          lastName: "성",
-          name: "이름",
-          otherNames: "다른 이름들",
-        ),
-        relation: AppLocalizations_Labels_General_Relation(
-          aunt: "이모",
-          brother: "동료",
-          daughter: "딸",
-          father: "아버지",
-          grandfather: "할아버지",
-          grandmother: "할머니",
-          mother: "어머니",
-          nephew: "조카",
-          niece: "조카딸",
-          other: "다른",
-          sister: "여자 형제",
-          son: "아들",
-          title: "관계",
-          uncle: "삼촌",
-        ),
-        search: AppLocalizations_Labels_General_Search(
-          filter: "필터",
-          patientSearch: "환자 검색",
-          search: "검색",
-          searchName: "이름으로 검색",
-        ),
-        sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
-          female: "여자",
-          male: "남성",
-          title: "출생에서 섹스",
-        ),
+      contacts: AppLocalizations_Labels_Contacts(
+        newContact: "새 연락처",
+        noContactsAdded: "추가 된 연락처가 없습니다.",
+      ),
+      dateOfBirth: AppLocalizations_Labels_DateOfBirth(
+        title: "생년월일",
+      ),
+      gender: AppLocalizations_Labels_Gender(
+        error: "성별을 선택하세요",
+        female: "여자",
+        male: "남성",
+        title: "출생에서 섹스",
       ),
       language: AppLocalizations_Labels_Language(
-        inEnglish: "Korean",
-        title: "한국어",
+        inEnglish: "영어",
+        title: "영어",
       ),
       medical: AppLocalizations_Labels_Medical(
         deworming: "구충제",
@@ -2441,143 +1790,104 @@ class AppLocalizations {
           title: "백신",
         ),
       ),
-      registration: AppLocalizations_Labels_Registration(
-        registerPatient: "전체 환자 등록",
-        savePatient: "저장 환자",
+      name: AppLocalizations_Labels_Name(
+        familyName: "가족 / 성",
+        familyNameError: "가족의 이름을 입력합니다",
+        firstName: "이름",
+        givenNameError: "주어진 이름을 입력",
+        givenNames: "먼저 / 감안할 때 이름",
+        lastName: "성",
+        otherNames: "다른 이름들",
+        title: "이름",
+      ),
+      pages: AppLocalizations_Labels_Pages(
+        allPatients: "모든 환자",
+        contacts: "콘택트 렌즈",
+        login: "로그인",
+        newPatient: "새로운 환자",
+        patientHome: "환자 홈",
+        patientInformation: "환자 정보",
+        summaryReport: "요약 보고서",
+      ),
+      relationships: AppLocalizations_Labels_Relationships(
+        daughter: "딸",
+        error: "관계를 선택하세요",
+        father: "아버지",
+        grandfather: "할아버지",
+        grandmother: "할머니",
+        mother: "어머니",
+        nephew: "조카",
+        niece: "조카딸",
+        other: "다른",
+        relation: "관계",
+        sister: "여자 형제",
+        son: "아들",
+        title: "관계",
+        uncle: "삼촌",
+        aunt: "이모",
+        brother: "동료",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "어두운",
         language: "언어",
         light: "빛",
-        ok: "확인",
-        signOut: "어",
         system: "체계",
         theme: "테마",
         title: "설정",
-        updateProfile: "프로필 업데이트",
-      ),
-      vigor: AppLocalizations_Labels_Vigor(
-        title: "활기",
       ),
     ),
     Locale.fromSubtags(languageCode: "lo"): AppLocalizations_Labels(
+      actions: AppLocalizations_Labels_Actions(
+        add: "ຕື່ມ",
+        cancel: "ຍົກເລີກການ",
+        save: "ບັນທຶກ",
+        search: "ຄົ້ນຫາ",
+        submit: "ຍື່ນສະເຫນີ",
+      ),
+      address: AppLocalizations_Labels_Address(
+        neighborhood: AppLocalizations_Labels_Address_Neighborhood(
+          error: "ກະລຸນາເລືອກບ້ານ",
+          title: "ບ້ານ",
+        ),
+      ),
+      age: AppLocalizations_Labels_Age(
+        title: "ອາຍຸ",
+      ),
       app: AppLocalizations_Labels_App(
         chooseLanguage: "ເລືອກພາສາ",
         chooseTheme: "ເລືອກຫົວຂໍ້",
         settings: "Settings app",
         system: "ລະບົບ",
         title: AppLocalizations_Labels_App_Title(
-          title: "Vigor",
           saluddominicana: "Salud Dominicana",
+          title: "ຢ່າງແຂງແຮງ",
         ),
       ),
       auth: AppLocalizations_Labels_Auth(
-        cancel: "ຍົກເລີກການ",
-        changePassword: "ປ່ຽນ​ລະ​ຫັດ​ຜ່ານ",
-        email: "Email",
         login: "ເຂົ້າ​ສູ່​ລະ​ບົບ",
         password: "ລະຫັດຜ່ານ",
-        resetPassword: "Reset Password",
-        signIn: "ເຂົ້າ​ສູ່​ລະ​ບົບ",
-        signUp: "ລົງ​ທະ​ບຽນ",
-        submit: "ຍື່ນສະເຫນີ",
         userName: "ຊື່ຜູ້ໃຊ້",
       ),
-      dates: AppLocalizations_Labels_Dates(
-        month: AppLocalizations_Labels_Dates_Month(
-          april: "ເມສາ",
-          august: "ສິງຫາ",
-          december: "ທັນວາ",
-          february: "ກຸມພາ",
-          january: "ມັງກອນ",
-          july: "ກໍລະກົດ",
-          june: "ມິຖຸນາ",
-          march: "ມີນາ",
-          may: "ພຶດສະພາ",
-          november: "ພະຈິກ",
-          october: "ຕຸລາ",
-          september: "ກັນຍາ",
-        ),
-        weekday: AppLocalizations_Labels_Dates_Weekday(
-          friday: "ວັນ​ສຸກ",
-          monday: "ຈັນ",
-          saturday: "ເສົາ",
-          sunday: "ວັນອາທິດ",
-          thursday: "ວັນພະຫັດ",
-          tuesday: "ວັນອັງຄານ",
-          wednesday: "ວັນພຸດ",
-        ),
+      birthDate: AppLocalizations_Labels_BirthDate(
+        error: "ກະລຸນາໃສ່ວັນເດືອນປີເກີດ",
+        title: "ວັນເດືອນປີເກີດ",
       ),
-      general: AppLocalizations_Labels_General(
-        age: "ອາຍຸ",
-        allPatients: "ຄົນເຈັບທັງຫມົດ",
-        birthDate: "ວັນເດືອນປີເກີດ",
-        birthDateError: "ກະລຸນາໃສ່ວັນເດືອນປີເກີດ",
-        contacts: "ຕິດຕໍ່ຄົນເຈັບ",
-        dateofBirth: "ວັນ​ເດືອນ​ປີ​ເກີດ",
-        editSurvey: "ດັດແກ້ການສໍາຫຼວດ",
-        familyNameError: "ກະລຸນາໃສ່ນາມສະກຸນ",
-        genderError: "ກະລຸນາເລືອກບົດບາດຍິງຊາຍ",
-        givenNameError: "ກະລຸນາໃສ່ຊື່ອື່ນ",
-        mySchedule: "ຕາຕະລາງຂອງຂ້າພະເຈົ້າ",
-        neighborhoodError: "ກະລຸນາເລືອກບ້ານ",
-        newPatient: "ອົດທົນໃຫມ່",
-        newSurvey: "ການສໍາຫຼວດໃຫມ່",
-        nextPage: "ຫນ້າຖັດໄປ",
-        patient: "ຄົນເຈັບ",
-        patientInformation: "ຂໍ້ມູນຜູ້ປ່ວຍ",
-        relationship: "ຄວາມສໍາພັນ",
-        relationshipError: "ກະລຸນາເລືອກສໍາພັນ",
-        submitShare: "ຍື່ນສະເຫນີ / Share",
-        address: AppLocalizations_Labels_General_Address(
-          city: "ເມືອງ",
-          country: "ປະເທດ",
-          county: "county",
-          district: "ເມືອງ",
-          neighborhood: "ບ້ານ",
-          postalCode: "ລະ​ຫັດ​ໄປ​ສະ​ນີ",
-          state: "State",
-          title: "ທີ່ຢູ່",
-        ),
-        name: AppLocalizations_Labels_General_Name(
-          familyName: "ຄອບຄົວ / ນາມສະກຸນ",
-          firstName: "ຊື່​ແທ້",
-          givenNames: "ຫນ້າທໍາອິດ / Names ເນື່ອງ",
-          lastName: "ນາມ​ສະ​ກຸນ",
-          name: "ຊື່",
-          otherNames: "ຊື່ອື່ນໆ",
-        ),
-        relation: AppLocalizations_Labels_General_Relation(
-          aunt: "ປ້າ",
-          brother: "ອ້າຍ",
-          daughter: "ລູກສາວ",
-          father: "ພຣະບິດາ",
-          grandfather: "ປູ່",
-          grandmother: "grandmother",
-          mother: "ແມ່",
-          nephew: "ຫລານຊາຍ",
-          niece: "ຫລານສາວ",
-          other: "ອື່ນ ໆ",
-          sister: "ເອື້ອຍ",
-          son: "ລູກຊາຍ",
-          title: "Relation",
-          uncle: "ລຸງ",
-        ),
-        search: AppLocalizations_Labels_General_Search(
-          filter: "ການກັ່ນຕອງ",
-          patientSearch: "ຄົ້ນຫາຄົນເຈັບ",
-          search: "ຄົ້ນຫາ",
-          searchName: "ຄົ້ນຫາຊື່",
-        ),
-        sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
-          female: "ຍິງ",
-          male: "ຜູ້​ຊາຍ",
-          title: "ເພດໃນເວລາເກີດ",
-        ),
+      contacts: AppLocalizations_Labels_Contacts(
+        newContact: "New ຕິດຕໍ່",
+        noContactsAdded: "No ຕິດຕໍ່ພົວພັນໄດ້ຮັບການເພີ່ມ.",
+      ),
+      dateOfBirth: AppLocalizations_Labels_DateOfBirth(
+        title: "ວັນ​ເດືອນ​ປີ​ເກີດ",
+      ),
+      gender: AppLocalizations_Labels_Gender(
+        error: "ກະລຸນາເລືອກບົດບາດຍິງຊາຍ",
+        female: "ຍິງ",
+        male: "ຜູ້​ຊາຍ",
+        title: "ເພດໃນເວລາເກີດ",
       ),
       language: AppLocalizations_Labels_Language(
-        inEnglish: "Lao",
-        title: "ລາວ",
+        inEnglish: "ພາສາອັງກິດ",
+        title: "ພາສາອັງກິດ",
       ),
       medical: AppLocalizations_Labels_Medical(
         deworming: "Deworming",
@@ -2594,143 +1904,104 @@ class AppLocalizations {
           title: "ວັກ​ຊີນ​ປ້ອງ​ກັນ",
         ),
       ),
-      registration: AppLocalizations_Labels_Registration(
-        registerPatient: "ການລົງທະບຽນຂອງຄົນເຈັບສໍາເລັດ",
-        savePatient: "ບັນທຶກຄົນເຈັບ",
+      name: AppLocalizations_Labels_Name(
+        familyName: "ຄອບຄົວ / ນາມສະກຸນ",
+        familyNameError: "ກະລຸນາໃສ່ນາມສະກຸນ",
+        firstName: "ຊື່​ແທ້",
+        givenNameError: "ກະລຸນາໃສ່ຊື່ໃຫ້",
+        givenNames: "ຫນ້າທໍາອິດ / Names ເນື່ອງ",
+        lastName: "ນາມ​ສະ​ກຸນ",
+        otherNames: "ຊື່ອື່ນໆ",
+        title: "ຊື່",
+      ),
+      pages: AppLocalizations_Labels_Pages(
+        allPatients: "ຄົນເຈັບທັງຫມົດ",
+        contacts: "ຕິດຕໍ່ພົວພັນ",
+        login: "ເຂົ້າ​ສູ່​ລະ​ບົບ",
+        newPatient: "ອົດທົນໃຫມ່",
+        patientHome: "ຫນ້າທໍາອິດຄົນເຈັບ",
+        patientInformation: "ຂໍ້ມູນຜູ້ປ່ວຍ",
+        summaryReport: "ບົດລາຍງານສະຫຼຸບສັງລວມ",
+      ),
+      relationships: AppLocalizations_Labels_Relationships(
+        daughter: "ລູກສາວ",
+        error: "ກະລຸນາເລືອກສໍາພັນ",
+        father: "ພຣະບິດາ",
+        grandfather: "ປູ່",
+        grandmother: "grandmother",
+        mother: "ແມ່",
+        nephew: "ຫລານຊາຍ",
+        niece: "ຫລານສາວ",
+        other: "ອື່ນ ໆ",
+        relation: "Relation",
+        sister: "ເອື້ອຍ",
+        son: "ລູກຊາຍ",
+        title: "ຄວາມສໍາພັນ",
+        uncle: "ລຸງ",
+        aunt: "ປ້າ",
+        brother: "ອ້າຍ",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "ຊ້ໍາ",
         language: "ພາສາ",
         light: "ແສງສະຫວ່າງ",
-        ok: "ຕົກ​ລົງ",
-        signOut: "ອອກ​ຈາກ​ລະ​ບົບ",
         system: "ລະບົບ",
         theme: "Theme",
         title: "ການຕັ້ງຄ່າ",
-        updateProfile: "ແຜງ",
-      ),
-      vigor: AppLocalizations_Labels_Vigor(
-        title: "ຢ່າງແຂງແຮງ",
       ),
     ),
     Locale.fromSubtags(languageCode: "mr"): AppLocalizations_Labels(
+      actions: AppLocalizations_Labels_Actions(
+        add: "जोडा",
+        cancel: "रद्द करा",
+        save: "जतन करा",
+        search: "शोधा",
+        submit: "प्रस्तुत करणे",
+      ),
+      address: AppLocalizations_Labels_Address(
+        neighborhood: AppLocalizations_Labels_Address_Neighborhood(
+          error: "कृपया शेजारच्या निवडा",
+          title: "शेजार",
+        ),
+      ),
+      age: AppLocalizations_Labels_Age(
+        title: "वय",
+      ),
       app: AppLocalizations_Labels_App(
         chooseLanguage: "भाषा निवडा",
         chooseTheme: "थीम निवडा",
         settings: "App सेटिंग्ज",
         system: "प्रणाली",
         title: AppLocalizations_Labels_App_Title(
-          title: "Vigor",
-          saluddominicana: "Salud Dominicana",
+          saluddominicana: "salud Dominicana",
+          title: "जोम",
         ),
       ),
       auth: AppLocalizations_Labels_Auth(
-        cancel: "रद्द करा",
-        changePassword: "पासवर्ड बदला",
-        email: "ईमेल",
         login: "लॉग-इन",
         password: "पासवर्ड",
-        resetPassword: "पासवर्ड रीसेट करा",
-        signIn: "साइन इन करा",
-        signUp: "साइन अप करा",
-        submit: "प्रस्तुत करणे",
         userName: "वापरकर्तानाव",
       ),
-      dates: AppLocalizations_Labels_Dates(
-        month: AppLocalizations_Labels_Dates_Month(
-          april: "एप्रिल",
-          august: "ऑगस्ट",
-          december: "डिसेंबर",
-          february: "फेब्रुवारी",
-          january: "जानेवारी",
-          july: "जुलै",
-          june: "जून",
-          march: "मार्च",
-          may: "मे",
-          november: "नोव्हेंबर",
-          october: "ऑक्टोबर",
-          september: "सप्टेंबर",
-        ),
-        weekday: AppLocalizations_Labels_Dates_Weekday(
-          friday: "शुक्रवारी",
-          monday: "सोमवारी",
-          saturday: "शनिवारी",
-          sunday: "रविवारी",
-          thursday: "गुरुवारी",
-          tuesday: "मंगळवारी",
-          wednesday: "बुधवारी",
-        ),
+      birthDate: AppLocalizations_Labels_BirthDate(
+        error: "जन्मतारीख प्रविष्ट करा",
+        title: "जन्मदिनांक",
       ),
-      general: AppLocalizations_Labels_General(
-        age: "वय",
-        allPatients: "सर्व रुग्णांना",
-        birthDate: "जन्मदिनांक",
-        birthDateError: "जन्मतारीख प्रविष्ट करा",
-        contacts: "रुग्णांच्या संपर्क",
-        dateofBirth: "जन्म तारीख",
-        editSurvey: "सर्वेक्षण संपादित करा",
-        familyNameError: "कुटुंब नाव प्रविष्ट करा",
-        genderError: "कृपया लिंग निवडा",
-        givenNameError: "इतर नावे प्रविष्ट करा",
-        mySchedule: "माझे वेळापत्रक",
-        neighborhoodError: "कृपया शेजारच्या निवडा",
-        newPatient: "नवीन रुग्णांच्या",
-        newSurvey: "नवीन सर्वेक्षण",
-        nextPage: "पुढील पृष्ठ",
-        patient: "रुग्णांच्या",
-        patientInformation: "रुग्णांच्या माहिती",
-        relationship: "संबंध",
-        relationshipError: "कृपया संबंध निवडा",
-        submitShare: "सबमिट करा / शेअर",
-        address: AppLocalizations_Labels_General_Address(
-          city: "सिटी",
-          country: "देश",
-          county: "तालुका",
-          district: "जिल्हा",
-          neighborhood: "शेजार",
-          postalCode: "पिनकोड",
-          state: "राज्य",
-          title: "पत्ता",
-        ),
-        name: AppLocalizations_Labels_General_Name(
-          familyName: "कुटुंब / आडनाव",
-          firstName: "पहिले नाव",
-          givenNames: "प्रथम / नावे",
-          lastName: "आडनाव",
-          name: "नाव",
-          otherNames: "इतर नावे",
-        ),
-        relation: AppLocalizations_Labels_General_Relation(
-          aunt: "काकू",
-          brother: "भाऊ",
-          daughter: "मुलगी",
-          father: "वडील",
-          grandfather: "आजोबा",
-          grandmother: "आजी",
-          mother: "आई",
-          nephew: "भाचा",
-          niece: "भाची",
-          other: "इतर",
-          sister: "बहीण",
-          son: "मुलगा",
-          title: "नाते",
-          uncle: "काका",
-        ),
-        search: AppLocalizations_Labels_General_Search(
-          filter: "फिल्टर",
-          patientSearch: "रुग्णांच्या शोध",
-          search: "शोधा",
-          searchName: "शोध नाव",
-        ),
-        sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
-          female: "स्त्री",
-          male: "पुरुष",
-          title: "जन्म येथे लिंग",
-        ),
+      contacts: AppLocalizations_Labels_Contacts(
+        newContact: "नवीन संपर्क",
+        noContactsAdded: "कोणतेही संपर्क जोडले गेले आहेत.",
+      ),
+      dateOfBirth: AppLocalizations_Labels_DateOfBirth(
+        title: "जन्म तारीख",
+      ),
+      gender: AppLocalizations_Labels_Gender(
+        error: "कृपया लिंग निवडा",
+        female: "स्त्री",
+        male: "पुरुष",
+        title: "जन्म येथे लिंग",
       ),
       language: AppLocalizations_Labels_Language(
-        inEnglish: "Marathi",
-        title: "मराठी",
+        inEnglish: "इंग्रजी",
+        title: "इंग्रजी",
       ),
       medical: AppLocalizations_Labels_Medical(
         deworming: "माद्यांचे",
@@ -2747,143 +2018,104 @@ class AppLocalizations {
           title: "लसीकरण",
         ),
       ),
-      registration: AppLocalizations_Labels_Registration(
-        registerPatient: "पूर्ण रुग्णांच्या नोंदणी",
-        savePatient: "रुग्णांच्या जतन करा",
+      name: AppLocalizations_Labels_Name(
+        familyName: "कुटुंब / आडनाव",
+        familyNameError: "कुटुंब नाव प्रविष्ट करा",
+        firstName: "पहिले नाव",
+        givenNameError: "नावे दिली प्रविष्ट करा",
+        givenNames: "प्रथम / नावे",
+        lastName: "आडनाव",
+        otherNames: "इतर नावे",
+        title: "नाव",
+      ),
+      pages: AppLocalizations_Labels_Pages(
+        allPatients: "सर्व रुग्णांना",
+        contacts: "संपर्क",
+        login: "लॉग-इन",
+        newPatient: "नवीन रुग्णांच्या",
+        patientHome: "रुग्णांच्या मुख्यपृष्ठ",
+        patientInformation: "रुग्णांच्या माहिती",
+        summaryReport: "सारांश अहवाल",
+      ),
+      relationships: AppLocalizations_Labels_Relationships(
+        daughter: "मुलगी",
+        error: "कृपया संबंध निवडा",
+        father: "वडील",
+        grandfather: "आजोबा",
+        grandmother: "आजी",
+        mother: "आई",
+        nephew: "भाचा",
+        niece: "भाची",
+        other: "इतर",
+        relation: "नाते",
+        sister: "बहीण",
+        son: "मुलगा",
+        title: "नाते",
+        uncle: "काका",
+        aunt: "काकू",
+        brother: "भाऊ",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "गडद",
         language: "इंग्रजी",
         light: "प्रकाश",
-        ok: "ठीक आहे",
-        signOut: "साइन आउट",
         system: "प्रणाली",
         theme: "थीम",
         title: "सेटिंग्ज",
-        updateProfile: "प्रोफाइल अद्यतनित करा",
-      ),
-      vigor: AppLocalizations_Labels_Vigor(
-        title: "जोम",
       ),
     ),
     Locale.fromSubtags(languageCode: "ne"): AppLocalizations_Labels(
+      actions: AppLocalizations_Labels_Actions(
+        add: "थप",
+        cancel: "रद्द",
+        save: "सेव",
+        search: "खोज",
+        submit: "पेश",
+      ),
+      address: AppLocalizations_Labels_Address(
+        neighborhood: AppLocalizations_Labels_Address_Neighborhood(
+          error: "कृपया छिमेकी चयन",
+          title: "छिमेकी",
+        ),
+      ),
+      age: AppLocalizations_Labels_Age(
+        title: "उमेर",
+      ),
       app: AppLocalizations_Labels_App(
         chooseLanguage: "भाषा चयन",
         chooseTheme: "विषयवस्तु रोज्न",
         settings: "अनुप्रयोग सेटिङ",
         system: "सिस्टम",
         title: AppLocalizations_Labels_App_Title(
-          title: "Vigor",
           saluddominicana: "Salud Dominicana",
+          title: "ताकत",
         ),
       ),
       auth: AppLocalizations_Labels_Auth(
-        cancel: "रद्द",
-        changePassword: "पासवर्ड परिवर्तन",
-        email: "इमेल",
         login: "लग - इन",
         password: "पासवर्ड",
-        resetPassword: "पासवर्ड रिसेट",
-        signIn: "साइन",
-        signUp: "साइन अप",
-        submit: "पेश",
         userName: "प्रयोगकर्ता नाम",
       ),
-      dates: AppLocalizations_Labels_Dates(
-        month: AppLocalizations_Labels_Dates_Month(
-          april: "अप्रिल",
-          august: "अगस्ट",
-          december: "डिसेम्बर",
-          february: "फेब्रुअरी",
-          january: "जनवरी",
-          july: "जुलाई",
-          june: "जुन",
-          march: "मार्च",
-          may: "सक्छ",
-          november: "नोभेम्बर",
-          october: "अक्टोबर",
-          september: "सेप्टेम्बर",
-        ),
-        weekday: AppLocalizations_Labels_Dates_Weekday(
-          friday: "शुक्रवार",
-          monday: "सोमवार",
-          saturday: "शनिबार",
-          sunday: "आइतवार",
-          thursday: "बिहीबार",
-          tuesday: "मंगलवार",
-          wednesday: "बुधवार",
-        ),
+      birthDate: AppLocalizations_Labels_BirthDate(
+        error: "कृपया जन्ममिति प्रविष्ट",
+        title: "जन्म मिति",
       ),
-      general: AppLocalizations_Labels_General(
-        age: "उमेरको",
-        allPatients: "सबै विरामी",
-        birthDate: "जन्म मिति",
-        birthDateError: "कृपया जन्ममिति प्रविष्ट",
-        contacts: "रोगी सम्पर्क",
-        dateofBirth: "जन्म मिति",
-        editSurvey: "सर्वेक्षण सम्पादन",
-        familyNameError: "परिवारको नाम प्रविष्ट गर्नुहोस्",
-        genderError: "कृपया लिङ्ग चयन",
-        givenNameError: "अन्य नाम प्रविष्ट गर्नुहोस्",
-        mySchedule: "मेरो तालिका",
-        neighborhoodError: "कृपया छिमेकी चयन",
-        newPatient: "नयाँ रोगी",
-        newSurvey: "नयाँ सर्वेक्षण",
-        nextPage: "अर्को पाना",
-        patient: "बिरामी",
-        patientInformation: "रोगी सूचना",
-        relationship: "सम्बन्ध",
-        relationshipError: "कृपया सम्बन्ध चयन",
-        submitShare: "पेश / शेयर",
-        address: AppLocalizations_Labels_General_Address(
-          city: "शहर",
-          country: "देश",
-          county: "काउन्टी",
-          district: "जिल्ला",
-          neighborhood: "छिमेकी",
-          postalCode: "पिन कोड",
-          state: "राज्य",
-          title: "ठेगाना",
-        ),
-        name: AppLocalizations_Labels_General_Name(
-          familyName: "परिवार / अन्तिम नाम",
-          firstName: "पहिलो नाम",
-          givenNames: "पहिलो / नामहरू",
-          lastName: "थर",
-          name: "नाम",
-          otherNames: "अरु नामहरु",
-        ),
-        relation: AppLocalizations_Labels_General_Relation(
-          aunt: "चाची",
-          brother: "भाइ",
-          daughter: "छोरी",
-          father: "बुबा",
-          grandfather: "हजुरबुवा",
-          grandmother: "हजुरआमा",
-          mother: "आमा",
-          nephew: "भान्जा",
-          niece: "भान्जी",
-          other: "अन्य",
-          sister: "बहिनी",
-          son: "छोरा",
-          title: "सम्बन्ध",
-          uncle: "मामा",
-        ),
-        search: AppLocalizations_Labels_General_Search(
-          filter: "फिल्टर",
-          patientSearch: "रोगी खोज",
-          search: "खोज",
-          searchName: "खोज नाम",
-        ),
-        sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
-          female: "महिला",
-          male: "पुरुष",
-          title: "जन्म मा सेक्स",
-        ),
+      contacts: AppLocalizations_Labels_Contacts(
+        newContact: "नयाँ संपर्क",
+        noContactsAdded: "कुनै सम्पर्क थपिएका छन्।",
+      ),
+      dateOfBirth: AppLocalizations_Labels_DateOfBirth(
+        title: "जन्म मिति",
+      ),
+      gender: AppLocalizations_Labels_Gender(
+        error: "कृपया लिङ्ग चयन",
+        female: "महिला",
+        male: "पुरुष",
+        title: "जन्म मा सेक्स",
       ),
       language: AppLocalizations_Labels_Language(
-        inEnglish: "Nepali",
-        title: "नेपाली",
+        inEnglish: "अंग्रेजी",
+        title: "अंग्रेजी",
       ),
       medical: AppLocalizations_Labels_Medical(
         deworming: "Deworming",
@@ -2900,143 +2132,104 @@ class AppLocalizations {
           title: "औषधी",
         ),
       ),
-      registration: AppLocalizations_Labels_Registration(
-        registerPatient: "रोगी दर्ता पूरा",
-        savePatient: "रोगी सेव",
+      name: AppLocalizations_Labels_Name(
+        familyName: "परिवार / अन्तिम नाम",
+        familyNameError: "परिवारको नाम प्रविष्ट गर्नुहोस्",
+        firstName: "पहिलो नाम",
+        givenNameError: "नामहरू प्रविष्टि",
+        givenNames: "पहिलो / नामहरू",
+        lastName: "थर",
+        otherNames: "अरु नामहरु",
+        title: "नाम",
+      ),
+      pages: AppLocalizations_Labels_Pages(
+        allPatients: "सबै विरामी",
+        contacts: "सम्पर्क",
+        login: "लग - इन",
+        newPatient: "नयाँ रोगी",
+        patientHome: "रोगी घर",
+        patientInformation: "रोगी सूचना",
+        summaryReport: "सारांश रिपोर्ट",
+      ),
+      relationships: AppLocalizations_Labels_Relationships(
+        daughter: "छोरी",
+        error: "कृपया सम्बन्ध चयन",
+        father: "बुबा",
+        grandfather: "हजुरबुवा",
+        grandmother: "हजुरआमा",
+        mother: "आमा",
+        nephew: "भान्जा",
+        niece: "भान्जी",
+        other: "अन्य",
+        relation: "सम्बन्ध",
+        sister: "बहिनी",
+        son: "छोरा",
+        title: "सम्बन्ध",
+        uncle: "मामा",
+        aunt: "चाची",
+        brother: "भाइ",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "गाढा",
         language: "भाषा",
         light: "प्रकाश",
-        ok: "ठिक छ",
-        signOut: "साइन आउट",
         system: "सिस्टम",
         theme: "विषय",
         title: "सेटिङहरू",
-        updateProfile: "प्रोफाइल अद्यावधिक",
-      ),
-      vigor: AppLocalizations_Labels_Vigor(
-        title: "ताकत",
       ),
     ),
     Locale.fromSubtags(languageCode: "pt"): AppLocalizations_Labels(
+      actions: AppLocalizations_Labels_Actions(
+        add: "Adicionar",
+        cancel: "Cancelar",
+        save: "Salve ",
+        search: "Pesquisa",
+        submit: "Enviar",
+      ),
+      address: AppLocalizations_Labels_Address(
+        neighborhood: AppLocalizations_Labels_Address_Neighborhood(
+          error: "Por favor seleccione bairro",
+          title: "Vizinhança",
+        ),
+      ),
+      age: AppLocalizations_Labels_Age(
+        title: "Era",
+      ),
       app: AppLocalizations_Labels_App(
         chooseLanguage: "Escolha o seu idioma",
         chooseTheme: "Escolha Tema",
         settings: "Configurações do aplicativo",
         system: "Sistema",
         title: AppLocalizations_Labels_App_Title(
-          title: "Vigor",
           saluddominicana: "Salud Dominicana",
+          title: "Vigor",
         ),
       ),
       auth: AppLocalizations_Labels_Auth(
-        cancel: "Cancelar",
-        changePassword: "Mudar senha",
-        email: "O email",
         login: "Conecte-se",
         password: "Senha",
-        resetPassword: "Password Reset",
-        signIn: "Assinar em",
-        signUp: "Inscrever-se",
-        submit: "Enviar",
         userName: "Nome do usuário",
       ),
-      dates: AppLocalizations_Labels_Dates(
-        month: AppLocalizations_Labels_Dates_Month(
-          april: "abril",
-          august: "agosto",
-          december: "dezembro",
-          february: "fevereiro",
-          january: "janeiro",
-          july: "Julho",
-          june: "Junho",
-          march: "Março",
-          may: "Maio",
-          november: "novembro",
-          october: "Outubro",
-          september: "setembro",
-        ),
-        weekday: AppLocalizations_Labels_Dates_Weekday(
-          friday: "Sexta-feira",
-          monday: "Segunda-feira",
-          saturday: "sábado",
-          sunday: "Domigo",
-          thursday: "quinta-feira",
-          tuesday: "terça",
-          wednesday: "quarta-feira",
-        ),
+      birthDate: AppLocalizations_Labels_BirthDate(
+        error: "Por favor, indique data de nascimento",
+        title: "Data de nascimento",
       ),
-      general: AppLocalizations_Labels_General(
-        age: "Era",
-        allPatients: "Todos os pacientes",
-        birthDate: "Data de nascimento",
-        birthDateError: "Por favor, indique data de nascimento",
-        contacts: "paciente Contactos",
-        dateofBirth: "Data de nascimento",
-        editSurvey: "Editar questionário",
-        familyNameError: "Insira o nome de família",
-        genderError: "Por favor selecione um gênero",
-        givenNameError: "Introduzir outros nomes",
-        mySchedule: "Meu horário",
-        neighborhoodError: "Por favor seleccione bairro",
-        newPatient: "New Patient",
-        newSurvey: "nova pesquisa",
-        nextPage: "Próxima página",
-        patient: "Paciente",
-        patientInformation: "Informação do paciente",
-        relationship: "Relação",
-        relationshipError: "Por favor seleccione relacionamento",
-        submitShare: "Enviar / Share",
-        address: AppLocalizations_Labels_General_Address(
-          city: "Cidade",
-          country: "País",
-          county: "município",
-          district: "Distrito",
-          neighborhood: "Vizinhança",
-          postalCode: "Código postal",
-          state: "Estado",
-          title: "Endereço",
-        ),
-        name: AppLocalizations_Labels_General_Name(
-          familyName: "Família / Último Nome",
-          firstName: "Primeiro nome",
-          givenNames: "Primeiro / Nomes",
-          lastName: "Último nome",
-          name: "Nome",
-          otherNames: "Outros nomes",
-        ),
-        relation: AppLocalizations_Labels_General_Relation(
-          aunt: "Tia",
-          brother: "Irmão",
-          daughter: "Filha",
-          father: "Pai",
-          grandfather: "Avô",
-          grandmother: "Avó",
-          mother: "Mãe",
-          nephew: "Sobrinho",
-          niece: "Sobrinha",
-          other: "De outros",
-          sister: "Irmã",
-          son: "Filho",
-          title: "Relação",
-          uncle: "Tio",
-        ),
-        search: AppLocalizations_Labels_General_Search(
-          filter: "Filtro",
-          patientSearch: "paciente Pesquisa",
-          search: "Pesquisa",
-          searchName: "pesquisa por nome",
-        ),
-        sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
-          female: "Fêmea",
-          male: "Masculino",
-          title: "Sex at Birth",
-        ),
+      contacts: AppLocalizations_Labels_Contacts(
+        newContact: "Novo contato",
+        noContactsAdded: "Nenhum contato foi adicionado.",
+      ),
+      dateOfBirth: AppLocalizations_Labels_DateOfBirth(
+        title: "Data de nascimento",
+      ),
+      gender: AppLocalizations_Labels_Gender(
+        error: "Por favor selecione um gênero",
+        female: "Fêmea",
+        male: "Masculino",
+        title: "Sex at Birth",
       ),
       language: AppLocalizations_Labels_Language(
-        inEnglish: "Portuguese",
-        title: "Português",
+        inEnglish: "Inglês",
+        title: "Inglês",
       ),
       medical: AppLocalizations_Labels_Medical(
         deworming: "desparasitação",
@@ -3053,143 +2246,104 @@ class AppLocalizations {
           title: "Vacinas",
         ),
       ),
-      registration: AppLocalizations_Labels_Registration(
-        registerPatient: "Registro completo do paciente",
-        savePatient: "Salvar paciente",
+      name: AppLocalizations_Labels_Name(
+        familyName: "Família / Último Nome",
+        familyNameError: "Insira o nome de família",
+        firstName: "Primeiro nome",
+        givenNameError: "Digite nomes dados",
+        givenNames: "Primeiro / Nomes",
+        lastName: "Último nome",
+        otherNames: "Outros nomes",
+        title: "Nome",
+      ),
+      pages: AppLocalizations_Labels_Pages(
+        allPatients: "Todos os pacientes",
+        contacts: "Contatos",
+        login: "Conecte-se",
+        newPatient: "New Patient",
+        patientHome: "Início paciente",
+        patientInformation: "Informação do paciente",
+        summaryReport: "Relatório Resumido",
+      ),
+      relationships: AppLocalizations_Labels_Relationships(
+        daughter: "Filha",
+        error: "Por favor seleccione relacionamento",
+        father: "Pai",
+        grandfather: "Avô",
+        grandmother: "Avó",
+        mother: "Mãe",
+        nephew: "Sobrinho",
+        niece: "Sobrinha",
+        other: "De outros",
+        relation: "Relação",
+        sister: "Irmã",
+        son: "Filho",
+        title: "Relação",
+        uncle: "Tio",
+        aunt: "Tia",
+        brother: "Irmão",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "Sombrio",
         language: "Língua",
-        light: "Luz",
-        ok: "Está bem",
-        signOut: "Sair",
+        light: "Leve",
         system: "Sistema",
         theme: "Tema",
-        title: "Definições",
-        updateProfile: "Atualizar perfil",
-      ),
-      vigor: AppLocalizations_Labels_Vigor(
-        title: "Vigor",
+        title: "Configurações",
       ),
     ),
     Locale.fromSubtags(languageCode: "pa"): AppLocalizations_Labels(
+      actions: AppLocalizations_Labels_Actions(
+        add: "ਜੋੜੋ",
+        cancel: "ਰੱਦ ਕਰੋ",
+        save: "ਸੰਭਾਲੋ",
+        search: "ਖੋਜ",
+        submit: "ਜਮ੍ਹਾਂ ਕਰੋ",
+      ),
+      address: AppLocalizations_Labels_Address(
+        neighborhood: AppLocalizations_Labels_Address_Neighborhood(
+          error: "ਕਿਰਪਾ ਕਰਕੇ ਇਲਾਕੇ ਦੀ ਚੋਣ ਕਰੋ",
+          title: "ਨੇਬਰਹੁੱਡ",
+        ),
+      ),
+      age: AppLocalizations_Labels_Age(
+        title: "ਉੁਮਰ",
+      ),
       app: AppLocalizations_Labels_App(
         chooseLanguage: "ਭਾਸ਼ਾ ਚੁਣੋ",
         chooseTheme: "ਥੀਮ ਚੁਣੋ",
         settings: "ਐਪ ਸੈਟਿੰਗ",
         system: "ਸਿਸਟਮ",
         title: AppLocalizations_Labels_App_Title(
-          title: "Vigor",
           saluddominicana: "Salud Dominicana",
+          title: "ਜੋਸ਼",
         ),
       ),
       auth: AppLocalizations_Labels_Auth(
-        cancel: "ਰੱਦ ਕਰੋ",
-        changePassword: "ਪਾਸਵਰਡ ਬਦਲੋ",
-        email: "ਈ - ਮੇਲ",
         login: "ਲਾਗਿਨ",
         password: "ਪਾਸਵਰਡ",
-        resetPassword: "ਮੁੜ ਪਾਸਵਰਡ",
-        signIn: "ਸਾਈਨ - ਇਨ",
-        signUp: "ਸਾਇਨ ਅਪ",
-        submit: "ਜਮ੍ਹਾਂ ਕਰੋ",
         userName: "ਯੂਜ਼ਰ",
       ),
-      dates: AppLocalizations_Labels_Dates(
-        month: AppLocalizations_Labels_Dates_Month(
-          april: "ਅਪ੍ਰੈਲ",
-          august: "ਅਗਸਤ",
-          december: "ਦਸੰਬਰ",
-          february: "ਫਰਵਰੀ",
-          january: "ਜਨਵਰੀ",
-          july: "ਜੁਲਾਈ",
-          june: "ਜੂਨ",
-          march: "ਮਾਰਚ",
-          may: "ਮਈ",
-          november: "ਨਵੰਬਰ",
-          october: "ਅਕਤੂਬਰ",
-          september: "ਸਤੰਬਰ",
-        ),
-        weekday: AppLocalizations_Labels_Dates_Weekday(
-          friday: "ਸ਼ੁੱਕਰਵਾਰ ਨੂੰ",
-          monday: "ਸੋਮਵਾਰ",
-          saturday: "ਸ਼ਨੀਵਾਰ",
-          sunday: "ਐਤਵਾਰ ਨੂੰ",
-          thursday: "ਵੀਰਵਾਰ",
-          tuesday: "ਮੰਗਲਵਾਰ",
-          wednesday: "ਬੁੱਧਵਾਰ",
-        ),
+      birthDate: AppLocalizations_Labels_BirthDate(
+        error: "ਜਨਮ ਦਿਓ ਜੀ",
+        title: "ਜਨਮ ਮਿਤੀ",
       ),
-      general: AppLocalizations_Labels_General(
-        age: "ਉੁਮਰ",
-        allPatients: "ਸਾਰੇ ਮਰੀਜ਼",
-        birthDate: "ਜਨਮ ਮਿਤੀ",
-        birthDateError: "ਜਨਮ ਦਿਓ ਜੀ",
-        contacts: "ਮਰੀਜ਼ ਸੰਪਰਕ",
-        dateofBirth: "ਜਨਮ ਤਾਰੀਖ",
-        editSurvey: "ਸਰਵੇਖਣ ਸੋਧ",
-        familyNameError: "ਪਰਿਵਾਰ ਦਾ ਨਾਮ ਦਰਜ ਕਰੋ",
-        genderError: "ਕਿਰਪਾ ਕਰਕੇ ਲਿੰਗ ਚੁਣੋ",
-        givenNameError: "ਹੋਰ ਨਾਮ ਦਰਜ ਕਰੋ",
-        mySchedule: "ਮੇਰੀ ਤਹਿ",
-        neighborhoodError: "ਕਿਰਪਾ ਕਰਕੇ ਇਲਾਕੇ ਦੀ ਚੋਣ ਕਰੋ",
-        newPatient: "ਨਿਊ ਮਰੀਜ਼",
-        newSurvey: "ਨਿਊ ਸਰਵੇ",
-        nextPage: "ਅਗਲੇ ਸਫ਼ੇ",
-        patient: "ਮਰੀਜ਼",
-        patientInformation: "ਮਰੀਜ਼ ਜਾਣਕਾਰੀ",
-        relationship: "ਰਿਸ਼ਤਾ",
-        relationshipError: "ਕਿਰਪਾ ਕਰਕੇ ਰਿਸ਼ਤਾ ਦੀ ਚੋਣ ਕਰੋ",
-        submitShare: "ਪੇਸ਼ ਕਰੋ / share",
-        address: AppLocalizations_Labels_General_Address(
-          city: "ਸਿਟੀ",
-          country: "ਦੇਸ਼",
-          county: "ਕਾ",
-          district: "ਜ਼ਿਲ੍ਹਾ",
-          neighborhood: "ਨੇਬਰਹੁੱਡ",
-          postalCode: "ਡਾਕ ਕੋਡ",
-          state: "ਸਟੇਟ",
-          title: "ਪਤਾ",
-        ),
-        name: AppLocalizations_Labels_General_Name(
-          familyName: "ਪਰਿਵਾਰਕ / ਆਖਰੀ ਨਾਮ",
-          firstName: "ਪਹਿਲਾ ਨਾਂ",
-          givenNames: "ਪਹਿਲੀ / ਦਿੱਤੇ ਗਏ ਨਾਮ",
-          lastName: "ਆਖੀਰਲਾ ਨਾਂਮ",
-          name: "ਦਾ ਨਾਮ",
-          otherNames: "ਹੋਰ ਨਾਮ",
-        ),
-        relation: AppLocalizations_Labels_General_Relation(
-          aunt: "ਮਾਸੀ",
-          brother: "ਭਰਾ",
-          daughter: "ਧੀ",
-          father: "ਪਿਤਾ",
-          grandfather: "ਦਾਦਾ",
-          grandmother: "ਦਾਦੀ",
-          mother: "ਮਾਤਾ",
-          nephew: "ਭਤੀਜੇ",
-          niece: "ਭਤੀਜੀ",
-          other: "ਹੋਰ",
-          sister: "ਭੈਣ",
-          son: "ਪੁੱਤਰ",
-          title: "ਸਬੰਧ",
-          uncle: "ਅੰਕਲ",
-        ),
-        search: AppLocalizations_Labels_General_Search(
-          filter: "ਫਿਲਟਰ",
-          patientSearch: "ਮਰੀਜ਼ ਦੀ ਖੋਜ ਕਰੋ",
-          search: "ਖੋਜ",
-          searchName: "ਖੋਜ ਦਾ ਨਾਮ",
-        ),
-        sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
-          female: "ਔਰਤ",
-          male: "ਮਰਦ",
-          title: "ਜਨਮ ਤੇ ਲਿੰਗ",
-        ),
+      contacts: AppLocalizations_Labels_Contacts(
+        newContact: "ਨਿਊ ਸੰਪਰਕ",
+        noContactsAdded: "ਕੋਈ ਸੰਪਰਕ ਸ਼ਾਮਲ ਕੀਤਾ ਗਿਆ ਹੈ.",
+      ),
+      dateOfBirth: AppLocalizations_Labels_DateOfBirth(
+        title: "ਜਨਮ ਤਾਰੀਖ",
+      ),
+      gender: AppLocalizations_Labels_Gender(
+        error: "ਕਿਰਪਾ ਕਰਕੇ ਲਿੰਗ ਚੁਣੋ",
+        female: "ਔਰਤ",
+        male: "ਮਰਦ",
+        title: "ਜਨਮ ਤੇ ਲਿੰਗ",
       ),
       language: AppLocalizations_Labels_Language(
-        inEnglish: "Punjabi",
-        title: "ਪੰਜਾਬੀ ਦੇ",
+        inEnglish: "ਅੰਗਰੇਜ਼ੀ",
+        title: "ਅੰਗਰੇਜ਼ੀ",
       ),
       medical: AppLocalizations_Labels_Medical(
         deworming: "ਸ਼ੈੱਡ",
@@ -3206,143 +2360,104 @@ class AppLocalizations {
           title: "ਟੀਕੇ",
         ),
       ),
-      registration: AppLocalizations_Labels_Registration(
-        registerPatient: "ਮੁਕੰਮਲ ਮਰੀਜ਼ ਰਜਿਸਟਰੇਸ਼ਨ",
-        savePatient: "ਮਰੀਜ਼ ਸੰਭਾਲੋ",
+      name: AppLocalizations_Labels_Name(
+        familyName: "ਪਰਿਵਾਰਕ / ਆਖਰੀ ਨਾਮ",
+        familyNameError: "ਪਰਿਵਾਰ ਦਾ ਨਾਮ ਦਰਜ ਕਰੋ",
+        firstName: "ਪਹਿਲਾ ਨਾਂ",
+        givenNameError: "ਦਿੱਤੇ ਗਏ ਨਾਮ ਦਰਜ ਕਰੋ",
+        givenNames: "ਪਹਿਲੀ / ਦਿੱਤੇ ਗਏ ਨਾਮ",
+        lastName: "ਆਖੀਰਲਾ ਨਾਂਮ",
+        otherNames: "ਹੋਰ ਨਾਮ",
+        title: "ਦਾ ਨਾਮ",
+      ),
+      pages: AppLocalizations_Labels_Pages(
+        allPatients: "ਸਾਰੇ ਮਰੀਜ਼",
+        contacts: "ਸੰਪਰਕ",
+        login: "ਲਾਗਿਨ",
+        newPatient: "ਨਿਊ ਮਰੀਜ਼",
+        patientHome: "ਮਰੀਜ਼ ਮੁੱਖ",
+        patientInformation: "ਮਰੀਜ਼ ਜਾਣਕਾਰੀ",
+        summaryReport: "ਸਮਰੀ ਰਿਪੋਰਟ",
+      ),
+      relationships: AppLocalizations_Labels_Relationships(
+        daughter: "ਧੀ",
+        error: "ਕਿਰਪਾ ਕਰਕੇ ਰਿਸ਼ਤਾ ਦੀ ਚੋਣ ਕਰੋ",
+        father: "ਪਿਤਾ",
+        grandfather: "ਦਾਦਾ",
+        grandmother: "ਦਾਦੀ",
+        mother: "ਮਾਤਾ",
+        nephew: "ਭਤੀਜੇ",
+        niece: "ਭਤੀਜੀ",
+        other: "ਹੋਰ",
+        relation: "ਸਬੰਧ",
+        sister: "ਭੈਣ",
+        son: "ਪੁੱਤਰ",
+        title: "ਰਿਸ਼ਤਾ",
+        uncle: "ਅੰਕਲ",
+        aunt: "ਮਾਸੀ",
+        brother: "ਭਰਾ",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "ਹਨੇਰ",
         language: "ਭਾਸ਼ਾ",
         light: "ਚਾਨਣ",
-        ok: "ਠੀਕ ਹੈ",
-        signOut: "ਸਾਇਨ ਆਉਟ",
         system: "ਸਿਸਟਮ",
         theme: "ਥੀਮ",
         title: "ਸੈਟਿੰਗ",
-        updateProfile: "ਅੱਪਡੇਟ ਪ੍ਰੋਫ਼ਾਈਲ English",
-      ),
-      vigor: AppLocalizations_Labels_Vigor(
-        title: "ਜੋਸ਼",
       ),
     ),
     Locale.fromSubtags(languageCode: "so"): AppLocalizations_Labels(
+      actions: AppLocalizations_Labels_Actions(
+        add: "Add",
+        cancel: "Jooji",
+        save: "Save",
+        search: "Raadi",
+        submit: "Gudbi",
+      ),
+      address: AppLocalizations_Labels_Address(
+        neighborhood: AppLocalizations_Labels_Address_Neighborhood(
+          error: "Fadlan dooro xaafadda",
+          title: "Xaafadda",
+        ),
+      ),
+      age: AppLocalizations_Labels_Age(
+        title: "Age",
+      ),
       app: AppLocalizations_Labels_App(
         chooseLanguage: "Dooro Language",
         chooseTheme: "Dooro Theme",
         settings: "app Settings",
         system: "System",
         title: AppLocalizations_Labels_App_Title(
-          title: "Vigor",
           saluddominicana: "Salud Dominicana",
+          title: "luminayey",
         ),
       ),
       auth: AppLocalizations_Labels_Auth(
-        cancel: "Jooji",
-        changePassword: "Badalida Lambarka sirta ah",
-        email: "email",
         login: "login",
         password: "password",
-        resetPassword: "Password keddibna",
-        signIn: "Gal In",
-        signUp: "Saxiix Up",
-        submit: "Gudbi",
         userName: "username",
       ),
-      dates: AppLocalizations_Labels_Dates(
-        month: AppLocalizations_Labels_Dates_Month(
-          april: "April",
-          august: "Ogosto",
-          december: "December",
-          february: "February",
-          january: "January",
-          july: "July",
-          june: "June",
-          march: "March",
-          may: "Laga yaabaa",
-          november: "November",
-          october: "October",
-          september: "September",
-        ),
-        weekday: AppLocalizations_Labels_Dates_Weekday(
-          friday: "Friday",
-          monday: "Monday",
-          saturday: "Saturday",
-          sunday: "Sunday",
-          thursday: "Thursday",
-          tuesday: "Tuesday",
-          wednesday: "Wednesday",
-        ),
+      birthDate: AppLocalizations_Labels_BirthDate(
+        error: "Fadlan qor taariikhda dhalashada",
+        title: "Taariiqda dhalasha",
       ),
-      general: AppLocalizations_Labels_General(
-        age: "Age",
-        allPatients: "All Bukaanka",
-        birthDate: "Taariiqda dhalasha",
-        birthDateError: "Fadlan qor taariikhda dhalashada",
-        contacts: "Nala Xiriir bukaanka",
-        dateofBirth: "Taariikhda Dhalashada",
-        editSurvey: "edit Survey",
-        familyNameError: "Ku qor magaca qoyska",
-        genderError: "Fadlan dooro jinsiga",
-        givenNameError: "Ku qor magacyada kale",
-        mySchedule: "My Schedule",
-        neighborhoodError: "Fadlan dooro xaafadda",
-        newPatient: "bukaanka New",
-        newSurvey: "New Survey",
-        nextPage: "Next Page",
-        patient: "bukaanka",
-        patientInformation: "Macluumaadka bukaanka",
-        relationship: "xiriirka",
-        relationshipError: "Fadlan dooro xiriir",
-        submitShare: "Gudbi / Share",
-        address: AppLocalizations_Labels_General_Address(
-          city: "City",
-          country: "Country",
-          county: "County",
-          district: "Degmada",
-          neighborhood: "Xaafadda",
-          postalCode: "boostada Code",
-          state: "State",
-          title: "Address",
-        ),
-        name: AppLocalizations_Labels_General_Name(
-          familyName: "Qoyska / Magaca Dambe",
-          firstName: "Magaca koowaad",
-          givenNames: "First / Names la eego",
-          lastName: "Last Name",
-          name: "magaca",
-          otherNames: "Magacyada kale",
-        ),
-        relation: AppLocalizations_Labels_General_Relation(
-          aunt: "eedaday",
-          brother: "Brother",
-          daughter: "Gabadhay",
-          father: "Aabbaha",
-          grandfather: "awoowe",
-          grandmother: "ayeeyo",
-          mother: "Hooyo",
-          nephew: "adeer",
-          niece: "walaasha",
-          other: "kale",
-          sister: "Sister",
-          son: "Wiilka",
-          title: "Xiriirka",
-          uncle: "adeer",
-        ),
-        search: AppLocalizations_Labels_General_Search(
-          filter: "filter",
-          patientSearch: "Search bukaanka",
-          search: "Raadi",
-          searchName: "Search Name",
-        ),
-        sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
-          female: "Dheddig",
-          male: "Male",
-          title: "Sex at Dhalashada",
-        ),
+      contacts: AppLocalizations_Labels_Contacts(
+        newContact: "New Contact",
+        noContactsAdded: "No xiriirada ayaa lagu daray.",
+      ),
+      dateOfBirth: AppLocalizations_Labels_DateOfBirth(
+        title: "Taariikhda Dhalashada",
+      ),
+      gender: AppLocalizations_Labels_Gender(
+        error: "Fadlan dooro jinsiga",
+        female: "Dheddig",
+        male: "Male",
+        title: "Sex at Dhalashada",
       ),
       language: AppLocalizations_Labels_Language(
-        inEnglish: "Somali",
-        title: "Soomaali",
+        inEnglish: "English",
+        title: "English",
       ),
       medical: AppLocalizations_Labels_Medical(
         deworming: "gooryaan",
@@ -3359,143 +2474,104 @@ class AppLocalizations {
           title: "Talaalo",
         ),
       ),
-      registration: AppLocalizations_Labels_Registration(
-        registerPatient: "Diiwaangelinta Bukaanka Buuxi",
-        savePatient: "Save bukaanka",
+      name: AppLocalizations_Labels_Name(
+        familyName: "Qoyska / Magaca Dambe",
+        familyNameError: "Ku qor magaca qoyska",
+        firstName: "Magaca hore",
+        givenNameError: "Ku qor magacyada siiyey",
+        givenNames: "First / Names la eego",
+        lastName: "Last Name",
+        otherNames: "Magacyada kale",
+        title: "magaca",
+      ),
+      pages: AppLocalizations_Labels_Pages(
+        allPatients: "All Bukaanka",
+        contacts: "Nala Xiriir",
+        login: "login",
+        newPatient: "bukaanka New",
+        patientHome: "Home bukaanka",
+        patientInformation: "Macluumaadka bukaanka",
+        summaryReport: "Warbixinta Kooban",
+      ),
+      relationships: AppLocalizations_Labels_Relationships(
+        daughter: "Gabadhay",
+        error: "Fadlan dooro xiriir",
+        father: "Aabbaha",
+        grandfather: "awoowe",
+        grandmother: "ayeeyo",
+        mother: "Hooyo",
+        nephew: "adeer",
+        niece: "walaasha",
+        other: "kale",
+        relation: "Xiriirka",
+        sister: "Sister",
+        son: "Wiilka",
+        title: "xiriirka",
+        uncle: "adeer",
+        aunt: "eedaday",
+        brother: "Brother",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "Dark",
         language: "Language",
         light: "Light",
-        ok: "Waayahay",
-        signOut: "Saxiix Out",
         system: "System",
         theme: "theme",
         title: "Settings",
-        updateProfile: "update Profile",
-      ),
-      vigor: AppLocalizations_Labels_Vigor(
-        title: "luminayey",
       ),
     ),
     Locale.fromSubtags(languageCode: "sw"): AppLocalizations_Labels(
+      actions: AppLocalizations_Labels_Actions(
+        add: "Kuongeza",
+        cancel: "kufuta",
+        save: "Save",
+        search: "Tafuta",
+        submit: "wasilisha",
+      ),
+      address: AppLocalizations_Labels_Address(
+        neighborhood: AppLocalizations_Labels_Address_Neighborhood(
+          error: "Tafadhali chagua kitongoji",
+          title: "Neighborhood",
+        ),
+      ),
+      age: AppLocalizations_Labels_Age(
+        title: "umri",
+      ),
       app: AppLocalizations_Labels_App(
         chooseLanguage: "Chagua lugha",
         chooseTheme: "Chagua Theme",
         settings: "programu ya Mipangilio",
         system: "Mfumo",
         title: AppLocalizations_Labels_App_Title(
-          title: "Vigor",
           saluddominicana: "Salud Dominicana",
+          title: "nguvu",
         ),
       ),
       auth: AppLocalizations_Labels_Auth(
-        cancel: "kufuta",
-        changePassword: "Badilisha neno la siri",
-        email: "Barua pepe",
         login: "Ingia",
         password: "password",
-        resetPassword: "Rudisha siri",
-        signIn: "Weka sahihi",
-        signUp: "Jisajili",
-        submit: "wasilisha",
         userName: "jina la mtumiaji",
       ),
-      dates: AppLocalizations_Labels_Dates(
-        month: AppLocalizations_Labels_Dates_Month(
-          april: "Aprili",
-          august: "Agosti",
-          december: "Desemba",
-          february: "Februari",
-          january: "Januari",
-          july: "Julai",
-          june: "Juni",
-          march: "Machi",
-          may: "Mei",
-          november: "Novemba",
-          october: "Oktoba",
-          september: "Septemba",
-        ),
-        weekday: AppLocalizations_Labels_Dates_Weekday(
-          friday: "Ijumaa",
-          monday: "Jumatatu",
-          saturday: "Jumamosi",
-          sunday: "Jumapili",
-          thursday: "Alhamisi",
-          tuesday: "Jumanne",
-          wednesday: "Jumatano",
-        ),
+      birthDate: AppLocalizations_Labels_BirthDate(
+        error: "Tafadhali weka tarehe ya kuzaliwa",
+        title: "Tarehe ya kuzaliwa",
       ),
-      general: AppLocalizations_Labels_General(
-        age: "umri",
-        allPatients: "Wagonjwa wote",
-        birthDate: "Tarehe ya kuzaliwa",
-        birthDateError: "Tafadhali weka tarehe ya kuzaliwa",
-        contacts: "Mawasiliano mgonjwa",
-        dateofBirth: "Tarehe ya kuzaliwa",
-        editSurvey: "Hariri Survey",
-        familyNameError: "Weka jina la familia",
-        genderError: "Tafadhali chagua jinsia",
-        givenNameError: "Andika majina mengine",
-        mySchedule: "Ratiba yangu",
-        neighborhoodError: "Tafadhali chagua kitongoji",
-        newPatient: "mgonjwa New",
-        newSurvey: "Survey New",
-        nextPage: "Ukurasa unaofuata",
-        patient: "mgonjwa",
-        patientInformation: "Taarifa mgonjwa",
-        relationship: "uhusiano",
-        relationshipError: "Tafadhali chagua uhusiano",
-        submitShare: "Wasilisha / Shiriki",
-        address: AppLocalizations_Labels_General_Address(
-          city: "City",
-          country: "Nchi",
-          county: "Kata",
-          district: "District",
-          neighborhood: "Neighborhood",
-          postalCode: "Posta",
-          state: "hali",
-          title: "Anuani",
-        ),
-        name: AppLocalizations_Labels_General_Name(
-          familyName: "Familia / Jina la Mwisho",
-          firstName: "Jina la kwanza",
-          givenNames: "Kwanza / Majina Kutokana",
-          lastName: "Jina la familia",
-          name: "jina",
-          otherNames: "Majina Mengine",
-        ),
-        relation: AppLocalizations_Labels_General_Relation(
-          aunt: "shangazi",
-          brother: "ndugu",
-          daughter: "Binti",
-          father: "Baba",
-          grandfather: "babu",
-          grandmother: "bibi",
-          mother: "mama",
-          nephew: "mpwa",
-          niece: "mpwa",
-          other: "Nyingine",
-          sister: "dada",
-          son: "mwana",
-          title: "uhusiano",
-          uncle: "Uncle",
-        ),
-        search: AppLocalizations_Labels_General_Search(
-          filter: "filter",
-          patientSearch: "mgonjwa Search",
-          search: "Tafuta",
-          searchName: "Search Jina",
-        ),
-        sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
-          female: "mwanamke",
-          male: "Mwanaume",
-          title: "Sex katika Uzazi",
-        ),
+      contacts: AppLocalizations_Labels_Contacts(
+        newContact: "Mawasiliano New",
+        noContactsAdded: "Hakuna anwani zimeongezwa.",
+      ),
+      dateOfBirth: AppLocalizations_Labels_DateOfBirth(
+        title: "Tarehe ya kuzaliwa",
+      ),
+      gender: AppLocalizations_Labels_Gender(
+        error: "Tafadhali chagua jinsia",
+        female: "mwanamke",
+        male: "Mwanaume",
+        title: "Sex katika Uzazi",
       ),
       language: AppLocalizations_Labels_Language(
-        inEnglish: "Swahili",
-        title: "Kiswahili",
+        inEnglish: "english",
+        title: "english",
       ),
       medical: AppLocalizations_Labels_Medical(
         deworming: "deworming",
@@ -3512,143 +2588,104 @@ class AppLocalizations {
           title: "Chanjo",
         ),
       ),
-      registration: AppLocalizations_Labels_Registration(
-        registerPatient: "Complete Mgonjwa Usajili",
-        savePatient: "Save mgonjwa",
+      name: AppLocalizations_Labels_Name(
+        familyName: "Familia / Jina la Mwisho",
+        familyNameError: "Weka jina la familia",
+        firstName: "Jina la kwanza",
+        givenNameError: "Andika majina aliyopewa",
+        givenNames: "Kwanza / Majina Kutokana",
+        lastName: "Jina la familia",
+        otherNames: "Majina Mengine",
+        title: "jina",
+      ),
+      pages: AppLocalizations_Labels_Pages(
+        allPatients: "Wagonjwa wote",
+        contacts: "Mawasiliano",
+        login: "Ingia",
+        newPatient: "mgonjwa New",
+        patientHome: "mgonjwa Home",
+        patientInformation: "Taarifa mgonjwa",
+        summaryReport: "Ripoti ya muhtasari",
+      ),
+      relationships: AppLocalizations_Labels_Relationships(
+        daughter: "Binti",
+        error: "Tafadhali chagua uhusiano",
+        father: "Baba",
+        grandfather: "babu",
+        grandmother: "bibi",
+        mother: "mama",
+        nephew: "mpwa",
+        niece: "mpwa",
+        other: "Nyingine",
+        relation: "uhusiano",
+        sister: "dada",
+        son: "mwana",
+        title: "uhusiano",
+        uncle: "Uncle",
+        aunt: "shangazi",
+        brother: "ndugu",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "Dark",
         language: "lugha",
         light: "Mwanga",
-        ok: "Sawa",
-        signOut: "Toka",
         system: "Mfumo",
         theme: "Theme",
         title: "mipangilio",
-        updateProfile: "Mwisho profile",
-      ),
-      vigor: AppLocalizations_Labels_Vigor(
-        title: "nguvu",
       ),
     ),
     Locale.fromSubtags(languageCode: "tl"): AppLocalizations_Labels(
+      actions: AppLocalizations_Labels_Actions(
+        add: "magdagdag",
+        cancel: "kanselahin",
+        save: "I-save ang",
+        search: "Hanapan",
+        submit: "Ipasa",
+      ),
+      address: AppLocalizations_Labels_Address(
+        neighborhood: AppLocalizations_Labels_Address_Neighborhood(
+          error: "Mangyaring piliin ang kapitbahayan",
+          title: "lugar",
+        ),
+      ),
+      age: AppLocalizations_Labels_Age(
+        title: "edad",
+      ),
       app: AppLocalizations_Labels_App(
         chooseLanguage: "Piliin ang Wika",
         chooseTheme: "Pumili ng Theme",
         settings: "Mga Setting ng app",
         system: "sistema",
         title: AppLocalizations_Labels_App_Title(
-          title: "Vigor",
           saluddominicana: "Salud Dominicana",
+          title: "kalakasan",
         ),
       ),
       auth: AppLocalizations_Labels_Auth(
-        cancel: "kanselahin",
-        changePassword: "Palitan ANG password",
-        email: "email",
         login: "Mag log in",
         password: "password",
-        resetPassword: "I-reset ang Password",
-        signIn: "Mag-sign in",
-        signUp: "Mag-sign Up",
-        submit: "Ipasa",
         userName: "username",
       ),
-      dates: AppLocalizations_Labels_Dates(
-        month: AppLocalizations_Labels_Dates_Month(
-          april: "Abril",
-          august: "Agosto",
-          december: "Disyembre",
-          february: "Pebrero",
-          january: "Enero",
-          july: "Hulyo",
-          june: "Hunyo",
-          march: "Marso",
-          may: "Mayo",
-          november: "Nobyembre",
-          october: "Oktubre",
-          september: "Setyembre",
-        ),
-        weekday: AppLocalizations_Labels_Dates_Weekday(
-          friday: "Biyernes",
-          monday: "Lunes",
-          saturday: "Sabado",
-          sunday: "Linggo",
-          thursday: "Huwebes",
-          tuesday: "Martes",
-          wednesday: "Miyerkules",
-        ),
+      birthDate: AppLocalizations_Labels_BirthDate(
+        error: "Mangyaring ipasok ang petsa ng kapanganakan",
+        title: "Araw ng kapanganakan",
       ),
-      general: AppLocalizations_Labels_General(
-        age: "edad",
-        allPatients: "Ang lahat ng mga pasyente",
-        birthDate: "Araw ng kapanganakan",
-        birthDateError: "Mangyaring ipasok ang petsa ng kapanganakan",
-        contacts: "pasyente Contact Lens",
-        dateofBirth: "Araw ng kapanganakan",
-        editSurvey: "I-edit ang Survey",
-        familyNameError: "Ipasok ang pangalan ng pamilya",
-        genderError: "Mangyaring pumili ng kasarian",
-        givenNameError: "Ipasok ang iba pang mga pangalan",
-        mySchedule: "Aking Talaan",
-        neighborhoodError: "Mangyaring piliin ang kapitbahayan",
-        newPatient: "bagong Pasyente",
-        newSurvey: "bagong Survey",
-        nextPage: "Susunod na pahina",
-        patient: "pasyente",
-        patientInformation: "pasyente Impormasyon",
-        relationship: "Relasyon",
-        relationshipError: "Mangyaring pumili relasyon",
-        submitShare: "Isumite / Share",
-        address: AppLocalizations_Labels_General_Address(
-          city: "lungsod",
-          country: "bansa",
-          county: "county",
-          district: "distrito",
-          neighborhood: "lugar",
-          postalCode: "Postal Code",
-          state: "estado",
-          title: "address",
-        ),
-        name: AppLocalizations_Labels_General_Name(
-          familyName: "Family / Apelyido",
-          firstName: "Pangalan",
-          givenNames: "Una / Given Pangalan",
-          lastName: "Huling pangalan",
-          name: "pangalan",
-          otherNames: "Ibang pangalan",
-        ),
-        relation: AppLocalizations_Labels_General_Relation(
-          aunt: "Tiya",
-          brother: "kapatid na lalaki",
-          daughter: "Anak na babae",
-          father: "ama",
-          grandfather: "lolo",
-          grandmother: "lola",
-          mother: "ina",
-          nephew: "pamangking lalaki",
-          niece: "pamangking babae",
-          other: "iba",
-          sister: "Ate",
-          son: "anak",
-          title: "kaugnayan",
-          uncle: "Tiyuhin",
-        ),
-        search: AppLocalizations_Labels_General_Search(
-          filter: "Filter",
-          patientSearch: "pasyente Paghahanap",
-          search: "Hanapan",
-          searchName: "Search Pangalan",
-        ),
-        sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
-          female: "babae",
-          male: "lalaki",
-          title: "Sex sa Kapanganakan",
-        ),
+      contacts: AppLocalizations_Labels_Contacts(
+        newContact: "Bagong kontak",
+        noContactsAdded: "Walang mga contact ay naidagdag.",
+      ),
+      dateOfBirth: AppLocalizations_Labels_DateOfBirth(
+        title: "Araw ng kapanganakan",
+      ),
+      gender: AppLocalizations_Labels_Gender(
+        error: "Mangyaring pumili ng kasarian",
+        female: "babae",
+        male: "lalaki",
+        title: "Sex sa Kapanganakan",
       ),
       language: AppLocalizations_Labels_Language(
-        inEnglish: "Tagalog",
-        title: "Tagalog",
+        inEnglish: "Ingles",
+        title: "Ingles",
       ),
       medical: AppLocalizations_Labels_Medical(
         deworming: "deworming",
@@ -3665,143 +2702,104 @@ class AppLocalizations {
           title: "Mga bakuna",
         ),
       ),
-      registration: AppLocalizations_Labels_Registration(
-        registerPatient: "Kumpleto Registration Pasyente",
-        savePatient: "I-save ang Pasyente",
+      name: AppLocalizations_Labels_Name(
+        familyName: "Family / Apelyido",
+        familyNameError: "Ipasok ang pangalan ng pamilya",
+        firstName: "Pangalan",
+        givenNameError: "Ipasok ang ibinigay na pangalan",
+        givenNames: "Una / Given Pangalan",
+        lastName: "Huling pangalan",
+        otherNames: "Ibang pangalan",
+        title: "pangalan",
+      ),
+      pages: AppLocalizations_Labels_Pages(
+        allPatients: "Ang lahat ng mga pasyente",
+        contacts: "Contact",
+        login: "Mag log in",
+        newPatient: "bagong Pasyente",
+        patientHome: "pasyente Home",
+        patientInformation: "pasyente Impormasyon",
+        summaryReport: "Buod ng Ulat",
+      ),
+      relationships: AppLocalizations_Labels_Relationships(
+        daughter: "Anak na babae",
+        error: "Mangyaring pumili relasyon",
+        father: "ama",
+        grandfather: "lolo",
+        grandmother: "lola",
+        mother: "ina",
+        nephew: "pamangking lalaki",
+        niece: "pamangking babae",
+        other: "iba",
+        relation: "kaugnayan",
+        sister: "Ate",
+        son: "anak",
+        title: "Relasyon",
+        uncle: "Tiyuhin",
+        aunt: "Tiya",
+        brother: "kapatid na lalaki",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "madilim",
         language: "wika",
         light: "liwanag",
-        ok: "Ok",
-        signOut: "Mag-sign Out",
         system: "sistema",
         theme: "tema",
         title: "Mga Setting",
-        updateProfile: "I-update ang Profile",
-      ),
-      vigor: AppLocalizations_Labels_Vigor(
-        title: "kalakasan",
       ),
     ),
     Locale.fromSubtags(languageCode: "th"): AppLocalizations_Labels(
+      actions: AppLocalizations_Labels_Actions(
+        add: "เพิ่ม",
+        cancel: "ยกเลิก",
+        save: "บันทึก",
+        search: "ค้นหา",
+        submit: "เสนอ",
+      ),
+      address: AppLocalizations_Labels_Address(
+        neighborhood: AppLocalizations_Labels_Address_Neighborhood(
+          error: "กรุณาเลือกเขต",
+          title: "ย่าน",
+        ),
+      ),
+      age: AppLocalizations_Labels_Age(
+        title: "อายุ",
+      ),
       app: AppLocalizations_Labels_App(
         chooseLanguage: "เลือกภาษา",
         chooseTheme: "กรุณาเลือกธีม",
         settings: "การตั้งค่า App",
         system: "ระบบ",
         title: AppLocalizations_Labels_App_Title(
-          title: "Vigor",
-          saluddominicana: "Salud Dominicana",
+          saluddominicana: "Salud โดมินิกา",
+          title: "พลัง",
         ),
       ),
       auth: AppLocalizations_Labels_Auth(
-        cancel: "ยกเลิก",
-        changePassword: "เปลี่ยนรหัสผ่าน",
-        email: "อีเมล์",
         login: "เข้าสู่ระบบ",
         password: "รหัสผ่าน",
-        resetPassword: "รีเซ็ตรหัสผ่าน",
-        signIn: "เข้าสู่ระบบ",
-        signUp: "ลงชื่อ",
-        submit: "เสนอ",
         userName: "ชื่อผู้ใช้",
       ),
-      dates: AppLocalizations_Labels_Dates(
-        month: AppLocalizations_Labels_Dates_Month(
-          april: "เมษายน",
-          august: "สิงหาคม",
-          december: "ธันวาคม",
-          february: "กุมภาพันธ์",
-          january: "มกราคม",
-          july: "กรกฎาคม",
-          june: "มิถุนายน",
-          march: "มีนาคม",
-          may: "อาจ",
-          november: "พฤศจิกายน",
-          october: "ตุลาคม",
-          september: "กันยายน",
-        ),
-        weekday: AppLocalizations_Labels_Dates_Weekday(
-          friday: "วันศุกร์",
-          monday: "วันจันทร์",
-          saturday: "วันเสาร์",
-          sunday: "วันอาทิตย์",
-          thursday: "วันพฤหัสบดี",
-          tuesday: "วันอังคาร",
-          wednesday: "วันพุธ",
-        ),
+      birthDate: AppLocalizations_Labels_BirthDate(
+        error: "โปรดป้อนวันเกิด",
+        title: "วันที่เกิด",
       ),
-      general: AppLocalizations_Labels_General(
-        age: "อายุ",
-        allPatients: "ผู้ป่วยทั้งหมด",
-        birthDate: "วันที่เกิด",
-        birthDateError: "โปรดป้อนวันเกิด",
-        contacts: "รายชื่อผู้ป่วย",
-        dateofBirth: "วันเกิด",
-        editSurvey: "แก้ไขการสำรวจ",
-        familyNameError: "ใส่ชื่อครอบครัว",
-        genderError: "กรุณาเลือกเพศ",
-        givenNameError: "ใส่ชื่ออื่น ๆ",
-        mySchedule: "ตารางของฉัน",
-        neighborhoodError: "กรุณาเลือกเขต",
-        newPatient: "ผู้ป่วยใหม่",
-        newSurvey: "การสำรวจใหม่",
-        nextPage: "หน้าต่อไป",
-        patient: "อดทน",
-        patientInformation: "ข้อมูลสำหรับผู้ป่วย",
-        relationship: "ความสัมพันธ์",
-        relationshipError: "กรุณาเลือกความสัมพันธ์",
-        submitShare: "ส่ง / หุ้น",
-        address: AppLocalizations_Labels_General_Address(
-          city: "เมือง",
-          country: "ประเทศ",
-          county: "เขต",
-          district: "อำเภอ",
-          neighborhood: "ย่าน",
-          postalCode: "รหัสไปรษณีย์",
-          state: "สถานะ",
-          title: "ที่อยู่",
-        ),
-        name: AppLocalizations_Labels_General_Name(
-          familyName: "ครอบครัว / นามสกุล",
-          firstName: "ชื่อจริง",
-          givenNames: "แรก / ชื่อจริง",
-          lastName: "นามสกุล",
-          name: "ชื่อ",
-          otherNames: "ชื่ออื่น",
-        ),
-        relation: AppLocalizations_Labels_General_Relation(
-          aunt: "ป้า",
-          brother: "พี่ชาย",
-          daughter: "ลูกสาว",
-          father: "พ่อ",
-          grandfather: "คุณปู่",
-          grandmother: "ยาย",
-          mother: "แม่",
-          nephew: "หลานชาย",
-          niece: "หลานสาว",
-          other: "อื่น ๆ",
-          sister: "น้องสาว",
-          son: "ลูกชาย",
-          title: "ความสัมพันธ์",
-          uncle: "ลุง",
-        ),
-        search: AppLocalizations_Labels_General_Search(
-          filter: "กรอง",
-          patientSearch: "ค้นหาผู้ป่วย",
-          search: "ค้นหา",
-          searchName: "ค้นหาชื่อ",
-        ),
-        sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
-          female: "หญิง",
-          male: "ชาย",
-          title: "เพศที่เกิด",
-        ),
+      contacts: AppLocalizations_Labels_Contacts(
+        newContact: "รายชื่อใหม่",
+        noContactsAdded: "ไม่มีรายชื่อที่ได้รับการเพิ่ม",
+      ),
+      dateOfBirth: AppLocalizations_Labels_DateOfBirth(
+        title: "วันเกิด",
+      ),
+      gender: AppLocalizations_Labels_Gender(
+        error: "กรุณาเลือกเพศ",
+        female: "หญิง",
+        male: "ชาย",
+        title: "เพศที่เกิด",
       ),
       language: AppLocalizations_Labels_Language(
-        inEnglish: "Thai",
-        title: "ไทย",
+        inEnglish: "อังกฤษ",
+        title: "อังกฤษ",
       ),
       medical: AppLocalizations_Labels_Medical(
         deworming: "การถ่ายพยาธิ",
@@ -3818,143 +2816,104 @@ class AppLocalizations {
           title: "วัคซีน",
         ),
       ),
-      registration: AppLocalizations_Labels_Registration(
-        registerPatient: "ลงทะเบียนผู้ป่วยที่สมบูรณ์",
-        savePatient: "บันทึกของผู้ป่วย",
+      name: AppLocalizations_Labels_Name(
+        familyName: "ครอบครัว / นามสกุล",
+        familyNameError: "ใส่ชื่อครอบครัว",
+        firstName: "ชื่อจริง",
+        givenNameError: "ใส่ชื่อที่กำหนด",
+        givenNames: "แรก / ชื่อจริง",
+        lastName: "นามสกุล",
+        otherNames: "ชื่ออื่น",
+        title: "ชื่อ",
+      ),
+      pages: AppLocalizations_Labels_Pages(
+        allPatients: "ผู้ป่วยทั้งหมด",
+        contacts: "รายชื่อผู้ติดต่อ",
+        login: "เข้าสู่ระบบ",
+        newPatient: "ผู้ป่วยใหม่",
+        patientHome: "หน้าแรกผู้ป่วย",
+        patientInformation: "ข้อมูลสำหรับผู้ป่วย",
+        summaryReport: "รายงานสรุป",
+      ),
+      relationships: AppLocalizations_Labels_Relationships(
+        daughter: "ลูกสาว",
+        error: "กรุณาเลือกความสัมพันธ์",
+        father: "พ่อ",
+        grandfather: "คุณปู่",
+        grandmother: "ยาย",
+        mother: "แม่",
+        nephew: "หลานชาย",
+        niece: "หลานสาว",
+        other: "อื่น ๆ",
+        relation: "ความสัมพันธ์",
+        sister: "น้องสาว",
+        son: "ลูกชาย",
+        title: "ความสัมพันธ์",
+        uncle: "ลุง",
+        aunt: "ป้า",
+        brother: "พี่ชาย",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "มืด",
         language: "ภาษา",
         light: "เบา",
-        ok: "ตกลง",
-        signOut: "ออกจากระบบ",
         system: "ระบบ",
         theme: "กระทู้",
         title: "การตั้งค่า",
-        updateProfile: "รายละเอียดการปรับปรุง",
-      ),
-      vigor: AppLocalizations_Labels_Vigor(
-        title: "พลัง",
       ),
     ),
     Locale.fromSubtags(languageCode: "uz"): AppLocalizations_Labels(
+      actions: AppLocalizations_Labels_Actions(
+        add: "qo'shish",
+        cancel: "Bekor qilish",
+        save: "saqlash",
+        search: "Qidirmoq",
+        submit: "Submit",
+      ),
+      address: AppLocalizations_Labels_Address(
+        neighborhood: AppLocalizations_Labels_Address_Neighborhood(
+          error: "mahalla tanlang Iltimos,",
+          title: "Turar joy dahasi",
+        ),
+      ),
+      age: AppLocalizations_Labels_Age(
+        title: "yosh",
+      ),
       app: AppLocalizations_Labels_App(
         chooseLanguage: "Tilni tanlang",
         chooseTheme: "Mavzuni tanlash",
         settings: "App Sozlamalar",
         system: "tizim",
         title: AppLocalizations_Labels_App_Title(
-          title: "Vigor",
           saluddominicana: "Salud Dominicana",
+          title: "kuch",
         ),
       ),
       auth: AppLocalizations_Labels_Auth(
-        cancel: "Bekor qilish",
-        changePassword: "Kalit so'zni o'zgartirish",
-        email: "Email",
         login: "Kirish",
         password: "parol",
-        resetPassword: "Reset Parol",
-        signIn: "Tizimga kirish",
-        signUp: "Ro'yxatdan o'tish",
-        submit: "Submit",
         userName: "Foydalanuvchi nomi",
       ),
-      dates: AppLocalizations_Labels_Dates(
-        month: AppLocalizations_Labels_Dates_Month(
-          april: "Aprel",
-          august: "avgust",
-          december: "dekabr",
-          february: "fevral",
-          january: "Yanvar",
-          july: "iyul",
-          june: "iyun",
-          march: "qadam tashlamoq",
-          may: "May",
-          november: "noyabr",
-          october: "oktyabr",
-          september: "sentyabr",
-        ),
-        weekday: AppLocalizations_Labels_Dates_Weekday(
-          friday: "juma",
-          monday: "dushanba",
-          saturday: "shanba",
-          sunday: "yakshanba",
-          thursday: "Payshanba",
-          tuesday: "seshanba",
-          wednesday: "chorshanba",
-        ),
+      birthDate: AppLocalizations_Labels_BirthDate(
+        error: "Tug'ilgan kun kiriting",
+        title: "Tug'ilgan sana",
       ),
-      general: AppLocalizations_Labels_General(
-        age: "yosh",
-        allPatients: "barcha bemorlar",
-        birthDate: "Tug'ilgan sana",
-        birthDateError: "Tug'ilgan kun kiriting",
-        contacts: "Bemor Aloqa",
-        dateofBirth: "Tug'ilgan sana",
-        editSurvey: "Edit Survey",
-        familyNameError: "oila nomini kiriting",
-        genderError: "Jinsni tanlang",
-        givenNameError: "Boshqa nomlari kiriting",
-        mySchedule: "Mening jadvali",
-        neighborhoodError: "mahalla tanlang Iltimos,",
-        newPatient: "Yangi kasal",
-        newSurvey: "Yangi tadqiqot",
-        nextPage: "Keyingi sahifa",
-        patient: "kasal",
-        patientInformation: "Bemor Axborot",
-        relationship: "munosabatlar",
-        relationshipError: "munosabatlarni tanlang Iltimos,",
-        submitShare: "Submit / Share",
-        address: AppLocalizations_Labels_General_Address(
-          city: "shahar",
-          country: "mamlakat",
-          county: "County",
-          district: "tuman",
-          neighborhood: "Turar joy dahasi",
-          postalCode: "Pochta Indeksi",
-          state: "Davlat",
-          title: "manzil",
-        ),
-        name: AppLocalizations_Labels_General_Name(
-          familyName: "Oila / sharifi",
-          firstName: "Ism",
-          givenNames: "Birinchi / hisobga Ismlar",
-          lastName: "Familiya",
-          name: "ism",
-          otherNames: "Boshqa Ismlar",
-        ),
-        relation: AppLocalizations_Labels_General_Relation(
-          aunt: "amma",
-          brother: "aka",
-          daughter: "qiz",
-          father: "ota",
-          grandfather: "buva",
-          grandmother: "buvi",
-          mother: "Ona",
-          nephew: "jiyan",
-          niece: "jiyan",
-          other: "boshqa",
-          sister: "singil",
-          son: "o'g'il",
-          title: "qarindosh",
-          uncle: "Tog'a",
-        ),
-        search: AppLocalizations_Labels_General_Search(
-          filter: "filter",
-          patientSearch: "Bemor Qidiruv",
-          search: "Qidirmoq",
-          searchName: "Qidiruv nomi",
-        ),
-        sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
-          female: "ayol",
-          male: "erkak",
-          title: "Tug'ilgan da jinsi",
-        ),
+      contacts: AppLocalizations_Labels_Contacts(
+        newContact: "Yangi aloqa",
+        noContactsAdded: "Yo'q, kontaktlar qo'shimcha qilindi.",
+      ),
+      dateOfBirth: AppLocalizations_Labels_DateOfBirth(
+        title: "Tug'ilgan sana",
+      ),
+      gender: AppLocalizations_Labels_Gender(
+        error: "Jinsni tanlang",
+        female: "ayol",
+        male: "erkak",
+        title: "Tug'ilgan da jinsi",
       ),
       language: AppLocalizations_Labels_Language(
-        inEnglish: "Uzbek",
-        title: "O'zbekiston",
+        inEnglish: "Ingliz tili",
+        title: "Ingliz tili",
       ),
       medical: AppLocalizations_Labels_Medical(
         deworming: "degelmintizatsiya,",
@@ -3971,143 +2930,104 @@ class AppLocalizations {
           title: "Vaksinalar",
         ),
       ),
-      registration: AppLocalizations_Labels_Registration(
-        registerPatient: "To'liq bemor Ro'yxatdan",
-        savePatient: "saqlash Bemor",
+      name: AppLocalizations_Labels_Name(
+        familyName: "Oila / sharifi",
+        familyNameError: "oila nomini kiriting",
+        firstName: "Ism",
+        givenNameError: "bu nomlar kiriting",
+        givenNames: "Birinchi / hisobga Ismlar",
+        lastName: "Familiya",
+        otherNames: "Boshqa Ismlar",
+        title: "ism",
+      ),
+      pages: AppLocalizations_Labels_Pages(
+        allPatients: "barcha bemorlar",
+        contacts: "Aloqa",
+        login: "Kirish",
+        newPatient: "Yangi kasal",
+        patientHome: "Bemor Bosh sahifa",
+        patientInformation: "Bemor Axborot",
+        summaryReport: "Xulosa hisoboti",
+      ),
+      relationships: AppLocalizations_Labels_Relationships(
+        daughter: "qiz",
+        error: "munosabatlarni tanlang Iltimos,",
+        father: "ota",
+        grandfather: "buva",
+        grandmother: "buvi",
+        mother: "Ona",
+        nephew: "jiyan",
+        niece: "jiyan",
+        other: "boshqa",
+        relation: "qarindosh",
+        sister: "singil",
+        son: "o'g'il",
+        title: "munosabatlar",
+        uncle: "Tog'a",
+        aunt: "amma",
+        brother: "aka",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "Dark",
         language: "til",
         light: "yorug'lik",
-        ok: "Ok",
-        signOut: "Chiqish",
         system: "tizim",
         theme: "mavzu",
         title: "Sozlamalar",
-        updateProfile: "yangilash Profil",
-      ),
-      vigor: AppLocalizations_Labels_Vigor(
-        title: "kuch",
       ),
     ),
     Locale.fromSubtags(languageCode: "vi"): AppLocalizations_Labels(
+      actions: AppLocalizations_Labels_Actions(
+        add: "Thêm vào",
+        cancel: "hủy bỏ",
+        save: "Tiết kiệm",
+        search: "Tìm kiếm",
+        submit: "Gửi đi",
+      ),
+      address: AppLocalizations_Labels_Address(
+        neighborhood: AppLocalizations_Labels_Address_Neighborhood(
+          error: "Vui lòng chọn khu phố",
+          title: "Khu vực lân cận",
+        ),
+      ),
+      age: AppLocalizations_Labels_Age(
+        title: "Tuổi tác",
+      ),
       app: AppLocalizations_Labels_App(
         chooseLanguage: "Chọn ngôn ngữ",
         chooseTheme: "Chọn Theme",
         settings: "App Cài đặt",
         system: "hệ thống",
         title: AppLocalizations_Labels_App_Title(
-          title: "Vigor",
           saluddominicana: "Salud Dominicana",
+          title: "sức mạnh",
         ),
       ),
       auth: AppLocalizations_Labels_Auth(
-        cancel: "hủy bỏ",
-        changePassword: "Đổi mật khẩu",
-        email: "E-mail",
         login: "Đăng nhập",
         password: "Mật khẩu",
-        resetPassword: "Đặt lại mật khẩu",
-        signIn: "Đăng nhập",
-        signUp: "Đăng ký",
-        submit: "Gửi đi",
         userName: "tên tài khoản",
       ),
-      dates: AppLocalizations_Labels_Dates(
-        month: AppLocalizations_Labels_Dates_Month(
-          april: "tháng tư",
-          august: "tháng Tám",
-          december: "tháng mười hai",
-          february: "Tháng hai",
-          january: "tháng Giêng",
-          july: "tháng bảy",
-          june: "tháng sáu",
-          march: "tháng Ba",
-          may: "có thể",
-          november: "tháng mười một",
-          october: "Tháng Mười",
-          september: "Tháng Chín",
-        ),
-        weekday: AppLocalizations_Labels_Dates_Weekday(
-          friday: "Thứ sáu",
-          monday: "thứ hai",
-          saturday: "ngày thứ bảy",
-          sunday: "chủ nhật",
-          thursday: "Thứ năm",
-          tuesday: "thứ ba",
-          wednesday: "Thứ tư",
-        ),
+      birthDate: AppLocalizations_Labels_BirthDate(
+        error: "Vui lòng nhập ngày sinh",
+        title: "Ngày sinh",
       ),
-      general: AppLocalizations_Labels_General(
-        age: "Tuổi tác",
-        allPatients: "Tất cả các bệnh nhân",
-        birthDate: "Ngày sinh",
-        birthDateError: "Vui lòng nhập ngày sinh",
-        contacts: "bệnh nhân Liên hệ",
-        dateofBirth: "Ngày sinh",
-        editSurvey: "Sửa Khảo sát",
-        familyNameError: "Nhập tên gia đình",
-        genderError: "Vui lòng chọn giới tính",
-        givenNameError: "Nhập tên khác",
-        mySchedule: "Thời gian biểu của tôi",
-        neighborhoodError: "Vui lòng chọn khu phố",
-        newPatient: "Bệnh nhân mới",
-        newSurvey: "Khảo sát mới",
-        nextPage: "Trang tiếp theo",
-        patient: "Kiên nhẫn",
-        patientInformation: "Thông tin bệnh nhân",
-        relationship: "Mối quan hệ",
-        relationshipError: "Vui lòng chọn mối quan hệ",
-        submitShare: "Gửi / Chia sẻ",
-        address: AppLocalizations_Labels_General_Address(
-          city: "thành phố",
-          country: "Quốc gia",
-          county: "quận",
-          district: "Huyện",
-          neighborhood: "Khu vực lân cận",
-          postalCode: "Mã bưu điện",
-          state: "Tiểu bang",
-          title: "Địa chỉ",
-        ),
-        name: AppLocalizations_Labels_General_Name(
-          familyName: "Gia đình / Họ",
-          firstName: "Tên đầu tiên",
-          givenNames: "Đầu tiên / Với Tên",
-          lastName: "tên họ",
-          name: "Tên",
-          otherNames: "Vài cái tên khác",
-        ),
-        relation: AppLocalizations_Labels_General_Relation(
-          aunt: "Cô",
-          brother: "Anh trai",
-          daughter: "Con gái",
-          father: "Bố",
-          grandfather: "Ông nội",
-          grandmother: "Bà ngoại",
-          mother: "Mẹ",
-          nephew: "Cháu trai",
-          niece: "cháu gái",
-          other: "khác",
-          sister: "Em gái",
-          son: "Con trai",
-          title: "Quan hệ",
-          uncle: "Chú",
-        ),
-        search: AppLocalizations_Labels_General_Search(
-          filter: "Lọc",
-          patientSearch: "bệnh nhân Tìm kiếm",
-          search: "Tìm kiếm",
-          searchName: "Tim kiêm tên",
-        ),
-        sexAtBirth: AppLocalizations_Labels_General_SexAtBirth(
-          female: "Giống cái",
-          male: "Nam giới",
-          title: "Số giới tính khi sinh",
-        ),
+      contacts: AppLocalizations_Labels_Contacts(
+        newContact: "Địa chỉ liên lạc mới",
+        noContactsAdded: "Không có danh bạ đã được thêm vào.",
+      ),
+      dateOfBirth: AppLocalizations_Labels_DateOfBirth(
+        title: "Ngày sinh",
+      ),
+      gender: AppLocalizations_Labels_Gender(
+        error: "Vui lòng chọn giới tính",
+        female: "Giống cái",
+        male: "Nam giới",
+        title: "Số giới tính khi sinh",
       ),
       language: AppLocalizations_Labels_Language(
-        inEnglish: "Vietnamese",
-        title: "Tiếng Việt",
+        inEnglish: "Tiếng Anh",
+        title: "Tiếng Anh",
       ),
       medical: AppLocalizations_Labels_Medical(
         deworming: "tẩy giun",
@@ -4124,23 +3044,50 @@ class AppLocalizations {
           title: "Vắc-xin",
         ),
       ),
-      registration: AppLocalizations_Labels_Registration(
-        registerPatient: "Hoàn thành đăng ký bệnh nhân",
-        savePatient: "Lưu Bệnh nhân",
+      name: AppLocalizations_Labels_Name(
+        familyName: "Gia đình / Họ",
+        familyNameError: "Nhập tên gia đình",
+        firstName: "Tên đầu tiên",
+        givenNameError: "Nhập tên cho",
+        givenNames: "Đầu tiên / Với Tên",
+        lastName: "tên họ",
+        otherNames: "Vài cái tên khác",
+        title: "Tên",
+      ),
+      pages: AppLocalizations_Labels_Pages(
+        allPatients: "Tất cả các bệnh nhân",
+        contacts: "Liên lạc",
+        login: "Đăng nhập",
+        newPatient: "Bệnh nhân mới",
+        patientHome: "bệnh nhân Trang chủ",
+        patientInformation: "Thông tin bệnh nhân",
+        summaryReport: "Báo cáo tổng hợp",
+      ),
+      relationships: AppLocalizations_Labels_Relationships(
+        daughter: "Con gái",
+        error: "Vui lòng chọn mối quan hệ",
+        father: "Bố",
+        grandfather: "Ông nội",
+        grandmother: "Bà ngoại",
+        mother: "Mẹ",
+        nephew: "Cháu trai",
+        niece: "cháu gái",
+        other: "khác",
+        relation: "Quan hệ",
+        sister: "Em gái",
+        son: "Con trai",
+        title: "Mối quan hệ",
+        uncle: "Chú",
+        aunt: "Cô",
+        brother: "Anh trai",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "Tối",
         language: "ngôn ngữ",
         light: "Ánh sáng",
-        ok: "Đồng ý",
-        signOut: "Đăng xuất",
         system: "hệ thống",
         theme: "chủ đề",
         title: "Cài đặt",
-        updateProfile: "Cập nhật hồ sơ",
-      ),
-      vigor: AppLocalizations_Labels_Vigor(
-        title: "sức mạnh",
       ),
     ),
   };
@@ -4151,19 +3098,98 @@ class AppLocalizations {
       Localizations.of<AppLocalizations>(context, AppLocalizations)?.labels;
 }
 
-class AppLocalizations_Labels_App_Title {
-  const AppLocalizations_Labels_App_Title({this.title, this.saluddominicana});
+class AppLocalizations_Labels_Actions {
+  const AppLocalizations_Labels_Actions(
+      {this.add, this.cancel, this.save, this.search, this.submit});
+
+  final String add;
+
+  final String cancel;
+
+  final String save;
+
+  final String search;
+
+  final String submit;
+
+  String getByKey(String key) {
+    switch (key) {
+      case 'add':
+        return add;
+      case 'cancel':
+        return cancel;
+      case 'save':
+        return save;
+      case 'search':
+        return search;
+      case 'submit':
+        return submit;
+      default:
+        return '';
+    }
+  }
+}
+
+class AppLocalizations_Labels_Address_Neighborhood {
+  const AppLocalizations_Labels_Address_Neighborhood({this.error, this.title});
+
+  final String error;
 
   final String title;
 
-  final String saluddominicana;
+  String getByKey(String key) {
+    switch (key) {
+      case 'error':
+        return error;
+      case 'title':
+        return title;
+      default:
+        return '';
+    }
+  }
+}
+
+class AppLocalizations_Labels_Address {
+  const AppLocalizations_Labels_Address({this.neighborhood});
+
+  final AppLocalizations_Labels_Address_Neighborhood neighborhood;
+
+  String getByKey(String key) {
+    switch (key) {
+      default:
+        return '';
+    }
+  }
+}
+
+class AppLocalizations_Labels_Age {
+  const AppLocalizations_Labels_Age({this.title});
+
+  final String title;
 
   String getByKey(String key) {
     switch (key) {
       case 'title':
         return title;
+      default:
+        return '';
+    }
+  }
+}
+
+class AppLocalizations_Labels_App_Title {
+  const AppLocalizations_Labels_App_Title({this.saluddominicana, this.title});
+
+  final String saluddominicana;
+
+  final String title;
+
+  String getByKey(String key) {
+    switch (key) {
       case 'saluddominicana':
         return saluddominicana;
+      case 'title':
+        return title;
       default:
         return '';
     }
@@ -4206,57 +3232,20 @@ class AppLocalizations_Labels_App {
 
 class AppLocalizations_Labels_Auth {
   const AppLocalizations_Labels_Auth(
-      {this.cancel,
-      this.changePassword,
-      this.email,
-      this.login,
-      this.password,
-      this.resetPassword,
-      this.signIn,
-      this.signUp,
-      this.submit,
-      this.userName});
-
-  final String cancel;
-
-  final String changePassword;
-
-  final String email;
+      {this.login, this.password, this.userName});
 
   final String login;
 
   final String password;
 
-  final String resetPassword;
-
-  final String signIn;
-
-  final String signUp;
-
-  final String submit;
-
   final String userName;
 
   String getByKey(String key) {
     switch (key) {
-      case 'cancel':
-        return cancel;
-      case 'changePassword':
-        return changePassword;
-      case 'email':
-        return email;
       case 'login':
         return login;
       case 'password':
         return password;
-      case 'resetPassword':
-        return resetPassword;
-      case 'signIn':
-        return signIn;
-      case 'signUp':
-        return signUp;
-      case 'submit':
-        return submit;
       case 'userName':
         return userName;
       default:
@@ -4265,181 +3254,17 @@ class AppLocalizations_Labels_Auth {
   }
 }
 
-class AppLocalizations_Labels_Dates_Month {
-  const AppLocalizations_Labels_Dates_Month(
-      {this.april,
-      this.august,
-      this.december,
-      this.february,
-      this.january,
-      this.july,
-      this.june,
-      this.march,
-      this.may,
-      this.november,
-      this.october,
-      this.september});
+class AppLocalizations_Labels_BirthDate {
+  const AppLocalizations_Labels_BirthDate({this.error, this.title});
 
-  final String april;
-
-  final String august;
-
-  final String december;
-
-  final String february;
-
-  final String january;
-
-  final String july;
-
-  final String june;
-
-  final String march;
-
-  final String may;
-
-  final String november;
-
-  final String october;
-
-  final String september;
-
-  String getByKey(String key) {
-    switch (key) {
-      case 'april':
-        return april;
-      case 'august':
-        return august;
-      case 'december':
-        return december;
-      case 'february':
-        return february;
-      case 'january':
-        return january;
-      case 'july':
-        return july;
-      case 'june':
-        return june;
-      case 'march':
-        return march;
-      case 'may':
-        return may;
-      case 'november':
-        return november;
-      case 'october':
-        return october;
-      case 'september':
-        return september;
-      default:
-        return '';
-    }
-  }
-}
-
-class AppLocalizations_Labels_Dates_Weekday {
-  const AppLocalizations_Labels_Dates_Weekday(
-      {this.friday,
-      this.monday,
-      this.saturday,
-      this.sunday,
-      this.thursday,
-      this.tuesday,
-      this.wednesday});
-
-  final String friday;
-
-  final String monday;
-
-  final String saturday;
-
-  final String sunday;
-
-  final String thursday;
-
-  final String tuesday;
-
-  final String wednesday;
-
-  String getByKey(String key) {
-    switch (key) {
-      case 'friday':
-        return friday;
-      case 'monday':
-        return monday;
-      case 'saturday':
-        return saturday;
-      case 'sunday':
-        return sunday;
-      case 'thursday':
-        return thursday;
-      case 'tuesday':
-        return tuesday;
-      case 'wednesday':
-        return wednesday;
-      default:
-        return '';
-    }
-  }
-}
-
-class AppLocalizations_Labels_Dates {
-  const AppLocalizations_Labels_Dates({this.month, this.weekday});
-
-  final AppLocalizations_Labels_Dates_Month month;
-
-  final AppLocalizations_Labels_Dates_Weekday weekday;
-
-  String getByKey(String key) {
-    switch (key) {
-      default:
-        return '';
-    }
-  }
-}
-
-class AppLocalizations_Labels_General_Address {
-  const AppLocalizations_Labels_General_Address(
-      {this.city,
-      this.country,
-      this.county,
-      this.district,
-      this.neighborhood,
-      this.postalCode,
-      this.state,
-      this.title});
-
-  final String city;
-
-  final String country;
-
-  final String county;
-
-  final String district;
-
-  final String neighborhood;
-
-  final String postalCode;
-
-  final String state;
+  final String error;
 
   final String title;
 
   String getByKey(String key) {
     switch (key) {
-      case 'city':
-        return city;
-      case 'country':
-        return country;
-      case 'county':
-        return county;
-      case 'district':
-        return district;
-      case 'neighborhood':
-        return neighborhood;
-      case 'postalCode':
-        return postalCode;
-      case 'state':
-        return state;
+      case 'error':
+        return error;
       case 'title':
         return title;
       default:
@@ -4448,159 +3273,46 @@ class AppLocalizations_Labels_General_Address {
   }
 }
 
-class AppLocalizations_Labels_General_Name {
-  const AppLocalizations_Labels_General_Name(
-      {this.familyName,
-      this.firstName,
-      this.givenNames,
-      this.lastName,
-      this.name,
-      this.otherNames});
+class AppLocalizations_Labels_Contacts {
+  const AppLocalizations_Labels_Contacts(
+      {this.newContact, this.noContactsAdded});
 
-  final String familyName;
+  final String newContact;
 
-  final String firstName;
-
-  final String givenNames;
-
-  final String lastName;
-
-  final String name;
-
-  final String otherNames;
+  final String noContactsAdded;
 
   String getByKey(String key) {
     switch (key) {
-      case 'familyName':
-        return familyName;
-      case 'firstName':
-        return firstName;
-      case 'givenNames':
-        return givenNames;
-      case 'lastName':
-        return lastName;
-      case 'name':
-        return name;
-      case 'otherNames':
-        return otherNames;
+      case 'newContact':
+        return newContact;
+      case 'noContactsAdded':
+        return noContactsAdded;
       default:
         return '';
     }
   }
 }
 
-class AppLocalizations_Labels_General_Relation {
-  const AppLocalizations_Labels_General_Relation(
-      {this.aunt,
-      this.brother,
-      this.daughter,
-      this.father,
-      this.grandfather,
-      this.grandmother,
-      this.mother,
-      this.nephew,
-      this.niece,
-      this.other,
-      this.sister,
-      this.son,
-      this.title,
-      this.uncle});
-
-  final String aunt;
-
-  final String brother;
-
-  final String daughter;
-
-  final String father;
-
-  final String grandfather;
-
-  final String grandmother;
-
-  final String mother;
-
-  final String nephew;
-
-  final String niece;
-
-  final String other;
-
-  final String sister;
-
-  final String son;
+class AppLocalizations_Labels_DateOfBirth {
+  const AppLocalizations_Labels_DateOfBirth({this.title});
 
   final String title;
 
-  final String uncle;
-
   String getByKey(String key) {
     switch (key) {
-      case 'aunt':
-        return aunt;
-      case 'brother':
-        return brother;
-      case 'daughter':
-        return daughter;
-      case 'father':
-        return father;
-      case 'grandfather':
-        return grandfather;
-      case 'grandmother':
-        return grandmother;
-      case 'mother':
-        return mother;
-      case 'nephew':
-        return nephew;
-      case 'niece':
-        return niece;
-      case 'other':
-        return other;
-      case 'sister':
-        return sister;
-      case 'son':
-        return son;
       case 'title':
         return title;
-      case 'uncle':
-        return uncle;
       default:
         return '';
     }
   }
 }
 
-class AppLocalizations_Labels_General_Search {
-  const AppLocalizations_Labels_General_Search(
-      {this.filter, this.patientSearch, this.search, this.searchName});
+class AppLocalizations_Labels_Gender {
+  const AppLocalizations_Labels_Gender(
+      {this.error, this.female, this.male, this.title});
 
-  final String filter;
-
-  final String patientSearch;
-
-  final String search;
-
-  final String searchName;
-
-  String getByKey(String key) {
-    switch (key) {
-      case 'filter':
-        return filter;
-      case 'patientSearch':
-        return patientSearch;
-      case 'search':
-        return search;
-      case 'searchName':
-        return searchName;
-      default:
-        return '';
-    }
-  }
-}
-
-class AppLocalizations_Labels_General_SexAtBirth {
-  const AppLocalizations_Labels_General_SexAtBirth(
-      {this.female, this.male, this.title});
+  final String error;
 
   final String female;
 
@@ -4610,138 +3322,14 @@ class AppLocalizations_Labels_General_SexAtBirth {
 
   String getByKey(String key) {
     switch (key) {
+      case 'error':
+        return error;
       case 'female':
         return female;
       case 'male':
         return male;
       case 'title':
         return title;
-      default:
-        return '';
-    }
-  }
-}
-
-class AppLocalizations_Labels_General {
-  const AppLocalizations_Labels_General(
-      {this.age,
-      this.allPatients,
-      this.birthDate,
-      this.birthDateError,
-      this.contacts,
-      this.dateofBirth,
-      this.editSurvey,
-      this.familyNameError,
-      this.genderError,
-      this.givenNameError,
-      this.mySchedule,
-      this.neighborhoodError,
-      this.newPatient,
-      this.newSurvey,
-      this.nextPage,
-      this.patient,
-      this.patientInformation,
-      this.relationship,
-      this.relationshipError,
-      this.submitShare,
-      this.address,
-      this.name,
-      this.relation,
-      this.search,
-      this.sexAtBirth});
-
-  final String age;
-
-  final String allPatients;
-
-  final String birthDate;
-
-  final String birthDateError;
-
-  final String contacts;
-
-  final String dateofBirth;
-
-  final String editSurvey;
-
-  final String familyNameError;
-
-  final String genderError;
-
-  final String givenNameError;
-
-  final String mySchedule;
-
-  final String neighborhoodError;
-
-  final String newPatient;
-
-  final String newSurvey;
-
-  final String nextPage;
-
-  final String patient;
-
-  final String patientInformation;
-
-  final String relationship;
-
-  final String relationshipError;
-
-  final String submitShare;
-
-  final AppLocalizations_Labels_General_Address address;
-
-  final AppLocalizations_Labels_General_Name name;
-
-  final AppLocalizations_Labels_General_Relation relation;
-
-  final AppLocalizations_Labels_General_Search search;
-
-  final AppLocalizations_Labels_General_SexAtBirth sexAtBirth;
-
-  String getByKey(String key) {
-    switch (key) {
-      case 'age':
-        return age;
-      case 'allPatients':
-        return allPatients;
-      case 'birthDate':
-        return birthDate;
-      case 'birthDateError':
-        return birthDateError;
-      case 'contacts':
-        return contacts;
-      case 'dateofBirth':
-        return dateofBirth;
-      case 'editSurvey':
-        return editSurvey;
-      case 'familyNameError':
-        return familyNameError;
-      case 'genderError':
-        return genderError;
-      case 'givenNameError':
-        return givenNameError;
-      case 'mySchedule':
-        return mySchedule;
-      case 'neighborhoodError':
-        return neighborhoodError;
-      case 'newPatient':
-        return newPatient;
-      case 'newSurvey':
-        return newSurvey;
-      case 'nextPage':
-        return nextPage;
-      case 'patient':
-        return patient;
-      case 'patientInformation':
-        return patientInformation;
-      case 'relationship':
-        return relationship;
-      case 'relationshipError':
-        return relationshipError;
-      case 'submitShare':
-        return submitShare;
       default:
         return '';
     }
@@ -4843,20 +3431,188 @@ class AppLocalizations_Labels_Medical {
   }
 }
 
-class AppLocalizations_Labels_Registration {
-  const AppLocalizations_Labels_Registration(
-      {this.registerPatient, this.savePatient});
+class AppLocalizations_Labels_Name {
+  const AppLocalizations_Labels_Name(
+      {this.familyName,
+      this.familyNameError,
+      this.firstName,
+      this.givenNameError,
+      this.givenNames,
+      this.lastName,
+      this.otherNames,
+      this.title});
 
-  final String registerPatient;
+  final String familyName;
 
-  final String savePatient;
+  final String familyNameError;
+
+  final String firstName;
+
+  final String givenNameError;
+
+  final String givenNames;
+
+  final String lastName;
+
+  final String otherNames;
+
+  final String title;
 
   String getByKey(String key) {
     switch (key) {
-      case 'registerPatient':
-        return registerPatient;
-      case 'savePatient':
-        return savePatient;
+      case 'familyName':
+        return familyName;
+      case 'familyNameError':
+        return familyNameError;
+      case 'firstName':
+        return firstName;
+      case 'givenNameError':
+        return givenNameError;
+      case 'givenNames':
+        return givenNames;
+      case 'lastName':
+        return lastName;
+      case 'otherNames':
+        return otherNames;
+      case 'title':
+        return title;
+      default:
+        return '';
+    }
+  }
+}
+
+class AppLocalizations_Labels_Pages {
+  const AppLocalizations_Labels_Pages(
+      {this.allPatients,
+      this.contacts,
+      this.login,
+      this.newPatient,
+      this.patientHome,
+      this.patientInformation,
+      this.summaryReport});
+
+  final String allPatients;
+
+  final String contacts;
+
+  final String login;
+
+  final String newPatient;
+
+  final String patientHome;
+
+  final String patientInformation;
+
+  final String summaryReport;
+
+  String getByKey(String key) {
+    switch (key) {
+      case 'allPatients':
+        return allPatients;
+      case 'contacts':
+        return contacts;
+      case 'login':
+        return login;
+      case 'newPatient':
+        return newPatient;
+      case 'patientHome':
+        return patientHome;
+      case 'patientInformation':
+        return patientInformation;
+      case 'summaryReport':
+        return summaryReport;
+      default:
+        return '';
+    }
+  }
+}
+
+class AppLocalizations_Labels_Relationships {
+  const AppLocalizations_Labels_Relationships(
+      {this.daughter,
+      this.error,
+      this.father,
+      this.grandfather,
+      this.grandmother,
+      this.mother,
+      this.nephew,
+      this.niece,
+      this.other,
+      this.relation,
+      this.sister,
+      this.son,
+      this.title,
+      this.uncle,
+      this.aunt,
+      this.brother});
+
+  final String daughter;
+
+  final String error;
+
+  final String father;
+
+  final String grandfather;
+
+  final String grandmother;
+
+  final String mother;
+
+  final String nephew;
+
+  final String niece;
+
+  final String other;
+
+  final String relation;
+
+  final String sister;
+
+  final String son;
+
+  final String title;
+
+  final String uncle;
+
+  final String aunt;
+
+  final String brother;
+
+  String getByKey(String key) {
+    switch (key) {
+      case 'daughter':
+        return daughter;
+      case 'error':
+        return error;
+      case 'father':
+        return father;
+      case 'grandfather':
+        return grandfather;
+      case 'grandmother':
+        return grandmother;
+      case 'mother':
+        return mother;
+      case 'nephew':
+        return nephew;
+      case 'niece':
+        return niece;
+      case 'other':
+        return other;
+      case 'relation':
+        return relation;
+      case 'sister':
+        return sister;
+      case 'son':
+        return son;
+      case 'title':
+        return title;
+      case 'uncle':
+        return uncle;
+      case 'aunt':
+        return aunt;
+      case 'brother':
+        return brother;
       default:
         return '';
     }
@@ -4868,12 +3624,9 @@ class AppLocalizations_Labels_Settings {
       {this.dark,
       this.language,
       this.light,
-      this.ok,
-      this.signOut,
       this.system,
       this.theme,
-      this.title,
-      this.updateProfile});
+      this.title});
 
   final String dark;
 
@@ -4881,17 +3634,11 @@ class AppLocalizations_Labels_Settings {
 
   final String light;
 
-  final String ok;
-
-  final String signOut;
-
   final String system;
 
   final String theme;
 
   final String title;
-
-  final String updateProfile;
 
   String getByKey(String key) {
     switch (key) {
@@ -4901,31 +3648,10 @@ class AppLocalizations_Labels_Settings {
         return language;
       case 'light':
         return light;
-      case 'ok':
-        return ok;
-      case 'signOut':
-        return signOut;
       case 'system':
         return system;
       case 'theme':
         return theme;
-      case 'title':
-        return title;
-      case 'updateProfile':
-        return updateProfile;
-      default:
-        return '';
-    }
-  }
-}
-
-class AppLocalizations_Labels_Vigor {
-  const AppLocalizations_Labels_Vigor({this.title});
-
-  final String title;
-
-  String getByKey(String key) {
-    switch (key) {
       case 'title':
         return title;
       default:
@@ -4936,33 +3662,51 @@ class AppLocalizations_Labels_Vigor {
 
 class AppLocalizations_Labels {
   const AppLocalizations_Labels(
-      {this.app,
+      {this.actions,
+      this.address,
+      this.age,
+      this.app,
       this.auth,
-      this.dates,
-      this.general,
+      this.birthDate,
+      this.contacts,
+      this.dateOfBirth,
+      this.gender,
       this.language,
       this.medical,
-      this.registration,
-      this.settings,
-      this.vigor});
+      this.name,
+      this.pages,
+      this.relationships,
+      this.settings});
+
+  final AppLocalizations_Labels_Actions actions;
+
+  final AppLocalizations_Labels_Address address;
+
+  final AppLocalizations_Labels_Age age;
 
   final AppLocalizations_Labels_App app;
 
   final AppLocalizations_Labels_Auth auth;
 
-  final AppLocalizations_Labels_Dates dates;
+  final AppLocalizations_Labels_BirthDate birthDate;
 
-  final AppLocalizations_Labels_General general;
+  final AppLocalizations_Labels_Contacts contacts;
+
+  final AppLocalizations_Labels_DateOfBirth dateOfBirth;
+
+  final AppLocalizations_Labels_Gender gender;
 
   final AppLocalizations_Labels_Language language;
 
   final AppLocalizations_Labels_Medical medical;
 
-  final AppLocalizations_Labels_Registration registration;
+  final AppLocalizations_Labels_Name name;
+
+  final AppLocalizations_Labels_Pages pages;
+
+  final AppLocalizations_Labels_Relationships relationships;
 
   final AppLocalizations_Labels_Settings settings;
-
-  final AppLocalizations_Labels_Vigor vigor;
 
   String getByKey(String key) {
     switch (key) {

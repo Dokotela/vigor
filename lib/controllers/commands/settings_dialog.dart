@@ -90,7 +90,7 @@ class _SettingsDialogContent extends StatelessWidget {
             ),
             TextButton(
                 onPressed: () => Get.back(),
-                child: Text(labels.settings.ok, style: textTheme.headline6))
+                child: Text(labels.actions.ok, style: textTheme.headline6))
           ],
         ),
       ),

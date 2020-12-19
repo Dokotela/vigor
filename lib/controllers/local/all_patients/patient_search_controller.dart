@@ -10,7 +10,6 @@ class PatientSearchController extends GetxController {
   /// PROPERTIES
   final _fullPatientList = <Resource>[].obs;
   final _activePatientList = <Resource>[].obs;
-  final labels = Get.arguments;
   final _nameSort = 0.obs;
   final _birthDateSort = 0.obs;
   final _barrioSort = 0.obs;
