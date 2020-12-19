@@ -16,6 +16,10 @@ class AppLocalizations {
       actions: AppLocalizations_Labels_Actions(
         add: "Add",
         cancel: "Cancel",
+        back: "Back",
+        home: "Home",
+        logout: "Logout",
+        ok: "OK",
         save: "Save",
         search: "Search",
         submit: "Submit",
@@ -125,11 +129,18 @@ class AppLocalizations {
         theme: "Theme",
         title: "Settings",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "Patient",
+      ),
     ),
     Locale.fromSubtags(languageCode: "es"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "Añadir",
         cancel: "Cancelar",
+        back: "atrás",
+        home: "Casa",
+        logout: "Cerrar sesión",
+        ok: "Okay",
         save: "Salvar",
         search: "Buscar",
         submit: "Enviar",
@@ -239,11 +250,18 @@ class AppLocalizations {
         theme: "Tema",
         title: "ajustes",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "",
+      ),
     ),
     Locale.fromSubtags(languageCode: "ar"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "إضافة",
         cancel: "إلغاء",
+        back: "عودة",
+        home: "الصفحة الرئيسية",
+        logout: "تسجيل خروج",
+        ok: "حسنا",
         save: "حفظ",
         search: "بحث",
         submit: "إرسال",
@@ -353,11 +371,18 @@ class AppLocalizations {
         theme: "موضوع",
         title: "إعدادات",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "",
+      ),
     ),
     Locale.fromSubtags(languageCode: "hi"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "जोड़ना",
         cancel: "रद्द करना",
+        back: "वापस",
+        home: "घर",
+        logout: "लॉग आउट",
+        ok: "ठीक",
         save: "सहेजें",
         search: "खोज",
         submit: "प्रस्तुत",
@@ -467,11 +492,18 @@ class AppLocalizations {
         theme: "विषय",
         title: "समायोजन",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "",
+      ),
     ),
     Locale.fromSubtags(languageCode: "ru"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "Добавить",
         cancel: "отменить",
+        back: "назад",
+        home: "Главная",
+        logout: "Выйти",
+        ok: "Хорошо",
         save: "Сохранить",
         search: "Поиск",
         submit: "Разместить",
@@ -581,11 +613,18 @@ class AppLocalizations {
         theme: "тема",
         title: "настройки",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "",
+      ),
     ),
     Locale.fromSubtags(languageCode: "bn"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "যোগ",
         cancel: "বাতিল",
+        back: "পেছনে",
+        home: "বাড়ি",
+        logout: "প্রস্থান",
+        ok: "ঠিক আছে",
         save: "সংরক্ষণ",
         search: "অনুসন্ধান করুন",
         submit: "জমা দিন",
@@ -695,11 +734,18 @@ class AppLocalizations {
         theme: "বিষয়",
         title: "সেটিংস",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "",
+      ),
     ),
     Locale.fromSubtags(languageCode: "my"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "add",
         cancel: "Cancel",
+        back: "ပြန်.",
+        home: "နေအိမ်",
+        logout: "logout",
+        ok: "ရလား",
         save: "ကြော်ငြာကို Save လုပ်ရန်",
         search: "ရှာဖှေ",
         submit: "Submit",
@@ -809,11 +855,18 @@ class AppLocalizations {
         theme: "အကွောငျး",
         title: "Settings များ",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "",
+      ),
     ),
     Locale.fromSubtags(languageCode: "zh_CN"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "加",
         cancel: "取消",
+        back: "背部",
+        home: "家",
+        logout: "登出",
+        ok: "好",
         save: "保存",
         search: "搜索",
         submit: "提交",
@@ -923,11 +976,18 @@ class AppLocalizations {
         theme: "主题",
         title: "设置",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "",
+      ),
     ),
     Locale.fromSubtags(languageCode: "zh_TW"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "加",
         cancel: "取消",
+        back: "背部",
+        home: "家",
+        logout: "登出",
+        ok: "好",
         save: "保存",
         search: "搜索",
         submit: "提交",
@@ -1037,11 +1097,18 @@ class AppLocalizations {
         theme: "主題",
         title: "設置",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "",
+      ),
     ),
     Locale.fromSubtags(languageCode: "fa"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "اضافه کردن",
         cancel: "لغو کردن",
+        back: "بازگشت",
+        home: "خانه",
+        logout: "خروج",
+        ok: "خوب",
         save: "صرفه جویی",
         search: "جستجو کردن",
         submit: "ارسال",
@@ -1151,11 +1218,18 @@ class AppLocalizations {
         theme: "موضوع",
         title: "تنظیمات",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "",
+      ),
     ),
     Locale.fromSubtags(languageCode: "fr"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "Ajouter",
         cancel: "Annuler",
+        back: "Retour",
+        home: "Accueil",
+        logout: "Se déconnecter",
+        ok: "D'accord",
         save: "sauver",
         search: "Chercher",
         submit: "Soumettre",
@@ -1265,11 +1339,18 @@ class AppLocalizations {
         theme: "Thème",
         title: "Réglages",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "",
+      ),
     ),
     Locale.fromSubtags(languageCode: "de"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "Hinzufügen",
         cancel: "Stornieren",
+        back: "Zurück",
+        home: "Zuhause",
+        logout: "Ausloggen",
+        ok: "in Ordnung",
         save: "sparen",
         search: "Suche",
         submit: "einreichen",
@@ -1379,11 +1460,18 @@ class AppLocalizations {
         theme: "Thema",
         title: "die Einstellungen",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "",
+      ),
     ),
     Locale.fromSubtags(languageCode: "id"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "Menambahkan",
         cancel: "Membatalkan",
+        back: "Kembali",
+        home: "Rumah",
+        logout: "Keluar",
+        ok: "baik",
         save: "Menyimpan",
         search: "Cari",
         submit: "Kirimkan",
@@ -1493,11 +1581,18 @@ class AppLocalizations {
         theme: "Tema",
         title: "pengaturan",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "",
+      ),
     ),
     Locale.fromSubtags(languageCode: "ja"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "追加",
         cancel: "キャンセル",
+        back: "バック",
+        home: "家",
+        logout: "ログアウト",
+        ok: "OK",
         save: "保存する",
         search: "探す",
         submit: "参加する",
@@ -1607,11 +1702,18 @@ class AppLocalizations {
         theme: "テーマ",
         title: "設定",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "",
+      ),
     ),
     Locale.fromSubtags(languageCode: "km"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "បន្ថែម",
         cancel: "បោះបង់",
+        back: "ត្រលប់ក្រោយ",
+        home: "ទំព័រដើម",
+        logout: "ចាកចេញ",
+        ok: "យល់ព្រម",
         save: "រក្សាទុក",
         search: "ស្វែងរក",
         submit: "ដាក់ស្នើ",
@@ -1721,11 +1823,18 @@ class AppLocalizations {
         theme: "ស្បែក",
         title: "ការកំណត់",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "",
+      ),
     ),
     Locale.fromSubtags(languageCode: "ko"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "더하다",
         cancel: "취소",
+        back: "뒤",
+        home: "집",
+        logout: "로그 아웃",
+        ok: "확인",
         save: "저장",
         search: "검색",
         submit: "제출",
@@ -1835,11 +1944,18 @@ class AppLocalizations {
         theme: "테마",
         title: "설정",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "",
+      ),
     ),
     Locale.fromSubtags(languageCode: "lo"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "ຕື່ມ",
         cancel: "ຍົກເລີກການ",
+        back: "ກັບຄືນໄປບ່ອນ",
+        home: "ຫນ້າທໍາອິດ",
+        logout: "ອອກ​ຈາກ​ລະ​ບົບ",
+        ok: "ຕົກ​ລົງ",
         save: "ບັນທຶກ",
         search: "ຄົ້ນຫາ",
         submit: "ຍື່ນສະເຫນີ",
@@ -1949,11 +2065,18 @@ class AppLocalizations {
         theme: "Theme",
         title: "ການຕັ້ງຄ່າ",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "",
+      ),
     ),
     Locale.fromSubtags(languageCode: "mr"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "जोडा",
         cancel: "रद्द करा",
+        back: "मागे",
+        home: "मुख्यपृष्ठ",
+        logout: "बाहेर पडणे",
+        ok: "ठीक आहे",
         save: "जतन करा",
         search: "शोधा",
         submit: "प्रस्तुत करणे",
@@ -2063,11 +2186,18 @@ class AppLocalizations {
         theme: "थीम",
         title: "सेटिंग्ज",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "",
+      ),
     ),
     Locale.fromSubtags(languageCode: "ne"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "थप",
         cancel: "रद्द",
+        back: "फिर्ता",
+        home: "घर",
+        logout: "बाहिर निस्कनु",
+        ok: "ठिक छ",
         save: "सेव",
         search: "खोज",
         submit: "पेश",
@@ -2177,11 +2307,18 @@ class AppLocalizations {
         theme: "विषय",
         title: "सेटिङहरू",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "",
+      ),
     ),
     Locale.fromSubtags(languageCode: "pt"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "Adicionar",
         cancel: "Cancelar",
+        back: "De volta",
+        home: "Casa",
+        logout: "Sair",
+        ok: "Está bem",
         save: "Salve ",
         search: "Pesquisa",
         submit: "Enviar",
@@ -2291,11 +2428,18 @@ class AppLocalizations {
         theme: "Tema",
         title: "Configurações",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "",
+      ),
     ),
     Locale.fromSubtags(languageCode: "pa"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "ਜੋੜੋ",
         cancel: "ਰੱਦ ਕਰੋ",
+        back: "ਵਾਪਸ",
+        home: "ਮੁੱਖ",
+        logout: "ਲਾੱਗ ਆਊਟ, ਬਾਹਰ ਆਉਣਾ",
+        ok: "ਠੀਕ ਹੈ",
         save: "ਸੰਭਾਲੋ",
         search: "ਖੋਜ",
         submit: "ਜਮ੍ਹਾਂ ਕਰੋ",
@@ -2405,11 +2549,18 @@ class AppLocalizations {
         theme: "ਥੀਮ",
         title: "ਸੈਟਿੰਗ",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "",
+      ),
     ),
     Locale.fromSubtags(languageCode: "so"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "Add",
         cancel: "Jooji",
+        back: "Back",
+        home: "Home",
+        logout: "Ka bax",
+        ok: "OK",
         save: "Save",
         search: "Raadi",
         submit: "Gudbi",
@@ -2519,11 +2670,18 @@ class AppLocalizations {
         theme: "theme",
         title: "Settings",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "",
+      ),
     ),
     Locale.fromSubtags(languageCode: "sw"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "Kuongeza",
         cancel: "kufuta",
+        back: "Back",
+        home: "Home",
+        logout: "Toka",
+        ok: "sawa",
         save: "Save",
         search: "Tafuta",
         submit: "wasilisha",
@@ -2633,11 +2791,18 @@ class AppLocalizations {
         theme: "Theme",
         title: "mipangilio",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "",
+      ),
     ),
     Locale.fromSubtags(languageCode: "tl"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "magdagdag",
         cancel: "kanselahin",
+        back: "likod",
+        home: "bahay",
+        logout: "Mag-logout",
+        ok: "OK",
         save: "I-save ang",
         search: "Hanapan",
         submit: "Ipasa",
@@ -2747,11 +2912,18 @@ class AppLocalizations {
         theme: "tema",
         title: "Mga Setting",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "",
+      ),
     ),
     Locale.fromSubtags(languageCode: "th"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "เพิ่ม",
         cancel: "ยกเลิก",
+        back: "กลับ",
+        home: "บ้าน",
+        logout: "ออกจากระบบ",
+        ok: "ตกลง",
         save: "บันทึก",
         search: "ค้นหา",
         submit: "เสนอ",
@@ -2861,11 +3033,18 @@ class AppLocalizations {
         theme: "กระทู้",
         title: "การตั้งค่า",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "",
+      ),
     ),
     Locale.fromSubtags(languageCode: "uz"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "qo'shish",
         cancel: "Bekor qilish",
+        back: "orqaga",
+        home: "uy",
+        logout: "Chiqish",
+        ok: "OK",
         save: "saqlash",
         search: "Qidirmoq",
         submit: "Submit",
@@ -2975,11 +3154,18 @@ class AppLocalizations {
         theme: "mavzu",
         title: "Sozlamalar",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "",
+      ),
     ),
     Locale.fromSubtags(languageCode: "vi"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "Thêm vào",
         cancel: "hủy bỏ",
+        back: "Trở lại",
+        home: "Trang Chủ",
+        logout: "Đăng xuất",
+        ok: "đồng ý",
         save: "Tiết kiệm",
         search: "Tìm kiếm",
         submit: "Gửi đi",
@@ -3089,6 +3275,9 @@ class AppLocalizations {
         theme: "chủ đề",
         title: "Cài đặt",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "",
+      ),
     ),
   };
 
@@ -3100,11 +3289,27 @@ class AppLocalizations {
 
 class AppLocalizations_Labels_Actions {
   const AppLocalizations_Labels_Actions(
-      {this.add, this.cancel, this.save, this.search, this.submit});
+      {this.add,
+      this.cancel,
+      this.back,
+      this.home,
+      this.logout,
+      this.ok,
+      this.save,
+      this.search,
+      this.submit});
 
   final String add;
 
   final String cancel;
+
+  final String back;
+
+  final String home;
+
+  final String logout;
+
+  final String ok;
 
   final String save;
 
@@ -3118,6 +3323,14 @@ class AppLocalizations_Labels_Actions {
         return add;
       case 'cancel':
         return cancel;
+      case 'back':
+        return back;
+      case 'home':
+        return home;
+      case 'logout':
+        return logout;
+      case 'ok':
+        return ok;
       case 'save':
         return save;
       case 'search':
@@ -3660,6 +3873,21 @@ class AppLocalizations_Labels_Settings {
   }
 }
 
+class AppLocalizations_Labels_Patient {
+  const AppLocalizations_Labels_Patient({this.title});
+
+  final String title;
+
+  String getByKey(String key) {
+    switch (key) {
+      case 'title':
+        return title;
+      default:
+        return '';
+    }
+  }
+}
+
 class AppLocalizations_Labels {
   const AppLocalizations_Labels(
       {this.actions,
@@ -3676,7 +3904,8 @@ class AppLocalizations_Labels {
       this.name,
       this.pages,
       this.relationships,
-      this.settings});
+      this.settings,
+      this.patient});
 
   final AppLocalizations_Labels_Actions actions;
 
@@ -3707,6 +3936,8 @@ class AppLocalizations_Labels {
   final AppLocalizations_Labels_Relationships relationships;
 
   final AppLocalizations_Labels_Settings settings;
+
+  final AppLocalizations_Labels_Patient patient;
 
   String getByKey(String key) {
     switch (key) {
