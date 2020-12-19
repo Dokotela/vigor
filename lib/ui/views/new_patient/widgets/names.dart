@@ -28,7 +28,7 @@ class NamesInputWidget extends StatelessWidget {
           TextFormField(
             controller: familyName,
             decoration: InputDecoration(
-              labelText: labels.general.name.familyName,
+              labelText: labels.name.familyName,
               labelStyle: Get.textTheme.bodyText1,
               errorText: familyNameError == '' ? null : familyNameError,
               focusedBorder: UnderlineInputBorder(
@@ -43,7 +43,7 @@ class NamesInputWidget extends StatelessWidget {
           TextFormField(
             controller: givenName,
             decoration: InputDecoration(
-              labelText: labels.general.name.givenNames,
+              labelText: labels.name.givenNames,
               labelStyle: Get.textTheme.bodyText1,
               errorText: givenNameError == '' ? null : givenNameError,
               focusedBorder: UnderlineInputBorder(

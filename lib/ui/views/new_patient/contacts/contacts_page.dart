@@ -3,13 +3,13 @@ import 'package:get/get.dart';
 import 'package:vigor/routes/routes.dart';
 import 'package:vigor/ui/styled_components/add_new.dart';
 import 'package:vigor/ui/styled_components/styled_components.dart';
+import 'package:vigor/ui/views/new_patient/widgets/names.dart';
 
-import '../../../controllers/local/new_patient/contacts_controller.dart';
-import '../../../localization.dart';
-import '../../styled_components/app_bar.dart';
-import '../../styled_components/bottom_navigation_bar.dart';
+import '../../../../controllers/local/new_patient/contacts_controller.dart';
+import '../../../../localization.dart';
+import '../../../styled_components/app_bar.dart';
+import '../../../styled_components/bottom_navigation_bar.dart';
 import 'contacts_view_controller.dart';
-import 'widgets/widgets.dart';
 
 class ContactsPage extends StatelessWidget {
   @override
@@ -21,7 +21,7 @@ class ContactsPage extends StatelessWidget {
     Widget addNew() {
       controller.setupForNewContact();
       return AlertDialog(
-        title: Text('New Contact'),
+        title: Text(labels.contacts.newContact),
         content: Obx(
           () => GestureDetector(
             onTap: () {
@@ -41,14 +41,14 @@ class ContactsPage extends StatelessWidget {
                     givenNameError: controller.givenNameError,
                   ),
                   DropDownSelection(
-                    title: labels.general.relationship,
+                    title: labels.relationships.title,
                     selectionList: controller.relationTypes,
                     display: controller.relation,
                     selectNew: controller.selectRelation,
                     error: controller.relationError,
                   ),
                   DropDownSelection(
-                    title: labels.general.address.neighborhood,
+                    title: labels.address.neighborhood.title,
                     selectionList: controller.barriosList,
                     display: controller.barrio,
                     selectNew: controller.selectBarrio,
@@ -62,14 +62,14 @@ class ContactsPage extends StatelessWidget {
         actions: [
           TextButton(
             child: Text(
-              'Cancel',
+              labels.actions.cancel,
               style: TextStyle(color: Get.theme.colorScheme.onPrimary),
             ),
             onPressed: () => Get.back(),
           ),
           TextButton(
             child: Text(
-              'Add',
+              labels.actions.add,
               style: TextStyle(color: Get.theme.colorScheme.onPrimary),
             ),
             onPressed: () async => controller.addNewContact(),
@@ -86,22 +86,22 @@ class ContactsPage extends StatelessWidget {
         }
       },
       child: Scaffold(
-        appBar: VigorAppBar(title: 'Contacts'),
+        appBar: VigorAppBar(title: labels.pages.contacts),
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(
               child: Obx(
                 () => controller.currentListLength == 0
-                    ? Text('No contacts have been added.')
+                    ? Text(labels.contacts.noContactsAdded)
                     : OrderedList(
-                        label1:
-                            Text('Name', style: Get.theme.textTheme.headline6),
+                        label1: Text(labels.name.title,
+                            style: Get.theme.textTheme.headline6),
                         sortCol1: controller.sortByName,
                         order1: viewController.getOrder(controller.nameSort),
                         entry1: controller.contactName,
                         label2: Text(
-                          'Relation',
+                          labels.general.relation.title,
                           style: Get.theme.textTheme.headline6,
                         ),
                         sortCol2: controller.sortByRelation,
@@ -118,7 +118,7 @@ class ContactsPage extends StatelessWidget {
               ),
             ),
             ThinActionButton(
-              buttonText: 'Patient Home',
+              buttonText: labels.pages.patientHome,
               onPressed: () async => Get.toNamed(AppRoutes.PATIENT_HOME_PAGE,
                   arguments: controller.patient),
               width: Get.width * .5,

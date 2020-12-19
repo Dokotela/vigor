@@ -39,8 +39,8 @@ class NewPatientController extends GetxController {
     if (Get.arguments != null) {
       _patient.value = Get.arguments;
       _gender.value = _patient.value.patient.gender == PatientGender.female
-          ? labels.general.sexAtBirth.female
-          : labels.general.sexAtBirth.male;
+          ? labels.sexAtBirth.female
+          : labels.sexAtBirth.male;
       _birthDate.value =
           DateTime.parse(_patient.value.patient.birthDate.toString());
       _barrio.value = _patient.value.barrio();
@@ -94,7 +94,7 @@ class NewPatientController extends GetxController {
               ],
               birthDate: Date(_birthDate.value),
               address: [Address(district: barrio)],
-              gender: gender == labels.general.sexAtBirth.female
+              gender: gender == labels.sexAtBirth.female
                   ? PatientGender.female
                   : PatientGender.male)
           : _patient.value.patient.copyWith(
@@ -106,7 +106,7 @@ class NewPatientController extends GetxController {
               ],
               birthDate: Date(_birthDate.value),
               address: [Address(district: barrio)],
-              gender: gender == labels.general.sexAtBirth.female
+              gender: gender == labels.sexAtBirth.female
                   ? PatientGender.female
                   : PatientGender.male,
             );
@@ -121,19 +121,19 @@ class NewPatientController extends GetxController {
       );
     } else {
       if (!isValidRegistrationName(familyName.text)) {
-        _familyNameError.value = labels.general.familyNameError;
+        _familyNameError.value = labels.name.familyNameError;
       }
       if (!isValidRegistrationName(givenName.text)) {
-        _givenNameError.value = labels.general.givenNameError;
+        _givenNameError.value = labels.name.givenNameError;
       }
       if (!isValidRegistrationBirthDate(_birthDate.value)) {
-        _birthDateError.value = labels.general.birthDateError;
+        _birthDateError.value = labels.birthDate.error;
       }
       if (!isValidRegistrationBarrio(barrio)) {
-        _barrioError.value = labels.general.neighborhoodError;
+        _barrioError.value = labels.address.neighborhood.error;
       }
       if (!isValidGender(gender)) {
-        _genderError.value = labels.general.genderError;
+        _genderError.value = labels.gender.error;
       }
     }
   }

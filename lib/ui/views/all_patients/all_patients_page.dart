@@ -25,7 +25,7 @@ class AllPatientsPage extends StatelessWidget {
         }
       },
       child: Scaffold(
-        appBar: VigorAppBar(title: 'All Patients'),
+        appBar: VigorAppBar(title: labels.general.allPatients),
         body: Column(
           children: [
             Container(
@@ -62,7 +62,8 @@ class AllPatientsPage extends StatelessWidget {
             Expanded(
               child: Obx(
                 () => OrderedList(
-                  label1: Text('Patient', style: Get.theme.textTheme.headline6),
+                  label1: Text(labels.general.patient,
+                      style: Get.theme.textTheme.headline6),
                   sortCol1: controller.sortByName,
                   order1: viewController.getOrder(controller.nameSort),
                   entry1: controller.patientName,

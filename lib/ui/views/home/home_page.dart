@@ -22,17 +22,17 @@ class HomePage extends StatelessWidget {
           children: [
             /// Registration for a new patient
             ActionButton(
-              buttonText: labels.general.newPatient,
+              buttonText: labels.pages.newPatient,
               onPressed: () => Get.toNamed(AppRoutes.NEW_PATIENT),
             ),
 
             /// Search the patients stored on the device
             ActionButton(
-              buttonText: labels.general.allPatients,
+              buttonText: labels.pages.allPatients,
               onPressed: () => Get.toNamed(AppRoutes.ALL_PATIENTS),
             ),
             ActionButton(
-              buttonText: labels.medical.summaryReport,
+              buttonText: labels.pages.summaryReport,
             ),
           ],
         ),

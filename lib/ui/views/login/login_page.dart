@@ -7,8 +7,8 @@ import 'package:vigor/ui/styled_components/styled_components.dart';
 
 import '../../../localization.dart';
 import '../../../routes/routes.dart';
-import 'widgets/flag.dart';
-import 'widgets/splash_title.dart';
+import 'flag.dart';
+import 'splash_title.dart';
 
 class LoginPage extends StatelessWidget {
   @override
