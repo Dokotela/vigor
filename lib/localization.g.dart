@@ -15,8 +15,9 @@ class AppLocalizations {
     Locale.fromSubtags(languageCode: "en"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "Add",
-        cancel: "Cancel",
         back: "Back",
+        cancel: "Cancel",
+        delete: "Delete",
         home: "Home",
         logout: "Logout",
         ok: "OK",
@@ -80,7 +81,10 @@ class AppLocalizations {
           addDate: "Add date of vaccine:",
           certify: "Click to certify dates",
           dateGiven: "Date Given",
+          delete: "Delete Immunization",
           none: "No previous vaccines of this type given",
+          noPrevious: "No previous vaccines of this type given",
+          sureDelete: "Are you sure you want to delete this immunization?",
           title: "Vaccines",
         ),
       ),
@@ -103,7 +107,12 @@ class AppLocalizations {
         patientInformation: "Patient Information",
         summaryReport: "Summary Report",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "Patient",
+      ),
       relationships: AppLocalizations_Labels_Relationships(
+        aunt: "Aunt",
+        brother: "Brother",
         daughter: "Daughter",
         error: "Please select relationship",
         father: "Father",
@@ -118,8 +127,6 @@ class AppLocalizations {
         son: "Son",
         title: "Relationship",
         uncle: "Uncle",
-        aunt: "Aunt",
-        brother: "Brother",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "Dark",
@@ -129,15 +136,13 @@ class AppLocalizations {
         theme: "Theme",
         title: "Settings",
       ),
-      patient: AppLocalizations_Labels_Patient(
-        title: "Patient",
-      ),
     ),
     Locale.fromSubtags(languageCode: "es"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "Añadir",
-        cancel: "Cancelar",
         back: "atrás",
+        cancel: "Cancelar",
+        delete: "Eliminar",
         home: "Casa",
         logout: "Cerrar sesión",
         ok: "Okay",
@@ -201,7 +206,10 @@ class AppLocalizations {
           addDate: "Añadir la fecha de la vacuna:",
           certify: "Haga clic para certificar fechas",
           dateGiven: "Dada la fecha",
+          delete: "La inmunización de eliminación",
           none: "No hay vacunas anteriores de este tipo dado",
+          noPrevious: "No hay vacunas anteriores de este tipo dado",
+          sureDelete: "¿Está seguro de que quiere eliminar esta inmunización?",
           title: "Vacunas",
         ),
       ),
@@ -224,7 +232,12 @@ class AppLocalizations {
         patientInformation: "Información del paciente",
         summaryReport: "Informe resumido",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "Paciente",
+      ),
       relationships: AppLocalizations_Labels_Relationships(
+        aunt: "Tía",
+        brother: "Hermano",
         daughter: "Hija",
         error: "Por favor seleccione la relación",
         father: "Padre",
@@ -239,8 +252,6 @@ class AppLocalizations {
         son: "Hijo",
         title: "Relación",
         uncle: "Tío",
-        aunt: "Tía",
-        brother: "Hermano",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "Oscuro",
@@ -250,15 +261,13 @@ class AppLocalizations {
         theme: "Tema",
         title: "ajustes",
       ),
-      patient: AppLocalizations_Labels_Patient(
-        title: "",
-      ),
     ),
     Locale.fromSubtags(languageCode: "ar"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "إضافة",
-        cancel: "إلغاء",
         back: "عودة",
+        cancel: "إلغاء",
+        delete: "حذف",
         home: "الصفحة الرئيسية",
         logout: "تسجيل خروج",
         ok: "حسنا",
@@ -322,7 +331,10 @@ class AppLocalizations {
           addDate: "إضافة التاريخ من لقاح:",
           certify: "انقر للمصادقة على مواعيد",
           dateGiven: "تاريخ نظرا",
+          delete: "التحصين حذف",
           none: "لا اللقاحات السابقة من هذا نوع معين",
+          noPrevious: "لا اللقاحات السابقة من هذا نوع معين",
+          sureDelete: "هل أنت متأكد أنك تريد حذف هذا التطعيم؟",
           title: "اللقاحات",
         ),
       ),
@@ -345,7 +357,12 @@ class AppLocalizations {
         patientInformation: "معلومات المريض",
         summaryReport: "تقرير ملخص",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "صبور",
+      ),
       relationships: AppLocalizations_Labels_Relationships(
+        aunt: "عمة",
+        brother: "شقيق",
         daughter: "ابنة",
         error: "الرجاء تحديد العلاقة",
         father: "الآب",
@@ -360,8 +377,6 @@ class AppLocalizations {
         son: "ابن",
         title: "صلة",
         uncle: "اخو الام",
-        aunt: "عمة",
-        brother: "شقيق",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "داكن",
@@ -371,15 +386,13 @@ class AppLocalizations {
         theme: "موضوع",
         title: "إعدادات",
       ),
-      patient: AppLocalizations_Labels_Patient(
-        title: "",
-      ),
     ),
     Locale.fromSubtags(languageCode: "hi"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "जोड़ना",
-        cancel: "रद्द करना",
         back: "वापस",
+        cancel: "रद्द करना",
+        delete: "हटाएं",
         home: "घर",
         logout: "लॉग आउट",
         ok: "ठीक",
@@ -443,7 +456,10 @@ class AppLocalizations {
           addDate: "टीके की तारीख जोड़ें:",
           certify: "दिनांक प्रमाणित करने के लिए क्लिक करें",
           dateGiven: "दिनांक को देखते हुए",
+          delete: "हटाएं टीकाकरण",
           none: "इस प्रकार का कोई पिछले टीके दिए गए",
+          noPrevious: "इस प्रकार का कोई पिछले टीके दिए गए",
+          sureDelete: "आप इस टीकाकरण को हटाना चाहते हैं क्या आप वाकई रहे हैं?",
           title: "टीके",
         ),
       ),
@@ -466,7 +482,12 @@ class AppLocalizations {
         patientInformation: "रोगी के बारे में जानकारी",
         summaryReport: "संक्षिप्त रिपोर्ट",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "मरीज़",
+      ),
       relationships: AppLocalizations_Labels_Relationships(
+        aunt: "चाची",
+        brother: "भाई",
         daughter: "बेटी",
         error: "कृपया संबंध का चयन",
         father: "पिता",
@@ -481,8 +502,6 @@ class AppLocalizations {
         son: "बेटा",
         title: "संबंध",
         uncle: "चाचा",
-        aunt: "चाची",
-        brother: "भाई",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "अंधेरा",
@@ -492,15 +511,13 @@ class AppLocalizations {
         theme: "विषय",
         title: "समायोजन",
       ),
-      patient: AppLocalizations_Labels_Patient(
-        title: "",
-      ),
     ),
     Locale.fromSubtags(languageCode: "ru"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "Добавить",
-        cancel: "отменить",
         back: "назад",
+        cancel: "отменить",
+        delete: "удалять",
         home: "Главная",
         logout: "Выйти",
         ok: "Хорошо",
@@ -564,7 +581,10 @@ class AppLocalizations {
           addDate: "Дата добавления вакцины:",
           certify: "Нажмите для подтверждения даты",
           dateGiven: "Дата Учитывая",
+          delete: "Удаление Иммунизация",
           none: "Нет предыдущих вакцин этого типа данные",
+          noPrevious: "Нет предыдущих вакцин этого типа данные",
+          sureDelete: "Вы уверены, что хотите удалить эту иммунизацию?",
           title: "Вакцина",
         ),
       ),
@@ -587,7 +607,12 @@ class AppLocalizations {
         patientInformation: "Информация о пациенте",
         summaryReport: "Сводный отчет",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "Терпеливый",
+      ),
       relationships: AppLocalizations_Labels_Relationships(
+        aunt: "тетка",
+        brother: "Родной брат",
         daughter: "Дочь",
         error: "Пожалуйста, выберите отношения",
         father: "Отец",
@@ -602,8 +627,6 @@ class AppLocalizations {
         son: "Сын",
         title: "отношения",
         uncle: "Дядя",
-        aunt: "тетка",
-        brother: "Родной брат",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "Тьма",
@@ -613,15 +636,13 @@ class AppLocalizations {
         theme: "тема",
         title: "настройки",
       ),
-      patient: AppLocalizations_Labels_Patient(
-        title: "",
-      ),
     ),
     Locale.fromSubtags(languageCode: "bn"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "যোগ",
-        cancel: "বাতিল",
         back: "পেছনে",
+        cancel: "বাতিল",
+        delete: "মুছে ফেলা",
         home: "বাড়ি",
         logout: "প্রস্থান",
         ok: "ঠিক আছে",
@@ -685,7 +706,10 @@ class AppLocalizations {
           addDate: "টিকা তারিখ যোগ করুন",
           certify: "তারিখ প্রত্যয়ন করতে ক্লিক করুন",
           dateGiven: "তারিখ দেওয়া",
+          delete: "মুছে ফেলুন টিকাদান",
           none: "এই ধরনের কোনো পূর্ববর্তী টিকা দেওয়া",
+          noPrevious: "এই ধরনের কোনো পূর্ববর্তী টিকা দেওয়া",
+          sureDelete: "আপনি এই টিকাদান মুছে ফেলতে চান আপনি কি নিশ্চিত?",
           title: "টিকা",
         ),
       ),
@@ -708,7 +732,12 @@ class AppLocalizations {
         patientInformation: "রোগীর তথ্য",
         summaryReport: "সারসংক্ষেপ প্রতিবেদন",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "রোগী",
+      ),
       relationships: AppLocalizations_Labels_Relationships(
+        aunt: "মাসি",
+        brother: "ভাই",
         daughter: "কন্যা",
         error: "দয়া করে সম্পর্ক নির্বাচন",
         father: "পিতা",
@@ -723,8 +752,6 @@ class AppLocalizations {
         son: "পুত্র",
         title: "সম্পর্ক",
         uncle: "চাচা",
-        aunt: "মাসি",
-        brother: "ভাই",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "অন্ধকার",
@@ -734,15 +761,13 @@ class AppLocalizations {
         theme: "বিষয়",
         title: "সেটিংস",
       ),
-      patient: AppLocalizations_Labels_Patient(
-        title: "",
-      ),
     ),
     Locale.fromSubtags(languageCode: "my"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "add",
-        cancel: "Cancel",
         back: "ပြန်.",
+        cancel: "Cancel",
+        delete: "Delete",
         home: "နေအိမ်",
         logout: "logout",
         ok: "ရလား",
@@ -806,7 +831,10 @@ class AppLocalizations {
           addDate: "ကာကွယ်ဆေးနေ့စွဲ Add:",
           certify: "Certified ရက်စွဲများဖို့ကိုနှိပ်ပါ",
           dateGiven: "နေ့စွဲအရ",
+          delete: "delete ကာကွယ်ဆေးထိုး",
           none: "ပေးထားသောဒီအမျိုးအစားအဘယ်သူမျှမကယခင်ကာကွယ်ဆေး",
+          noPrevious: "ပေးထားသောဒီအမျိုးအစားအဘယ်သူမျှမကယခင်ကာကွယ်ဆေး",
+          sureDelete: "သင်သည်ဤကာကွယ်ဆေးထိုးသင်ဖျက်ချင်တာသေချာလား?",
           title: "ကာကွယ်ဆေးများ",
         ),
       ),
@@ -829,7 +857,12 @@ class AppLocalizations {
         patientInformation: "လူနာသတင်းအချက်အလက်",
         summaryReport: "အကျဉ်းချုပ်အစီရင်ခံစာ",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "လူနာ",
+      ),
       relationships: AppLocalizations_Labels_Relationships(
+        aunt: "အဒေါ်",
+        brother: "အစ်ကို",
         daughter: "သမီး",
         error: "ဆက်ဆံရေးမျိုးကိုရွေးချယ်ပါ ကျေးဇူးပြု.",
         father: "ဖခင်",
@@ -844,8 +877,6 @@ class AppLocalizations {
         son: "သား",
         title: "relationship",
         uncle: "ဘကြီး",
-        aunt: "အဒေါ်",
-        brother: "အစ်ကို",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "မှောငျမိုကျသော",
@@ -855,15 +886,13 @@ class AppLocalizations {
         theme: "အကွောငျး",
         title: "Settings များ",
       ),
-      patient: AppLocalizations_Labels_Patient(
-        title: "",
-      ),
     ),
     Locale.fromSubtags(languageCode: "zh_CN"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "加",
-        cancel: "取消",
         back: "背部",
+        cancel: "取消",
+        delete: "删除",
         home: "家",
         logout: "登出",
         ok: "好",
@@ -927,7 +956,10 @@ class AppLocalizations {
           addDate: "加入疫苗的日期：",
           certify: "点击日期证明",
           dateGiven: "鉴于日期",
+          delete: "删除免疫",
           none: "没有这种类型的疫苗以前给出",
+          noPrevious: "没有这种类型的疫苗以前给出",
+          sureDelete: "你确定要删除这个免疫接种？",
           title: "疫苗",
         ),
       ),
@@ -950,7 +982,12 @@ class AppLocalizations {
         patientInformation: "患者信息",
         summaryReport: "总结报告",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "患者",
+      ),
       relationships: AppLocalizations_Labels_Relationships(
+        aunt: "姨",
+        brother: "哥哥",
         daughter: "女儿",
         error: "请选择关系",
         father: "父亲",
@@ -965,8 +1002,6 @@ class AppLocalizations {
         son: "儿子",
         title: "关系",
         uncle: "叔叔",
-        aunt: "姨",
-        brother: "哥哥",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "黑暗",
@@ -976,15 +1011,13 @@ class AppLocalizations {
         theme: "主题",
         title: "设置",
       ),
-      patient: AppLocalizations_Labels_Patient(
-        title: "",
-      ),
     ),
     Locale.fromSubtags(languageCode: "zh_TW"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "加",
-        cancel: "取消",
         back: "背部",
+        cancel: "取消",
+        delete: "刪除",
         home: "家",
         logout: "登出",
         ok: "好",
@@ -1048,7 +1081,10 @@ class AppLocalizations {
           addDate: "加入疫苗的日期：",
           certify: "點擊日期證明",
           dateGiven: "鑑於日期",
+          delete: "刪除免疫",
           none: "沒有這種類型的疫苗以前給出",
+          noPrevious: "沒有這種類型的疫苗以前給出",
+          sureDelete: "你確定要刪除這個免疫接種？",
           title: "疫苗",
         ),
       ),
@@ -1071,7 +1107,12 @@ class AppLocalizations {
         patientInformation: "患者信息",
         summaryReport: "總結報告",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "患者",
+      ),
       relationships: AppLocalizations_Labels_Relationships(
+        aunt: "姨",
+        brother: "哥哥",
         daughter: "女兒",
         error: "請選擇關係",
         father: "父親",
@@ -1086,8 +1127,6 @@ class AppLocalizations {
         son: "兒子",
         title: "關係",
         uncle: "叔叔",
-        aunt: "姨",
-        brother: "哥哥",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "黑暗",
@@ -1097,15 +1136,13 @@ class AppLocalizations {
         theme: "主題",
         title: "設置",
       ),
-      patient: AppLocalizations_Labels_Patient(
-        title: "",
-      ),
     ),
     Locale.fromSubtags(languageCode: "fa"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "اضافه کردن",
-        cancel: "لغو کردن",
         back: "بازگشت",
+        cancel: "لغو کردن",
+        delete: "حذف",
         home: "خانه",
         logout: "خروج",
         ok: "خوب",
@@ -1169,7 +1206,11 @@ class AppLocalizations {
           addDate: "تاریخ واکسن را اضافه کنید:",
           certify: "به گواهی تاریخ کلیک کنید",
           dateGiven: "تاریخ داده شده",
+          delete: "ایمن سازی حذف",
           none: "هیچ واکسن قبلی از این نوع داده",
+          noPrevious: "هیچ واکسن قبلی از این نوع داده",
+          sureDelete:
+              "آیا شما مطمئن هستید که میخواهید این ایمن سازی را حذف کنید؟",
           title: "واکسن ها",
         ),
       ),
@@ -1192,7 +1233,12 @@ class AppLocalizations {
         patientInformation: "اطلاعات بیمار",
         summaryReport: "خلاصه گزارش",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "صبور",
+      ),
       relationships: AppLocalizations_Labels_Relationships(
+        aunt: "عمه",
+        brother: "برادر",
         daughter: "فرزند دختر",
         error: "لطفا ارتباط را انتخاب کنید",
         father: "پدر",
@@ -1207,8 +1253,6 @@ class AppLocalizations {
         son: "فرزند پسر",
         title: "ارتباط",
         uncle: "دایی",
-        aunt: "عمه",
-        brother: "برادر",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "تاریک",
@@ -1218,15 +1262,13 @@ class AppLocalizations {
         theme: "موضوع",
         title: "تنظیمات",
       ),
-      patient: AppLocalizations_Labels_Patient(
-        title: "",
-      ),
     ),
     Locale.fromSubtags(languageCode: "fr"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "Ajouter",
-        cancel: "Annuler",
         back: "Retour",
+        cancel: "Annuler",
+        delete: "Effacer",
         home: "Accueil",
         logout: "Se déconnecter",
         ok: "D'accord",
@@ -1290,7 +1332,10 @@ class AppLocalizations {
           addDate: "Ajouter la date du vaccin:",
           certify: "Cliquez pour certifier les dates",
           dateGiven: "Date Compte tenu",
+          delete: "Supprimer la vaccination",
           none: "Aucun vaccin précédent de ce type donné",
+          noPrevious: "Aucun vaccin précédent de ce type donné",
+          sureDelete: "Etes-vous sûr de vouloir supprimer cette vaccination?",
           title: "Vaccins",
         ),
       ),
@@ -1313,7 +1358,12 @@ class AppLocalizations {
         patientInformation: "L'information des patients",
         summaryReport: "Rapport sommaire",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "Patient",
+      ),
       relationships: AppLocalizations_Labels_Relationships(
+        aunt: "Tante",
+        brother: "Frère",
         daughter: "Fille",
         error: "S'il vous plaît choisir relation",
         father: "Père",
@@ -1328,8 +1378,6 @@ class AppLocalizations {
         son: "Fils",
         title: "Relation",
         uncle: "Oncle",
-        aunt: "Tante",
-        brother: "Frère",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "Foncé",
@@ -1339,15 +1387,13 @@ class AppLocalizations {
         theme: "Thème",
         title: "Réglages",
       ),
-      patient: AppLocalizations_Labels_Patient(
-        title: "",
-      ),
     ),
     Locale.fromSubtags(languageCode: "de"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "Hinzufügen",
-        cancel: "Stornieren",
         back: "Zurück",
+        cancel: "Stornieren",
+        delete: "Löschen",
         home: "Zuhause",
         logout: "Ausloggen",
         ok: "in Ordnung",
@@ -1411,7 +1457,10 @@ class AppLocalizations {
           addDate: "Erfassungsdatum des Impfstoffes:",
           certify: "Klicken Sie Daten zu bestätigen,",
           dateGiven: "Datum Gegeben",
+          delete: "Löschen Immunization",
           none: "Keine vorherigen Impfstoffe dieses Typs gegeben",
+          noPrevious: "Keine vorherigen Impfstoffe dieses Typs gegeben",
+          sureDelete: "Sind Sie sicher, dass Sie diese Immunisierung löschen?",
           title: "Impfungen",
         ),
       ),
@@ -1434,7 +1483,12 @@ class AppLocalizations {
         patientInformation: "Informationen zum Patienten",
         summaryReport: "Kurzbericht",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "Geduldig",
+      ),
       relationships: AppLocalizations_Labels_Relationships(
+        aunt: "Tante",
+        brother: "Bruder",
         daughter: "Tochter",
         error: "Bitte wählen Sie Beziehung",
         father: "Vater",
@@ -1449,8 +1503,6 @@ class AppLocalizations {
         son: "Sohn",
         title: "Beziehung",
         uncle: "Onkel",
-        aunt: "Tante",
-        brother: "Bruder",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "Dunkel",
@@ -1460,15 +1512,13 @@ class AppLocalizations {
         theme: "Thema",
         title: "die Einstellungen",
       ),
-      patient: AppLocalizations_Labels_Patient(
-        title: "",
-      ),
     ),
     Locale.fromSubtags(languageCode: "id"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "Menambahkan",
-        cancel: "Membatalkan",
         back: "Kembali",
+        cancel: "Membatalkan",
+        delete: "Menghapus",
         home: "Rumah",
         logout: "Keluar",
         ok: "baik",
@@ -1532,7 +1582,10 @@ class AppLocalizations {
           addDate: "Menambahkan tanggal vaksin:",
           certify: "Klik untuk mengesahkan tanggal",
           dateGiven: "Tanggal Mengingat",
+          delete: "Imunisasi Delete",
           none: "Tidak ada vaksin sebelumnya jenis ini diberikan",
+          noPrevious: "Tidak ada vaksin sebelumnya jenis ini diberikan",
+          sureDelete: "Apakah Anda yakin ingin menghapus imunisasi ini?",
           title: "Vaksin",
         ),
       ),
@@ -1555,7 +1608,12 @@ class AppLocalizations {
         patientInformation: "Informasi pasien",
         summaryReport: "Rangkuman laporan",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "Sabar",
+      ),
       relationships: AppLocalizations_Labels_Relationships(
+        aunt: "Bibi",
+        brother: "Saudara",
         daughter: "Putri",
         error: "Silakan pilih hubungan",
         father: "Ayah",
@@ -1570,8 +1628,6 @@ class AppLocalizations {
         son: "Putra",
         title: "Hubungan",
         uncle: "Paman",
-        aunt: "Bibi",
-        brother: "Saudara",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "Gelap",
@@ -1581,15 +1637,13 @@ class AppLocalizations {
         theme: "Tema",
         title: "pengaturan",
       ),
-      patient: AppLocalizations_Labels_Patient(
-        title: "",
-      ),
     ),
     Locale.fromSubtags(languageCode: "ja"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "追加",
-        cancel: "キャンセル",
         back: "バック",
+        cancel: "キャンセル",
+        delete: "[削除]",
         home: "家",
         logout: "ログアウト",
         ok: "OK",
@@ -1653,7 +1707,10 @@ class AppLocalizations {
           addDate: "ワクチンの日付を追加します。",
           certify: "日付を証明するためにクリック",
           dateGiven: "日付を考えます",
+          delete: "削除予防接種",
           none: "与えられたこのタイプの以前のワクチンありません",
+          noPrevious: "与えられたこのタイプの以前のワクチンありません",
+          sureDelete: "あなたはこの予防接種を削除してもよろしいですか？",
           title: "ワクチン",
         ),
       ),
@@ -1676,7 +1733,12 @@ class AppLocalizations {
         patientInformation: "患者情報",
         summaryReport: "概略報告",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "患者",
+      ),
       relationships: AppLocalizations_Labels_Relationships(
+        aunt: "叔母",
+        brother: "兄",
         daughter: "娘",
         error: "関係を選択してください",
         father: "お父さん",
@@ -1691,8 +1753,6 @@ class AppLocalizations {
         son: "息子",
         title: "関係",
         uncle: "おじさん",
-        aunt: "叔母",
-        brother: "兄",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "闇",
@@ -1702,15 +1762,13 @@ class AppLocalizations {
         theme: "テーマ",
         title: "設定",
       ),
-      patient: AppLocalizations_Labels_Patient(
-        title: "",
-      ),
     ),
     Locale.fromSubtags(languageCode: "km"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "បន្ថែម",
-        cancel: "បោះបង់",
         back: "ត្រលប់ក្រោយ",
+        cancel: "បោះបង់",
+        delete: "លុប",
         home: "ទំព័រដើម",
         logout: "ចាកចេញ",
         ok: "យល់ព្រម",
@@ -1774,7 +1832,10 @@ class AppLocalizations {
           addDate: "បន្ថែមកាលបរិច្ឆេទនៃការចាក់វ៉ាក់សាំង:",
           certify: "ចុចដើម្បីបញ្ជាក់កាលបរិច្ឆេទ",
           dateGiven: "កាលបរិច្ឆេទដែលបានផ្ដល់",
+          delete: "ការចាក់ថ្នាំបង្ការរោគលុប",
           none: "គ្មានវ៉ាក់សាំងមុនប្រភេទនេះដែលបានផ្ដល់ឱ្យ",
+          noPrevious: "គ្មានវ៉ាក់សាំងមុនប្រភេទនេះដែលបានផ្ដល់ឱ្យ",
+          sureDelete: "តើអ្នកប្រាកដជាចង់លុបការចាក់ថ្នាំបង្ការរោគនេះ?",
           title: "វ៉ាក់សាំង",
         ),
       ),
@@ -1797,7 +1858,12 @@ class AppLocalizations {
         patientInformation: "ពអ្នកជំងឺ",
         summaryReport: "របាយការណ៍សង្ខេប",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "អ្នកជំងឺ",
+      ),
       relationships: AppLocalizations_Labels_Relationships(
+        aunt: "មីង",
+        brother: "បងប្រុស",
         daughter: "កូនស្រី",
         error: "សូមជ្រើសទំនាក់ទំនង",
         father: "ព្រះបិតា",
@@ -1812,8 +1878,6 @@ class AppLocalizations {
         son: "ព្រះបុត្រា",
         title: "ទំនាក់ទំនង",
         uncle: "ពូ",
-        aunt: "មីង",
-        brother: "បងប្រុស",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "ងងឹត",
@@ -1823,15 +1887,13 @@ class AppLocalizations {
         theme: "ស្បែក",
         title: "ការកំណត់",
       ),
-      patient: AppLocalizations_Labels_Patient(
-        title: "",
-      ),
     ),
     Locale.fromSubtags(languageCode: "ko"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "더하다",
-        cancel: "취소",
         back: "뒤",
+        cancel: "취소",
+        delete: "지우다",
         home: "집",
         logout: "로그 아웃",
         ok: "확인",
@@ -1895,7 +1957,10 @@ class AppLocalizations {
           addDate: "백신의 날짜를 추가 :",
           certify: "날짜를 증명하기 위해 클릭",
           dateGiven: "날짜 감안할 때",
+          delete: "삭제 예방 접종",
           none: "주어진 이러한 유형의 어떤 이전 백신 없습니다",
+          noPrevious: "주어진 이러한 유형의 어떤 이전 백신 없습니다",
+          sureDelete: "이 예방 접종을 삭제 하시겠습니까?",
           title: "백신",
         ),
       ),
@@ -1918,7 +1983,12 @@ class AppLocalizations {
         patientInformation: "환자 정보",
         summaryReport: "요약 보고서",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "환자",
+      ),
       relationships: AppLocalizations_Labels_Relationships(
+        aunt: "이모",
+        brother: "동료",
         daughter: "딸",
         error: "관계를 선택하세요",
         father: "아버지",
@@ -1933,8 +2003,6 @@ class AppLocalizations {
         son: "아들",
         title: "관계",
         uncle: "삼촌",
-        aunt: "이모",
-        brother: "동료",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "어두운",
@@ -1944,15 +2012,13 @@ class AppLocalizations {
         theme: "테마",
         title: "설정",
       ),
-      patient: AppLocalizations_Labels_Patient(
-        title: "",
-      ),
     ),
     Locale.fromSubtags(languageCode: "lo"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "ຕື່ມ",
-        cancel: "ຍົກເລີກການ",
         back: "ກັບຄືນໄປບ່ອນ",
+        cancel: "ຍົກເລີກການ",
+        delete: "Delete",
         home: "ຫນ້າທໍາອິດ",
         logout: "ອອກ​ຈາກ​ລະ​ບົບ",
         ok: "ຕົກ​ລົງ",
@@ -2016,7 +2082,11 @@ class AppLocalizations {
           addDate: "ເພີ່ມວັນສັກຢາວັກຊີນ:",
           certify: "ກົດເພື່ອຢັ້ງຢືນວັນ",
           dateGiven: "Date ເນື່ອງ",
+          delete: "ສັກຢາກັນໂຣກ Delete",
           none: "No ສັກຢາວັກຊີນທີ່ຜ່ານມາຂອງປະເພດນີ້ໄດ້ຮັບ",
+          noPrevious: "No ສັກຢາວັກຊີນທີ່ຜ່ານມາຂອງປະເພດນີ້ໄດ້ຮັບ",
+          sureDelete:
+              "ທ່ານທີ່ທ່ານກໍາລັງໃຫ້ແນ່ໃຈວ່າຕ້ອງການທີ່ຈະລົບປ້ອງກັນພະຍາດນີ້?",
           title: "ວັກ​ຊີນ​ປ້ອງ​ກັນ",
         ),
       ),
@@ -2039,7 +2109,12 @@ class AppLocalizations {
         patientInformation: "ຂໍ້ມູນຜູ້ປ່ວຍ",
         summaryReport: "ບົດລາຍງານສະຫຼຸບສັງລວມ",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "ຄົນເຈັບ",
+      ),
       relationships: AppLocalizations_Labels_Relationships(
+        aunt: "ປ້າ",
+        brother: "ອ້າຍ",
         daughter: "ລູກສາວ",
         error: "ກະລຸນາເລືອກສໍາພັນ",
         father: "ພຣະບິດາ",
@@ -2054,8 +2129,6 @@ class AppLocalizations {
         son: "ລູກຊາຍ",
         title: "ຄວາມສໍາພັນ",
         uncle: "ລຸງ",
-        aunt: "ປ້າ",
-        brother: "ອ້າຍ",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "ຊ້ໍາ",
@@ -2065,15 +2138,13 @@ class AppLocalizations {
         theme: "Theme",
         title: "ການຕັ້ງຄ່າ",
       ),
-      patient: AppLocalizations_Labels_Patient(
-        title: "",
-      ),
     ),
     Locale.fromSubtags(languageCode: "mr"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "जोडा",
-        cancel: "रद्द करा",
         back: "मागे",
+        cancel: "रद्द करा",
+        delete: "हटवा",
         home: "मुख्यपृष्ठ",
         logout: "बाहेर पडणे",
         ok: "ठीक आहे",
@@ -2137,7 +2208,10 @@ class AppLocalizations {
           addDate: "लस तारीख जोडा:",
           certify: "तारखा प्रमाणित करण्यासाठी क्लिक करा",
           dateGiven: "तारीख दिले",
+          delete: "लसीकरण हटवा",
           none: "दिलेल्या या प्रकारचे कोणतेही मागील लस",
+          noPrevious: "दिलेल्या या प्रकारचे कोणतेही मागील लस",
+          sureDelete: "आपण या लसीकरण हटवू इच्छिता आपल्याला खात्री आहे?",
           title: "लसीकरण",
         ),
       ),
@@ -2160,7 +2234,12 @@ class AppLocalizations {
         patientInformation: "रुग्णांच्या माहिती",
         summaryReport: "सारांश अहवाल",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "रुग्णांच्या",
+      ),
       relationships: AppLocalizations_Labels_Relationships(
+        aunt: "काकू",
+        brother: "भाऊ",
         daughter: "मुलगी",
         error: "कृपया संबंध निवडा",
         father: "वडील",
@@ -2175,8 +2254,6 @@ class AppLocalizations {
         son: "मुलगा",
         title: "नाते",
         uncle: "काका",
-        aunt: "काकू",
-        brother: "भाऊ",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "गडद",
@@ -2186,15 +2263,13 @@ class AppLocalizations {
         theme: "थीम",
         title: "सेटिंग्ज",
       ),
-      patient: AppLocalizations_Labels_Patient(
-        title: "",
-      ),
     ),
     Locale.fromSubtags(languageCode: "ne"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "थप",
-        cancel: "रद्द",
         back: "फिर्ता",
+        cancel: "रद्द",
+        delete: "मेटाउन",
         home: "घर",
         logout: "बाहिर निस्कनु",
         ok: "ठिक छ",
@@ -2258,7 +2333,10 @@ class AppLocalizations {
           addDate: "टीका को मिति थप्न:",
           certify: "मिति प्रमाणित गर्न क्लिक गर्नुहोस्",
           dateGiven: "मिति दिइएको",
+          delete: "मेटाउने खोप",
           none: "यस प्रकारका कुनै पनि अघिल्लो सुइहरु दिइएको",
+          noPrevious: "यस प्रकारका कुनै पनि अघिल्लो सुइहरु दिइएको",
+          sureDelete: "तपाईं यो खोप मेट्न निश्चित हुनुहुन्छ?",
           title: "औषधी",
         ),
       ),
@@ -2281,7 +2359,12 @@ class AppLocalizations {
         patientInformation: "रोगी सूचना",
         summaryReport: "सारांश रिपोर्ट",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "बिरामी",
+      ),
       relationships: AppLocalizations_Labels_Relationships(
+        aunt: "चाची",
+        brother: "भाइ",
         daughter: "छोरी",
         error: "कृपया सम्बन्ध चयन",
         father: "बुबा",
@@ -2296,8 +2379,6 @@ class AppLocalizations {
         son: "छोरा",
         title: "सम्बन्ध",
         uncle: "मामा",
-        aunt: "चाची",
-        brother: "भाइ",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "गाढा",
@@ -2307,15 +2388,13 @@ class AppLocalizations {
         theme: "विषय",
         title: "सेटिङहरू",
       ),
-      patient: AppLocalizations_Labels_Patient(
-        title: "",
-      ),
     ),
     Locale.fromSubtags(languageCode: "pt"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "Adicionar",
-        cancel: "Cancelar",
         back: "De volta",
+        cancel: "Cancelar",
+        delete: "Excluir",
         home: "Casa",
         logout: "Sair",
         ok: "Está bem",
@@ -2379,7 +2458,10 @@ class AppLocalizations {
           addDate: "Adicionar data de vacina:",
           certify: "Clique para certificar datas",
           dateGiven: "data Dado",
+          delete: "Imunização de exclusão",
           none: "Não há vacinas anteriores deste tipo de dado",
+          noPrevious: "Não há vacinas anteriores deste tipo de dado",
+          sureDelete: "Tem certeza de que deseja excluir esta imunização?",
           title: "Vacinas",
         ),
       ),
@@ -2402,7 +2484,12 @@ class AppLocalizations {
         patientInformation: "Informação do paciente",
         summaryReport: "Relatório Resumido",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "Paciente",
+      ),
       relationships: AppLocalizations_Labels_Relationships(
+        aunt: "Tia",
+        brother: "Irmão",
         daughter: "Filha",
         error: "Por favor seleccione relacionamento",
         father: "Pai",
@@ -2417,8 +2504,6 @@ class AppLocalizations {
         son: "Filho",
         title: "Relação",
         uncle: "Tio",
-        aunt: "Tia",
-        brother: "Irmão",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "Sombrio",
@@ -2428,15 +2513,13 @@ class AppLocalizations {
         theme: "Tema",
         title: "Configurações",
       ),
-      patient: AppLocalizations_Labels_Patient(
-        title: "",
-      ),
     ),
     Locale.fromSubtags(languageCode: "pa"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "ਜੋੜੋ",
-        cancel: "ਰੱਦ ਕਰੋ",
         back: "ਵਾਪਸ",
+        cancel: "ਰੱਦ ਕਰੋ",
+        delete: "ਹਟਾਓ",
         home: "ਮੁੱਖ",
         logout: "ਲਾੱਗ ਆਊਟ, ਬਾਹਰ ਆਉਣਾ",
         ok: "ਠੀਕ ਹੈ",
@@ -2500,7 +2583,10 @@ class AppLocalizations {
           addDate: "ਵੈਕਸੀਨ ਦੀ ਮਿਤੀ ਜੋੜੋ:",
           certify: "ਦਰਜ ਤਸਦੀਕ ਕਰਨ ਲਈ ਕਲਿੱਕ ਕਰੋ",
           dateGiven: "ਮਿਤੀ",
+          delete: "ਹਟਾਓ ਟੀਕਾਕਰਣ",
           none: "ਇਸ ਕਿਸਮ ਦੀ ਕੋਈ ਪਿਛਲੇ ਟੀਕੇ ਦਿੱਤੇ ਗਏ",
+          noPrevious: "ਇਸ ਕਿਸਮ ਦੀ ਕੋਈ ਪਿਛਲੇ ਟੀਕੇ ਦਿੱਤੇ ਗਏ",
+          sureDelete: "ਤੁਹਾਨੂੰ ਇਸ ਟੀਕਾਕਰਨ ਨੂੰ ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?",
           title: "ਟੀਕੇ",
         ),
       ),
@@ -2523,7 +2609,12 @@ class AppLocalizations {
         patientInformation: "ਮਰੀਜ਼ ਜਾਣਕਾਰੀ",
         summaryReport: "ਸਮਰੀ ਰਿਪੋਰਟ",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "ਮਰੀਜ਼",
+      ),
       relationships: AppLocalizations_Labels_Relationships(
+        aunt: "ਮਾਸੀ",
+        brother: "ਭਰਾ",
         daughter: "ਧੀ",
         error: "ਕਿਰਪਾ ਕਰਕੇ ਰਿਸ਼ਤਾ ਦੀ ਚੋਣ ਕਰੋ",
         father: "ਪਿਤਾ",
@@ -2538,8 +2629,6 @@ class AppLocalizations {
         son: "ਪੁੱਤਰ",
         title: "ਰਿਸ਼ਤਾ",
         uncle: "ਅੰਕਲ",
-        aunt: "ਮਾਸੀ",
-        brother: "ਭਰਾ",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "ਹਨੇਰ",
@@ -2549,15 +2638,13 @@ class AppLocalizations {
         theme: "ਥੀਮ",
         title: "ਸੈਟਿੰਗ",
       ),
-      patient: AppLocalizations_Labels_Patient(
-        title: "",
-      ),
     ),
     Locale.fromSubtags(languageCode: "so"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "Add",
-        cancel: "Jooji",
         back: "Back",
+        cancel: "Jooji",
+        delete: "delete",
         home: "Home",
         logout: "Ka bax",
         ok: "OK",
@@ -2621,7 +2708,10 @@ class AppLocalizations {
           addDate: "Ku dar taariikhda tallaalka:",
           certify: "Guji si aad u cadeynayaa taariikhaha",
           dateGiven: "Taariikhda Marka la eego",
+          delete: "Tallaalka delete",
           none: "No tallaal hore oo noocan ah la siiyo",
+          noPrevious: "No tallaal hore oo noocan ah la siiyo",
+          sureDelete: "Hubi in aad aad rabto in aad tirtirto tallaalka this?",
           title: "Talaalo",
         ),
       ),
@@ -2644,7 +2734,12 @@ class AppLocalizations {
         patientInformation: "Macluumaadka bukaanka",
         summaryReport: "Warbixinta Kooban",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "bukaanka",
+      ),
       relationships: AppLocalizations_Labels_Relationships(
+        aunt: "eedaday",
+        brother: "Brother",
         daughter: "Gabadhay",
         error: "Fadlan dooro xiriir",
         father: "Aabbaha",
@@ -2659,8 +2754,6 @@ class AppLocalizations {
         son: "Wiilka",
         title: "xiriirka",
         uncle: "adeer",
-        aunt: "eedaday",
-        brother: "Brother",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "Dark",
@@ -2670,15 +2763,13 @@ class AppLocalizations {
         theme: "theme",
         title: "Settings",
       ),
-      patient: AppLocalizations_Labels_Patient(
-        title: "",
-      ),
     ),
     Locale.fromSubtags(languageCode: "sw"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "Kuongeza",
-        cancel: "kufuta",
         back: "Back",
+        cancel: "kufuta",
+        delete: "Futa",
         home: "Home",
         logout: "Toka",
         ok: "sawa",
@@ -2742,7 +2833,10 @@ class AppLocalizations {
           addDate: "Ongeza tarehe ya chanjo:",
           certify: "Bofya ili kuthibitisha tarehe",
           dateGiven: "tarehe Kutokana",
+          delete: "Chanjo Futa",
           none: "Hakuna chanjo ya awali ya aina hii kutokana na",
+          noPrevious: "Hakuna chanjo ya awali ya aina hii kutokana na",
+          sureDelete: "Una uhakika unataka kufuta chanjo hii?",
           title: "Chanjo",
         ),
       ),
@@ -2765,7 +2859,12 @@ class AppLocalizations {
         patientInformation: "Taarifa mgonjwa",
         summaryReport: "Ripoti ya muhtasari",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "mgonjwa",
+      ),
       relationships: AppLocalizations_Labels_Relationships(
+        aunt: "shangazi",
+        brother: "ndugu",
         daughter: "Binti",
         error: "Tafadhali chagua uhusiano",
         father: "Baba",
@@ -2780,8 +2879,6 @@ class AppLocalizations {
         son: "mwana",
         title: "uhusiano",
         uncle: "Uncle",
-        aunt: "shangazi",
-        brother: "ndugu",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "Dark",
@@ -2791,15 +2888,13 @@ class AppLocalizations {
         theme: "Theme",
         title: "mipangilio",
       ),
-      patient: AppLocalizations_Labels_Patient(
-        title: "",
-      ),
     ),
     Locale.fromSubtags(languageCode: "tl"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "magdagdag",
-        cancel: "kanselahin",
         back: "likod",
+        cancel: "kanselahin",
+        delete: "Delete",
         home: "bahay",
         logout: "Mag-logout",
         ok: "OK",
@@ -2863,7 +2958,10 @@ class AppLocalizations {
           addDate: "Magdagdag ng petsa ng bakuna:",
           certify: "I-click upang patunayan petsa",
           dateGiven: "Petsa Given",
+          delete: "Delete Immunization",
           none: "Walang nakaraang bakuna na may ganitong uri na ibinigay",
+          noPrevious: "Walang nakaraang bakuna na may ganitong uri na ibinigay",
+          sureDelete: "Sigurado ka bang gusto mong burahin ang pagbabakuna?",
           title: "Mga bakuna",
         ),
       ),
@@ -2886,7 +2984,12 @@ class AppLocalizations {
         patientInformation: "pasyente Impormasyon",
         summaryReport: "Buod ng Ulat",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "pasyente",
+      ),
       relationships: AppLocalizations_Labels_Relationships(
+        aunt: "Tiya",
+        brother: "kapatid na lalaki",
         daughter: "Anak na babae",
         error: "Mangyaring pumili relasyon",
         father: "ama",
@@ -2901,8 +3004,6 @@ class AppLocalizations {
         son: "anak",
         title: "Relasyon",
         uncle: "Tiyuhin",
-        aunt: "Tiya",
-        brother: "kapatid na lalaki",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "madilim",
@@ -2912,15 +3013,13 @@ class AppLocalizations {
         theme: "tema",
         title: "Mga Setting",
       ),
-      patient: AppLocalizations_Labels_Patient(
-        title: "",
-      ),
     ),
     Locale.fromSubtags(languageCode: "th"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "เพิ่ม",
-        cancel: "ยกเลิก",
         back: "กลับ",
+        cancel: "ยกเลิก",
+        delete: "ลบ",
         home: "บ้าน",
         logout: "ออกจากระบบ",
         ok: "ตกลง",
@@ -2984,7 +3083,11 @@ class AppLocalizations {
           addDate: "เพิ่มวันวัคซีน:",
           certify: "คลิ๊กเพื่อรับรองวัน",
           dateGiven: "วันที่ที่กำหนด",
+          delete: "การฉีดวัคซีนลบ",
           none: "ไม่มีวัคซีนก่อนหน้าประเภทนี้ได้รับ",
+          noPrevious: "ไม่มีวัคซีนก่อนหน้าประเภทนี้ได้รับ",
+          sureDelete:
+              "คุณแน่ใจหรือไม่ว่าต้องการลบการสร้างภูมิคุ้มกันโรคนี้หรือไม่?",
           title: "วัคซีน",
         ),
       ),
@@ -3007,7 +3110,12 @@ class AppLocalizations {
         patientInformation: "ข้อมูลสำหรับผู้ป่วย",
         summaryReport: "รายงานสรุป",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "อดทน",
+      ),
       relationships: AppLocalizations_Labels_Relationships(
+        aunt: "ป้า",
+        brother: "พี่ชาย",
         daughter: "ลูกสาว",
         error: "กรุณาเลือกความสัมพันธ์",
         father: "พ่อ",
@@ -3022,8 +3130,6 @@ class AppLocalizations {
         son: "ลูกชาย",
         title: "ความสัมพันธ์",
         uncle: "ลุง",
-        aunt: "ป้า",
-        brother: "พี่ชาย",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "มืด",
@@ -3033,15 +3139,13 @@ class AppLocalizations {
         theme: "กระทู้",
         title: "การตั้งค่า",
       ),
-      patient: AppLocalizations_Labels_Patient(
-        title: "",
-      ),
     ),
     Locale.fromSubtags(languageCode: "uz"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "qo'shish",
-        cancel: "Bekor qilish",
         back: "orqaga",
+        cancel: "Bekor qilish",
+        delete: "Delete",
         home: "uy",
         logout: "Chiqish",
         ok: "OK",
@@ -3105,7 +3209,10 @@ class AppLocalizations {
           addDate: "emlash sana qo'shish:",
           certify: "xurmo tasdiqlash uchun bosing",
           dateGiven: "Sana hisobga",
+          delete: "Delete emlash",
           none: "berilgan Ushbu turdagi No oldingi vaksinalar",
+          noPrevious: "berilgan Ushbu turdagi No oldingi vaksinalar",
+          sureDelete: "Agar bu emlashlar o'chirishni istaysizmi?",
           title: "Vaksinalar",
         ),
       ),
@@ -3128,7 +3235,12 @@ class AppLocalizations {
         patientInformation: "Bemor Axborot",
         summaryReport: "Xulosa hisoboti",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "kasal",
+      ),
       relationships: AppLocalizations_Labels_Relationships(
+        aunt: "amma",
+        brother: "aka",
         daughter: "qiz",
         error: "munosabatlarni tanlang Iltimos,",
         father: "ota",
@@ -3143,8 +3255,6 @@ class AppLocalizations {
         son: "o'g'il",
         title: "munosabatlar",
         uncle: "Tog'a",
-        aunt: "amma",
-        brother: "aka",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "Dark",
@@ -3154,15 +3264,13 @@ class AppLocalizations {
         theme: "mavzu",
         title: "Sozlamalar",
       ),
-      patient: AppLocalizations_Labels_Patient(
-        title: "",
-      ),
     ),
     Locale.fromSubtags(languageCode: "vi"): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: "Thêm vào",
-        cancel: "hủy bỏ",
         back: "Trở lại",
+        cancel: "hủy bỏ",
+        delete: "Xóa bỏ",
         home: "Trang Chủ",
         logout: "Đăng xuất",
         ok: "đồng ý",
@@ -3226,7 +3334,10 @@ class AppLocalizations {
           addDate: "Thêm ngày vắc-xin:",
           certify: "Nhấn vào đây để xác nhận ngày",
           dateGiven: "ngày Với",
+          delete: "Tiêm chủng Xóa",
           none: "Không loại vắc-xin trước đó thuộc loại này được",
+          noPrevious: "Không loại vắc-xin trước đó thuộc loại này được",
+          sureDelete: "Bạn có chắc chắn muốn xóa tiêm chủng này?",
           title: "Vắc-xin",
         ),
       ),
@@ -3249,7 +3360,12 @@ class AppLocalizations {
         patientInformation: "Thông tin bệnh nhân",
         summaryReport: "Báo cáo tổng hợp",
       ),
+      patient: AppLocalizations_Labels_Patient(
+        title: "Kiên nhẫn",
+      ),
       relationships: AppLocalizations_Labels_Relationships(
+        aunt: "Cô",
+        brother: "Anh trai",
         daughter: "Con gái",
         error: "Vui lòng chọn mối quan hệ",
         father: "Bố",
@@ -3264,8 +3380,6 @@ class AppLocalizations {
         son: "Con trai",
         title: "Mối quan hệ",
         uncle: "Chú",
-        aunt: "Cô",
-        brother: "Anh trai",
       ),
       settings: AppLocalizations_Labels_Settings(
         dark: "Tối",
@@ -3274,9 +3388,6 @@ class AppLocalizations {
         system: "hệ thống",
         theme: "chủ đề",
         title: "Cài đặt",
-      ),
-      patient: AppLocalizations_Labels_Patient(
-        title: "",
       ),
     ),
   };
@@ -3290,8 +3401,9 @@ class AppLocalizations {
 class AppLocalizations_Labels_Actions {
   const AppLocalizations_Labels_Actions(
       {this.add,
-      this.cancel,
       this.back,
+      this.cancel,
+      this.delete,
       this.home,
       this.logout,
       this.ok,
@@ -3301,9 +3413,11 @@ class AppLocalizations_Labels_Actions {
 
   final String add;
 
+  final String back;
+
   final String cancel;
 
-  final String back;
+  final String delete;
 
   final String home;
 
@@ -3321,10 +3435,12 @@ class AppLocalizations_Labels_Actions {
     switch (key) {
       case 'add':
         return add;
-      case 'cancel':
-        return cancel;
       case 'back':
         return back;
+      case 'cancel':
+        return cancel;
+      case 'delete':
+        return delete;
       case 'home':
         return home;
       case 'logout':
@@ -3570,7 +3686,14 @@ class AppLocalizations_Labels_Language {
 
 class AppLocalizations_Labels_Medical_Vaccines {
   const AppLocalizations_Labels_Medical_Vaccines(
-      {this.addDate, this.certify, this.dateGiven, this.none, this.title});
+      {this.addDate,
+      this.certify,
+      this.dateGiven,
+      this.delete,
+      this.none,
+      this.noPrevious,
+      this.sureDelete,
+      this.title});
 
   final String addDate;
 
@@ -3578,7 +3701,13 @@ class AppLocalizations_Labels_Medical_Vaccines {
 
   final String dateGiven;
 
+  final String delete;
+
   final String none;
+
+  final String noPrevious;
+
+  final String sureDelete;
 
   final String title;
 
@@ -3590,8 +3719,14 @@ class AppLocalizations_Labels_Medical_Vaccines {
         return certify;
       case 'dateGiven':
         return dateGiven;
+      case 'delete':
+        return delete;
       case 'none':
         return none;
+      case 'noPrevious':
+        return noPrevious;
+      case 'sureDelete':
+        return sureDelete;
       case 'title':
         return title;
       default:
@@ -3741,9 +3876,26 @@ class AppLocalizations_Labels_Pages {
   }
 }
 
+class AppLocalizations_Labels_Patient {
+  const AppLocalizations_Labels_Patient({this.title});
+
+  final String title;
+
+  String getByKey(String key) {
+    switch (key) {
+      case 'title':
+        return title;
+      default:
+        return '';
+    }
+  }
+}
+
 class AppLocalizations_Labels_Relationships {
   const AppLocalizations_Labels_Relationships(
-      {this.daughter,
+      {this.aunt,
+      this.brother,
+      this.daughter,
       this.error,
       this.father,
       this.grandfather,
@@ -3756,9 +3908,11 @@ class AppLocalizations_Labels_Relationships {
       this.sister,
       this.son,
       this.title,
-      this.uncle,
-      this.aunt,
-      this.brother});
+      this.uncle});
+
+  final String aunt;
+
+  final String brother;
 
   final String daughter;
 
@@ -3788,12 +3942,12 @@ class AppLocalizations_Labels_Relationships {
 
   final String uncle;
 
-  final String aunt;
-
-  final String brother;
-
   String getByKey(String key) {
     switch (key) {
+      case 'aunt':
+        return aunt;
+      case 'brother':
+        return brother;
       case 'daughter':
         return daughter;
       case 'error':
@@ -3822,10 +3976,6 @@ class AppLocalizations_Labels_Relationships {
         return title;
       case 'uncle':
         return uncle;
-      case 'aunt':
-        return aunt;
-      case 'brother':
-        return brother;
       default:
         return '';
     }
@@ -3873,21 +4023,6 @@ class AppLocalizations_Labels_Settings {
   }
 }
 
-class AppLocalizations_Labels_Patient {
-  const AppLocalizations_Labels_Patient({this.title});
-
-  final String title;
-
-  String getByKey(String key) {
-    switch (key) {
-      case 'title':
-        return title;
-      default:
-        return '';
-    }
-  }
-}
-
 class AppLocalizations_Labels {
   const AppLocalizations_Labels(
       {this.actions,
@@ -3903,9 +4038,9 @@ class AppLocalizations_Labels {
       this.medical,
       this.name,
       this.pages,
+      this.patient,
       this.relationships,
-      this.settings,
-      this.patient});
+      this.settings});
 
   final AppLocalizations_Labels_Actions actions;
 
@@ -3933,11 +4068,11 @@ class AppLocalizations_Labels {
 
   final AppLocalizations_Labels_Pages pages;
 
+  final AppLocalizations_Labels_Patient patient;
+
   final AppLocalizations_Labels_Relationships relationships;
 
   final AppLocalizations_Labels_Settings settings;
-
-  final AppLocalizations_Labels_Patient patient;
 
   String getByKey(String key) {
     switch (key) {

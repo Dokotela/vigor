@@ -41,7 +41,7 @@ class InfoBannerWidget extends StatelessWidget {
           ),
           _spacerV,
           Text(
-            'Age: $relativeAge',
+            '${labels.age.title}: $relativeAge',
             style: Get.textTheme.headline6.copyWith(fontSize: Get.width / 20),
           ),
           _spacerV,

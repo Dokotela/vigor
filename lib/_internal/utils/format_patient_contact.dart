@@ -42,11 +42,3 @@ List<CodeableConcept> _getCodeableConcept(String code, String display) => [
         )
       ])
     ];
-
-String getPatientContactType(List<PatientContact> contact) => contact == null
-    ? 'Relationship'
-    : contact[0]?.relationship == null
-        ? ''
-        : contact[0].relationship[0]?.coding == null
-            ? ''
-            : contact[0].relationship[0].coding[0]?.display?.toLowerCase();

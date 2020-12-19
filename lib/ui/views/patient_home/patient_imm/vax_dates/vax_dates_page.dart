@@ -4,9 +4,11 @@ import 'package:vigor/ui/styled_components/add_new.dart';
 import 'package:vigor/ui/styled_components/styled_components.dart';
 
 import '../../../../../controllers/local/patient_home/vax_dates_controller.dart';
+import '../../../../../localization.dart';
 
 class VaxDatesPage extends StatelessWidget {
   final controller = Get.put(VaxDatesController());
+  final labels = AppLocalizations.of(Get.context);
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +30,7 @@ class VaxDatesPage extends StatelessWidget {
               height: Get.height / 2,
               child: Obx(
                 () => controller.immList.isEmpty
-                    ? _noPrevious
+                    ? _noPrevious()
                     : ListView.separated(
                         shrinkWrap: true,
                         padding: const EdgeInsets.all(8),
@@ -84,19 +86,19 @@ class VaxDatesPage extends StatelessWidget {
   }
 
   Widget delete(int index) => AlertDialog(
-        title: Text('Delete Immunization'),
-        content: Text('Are you sure you want to delete this immunization?'),
+        title: Text(labels.medical.vaccines.delete),
+        content: Text(labels.medical.vaccines.sureDelete),
         actions: [
           TextButton(
             child: Text(
-              'Cancel',
+              labels.actions.cancel,
               style: TextStyle(color: Get.theme.colorScheme.onPrimary),
             ),
             onPressed: () => Get.back(),
           ),
           TextButton(
             child: Text(
-              'Delete',
+              labels.actions.delete,
               style: TextStyle(color: Get.theme.colorScheme.onPrimary),
             ),
             onPressed: () async => await controller.delete(index),
@@ -104,8 +106,8 @@ class VaxDatesPage extends StatelessWidget {
         ],
       );
 
-  static const _noPrevious = Text(
-    'No previous vaccines of this type given',
-    style: TextStyle(fontSize: 20, color: Colors.blue),
-  );
+  Widget _noPrevious() => Text(
+        labels.medical.vaccines.noPrevious,
+        style: TextStyle(fontSize: 20, color: Colors.blue),
+      );
 }

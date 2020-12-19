@@ -15,7 +15,7 @@ class PatientHomePage extends StatelessWidget {
     final PatientHomeController controller = Get.put(PatientHomeController());
 
     return Scaffold(
-      appBar: VigorAppBar(title: 'Patient Home'),
+      appBar: VigorAppBar(title: labels.pages.patientHome),
       body: Container(
         constraints: const BoxConstraints.expand(),
         child: Column(

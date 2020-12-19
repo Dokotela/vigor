@@ -96,7 +96,7 @@ class PatientImmPage extends StatelessWidget {
                                 _heading('RN'),
                                 _heading('1ra'),
                                 _heading('2da'),
-                                _heading('3rd'),
+                                _heading('3ra'),
                                 _heading('1er\nRef'),
                                 _heading('2da\nRef'),
                               ],
