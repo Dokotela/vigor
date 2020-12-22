@@ -118,7 +118,7 @@ class ContactsPage extends StatelessWidget {
               ),
             ),
             ThinActionButton(
-              buttonText: labels.pages.patientHome,
+              buttonText: 'Continue', //labels.pages.patientHome,
               onPressed: () async => Get.toNamed(AppRoutes.PATIENT_HOME_PAGE,
                   arguments: controller.patient),
               width: Get.width * .5,
