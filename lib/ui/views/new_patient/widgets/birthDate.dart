@@ -33,6 +33,7 @@ class BirthDateWidget extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             FlatButton(
+              padding: EdgeInsets.all(0.0),
               onPressed: () => showMyDatePicker(
                   initialDate: birthDate == DateTime(1900, 1, 1)
                       ? DateTime.now()
@@ -43,6 +44,7 @@ class BirthDateWidget extends StatelessWidget {
                   border: Border(bottom: BorderSide(color: Colors.grey[300])),
                 ),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     birthDate == DateTime(1900, 1, 1)
                         ? Text(

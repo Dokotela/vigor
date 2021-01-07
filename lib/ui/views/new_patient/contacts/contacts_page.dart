@@ -93,7 +93,10 @@ class ContactsPage extends StatelessWidget {
             Expanded(
               child: Obx(
                 () => controller.currentListLength == 0
-                    ? Text(labels.contacts.noContactsAdded)
+                    ? Text(
+                        labels.contacts.noContactsAdded,
+                        style: Get.theme.textTheme.headline6,
+                      )
                     : OrderedList(
                         label1: Text(labels.name.title,
                             style: Get.theme.textTheme.headline6),
