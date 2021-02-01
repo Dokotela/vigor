@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:fhir/r4.dart';
-import 'package:vax_cast/vax_cast.dart';
-import 'package:vigor/_internal/constants/constants.dart';
+import '../../_internal/constants/constants.dart';
+import '../../_internal/utils/vax_date.dart';
 
 class VaccineDisplay {
   VaccineDisplay();

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vigor/routes/routes.dart';
-import 'package:vigor/ui/styled_components/add_new.dart';
-import 'package:vigor/ui/styled_components/styled_components.dart';
-import 'package:vigor/ui/views/new_patient/widgets/names.dart';
 
 import '../../../../controllers/local/new_patient/contacts_controller.dart';
 import '../../../../localization.dart';
+import '../../../../routes/routes.dart';
+import '../../../styled_components/add_new.dart';
 import '../../../styled_components/app_bar.dart';
 import '../../../styled_components/bottom_navigation_bar.dart';
+import '../../../styled_components/styled_components.dart';
+import '../../../views/new_patient/widgets/names.dart';
 import 'contacts_view_controller.dart';
 
 class ContactsPage extends StatelessWidget {

@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:fhir/r4.dart';
-import 'package:fhir_db/resource_dao.dart';
+import 'package:fhir_db/r4.dart';
 import 'package:http/http.dart';
 
 import 'i_fhir_db.dart';
@@ -25,9 +25,8 @@ class IFhirServer {
   }
 
   Future uploadAllResources(Map<String, dynamic> headers) async {
-    final allResources = await ResourceDao().getAllResources(null);
+    final allResources = await ResourceDao().getAll(null);
     final resourceBundle = Bundle(
-      resourceType: 'Bundle',
       type: BundleType.transaction,
       entry: [],
     );
@@ -37,7 +36,7 @@ class IFhirServer {
           resource: resource,
           request: BundleRequest(
             method: BundleRequestMethod.post,
-            url: FhirUri(resource.resourceType),
+            url: FhirUri(resource.resourceTypeString()),
           ),
         ),
       );

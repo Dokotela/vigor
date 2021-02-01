@@ -2,10 +2,11 @@ import 'package:dartz/dartz.dart';
 import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:fhir/r4.dart';
 import 'package:get/get.dart';
-import 'package:vigor/_internal/constants/constants.dart';
-import 'package:vigor/models/data/patient_model.dart';
-import 'package:vigor/models/data/vaccine_display.dart';
-import 'package:vigor/routes/routes.dart';
+
+import '../../../_internal/constants/constants.dart';
+import '../../../models/data/patient_model.dart';
+import '../../../models/data/vaccine_display.dart';
+import '../../../routes/routes.dart';
 
 class PatientImmController extends GetxController {
   /// PROPERTIES

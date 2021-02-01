@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:fhir/r4.dart';
-import 'package:fhir_db/resource_dao.dart';
+import 'package:fhir_db/r4.dart';
 
 import '../models/failures/db_failures.dart';
 
@@ -19,11 +19,11 @@ class IFhirDb {
   }
 
   Future<Either<DbFailure, List<Resource>>> returnListOfSingleResourceType(
-      String resourceType) async {
+      R4ResourceType resourceType) async {
     List<Resource> resultList;
     try {
-      resultList =
-          await resourceDao.getAllSortedById(null, resourceType: resourceType);
+      resultList = await resourceDao
+          .getResourceType(null, resourceTypes: [resourceType]);
     } catch (error) {
       return left(DbFailure.unableToObtainList(error: error.toString()));
     }
@@ -33,22 +33,26 @@ class IFhirDb {
   Future<Either<DbFailure, List<Resource>>> returnPatientImmunizationHistory(
       String patientId) async {
     var temp = await searchFunction(
-        'Immunization', 'patient.reference', 'Patient/$patientId');
+        R4ResourceType.Immunization, 'patient.reference', 'Patient/$patientId');
     return temp;
   }
 
   Future<Either<DbFailure, List<Resource>>> returnPatientPastDeworming(
       String patientId) async {
-    return await searchFunction(
-        'MedicationAdministration', 'subject.reference', 'Patient/$patientId');
+    return await searchFunction(R4ResourceType.MedicationAdministration,
+        'subject.reference', 'Patient/$patientId');
   }
 
   Future<Either<DbFailure, List<Resource>>> searchFunction(
-      String resourceType, String searchString, String reference) async {
+      R4ResourceType resourceType, String field, String value) async {
     List<Resource> resultList;
     try {
-      resultList = await resourceDao.searchFor(
-          null, resourceType, searchString, reference);
+      resultList = await resourceDao.find(
+        null,
+        resourceType: resourceType,
+        field: field,
+        value: value,
+      );
     } catch (error) {
       return left(DbFailure.unableToObtainList(error: error.toString()));
     }

@@ -6,7 +6,6 @@ import 'package:fhir/r4.dart';
 
 Future main() async {
   final newBundle = Bundle(
-    resourceType: 'Bundle',
     type: BundleType.transaction,
     entry: <BundleEntry>[],
   );
@@ -19,7 +18,6 @@ Future main() async {
 
       if (row[1] == '') {
         final patient = Patient(
-          resourceType: 'Patient',
           name: [_getName()],
           id: Id(row[0]),
           birthDate: Date(row[5]),
@@ -37,7 +35,6 @@ Future main() async {
             final newImmunization = Immunization(
               status: Code('completed'),
               occurrenceDateTime: FhirDateTime(row[i]),
-              resourceType: 'Immunization',
               patient: Reference(reference: 'Patient/${patient.id.toString()}'),
               vaccineCode: vaxCode(i),
             );

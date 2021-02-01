@@ -1,13 +1,13 @@
 import 'package:fhir/r4.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vigor/_internal/constants/constants.dart';
-import 'package:vigor/services/i_fhir_db.dart';
 
+import '../../../_internal/constants/constants.dart';
 import '../../../_internal/utils/relationship_types.dart';
 import '../../../_internal/utils/utils.dart';
 import '../../../localization.dart';
 import '../../../models/data/patient_model.dart';
+import '../../../services/i_fhir_db.dart';
 
 class ContactsController extends GetxController {
   /// PROPERTIES

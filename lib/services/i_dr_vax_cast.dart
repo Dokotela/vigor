@@ -1,5 +1,6 @@
 import 'package:fhir/r4.dart';
-import 'package:vax_cast/vax_cast.dart';
+import '../_internal/utils/simple_cvx_map.dart';
+import '../_internal/utils/vax_date.dart';
 
 abstract class IDrVaxCast {
   static Map<String, Set<Immunization>> drVaxCast({

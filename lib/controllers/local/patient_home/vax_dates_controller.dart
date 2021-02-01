@@ -1,8 +1,9 @@
 import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:fhir/r4.dart';
 import 'package:get/get.dart';
-import 'package:vigor/_internal/constants/constants.dart';
-import 'package:vigor/_internal/utils/utils.dart';
+
+import '../../../_internal/constants/constants.dart';
+import '../../../_internal/utils/utils.dart';
 
 import 'patient_imm_controller.dart';
 
