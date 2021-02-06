@@ -4,7 +4,7 @@ import 'package:vigor/ui/styled_components/add_new.dart';
 import 'package:vigor/ui/styled_components/styled_components.dart';
 
 import '../../../../../controllers/local/patient_home/vax_dates_controller.dart';
-import '../../../../../localization.dart';
+import '../../../../localization.dart';
 
 class VaxDatesPage extends StatelessWidget {
   final controller = Get.put(VaxDatesController());

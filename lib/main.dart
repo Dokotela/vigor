@@ -4,8 +4,9 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
 import 'controllers/commands/settings_controller.dart';
-import 'localization.dart';
+import 'controllers/controllers.dart';
 import 'routes/routes.dart';
+import 'ui/localization.dart';
 import 'ui/styled_components/styled_loading.dart';
 import 'ui/views/views.dart';
 
@@ -19,7 +20,11 @@ Future main() async {
 // Theme uses GetxService so that it isn't closed during app lifecycle
 Future<void> _initServices() async {
   await GetStorage.init();
-  Get.put<SettingsController>(SettingsController());
+  Get.put<StorageController>(StorageController());
+  await StorageController.to.getFirstLoadInfoFromStore();
+  Get.put<LocaleController>(LocaleController());
+  Get.put<ThemeController>(ThemeController());
+  await ThemeController.to.getThemeModeFromStore();
 }
 
 class MyApp extends StatelessWidget {

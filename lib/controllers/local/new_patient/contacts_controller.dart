@@ -5,9 +5,9 @@ import 'package:get/get.dart';
 import '../../../_internal/constants/constants.dart';
 import '../../../_internal/utils/relationship_types.dart';
 import '../../../_internal/utils/utils.dart';
-import '../../../localization.dart';
 import '../../../models/data/patient_model.dart';
 import '../../../services/i_fhir_db.dart';
+import '../../../ui/localization.dart';
 
 class ContactsController extends GetxController {
   /// PROPERTIES

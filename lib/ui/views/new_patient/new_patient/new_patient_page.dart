@@ -4,7 +4,7 @@ import 'package:vigor/ui/styled_components/thin_action_button.dart';
 import 'package:vigor/ui/styled_components/drop_down_selection.dart';
 
 import '../../../../controllers/local/new_patient/new_patient_controller.dart';
-import '../../../../localization.dart';
+import '../../../localization.dart';
 import '../../../styled_components/app_bar.dart';
 import '../../../styled_components/bottom_navigation_bar.dart';
 import '../widgets/birthDate.dart';

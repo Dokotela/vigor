@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
-import '../../localization.dart';
+
+import '../../ui/localization.dart';
 
 List<String> genderList() {
   final labels = AppLocalizations.of(Get.context);

@@ -9,8 +9,8 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
 import '../../_internal/constants/constants.dart';
-import '../../localization.dart';
 import '../../models/data/menu_option.dart';
+import '../../ui/localization.dart';
 import '../../ui/theme/app_theme.dart';
 
 /// Previously taken directly from John's repo:
@@ -55,8 +55,8 @@ class SettingsController extends GetxController {
 
   /// GETTER Functions
   ThemeMode get themeMode => _themeMode.value;
-  ThemeData get lightTheme => appTheme(t: ThemeType.Vigor_Light);
-  ThemeData get darkTheme => appTheme(t: ThemeType.Vigor_Dark);
+  ThemeData get lightTheme => AppTheme.fromType(ThemeType.Vigor_Light);
+  ThemeData get darkTheme => AppTheme.fromType(ThemeType.Vigor_Dark);
 
   /// checks if theme is set, otherwise uses brightness to set it
   ThemeData getAppTheme({Brightness brightness}) =>

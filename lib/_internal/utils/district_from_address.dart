@@ -1,7 +1,7 @@
 import 'package:fhir/r4.dart';
 import 'package:get/get.dart';
 
-import '../../localization.dart';
+import '../../ui/localization.dart';
 
 String districtFromAddress(List<Address> address) {
   final labels = AppLocalizations.of(Get.context);

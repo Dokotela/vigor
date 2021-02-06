@@ -3,9 +3,9 @@ import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../localization.dart';
 import '../../../routes/routes.dart';
 import '../../../ui/styled_components/styled_components.dart';
+import '../../localization.dart';
 import 'flag.dart';
 import 'splash_title.dart';
 

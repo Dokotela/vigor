@@ -6,11 +6,11 @@ import 'package:get/get.dart';
 import '../../../_internal/constants/constants.dart';
 import '../../../_internal/utils/utils.dart';
 import '../../../_internal/utils/validators.dart';
-import '../../../localization.dart';
 import '../../../models/data/patient_model.dart';
 import '../../../models/failures/db_failures.dart';
 import '../../../routes/routes.dart';
 import '../../../services/i_fhir_db.dart';
+import '../../../ui/localization.dart';
 
 class NewPatientController extends GetxController {
   /// PROPERTIES

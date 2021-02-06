@@ -3,9 +3,9 @@ import 'package:get/get.dart';
 import 'package:vigor/ui/styled_components/styled_components.dart';
 
 import '../../../../controllers/local/patient_home/patient_imm_controller.dart';
-import '../../../../localization.dart';
 import '../../../../ui/styled_components/app_bar.dart';
 import '../../../../ui/styled_components/bottom_navigation_bar.dart';
+import '../../../localization.dart';
 import 'widgets/dose_options.dart';
 
 class PatientImmPage extends StatelessWidget {

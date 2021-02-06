@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../localization.dart';
 import '../../models/data/menu_option.dart';
+import '../../ui/localization.dart';
 import 'settings_controller.dart';
 
 /// this was taken directly from John's repo: https://github.com/FireJuun/prapare

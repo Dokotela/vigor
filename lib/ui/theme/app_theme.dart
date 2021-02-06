@@ -16,11 +16,13 @@ enum ThemeType {
   Vigor_Dark,
 }
 
-ThemeData appTheme({ThemeType t}) {
-  switch (t) {
-    case ThemeType.Vigor_Dark:
-      return darkTheme;
-    default:
-      return lightTheme;
+abstract class AppTheme {
+  static ThemeData fromType([ThemeType t]) {
+    switch (t) {
+      case ThemeType.Vigor_Dark:
+        return darkTheme;
+      default:
+        return lightTheme;
+    }
   }
 }

@@ -2,7 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_sheet_localization/flutter_sheet_localization.dart';
 
-import 'api_keys.dart';
+import '../api/api.dart';
 
 part 'localization.g.dart';
 
@@ -14,13 +14,14 @@ part 'localization.g.dart';
 // ignore_for_file: prefer_single_quotes
 // ignore_for_file: prefer_const_constructors
 
-const version = 26;
+const version = 27;
 
 /// See 1. to get DOCID and SHEETID
 /// the `1` is the generated version. You must increment it each time you want
 /// to regenerate a new version of the labels.
 
-@SheetLocalization(ApiKeys.localeSpreadsheetId, ApiKeys.localeSheetId, version)
+@SheetLocalization(
+    ApiPublic.localeSpreadsheetId, ApiPublic.localeSheetId, version)
 class AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
   const AppLocalizationsDelegate();
 

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../../controllers/local/new_patient/contacts_controller.dart';
-import '../../../../localization.dart';
 import '../../../../routes/routes.dart';
+import '../../../localization.dart';
 import '../../../styled_components/add_new.dart';
 import '../../../styled_components/app_bar.dart';
 import '../../../styled_components/bottom_navigation_bar.dart';

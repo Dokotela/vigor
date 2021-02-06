@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../controllers/local/all_patients/patient_search_controller.dart';
-import '../../../localization.dart';
 import '../../../routes/routes.dart';
 import '../../../ui/styled_components/add_new.dart';
 import '../../../ui/styled_components/styled_components.dart';
+import '../../localization.dart';
 import '../../styled_components/bottom_navigation_bar.dart';
 import 'patient_search_view_controller.dart';
 

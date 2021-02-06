@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
-import '../../localization.dart';
+
+import '../../ui/localization.dart';
 
 List<String> relationshipTypes() {
   final labels = AppLocalizations.of(Get.context);

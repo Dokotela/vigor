@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../controllers/local/patient_home/patient_home_controller.dart';
-import '../../../localization.dart';
 import '../../../ui/styled_components/action_button.dart';
 import '../../../ui/styled_components/app_bar.dart';
 import '../../../ui/styled_components/bottom_navigation_bar.dart';
 import '../../../ui/styled_components/info_banner.dart';
+import '../../localization.dart';
 
 class PatientHomePage extends StatelessWidget {
   @override

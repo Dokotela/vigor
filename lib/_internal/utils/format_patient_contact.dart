@@ -1,6 +1,7 @@
 import 'package:fhir/r4.dart';
 import 'package:get/get.dart';
-import '../../localization.dart';
+
+import '../../ui/localization.dart';
 
 PatientContact formatPatientContact(
         String family, String given, String barrio, String relationship) =>

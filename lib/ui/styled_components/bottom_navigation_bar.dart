@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../localization.dart';
+
+import '../localization.dart';
 import '../views/views.dart';
 
 BottomNavigationBar bottomAppBar(
