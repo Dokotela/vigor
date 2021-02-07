@@ -48,6 +48,8 @@ class NewPatientPage extends StatelessWidget {
                         givenNameError: controller.givenNameError,
                       ),
 
+                      SizedBox(height: Get.height * .04),
+
                       /// reusable widget for entering gender at birth, is passed a
                       /// boolean (true = female, false = male), and then the
                       /// controller function to change it
@@ -58,6 +60,8 @@ class NewPatientPage extends StatelessWidget {
                         selectNew: controller.setGender,
                         error: controller.genderError,
                       ),
+
+                      SizedBox(height: Get.height * .04),
 
                       /// reusable widget for entering birthdate, arguments are
                       /// controller function to choose birthdate, the current

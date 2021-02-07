@@ -1,9 +1,15 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 import 'package:vigor/_internal/constants/dose_display.dart';
 import 'package:vigor/_internal/utils/utils.dart';
+import 'package:vigor/controllers/controllers.dart';
 
-Widget doseOptions(Either<DoseDisplay, String> display) {
+Widget doseOptions(
+    Either<DoseDisplay, String> display, SizingInformation sizingInformation) {
+  final screenSize = Get.put(ResponsiveCommand());
+
   return display.fold(
     (l) {
       switch (l) {
@@ -13,7 +19,9 @@ Widget doseOptions(Either<DoseDisplay, String> display) {
         case DoseDisplay.due:
           return Container(
             alignment: Alignment.center,
-            child: Icon(Icons.access_time, color: Colors.orange, size: 24),
+            child: Icon(Icons.access_time,
+                color: Colors.orange,
+                size: screenSize.iconSizes(sizingInformation)),
           );
 
         case DoseDisplay.completedToday:
@@ -21,7 +29,9 @@ Widget doseOptions(Either<DoseDisplay, String> display) {
             alignment: Alignment.center,
             child: IconButton(
                 color: Colors.yellow,
-                icon: Icon(Icons.check_circle, color: Colors.green, size: 24),
+                icon: Icon(Icons.check_circle,
+                    color: Colors.green,
+                    size: screenSize.iconSizes(sizingInformation)),
                 tooltip: dateFromDateTime(DateTime.now()),
                 onPressed: () {}),
           );
@@ -32,6 +42,7 @@ Widget doseOptions(Either<DoseDisplay, String> display) {
               child: Icon(
                 Icons.warning,
                 color: Colors.red,
+                size: screenSize.iconSizes(sizingInformation),
               ));
 
         case DoseDisplay.na:
@@ -49,6 +60,7 @@ Widget doseOptions(Either<DoseDisplay, String> display) {
       child: Icon(
         Icons.check_circle,
         color: Colors.green,
+        size: screenSize.iconSizes(sizingInformation),
       ),
     ),
   );

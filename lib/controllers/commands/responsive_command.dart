@@ -28,8 +28,8 @@ class ResponsiveCommand extends GetxController {
                   ? 40
                   : sizingInformation.deviceScreenType ==
                           DeviceScreenType.desktop
-                      ? 30
-                      : 30,
+                      ? 40
+                      : 40,
           vertical: sizingInformation.deviceScreenType ==
                   DeviceScreenType.mobile
               ? 20
@@ -37,6 +37,33 @@ class ResponsiveCommand extends GetxController {
                   ? 40
                   : sizingInformation.deviceScreenType ==
                           DeviceScreenType.desktop
-                      ? 30
-                      : 30);
+                      ? 40
+                      : 40);
+
+  double columnHeader(SizingInformation sizingInformation) =>
+      sizingInformation.deviceScreenType == DeviceScreenType.mobile
+          ? Get.width * .05
+          : sizingInformation.deviceScreenType == DeviceScreenType.tablet
+              ? Get.width * .03
+              : sizingInformation.deviceScreenType == DeviceScreenType.desktop
+                  ? Get.width * .03
+                  : Get.width * .03;
+
+  double rowHeader(SizingInformation sizingInformation) =>
+      sizingInformation.deviceScreenType == DeviceScreenType.mobile
+          ? Get.width * .04
+          : sizingInformation.deviceScreenType == DeviceScreenType.tablet
+              ? Get.width * .03
+              : sizingInformation.deviceScreenType == DeviceScreenType.desktop
+                  ? Get.width * .03
+                  : Get.width * .03;
+
+  double iconSizes(SizingInformation sizingInformation) =>
+      sizingInformation.deviceScreenType == DeviceScreenType.mobile
+          ? Get.width * .06
+          : sizingInformation.deviceScreenType == DeviceScreenType.tablet
+              ? Get.width * .06
+              : sizingInformation.deviceScreenType == DeviceScreenType.desktop
+                  ? Get.width * .06
+                  : Get.width * .06;
 }
