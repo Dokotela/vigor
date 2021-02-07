@@ -28,9 +28,9 @@ class DropDownSelection extends StatelessWidget {
           children: <Widget>[
             Text(
               title,
-              style: Get.theme.textTheme.bodyText1,
+              style: Get.theme.textTheme.bodyText1
+                  .copyWith(fontSize: Get.width * .05),
             ),
-            SizedBox(width: Get.width / 15),
             DropdownButton<String>(
               value: display,
               icon: Icon(Icons.keyboard_arrow_down),
@@ -40,7 +40,8 @@ class DropDownSelection extends StatelessWidget {
                     value: selection,
                     child: Text(
                       selection,
-                      style: Get.textTheme.bodyText1,
+                      style: Get.textTheme.bodyText1
+                          .copyWith(fontSize: Get.width * .05),
                     ),
                   );
                 },

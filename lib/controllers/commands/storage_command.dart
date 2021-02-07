@@ -1,8 +1,8 @@
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
-class StorageController extends GetxController {
-  static StorageController get to => Get.find();
+class StorageCommand extends GetxController {
+  static StorageCommand get to => Get.find();
   final GetStorage store = GetStorage();
 
   bool isFirstLoad = true;

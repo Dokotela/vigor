@@ -2,14 +2,14 @@
 // Model class to hold menu option data (language and theme)
 import 'package:flutter/material.dart';
 
-class MenuOption<T> {
-  MenuOption(
+class ThemeMenuOption {
+  ThemeMenuOption(
       {@required this.key,
       @required this.value,
       @required this.englishValue,
       this.icon});
 
-  T key;
+  ThemeMode key;
   String value;
   String englishValue;
   IconData icon;

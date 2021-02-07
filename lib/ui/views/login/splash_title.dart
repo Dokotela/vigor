@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SplashTitleWidget extends StatelessWidget {
@@ -10,7 +11,7 @@ class SplashTitleWidget extends StatelessWidget {
   Widget build(Object context) => Text('Salud Dominicana',
       textAlign: TextAlign.center,
       style: GoogleFonts.courgette(
-          textStyle: const TextStyle(color: Colors.red, fontSize: 40)));
+          textStyle: TextStyle(color: Colors.red, fontSize: Get.width * .1)));
   // default:
   //   return Text('Vigor',
   //       textAlign: TextAlign.center,

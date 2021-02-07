@@ -19,15 +19,15 @@ class OrderedList extends StatelessWidget {
     @required this.selectEntry,
   });
 
-  final Widget label1;
+  final String label1;
   final Function sortCol1;
   final Widget order1;
   final Function entry1;
-  final Widget label2;
+  final String label2;
   final Function sortCol2;
   final Widget order2;
   final Function entry2;
-  final Widget label3;
+  final String label3;
   final Function sortCol3;
   final Widget order3;
   final Function entry3;
@@ -38,87 +38,100 @@ class OrderedList extends StatelessWidget {
   Widget build(BuildContext context) {
     final _padding = EdgeInsets.fromLTRB(0, 0, 0, 0);
 
-    return Column(
-      children: <Widget>[
-        Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Container(
-              width: Get.width * .35,
-              child: FlatButton(
-                onPressed: () => sortCol1(),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [label1, order1],
-                ),
-              ),
-            ),
-            Container(
-              width: Get.width * .3,
-              child: FlatButton(
-                onPressed: () => sortCol2(),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [label2, order2],
-                ),
-              ),
-            ),
-            Container(
-              width: Get.width * .25,
-              child: FlatButton(
-                onPressed: () => sortCol3(),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [label3, order3],
-                ),
-              ),
-            ),
-          ],
-        ),
-        Divider(thickness: 3.0),
-        Expanded(
-          child: ListView.separated(
-            scrollDirection: Axis.vertical,
-            shrinkWrap: true,
-            itemCount: listLength,
-            separatorBuilder: (context, index) => Divider(
-              thickness: 1.0,
-              color: Get.theme.colorScheme.onPrimary,
-            ),
-            itemBuilder: (context, index) => FlatButton(
-              onPressed: () => selectEntry(index),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Container(
-                    padding: _padding,
-                    width: Get.width * .35,
-                    child: Text(entry1(index),
-                        style: Get.theme.textTheme.headline6),
+    Expanded _text(String text) => Expanded(
+          child: Text(
+            text ?? '',
+            style: Get.theme.textTheme.headline6
+                .copyWith(fontSize: Get.width * .04),
+            // overflow: TextOverflow.,
+            // softWrap: false,
+          ),
+        );
+
+    return SafeArea(
+      child: Column(
+        children: <Widget>[
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Container(
+                width: Get.width * .35,
+                child: FlatButton(
+                  onPressed: () => sortCol1(),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [_text(label1), order1],
                   ),
-                  Container(
-                    padding: _padding,
-                    width: Get.width * .3,
-                    child: Text(
-                      entry2(index),
-                      style: Get.theme.textTheme.headline6,
+                ),
+              ),
+              Container(
+                width: Get.width * .30,
+                child: FlatButton(
+                  onPressed: () => sortCol2(),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [_text(label2), order2],
+                  ),
+                ),
+              ),
+              Container(
+                width: Get.width * .22,
+                child: FlatButton(
+                  onPressed: () => sortCol3(),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [_text(label3), order3],
+                  ),
+                ),
+              ),
+            ],
+          ),
+          Divider(thickness: 3.0),
+          Expanded(
+            child: ListView.separated(
+              scrollDirection: Axis.vertical,
+              shrinkWrap: true,
+              itemCount: listLength,
+              separatorBuilder: (context, index) => Divider(
+                thickness: 1.0,
+                color: Get.theme.colorScheme.onPrimary,
+              ),
+              itemBuilder: (context, index) => FlatButton(
+                onPressed: () => selectEntry(index),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Container(
+                      padding: _padding,
+                      width: Get.width * .35,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [_text(entry1(index))],
+                      ),
                     ),
-                  ),
-                  Container(
-                    padding: _padding,
-                    width: Get.width * .25,
-                    child: Text(
-                      entry3(index),
-                      overflow: TextOverflow.ellipsis,
-                      style: Get.theme.textTheme.headline6,
+                    Container(
+                      padding: _padding,
+                      width: Get.width * .30,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [_text(entry2(index))],
+                      ),
                     ),
-                  ),
-                ],
+                    Container(
+                      padding: _padding,
+                      width: Get.width * .22,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [_text(entry3(index))],
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

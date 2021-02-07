@@ -14,27 +14,30 @@ class HomePage extends StatelessWidget {
 
     return Scaffold(
       appBar: VigorAppBar(title: labels.app.title.saluddominicana),
-      body: Container(
-        constraints: const BoxConstraints.expand(),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            /// Registration for a new patient
-            ActionButton(
-              buttonText: labels.pages.newPatient,
-              onPressed: () => Get.toNamed(AppRoutes.NEW_PATIENT),
-            ),
+      body: SafeArea(
+        minimum: EdgeInsets.all(10),
+        child: Container(
+          constraints: const BoxConstraints.expand(),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              /// Registration for a new patient
+              ActionButton(
+                buttonText: labels.pages.newPatient,
+                onPressed: () => Get.toNamed(AppRoutes.NEW_PATIENT),
+              ),
 
-            /// Search the patients stored on the device
-            ActionButton(
-              buttonText: labels.pages.allPatients,
-              onPressed: () => Get.toNamed(AppRoutes.ALL_PATIENTS),
-            ),
-            ActionButton(
-              buttonText: labels.pages.summaryReport,
-            ),
-          ],
+              /// Search the patients stored on the device
+              ActionButton(
+                buttonText: labels.pages.allPatients,
+                onPressed: () => Get.toNamed(AppRoutes.ALL_PATIENTS),
+              ),
+              ActionButton(
+                buttonText: labels.pages.summaryReport,
+              ),
+            ],
+          ),
         ),
       ),
       bottomNavigationBar: bottomAppBar(),

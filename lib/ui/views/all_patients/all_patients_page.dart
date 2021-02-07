@@ -62,19 +62,15 @@ class AllPatientsPage extends StatelessWidget {
             Expanded(
               child: Obx(
                 () => OrderedList(
-                  label1: Text(labels.patient.title,
-                      style: Get.theme.textTheme.headline6),
+                  label1: labels.patient.title,
                   sortCol1: controller.sortByName,
                   order1: viewController.getOrder(controller.nameSort),
                   entry1: controller.patientName,
-                  label2: Text(
-                    labels.birthDate.title,
-                    style: Get.theme.textTheme.headline6,
-                  ),
+                  label2: labels.birthDate.title,
                   sortCol2: controller.sortByBirthdate,
                   order2: viewController.getOrder(controller.birthDateSort),
                   entry2: controller.patientDob,
-                  label3: Icon(Icons.location_on_outlined),
+                  label3: 'Barrio',
                   sortCol3: controller.sortByBarrio,
                   order3: viewController.getOrder(controller.barrioSort),
                   entry3: controller.patientBarrio,

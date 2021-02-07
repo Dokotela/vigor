@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../../controllers/local/new_patient/contacts_controller.dart';
 import '../../../../routes/routes.dart';
 import '../../../localization.dart';
-import '../../../styled_components/add_new.dart';
 import '../../../styled_components/app_bar.dart';
 import '../../../styled_components/bottom_navigation_bar.dart';
 import '../../../styled_components/styled_components.dart';
@@ -20,62 +20,71 @@ class ContactsPage extends StatelessWidget {
 
     Widget addNew() {
       controller.setupForNewContact();
-      return AlertDialog(
-        title: Text(labels.contacts.newContact),
-        content: Obx(
-          () => GestureDetector(
-            onTap: () {
-              final currentFocus = FocusScope.of(context);
-              if (!currentFocus.hasPrimaryFocus) {
-                currentFocus.unfocus();
-              }
-            },
-            child: SingleChildScrollView(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  NamesInputWidget(
-                    familyName: controller.familyName,
-                    givenName: controller.givenName,
-                    familyNameError: controller.familyNameError,
-                    givenNameError: controller.givenNameError,
-                  ),
-                  DropDownSelection(
-                    title: labels.relationships.title,
-                    selectionList: controller.relationTypes,
-                    display: controller.relation,
-                    selectNew: controller.selectRelation,
-                    error: controller.relationError,
-                  ),
-                  DropDownSelection(
-                    title: labels.address.neighborhood.title,
-                    selectionList: controller.barriosList,
-                    display: controller.barrio,
-                    selectNew: controller.selectBarrio,
-                    error: controller.barrioError,
-                  ),
-                ],
+      return ResponsiveBuilder(builder: (context, sizingInformation) {
+        return AlertDialog(
+          title: Text(labels.contacts.newContact,
+              style: TextStyle(fontSize: Get.width * .05)),
+          content: Obx(
+            () => GestureDetector(
+              onTap: () {
+                final currentFocus = FocusScope.of(context);
+                if (!currentFocus.hasPrimaryFocus) {
+                  currentFocus.unfocus();
+                }
+              },
+              child: SingleChildScrollView(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    NamesInputWidget(
+                      familyName: controller.familyName,
+                      givenName: controller.givenName,
+                      familyNameError: controller.familyNameError,
+                      givenNameError: controller.givenNameError,
+                    ),
+                    SizedBox(height: Get.height * .02),
+                    DropDownSelection(
+                      title: labels.relationships.title,
+                      selectionList: controller.relationTypes,
+                      display: controller.relation,
+                      selectNew: controller.selectRelation,
+                      error: controller.relationError,
+                    ),
+                    SizedBox(height: Get.height * .02),
+                    DropDownSelection(
+                      title: labels.address.neighborhood.title,
+                      selectionList: controller.barriosList,
+                      display: controller.barrio,
+                      selectNew: controller.selectBarrio,
+                      error: controller.barrioError,
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
-        ),
-        actions: [
-          TextButton(
-            child: Text(
-              labels.actions.cancel,
-              style: TextStyle(color: Get.theme.colorScheme.onPrimary),
+          actions: [
+            TextButton(
+              child: Text(
+                labels.actions.cancel,
+                style: TextStyle(
+                    color: Get.theme.colorScheme.onPrimary,
+                    fontSize: Get.width * .05),
+              ),
+              onPressed: () => Get.back(),
             ),
-            onPressed: () => Get.back(),
-          ),
-          TextButton(
-            child: Text(
-              labels.actions.add,
-              style: TextStyle(color: Get.theme.colorScheme.onPrimary),
+            TextButton(
+              child: Text(
+                labels.actions.add,
+                style: TextStyle(
+                    color: Get.theme.colorScheme.onPrimary,
+                    fontSize: Get.width * .05),
+              ),
+              onPressed: () async => controller.addNewContact(),
             ),
-            onPressed: () async => controller.addNewContact(),
-          ),
-        ],
-      );
+          ],
+        );
+      });
     }
 
     return GestureDetector(
@@ -86,50 +95,66 @@ class ContactsPage extends StatelessWidget {
         }
       },
       child: Scaffold(
-        appBar: VigorAppBar(title: labels.pages.contacts),
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Expanded(
-              child: Obx(
-                () => controller.currentListLength == 0
-                    ? Text(
-                        labels.contacts.noContactsAdded,
-                        style: Get.theme.textTheme.headline6,
-                      )
-                    : OrderedList(
-                        label1: Text(labels.name.title,
-                            style: Get.theme.textTheme.headline6),
-                        sortCol1: controller.sortByName,
-                        order1: viewController.getOrder(controller.nameSort),
-                        entry1: controller.contactName,
-                        label2: Text(
-                          labels.relationships.title,
-                          style: Get.theme.textTheme.headline6,
-                        ),
-                        sortCol2: controller.sortByRelation,
-                        order2:
-                            viewController.getOrder(controller.relationSort),
-                        entry2: controller.contactRelation,
-                        label3: Icon(Icons.location_on_outlined),
-                        sortCol3: controller.sortByBarrio,
-                        order3: viewController.getOrder(controller.barrioSort),
-                        entry3: controller.contactBarrio,
-                        listLength: controller.currentListLength,
-                        selectEntry: null,
-                      ),
-              ),
+        appBar: VigorAppBar(
+          title: labels.pages.contacts,
+          actions: [
+            IconButton(
+              icon: Icon(Icons.add_box_outlined),
+              iconSize: Get.width * .06,
+              onPressed: () async => await Get.dialog(addNew()),
+              color: Get.theme.colorScheme.onPrimary,
             ),
-            ThinActionButton(
-              buttonText: 'Continue', //labels.pages.patientHome,
-              onPressed: () async => Get.toNamed(AppRoutes.PATIENT_HOME_PAGE,
-                  arguments: controller.patient),
-              width: Get.width * .5,
-            ),
-            SizedBox(height: Get.height * .03),
           ],
         ),
-        floatingActionButton: AddNew(() async => await Get.dialog(addNew())),
+        body: SafeArea(
+          minimum: EdgeInsets.all(10),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Expanded(
+                child: Obx(
+                  () => controller.currentListLength == 0
+                      ? Text(
+                          labels.contacts.noContactsAdded,
+                          style: Get.theme.textTheme.headline6
+                              .copyWith(fontSize: Get.width * .06),
+                        )
+                      : OrderedList(
+                          label1: labels.name.title,
+                          sortCol1: controller.sortByName,
+                          order1: viewController.getOrder(controller.nameSort),
+                          entry1: controller.contactName,
+                          label2: labels.relationships.title,
+                          sortCol2: controller.sortByRelation,
+                          order2:
+                              viewController.getOrder(controller.relationSort),
+                          entry2: controller.contactRelation,
+                          label3: 'Barrio',
+                          sortCol3: controller.sortByBarrio,
+                          order3:
+                              viewController.getOrder(controller.barrioSort),
+                          entry3: controller.contactBarrio,
+                          listLength: controller.currentListLength,
+                          selectEntry: null,
+                        ),
+                ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ActionButton(
+                    buttonText:
+                        'Continue to Patient Homepage', //labels.pages.patientHome,
+                    onPressed: () async => Get.toNamed(
+                        AppRoutes.PATIENT_HOME_PAGE,
+                        arguments: controller.patient),
+                  ),
+                ],
+              ),
+              SizedBox(height: Get.height * .03),
+            ],
+          ),
+        ),
         bottomNavigationBar: bottomAppBar(),
       ),
     );

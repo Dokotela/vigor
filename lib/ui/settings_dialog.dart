@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../models/data/menu_option.dart';
-import '../../ui/localization.dart';
-import 'settings_controller.dart';
+import '../controllers/commands/commands.dart';
+import '../models/menu_options/theme_menu_option.dart';
+import 'localization.dart';
 
 /// this was taken directly from John's repo: https://github.com/FireJuun/prapare
 /// specifically, https://github.com/FireJuun/prapare/blob/main/lib/ui/views/settings/settings_dialog.dart
@@ -16,20 +16,20 @@ class _SettingsDialogContent extends StatelessWidget {
     final labels = AppLocalizations.of(context);
 
     //todo: extract into controller
-    final List<MenuOption> themeOptions = [
-      MenuOption(
+    final List<ThemeMenuOption> themeOptions = [
+      ThemeMenuOption(
         key: ThemeMode.light,
         englishValue: 'light',
         value: labels.settings.light,
         icon: Icons.brightness_low,
       ),
-      MenuOption(
+      ThemeMenuOption(
         key: ThemeMode.dark,
         englishValue: 'dark',
         value: labels.settings.dark,
         icon: Icons.brightness_3,
       ),
-      // MenuOption(
+      // ThemeMenuOption(
       //   key: ThemeMode.system,
       //   englishValue: 'system',
       //   value: labels.settings.system,
@@ -38,7 +38,8 @@ class _SettingsDialogContent extends StatelessWidget {
     ];
 
     final TextTheme textTheme = context.textTheme;
-    final SettingsController controller = Get.find();
+    final LocaleCommand locale = Get.find();
+    final ThemeCommand theme = Get.find();
     return Dialog(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 24.0),
@@ -59,13 +60,12 @@ class _SettingsDialogContent extends StatelessWidget {
                     (e) => Obx(
                       () => RadioListTile(
                         title: Text(e.value, style: textTheme.bodyText1),
-                        subtitle: (controller.currentLanguage == 'en')
+                        subtitle: (locale.currentLanguage == 'en')
                             ? null
                             : Text(e.englishValue, style: textTheme.bodyText2),
                         value: e.key,
-                        groupValue: controller.themeMode,
-                        onChanged: (newValue) =>
-                            controller.setThemeMode(newValue),
+                        groupValue: theme.themeMode,
+                        onChanged: (newValue) => theme.setThemeMode(newValue),
                       ),
                     ),
                   ),
@@ -75,14 +75,14 @@ class _SettingsDialogContent extends StatelessWidget {
                   Center(
                       child: Text(labels.app.chooseLanguage,
                           style: textTheme.bodyText1)),
-                  ...controller.languageOptions.map(
+                  ...locale.languageOptions.map(
                     (e) => RadioListTile(
                       title: Text(e.value, style: textTheme.bodyText1),
                       subtitle:
                           Text(e.englishValue, style: textTheme.bodyText2),
                       value: e.key,
-                      groupValue: controller.currentLanguage,
-                      onChanged: (value) => controller.updateLanguage(value),
+                      groupValue: locale.currentLanguage,
+                      onChanged: (value) => locale.updateLanguage(value),
                     ),
                   ),
                 ],

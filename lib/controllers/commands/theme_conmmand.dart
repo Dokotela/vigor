@@ -3,17 +3,16 @@ import 'package:get/get.dart';
 import 'package:vigor/_internal/utils/utils.dart';
 import 'package:vigor/ui/theme/app_theme.dart';
 
-import 'controllers.dart';
-import 'storage_controller.dart';
+import 'storage_command.dart';
 
 // spec: https://github.com/delay/flutter_starter
 // https://gist.github.com/RodBr/37310335c6639f486bb3c8a628052405
 // https://medium.com/swlh/flutter-dynamic-themes-in-3-lines-c3b375f292e3
 
-class ThemeController extends GetxController {
-  static ThemeController get to => Get.find();
+class ThemeCommand extends GetxController {
+  static ThemeCommand get to => Get.find();
 
-  final StorageController _data = Get.find();
+  final StorageCommand _data = Get.find();
 
   final themeString = ''.obs;
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vigor/ui/styled_components/styled_components.dart';
 
+import '../../../../ui/styled_components/styled_components.dart';
 import '../../../localization.dart';
 
 class BirthDateWidget extends StatelessWidget {
@@ -29,7 +29,8 @@ class BirthDateWidget extends StatelessWidget {
           children: [
             Text(
               '${labels.dateOfBirth.title}',
-              style: Get.theme.textTheme.bodyText1,
+              style: Get.theme.textTheme.bodyText1
+                  .copyWith(fontSize: Get.width * .05),
               textAlign: TextAlign.center,
             ),
             FlatButton(
@@ -49,11 +50,13 @@ class BirthDateWidget extends StatelessWidget {
                     birthDate == DateTime(1900, 1, 1)
                         ? Text(
                             '           ',
-                            style: Get.theme.textTheme.bodyText1,
+                            style: Get.theme.textTheme.bodyText1
+                                .copyWith(fontSize: Get.width * .05),
                           )
                         : Text(
                             displayBirthDate,
-                            style: Get.theme.textTheme.bodyText1,
+                            style: Get.theme.textTheme.bodyText1
+                                .copyWith(fontSize: Get.width * .05),
                           ),
                     Icon(Icons.keyboard_arrow_down),
                   ],
@@ -64,7 +67,7 @@ class BirthDateWidget extends StatelessWidget {
         ),
         Text(
           dispBirthDateError.tr,
-          style: const TextStyle(fontSize: 12.0, color: Colors.red),
+          style: TextStyle(fontSize: Get.width * .05, color: Colors.red),
         ),
       ],
     );

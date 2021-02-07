@@ -3,7 +3,6 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
-import 'controllers/commands/settings_controller.dart';
 import 'controllers/controllers.dart';
 import 'routes/routes.dart';
 import 'ui/localization.dart';
@@ -20,22 +19,23 @@ Future main() async {
 // Theme uses GetxService so that it isn't closed during app lifecycle
 Future<void> _initServices() async {
   await GetStorage.init();
-  Get.put<StorageController>(StorageController());
-  await StorageController.to.getFirstLoadInfoFromStore();
-  Get.put<LocaleController>(LocaleController());
-  Get.put<ThemeController>(ThemeController());
-  await ThemeController.to.getThemeModeFromStore();
+  Get.put<StorageCommand>(StorageCommand());
+  await StorageCommand.to.getFirstLoadInfoFromStore();
+  Get.put<LocaleCommand>(LocaleCommand());
+  Get.put<ThemeCommand>(ThemeCommand());
+  await ThemeCommand.to.getThemeModeFromStore();
+  Get.put<ResponsiveCommand>(ResponsiveCommand());
 }
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<SettingsController>(
+    return GetBuilder<LocaleCommand>(
       builder: (localeService) {
         return StyledLoading(
           child: GetMaterialApp(
             // *** LOCALES ***
-            locale: localeService.getLocale, // <- Current locale
+            locale: localeService.getLocale(), // <- Current locale
             localizationsDelegates: const [
               AppLocalizationsDelegate(), // <- Your custom delegate
               GlobalMaterialLocalizations.delegate,
@@ -45,9 +45,9 @@ class MyApp extends StatelessWidget {
                 .toList(), // <- Supported locales
 
             // *** THEMES ***
-            theme: SettingsController.to.lightTheme,
-            darkTheme: SettingsController.to.darkTheme,
-            themeMode: SettingsController.to.themeMode,
+            theme: ThemeCommand.to.lightTheme,
+            darkTheme: ThemeCommand.to.darkTheme,
+            themeMode: ThemeCommand.to.themeMode,
 
             // *** ROUTES ***
             // initialRoute: "/",
