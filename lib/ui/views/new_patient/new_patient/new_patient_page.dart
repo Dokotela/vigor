@@ -30,14 +30,14 @@ class NewPatientPage extends StatelessWidget {
                 ? labels.pages.newPatient
                 : labels.pages.patientInformation),
         body: SafeArea(
-          minimum: EdgeInsets.all(10),
+          minimum: EdgeInsets.all(5),
           child: Container(
             child: Center(
               child: Container(
                 width: Get.width * .7,
                 child: Obx(
                   () => Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    // mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: <Widget>[
                       /// reusable widget for entering first and last names, is
                       /// passed 2 text controllers, and the error messages for each

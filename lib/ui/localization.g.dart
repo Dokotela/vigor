@@ -26,6 +26,7 @@ class AppLocalizations {
         save: 'Save',
         search: 'Search',
         submit: 'Submit',
+        addNew: 'Add New',
       ),
       address: AppLocalizations_Labels_Address(
         neighborhood: AppLocalizations_Labels_Address_Neighborhood(
@@ -117,6 +118,7 @@ class AppLocalizations {
       ),
       registration: AppLocalizations_Labels_Registration(
         completed: 'Patient saved successfuly. Please enter their contacts.',
+        toPatientHomepage: 'Continue to Patient Homepage',
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: 'Aunt',
@@ -151,12 +153,13 @@ class AppLocalizations {
         back: 'atrás',
         cancel: 'Cancelar',
         delete: 'Eliminar',
-        home: 'Casa',
+        home: 'Hogar',
         logout: 'Cerrar sesión',
         ok: 'Okay',
         save: 'Salvar',
         search: 'Buscar',
         submit: 'Enviar',
+        addNew: 'Añadir nuevo',
       ),
       address: AppLocalizations_Labels_Address(
         neighborhood: AppLocalizations_Labels_Address_Neighborhood(
@@ -197,7 +200,7 @@ class AppLocalizations {
         error: 'Por favor seleccione el género',
         female: 'Hembra',
         male: 'Masculino',
-        title: 'El sexo en el nacimiento',
+        title: 'Sexo del nacimiento',
       ),
       general: AppLocalizations_Labels_General(
         completeError: 'Por favor completa todos los campos requeridos.',
@@ -210,7 +213,7 @@ class AppLocalizations {
         deworming: 'desparasitación',
         growth: 'Crecimiento',
         immunization: 'Inmunización',
-        immunizations: 'inmunizaciones',
+        immunizations: 'Immunizaciones',
         summaryReport: 'Informe resumido',
         vaccine: 'Vacuna',
         vaccines: AppLocalizations_Labels_Medical_Vaccines(
@@ -235,8 +238,8 @@ class AppLocalizations {
         title: 'Nombre',
       ),
       pages: AppLocalizations_Labels_Pages(
-        allPatients: 'todos los pacientes',
-        contacts: 'contactos',
+        allPatients: 'Todo Pacientes',
+        contacts: 'Contactos',
         login: 'Iniciar sesión',
         newPatient: 'Paciente nuevo',
         patientHome: 'Inicio del paciente',
@@ -249,6 +252,7 @@ class AppLocalizations {
       registration: AppLocalizations_Labels_Registration(
         completed:
             'Paciente salvó exitosamente. Por favor, introduzca sus contactos.',
+        toPatientHomepage: 'Continuar con el paciente Página de inicio',
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: 'Tía',
@@ -285,10 +289,11 @@ class AppLocalizations {
         delete: 'حذف',
         home: 'الصفحة الرئيسية',
         logout: 'تسجيل خروج',
-        ok: 'حسنا',
+        ok: 'موافق',
         save: 'حفظ',
         search: 'بحث',
         submit: 'إرسال',
+        addNew: 'اضف جديد',
       ),
       address: AppLocalizations_Labels_Address(
         neighborhood: AppLocalizations_Labels_Address_Neighborhood(
@@ -316,11 +321,11 @@ class AppLocalizations {
       ),
       birthDate: AppLocalizations_Labels_BirthDate(
         error: 'يرجى إدخال تاريخ الميلاد',
-        title: 'تاريخ الولادة',
+        title: 'تاريخ الميلاد',
       ),
       contacts: AppLocalizations_Labels_Contacts(
         newContact: 'جهة اتصال جديدة',
-        noContactsAdded: 'لم يتم إضافة أي اتصالات.',
+        noContactsAdded: 'تم إضافة أي اتصالات.',
       ),
       dateOfBirth: AppLocalizations_Labels_DateOfBirth(
         title: 'تاريخ الولادة',
@@ -350,8 +355,8 @@ class AppLocalizations {
           certify: 'انقر للمصادقة على مواعيد',
           dateGiven: 'تاريخ نظرا',
           delete: 'التحصين حذف',
-          none: 'لا اللقاحات السابقة من هذا نوع معين',
-          noPrevious: 'لا اللقاحات السابقة من هذا نوع معين',
+          none: 'أي لقاحات السابقة من هذا نوع معين',
+          noPrevious: 'أي لقاحات السابقة من هذا نوع معين',
           sureDelete: 'هل أنت متأكد أنك تريد حذف هذا التطعيم؟',
           title: 'اللقاحات',
         ),
@@ -380,6 +385,7 @@ class AppLocalizations {
       ),
       registration: AppLocalizations_Labels_Registration(
         completed: 'حفظ المريض بنجاح. الرجاء إدخال اتصالاتهم.',
+        toPatientHomepage: 'تواصل مريضة الصفحة الرئيسية',
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: 'عمة',
@@ -405,7 +411,7 @@ class AppLocalizations {
         light: 'ضوء',
         system: 'النظام',
         theme: 'موضوع',
-        title: 'إعدادات',
+        title: 'الإعدادات',
       ),
     ),
     Locale.fromSubtags(languageCode: 'hi'): AppLocalizations_Labels(
@@ -420,15 +426,16 @@ class AppLocalizations {
         save: 'सहेजें',
         search: 'खोज',
         submit: 'प्रस्तुत',
+        addNew: 'नया जोड़ो',
       ),
       address: AppLocalizations_Labels_Address(
         neighborhood: AppLocalizations_Labels_Address_Neighborhood(
           error: 'कृपया पड़ोस का चयन',
-          title: 'आस - पड़ोस',
+          title: 'अड़ोस - पड़ोस',
         ),
       ),
       age: AppLocalizations_Labels_Age(
-        title: 'उम्र',
+        title: 'आयु',
       ),
       app: AppLocalizations_Labels_App(
         chooseLanguage: 'भाषा चुनें',
@@ -459,7 +466,7 @@ class AppLocalizations {
       gender: AppLocalizations_Labels_Gender(
         error: 'कृपया लिंग चुनें',
         female: 'महिला',
-        male: 'पुरुष',
+        male: 'नर',
         title: 'जन्म के समय लिंग',
       ),
       general: AppLocalizations_Labels_General(
@@ -494,7 +501,7 @@ class AppLocalizations {
         givenNameError: 'दिए गए नाम दर्ज करें',
         givenNames: 'प्रथम / दिए गए नाम',
         lastName: 'उपनाम',
-        otherNames: 'दुसरे नाम',
+        otherNames: 'अन्य नामों',
         title: 'नाम',
       ),
       pages: AppLocalizations_Labels_Pages(
@@ -511,13 +518,14 @@ class AppLocalizations {
       ),
       registration: AppLocalizations_Labels_Registration(
         completed: 'रोगी सफलतापूर्वक बचा लिया। अपने संपर्कों दर्ज करें।',
+        toPatientHomepage: 'मुखपृष्ठ रोगी के लिए जारी रखें',
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: 'चाची',
-        brother: 'भाई',
+        brother: 'भइया',
         daughter: 'बेटी',
         error: 'कृपया संबंध का चयन',
-        father: 'पिता',
+        father: 'पिता जी',
         grandfather: 'दादा',
         grandmother: 'दादी मा',
         mother: 'मां',
@@ -543,14 +551,15 @@ class AppLocalizations {
       actions: AppLocalizations_Labels_Actions(
         add: 'Добавить',
         back: 'назад',
-        cancel: 'отменить',
-        delete: 'удалять',
+        cancel: 'Отмена',
+        delete: 'Удалить',
         home: 'Главная',
         logout: 'Выйти',
-        ok: 'Хорошо',
+        ok: 'ОК',
         save: 'Сохранить',
         search: 'Поиск',
         submit: 'Разместить',
+        addNew: 'Добавить новое',
       ),
       address: AppLocalizations_Labels_Address(
         neighborhood: AppLocalizations_Labels_Address_Neighborhood(
@@ -578,7 +587,7 @@ class AppLocalizations {
       ),
       birthDate: AppLocalizations_Labels_BirthDate(
         error: 'Пожалуйста, введите дату рождения',
-        title: 'День рождения',
+        title: 'Дата рождения',
       ),
       contacts: AppLocalizations_Labels_Contacts(
         newContact: 'Новый контакт',
@@ -625,7 +634,7 @@ class AppLocalizations {
         givenNameError: 'Введите данные имена',
         givenNames: 'Первый / Указанные имена',
         lastName: 'Фамилия',
-        otherNames: 'Другие названия',
+        otherNames: 'Другие имена',
         title: 'имя',
       ),
       pages: AppLocalizations_Labels_Pages(
@@ -643,19 +652,20 @@ class AppLocalizations {
       registration: AppLocalizations_Labels_Registration(
         completed:
             'Пациент сохранен успешно. Пожалуйста, введите свои контактные данные.',
+        toPatientHomepage: 'Продолжить терпеливые Домашнюю страницу',
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: 'тетка',
-        brother: 'Родной брат',
+        brother: 'Брат',
         daughter: 'Дочь',
         error: 'Пожалуйста, выберите отношения',
         father: 'Отец',
-        grandfather: 'Дед',
+        grandfather: 'Дедушка',
         grandmother: 'Бабушка',
-        mother: 'Мать',
+        mother: 'Мама',
         nephew: 'Племянник',
         niece: 'Племянница',
-        other: 'разное',
+        other: 'Другой',
         relation: 'Связь',
         sister: 'Сестра',
         son: 'Сын',
@@ -683,6 +693,7 @@ class AppLocalizations {
         save: 'সংরক্ষণ',
         search: 'অনুসন্ধান করুন',
         submit: 'জমা দিন',
+        addNew: 'নতুন যুক্ত করুন',
       ),
       address: AppLocalizations_Labels_Address(
         neighborhood: AppLocalizations_Labels_Address_Neighborhood(
@@ -775,6 +786,7 @@ class AppLocalizations {
       registration: AppLocalizations_Labels_Registration(
         completed:
             'রোগীর successfuly সংরক্ষিত হয়েছে। তাদের পরিচিতি লিখুন দয়া করে।',
+        toPatientHomepage: 'হোম পেজ পেসেন্ট চালিয়ে যাও',
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: 'মাসি',
@@ -815,6 +827,7 @@ class AppLocalizations {
         save: 'ကြော်ငြာကို Save လုပ်ရန်',
         search: 'ရှာဖှေ',
         submit: 'Submit',
+        addNew: 'နယူး Add',
       ),
       address: AppLocalizations_Labels_Address(
         neighborhood: AppLocalizations_Labels_Address_Neighborhood(
@@ -842,7 +855,7 @@ class AppLocalizations {
       ),
       birthDate: AppLocalizations_Labels_BirthDate(
         error: 'မွေးနေ့ရိုက်ထည့်ပေးပါ',
-        title: 'မွေးရက်',
+        title: 'မွေးနေ့',
       ),
       contacts: AppLocalizations_Labels_Contacts(
         newContact: 'နယူးဆက်သွယ်ပါ',
@@ -907,6 +920,7 @@ class AppLocalizations {
       registration: AppLocalizations_Labels_Registration(
         completed:
             'လူနာ successfuly ကယ်တင်ခြင်းသို့ရောက်ရ၏။ သူတို့ရဲ့အဆက်အသွယ်ရိုက်ထည့်ပေးပါ။',
+        toPatientHomepage: 'လူနာမူလစာမျက်နှာမှ Continue',
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: 'အဒေါ်',
@@ -943,10 +957,11 @@ class AppLocalizations {
         delete: '删除',
         home: '家',
         logout: '登出',
-        ok: '好',
+        ok: '行',
         save: '保存',
         search: '搜索',
         submit: '提交',
+        addNew: '添新',
       ),
       address: AppLocalizations_Labels_Address(
         neighborhood: AppLocalizations_Labels_Address_Neighborhood(
@@ -1038,6 +1053,7 @@ class AppLocalizations {
       ),
       registration: AppLocalizations_Labels_Registration(
         completed: '患者successfuly保存。请输入自己的人脉。',
+        toPatientHomepage: '继续耐心首页',
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: '姨',
@@ -1074,10 +1090,11 @@ class AppLocalizations {
         delete: '刪除',
         home: '家',
         logout: '登出',
-        ok: '好',
+        ok: '行',
         save: '保存',
         search: '搜索',
         submit: '提交',
+        addNew: '添新',
       ),
       address: AppLocalizations_Labels_Address(
         neighborhood: AppLocalizations_Labels_Address_Neighborhood(
@@ -1169,6 +1186,7 @@ class AppLocalizations {
       ),
       registration: AppLocalizations_Labels_Registration(
         completed: '患者successfuly保存。請輸入自己的人脈。',
+        toPatientHomepage: '繼續耐心首頁',
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: '姨',
@@ -1209,6 +1227,7 @@ class AppLocalizations {
         save: 'صرفه جویی',
         search: 'جستجو کردن',
         submit: 'ارسال',
+        addNew: 'جدید اضافه کن',
       ),
       address: AppLocalizations_Labels_Address(
         neighborhood: AppLocalizations_Labels_Address_Neighborhood(
@@ -1302,6 +1321,7 @@ class AppLocalizations {
       registration: AppLocalizations_Labels_Registration(
         completed:
             'بیمار با موفقیت ذخیره شده است. لطفا اطلاعات تماس خود را وارد کنید.',
+        toPatientHomepage: 'ادامه به بیمار صفحه خانگی',
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: 'عمه',
@@ -1333,7 +1353,7 @@ class AppLocalizations {
     Locale.fromSubtags(languageCode: 'fr'): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: 'Ajouter',
-        back: 'Retour',
+        back: 'Arrière',
         cancel: 'Annuler',
         delete: 'Effacer',
         home: 'Accueil',
@@ -1342,6 +1362,7 @@ class AppLocalizations {
         save: 'sauver',
         search: 'Chercher',
         submit: 'Soumettre',
+        addNew: 'Ajouter un nouveau',
       ),
       address: AppLocalizations_Labels_Address(
         neighborhood: AppLocalizations_Labels_Address_Neighborhood(
@@ -1434,6 +1455,7 @@ class AppLocalizations {
       registration: AppLocalizations_Labels_Registration(
         completed:
             'Le patient a sauvé avec succès. S\'il vous plaît entrer leurs contacts.',
+        toPatientHomepage: 'Continuer à Patient Page d\'accueil',
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: 'Tante',
@@ -1459,7 +1481,7 @@ class AppLocalizations {
         light: 'Lumière',
         system: 'Système',
         theme: 'Thème',
-        title: 'Réglages',
+        title: 'Paramètres',
       ),
     ),
     Locale.fromSubtags(languageCode: 'de'): AppLocalizations_Labels(
@@ -1470,15 +1492,16 @@ class AppLocalizations {
         delete: 'Löschen',
         home: 'Zuhause',
         logout: 'Ausloggen',
-        ok: 'in Ordnung',
+        ok: 'OK',
         save: 'sparen',
         search: 'Suche',
         submit: 'einreichen',
+        addNew: 'Neue hinzufügen',
       ),
       address: AppLocalizations_Labels_Address(
         neighborhood: AppLocalizations_Labels_Address_Neighborhood(
           error: 'Bitte wählen Sie Nachbarschaft',
-          title: 'Nachbarschaft',
+          title: 'Gegend',
         ),
       ),
       age: AppLocalizations_Labels_Age(
@@ -1501,7 +1524,7 @@ class AppLocalizations {
       ),
       birthDate: AppLocalizations_Labels_BirthDate(
         error: 'Bitte geben Sie birth',
-        title: 'Geburtsdatum',
+        title: 'Geburtstag',
       ),
       contacts: AppLocalizations_Labels_Contacts(
         newContact: 'Neuer Kontakt',
@@ -1528,7 +1551,7 @@ class AppLocalizations {
         growth: 'Wachstum',
         immunization: 'Immunisierung',
         immunizations: 'Immunisierungen',
-        summaryReport: 'Kurzbericht',
+        summaryReport: 'Zusammenfassender Bericht',
         vaccine: 'Impfstoff',
         vaccines: AppLocalizations_Labels_Medical_Vaccines(
           addDate: 'Erfassungsdatum des Impfstoffes:',
@@ -1558,7 +1581,7 @@ class AppLocalizations {
         newPatient: 'Neuer Patient',
         patientHome: 'Patient nach Hause',
         patientInformation: 'Informationen zum Patienten',
-        summaryReport: 'Kurzbericht',
+        summaryReport: 'Zusammenfassender Bericht',
       ),
       patient: AppLocalizations_Labels_Patient(
         title: 'Geduldig',
@@ -1566,6 +1589,7 @@ class AppLocalizations {
       registration: AppLocalizations_Labels_Registration(
         completed:
             'Patient gerettet successfuly. Bitte geben Sie ihre Kontakte.',
+        toPatientHomepage: 'Weiter Homepage Patienten',
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: 'Tante',
@@ -1606,6 +1630,7 @@ class AppLocalizations {
         save: 'Menyimpan',
         search: 'Cari',
         submit: 'Kirimkan',
+        addNew: 'Tambah baru',
       ),
       address: AppLocalizations_Labels_Address(
         neighborhood: AppLocalizations_Labels_Address_Neighborhood(
@@ -1697,6 +1722,7 @@ class AppLocalizations {
       ),
       registration: AppLocalizations_Labels_Registration(
         completed: 'Pasien disimpan successfuly. Masukkan kontak mereka.',
+        toPatientHomepage: 'Terus Pasien Homepage',
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: 'Bibi',
@@ -1734,9 +1760,10 @@ class AppLocalizations {
         home: '家',
         logout: 'ログアウト',
         ok: 'OK',
-        save: '保存する',
+        save: 'セーブ',
         search: '探す',
         submit: '参加する',
+        addNew: '新しく追加する',
       ),
       address: AppLocalizations_Labels_Address(
         neighborhood: AppLocalizations_Labels_Address_Neighborhood(
@@ -1758,13 +1785,13 @@ class AppLocalizations {
         ),
       ),
       auth: AppLocalizations_Labels_Auth(
-        login: 'ログインする',
+        login: 'ログイン',
         password: 'パスワード',
         userName: 'ユーザー名',
       ),
       birthDate: AppLocalizations_Labels_BirthDate(
         error: '誕生日を入力してください。',
-        title: '誕生日',
+        title: '生年月日',
       ),
       contacts: AppLocalizations_Labels_Contacts(
         newContact: '新しい連絡先',
@@ -1817,7 +1844,7 @@ class AppLocalizations {
       pages: AppLocalizations_Labels_Pages(
         allPatients: 'すべての患者',
         contacts: 'コンタクト',
-        login: 'ログインする',
+        login: 'ログイン',
         newPatient: '新しい患者',
         patientHome: '患者ホーム',
         patientInformation: '患者情報',
@@ -1828,6 +1855,7 @@ class AppLocalizations {
       ),
       registration: AppLocalizations_Labels_Registration(
         completed: '患者はsuccessfuly保存しました。自分の連絡先を入力してください。',
+        toPatientHomepage: '患者のホームページに進みます',
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: '叔母',
@@ -1868,6 +1896,7 @@ class AppLocalizations {
         save: 'រក្សាទុក',
         search: 'ស្វែងរក',
         submit: 'ដាក់ស្នើ',
+        addNew: 'បន្ថែម​ថ្មី',
       ),
       address: AppLocalizations_Labels_Address(
         neighborhood: AppLocalizations_Labels_Address_Neighborhood(
@@ -1960,6 +1989,7 @@ class AppLocalizations {
       registration: AppLocalizations_Labels_Registration(
         completed:
             'អ្នកជម្ងឺដែលបានរក្សាទុក successfuly ។ សូមបញ្ចូលទំនាក់ទំនងរបស់ពួកគេ។',
+        toPatientHomepage: 'បន្តទៅគេហទំព័រដោយចិត្ដអត់ធ្មត់',
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: 'មីង',
@@ -2000,6 +2030,7 @@ class AppLocalizations {
         save: '저장',
         search: '검색',
         submit: '제출',
+        addNew: '새로운 걸 더하다',
       ),
       address: AppLocalizations_Labels_Address(
         neighborhood: AppLocalizations_Labels_Address_Neighborhood(
@@ -2091,6 +2122,7 @@ class AppLocalizations {
       ),
       registration: AppLocalizations_Labels_Registration(
         completed: '환자는 successfuly 저장. 자신의 연락처를 입력 해주세요.',
+        toPatientHomepage: '홈페이지를 환자에게 계속',
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: '이모',
@@ -2131,6 +2163,7 @@ class AppLocalizations {
         save: 'ບັນທຶກ',
         search: 'ຄົ້ນຫາ',
         submit: 'ຍື່ນສະເຫນີ',
+        addNew: 'ເພີ່ມໃຫມ່',
       ),
       address: AppLocalizations_Labels_Address(
         neighborhood: AppLocalizations_Labels_Address_Neighborhood(
@@ -2223,6 +2256,7 @@ class AppLocalizations {
       ),
       registration: AppLocalizations_Labels_Registration(
         completed: 'ຄົນເຈັບໄວ້ລຽບຮ້ອຍ. ກະລຸນາໃສ່ລາຍຊື່ຂອງເຂົາເຈົ້າ.',
+        toPatientHomepage: 'ສືບຕໍ່ຄົນເຈັບທໍາອິດ',
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: 'ປ້າ',
@@ -2263,6 +2297,7 @@ class AppLocalizations {
         save: 'जतन करा',
         search: 'शोधा',
         submit: 'प्रस्तुत करणे',
+        addNew: 'नवीन जोडा',
       ),
       address: AppLocalizations_Labels_Address(
         neighborhood: AppLocalizations_Labels_Address_Neighborhood(
@@ -2279,7 +2314,7 @@ class AppLocalizations {
         settings: 'App सेटिंग्ज',
         system: 'प्रणाली',
         title: AppLocalizations_Labels_App_Title(
-          saluddominicana: 'Salud Dominicana',
+          saluddominicana: 'salud Dominicana',
           title: 'जोम',
         ),
       ),
@@ -2355,6 +2390,7 @@ class AppLocalizations {
       registration: AppLocalizations_Labels_Registration(
         completed:
             'रुग्णांच्या successfuly जतन. त्यांच्या संपर्क प्रविष्ट करा.',
+        toPatientHomepage: 'मुख्यपृष्ठ रुग्णांच्या सुरू ठेवा',
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: 'काकू',
@@ -2395,6 +2431,7 @@ class AppLocalizations {
         save: 'सेव',
         search: 'खोज',
         submit: 'पेश',
+        addNew: 'नयाँ थप्न',
       ),
       address: AppLocalizations_Labels_Address(
         neighborhood: AppLocalizations_Labels_Address_Neighborhood(
@@ -2487,6 +2524,7 @@ class AppLocalizations {
       registration: AppLocalizations_Labels_Registration(
         completed:
             'रोगी successfuly सुरक्षित गरियो। आफ्नो सम्पर्क प्रविष्ट गर्नुहोस्।',
+        toPatientHomepage: 'गृहपृष्ठ रोगी गर्न जारी',
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: 'चाची',
@@ -2518,7 +2556,7 @@ class AppLocalizations {
     Locale.fromSubtags(languageCode: 'pt'): AppLocalizations_Labels(
       actions: AppLocalizations_Labels_Actions(
         add: 'Adicionar',
-        back: 'De volta',
+        back: 'Costas',
         cancel: 'Cancelar',
         delete: 'Excluir',
         home: 'Casa',
@@ -2527,6 +2565,7 @@ class AppLocalizations {
         save: 'Salve ',
         search: 'Pesquisa',
         submit: 'Enviar',
+        addNew: 'Adicionar novo',
       ),
       address: AppLocalizations_Labels_Address(
         neighborhood: AppLocalizations_Labels_Address_Neighborhood(
@@ -2619,6 +2658,7 @@ class AppLocalizations {
       registration: AppLocalizations_Labels_Registration(
         completed:
             'Paciente salvas com sucesso. Por favor, indique seus contatos.',
+        toPatientHomepage: 'Continue ao paciente Homepage',
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: 'Tia',
@@ -2641,10 +2681,10 @@ class AppLocalizations {
       settings: AppLocalizations_Labels_Settings(
         dark: 'Sombrio',
         language: 'Língua',
-        light: 'Leve',
+        light: 'Luz',
         system: 'Sistema',
         theme: 'Tema',
-        title: 'Configurações',
+        title: 'Definições',
       ),
     ),
     Locale.fromSubtags(languageCode: 'pa'): AppLocalizations_Labels(
@@ -2659,6 +2699,7 @@ class AppLocalizations {
         save: 'ਸੰਭਾਲੋ',
         search: 'ਖੋਜ',
         submit: 'ਜਮ੍ਹਾਂ ਕਰੋ',
+        addNew: 'ਨਿਊ ਜੋੜੋ',
       ),
       address: AppLocalizations_Labels_Address(
         neighborhood: AppLocalizations_Labels_Address_Neighborhood(
@@ -2732,7 +2773,7 @@ class AppLocalizations {
         firstName: 'ਪਹਿਲਾ ਨਾਂ',
         givenNameError: 'ਦਿੱਤੇ ਗਏ ਨਾਮ ਦਰਜ ਕਰੋ',
         givenNames: 'ਪਹਿਲੀ / ਦਿੱਤੇ ਗਏ ਨਾਮ',
-        lastName: 'ਆਖੀਰਲਾ ਨਾਂਮ',
+        lastName: 'ਆਖਰੀ ਨਾਂਮ',
         otherNames: 'ਹੋਰ ਨਾਮ',
         title: 'ਦਾ ਨਾਮ',
       ),
@@ -2750,6 +2791,7 @@ class AppLocalizations {
       ),
       registration: AppLocalizations_Labels_Registration(
         completed: 'ਮਰੀਜ਼ successfuly ਬਚਾਇਆ. ਆਪਣੇ ਸੰਪਰਕ ਦਿਓ ਜੀ.',
+        toPatientHomepage: 'ਮੁੱਖ ਸਫ਼ਾ ਮਰੀਜ਼ ਕਰਨ ਲਈ ਜਾਰੀ ਰੱਖੋ',
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: 'ਮਾਸੀ',
@@ -2790,6 +2832,7 @@ class AppLocalizations {
         save: 'Save',
         search: 'Raadi',
         submit: 'Gudbi',
+        addNew: 'Add New',
       ),
       address: AppLocalizations_Labels_Address(
         neighborhood: AppLocalizations_Labels_Address_Neighborhood(
@@ -2860,7 +2903,7 @@ class AppLocalizations {
       name: AppLocalizations_Labels_Name(
         familyName: 'Qoyska / Magaca Dambe',
         familyNameError: 'Ku qor magaca qoyska',
-        firstName: 'Magaca hore',
+        firstName: 'Magaca koowaad',
         givenNameError: 'Ku qor magacyada siiyey',
         givenNames: 'First / Names la eego',
         lastName: 'Last Name',
@@ -2882,6 +2925,7 @@ class AppLocalizations {
       registration: AppLocalizations_Labels_Registration(
         completed:
             'Bukaanka successfuly badbaadiyey. Fadlan gali xiriirada ay.',
+        toPatientHomepage: 'Sii wad in aad Patient Homepage',
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: 'eedaday',
@@ -2922,6 +2966,7 @@ class AppLocalizations {
         save: 'Save',
         search: 'Tafuta',
         submit: 'wasilisha',
+        addNew: 'Kuongeza New',
       ),
       address: AppLocalizations_Labels_Address(
         neighborhood: AppLocalizations_Labels_Address_Neighborhood(
@@ -3014,6 +3059,7 @@ class AppLocalizations {
       registration: AppLocalizations_Labels_Registration(
         completed:
             'Mgonjwa kuokolewa kikamilifu. Tafadhali weka mawasiliano yao.',
+        toPatientHomepage: 'Kuendelea kwa mgonjwa Homepage',
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: 'shangazi',
@@ -3054,6 +3100,7 @@ class AppLocalizations {
         save: 'I-save ang',
         search: 'Hanapan',
         submit: 'Ipasa',
+        addNew: 'Magdagdag ng bago',
       ),
       address: AppLocalizations_Labels_Address(
         neighborhood: AppLocalizations_Labels_Address_Neighborhood(
@@ -3146,6 +3193,7 @@ class AppLocalizations {
       registration: AppLocalizations_Labels_Registration(
         completed:
             'Pasyente-save Matagumpay. Mangyaring ipasok ang kanilang mga contact.',
+        toPatientHomepage: 'Magpatuloy sa mga pasyente Homepage',
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: 'Tiya',
@@ -3186,6 +3234,7 @@ class AppLocalizations {
         save: 'บันทึก',
         search: 'ค้นหา',
         submit: 'เสนอ',
+        addNew: 'เพิ่มใหม่',
       ),
       address: AppLocalizations_Labels_Address(
         neighborhood: AppLocalizations_Labels_Address_Neighborhood(
@@ -3279,6 +3328,7 @@ class AppLocalizations {
       registration: AppLocalizations_Labels_Registration(
         completed:
             'ผู้ป่วยที่บันทึกไว้เรียบร้อย กรุณากรอกชื่อผู้ติดต่อของพวกเขา',
+        toPatientHomepage: 'ดำเนินการต่อให้กับผู้ป่วยโฮมเพจ',
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: 'ป้า',
@@ -3319,6 +3369,7 @@ class AppLocalizations {
         save: 'saqlash',
         search: 'Qidirmoq',
         submit: 'Submit',
+        addNew: 'Yangi qo\'shish',
       ),
       address: AppLocalizations_Labels_Address(
         neighborhood: AppLocalizations_Labels_Address_Neighborhood(
@@ -3340,7 +3391,7 @@ class AppLocalizations {
         ),
       ),
       auth: AppLocalizations_Labels_Auth(
-        login: 'Kirish',
+        login: 'Tizimga kirish',
         password: 'parol',
         userName: 'Foydalanuvchi nomi',
       ),
@@ -3399,7 +3450,7 @@ class AppLocalizations {
       pages: AppLocalizations_Labels_Pages(
         allPatients: 'barcha bemorlar',
         contacts: 'Aloqa',
-        login: 'Kirish',
+        login: 'Tizimga kirish',
         newPatient: 'Yangi kasal',
         patientHome: 'Bemor Bosh sahifa',
         patientInformation: 'Bemor Axborot',
@@ -3411,6 +3462,7 @@ class AppLocalizations {
       registration: AppLocalizations_Labels_Registration(
         completed:
             'Bemor muvaffaqiyat najot berdik. ularning aloqalarni kiriting.',
+        toPatientHomepage: 'Asosiy sahifa bemor davom eting',
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: 'amma',
@@ -3451,6 +3503,7 @@ class AppLocalizations {
         save: 'Tiết kiệm',
         search: 'Tìm kiếm',
         submit: 'Gửi đi',
+        addNew: 'Thêm mới',
       ),
       address: AppLocalizations_Labels_Address(
         neighborhood: AppLocalizations_Labels_Address_Neighborhood(
@@ -3543,6 +3596,7 @@ class AppLocalizations {
       registration: AppLocalizations_Labels_Registration(
         completed:
             'Bệnh nhân Đã lưu thành công. Vui lòng nhập địa chỉ liên lạc của họ.',
+        toPatientHomepage: 'Tiếp tục kiên nhẫn trang chủ',
       ),
       relationships: AppLocalizations_Labels_Relationships(
         aunt: 'Cô',
@@ -3590,7 +3644,8 @@ class AppLocalizations_Labels_Actions {
       this.ok,
       this.save,
       this.search,
-      this.submit});
+      this.submit,
+      this.addNew});
 
   final String add;
 
@@ -3611,6 +3666,8 @@ class AppLocalizations_Labels_Actions {
   final String search;
 
   final String submit;
+
+  final String addNew;
 
   String getByKey(String key) {
     switch (key) {
@@ -3634,6 +3691,8 @@ class AppLocalizations_Labels_Actions {
         return search;
       case 'submit':
         return submit;
+      case 'addNew':
+        return addNew;
       default:
         return '';
     }
@@ -4088,14 +4147,19 @@ class AppLocalizations_Labels_Patient {
 }
 
 class AppLocalizations_Labels_Registration {
-  const AppLocalizations_Labels_Registration({this.completed});
+  const AppLocalizations_Labels_Registration(
+      {this.completed, this.toPatientHomepage});
 
   final String completed;
+
+  final String toPatientHomepage;
 
   String getByKey(String key) {
     switch (key) {
       case 'completed':
         return completed;
+      case 'toPatientHomepage':
+        return toPatientHomepage;
       default:
         return '';
     }

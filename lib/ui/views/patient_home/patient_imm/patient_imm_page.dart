@@ -28,37 +28,39 @@ class PatientImmPage extends StatelessWidget {
       );
 
   DataRow _getRow(String text, String dz, BuildContext context,
-          SizingInformation sizingInformation) =>
-      DataRow(
-        cells: [
-          DataCell(
-            Container(
-              alignment: Alignment.center,
-              width: Get.width * .3,
-              child: Column(
-                children: [
-                  Expanded(
-                    child: Text(
-                      text,
-                      textAlign: TextAlign.center,
-                      style: Get.textTheme.headline6.copyWith(
-                          fontSize: screenSize.rowHeader(sizingInformation),
-                          color: Colors.blue),
-                    ),
+      SizingInformation sizingInformation) {
+    controller.agNotDue();
+    return DataRow(
+      cells: [
+        DataCell(
+          Container(
+            alignment: Alignment.center,
+            width: Get.width * .3,
+            child: Column(
+              children: [
+                Expanded(
+                  child: Text(
+                    text,
+                    textAlign: TextAlign.center,
+                    style: Get.textTheme.headline6.copyWith(
+                        fontSize: screenSize.rowHeader(sizingInformation),
+                        color: Colors.blue),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
-          DataCell(doseOptions(controller.display(dz, 0), sizingInformation)),
-          DataCell(doseOptions(controller.display(dz, 1), sizingInformation)),
-          DataCell(doseOptions(controller.display(dz, 2), sizingInformation)),
-          DataCell(doseOptions(controller.display(dz, 3), sizingInformation)),
-          DataCell(doseOptions(controller.display(dz, 4), sizingInformation)),
-          DataCell(doseOptions(controller.display(dz, 5), sizingInformation)),
-        ],
-        onSelectChanged: (value) => controller.editDates(text, dz),
-      );
+        ),
+        DataCell(doseOptions(controller.display(dz, 0), sizingInformation)),
+        DataCell(doseOptions(controller.display(dz, 1), sizingInformation)),
+        DataCell(doseOptions(controller.display(dz, 2), sizingInformation)),
+        DataCell(doseOptions(controller.display(dz, 3), sizingInformation)),
+        DataCell(doseOptions(controller.display(dz, 4), sizingInformation)),
+        DataCell(doseOptions(controller.display(dz, 5), sizingInformation)),
+      ],
+      onSelectChanged: (value) => controller.editDates(text, dz),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {

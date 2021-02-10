@@ -26,10 +26,13 @@ class DropDownSelection extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            Text(
-              title,
-              style: Get.theme.textTheme.bodyText1
-                  .copyWith(fontSize: Get.width * .05),
+            Container(
+              width: Get.width * 0.4,
+              child: Text(
+                title,
+                style: Get.theme.textTheme.bodyText1
+                    .copyWith(fontSize: Get.width * .05),
+              ),
             ),
             DropdownButton<String>(
               value: display,
@@ -38,11 +41,7 @@ class DropDownSelection extends StatelessWidget {
                 (String selection) {
                   return DropdownMenuItem<String>(
                     value: selection,
-                    child: Text(
-                      selection,
-                      style: Get.textTheme.bodyText1
-                          .copyWith(fontSize: Get.width * .05),
-                    ),
+                    child: Text(selection),
                   );
                 },
               ).toList(),

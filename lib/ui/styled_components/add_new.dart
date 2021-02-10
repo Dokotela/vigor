@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../localization.dart';
+
 class AddNew extends FloatingActionButton {
   AddNew(this.addNew)
       : super.extended(
           label: Text(
-            'Add New',
+            _labels.actions.addNew,
             style: TextStyle(color: Get.theme.colorScheme.primary),
           ),
           elevation: 10.0,
@@ -19,3 +21,5 @@ class AddNew extends FloatingActionButton {
 
   final Function addNew;
 }
+
+final _labels = AppLocalizations.of(Get.context);

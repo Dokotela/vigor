@@ -13,6 +13,7 @@ class PatientImmController extends GetxController {
   final _patient = PatientModel().obs;
   final _display = VaccineDisplay().obs;
   final _isReady = false.obs;
+  final _agDue = false.obs;
 
   /// INIT
   @override
@@ -27,13 +28,28 @@ class PatientImmController extends GetxController {
 
   /// because I can't get the onInit to load otherwise
   bool isReady() => _isReady.value;
+  void agNotDue() => _agDue.value = false;
 
   /// GETTER FUNCTIONS
   String name() => _patient.value.name();
   String birthDate() => _patient.value.birthDate();
   Map<String, Set<Immunization>> immHx() => _display.value.fullVaxDates;
-  Either<DoseDisplay, String> display(String dz, int number) =>
-      _display.value.matrix[dz][number];
+  Either<DoseDisplay, String> display(String dz, int number) {
+    final _agDisplay = _display.value.matrix[dz][number];
+    return _agDisplay.fold(
+      (l) {
+        if (l == DoseDisplay.overdue && _agDue.value == false) {
+          _agDue.value = true;
+          return left(DoseDisplay.overdue);
+        } else if (l == DoseDisplay.overdue && _agDue.value == true) {
+          return left(DoseDisplay.open);
+        } else {
+          return left(l);
+        }
+      },
+      (r) => right(r),
+    );
+  }
 
   PatientModel actualPatient() => _patient.value;
 

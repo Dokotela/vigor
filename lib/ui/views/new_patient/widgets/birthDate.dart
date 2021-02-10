@@ -27,11 +27,13 @@ class BirthDateWidget extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(
-              '${labels.dateOfBirth.title}',
-              style: Get.theme.textTheme.bodyText1
-                  .copyWith(fontSize: Get.width * .05),
-              textAlign: TextAlign.center,
+            Container(
+              width: Get.width * 0.4,
+              child: Text(
+                '${labels.dateOfBirth.title}',
+                style: Get.theme.textTheme.bodyText1
+                    .copyWith(fontSize: Get.width * .05),
+              ),
             ),
             FlatButton(
               padding: EdgeInsets.all(0.0),
@@ -48,16 +50,10 @@ class BirthDateWidget extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     birthDate == DateTime(1900, 1, 1)
-                        ? Text(
-                            '           ',
-                            style: Get.theme.textTheme.bodyText1
-                                .copyWith(fontSize: Get.width * .05),
-                          )
-                        : Text(
-                            displayBirthDate,
-                            style: Get.theme.textTheme.bodyText1
-                                .copyWith(fontSize: Get.width * .05),
-                          ),
+                        ? Text('             ',
+                            style: Get.theme.textTheme.bodyText1)
+                        : Text(displayBirthDate,
+                            style: Get.theme.textTheme.bodyText1),
                     Icon(Icons.keyboard_arrow_down),
                   ],
                 ),
@@ -67,7 +63,8 @@ class BirthDateWidget extends StatelessWidget {
         ),
         Text(
           dispBirthDateError.tr,
-          style: TextStyle(fontSize: Get.width * .05, color: Colors.red),
+          style: Get.theme.textTheme.caption
+              .copyWith(color: Get.theme.colorScheme.error),
         ),
       ],
     );
