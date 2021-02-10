@@ -81,7 +81,7 @@ class PatientImmPage extends StatelessWidget {
               ),
               SizedBox(height: Get.height * .03),
               Padding(
-                padding: const EdgeInsets.all(4.0),
+                padding: const EdgeInsets.all(0.0),
                 child: Column(
                   children: [
                     Container(
@@ -184,6 +184,31 @@ class PatientImmPage extends StatelessWidget {
                     ),
                   ],
                 ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Row(
+                    children: [
+                      Icon(
+                        Icons.warning,
+                        color: Colors.red,
+                        size: screenSize.iconSizes(sizingInformation),
+                      ),
+                      Text('= ${labels.medical.vaccines.due}'),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Icon(
+                        Icons.check_circle,
+                        color: Colors.green,
+                        size: screenSize.iconSizes(sizingInformation),
+                      ),
+                      Text('= ${labels.medical.vaccines.completed}'),
+                    ],
+                  ),
+                ],
               ),
             ],
           ),

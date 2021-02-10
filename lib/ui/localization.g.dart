@@ -92,6 +92,8 @@ class AppLocalizations {
           noPrevious: 'No previous vaccines of this type given',
           sureDelete: 'Are you sure you want to delete this immunization?',
           title: 'Vaccines',
+          due: 'Due',
+          completed: 'Completed',
         ),
       ),
       name: AppLocalizations_Labels_Name(
@@ -225,6 +227,8 @@ class AppLocalizations {
           noPrevious: 'No hay vacunas anteriores de este tipo dado',
           sureDelete: '¿Está seguro de que quiere eliminar esta inmunización?',
           title: 'Vacunas',
+          due: 'Debido',
+          completed: 'Realizado',
         ),
       ),
       name: AppLocalizations_Labels_Name(
@@ -359,6 +363,8 @@ class AppLocalizations {
           noPrevious: 'أي لقاحات السابقة من هذا نوع معين',
           sureDelete: 'هل أنت متأكد أنك تريد حذف هذا التطعيم؟',
           title: 'اللقاحات',
+          due: 'بسبب',
+          completed: 'منجز',
         ),
       ),
       name: AppLocalizations_Labels_Name(
@@ -492,6 +498,8 @@ class AppLocalizations {
           noPrevious: 'इस प्रकार का कोई पिछले टीके दिए गए',
           sureDelete: 'आप इस टीकाकरण को हटाना चाहते हैं क्या आप वाकई रहे हैं?',
           title: 'टीके',
+          due: 'देय',
+          completed: 'पूरा हुआ',
         ),
       ),
       name: AppLocalizations_Labels_Name(
@@ -625,6 +633,8 @@ class AppLocalizations {
           noPrevious: 'Нет предыдущих вакцин этого типа данные',
           sureDelete: 'Вы уверены, что хотите удалить эту иммунизацию?',
           title: 'Вакцина',
+          due: 'В связи',
+          completed: 'Завершенный',
         ),
       ),
       name: AppLocalizations_Labels_Name(
@@ -759,6 +769,8 @@ class AppLocalizations {
           noPrevious: 'এই ধরনের কোনো পূর্ববর্তী টিকা দেওয়া',
           sureDelete: 'আপনি এই টিকাদান মুছে ফেলতে চান আপনি কি নিশ্চিত?',
           title: 'টিকা',
+          due: 'বাকি',
+          completed: 'সম্পন্ন',
         ),
       ),
       name: AppLocalizations_Labels_Name(
@@ -893,6 +905,8 @@ class AppLocalizations {
           noPrevious: 'ပေးထားသောဒီအမျိုးအစားအဘယ်သူမျှမကယခင်ကာကွယ်ဆေး',
           sureDelete: 'သင်သည်ဤကာကွယ်ဆေးထိုးသင်ဖျက်ချင်တာသေချာလား?',
           title: 'ကာကွယ်ဆေးများ',
+          due: 'ကြောင့်',
+          completed: 'ပြီးစီး',
         ),
       ),
       name: AppLocalizations_Labels_Name(
@@ -1027,6 +1041,8 @@ class AppLocalizations {
           noPrevious: '没有这种类型的疫苗以前给出',
           sureDelete: '你确定要删除这个免疫接种？',
           title: '疫苗',
+          due: '应有',
+          completed: '已完成',
         ),
       ),
       name: AppLocalizations_Labels_Name(
@@ -1160,6 +1176,8 @@ class AppLocalizations {
           noPrevious: '沒有這種類型的疫苗以前給出',
           sureDelete: '你確定要刪除這個免疫接種？',
           title: '疫苗',
+          due: '應有',
+          completed: '已完成',
         ),
       ),
       name: AppLocalizations_Labels_Name(
@@ -1294,6 +1312,8 @@ class AppLocalizations {
           sureDelete:
               'آیا شما مطمئن هستید که میخواهید این ایمن سازی را حذف کنید؟',
           title: 'واکسن ها',
+          due: 'ناشی از',
+          completed: 'تکمیل شده',
         ),
       ),
       name: AppLocalizations_Labels_Name(
@@ -1428,6 +1448,8 @@ class AppLocalizations {
           noPrevious: 'Aucun vaccin précédent de ce type donné',
           sureDelete: 'Etes-vous sûr de vouloir supprimer cette vaccination?',
           title: 'Vaccins',
+          due: 'Dû',
+          completed: 'Terminé',
         ),
       ),
       name: AppLocalizations_Labels_Name(
@@ -1562,6 +1584,8 @@ class AppLocalizations {
           noPrevious: 'Keine vorherigen Impfstoffe dieses Typs gegeben',
           sureDelete: 'Sind Sie sicher, dass Sie diese Immunisierung löschen?',
           title: 'Impfungen',
+          due: 'Fällig',
+          completed: 'Abgeschlossen',
         ),
       ),
       name: AppLocalizations_Labels_Name(
@@ -1696,6 +1720,8 @@ class AppLocalizations {
           noPrevious: 'Tidak ada vaksin sebelumnya jenis ini diberikan',
           sureDelete: 'Apakah Anda yakin ingin menghapus imunisasi ini?',
           title: 'Vaksin',
+          due: 'karena',
+          completed: 'Lengkap',
         ),
       ),
       name: AppLocalizations_Labels_Name(
@@ -1829,6 +1855,8 @@ class AppLocalizations {
           noPrevious: '与えられたこのタイプの以前のワクチンありません',
           sureDelete: 'あなたはこの予防接種を削除してもよろしいですか？',
           title: 'ワクチン',
+          due: 'ため',
+          completed: '完成しました',
         ),
       ),
       name: AppLocalizations_Labels_Name(
@@ -1962,6 +1990,8 @@ class AppLocalizations {
           noPrevious: 'គ្មានវ៉ាក់សាំងមុនប្រភេទនេះដែលបានផ្ដល់ឱ្យ',
           sureDelete: 'តើអ្នកប្រាកដជាចង់លុបការចាក់ថ្នាំបង្ការរោគនេះ?',
           title: 'វ៉ាក់សាំង',
+          due: 'ដោយសារតែ',
+          completed: 'បានបញ្ចប់',
         ),
       ),
       name: AppLocalizations_Labels_Name(
@@ -2096,6 +2126,8 @@ class AppLocalizations {
           noPrevious: '주어진 이러한 유형의 어떤 이전 백신 없습니다',
           sureDelete: '이 예방 접종을 삭제 하시겠습니까?',
           title: '백신',
+          due: '정당한',
+          completed: '완료',
         ),
       ),
       name: AppLocalizations_Labels_Name(
@@ -2230,6 +2262,8 @@ class AppLocalizations {
           sureDelete:
               'ທ່ານທີ່ທ່ານກໍາລັງໃຫ້ແນ່ໃຈວ່າຕ້ອງການທີ່ຈະລົບປ້ອງກັນພະຍາດນີ້?',
           title: 'ວັກ​ຊີນ​ປ້ອງ​ກັນ',
+          due: 'ເນື່ອງຈາກ',
+          completed: 'ສໍາເລັດ',
         ),
       ),
       name: AppLocalizations_Labels_Name(
@@ -2363,6 +2397,8 @@ class AppLocalizations {
           noPrevious: 'दिलेल्या या प्रकारचे कोणतेही मागील लस',
           sureDelete: 'आपण या लसीकरण हटवू इच्छिता आपल्याला खात्री आहे?',
           title: 'लसीकरण',
+          due: 'मुळे',
+          completed: 'पूर्ण',
         ),
       ),
       name: AppLocalizations_Labels_Name(
@@ -2497,6 +2533,8 @@ class AppLocalizations {
           noPrevious: 'यस प्रकारका कुनै पनि अघिल्लो सुइहरु दिइएको',
           sureDelete: 'तपाईं यो खोप मेट्न निश्चित हुनुहुन्छ?',
           title: 'औषधी',
+          due: 'कारण',
+          completed: 'पूरा',
         ),
       ),
       name: AppLocalizations_Labels_Name(
@@ -2631,6 +2669,8 @@ class AppLocalizations {
           noPrevious: 'Não há vacinas anteriores deste tipo de dado',
           sureDelete: 'Tem certeza de que deseja excluir esta imunização?',
           title: 'Vacinas',
+          due: 'Vencimento',
+          completed: 'concluído',
         ),
       ),
       name: AppLocalizations_Labels_Name(
@@ -2765,6 +2805,8 @@ class AppLocalizations {
           noPrevious: 'ਇਸ ਕਿਸਮ ਦੀ ਕੋਈ ਪਿਛਲੇ ਟੀਕੇ ਦਿੱਤੇ ਗਏ',
           sureDelete: 'ਤੁਹਾਨੂੰ ਇਸ ਟੀਕਾਕਰਨ ਨੂੰ ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?',
           title: 'ਟੀਕੇ',
+          due: 'ਦੇ ਕਾਰਨ',
+          completed: 'ਮੁਕੰਮਲ',
         ),
       ),
       name: AppLocalizations_Labels_Name(
@@ -2898,6 +2940,8 @@ class AppLocalizations {
           noPrevious: 'No tallaal hore oo noocan ah la siiyo',
           sureDelete: 'Hubi in aad aad rabto in aad tirtirto tallaalka this?',
           title: 'Talaalo',
+          due: 'Sababo',
+          completed: 'Waxaa buuxiya',
         ),
       ),
       name: AppLocalizations_Labels_Name(
@@ -3032,6 +3076,8 @@ class AppLocalizations {
           noPrevious: 'Hakuna chanjo ya awali ya aina hii kutokana na',
           sureDelete: 'Una uhakika unataka kufuta chanjo hii?',
           title: 'Chanjo',
+          due: 'kutokana',
+          completed: 'kukamilika',
         ),
       ),
       name: AppLocalizations_Labels_Name(
@@ -3166,6 +3212,8 @@ class AppLocalizations {
           noPrevious: 'Walang nakaraang bakuna na may ganitong uri na ibinigay',
           sureDelete: 'Sigurado ka bang gusto mong burahin ang pagbabakuna?',
           title: 'Mga bakuna',
+          due: 'angkop',
+          completed: 'Nakumpleto',
         ),
       ),
       name: AppLocalizations_Labels_Name(
@@ -3301,6 +3349,8 @@ class AppLocalizations {
           sureDelete:
               'คุณแน่ใจหรือไม่ว่าต้องการลบการสร้างภูมิคุ้มกันโรคนี้หรือไม่?',
           title: 'วัคซีน',
+          due: 'ครบกำหนด',
+          completed: 'เสร็จ',
         ),
       ),
       name: AppLocalizations_Labels_Name(
@@ -3435,6 +3485,8 @@ class AppLocalizations {
           noPrevious: 'berilgan Ushbu turdagi No oldingi vaksinalar',
           sureDelete: 'Agar bu emlashlar o\'chirishni istaysizmi?',
           title: 'Vaksinalar',
+          due: 'tufayli',
+          completed: 'Bajarilgan',
         ),
       ),
       name: AppLocalizations_Labels_Name(
@@ -3569,6 +3621,8 @@ class AppLocalizations {
           noPrevious: 'Không loại vắc-xin trước đó thuộc loại này được',
           sureDelete: 'Bạn có chắc chắn muốn xóa tiêm chủng này?',
           title: 'Vắc-xin',
+          due: 'vì',
+          completed: 'Đã hoàn thành',
         ),
       ),
       name: AppLocalizations_Labels_Name(
@@ -3948,7 +4002,9 @@ class AppLocalizations_Labels_Medical_Vaccines {
       this.none,
       this.noPrevious,
       this.sureDelete,
-      this.title});
+      this.title,
+      this.due,
+      this.completed});
 
   final String addDate;
 
@@ -3965,6 +4021,10 @@ class AppLocalizations_Labels_Medical_Vaccines {
   final String sureDelete;
 
   final String title;
+
+  final String due;
+
+  final String completed;
 
   String getByKey(String key) {
     switch (key) {
@@ -3984,6 +4044,10 @@ class AppLocalizations_Labels_Medical_Vaccines {
         return sureDelete;
       case 'title':
         return title;
+      case 'due':
+        return due;
+      case 'completed':
+        return completed;
       default:
         return '';
     }
