@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'db_failures.dart';
 
@@ -9,33 +9,32 @@ part of 'db_failures.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$DbFailureTearOff {
   const _$DbFailureTearOff();
 
-// ignore: unused_element
-  UnableToSave unableToSave({String error}) {
+  UnableToSave unableToSave({required String error}) {
     return UnableToSave(
       error: error,
     );
   }
 
-// ignore: unused_element
   ResourceAlreadyPresent resourceAlreadyPresent(String error) {
     return ResourceAlreadyPresent(
       error,
     );
   }
 
-// ignore: unused_element
-  UnableToObtainList unableToObtainList({String error}) {
+  UnableToObtainList unableToObtainList({required String error}) {
     return UnableToObtainList(
       error: error,
     );
   }
 
-// ignore: unused_element
-  UnableToDeleteAll unableToDeleteAll({String error}) {
+  UnableToDeleteAll unableToDeleteAll({required String error}) {
     return UnableToDeleteAll(
       error: error,
     );
@@ -43,45 +42,51 @@ class _$DbFailureTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $DbFailure = _$DbFailureTearOff();
 
 /// @nodoc
 mixin _$DbFailure {
-  String get error;
+  String get error => throw _privateConstructorUsedError;
 
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result unableToSave(String error),
-    @required Result resourceAlreadyPresent(String error),
-    @required Result unableToObtainList(String error),
-    @required Result unableToDeleteAll(String error),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function(String error) unableToSave,
+    required TResult Function(String error) resourceAlreadyPresent,
+    required TResult Function(String error) unableToObtainList,
+    required TResult Function(String error) unableToDeleteAll,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result unableToSave(String error),
-    Result resourceAlreadyPresent(String error),
-    Result unableToObtainList(String error),
-    Result unableToDeleteAll(String error),
-    @required Result orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String error)? unableToSave,
+    TResult Function(String error)? resourceAlreadyPresent,
+    TResult Function(String error)? unableToObtainList,
+    TResult Function(String error)? unableToDeleteAll,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result unableToSave(UnableToSave value),
-    @required Result resourceAlreadyPresent(ResourceAlreadyPresent value),
-    @required Result unableToObtainList(UnableToObtainList value),
-    @required Result unableToDeleteAll(UnableToDeleteAll value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(UnableToSave value) unableToSave,
+    required TResult Function(ResourceAlreadyPresent value)
+        resourceAlreadyPresent,
+    required TResult Function(UnableToObtainList value) unableToObtainList,
+    required TResult Function(UnableToDeleteAll value) unableToDeleteAll,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result unableToSave(UnableToSave value),
-    Result resourceAlreadyPresent(ResourceAlreadyPresent value),
-    Result unableToObtainList(UnableToObtainList value),
-    Result unableToDeleteAll(UnableToDeleteAll value),
-    @required Result orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(UnableToSave value)? unableToSave,
+    TResult Function(ResourceAlreadyPresent value)? resourceAlreadyPresent,
+    TResult Function(UnableToObtainList value)? unableToObtainList,
+    TResult Function(UnableToDeleteAll value)? unableToDeleteAll,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 
-  $DbFailureCopyWith<DbFailure> get copyWith;
+  @JsonKey(ignore: true)
+  $DbFailureCopyWith<DbFailure> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -101,10 +106,13 @@ class _$DbFailureCopyWithImpl<$Res> implements $DbFailureCopyWith<$Res> {
 
   @override
   $Res call({
-    Object error = freezed,
+    Object? error = freezed,
   }) {
     return _then(_value.copyWith(
-      error: error == freezed ? _value.error : error as String,
+      error: error == freezed
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -130,17 +138,20 @@ class _$UnableToSaveCopyWithImpl<$Res> extends _$DbFailureCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object error = freezed,
+    Object? error = freezed,
   }) {
     return _then(UnableToSave(
-      error: error == freezed ? _value.error : error as String,
+      error: error == freezed
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
 class _$UnableToSave implements UnableToSave {
-  const _$UnableToSave({this.error});
+  const _$UnableToSave({required this.error});
 
   @override
   final String error;
@@ -162,35 +173,31 @@ class _$UnableToSave implements UnableToSave {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(error);
 
+  @JsonKey(ignore: true)
   @override
   $UnableToSaveCopyWith<UnableToSave> get copyWith =>
       _$UnableToSaveCopyWithImpl<UnableToSave>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result unableToSave(String error),
-    @required Result resourceAlreadyPresent(String error),
-    @required Result unableToObtainList(String error),
-    @required Result unableToDeleteAll(String error),
+  TResult when<TResult extends Object?>({
+    required TResult Function(String error) unableToSave,
+    required TResult Function(String error) resourceAlreadyPresent,
+    required TResult Function(String error) unableToObtainList,
+    required TResult Function(String error) unableToDeleteAll,
   }) {
-    assert(unableToSave != null);
-    assert(resourceAlreadyPresent != null);
-    assert(unableToObtainList != null);
-    assert(unableToDeleteAll != null);
     return unableToSave(error);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result unableToSave(String error),
-    Result resourceAlreadyPresent(String error),
-    Result unableToObtainList(String error),
-    Result unableToDeleteAll(String error),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String error)? unableToSave,
+    TResult Function(String error)? resourceAlreadyPresent,
+    TResult Function(String error)? unableToObtainList,
+    TResult Function(String error)? unableToDeleteAll,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (unableToSave != null) {
       return unableToSave(error);
     }
@@ -199,29 +206,25 @@ class _$UnableToSave implements UnableToSave {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result unableToSave(UnableToSave value),
-    @required Result resourceAlreadyPresent(ResourceAlreadyPresent value),
-    @required Result unableToObtainList(UnableToObtainList value),
-    @required Result unableToDeleteAll(UnableToDeleteAll value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(UnableToSave value) unableToSave,
+    required TResult Function(ResourceAlreadyPresent value)
+        resourceAlreadyPresent,
+    required TResult Function(UnableToObtainList value) unableToObtainList,
+    required TResult Function(UnableToDeleteAll value) unableToDeleteAll,
   }) {
-    assert(unableToSave != null);
-    assert(resourceAlreadyPresent != null);
-    assert(unableToObtainList != null);
-    assert(unableToDeleteAll != null);
     return unableToSave(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result unableToSave(UnableToSave value),
-    Result resourceAlreadyPresent(ResourceAlreadyPresent value),
-    Result unableToObtainList(UnableToObtainList value),
-    Result unableToDeleteAll(UnableToDeleteAll value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(UnableToSave value)? unableToSave,
+    TResult Function(ResourceAlreadyPresent value)? resourceAlreadyPresent,
+    TResult Function(UnableToObtainList value)? unableToObtainList,
+    TResult Function(UnableToDeleteAll value)? unableToDeleteAll,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (unableToSave != null) {
       return unableToSave(this);
     }
@@ -230,12 +233,14 @@ class _$UnableToSave implements UnableToSave {
 }
 
 abstract class UnableToSave implements DbFailure {
-  const factory UnableToSave({String error}) = _$UnableToSave;
+  const factory UnableToSave({required String error}) = _$UnableToSave;
 
   @override
-  String get error;
+  String get error => throw _privateConstructorUsedError;
   @override
-  $UnableToSaveCopyWith<UnableToSave> get copyWith;
+  @JsonKey(ignore: true)
+  $UnableToSaveCopyWith<UnableToSave> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -261,17 +266,20 @@ class _$ResourceAlreadyPresentCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object error = freezed,
+    Object? error = freezed,
   }) {
     return _then(ResourceAlreadyPresent(
-      error == freezed ? _value.error : error as String,
+      error == freezed
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
 class _$ResourceAlreadyPresent implements ResourceAlreadyPresent {
-  const _$ResourceAlreadyPresent(this.error) : assert(error != null);
+  const _$ResourceAlreadyPresent(this.error);
 
   @override
   final String error;
@@ -293,6 +301,7 @@ class _$ResourceAlreadyPresent implements ResourceAlreadyPresent {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(error);
 
+  @JsonKey(ignore: true)
   @override
   $ResourceAlreadyPresentCopyWith<ResourceAlreadyPresent> get copyWith =>
       _$ResourceAlreadyPresentCopyWithImpl<ResourceAlreadyPresent>(
@@ -300,29 +309,24 @@ class _$ResourceAlreadyPresent implements ResourceAlreadyPresent {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result unableToSave(String error),
-    @required Result resourceAlreadyPresent(String error),
-    @required Result unableToObtainList(String error),
-    @required Result unableToDeleteAll(String error),
+  TResult when<TResult extends Object?>({
+    required TResult Function(String error) unableToSave,
+    required TResult Function(String error) resourceAlreadyPresent,
+    required TResult Function(String error) unableToObtainList,
+    required TResult Function(String error) unableToDeleteAll,
   }) {
-    assert(unableToSave != null);
-    assert(resourceAlreadyPresent != null);
-    assert(unableToObtainList != null);
-    assert(unableToDeleteAll != null);
     return resourceAlreadyPresent(error);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result unableToSave(String error),
-    Result resourceAlreadyPresent(String error),
-    Result unableToObtainList(String error),
-    Result unableToDeleteAll(String error),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String error)? unableToSave,
+    TResult Function(String error)? resourceAlreadyPresent,
+    TResult Function(String error)? unableToObtainList,
+    TResult Function(String error)? unableToDeleteAll,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (resourceAlreadyPresent != null) {
       return resourceAlreadyPresent(error);
     }
@@ -331,29 +335,25 @@ class _$ResourceAlreadyPresent implements ResourceAlreadyPresent {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result unableToSave(UnableToSave value),
-    @required Result resourceAlreadyPresent(ResourceAlreadyPresent value),
-    @required Result unableToObtainList(UnableToObtainList value),
-    @required Result unableToDeleteAll(UnableToDeleteAll value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(UnableToSave value) unableToSave,
+    required TResult Function(ResourceAlreadyPresent value)
+        resourceAlreadyPresent,
+    required TResult Function(UnableToObtainList value) unableToObtainList,
+    required TResult Function(UnableToDeleteAll value) unableToDeleteAll,
   }) {
-    assert(unableToSave != null);
-    assert(resourceAlreadyPresent != null);
-    assert(unableToObtainList != null);
-    assert(unableToDeleteAll != null);
     return resourceAlreadyPresent(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result unableToSave(UnableToSave value),
-    Result resourceAlreadyPresent(ResourceAlreadyPresent value),
-    Result unableToObtainList(UnableToObtainList value),
-    Result unableToDeleteAll(UnableToDeleteAll value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(UnableToSave value)? unableToSave,
+    TResult Function(ResourceAlreadyPresent value)? resourceAlreadyPresent,
+    TResult Function(UnableToObtainList value)? unableToObtainList,
+    TResult Function(UnableToDeleteAll value)? unableToDeleteAll,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (resourceAlreadyPresent != null) {
       return resourceAlreadyPresent(this);
     }
@@ -365,9 +365,11 @@ abstract class ResourceAlreadyPresent implements DbFailure {
   const factory ResourceAlreadyPresent(String error) = _$ResourceAlreadyPresent;
 
   @override
-  String get error;
+  String get error => throw _privateConstructorUsedError;
   @override
-  $ResourceAlreadyPresentCopyWith<ResourceAlreadyPresent> get copyWith;
+  @JsonKey(ignore: true)
+  $ResourceAlreadyPresentCopyWith<ResourceAlreadyPresent> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -393,17 +395,20 @@ class _$UnableToObtainListCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object error = freezed,
+    Object? error = freezed,
   }) {
     return _then(UnableToObtainList(
-      error: error == freezed ? _value.error : error as String,
+      error: error == freezed
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
 class _$UnableToObtainList implements UnableToObtainList {
-  const _$UnableToObtainList({this.error});
+  const _$UnableToObtainList({required this.error});
 
   @override
   final String error;
@@ -425,35 +430,31 @@ class _$UnableToObtainList implements UnableToObtainList {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(error);
 
+  @JsonKey(ignore: true)
   @override
   $UnableToObtainListCopyWith<UnableToObtainList> get copyWith =>
       _$UnableToObtainListCopyWithImpl<UnableToObtainList>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result unableToSave(String error),
-    @required Result resourceAlreadyPresent(String error),
-    @required Result unableToObtainList(String error),
-    @required Result unableToDeleteAll(String error),
+  TResult when<TResult extends Object?>({
+    required TResult Function(String error) unableToSave,
+    required TResult Function(String error) resourceAlreadyPresent,
+    required TResult Function(String error) unableToObtainList,
+    required TResult Function(String error) unableToDeleteAll,
   }) {
-    assert(unableToSave != null);
-    assert(resourceAlreadyPresent != null);
-    assert(unableToObtainList != null);
-    assert(unableToDeleteAll != null);
     return unableToObtainList(error);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result unableToSave(String error),
-    Result resourceAlreadyPresent(String error),
-    Result unableToObtainList(String error),
-    Result unableToDeleteAll(String error),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String error)? unableToSave,
+    TResult Function(String error)? resourceAlreadyPresent,
+    TResult Function(String error)? unableToObtainList,
+    TResult Function(String error)? unableToDeleteAll,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (unableToObtainList != null) {
       return unableToObtainList(error);
     }
@@ -462,29 +463,25 @@ class _$UnableToObtainList implements UnableToObtainList {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result unableToSave(UnableToSave value),
-    @required Result resourceAlreadyPresent(ResourceAlreadyPresent value),
-    @required Result unableToObtainList(UnableToObtainList value),
-    @required Result unableToDeleteAll(UnableToDeleteAll value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(UnableToSave value) unableToSave,
+    required TResult Function(ResourceAlreadyPresent value)
+        resourceAlreadyPresent,
+    required TResult Function(UnableToObtainList value) unableToObtainList,
+    required TResult Function(UnableToDeleteAll value) unableToDeleteAll,
   }) {
-    assert(unableToSave != null);
-    assert(resourceAlreadyPresent != null);
-    assert(unableToObtainList != null);
-    assert(unableToDeleteAll != null);
     return unableToObtainList(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result unableToSave(UnableToSave value),
-    Result resourceAlreadyPresent(ResourceAlreadyPresent value),
-    Result unableToObtainList(UnableToObtainList value),
-    Result unableToDeleteAll(UnableToDeleteAll value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(UnableToSave value)? unableToSave,
+    TResult Function(ResourceAlreadyPresent value)? resourceAlreadyPresent,
+    TResult Function(UnableToObtainList value)? unableToObtainList,
+    TResult Function(UnableToDeleteAll value)? unableToDeleteAll,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (unableToObtainList != null) {
       return unableToObtainList(this);
     }
@@ -493,12 +490,15 @@ class _$UnableToObtainList implements UnableToObtainList {
 }
 
 abstract class UnableToObtainList implements DbFailure {
-  const factory UnableToObtainList({String error}) = _$UnableToObtainList;
+  const factory UnableToObtainList({required String error}) =
+      _$UnableToObtainList;
 
   @override
-  String get error;
+  String get error => throw _privateConstructorUsedError;
   @override
-  $UnableToObtainListCopyWith<UnableToObtainList> get copyWith;
+  @JsonKey(ignore: true)
+  $UnableToObtainListCopyWith<UnableToObtainList> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -524,17 +524,20 @@ class _$UnableToDeleteAllCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object error = freezed,
+    Object? error = freezed,
   }) {
     return _then(UnableToDeleteAll(
-      error: error == freezed ? _value.error : error as String,
+      error: error == freezed
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
 class _$UnableToDeleteAll implements UnableToDeleteAll {
-  const _$UnableToDeleteAll({this.error});
+  const _$UnableToDeleteAll({required this.error});
 
   @override
   final String error;
@@ -556,35 +559,31 @@ class _$UnableToDeleteAll implements UnableToDeleteAll {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(error);
 
+  @JsonKey(ignore: true)
   @override
   $UnableToDeleteAllCopyWith<UnableToDeleteAll> get copyWith =>
       _$UnableToDeleteAllCopyWithImpl<UnableToDeleteAll>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result unableToSave(String error),
-    @required Result resourceAlreadyPresent(String error),
-    @required Result unableToObtainList(String error),
-    @required Result unableToDeleteAll(String error),
+  TResult when<TResult extends Object?>({
+    required TResult Function(String error) unableToSave,
+    required TResult Function(String error) resourceAlreadyPresent,
+    required TResult Function(String error) unableToObtainList,
+    required TResult Function(String error) unableToDeleteAll,
   }) {
-    assert(unableToSave != null);
-    assert(resourceAlreadyPresent != null);
-    assert(unableToObtainList != null);
-    assert(unableToDeleteAll != null);
     return unableToDeleteAll(error);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result unableToSave(String error),
-    Result resourceAlreadyPresent(String error),
-    Result unableToObtainList(String error),
-    Result unableToDeleteAll(String error),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String error)? unableToSave,
+    TResult Function(String error)? resourceAlreadyPresent,
+    TResult Function(String error)? unableToObtainList,
+    TResult Function(String error)? unableToDeleteAll,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (unableToDeleteAll != null) {
       return unableToDeleteAll(error);
     }
@@ -593,29 +592,25 @@ class _$UnableToDeleteAll implements UnableToDeleteAll {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result unableToSave(UnableToSave value),
-    @required Result resourceAlreadyPresent(ResourceAlreadyPresent value),
-    @required Result unableToObtainList(UnableToObtainList value),
-    @required Result unableToDeleteAll(UnableToDeleteAll value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(UnableToSave value) unableToSave,
+    required TResult Function(ResourceAlreadyPresent value)
+        resourceAlreadyPresent,
+    required TResult Function(UnableToObtainList value) unableToObtainList,
+    required TResult Function(UnableToDeleteAll value) unableToDeleteAll,
   }) {
-    assert(unableToSave != null);
-    assert(resourceAlreadyPresent != null);
-    assert(unableToObtainList != null);
-    assert(unableToDeleteAll != null);
     return unableToDeleteAll(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result unableToSave(UnableToSave value),
-    Result resourceAlreadyPresent(ResourceAlreadyPresent value),
-    Result unableToObtainList(UnableToObtainList value),
-    Result unableToDeleteAll(UnableToDeleteAll value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(UnableToSave value)? unableToSave,
+    TResult Function(ResourceAlreadyPresent value)? resourceAlreadyPresent,
+    TResult Function(UnableToObtainList value)? unableToObtainList,
+    TResult Function(UnableToDeleteAll value)? unableToDeleteAll,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (unableToDeleteAll != null) {
       return unableToDeleteAll(this);
     }
@@ -624,10 +619,13 @@ class _$UnableToDeleteAll implements UnableToDeleteAll {
 }
 
 abstract class UnableToDeleteAll implements DbFailure {
-  const factory UnableToDeleteAll({String error}) = _$UnableToDeleteAll;
+  const factory UnableToDeleteAll({required String error}) =
+      _$UnableToDeleteAll;
 
   @override
-  String get error;
+  String get error => throw _privateConstructorUsedError;
   @override
-  $UnableToDeleteAllCopyWith<UnableToDeleteAll> get copyWith;
+  @JsonKey(ignore: true)
+  $UnableToDeleteAllCopyWith<UnableToDeleteAll> get copyWith =>
+      throw _privateConstructorUsedError;
 }

@@ -3,20 +3,20 @@ import 'package:get/get.dart';
 
 class OrderedList extends StatelessWidget {
   const OrderedList({
-    @required this.label1,
-    @required this.sortCol1,
-    @required this.order1,
-    @required this.entry1,
-    @required this.label2,
-    @required this.sortCol2,
-    @required this.order2,
-    @required this.entry2,
-    @required this.label3,
-    @required this.sortCol3,
-    @required this.order3,
-    @required this.entry3,
-    @required this.listLength,
-    @required this.selectEntry,
+    required this.label1,
+    required this.sortCol1,
+    required this.order1,
+    required this.entry1,
+    required this.label2,
+    required this.sortCol2,
+    required this.order2,
+    required this.entry2,
+    required this.label3,
+    required this.sortCol3,
+    required this.order3,
+    required this.entry3,
+    required this.listLength,
+    required this.selectEntry,
   });
 
   final String label1;

@@ -5,10 +5,10 @@ import '../../../localization.dart';
 
 class NamesInputWidget extends StatelessWidget {
   const NamesInputWidget({
-    @required this.familyName,
-    @required this.givenName,
-    @required this.familyNameError,
-    @required this.givenNameError,
+    required this.familyName,
+    required this.givenName,
+    required this.familyNameError,
+    required this.givenNameError,
   });
 
   final TextEditingController familyName;
@@ -18,7 +18,7 @@ class NamesInputWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final labels = AppLocalizations.of(context);
+    final labels = AppLocalizations.of(context)!;
 
     return Container(
       child: Column(
@@ -30,13 +30,14 @@ class NamesInputWidget extends StatelessWidget {
             decoration: InputDecoration(
               labelText: labels.name.familyName,
               labelStyle:
-                  Get.textTheme.bodyText1.copyWith(fontSize: Get.width * .05),
+                  Get.textTheme!.bodyText1!.copyWith(fontSize: Get.width * .05),
               errorText: familyNameError == '' ? null : familyNameError,
               focusedBorder: UnderlineInputBorder(
-                borderSide: BorderSide(color: Get.theme.colorScheme.onPrimary),
+                borderSide: BorderSide(color: Get.theme!.colorScheme.onPrimary),
               ),
             ),
-            style: Get.textTheme.headline6.copyWith(fontSize: Get.width * .05),
+            style:
+                Get.textTheme!.headline6!.copyWith(fontSize: Get.width * .05),
           ),
 
           /// error is blank at first, only is shown after the registration
@@ -46,13 +47,14 @@ class NamesInputWidget extends StatelessWidget {
             decoration: InputDecoration(
               labelText: labels.name.givenNames,
               labelStyle:
-                  Get.textTheme.bodyText1.copyWith(fontSize: Get.width * .05),
+                  Get.textTheme!.bodyText1!.copyWith(fontSize: Get.width * .05),
               errorText: givenNameError == '' ? null : givenNameError,
               focusedBorder: UnderlineInputBorder(
-                borderSide: BorderSide(color: Get.theme.colorScheme.onPrimary),
+                borderSide: BorderSide(color: Get.theme!.colorScheme.onPrimary),
               ),
             ),
-            style: Get.textTheme.headline6.copyWith(fontSize: Get.width * .05),
+            style:
+                Get.textTheme!.headline6!.copyWith(fontSize: Get.width * .05),
           ),
         ],
       ),

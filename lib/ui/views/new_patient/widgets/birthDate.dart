@@ -6,10 +6,10 @@ import '../../../localization.dart';
 
 class BirthDateWidget extends StatelessWidget {
   const BirthDateWidget({
-    @required this.birthDate,
-    @required this.chooseBirthDate,
-    @required this.displayBirthDate,
-    @required this.dispBirthDateError,
+    required this.birthDate,
+    required this.chooseBirthDate,
+    required this.displayBirthDate,
+    required this.dispBirthDateError,
   });
 
   final DateTime birthDate;
@@ -19,7 +19,7 @@ class BirthDateWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final labels = AppLocalizations.of(context);
+    final labels = AppLocalizations.of(context)!;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -31,12 +31,14 @@ class BirthDateWidget extends StatelessWidget {
               width: Get.width * 0.4,
               child: Text(
                 '${labels.dateOfBirth.title}',
-                style: Get.theme.textTheme.bodyText1
+                style: Get.theme!.textTheme.bodyText1!
                     .copyWith(fontSize: Get.width * .05),
               ),
             ),
-            FlatButton(
-              padding: EdgeInsets.all(0.0),
+            TextButton(
+              style: ButtonStyle(
+                  padding: ButtonStyleButton.allOrNull<EdgeInsetsGeometry>(
+                      EdgeInsets.all(0.0))),
               onPressed: () => showMyDatePicker(
                   initialDate: birthDate == DateTime(1900, 1, 1)
                       ? DateTime.now()
@@ -44,16 +46,16 @@ class BirthDateWidget extends StatelessWidget {
                   function: chooseBirthDate),
               child: Container(
                 decoration: BoxDecoration(
-                  border: Border(bottom: BorderSide(color: Colors.grey[300])),
+                  border: Border(bottom: BorderSide(color: Colors.grey[300]!)),
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     birthDate == DateTime(1900, 1, 1)
                         ? Text('             ',
-                            style: Get.theme.textTheme.bodyText1)
+                            style: Get.theme!.textTheme.bodyText1)
                         : Text(displayBirthDate,
-                            style: Get.theme.textTheme.bodyText1),
+                            style: Get.theme!.textTheme.bodyText1),
                     Icon(Icons.keyboard_arrow_down),
                   ],
                 ),
@@ -63,8 +65,8 @@ class BirthDateWidget extends StatelessWidget {
         ),
         Text(
           dispBirthDateError.tr,
-          style: Get.theme.textTheme.caption
-              .copyWith(color: Get.theme.colorScheme.error),
+          style: Get.theme!.textTheme.caption!
+              .copyWith(color: Get.theme!.colorScheme.error),
         ),
       ],
     );

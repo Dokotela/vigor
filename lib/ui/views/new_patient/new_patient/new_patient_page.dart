@@ -13,8 +13,8 @@ import '../widgets/names.dart';
 class NewPatientPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final controller = Get.put(NewPatientController());
-    final labels = AppLocalizations.of(context);
+    final controller = Get.put(NewPatientController())!;
+    final labels = AppLocalizations.of(context)!;
 
     return GestureDetector(
       onTap: () {
@@ -48,7 +48,7 @@ class NewPatientPage extends StatelessWidget {
                         givenNameError: controller.givenNameError,
                       ),
 
-                      SizedBox(height: Get.height * .04),
+                      // SizedBox(height: Get.height * .04),
 
                       /// reusable widget for entering gender at birth, is passed a
                       /// boolean (true = female, false = male), and then the
@@ -61,8 +61,6 @@ class NewPatientPage extends StatelessWidget {
                         error: controller.genderError,
                       ),
 
-                      SizedBox(height: Get.height * .04),
-
                       /// reusable widget for entering birthdate, arguments are
                       /// controller function to choose birthdate, the current
                       /// birthdate, the birthdate as a String, and then an error
@@ -74,6 +72,26 @@ class NewPatientPage extends StatelessWidget {
                         dispBirthDateError: controller.birthDateError,
                       ),
 
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Text(
+                            'Contacto\nPrimario',
+                            style: Get.theme!.textTheme.bodyText1!
+                                .copyWith(fontSize: Get.width * .05),
+                          ),
+                          Container(
+                            width: Get.width * 0.4,
+                            child: Text(
+                              controller.primaryFamilyMember,
+                              style: Get.theme!.textTheme.bodyText1!
+                                  .copyWith(fontSize: Get.width * .05),
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: Get.height * .04),
+
                       /// reusable widget for selecting neighborhood, includes the
                       /// list of neighborhoods, which one to display, the event
                       /// to change it, and the error message
@@ -84,8 +102,6 @@ class NewPatientPage extends StatelessWidget {
                         selectNew: controller.selectBarrio,
                         error: controller.barrioError,
                       ),
-
-                      SizedBox(height: Get.height / 15),
 
                       /// button to register patient
                       ThinActionButton(

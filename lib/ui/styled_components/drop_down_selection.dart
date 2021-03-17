@@ -3,11 +3,11 @@ import 'package:get/get.dart';
 
 class DropDownSelection extends StatelessWidget {
   const DropDownSelection({
-    @required this.title,
-    @required this.selectionList,
-    @required this.display,
-    @required this.selectNew,
-    @required this.error,
+    required this.title,
+    required this.selectionList,
+    required this.display,
+    required this.selectNew,
+    required this.error,
   });
 
   final String title;

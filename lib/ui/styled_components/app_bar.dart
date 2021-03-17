@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import '../settings_dialog.dart';
 
 class VigorAppBar extends AppBar {
-  VigorAppBar({@required String title, Widget leading, List<Widget> actions})
+  VigorAppBar({required String title, Widget leading, List<Widget> actions})
       : super(
           title: Text(title,
               style: Get.theme.textTheme.headline5

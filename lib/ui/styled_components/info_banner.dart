@@ -6,11 +6,11 @@ import '../localization.dart';
 
 class InfoBannerWidget extends StatelessWidget {
   const InfoBannerWidget({
-    @required this.name,
-    @required this.id,
-    @required this.birthDate,
-    @required this.relativeAge,
-    @required this.sex,
+    required this.name,
+    required this.id,
+    required this.birthDate,
+    required this.relativeAge,
+    required this.sex,
   });
 
   final String name;

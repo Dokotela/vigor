@@ -10,7 +10,7 @@ import '../../styled_components/action_button.dart';
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final labels = AppLocalizations.of(context);
+    final labels = AppLocalizations.of(context)!;
 
     return Scaffold(
       appBar: VigorAppBar(title: labels.app.title.saluddominicana),

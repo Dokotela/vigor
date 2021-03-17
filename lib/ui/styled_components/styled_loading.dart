@@ -107,7 +107,7 @@ Future<void> hideLoadingIndicator() async {
 
 ///----------------------------------------------------------------------------
 /// These methods deal with showing and hiding the overlay
-Future<void> _showOverlay({@required Widget child}) async {
+Future<void> _showOverlay({required Widget child}) async {
   try {
     final overlay = _overlayState;
 

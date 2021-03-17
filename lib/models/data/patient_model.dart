@@ -8,25 +8,26 @@ import '../../services/i_fhir_db.dart';
 
 class PatientModel {
   PatientModel({
-    this.patient,
-    this.pastImmunizations,
+    Patient? patient,
+    List<Immunization>? pastImmunizations,
     // this.immEvaluations,
     // this.recommendation,
     // this.pastImmMap,
-    this.immHx,
+    Map<String, Set<Immunization>>? immHx,
   }) {
-    pastImmunizations ??= <Immunization>[];
+    this.patient = patient ?? Patient();
+    this.pastImmunizations = pastImmunizations ?? <Immunization>[];
     // immEvaluations ??= <ImmunizationEvaluation>[];
     // pastImmMap ??= <String, List<Immunization>>{};
-    immHx ??= <String, Set<Immunization>>{};
+    this.immHx = immHx ?? <String, Set<Immunization>>{};
   }
 
-  Patient patient;
-  List<Immunization> pastImmunizations;
+  late Patient patient;
+  late List<Immunization> pastImmunizations;
   // List<ImmunizationEvaluation> immEvaluations;
   // ImmunizationRecommendation recommendation;
   // Map<String, List<Immunization>> pastImmMap;
-  Map<String, Set<Immunization>> immHx;
+  late Map<String, Set<Immunization>> immHx;
 
   Future loadImmunizations() async {
     final iFhirDb = IFhirDb();
@@ -37,8 +38,8 @@ class PatientModel {
           (r) => r.forEach(
             (resource) {
               if ((resource as Immunization).status == Code('completed')) {
-                if (!pastImmunizations.contains(resource as Immunization)) {
-                  pastImmunizations.add(resource as Immunization);
+                if (!pastImmunizations.contains(resource)) {
+                  pastImmunizations.add(resource);
                 }
               }
             },
@@ -53,7 +54,7 @@ class PatientModel {
       status: Code('completed'),
       patient: Reference(reference: 'Patient/${patient.id}'),
       occurrenceDateTime: date,
-      vaccineCode: cvxToCoding[cvx]);
+      vaccineCode: cvxToCoding(cvx));
 
   Future addNewVaccine(String cvx, FhirDateTime date) async {
     final immunization = _newVax(cvx, date);
@@ -132,12 +133,17 @@ class PatientModel {
   // }
 
   String name() => lastCommaGivenName(patient.name);
-  String familyName() => patient?.name == null ? '' : patient.name[0].family;
-  String givenName() => patient?.name == null
+  String familyName() =>
+      patient.name == null ? '' : patient.name![0].family ?? '';
+  String givenName() => patient.name == null
       ? ''
-      : patient.name[0].given == null
+      : patient.name!.isEmpty
           ? ''
-          : patient.name[0].given[0];
+          : patient.name![0].given == null
+              ? ''
+              : patient.name![0].given!.isEmpty
+                  ? ''
+                  : patient.name![0].given![0];
   String id() => patient.id.toString();
   String sex() => basicEnumToString(patient.gender);
   String birthDate() => dateFromFhirDate(patient.birthDate);

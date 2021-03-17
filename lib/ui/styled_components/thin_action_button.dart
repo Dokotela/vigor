@@ -7,7 +7,7 @@ import '../../controllers/controllers.dart';
 
 class ThinActionButton extends StatelessWidget {
   const ThinActionButton({
-    @required this.buttonText,
+    required this.buttonText,
     this.onPressed,
     this.width,
   });

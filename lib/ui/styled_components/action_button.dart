@@ -7,7 +7,7 @@ import '../../controllers/controllers.dart';
 
 class ActionButton extends StatelessWidget {
   const ActionButton({
-    @required this.buttonText,
+    required this.buttonText,
     this.onPressed,
   });
 

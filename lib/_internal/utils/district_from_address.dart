@@ -3,9 +3,11 @@ import 'package:get/get.dart';
 
 import '../../ui/localization.dart';
 
-String districtFromAddress(List<Address> address) {
-  final labels = AppLocalizations.of(Get.context);
+String districtFromAddress(List<Address>? address) {
+  final labels = AppLocalizations.of(Get.context!)!;
   return address == null
       ? labels.address.neighborhood.title
-      : address[0]?.district ?? labels.address.neighborhood.title;
+      : address.isEmpty
+          ? labels.address.neighborhood.title
+          : address[0].district ?? labels.address.neighborhood.title;
 }

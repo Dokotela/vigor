@@ -3,9 +3,7 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SplashTitleWidget extends StatelessWidget {
-  const SplashTitleWidget(this.country);
-
-  final String country;
+  const SplashTitleWidget();
 
   @override
   Widget build(Object context) => Text('Salud Dominicana',

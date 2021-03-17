@@ -16,7 +16,7 @@ class NewPatientController extends GetxController {
   /// PROPERTIES
   final _patient = PatientModel().obs;
   final newPatient = Get.arguments == null;
-  final labels = AppLocalizations.of(Get.context);
+  final labels = AppLocalizations.of(Get.context!)!;
 
   final familyName = TextEditingController();
   final _familyNameError = ''.obs;
@@ -39,42 +39,49 @@ class NewPatientController extends GetxController {
   @override
   void onInit() {
     if (Get.arguments != null) {
-      _patient.value = Get.arguments;
-      _gender.value = _patient.value.patient.gender == PatientGender.female
-          ? labels.gender.female
-          : labels.gender.male;
-      _birthDate.value =
-          DateTime.parse(_patient.value.patient.birthDate.toString());
-      _barrio.value = _patient.value.barrio();
-      _birthDateString.value = dateFromDateTime(_birthDate.value);
+      if (Get.arguments is PatientModel) {
+        _patient.value = Get.arguments;
+        _gender.value = _patient.value!.patient.gender == PatientGender.female
+            ? labels.gender.female
+            : labels.gender.male;
+        _birthDate.value =
+            DateTime.parse(_patient.value!.patient.birthDate.toString());
+        _barrio.value = _patient.value!.barrio();
+        _birthDateString.value = dateFromDateTime(_birthDate.value!);
+      }
     }
-    familyName.text = _patient.value.familyName();
-    givenName.text = _patient.value.givenName();
+    familyName.text = _patient.value!.familyName();
+    givenName.text = _patient.value!.givenName();
     super.onInit();
   }
 
   /// GETTER FUNCTIONS
-  String get familyNameError => _familyNameError.value;
-  String get givenNameError => _givenNameError.value;
+  String get familyNameError => _familyNameError.value ?? '';
+  String get givenNameError => _givenNameError.value ?? '';
 
-  DateTime get birthDate => _birthDate.value;
-  String get displayBirthDate => _birthDateString.value;
-  String get birthDateError => _birthDateError.value;
+  DateTime get birthDate => _birthDate.value ?? DateTime(1900, 1, 1);
+  String get displayBirthDate =>
+      _birthDateString.value ?? DateTime(1900, 1, 1).toIso8601String();
+  String get birthDateError => _birthDateError.value ?? '';
 
   List<String> get genderTypes => _genderTypes;
-  String get gender => _gender.value;
-  String get genderError => _genderError.value;
+  String get gender => _gender.value ?? '';
+  String get genderError => _genderError.value ?? '';
 
   List<String> get barriosList => _barriosList;
-  String get barrio => _barrio.value;
-  String get barrioError => _barrioError.value;
+  String get barrio => _barrio.value ?? '';
+  String get barrioError => _barrioError.value ?? '';
+  String get primaryFamilyMember => newPatient
+      ? ''
+      : lastCommaGivenName(
+          [_patient.value?.patient.contact?[0].name ?? HumanName()]);
 
   /// SETTERS
   void setGender(String gender) => _gender.value = gender;
 
   void chooseBirthDate(DateTime birthDate) {
-    _birthDate.value = birthDate ?? _birthDate.value;
-    _birthDateString.value = dateFromDateTime(_birthDate.value);
+    _birthDate.value = birthDate;
+    _birthDateString.value = dateFromDateTime(_birthDate.value!);
   }
 
   void selectBarrio(String barrio) => _barrio.value = barrio;

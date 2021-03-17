@@ -29,8 +29,8 @@ Widget doseOptions(
             alignment: Alignment.center,
             child: IconButton(
                 color: Colors.yellow,
-                icon: Icon(Icons.check_circle,
-                    color: Colors.green,
+                icon: Icon(Icons.star_rate,
+                    color: Colors.yellow,
                     size: screenSize.iconSizes(sizingInformation)),
                 tooltip: dateFromDateTime(DateTime.now()),
                 onPressed: () {}),

@@ -201,8 +201,8 @@ class PatientImmPage extends StatelessWidget {
                   Row(
                     children: [
                       Icon(
-                        Icons.check_circle,
-                        color: Colors.green,
+                        Icons.star_rate,
+                        color: Colors.yellow,
                         size: screenSize.iconSizes(sizingInformation),
                       ),
                       Text('= ${labels.medical.vaccines.completed}'),

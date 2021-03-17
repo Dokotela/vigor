@@ -13,65 +13,83 @@ final drVaxCvxMap = {
   'MR': '04',
 };
 
-final cvxToCoding = {
-  '19': CodeableConcept(
-      coding: [Coding(system: _system, code: Code('19'), display: 'BCG')]),
-  '08': CodeableConcept(coding: [
-    Coding(
-        system: _system,
-        code: Code('08'),
-        display:
-            'hepatitis B vaccine, pediatric or pediatric/adolescent dosage')
-  ]),
-  '122': CodeableConcept(coding: [
-    Coding(
-        system: _system,
-        code: Code('122'),
-        display: 'rotavirus vaccine, unspecified formulation')
-  ]),
-  '89': CodeableConcept(coding: [
-    Coding(
-        system: _system,
-        code: Code('89'),
-        display: 'poliovirus vaccine, unspecified formulation')
-  ]),
-  '198': CodeableConcept(coding: [
-    Coding(
-        system: _system,
-        code: Code('198'),
-        display: 'Diphtheria, pertussis, tetanus, hepatitis B,'
-            ' Haemophilus Influenza Type b, (Pentavalent)')
-  ]),
-  '109': CodeableConcept(coding: [
-    Coding(
-        system: _system,
-        code: Code('109'),
-        display: 'pneumococcal vaccine, unspecified formulation')
-  ]),
-  '88': CodeableConcept(coding: [
-    Coding(
-        system: _system,
-        code: Code('88'),
-        display: 'influenza virus vaccine, unspecified formulation')
-  ]),
-  '03': CodeableConcept(coding: [
-    Coding(
-        system: _system,
-        code: Code('03'),
-        display: 'measles, mumps and rubella virus vaccine')
-  ]),
-  '01': CodeableConcept(coding: [
-    Coding(
-        system: _system,
-        code: Code('01'),
-        display: 'diphtheria, tetanus toxoids and pertussis vaccine')
-  ]),
-  '04': CodeableConcept(coding: [
-    Coding(
-        system: _system,
-        code: Code('04'),
-        display: 'measles and rubella virus vaccine')
-  ]),
-};
-
-final _system = FhirUri('http://hl7.org/fhir/sid/cvx');
+CodeableConcept cvxToCoding(String cvx) {
+  final _system = FhirUri('http://hl7.org/fhir/sid/cvx');
+  switch (cvx) {
+    case '19':
+      return CodeableConcept(
+          coding: [Coding(system: _system, code: Code('19'), display: 'BCG')]);
+    case '08':
+      return CodeableConcept(coding: [
+        Coding(
+            system: _system,
+            code: Code('08'),
+            display:
+                'hepatitis B vaccine, pediatric or pediatric/adolescent dosage')
+      ]);
+    case '122':
+      return CodeableConcept(coding: [
+        Coding(
+            system: _system,
+            code: Code('122'),
+            display: 'rotavirus vaccine, unspecified formulation')
+      ]);
+    case '89':
+      return CodeableConcept(coding: [
+        Coding(
+            system: _system,
+            code: Code('89'),
+            display: 'poliovirus vaccine, unspecified formulation')
+      ]);
+    case '198':
+      return CodeableConcept(coding: [
+        Coding(
+            system: _system,
+            code: Code('198'),
+            display: 'Diphtheria, pertussis, tetanus, hepatitis B,'
+                ' Haemophilus Influenza Type b, (Pentavalent)')
+      ]);
+    case '109':
+      return CodeableConcept(coding: [
+        Coding(
+            system: _system,
+            code: Code('109'),
+            display: 'pneumococcal vaccine, unspecified formulation')
+      ]);
+    case '88':
+      return CodeableConcept(coding: [
+        Coding(
+            system: _system,
+            code: Code('88'),
+            display: 'influenza virus vaccine, unspecified formulation')
+      ]);
+    case '03':
+      return CodeableConcept(coding: [
+        Coding(
+            system: _system,
+            code: Code('03'),
+            display: 'measles, mumps and rubella virus vaccine')
+      ]);
+    case '01':
+      return CodeableConcept(coding: [
+        Coding(
+            system: _system,
+            code: Code('01'),
+            display: 'diphtheria, tetanus toxoids and pertussis vaccine')
+      ]);
+    case '04':
+      return CodeableConcept(coding: [
+        Coding(
+            system: _system,
+            code: Code('04'),
+            display: 'measles and rubella virus vaccine')
+      ]);
+    default:
+      return CodeableConcept(coding: [
+        Coding(
+            system: _system,
+            code: Code('999'),
+            display: 'unknown vaccine or immune globulin')
+      ]);
+  }
+}

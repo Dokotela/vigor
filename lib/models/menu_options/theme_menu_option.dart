@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 
 class ThemeMenuOption {
   ThemeMenuOption(
-      {@required this.key,
-      @required this.value,
-      @required this.englishValue,
+      {required this.key,
+      required this.value,
+      required this.englishValue,
       this.icon});
 
   ThemeMode key;

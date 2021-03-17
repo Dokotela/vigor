@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class FlagWidget extends StatelessWidget {
-  const FlagWidget(this.country);
+  const FlagWidget();
 
-  final String country;
+  // final String country;
 
   @override
   Widget build(Object context) {

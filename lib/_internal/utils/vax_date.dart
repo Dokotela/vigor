@@ -1,5 +1,3 @@
-import 'package:date_utils/date_utils.dart';
-
 class VaxDate extends DateTime {
   VaxDate(int year, int month, int day) : super(year, month, day);
 
@@ -21,9 +19,9 @@ class VaxDate extends DateTime {
 
   VaxDate.yyyymmdd(String date)
       : super(
-          int.tryParse(date.substring(0, 4)),
-          int.tryParse(date.substring(4, 6)),
-          int.tryParse(date.substring(6, 8)),
+          int.tryParse(date.substring(0, 4)) ?? 1900,
+          int.tryParse(date.substring(4, 6)) ?? 01,
+          int.tryParse(date.substring(6, 8)) ?? 01,
         );
 
   VaxDate.fromJson(String date)
@@ -33,15 +31,13 @@ class VaxDate extends DateTime {
   String toJson() => toString();
 
   VaxDate fromNullableString(String date) =>
-      date == null || date == '' ? this : VaxDate.yyyymmdd(date);
+      date == '' ? this : VaxDate.yyyymmdd(date);
 
-  VaxDate minIfNull(String dateChange) => dateChange == null || dateChange == ''
-      ? VaxDate(1900, 1, 1)
-      : change(dateChange);
+  VaxDate minIfNull(String dateChange) =>
+      dateChange == '' ? VaxDate(1900, 1, 1) : change(dateChange);
 
-  VaxDate maxIfNull(String dateChange) => dateChange == null || dateChange == ''
-      ? VaxDate(2999, 12, 31)
-      : change(dateChange);
+  VaxDate maxIfNull(String dateChange) =>
+      dateChange == '' ? VaxDate(2999, 12, 31) : change(dateChange);
 
   bool operator <(VaxDate vaxDate) {
     return DateTime(year, month, day)
@@ -73,10 +69,10 @@ class VaxDate extends DateTime {
   }
 
   VaxDate change(String howMuch) =>
-      howMuch == null || howMuch == '' ? this : _parseDateString(howMuch);
+      howMuch == '' ? this : _parseDateString(howMuch);
 
   VaxDate changeIfNotNull(String howMuch) =>
-      howMuch == null || howMuch == '' ? null : change(howMuch);
+      howMuch == '' ? this : change(howMuch);
 
   VaxDate _parseDateString(String change) {
     var years = 0, months = 0, weeks = 0, days = 0, posNeg = 1;
@@ -90,16 +86,16 @@ class VaxDate extends DateTime {
         }
       }
       if (time[i].contains('year')) {
-        years += int.tryParse(time[i - 1]) * posNeg;
+        years += int.tryParse(time[i - 1]) ?? 0 * posNeg;
       }
       if (time[i].contains('month')) {
-        months += int.tryParse(time[i - 1]) * posNeg;
+        months += int.tryParse(time[i - 1]) ?? 0 * posNeg;
       }
       if (time[i].contains('week')) {
-        weeks += int.tryParse(time[i - 1]) * posNeg;
+        weeks += int.tryParse(time[i - 1]) ?? 0 * posNeg;
       }
       if (time[i].contains('day')) {
-        days += int.tryParse(time[i - 1]) * posNeg;
+        days += int.tryParse(time[i - 1]) ?? 0 * posNeg;
       }
     }
     return _calculateTime(years, months, 7 * weeks + days);
@@ -107,7 +103,7 @@ class VaxDate extends DateTime {
 
   VaxDate _calculateTime(int years, int months, int days) {
     var newDate = DateTime(year + years, month + months, 1);
-    if (Utils.lastDayOfMonth(newDate).day < day) {
+    if (DateUtils.lastDayOfMonth(newDate).day < day) {
       newDate = DateTime(newDate.year, newDate.month + 1, 1);
     } else {
       newDate = DateTime(newDate.year, newDate.month, day);
@@ -117,29 +113,17 @@ class VaxDate extends DateTime {
 }
 
 VaxDate latestOf(List<VaxDate> dates) {
-  VaxDate latest;
+  VaxDate latest = VaxDate(1900, 01, 01);
   for (final date in dates) {
-    latest = date == null
-        ? latest
-        : latest == null
-            ? date
-            : latest > date
-                ? latest
-                : date;
+    latest = latest > date ? latest : date;
   }
   return latest;
 }
 
 VaxDate earliestOf(List<VaxDate> dates) {
-  VaxDate earliest;
+  VaxDate earliest = VaxDate(2999, 01, 01);
   for (final date in dates) {
-    if (date != null) {
-      if (earliest == null) {
-        earliest = date;
-      } else {
-        earliest = earliest < date ? earliest : date;
-      }
-    }
+    earliest = earliest < date ? earliest : date;
   }
-  return null;
+  return earliest;
 }

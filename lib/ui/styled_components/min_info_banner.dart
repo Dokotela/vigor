@@ -5,8 +5,8 @@ import '../localization.dart';
 
 class MinInfoBanner extends StatelessWidget {
   const MinInfoBanner({
-    @required this.name,
-    @required this.birthDate,
+    required this.name,
+    required this.birthDate,
   });
 
   final String name;

@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'value_failures.dart';
 
@@ -9,61 +9,56 @@ part of 'value_failures.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$ValueFailureTearOff {
   const _$ValueFailureTearOff();
 
-// ignore: unused_element
-  InvalidUsername<T> invalidUsername<T>({@required T failedValue}) {
+  InvalidUsername<T> invalidUsername<T>({required T failedValue}) {
     return InvalidUsername<T>(
       failedValue: failedValue,
     );
   }
 
-// ignore: unused_element
-  ShortPassword<T> shortPassword<T>({@required T failedValue}) {
+  ShortPassword<T> shortPassword<T>({required T failedValue}) {
     return ShortPassword<T>(
       failedValue: failedValue,
     );
   }
 
-// ignore: unused_element
-  ShortRegistrationName<T> shortRegistrationName<T>({@required T failedValue}) {
+  ShortRegistrationName<T> shortRegistrationName<T>({required T failedValue}) {
     return ShortRegistrationName<T>(
       failedValue: failedValue,
     );
   }
 
-// ignore: unused_element
-  NotAGender<T> notAGender<T>({@required T failedValue}) {
+  NotAGender<T> notAGender<T>({required T failedValue}) {
     return NotAGender<T>(
       failedValue: failedValue,
     );
   }
 
-// ignore: unused_element
-  NotABarrio<T> notABarrio<T>({@required T failedValue}) {
+  NotABarrio<T> notABarrio<T>({required T failedValue}) {
     return NotABarrio<T>(
       failedValue: failedValue,
     );
   }
 
-// ignore: unused_element
-  NotARelation<T> notARelation<T>({@required T failedValue}) {
+  NotARelation<T> notARelation<T>({required T failedValue}) {
     return NotARelation<T>(
       failedValue: failedValue,
     );
   }
 
-// ignore: unused_element
-  FutureDate<T> futureDate<T>({@required T failedValue}) {
+  FutureDate<T> futureDate<T>({required T failedValue}) {
     return FutureDate<T>(
       failedValue: failedValue,
     );
   }
 
-// ignore: unused_element
-  FhirPrimitiveFail<T> fhirPrimitiveFail<T>({@required T failedValue}) {
+  FhirPrimitiveFail<T> fhirPrimitiveFail<T>({required T failedValue}) {
     return FhirPrimitiveFail<T>(
       failedValue: failedValue,
     );
@@ -71,61 +66,67 @@ class _$ValueFailureTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $ValueFailure = _$ValueFailureTearOff();
 
 /// @nodoc
 mixin _$ValueFailure<T> {
-  T get failedValue;
+  T get failedValue => throw _privateConstructorUsedError;
 
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result invalidUsername(T failedValue),
-    @required Result shortPassword(T failedValue),
-    @required Result shortRegistrationName(T failedValue),
-    @required Result notAGender(T failedValue),
-    @required Result notABarrio(T failedValue),
-    @required Result notARelation(T failedValue),
-    @required Result futureDate(T failedValue),
-    @required Result fhirPrimitiveFail(T failedValue),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function(T failedValue) invalidUsername,
+    required TResult Function(T failedValue) shortPassword,
+    required TResult Function(T failedValue) shortRegistrationName,
+    required TResult Function(T failedValue) notAGender,
+    required TResult Function(T failedValue) notABarrio,
+    required TResult Function(T failedValue) notARelation,
+    required TResult Function(T failedValue) futureDate,
+    required TResult Function(T failedValue) fhirPrimitiveFail,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result invalidUsername(T failedValue),
-    Result shortPassword(T failedValue),
-    Result shortRegistrationName(T failedValue),
-    Result notAGender(T failedValue),
-    Result notABarrio(T failedValue),
-    Result notARelation(T failedValue),
-    Result futureDate(T failedValue),
-    Result fhirPrimitiveFail(T failedValue),
-    @required Result orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(T failedValue)? invalidUsername,
+    TResult Function(T failedValue)? shortPassword,
+    TResult Function(T failedValue)? shortRegistrationName,
+    TResult Function(T failedValue)? notAGender,
+    TResult Function(T failedValue)? notABarrio,
+    TResult Function(T failedValue)? notARelation,
+    TResult Function(T failedValue)? futureDate,
+    TResult Function(T failedValue)? fhirPrimitiveFail,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result invalidUsername(InvalidUsername<T> value),
-    @required Result shortPassword(ShortPassword<T> value),
-    @required Result shortRegistrationName(ShortRegistrationName<T> value),
-    @required Result notAGender(NotAGender<T> value),
-    @required Result notABarrio(NotABarrio<T> value),
-    @required Result notARelation(NotARelation<T> value),
-    @required Result futureDate(FutureDate<T> value),
-    @required Result fhirPrimitiveFail(FhirPrimitiveFail<T> value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(InvalidUsername<T> value) invalidUsername,
+    required TResult Function(ShortPassword<T> value) shortPassword,
+    required TResult Function(ShortRegistrationName<T> value)
+        shortRegistrationName,
+    required TResult Function(NotAGender<T> value) notAGender,
+    required TResult Function(NotABarrio<T> value) notABarrio,
+    required TResult Function(NotARelation<T> value) notARelation,
+    required TResult Function(FutureDate<T> value) futureDate,
+    required TResult Function(FhirPrimitiveFail<T> value) fhirPrimitiveFail,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result invalidUsername(InvalidUsername<T> value),
-    Result shortPassword(ShortPassword<T> value),
-    Result shortRegistrationName(ShortRegistrationName<T> value),
-    Result notAGender(NotAGender<T> value),
-    Result notABarrio(NotABarrio<T> value),
-    Result notARelation(NotARelation<T> value),
-    Result futureDate(FutureDate<T> value),
-    Result fhirPrimitiveFail(FhirPrimitiveFail<T> value),
-    @required Result orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(InvalidUsername<T> value)? invalidUsername,
+    TResult Function(ShortPassword<T> value)? shortPassword,
+    TResult Function(ShortRegistrationName<T> value)? shortRegistrationName,
+    TResult Function(NotAGender<T> value)? notAGender,
+    TResult Function(NotABarrio<T> value)? notABarrio,
+    TResult Function(NotARelation<T> value)? notARelation,
+    TResult Function(FutureDate<T> value)? futureDate,
+    TResult Function(FhirPrimitiveFail<T> value)? fhirPrimitiveFail,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 
-  $ValueFailureCopyWith<T, ValueFailure<T>> get copyWith;
+  @JsonKey(ignore: true)
+  $ValueFailureCopyWith<T, ValueFailure<T>> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -147,11 +148,13 @@ class _$ValueFailureCopyWithImpl<T, $Res>
 
   @override
   $Res call({
-    Object failedValue = freezed,
+    Object? failedValue = freezed,
   }) {
     return _then(_value.copyWith(
-      failedValue:
-          failedValue == freezed ? _value.failedValue : failedValue as T,
+      failedValue: failedValue == freezed
+          ? _value.failedValue
+          : failedValue // ignore: cast_nullable_to_non_nullable
+              as T,
     ));
   }
 }
@@ -179,19 +182,20 @@ class _$InvalidUsernameCopyWithImpl<T, $Res>
 
   @override
   $Res call({
-    Object failedValue = freezed,
+    Object? failedValue = freezed,
   }) {
     return _then(InvalidUsername<T>(
-      failedValue:
-          failedValue == freezed ? _value.failedValue : failedValue as T,
+      failedValue: failedValue == freezed
+          ? _value.failedValue
+          : failedValue // ignore: cast_nullable_to_non_nullable
+              as T,
     ));
   }
 }
 
 /// @nodoc
 class _$InvalidUsername<T> implements InvalidUsername<T> {
-  const _$InvalidUsername({@required this.failedValue})
-      : assert(failedValue != null);
+  const _$InvalidUsername({required this.failedValue});
 
   @override
   final T failedValue;
@@ -214,47 +218,39 @@ class _$InvalidUsername<T> implements InvalidUsername<T> {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
 
+  @JsonKey(ignore: true)
   @override
   $InvalidUsernameCopyWith<T, InvalidUsername<T>> get copyWith =>
       _$InvalidUsernameCopyWithImpl<T, InvalidUsername<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result invalidUsername(T failedValue),
-    @required Result shortPassword(T failedValue),
-    @required Result shortRegistrationName(T failedValue),
-    @required Result notAGender(T failedValue),
-    @required Result notABarrio(T failedValue),
-    @required Result notARelation(T failedValue),
-    @required Result futureDate(T failedValue),
-    @required Result fhirPrimitiveFail(T failedValue),
+  TResult when<TResult extends Object?>({
+    required TResult Function(T failedValue) invalidUsername,
+    required TResult Function(T failedValue) shortPassword,
+    required TResult Function(T failedValue) shortRegistrationName,
+    required TResult Function(T failedValue) notAGender,
+    required TResult Function(T failedValue) notABarrio,
+    required TResult Function(T failedValue) notARelation,
+    required TResult Function(T failedValue) futureDate,
+    required TResult Function(T failedValue) fhirPrimitiveFail,
   }) {
-    assert(invalidUsername != null);
-    assert(shortPassword != null);
-    assert(shortRegistrationName != null);
-    assert(notAGender != null);
-    assert(notABarrio != null);
-    assert(notARelation != null);
-    assert(futureDate != null);
-    assert(fhirPrimitiveFail != null);
     return invalidUsername(failedValue);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result invalidUsername(T failedValue),
-    Result shortPassword(T failedValue),
-    Result shortRegistrationName(T failedValue),
-    Result notAGender(T failedValue),
-    Result notABarrio(T failedValue),
-    Result notARelation(T failedValue),
-    Result futureDate(T failedValue),
-    Result fhirPrimitiveFail(T failedValue),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(T failedValue)? invalidUsername,
+    TResult Function(T failedValue)? shortPassword,
+    TResult Function(T failedValue)? shortRegistrationName,
+    TResult Function(T failedValue)? notAGender,
+    TResult Function(T failedValue)? notABarrio,
+    TResult Function(T failedValue)? notARelation,
+    TResult Function(T failedValue)? futureDate,
+    TResult Function(T failedValue)? fhirPrimitiveFail,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (invalidUsername != null) {
       return invalidUsername(failedValue);
     }
@@ -263,41 +259,33 @@ class _$InvalidUsername<T> implements InvalidUsername<T> {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result invalidUsername(InvalidUsername<T> value),
-    @required Result shortPassword(ShortPassword<T> value),
-    @required Result shortRegistrationName(ShortRegistrationName<T> value),
-    @required Result notAGender(NotAGender<T> value),
-    @required Result notABarrio(NotABarrio<T> value),
-    @required Result notARelation(NotARelation<T> value),
-    @required Result futureDate(FutureDate<T> value),
-    @required Result fhirPrimitiveFail(FhirPrimitiveFail<T> value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(InvalidUsername<T> value) invalidUsername,
+    required TResult Function(ShortPassword<T> value) shortPassword,
+    required TResult Function(ShortRegistrationName<T> value)
+        shortRegistrationName,
+    required TResult Function(NotAGender<T> value) notAGender,
+    required TResult Function(NotABarrio<T> value) notABarrio,
+    required TResult Function(NotARelation<T> value) notARelation,
+    required TResult Function(FutureDate<T> value) futureDate,
+    required TResult Function(FhirPrimitiveFail<T> value) fhirPrimitiveFail,
   }) {
-    assert(invalidUsername != null);
-    assert(shortPassword != null);
-    assert(shortRegistrationName != null);
-    assert(notAGender != null);
-    assert(notABarrio != null);
-    assert(notARelation != null);
-    assert(futureDate != null);
-    assert(fhirPrimitiveFail != null);
     return invalidUsername(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result invalidUsername(InvalidUsername<T> value),
-    Result shortPassword(ShortPassword<T> value),
-    Result shortRegistrationName(ShortRegistrationName<T> value),
-    Result notAGender(NotAGender<T> value),
-    Result notABarrio(NotABarrio<T> value),
-    Result notARelation(NotARelation<T> value),
-    Result futureDate(FutureDate<T> value),
-    Result fhirPrimitiveFail(FhirPrimitiveFail<T> value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(InvalidUsername<T> value)? invalidUsername,
+    TResult Function(ShortPassword<T> value)? shortPassword,
+    TResult Function(ShortRegistrationName<T> value)? shortRegistrationName,
+    TResult Function(NotAGender<T> value)? notAGender,
+    TResult Function(NotABarrio<T> value)? notABarrio,
+    TResult Function(NotARelation<T> value)? notARelation,
+    TResult Function(FutureDate<T> value)? futureDate,
+    TResult Function(FhirPrimitiveFail<T> value)? fhirPrimitiveFail,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (invalidUsername != null) {
       return invalidUsername(this);
     }
@@ -306,13 +294,15 @@ class _$InvalidUsername<T> implements InvalidUsername<T> {
 }
 
 abstract class InvalidUsername<T> implements ValueFailure<T> {
-  const factory InvalidUsername({@required T failedValue}) =
+  const factory InvalidUsername({required T failedValue}) =
       _$InvalidUsername<T>;
 
   @override
-  T get failedValue;
+  T get failedValue => throw _privateConstructorUsedError;
   @override
-  $InvalidUsernameCopyWith<T, InvalidUsername<T>> get copyWith;
+  @JsonKey(ignore: true)
+  $InvalidUsernameCopyWith<T, InvalidUsername<T>> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -338,19 +328,20 @@ class _$ShortPasswordCopyWithImpl<T, $Res>
 
   @override
   $Res call({
-    Object failedValue = freezed,
+    Object? failedValue = freezed,
   }) {
     return _then(ShortPassword<T>(
-      failedValue:
-          failedValue == freezed ? _value.failedValue : failedValue as T,
+      failedValue: failedValue == freezed
+          ? _value.failedValue
+          : failedValue // ignore: cast_nullable_to_non_nullable
+              as T,
     ));
   }
 }
 
 /// @nodoc
 class _$ShortPassword<T> implements ShortPassword<T> {
-  const _$ShortPassword({@required this.failedValue})
-      : assert(failedValue != null);
+  const _$ShortPassword({required this.failedValue});
 
   @override
   final T failedValue;
@@ -373,47 +364,39 @@ class _$ShortPassword<T> implements ShortPassword<T> {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
 
+  @JsonKey(ignore: true)
   @override
   $ShortPasswordCopyWith<T, ShortPassword<T>> get copyWith =>
       _$ShortPasswordCopyWithImpl<T, ShortPassword<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result invalidUsername(T failedValue),
-    @required Result shortPassword(T failedValue),
-    @required Result shortRegistrationName(T failedValue),
-    @required Result notAGender(T failedValue),
-    @required Result notABarrio(T failedValue),
-    @required Result notARelation(T failedValue),
-    @required Result futureDate(T failedValue),
-    @required Result fhirPrimitiveFail(T failedValue),
+  TResult when<TResult extends Object?>({
+    required TResult Function(T failedValue) invalidUsername,
+    required TResult Function(T failedValue) shortPassword,
+    required TResult Function(T failedValue) shortRegistrationName,
+    required TResult Function(T failedValue) notAGender,
+    required TResult Function(T failedValue) notABarrio,
+    required TResult Function(T failedValue) notARelation,
+    required TResult Function(T failedValue) futureDate,
+    required TResult Function(T failedValue) fhirPrimitiveFail,
   }) {
-    assert(invalidUsername != null);
-    assert(shortPassword != null);
-    assert(shortRegistrationName != null);
-    assert(notAGender != null);
-    assert(notABarrio != null);
-    assert(notARelation != null);
-    assert(futureDate != null);
-    assert(fhirPrimitiveFail != null);
     return shortPassword(failedValue);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result invalidUsername(T failedValue),
-    Result shortPassword(T failedValue),
-    Result shortRegistrationName(T failedValue),
-    Result notAGender(T failedValue),
-    Result notABarrio(T failedValue),
-    Result notARelation(T failedValue),
-    Result futureDate(T failedValue),
-    Result fhirPrimitiveFail(T failedValue),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(T failedValue)? invalidUsername,
+    TResult Function(T failedValue)? shortPassword,
+    TResult Function(T failedValue)? shortRegistrationName,
+    TResult Function(T failedValue)? notAGender,
+    TResult Function(T failedValue)? notABarrio,
+    TResult Function(T failedValue)? notARelation,
+    TResult Function(T failedValue)? futureDate,
+    TResult Function(T failedValue)? fhirPrimitiveFail,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (shortPassword != null) {
       return shortPassword(failedValue);
     }
@@ -422,41 +405,33 @@ class _$ShortPassword<T> implements ShortPassword<T> {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result invalidUsername(InvalidUsername<T> value),
-    @required Result shortPassword(ShortPassword<T> value),
-    @required Result shortRegistrationName(ShortRegistrationName<T> value),
-    @required Result notAGender(NotAGender<T> value),
-    @required Result notABarrio(NotABarrio<T> value),
-    @required Result notARelation(NotARelation<T> value),
-    @required Result futureDate(FutureDate<T> value),
-    @required Result fhirPrimitiveFail(FhirPrimitiveFail<T> value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(InvalidUsername<T> value) invalidUsername,
+    required TResult Function(ShortPassword<T> value) shortPassword,
+    required TResult Function(ShortRegistrationName<T> value)
+        shortRegistrationName,
+    required TResult Function(NotAGender<T> value) notAGender,
+    required TResult Function(NotABarrio<T> value) notABarrio,
+    required TResult Function(NotARelation<T> value) notARelation,
+    required TResult Function(FutureDate<T> value) futureDate,
+    required TResult Function(FhirPrimitiveFail<T> value) fhirPrimitiveFail,
   }) {
-    assert(invalidUsername != null);
-    assert(shortPassword != null);
-    assert(shortRegistrationName != null);
-    assert(notAGender != null);
-    assert(notABarrio != null);
-    assert(notARelation != null);
-    assert(futureDate != null);
-    assert(fhirPrimitiveFail != null);
     return shortPassword(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result invalidUsername(InvalidUsername<T> value),
-    Result shortPassword(ShortPassword<T> value),
-    Result shortRegistrationName(ShortRegistrationName<T> value),
-    Result notAGender(NotAGender<T> value),
-    Result notABarrio(NotABarrio<T> value),
-    Result notARelation(NotARelation<T> value),
-    Result futureDate(FutureDate<T> value),
-    Result fhirPrimitiveFail(FhirPrimitiveFail<T> value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(InvalidUsername<T> value)? invalidUsername,
+    TResult Function(ShortPassword<T> value)? shortPassword,
+    TResult Function(ShortRegistrationName<T> value)? shortRegistrationName,
+    TResult Function(NotAGender<T> value)? notAGender,
+    TResult Function(NotABarrio<T> value)? notABarrio,
+    TResult Function(NotARelation<T> value)? notARelation,
+    TResult Function(FutureDate<T> value)? futureDate,
+    TResult Function(FhirPrimitiveFail<T> value)? fhirPrimitiveFail,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (shortPassword != null) {
       return shortPassword(this);
     }
@@ -465,12 +440,14 @@ class _$ShortPassword<T> implements ShortPassword<T> {
 }
 
 abstract class ShortPassword<T> implements ValueFailure<T> {
-  const factory ShortPassword({@required T failedValue}) = _$ShortPassword<T>;
+  const factory ShortPassword({required T failedValue}) = _$ShortPassword<T>;
 
   @override
-  T get failedValue;
+  T get failedValue => throw _privateConstructorUsedError;
   @override
-  $ShortPasswordCopyWith<T, ShortPassword<T>> get copyWith;
+  @JsonKey(ignore: true)
+  $ShortPasswordCopyWith<T, ShortPassword<T>> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -497,19 +474,20 @@ class _$ShortRegistrationNameCopyWithImpl<T, $Res>
 
   @override
   $Res call({
-    Object failedValue = freezed,
+    Object? failedValue = freezed,
   }) {
     return _then(ShortRegistrationName<T>(
-      failedValue:
-          failedValue == freezed ? _value.failedValue : failedValue as T,
+      failedValue: failedValue == freezed
+          ? _value.failedValue
+          : failedValue // ignore: cast_nullable_to_non_nullable
+              as T,
     ));
   }
 }
 
 /// @nodoc
 class _$ShortRegistrationName<T> implements ShortRegistrationName<T> {
-  const _$ShortRegistrationName({@required this.failedValue})
-      : assert(failedValue != null);
+  const _$ShortRegistrationName({required this.failedValue});
 
   @override
   final T failedValue;
@@ -532,6 +510,7 @@ class _$ShortRegistrationName<T> implements ShortRegistrationName<T> {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
 
+  @JsonKey(ignore: true)
   @override
   $ShortRegistrationNameCopyWith<T, ShortRegistrationName<T>> get copyWith =>
       _$ShortRegistrationNameCopyWithImpl<T, ShortRegistrationName<T>>(
@@ -539,41 +518,32 @@ class _$ShortRegistrationName<T> implements ShortRegistrationName<T> {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result invalidUsername(T failedValue),
-    @required Result shortPassword(T failedValue),
-    @required Result shortRegistrationName(T failedValue),
-    @required Result notAGender(T failedValue),
-    @required Result notABarrio(T failedValue),
-    @required Result notARelation(T failedValue),
-    @required Result futureDate(T failedValue),
-    @required Result fhirPrimitiveFail(T failedValue),
+  TResult when<TResult extends Object?>({
+    required TResult Function(T failedValue) invalidUsername,
+    required TResult Function(T failedValue) shortPassword,
+    required TResult Function(T failedValue) shortRegistrationName,
+    required TResult Function(T failedValue) notAGender,
+    required TResult Function(T failedValue) notABarrio,
+    required TResult Function(T failedValue) notARelation,
+    required TResult Function(T failedValue) futureDate,
+    required TResult Function(T failedValue) fhirPrimitiveFail,
   }) {
-    assert(invalidUsername != null);
-    assert(shortPassword != null);
-    assert(shortRegistrationName != null);
-    assert(notAGender != null);
-    assert(notABarrio != null);
-    assert(notARelation != null);
-    assert(futureDate != null);
-    assert(fhirPrimitiveFail != null);
     return shortRegistrationName(failedValue);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result invalidUsername(T failedValue),
-    Result shortPassword(T failedValue),
-    Result shortRegistrationName(T failedValue),
-    Result notAGender(T failedValue),
-    Result notABarrio(T failedValue),
-    Result notARelation(T failedValue),
-    Result futureDate(T failedValue),
-    Result fhirPrimitiveFail(T failedValue),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(T failedValue)? invalidUsername,
+    TResult Function(T failedValue)? shortPassword,
+    TResult Function(T failedValue)? shortRegistrationName,
+    TResult Function(T failedValue)? notAGender,
+    TResult Function(T failedValue)? notABarrio,
+    TResult Function(T failedValue)? notARelation,
+    TResult Function(T failedValue)? futureDate,
+    TResult Function(T failedValue)? fhirPrimitiveFail,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (shortRegistrationName != null) {
       return shortRegistrationName(failedValue);
     }
@@ -582,41 +552,33 @@ class _$ShortRegistrationName<T> implements ShortRegistrationName<T> {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result invalidUsername(InvalidUsername<T> value),
-    @required Result shortPassword(ShortPassword<T> value),
-    @required Result shortRegistrationName(ShortRegistrationName<T> value),
-    @required Result notAGender(NotAGender<T> value),
-    @required Result notABarrio(NotABarrio<T> value),
-    @required Result notARelation(NotARelation<T> value),
-    @required Result futureDate(FutureDate<T> value),
-    @required Result fhirPrimitiveFail(FhirPrimitiveFail<T> value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(InvalidUsername<T> value) invalidUsername,
+    required TResult Function(ShortPassword<T> value) shortPassword,
+    required TResult Function(ShortRegistrationName<T> value)
+        shortRegistrationName,
+    required TResult Function(NotAGender<T> value) notAGender,
+    required TResult Function(NotABarrio<T> value) notABarrio,
+    required TResult Function(NotARelation<T> value) notARelation,
+    required TResult Function(FutureDate<T> value) futureDate,
+    required TResult Function(FhirPrimitiveFail<T> value) fhirPrimitiveFail,
   }) {
-    assert(invalidUsername != null);
-    assert(shortPassword != null);
-    assert(shortRegistrationName != null);
-    assert(notAGender != null);
-    assert(notABarrio != null);
-    assert(notARelation != null);
-    assert(futureDate != null);
-    assert(fhirPrimitiveFail != null);
     return shortRegistrationName(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result invalidUsername(InvalidUsername<T> value),
-    Result shortPassword(ShortPassword<T> value),
-    Result shortRegistrationName(ShortRegistrationName<T> value),
-    Result notAGender(NotAGender<T> value),
-    Result notABarrio(NotABarrio<T> value),
-    Result notARelation(NotARelation<T> value),
-    Result futureDate(FutureDate<T> value),
-    Result fhirPrimitiveFail(FhirPrimitiveFail<T> value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(InvalidUsername<T> value)? invalidUsername,
+    TResult Function(ShortPassword<T> value)? shortPassword,
+    TResult Function(ShortRegistrationName<T> value)? shortRegistrationName,
+    TResult Function(NotAGender<T> value)? notAGender,
+    TResult Function(NotABarrio<T> value)? notABarrio,
+    TResult Function(NotARelation<T> value)? notARelation,
+    TResult Function(FutureDate<T> value)? futureDate,
+    TResult Function(FhirPrimitiveFail<T> value)? fhirPrimitiveFail,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (shortRegistrationName != null) {
       return shortRegistrationName(this);
     }
@@ -625,13 +587,15 @@ class _$ShortRegistrationName<T> implements ShortRegistrationName<T> {
 }
 
 abstract class ShortRegistrationName<T> implements ValueFailure<T> {
-  const factory ShortRegistrationName({@required T failedValue}) =
+  const factory ShortRegistrationName({required T failedValue}) =
       _$ShortRegistrationName<T>;
 
   @override
-  T get failedValue;
+  T get failedValue => throw _privateConstructorUsedError;
   @override
-  $ShortRegistrationNameCopyWith<T, ShortRegistrationName<T>> get copyWith;
+  @JsonKey(ignore: true)
+  $ShortRegistrationNameCopyWith<T, ShortRegistrationName<T>> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -657,19 +621,20 @@ class _$NotAGenderCopyWithImpl<T, $Res>
 
   @override
   $Res call({
-    Object failedValue = freezed,
+    Object? failedValue = freezed,
   }) {
     return _then(NotAGender<T>(
-      failedValue:
-          failedValue == freezed ? _value.failedValue : failedValue as T,
+      failedValue: failedValue == freezed
+          ? _value.failedValue
+          : failedValue // ignore: cast_nullable_to_non_nullable
+              as T,
     ));
   }
 }
 
 /// @nodoc
 class _$NotAGender<T> implements NotAGender<T> {
-  const _$NotAGender({@required this.failedValue})
-      : assert(failedValue != null);
+  const _$NotAGender({required this.failedValue});
 
   @override
   final T failedValue;
@@ -692,47 +657,39 @@ class _$NotAGender<T> implements NotAGender<T> {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
 
+  @JsonKey(ignore: true)
   @override
   $NotAGenderCopyWith<T, NotAGender<T>> get copyWith =>
       _$NotAGenderCopyWithImpl<T, NotAGender<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result invalidUsername(T failedValue),
-    @required Result shortPassword(T failedValue),
-    @required Result shortRegistrationName(T failedValue),
-    @required Result notAGender(T failedValue),
-    @required Result notABarrio(T failedValue),
-    @required Result notARelation(T failedValue),
-    @required Result futureDate(T failedValue),
-    @required Result fhirPrimitiveFail(T failedValue),
+  TResult when<TResult extends Object?>({
+    required TResult Function(T failedValue) invalidUsername,
+    required TResult Function(T failedValue) shortPassword,
+    required TResult Function(T failedValue) shortRegistrationName,
+    required TResult Function(T failedValue) notAGender,
+    required TResult Function(T failedValue) notABarrio,
+    required TResult Function(T failedValue) notARelation,
+    required TResult Function(T failedValue) futureDate,
+    required TResult Function(T failedValue) fhirPrimitiveFail,
   }) {
-    assert(invalidUsername != null);
-    assert(shortPassword != null);
-    assert(shortRegistrationName != null);
-    assert(notAGender != null);
-    assert(notABarrio != null);
-    assert(notARelation != null);
-    assert(futureDate != null);
-    assert(fhirPrimitiveFail != null);
     return notAGender(failedValue);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result invalidUsername(T failedValue),
-    Result shortPassword(T failedValue),
-    Result shortRegistrationName(T failedValue),
-    Result notAGender(T failedValue),
-    Result notABarrio(T failedValue),
-    Result notARelation(T failedValue),
-    Result futureDate(T failedValue),
-    Result fhirPrimitiveFail(T failedValue),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(T failedValue)? invalidUsername,
+    TResult Function(T failedValue)? shortPassword,
+    TResult Function(T failedValue)? shortRegistrationName,
+    TResult Function(T failedValue)? notAGender,
+    TResult Function(T failedValue)? notABarrio,
+    TResult Function(T failedValue)? notARelation,
+    TResult Function(T failedValue)? futureDate,
+    TResult Function(T failedValue)? fhirPrimitiveFail,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (notAGender != null) {
       return notAGender(failedValue);
     }
@@ -741,41 +698,33 @@ class _$NotAGender<T> implements NotAGender<T> {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result invalidUsername(InvalidUsername<T> value),
-    @required Result shortPassword(ShortPassword<T> value),
-    @required Result shortRegistrationName(ShortRegistrationName<T> value),
-    @required Result notAGender(NotAGender<T> value),
-    @required Result notABarrio(NotABarrio<T> value),
-    @required Result notARelation(NotARelation<T> value),
-    @required Result futureDate(FutureDate<T> value),
-    @required Result fhirPrimitiveFail(FhirPrimitiveFail<T> value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(InvalidUsername<T> value) invalidUsername,
+    required TResult Function(ShortPassword<T> value) shortPassword,
+    required TResult Function(ShortRegistrationName<T> value)
+        shortRegistrationName,
+    required TResult Function(NotAGender<T> value) notAGender,
+    required TResult Function(NotABarrio<T> value) notABarrio,
+    required TResult Function(NotARelation<T> value) notARelation,
+    required TResult Function(FutureDate<T> value) futureDate,
+    required TResult Function(FhirPrimitiveFail<T> value) fhirPrimitiveFail,
   }) {
-    assert(invalidUsername != null);
-    assert(shortPassword != null);
-    assert(shortRegistrationName != null);
-    assert(notAGender != null);
-    assert(notABarrio != null);
-    assert(notARelation != null);
-    assert(futureDate != null);
-    assert(fhirPrimitiveFail != null);
     return notAGender(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result invalidUsername(InvalidUsername<T> value),
-    Result shortPassword(ShortPassword<T> value),
-    Result shortRegistrationName(ShortRegistrationName<T> value),
-    Result notAGender(NotAGender<T> value),
-    Result notABarrio(NotABarrio<T> value),
-    Result notARelation(NotARelation<T> value),
-    Result futureDate(FutureDate<T> value),
-    Result fhirPrimitiveFail(FhirPrimitiveFail<T> value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(InvalidUsername<T> value)? invalidUsername,
+    TResult Function(ShortPassword<T> value)? shortPassword,
+    TResult Function(ShortRegistrationName<T> value)? shortRegistrationName,
+    TResult Function(NotAGender<T> value)? notAGender,
+    TResult Function(NotABarrio<T> value)? notABarrio,
+    TResult Function(NotARelation<T> value)? notARelation,
+    TResult Function(FutureDate<T> value)? futureDate,
+    TResult Function(FhirPrimitiveFail<T> value)? fhirPrimitiveFail,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (notAGender != null) {
       return notAGender(this);
     }
@@ -784,12 +733,14 @@ class _$NotAGender<T> implements NotAGender<T> {
 }
 
 abstract class NotAGender<T> implements ValueFailure<T> {
-  const factory NotAGender({@required T failedValue}) = _$NotAGender<T>;
+  const factory NotAGender({required T failedValue}) = _$NotAGender<T>;
 
   @override
-  T get failedValue;
+  T get failedValue => throw _privateConstructorUsedError;
   @override
-  $NotAGenderCopyWith<T, NotAGender<T>> get copyWith;
+  @JsonKey(ignore: true)
+  $NotAGenderCopyWith<T, NotAGender<T>> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -815,19 +766,20 @@ class _$NotABarrioCopyWithImpl<T, $Res>
 
   @override
   $Res call({
-    Object failedValue = freezed,
+    Object? failedValue = freezed,
   }) {
     return _then(NotABarrio<T>(
-      failedValue:
-          failedValue == freezed ? _value.failedValue : failedValue as T,
+      failedValue: failedValue == freezed
+          ? _value.failedValue
+          : failedValue // ignore: cast_nullable_to_non_nullable
+              as T,
     ));
   }
 }
 
 /// @nodoc
 class _$NotABarrio<T> implements NotABarrio<T> {
-  const _$NotABarrio({@required this.failedValue})
-      : assert(failedValue != null);
+  const _$NotABarrio({required this.failedValue});
 
   @override
   final T failedValue;
@@ -850,47 +802,39 @@ class _$NotABarrio<T> implements NotABarrio<T> {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
 
+  @JsonKey(ignore: true)
   @override
   $NotABarrioCopyWith<T, NotABarrio<T>> get copyWith =>
       _$NotABarrioCopyWithImpl<T, NotABarrio<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result invalidUsername(T failedValue),
-    @required Result shortPassword(T failedValue),
-    @required Result shortRegistrationName(T failedValue),
-    @required Result notAGender(T failedValue),
-    @required Result notABarrio(T failedValue),
-    @required Result notARelation(T failedValue),
-    @required Result futureDate(T failedValue),
-    @required Result fhirPrimitiveFail(T failedValue),
+  TResult when<TResult extends Object?>({
+    required TResult Function(T failedValue) invalidUsername,
+    required TResult Function(T failedValue) shortPassword,
+    required TResult Function(T failedValue) shortRegistrationName,
+    required TResult Function(T failedValue) notAGender,
+    required TResult Function(T failedValue) notABarrio,
+    required TResult Function(T failedValue) notARelation,
+    required TResult Function(T failedValue) futureDate,
+    required TResult Function(T failedValue) fhirPrimitiveFail,
   }) {
-    assert(invalidUsername != null);
-    assert(shortPassword != null);
-    assert(shortRegistrationName != null);
-    assert(notAGender != null);
-    assert(notABarrio != null);
-    assert(notARelation != null);
-    assert(futureDate != null);
-    assert(fhirPrimitiveFail != null);
     return notABarrio(failedValue);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result invalidUsername(T failedValue),
-    Result shortPassword(T failedValue),
-    Result shortRegistrationName(T failedValue),
-    Result notAGender(T failedValue),
-    Result notABarrio(T failedValue),
-    Result notARelation(T failedValue),
-    Result futureDate(T failedValue),
-    Result fhirPrimitiveFail(T failedValue),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(T failedValue)? invalidUsername,
+    TResult Function(T failedValue)? shortPassword,
+    TResult Function(T failedValue)? shortRegistrationName,
+    TResult Function(T failedValue)? notAGender,
+    TResult Function(T failedValue)? notABarrio,
+    TResult Function(T failedValue)? notARelation,
+    TResult Function(T failedValue)? futureDate,
+    TResult Function(T failedValue)? fhirPrimitiveFail,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (notABarrio != null) {
       return notABarrio(failedValue);
     }
@@ -899,41 +843,33 @@ class _$NotABarrio<T> implements NotABarrio<T> {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result invalidUsername(InvalidUsername<T> value),
-    @required Result shortPassword(ShortPassword<T> value),
-    @required Result shortRegistrationName(ShortRegistrationName<T> value),
-    @required Result notAGender(NotAGender<T> value),
-    @required Result notABarrio(NotABarrio<T> value),
-    @required Result notARelation(NotARelation<T> value),
-    @required Result futureDate(FutureDate<T> value),
-    @required Result fhirPrimitiveFail(FhirPrimitiveFail<T> value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(InvalidUsername<T> value) invalidUsername,
+    required TResult Function(ShortPassword<T> value) shortPassword,
+    required TResult Function(ShortRegistrationName<T> value)
+        shortRegistrationName,
+    required TResult Function(NotAGender<T> value) notAGender,
+    required TResult Function(NotABarrio<T> value) notABarrio,
+    required TResult Function(NotARelation<T> value) notARelation,
+    required TResult Function(FutureDate<T> value) futureDate,
+    required TResult Function(FhirPrimitiveFail<T> value) fhirPrimitiveFail,
   }) {
-    assert(invalidUsername != null);
-    assert(shortPassword != null);
-    assert(shortRegistrationName != null);
-    assert(notAGender != null);
-    assert(notABarrio != null);
-    assert(notARelation != null);
-    assert(futureDate != null);
-    assert(fhirPrimitiveFail != null);
     return notABarrio(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result invalidUsername(InvalidUsername<T> value),
-    Result shortPassword(ShortPassword<T> value),
-    Result shortRegistrationName(ShortRegistrationName<T> value),
-    Result notAGender(NotAGender<T> value),
-    Result notABarrio(NotABarrio<T> value),
-    Result notARelation(NotARelation<T> value),
-    Result futureDate(FutureDate<T> value),
-    Result fhirPrimitiveFail(FhirPrimitiveFail<T> value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(InvalidUsername<T> value)? invalidUsername,
+    TResult Function(ShortPassword<T> value)? shortPassword,
+    TResult Function(ShortRegistrationName<T> value)? shortRegistrationName,
+    TResult Function(NotAGender<T> value)? notAGender,
+    TResult Function(NotABarrio<T> value)? notABarrio,
+    TResult Function(NotARelation<T> value)? notARelation,
+    TResult Function(FutureDate<T> value)? futureDate,
+    TResult Function(FhirPrimitiveFail<T> value)? fhirPrimitiveFail,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (notABarrio != null) {
       return notABarrio(this);
     }
@@ -942,12 +878,14 @@ class _$NotABarrio<T> implements NotABarrio<T> {
 }
 
 abstract class NotABarrio<T> implements ValueFailure<T> {
-  const factory NotABarrio({@required T failedValue}) = _$NotABarrio<T>;
+  const factory NotABarrio({required T failedValue}) = _$NotABarrio<T>;
 
   @override
-  T get failedValue;
+  T get failedValue => throw _privateConstructorUsedError;
   @override
-  $NotABarrioCopyWith<T, NotABarrio<T>> get copyWith;
+  @JsonKey(ignore: true)
+  $NotABarrioCopyWith<T, NotABarrio<T>> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -973,19 +911,20 @@ class _$NotARelationCopyWithImpl<T, $Res>
 
   @override
   $Res call({
-    Object failedValue = freezed,
+    Object? failedValue = freezed,
   }) {
     return _then(NotARelation<T>(
-      failedValue:
-          failedValue == freezed ? _value.failedValue : failedValue as T,
+      failedValue: failedValue == freezed
+          ? _value.failedValue
+          : failedValue // ignore: cast_nullable_to_non_nullable
+              as T,
     ));
   }
 }
 
 /// @nodoc
 class _$NotARelation<T> implements NotARelation<T> {
-  const _$NotARelation({@required this.failedValue})
-      : assert(failedValue != null);
+  const _$NotARelation({required this.failedValue});
 
   @override
   final T failedValue;
@@ -1008,47 +947,39 @@ class _$NotARelation<T> implements NotARelation<T> {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
 
+  @JsonKey(ignore: true)
   @override
   $NotARelationCopyWith<T, NotARelation<T>> get copyWith =>
       _$NotARelationCopyWithImpl<T, NotARelation<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result invalidUsername(T failedValue),
-    @required Result shortPassword(T failedValue),
-    @required Result shortRegistrationName(T failedValue),
-    @required Result notAGender(T failedValue),
-    @required Result notABarrio(T failedValue),
-    @required Result notARelation(T failedValue),
-    @required Result futureDate(T failedValue),
-    @required Result fhirPrimitiveFail(T failedValue),
+  TResult when<TResult extends Object?>({
+    required TResult Function(T failedValue) invalidUsername,
+    required TResult Function(T failedValue) shortPassword,
+    required TResult Function(T failedValue) shortRegistrationName,
+    required TResult Function(T failedValue) notAGender,
+    required TResult Function(T failedValue) notABarrio,
+    required TResult Function(T failedValue) notARelation,
+    required TResult Function(T failedValue) futureDate,
+    required TResult Function(T failedValue) fhirPrimitiveFail,
   }) {
-    assert(invalidUsername != null);
-    assert(shortPassword != null);
-    assert(shortRegistrationName != null);
-    assert(notAGender != null);
-    assert(notABarrio != null);
-    assert(notARelation != null);
-    assert(futureDate != null);
-    assert(fhirPrimitiveFail != null);
     return notARelation(failedValue);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result invalidUsername(T failedValue),
-    Result shortPassword(T failedValue),
-    Result shortRegistrationName(T failedValue),
-    Result notAGender(T failedValue),
-    Result notABarrio(T failedValue),
-    Result notARelation(T failedValue),
-    Result futureDate(T failedValue),
-    Result fhirPrimitiveFail(T failedValue),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(T failedValue)? invalidUsername,
+    TResult Function(T failedValue)? shortPassword,
+    TResult Function(T failedValue)? shortRegistrationName,
+    TResult Function(T failedValue)? notAGender,
+    TResult Function(T failedValue)? notABarrio,
+    TResult Function(T failedValue)? notARelation,
+    TResult Function(T failedValue)? futureDate,
+    TResult Function(T failedValue)? fhirPrimitiveFail,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (notARelation != null) {
       return notARelation(failedValue);
     }
@@ -1057,41 +988,33 @@ class _$NotARelation<T> implements NotARelation<T> {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result invalidUsername(InvalidUsername<T> value),
-    @required Result shortPassword(ShortPassword<T> value),
-    @required Result shortRegistrationName(ShortRegistrationName<T> value),
-    @required Result notAGender(NotAGender<T> value),
-    @required Result notABarrio(NotABarrio<T> value),
-    @required Result notARelation(NotARelation<T> value),
-    @required Result futureDate(FutureDate<T> value),
-    @required Result fhirPrimitiveFail(FhirPrimitiveFail<T> value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(InvalidUsername<T> value) invalidUsername,
+    required TResult Function(ShortPassword<T> value) shortPassword,
+    required TResult Function(ShortRegistrationName<T> value)
+        shortRegistrationName,
+    required TResult Function(NotAGender<T> value) notAGender,
+    required TResult Function(NotABarrio<T> value) notABarrio,
+    required TResult Function(NotARelation<T> value) notARelation,
+    required TResult Function(FutureDate<T> value) futureDate,
+    required TResult Function(FhirPrimitiveFail<T> value) fhirPrimitiveFail,
   }) {
-    assert(invalidUsername != null);
-    assert(shortPassword != null);
-    assert(shortRegistrationName != null);
-    assert(notAGender != null);
-    assert(notABarrio != null);
-    assert(notARelation != null);
-    assert(futureDate != null);
-    assert(fhirPrimitiveFail != null);
     return notARelation(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result invalidUsername(InvalidUsername<T> value),
-    Result shortPassword(ShortPassword<T> value),
-    Result shortRegistrationName(ShortRegistrationName<T> value),
-    Result notAGender(NotAGender<T> value),
-    Result notABarrio(NotABarrio<T> value),
-    Result notARelation(NotARelation<T> value),
-    Result futureDate(FutureDate<T> value),
-    Result fhirPrimitiveFail(FhirPrimitiveFail<T> value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(InvalidUsername<T> value)? invalidUsername,
+    TResult Function(ShortPassword<T> value)? shortPassword,
+    TResult Function(ShortRegistrationName<T> value)? shortRegistrationName,
+    TResult Function(NotAGender<T> value)? notAGender,
+    TResult Function(NotABarrio<T> value)? notABarrio,
+    TResult Function(NotARelation<T> value)? notARelation,
+    TResult Function(FutureDate<T> value)? futureDate,
+    TResult Function(FhirPrimitiveFail<T> value)? fhirPrimitiveFail,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (notARelation != null) {
       return notARelation(this);
     }
@@ -1100,12 +1023,14 @@ class _$NotARelation<T> implements NotARelation<T> {
 }
 
 abstract class NotARelation<T> implements ValueFailure<T> {
-  const factory NotARelation({@required T failedValue}) = _$NotARelation<T>;
+  const factory NotARelation({required T failedValue}) = _$NotARelation<T>;
 
   @override
-  T get failedValue;
+  T get failedValue => throw _privateConstructorUsedError;
   @override
-  $NotARelationCopyWith<T, NotARelation<T>> get copyWith;
+  @JsonKey(ignore: true)
+  $NotARelationCopyWith<T, NotARelation<T>> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1131,19 +1056,20 @@ class _$FutureDateCopyWithImpl<T, $Res>
 
   @override
   $Res call({
-    Object failedValue = freezed,
+    Object? failedValue = freezed,
   }) {
     return _then(FutureDate<T>(
-      failedValue:
-          failedValue == freezed ? _value.failedValue : failedValue as T,
+      failedValue: failedValue == freezed
+          ? _value.failedValue
+          : failedValue // ignore: cast_nullable_to_non_nullable
+              as T,
     ));
   }
 }
 
 /// @nodoc
 class _$FutureDate<T> implements FutureDate<T> {
-  const _$FutureDate({@required this.failedValue})
-      : assert(failedValue != null);
+  const _$FutureDate({required this.failedValue});
 
   @override
   final T failedValue;
@@ -1166,47 +1092,39 @@ class _$FutureDate<T> implements FutureDate<T> {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
 
+  @JsonKey(ignore: true)
   @override
   $FutureDateCopyWith<T, FutureDate<T>> get copyWith =>
       _$FutureDateCopyWithImpl<T, FutureDate<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result invalidUsername(T failedValue),
-    @required Result shortPassword(T failedValue),
-    @required Result shortRegistrationName(T failedValue),
-    @required Result notAGender(T failedValue),
-    @required Result notABarrio(T failedValue),
-    @required Result notARelation(T failedValue),
-    @required Result futureDate(T failedValue),
-    @required Result fhirPrimitiveFail(T failedValue),
+  TResult when<TResult extends Object?>({
+    required TResult Function(T failedValue) invalidUsername,
+    required TResult Function(T failedValue) shortPassword,
+    required TResult Function(T failedValue) shortRegistrationName,
+    required TResult Function(T failedValue) notAGender,
+    required TResult Function(T failedValue) notABarrio,
+    required TResult Function(T failedValue) notARelation,
+    required TResult Function(T failedValue) futureDate,
+    required TResult Function(T failedValue) fhirPrimitiveFail,
   }) {
-    assert(invalidUsername != null);
-    assert(shortPassword != null);
-    assert(shortRegistrationName != null);
-    assert(notAGender != null);
-    assert(notABarrio != null);
-    assert(notARelation != null);
-    assert(futureDate != null);
-    assert(fhirPrimitiveFail != null);
     return futureDate(failedValue);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result invalidUsername(T failedValue),
-    Result shortPassword(T failedValue),
-    Result shortRegistrationName(T failedValue),
-    Result notAGender(T failedValue),
-    Result notABarrio(T failedValue),
-    Result notARelation(T failedValue),
-    Result futureDate(T failedValue),
-    Result fhirPrimitiveFail(T failedValue),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(T failedValue)? invalidUsername,
+    TResult Function(T failedValue)? shortPassword,
+    TResult Function(T failedValue)? shortRegistrationName,
+    TResult Function(T failedValue)? notAGender,
+    TResult Function(T failedValue)? notABarrio,
+    TResult Function(T failedValue)? notARelation,
+    TResult Function(T failedValue)? futureDate,
+    TResult Function(T failedValue)? fhirPrimitiveFail,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (futureDate != null) {
       return futureDate(failedValue);
     }
@@ -1215,41 +1133,33 @@ class _$FutureDate<T> implements FutureDate<T> {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result invalidUsername(InvalidUsername<T> value),
-    @required Result shortPassword(ShortPassword<T> value),
-    @required Result shortRegistrationName(ShortRegistrationName<T> value),
-    @required Result notAGender(NotAGender<T> value),
-    @required Result notABarrio(NotABarrio<T> value),
-    @required Result notARelation(NotARelation<T> value),
-    @required Result futureDate(FutureDate<T> value),
-    @required Result fhirPrimitiveFail(FhirPrimitiveFail<T> value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(InvalidUsername<T> value) invalidUsername,
+    required TResult Function(ShortPassword<T> value) shortPassword,
+    required TResult Function(ShortRegistrationName<T> value)
+        shortRegistrationName,
+    required TResult Function(NotAGender<T> value) notAGender,
+    required TResult Function(NotABarrio<T> value) notABarrio,
+    required TResult Function(NotARelation<T> value) notARelation,
+    required TResult Function(FutureDate<T> value) futureDate,
+    required TResult Function(FhirPrimitiveFail<T> value) fhirPrimitiveFail,
   }) {
-    assert(invalidUsername != null);
-    assert(shortPassword != null);
-    assert(shortRegistrationName != null);
-    assert(notAGender != null);
-    assert(notABarrio != null);
-    assert(notARelation != null);
-    assert(futureDate != null);
-    assert(fhirPrimitiveFail != null);
     return futureDate(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result invalidUsername(InvalidUsername<T> value),
-    Result shortPassword(ShortPassword<T> value),
-    Result shortRegistrationName(ShortRegistrationName<T> value),
-    Result notAGender(NotAGender<T> value),
-    Result notABarrio(NotABarrio<T> value),
-    Result notARelation(NotARelation<T> value),
-    Result futureDate(FutureDate<T> value),
-    Result fhirPrimitiveFail(FhirPrimitiveFail<T> value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(InvalidUsername<T> value)? invalidUsername,
+    TResult Function(ShortPassword<T> value)? shortPassword,
+    TResult Function(ShortRegistrationName<T> value)? shortRegistrationName,
+    TResult Function(NotAGender<T> value)? notAGender,
+    TResult Function(NotABarrio<T> value)? notABarrio,
+    TResult Function(NotARelation<T> value)? notARelation,
+    TResult Function(FutureDate<T> value)? futureDate,
+    TResult Function(FhirPrimitiveFail<T> value)? fhirPrimitiveFail,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (futureDate != null) {
       return futureDate(this);
     }
@@ -1258,12 +1168,14 @@ class _$FutureDate<T> implements FutureDate<T> {
 }
 
 abstract class FutureDate<T> implements ValueFailure<T> {
-  const factory FutureDate({@required T failedValue}) = _$FutureDate<T>;
+  const factory FutureDate({required T failedValue}) = _$FutureDate<T>;
 
   @override
-  T get failedValue;
+  T get failedValue => throw _privateConstructorUsedError;
   @override
-  $FutureDateCopyWith<T, FutureDate<T>> get copyWith;
+  @JsonKey(ignore: true)
+  $FutureDateCopyWith<T, FutureDate<T>> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1289,19 +1201,20 @@ class _$FhirPrimitiveFailCopyWithImpl<T, $Res>
 
   @override
   $Res call({
-    Object failedValue = freezed,
+    Object? failedValue = freezed,
   }) {
     return _then(FhirPrimitiveFail<T>(
-      failedValue:
-          failedValue == freezed ? _value.failedValue : failedValue as T,
+      failedValue: failedValue == freezed
+          ? _value.failedValue
+          : failedValue // ignore: cast_nullable_to_non_nullable
+              as T,
     ));
   }
 }
 
 /// @nodoc
 class _$FhirPrimitiveFail<T> implements FhirPrimitiveFail<T> {
-  const _$FhirPrimitiveFail({@required this.failedValue})
-      : assert(failedValue != null);
+  const _$FhirPrimitiveFail({required this.failedValue});
 
   @override
   final T failedValue;
@@ -1324,6 +1237,7 @@ class _$FhirPrimitiveFail<T> implements FhirPrimitiveFail<T> {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
 
+  @JsonKey(ignore: true)
   @override
   $FhirPrimitiveFailCopyWith<T, FhirPrimitiveFail<T>> get copyWith =>
       _$FhirPrimitiveFailCopyWithImpl<T, FhirPrimitiveFail<T>>(
@@ -1331,41 +1245,32 @@ class _$FhirPrimitiveFail<T> implements FhirPrimitiveFail<T> {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result invalidUsername(T failedValue),
-    @required Result shortPassword(T failedValue),
-    @required Result shortRegistrationName(T failedValue),
-    @required Result notAGender(T failedValue),
-    @required Result notABarrio(T failedValue),
-    @required Result notARelation(T failedValue),
-    @required Result futureDate(T failedValue),
-    @required Result fhirPrimitiveFail(T failedValue),
+  TResult when<TResult extends Object?>({
+    required TResult Function(T failedValue) invalidUsername,
+    required TResult Function(T failedValue) shortPassword,
+    required TResult Function(T failedValue) shortRegistrationName,
+    required TResult Function(T failedValue) notAGender,
+    required TResult Function(T failedValue) notABarrio,
+    required TResult Function(T failedValue) notARelation,
+    required TResult Function(T failedValue) futureDate,
+    required TResult Function(T failedValue) fhirPrimitiveFail,
   }) {
-    assert(invalidUsername != null);
-    assert(shortPassword != null);
-    assert(shortRegistrationName != null);
-    assert(notAGender != null);
-    assert(notABarrio != null);
-    assert(notARelation != null);
-    assert(futureDate != null);
-    assert(fhirPrimitiveFail != null);
     return fhirPrimitiveFail(failedValue);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result invalidUsername(T failedValue),
-    Result shortPassword(T failedValue),
-    Result shortRegistrationName(T failedValue),
-    Result notAGender(T failedValue),
-    Result notABarrio(T failedValue),
-    Result notARelation(T failedValue),
-    Result futureDate(T failedValue),
-    Result fhirPrimitiveFail(T failedValue),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(T failedValue)? invalidUsername,
+    TResult Function(T failedValue)? shortPassword,
+    TResult Function(T failedValue)? shortRegistrationName,
+    TResult Function(T failedValue)? notAGender,
+    TResult Function(T failedValue)? notABarrio,
+    TResult Function(T failedValue)? notARelation,
+    TResult Function(T failedValue)? futureDate,
+    TResult Function(T failedValue)? fhirPrimitiveFail,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (fhirPrimitiveFail != null) {
       return fhirPrimitiveFail(failedValue);
     }
@@ -1374,41 +1279,33 @@ class _$FhirPrimitiveFail<T> implements FhirPrimitiveFail<T> {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result invalidUsername(InvalidUsername<T> value),
-    @required Result shortPassword(ShortPassword<T> value),
-    @required Result shortRegistrationName(ShortRegistrationName<T> value),
-    @required Result notAGender(NotAGender<T> value),
-    @required Result notABarrio(NotABarrio<T> value),
-    @required Result notARelation(NotARelation<T> value),
-    @required Result futureDate(FutureDate<T> value),
-    @required Result fhirPrimitiveFail(FhirPrimitiveFail<T> value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(InvalidUsername<T> value) invalidUsername,
+    required TResult Function(ShortPassword<T> value) shortPassword,
+    required TResult Function(ShortRegistrationName<T> value)
+        shortRegistrationName,
+    required TResult Function(NotAGender<T> value) notAGender,
+    required TResult Function(NotABarrio<T> value) notABarrio,
+    required TResult Function(NotARelation<T> value) notARelation,
+    required TResult Function(FutureDate<T> value) futureDate,
+    required TResult Function(FhirPrimitiveFail<T> value) fhirPrimitiveFail,
   }) {
-    assert(invalidUsername != null);
-    assert(shortPassword != null);
-    assert(shortRegistrationName != null);
-    assert(notAGender != null);
-    assert(notABarrio != null);
-    assert(notARelation != null);
-    assert(futureDate != null);
-    assert(fhirPrimitiveFail != null);
     return fhirPrimitiveFail(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result invalidUsername(InvalidUsername<T> value),
-    Result shortPassword(ShortPassword<T> value),
-    Result shortRegistrationName(ShortRegistrationName<T> value),
-    Result notAGender(NotAGender<T> value),
-    Result notABarrio(NotABarrio<T> value),
-    Result notARelation(NotARelation<T> value),
-    Result futureDate(FutureDate<T> value),
-    Result fhirPrimitiveFail(FhirPrimitiveFail<T> value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(InvalidUsername<T> value)? invalidUsername,
+    TResult Function(ShortPassword<T> value)? shortPassword,
+    TResult Function(ShortRegistrationName<T> value)? shortRegistrationName,
+    TResult Function(NotAGender<T> value)? notAGender,
+    TResult Function(NotABarrio<T> value)? notABarrio,
+    TResult Function(NotARelation<T> value)? notARelation,
+    TResult Function(FutureDate<T> value)? futureDate,
+    TResult Function(FhirPrimitiveFail<T> value)? fhirPrimitiveFail,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (fhirPrimitiveFail != null) {
       return fhirPrimitiveFail(this);
     }
@@ -1417,11 +1314,13 @@ class _$FhirPrimitiveFail<T> implements FhirPrimitiveFail<T> {
 }
 
 abstract class FhirPrimitiveFail<T> implements ValueFailure<T> {
-  const factory FhirPrimitiveFail({@required T failedValue}) =
+  const factory FhirPrimitiveFail({required T failedValue}) =
       _$FhirPrimitiveFail<T>;
 
   @override
-  T get failedValue;
+  T get failedValue => throw _privateConstructorUsedError;
   @override
-  $FhirPrimitiveFailCopyWith<T, FhirPrimitiveFail<T>> get copyWith;
+  @JsonKey(ignore: true)
+  $FhirPrimitiveFailCopyWith<T, FhirPrimitiveFail<T>> get copyWith =>
+      throw _privateConstructorUsedError;
 }
