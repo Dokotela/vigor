@@ -13,7 +13,7 @@ void settingsDialog() => Get.dialog(_SettingsDialogContent());
 class _SettingsDialogContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final labels = AppLocalizations.of(context);
+    final labels = AppLocalizations.of(context)!;
 
     //todo: extract into controller
     final List<ThemeMenuOption> themeOptions = [
@@ -65,7 +65,8 @@ class _SettingsDialogContent extends StatelessWidget {
                             : Text(e.englishValue, style: textTheme.bodyText2),
                         value: e.key,
                         groupValue: theme.themeMode,
-                        onChanged: (newValue) => theme.setThemeMode(newValue),
+                        onChanged: (newValue) =>
+                            theme.setThemeMode(newValue as ThemeMode),
                       ),
                     ),
                   ),
@@ -82,7 +83,8 @@ class _SettingsDialogContent extends StatelessWidget {
                           Text(e.englishValue, style: textTheme.bodyText2),
                       value: e.key,
                       groupValue: locale.currentLanguage,
-                      onChanged: (value) => locale.updateLanguage(value),
+                      onChanged: (value) =>
+                          locale.updateLanguage(value as String),
                     ),
                   ),
                 ],

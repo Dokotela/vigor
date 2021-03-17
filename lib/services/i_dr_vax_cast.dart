@@ -4,7 +4,7 @@ import '../_internal/utils/vax_date.dart';
 
 abstract class IDrVaxCast {
   static Map<String, Set<Immunization>> drVaxCast({
-    List<Immunization> immunizations,
+    required List<Immunization> immunizations,
   }) {
     var immHx = <String, Set<Immunization>>{
       'Tuberculosis': {},
@@ -20,17 +20,17 @@ abstract class IDrVaxCast {
     };
 
     for (var imm in immunizations) {
-      var agByCvx = simpleCvxMap[imm.vaccineCode.coding[0].code.toString()];
-      for (var ag in agByCvx.antigens) {
+      var agByCvx = simpleCvxMap[imm.vaccineCode.coding?[0].code.toString()];
+      for (var ag in agByCvx?.antigens ?? []) {
         if (immHx.keys.contains(ag)) {
-          immHx[ag].add(imm);
+          immHx[ag]!.add(imm);
         }
       }
-      var cvx = imm.vaccineCode.coding[0].code.toString();
+      var cvx = imm.vaccineCode.coding?[0].code.toString();
       if (cvx == '198' || cvx == '102' || cvx == '132' || cvx == '146') {
-        immHx['Pentavalente'].add(imm);
+        immHx['Pentavalente']!.add(imm);
       } else if (cvx == '03' || cvx == '94') {
-        immHx['MMR'].add(imm);
+        immHx['MMR']!.add(imm);
       } else if (cvx == '01' ||
           cvx == '20' ||
           cvx == '22' ||
@@ -41,13 +41,13 @@ abstract class IDrVaxCast {
           cvx == '120' ||
           cvx == '130' ||
           cvx == '170') {
-        immHx['DTP'].add(imm);
+        immHx['DTP']!.add(imm);
       } else if (cvx == '04') {
-        immHx['MR'].add(imm);
+        immHx['MR']!.add(imm);
       }
     }
     for (var k in immHx.keys) {
-      var temp = immHx[k].toList();
+      var temp = immHx[k]!.toList();
 
       temp.sort((a, b) => VaxDate.fromString(a.toString())
           .compareTo(VaxDate.fromString(b.toString())));

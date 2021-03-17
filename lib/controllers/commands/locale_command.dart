@@ -62,9 +62,9 @@ class LocaleCommand extends GetxController {
   }
 
 // updates the language stored
-  Future<void> updateLanguage(String value) async {
-    language.value = value;
-    await _data.store.write('language', value);
+  Future<void> updateLanguage(String? value) async {
+    language.value = value ?? 'en';
+    await _data.store.write('language', value ?? 'en');
     Get.updateLocale(getLocale());
     update();
   }

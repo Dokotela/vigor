@@ -14,7 +14,7 @@ class MinInfoBanner extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final labels = AppLocalizations.of(context);
+    final labels = AppLocalizations.of(context)!;
 
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -24,12 +24,14 @@ class MinInfoBanner extends StatelessWidget {
           children: [
             Text(
               '${labels.name.title}: $name',
-              style: Get.textTheme.headline6.copyWith(fontSize: Get.width / 18),
+              style:
+                  Get.textTheme!.headline6!.copyWith(fontSize: Get.width / 18),
             ),
             SizedBox(height: 4.0),
             Text(
               '${labels.birthDate.title}: $birthDate',
-              style: Get.textTheme.headline6.copyWith(fontSize: Get.width / 18),
+              style:
+                  Get.textTheme!.headline6!.copyWith(fontSize: Get.width / 18),
             ),
           ],
         ),

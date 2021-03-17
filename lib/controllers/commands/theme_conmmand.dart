@@ -27,8 +27,9 @@ class ThemeCommand extends GetxController {
     super.onReady();
   }
 
-  Future<void> setThemeMode(ThemeMode obj) async {
-    themeString.value = ThemeModeUtil().convertThemeModeToString(obj);
+  Future<void> setThemeMode(ThemeMode? obj) async {
+    themeString.value =
+        ThemeModeUtil().convertThemeModeToString(obj ?? ThemeMode.light);
     _themeMode = obj;
     Get.changeThemeMode(themeMode);
     await _data.store.write('theme', themeString.value);

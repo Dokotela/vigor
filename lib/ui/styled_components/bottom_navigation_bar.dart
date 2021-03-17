@@ -5,8 +5,8 @@ import '../localization.dart';
 import '../views/views.dart';
 
 BottomNavigationBar bottomAppBar(
-    {Function backFunction, Function homeFunction}) {
-  final labels = AppLocalizations.of(Get.context);
+    {Function? backFunction, Function? homeFunction}) {
+  final labels = AppLocalizations.of(Get.context!)!;
   return BottomNavigationBar(
     selectedFontSize: Get.width * 0.03,
     unselectedFontSize: Get.width * 0.03,
@@ -14,7 +14,7 @@ BottomNavigationBar bottomAppBar(
       BottomNavigationBarItem(
         icon: Icon(
           Icons.arrow_back,
-          color: Get.theme.colorScheme.onPrimary,
+          color: Get.theme!.colorScheme.onPrimary,
           size: Get.width * 0.08,
         ),
         label: labels.actions.back,
@@ -22,7 +22,7 @@ BottomNavigationBar bottomAppBar(
       BottomNavigationBarItem(
         icon: Icon(
           Icons.home,
-          color: Get.theme.colorScheme.onPrimary,
+          color: Get.theme!.colorScheme.onPrimary,
           size: Get.width * 0.08,
         ),
         label: labels.actions.home,
@@ -30,7 +30,7 @@ BottomNavigationBar bottomAppBar(
       BottomNavigationBarItem(
         icon: Icon(
           Icons.exit_to_app,
-          color: Get.theme.colorScheme.onPrimary,
+          color: Get.theme!.colorScheme.onPrimary,
           size: Get.width * 0.08,
         ),
         label: labels.actions.logout,

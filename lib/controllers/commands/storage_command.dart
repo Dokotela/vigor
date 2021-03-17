@@ -8,14 +8,13 @@ class StorageCommand extends GetxController {
   bool isFirstLoad = true;
 
   @override
-  Future<void> onReady() async {
-    await getFirstLoadInfoFromStore();
+  void onReady() {
+    getFirstLoadInfoFromStore();
     super.onReady();
   }
 
-  Future<void> getFirstLoadInfoFromStore() async {
-    isFirstLoad = await store.read('isFirstLoad') ?? true;
-  }
+  void getFirstLoadInfoFromStore() =>
+      isFirstLoad = store.read('isFirstLoad') ?? true;
 
   Future<void> saveFirstLoadInfoToStore(bool newValue) async {
     isFirstLoad = newValue;

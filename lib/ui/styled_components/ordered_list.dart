@@ -32,16 +32,16 @@ class OrderedList extends StatelessWidget {
   final Widget order3;
   final Function entry3;
   final int listLength;
-  final Function selectEntry;
+  final Function? selectEntry;
 
   @override
   Widget build(BuildContext context) {
     final _padding = EdgeInsets.fromLTRB(0, 0, 0, 0);
 
-    Expanded _text(String text) => Expanded(
+    Expanded _text(String? text) => Expanded(
           child: Text(
             text ?? '',
-            style: Get.theme.textTheme.headline6
+            style: Get.theme!.textTheme.headline6!
                 .copyWith(fontSize: Get.width * .04),
             // overflow: TextOverflow.,
             // softWrap: false,
@@ -56,7 +56,7 @@ class OrderedList extends StatelessWidget {
             children: [
               Container(
                 width: Get.width * .35,
-                child: FlatButton(
+                child: TextButton(
                   onPressed: () => sortCol1(),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -66,7 +66,7 @@ class OrderedList extends StatelessWidget {
               ),
               Container(
                 width: Get.width * .30,
-                child: FlatButton(
+                child: TextButton(
                   onPressed: () => sortCol2(),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -76,7 +76,7 @@ class OrderedList extends StatelessWidget {
               ),
               Container(
                 width: Get.width * .22,
-                child: FlatButton(
+                child: TextButton(
                   onPressed: () => sortCol3(),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -94,10 +94,11 @@ class OrderedList extends StatelessWidget {
               itemCount: listLength,
               separatorBuilder: (context, index) => Divider(
                 thickness: 1.0,
-                color: Get.theme.colorScheme.onPrimary,
+                color: Get.theme!.colorScheme.onPrimary,
               ),
-              itemBuilder: (context, index) => FlatButton(
-                onPressed: () => selectEntry(index),
+              itemBuilder: (context, index) => TextButton(
+                onPressed: () =>
+                    selectEntry == null ? null : selectEntry!(index),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [

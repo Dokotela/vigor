@@ -3,14 +3,15 @@
 import 'package:flutter/material.dart';
 
 class ThemeMenuOption {
-  ThemeMenuOption(
-      {required this.key,
-      required this.value,
-      required this.englishValue,
-      this.icon});
+  ThemeMenuOption({
+    required this.key,
+    required this.value,
+    required this.englishValue,
+    this.icon,
+  });
 
   ThemeMode key;
   String value;
   String englishValue;
-  IconData icon;
+  IconData? icon;
 }

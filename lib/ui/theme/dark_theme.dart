@@ -49,9 +49,7 @@ ThemeData get darkTheme {
     typography: Typography.material2018(),
     accentTextTheme: _buildTextTheme().apply(bodyColor: Colors.black),
     materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-    textSelectionHandleColor: Colors.transparent,
     buttonColor: Color(0xff353AE0),
-    cursorColor: Color(0xff353AE0),
     highlightColor: Color(0xff353AE0),
     toggleableActiveColor: Color(0xff353AE0),
   );

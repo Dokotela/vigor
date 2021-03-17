@@ -3,11 +3,11 @@ import 'package:in_date_utils/in_date_utils.dart';
 class VaxDate extends DateTime {
   VaxDate(int year, int month, int day) : super(year, month, day);
 
-  VaxDate.fromString(String date)
+  VaxDate.fromString(String? date)
       : super(
-          DateTime.tryParse(date)?.year ?? 2999,
-          DateTime.tryParse(date)?.month ?? 12,
-          DateTime.tryParse(date)?.day ?? 31,
+          DateTime.tryParse(date ?? '')?.year ?? 2999,
+          DateTime.tryParse(date ?? '')?.month ?? 12,
+          DateTime.tryParse(date ?? '')?.day ?? 31,
         );
 
   VaxDate.dt(DateTime dateTime)

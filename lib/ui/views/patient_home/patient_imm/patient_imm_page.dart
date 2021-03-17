@@ -11,8 +11,8 @@ import '../../../localization.dart';
 import 'widgets/dose_options.dart';
 
 class PatientImmPage extends StatelessWidget {
-  final controller = Get.put(PatientImmController());
-  final screenSize = Get.put(ResponsiveCommand());
+  final controller = Get.put(PatientImmController())!;
+  final screenSize = Get.put(ResponsiveCommand())!;
 
   DataColumn _heading(String title, SizingInformation sizingInformation) =>
       DataColumn(
@@ -21,7 +21,7 @@ class PatientImmPage extends StatelessWidget {
           child: Text(
             title,
             textAlign: TextAlign.center,
-            style: Get.textTheme.headline6
+            style: Get.textTheme!.headline6!
                 .copyWith(fontSize: screenSize.columnHeader(sizingInformation)),
           ),
         ),
@@ -42,7 +42,7 @@ class PatientImmPage extends StatelessWidget {
                   child: Text(
                     text,
                     textAlign: TextAlign.center,
-                    style: Get.textTheme.headline6.copyWith(
+                    style: Get.textTheme!.headline6!.copyWith(
                         fontSize: screenSize.rowHeader(sizingInformation),
                         color: Colors.blue),
                   ),
@@ -64,7 +64,7 @@ class PatientImmPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final labels = AppLocalizations.of(context);
+    final labels = AppLocalizations.of(context)!;
 
     return ResponsiveBuilder(
       builder: (context, sizingInformation) => Container(
@@ -102,7 +102,7 @@ class PatientImmPage extends StatelessWidget {
                                         child: Text(
                                           'Dosis',
                                           textAlign: TextAlign.center,
-                                          style: Get.textTheme.headline6
+                                          style: Get.textTheme!.headline6!
                                               .copyWith(
                                                   fontSize: Get.width * .05),
                                         ),

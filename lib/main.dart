@@ -20,7 +20,7 @@ Future main() async {
 Future<void> _initServices() async {
   await GetStorage.init();
   Get.put<StorageCommand>(StorageCommand());
-  await StorageCommand.to.getFirstLoadInfoFromStore();
+  StorageCommand.to.getFirstLoadInfoFromStore();
   Get.put<LocaleCommand>(LocaleCommand());
   Get.put<ThemeCommand>(ThemeCommand());
   await ThemeCommand.to.getThemeModeFromStore();

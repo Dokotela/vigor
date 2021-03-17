@@ -20,8 +20,8 @@ class InfoBannerWidget extends StatelessWidget {
   final String sex;
 
   @override
-  Widget build(Object context) {
-    final labels = AppLocalizations.of(context);
+  Widget build(BuildContext context) {
+    final labels = AppLocalizations.of(context)!;
     const _spacerV = SizedBox(height: 4.0);
 
     return Padding(
@@ -32,27 +32,27 @@ class InfoBannerWidget extends StatelessWidget {
         children: <Widget>[
           Text(
             '${labels.name.title}: $name',
-            style: Get.textTheme.headline6.copyWith(fontSize: Get.width / 20),
+            style: Get.textTheme!.headline6!.copyWith(fontSize: Get.width / 20),
           ),
           _spacerV,
           Text(
             '${labels.birthDate.title}: $birthDate',
-            style: Get.textTheme.headline6.copyWith(fontSize: Get.width / 20),
+            style: Get.textTheme!.headline6!.copyWith(fontSize: Get.width / 20),
           ),
           _spacerV,
           Text(
             '${labels.age.title}: $relativeAge',
-            style: Get.textTheme.headline6.copyWith(fontSize: Get.width / 20),
+            style: Get.textTheme!.headline6!.copyWith(fontSize: Get.width / 20),
           ),
           _spacerV,
           Text(
             '${labels.gender.title}: $sex',
-            style: Get.textTheme.headline6.copyWith(fontSize: Get.width / 20),
+            style: Get.textTheme!.headline6!.copyWith(fontSize: Get.width / 20),
           ),
           _spacerV,
           Text(
             'ID: $id',
-            style: Get.textTheme.headline6.copyWith(fontSize: Get.width / 20),
+            style: Get.textTheme!.headline6!.copyWith(fontSize: Get.width / 20),
           ),
         ],
       ),

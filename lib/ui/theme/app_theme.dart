@@ -17,7 +17,7 @@ enum ThemeType {
 }
 
 abstract class AppTheme {
-  static ThemeData fromType([ThemeType t]) {
+  static ThemeData fromType([ThemeType? t]) {
     switch (t) {
       case ThemeType.Vigor_Dark:
         return darkTheme;

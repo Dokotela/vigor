@@ -4,21 +4,21 @@ import 'package:get/get.dart';
 Future showMyDatePicker(
         {required DateTime initialDate,
         required Function function,
-        int index}) =>
+        int? index}) =>
     showDatePicker(
-        context: Get.context,
+        context: Get.context!,
         locale: Get.locale,
         initialDate: initialDate,
         firstDate: DateTime(1900, 1, 1),
         lastDate: DateTime(2999, 12, 31),
         builder: (BuildContext context, child) {
           return Theme(
-            data: Get.theme.copyWith(
-              colorScheme: Get.theme.colorScheme.copyWith(
-                  primary: Get.theme.colorScheme.onPrimary,
-                  onPrimary: Get.theme.colorScheme.primary),
+            data: Get.theme!.copyWith(
+              colorScheme: Get.theme!.colorScheme.copyWith(
+                  primary: Get.theme!.colorScheme.onPrimary,
+                  onPrimary: Get.theme!.colorScheme.primary),
             ),
-            child: child,
+            child: child ?? Container(),
           );
         }).then(
       (date) => index == null ? function(date) : function(index, date),

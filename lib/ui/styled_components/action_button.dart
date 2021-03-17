@@ -12,26 +12,29 @@ class ActionButton extends StatelessWidget {
   });
 
   final String buttonText;
-  final Function onPressed;
+  final Function? onPressed;
 
   @override
   Widget build(BuildContext context) {
-    final screenSize = Get.put(ResponsiveCommand());
+    final screenSize = Get.put(ResponsiveCommand())!;
 
     return ResponsiveBuilder(
       builder: (context, sizingInformation) => ButtonTheme(
         minWidth: screenSize.width * .7,
-        child: RaisedButton(
-          shape: RoundedRectangleBorder(
-              side: BorderSide(color: Get.theme.colorScheme.onPrimary),
-              borderRadius: screenSize.circularBorderRadius(sizingInformation)),
-          onPressed: onPressed,
-          padding: screenSize.symmetricPadding(sizingInformation),
+        child: ElevatedButton(
+          onPressed: () => onPressed,
           child: Text(
             buttonText,
-            style: Get.theme.textTheme.headline6.copyWith(
-                color: Get.theme.colorScheme.onPrimary,
+            style: Get.theme!.textTheme.headline6!.copyWith(
+                color: Get.theme!.colorScheme.onPrimary,
                 fontSize: screenSize.width * .05),
+          ),
+          style: ElevatedButton.styleFrom(
+            shape: RoundedRectangleBorder(
+                side: BorderSide(color: Get.theme!.colorScheme.onPrimary),
+                borderRadius:
+                    screenSize.circularBorderRadius(sizingInformation)),
+            padding: screenSize.symmetricPadding(sizingInformation),
           ),
         ),
       ),

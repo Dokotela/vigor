@@ -31,7 +31,7 @@ class IFhirServer {
       entry: [],
     );
     for (final resource in allResources) {
-      resourceBundle.entry.add(
+      resourceBundle.entry!.add(
         BundleEntry(
           resource: resource,
           request: BundleRequest(
@@ -41,14 +41,15 @@ class IFhirServer {
         ),
       );
     }
-    await post('$server/fhir',
-        headers: headers, body: jsonEncode(resourceBundle.toJson()));
+    await post(Uri.parse('$server/fhir'),
+        headers: headers as Map<String, String>?,
+        body: jsonEncode(resourceBundle.toJson()));
   }
 
   Future saveToDb(List<Bundle> bundleList) async {
     final iFhirDb = IFhirDb();
     for (final bundle in bundleList) {
-      for (final entry in bundle.entry) {
+      for (final entry in bundle.entry ?? []) {
         iFhirDb.save(entry.resource);
       }
     }
@@ -60,7 +61,8 @@ class IFhirServer {
     const secret = 'verysecret';
 
     final response = await post(
-        '$server/auth/token?client_id=$identifier&grant_type=client_credentials&client_secret=$secret',
+        Uri.parse(
+            '$server/auth/token?client_id=$identifier&grant_type=client_credentials&client_secret=$secret'),
         headers: headers);
     if (response.statusCode == 200) {
       final parsedbody = json.decode(response.body);
@@ -73,11 +75,11 @@ class IFhirServer {
   Future<List<Bundle>> _getPatients(Map<String, String> headers) async {
     final bundleList = <Bundle>[];
     bundleList.add(await getBundle('$server/fhir/Patient', headers));
-    while (bundleList.last.link.firstWhere((link) => link.relation == 'next',
-            orElse: () => null) !=
-        null) {
+    while (
+        bundleList.last.link?.indexWhere((link) => link.relation == 'next') !=
+            -1) {
       final newSearchUrl = bundleList.last.link
-          .firstWhere((link) => link.relation == 'next')
+          ?.firstWhere((link) => link.relation == 'next')
           .url
           .toString();
       bundleList.add(await getBundle('$server/fhir$newSearchUrl', headers));
@@ -88,11 +90,12 @@ class IFhirServer {
   Future<List<Bundle>> _getImmunizations(Map<String, String> headers) async {
     final bundleList = <Bundle>[];
     bundleList.add(await getBundle('$server/fhir/Immunization', headers));
-    while (bundleList.last.link.firstWhere((link) => link.relation == 'next',
-            orElse: () => null) !=
-        null) {
+    while (bundleList.last.link?.indexWhere(
+          (link) => link.relation == 'next',
+        ) !=
+        -1) {
       final newSearchUrl = bundleList.last.link
-          .firstWhere((link) => link.relation == 'next')
+          ?.firstWhere((link) => link.relation == 'next')
           .url
           .toString();
       bundleList.add(await getBundle('$server/fhir$newSearchUrl', headers));
@@ -102,7 +105,7 @@ class IFhirServer {
 
   Future<Bundle> getBundle(String url, Map<String, String> headers) async {
     print(url);
-    final result = await get(url, headers: headers);
+    final result = await get(Uri.parse(url), headers: headers);
     return Bundle.fromJson(json.decode(result.body));
   }
 }

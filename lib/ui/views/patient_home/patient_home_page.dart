@@ -11,8 +11,8 @@ import '../../localization.dart';
 class PatientHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final labels = AppLocalizations.of(context);
-    final PatientHomeController controller = Get.put(PatientHomeController());
+    final labels = AppLocalizations.of(context)!;
+    final PatientHomeController controller = Get.put(PatientHomeController())!;
 
     return Scaffold(
       resizeToAvoidBottomInset: false,
@@ -28,7 +28,7 @@ class PatientHomePage extends StatelessWidget {
               children: [
                 IconButton(
                   icon: Icon(Icons.edit,
-                      color: Get.theme.colorScheme.onBackground),
+                      color: Get.theme!.colorScheme.onBackground),
                   onPressed: () => controller.editPatient(),
                 ),
                 InfoBannerWidget(
@@ -40,7 +40,7 @@ class PatientHomePage extends StatelessWidget {
                 ),
               ],
             ),
-            Divider(color: Get.theme.colorScheme.primary, thickness: 2.0),
+            Divider(color: Get.theme!.colorScheme.primary, thickness: 2.0),
             SizedBox(height: 40.0),
             ActionButton(
               buttonText: labels.medical.immunizations,

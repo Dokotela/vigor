@@ -12,9 +12,9 @@ import 'patient_search_view_controller.dart';
 class AllPatientsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final labels = AppLocalizations.of(context);
-    final controller = Get.put(PatientSearchController());
-    final viewController = Get.put(PatientSearchViewController());
+    final labels = AppLocalizations.of(context)!;
+    final controller = Get.put(PatientSearchController())!;
+    final viewController = Get.put(PatientSearchViewController())!;
     final searchName = TextEditingController();
 
     return GestureDetector(
@@ -29,7 +29,7 @@ class AllPatientsPage extends StatelessWidget {
         body: Column(
           children: [
             Container(
-              color: Get.theme.colorScheme.onPrimary,
+              color: Get.theme!.colorScheme.onPrimary,
               child: Padding(
                 padding: EdgeInsets.only(
                   left: Get.width * .05,
@@ -39,20 +39,20 @@ class AllPatientsPage extends StatelessWidget {
                 ),
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Get.theme.colorScheme.primary,
+                    color: Get.theme!.colorScheme.primary,
                     borderRadius: BorderRadius.circular(Get.width * .04),
                   ),
                   child: TextFormField(
-                    style: Get.textTheme.headline6,
+                    style: Get.textTheme!.headline6,
                     controller: searchName,
                     decoration: InputDecoration(
                         border: InputBorder.none,
                         icon: Icon(
                           Icons.search,
                           size: Get.width * .08,
-                          color: Get.theme.colorScheme.onPrimary,
+                          color: Get.theme!.colorScheme.onPrimary,
                         ),
-                        hintStyle: Get.textTheme.headline6,
+                        hintStyle: Get.textTheme!.headline6,
                         hintText: labels.actions.search),
                     onChanged: (value) => controller.searchPatientByName(value),
                   ),

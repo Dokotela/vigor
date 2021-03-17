@@ -24,7 +24,7 @@ Future main() async {
           address: [Address(district: row[8].replaceAll('\"', ''))],
           gender: row[7] == 'Male' ? PatientGender.male : PatientGender.female,
         );
-        newBundle.entry.add(BundleEntry(
+        newBundle.entry!.add(BundleEntry(
             resource: patient,
             request: BundleRequest(
               method: BundleRequestMethod.post,
@@ -38,7 +38,7 @@ Future main() async {
               patient: Reference(reference: 'Patient/${patient.id.toString()}'),
               vaccineCode: vaxCode(i),
             );
-            newBundle.entry.add(BundleEntry(
+            newBundle.entry!.add(BundleEntry(
                 resource: newImmunization,
                 request: BundleRequest(
                   method: BundleRequestMethod.post,
@@ -92,7 +92,7 @@ CodeableConcept vaxCode(int i) {
     case 197:
       return byNum('107', 'DTaP, unspecified formulation');
     default:
-      return null;
+      return byNum('999', 'unknown vaccine or immune globulin');
   }
 }
 

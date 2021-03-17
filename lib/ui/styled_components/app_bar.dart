@@ -4,10 +4,10 @@ import 'package:get/get.dart';
 import '../settings_dialog.dart';
 
 class VigorAppBar extends AppBar {
-  VigorAppBar({required String title, Widget leading, List<Widget> actions})
+  VigorAppBar({required String title, Widget? leading, List<Widget>? actions})
       : super(
           title: Text(title,
-              style: Get.theme.textTheme.headline5
+              style: Get.theme!.textTheme.headline5!
                   .copyWith(fontSize: Get.width * .07)),
           elevation: 1,
           leading: leading,
@@ -16,7 +16,7 @@ class VigorAppBar extends AppBar {
         );
 }
 
-List<Widget> _actions({List<Widget> actions}) {
+List<Widget> _actions({List<Widget>? actions}) {
   actions = actions == null || actions.isEmpty ? <Widget>[] : actions;
   actions.add(Padding(
     padding: EdgeInsets.only(right: Get.width * .03),
