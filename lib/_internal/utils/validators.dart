@@ -7,8 +7,9 @@ bool isValidRegistrationName(String name) => name.length >= 2;
 bool isValidGender(String gender) =>
     genderList().contains(gender) && gender != '';
 
-bool isValidRegistrationBirthDate(DateTime date) =>
-    DateTime.now().isAfter(date) && date != DateTime(1900, 1, 1);
+bool isValidRegistrationBirthDate(DateTime? date) => date == null
+    ? false
+    : DateTime.now().isAfter(date) && date != DateTime(1900, 1, 1);
 
 bool isValidRegistrationBarrio(String barrio) =>
     barrios.contains(barrio) && barrio != '';

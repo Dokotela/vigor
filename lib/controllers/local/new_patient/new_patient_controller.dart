@@ -93,38 +93,25 @@ class NewPatientController extends GetxController {
         isValidRegistrationBirthDate(_birthDate.value) &&
         isValidRegistrationBarrio(barrio) &&
         isValidGender(gender)) {
-      _patient.value.patient = _patient.value.patient == null
-          ? Patient(
-              name: [
-                HumanName(
-                  family: familyName.text,
-                  given: [givenName.text],
-                )
-              ],
-              birthDate: Date(_birthDate.value),
-              address: [Address(district: barrio)],
-              gender: gender == labels.gender.female
-                  ? PatientGender.female
-                  : PatientGender.male)
-          : _patient.value.patient.copyWith(
-              name: [
-                HumanName(
-                  family: familyName.text,
-                  given: [givenName.text],
-                )
-              ],
-              birthDate: Date(_birthDate.value),
-              address: [Address(district: barrio)],
-              gender: gender == labels.gender.female
-                  ? PatientGender.female
-                  : PatientGender.male,
-            );
+      _patient.value!.patient = _patient.value!.patient.copyWith(
+        name: [
+          HumanName(
+            family: familyName.text,
+            given: [givenName.text],
+          )
+        ],
+        birthDate: Date(_birthDate.value),
+        address: [Address(district: barrio)],
+        gender: gender == labels.gender.female
+            ? PatientGender.female
+            : PatientGender.male,
+      );
 
-      final saveResult = await IFhirDb().save(_patient.value.patient);
+      final saveResult = await IFhirDb().save(_patient.value!.patient);
       return saveResult.fold(
         (l) => left(l),
         (r) {
-          _patient.value.patient = r;
+          _patient.value!.patient = r as Patient;
           return right(unit);
         },
       );
