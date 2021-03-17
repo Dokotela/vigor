@@ -17,12 +17,12 @@ class PatientHomeController extends GetxController {
   }
 
   /// GETTER FUNCTIONS
-  String name() => _patient.value.name();
-  String id() => _patient.value.id();
-  String sex() => _patient.value.sex();
-  String birthDate() => _patient.value.birthDate();
-  String relativeAge() => sharedRelativeAge(_patient.value.birthDate());
-  PatientModel actualPatient() => _patient.value;
+  String name() => _patient.value!.name();
+  String id() => _patient.value!.id();
+  String sex() => _patient.value!.sex();
+  String birthDate() => _patient.value!.birthDate();
+  String relativeAge() => sharedRelativeAge(_patient.value!.birthDate());
+  PatientModel actualPatient() => _patient.value!;
 
   /// SETTER FUNCTIONS
 

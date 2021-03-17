@@ -30,7 +30,7 @@ class DropDownSelection extends StatelessWidget {
               width: Get.width * 0.4,
               child: Text(
                 title,
-                style: Get.theme.textTheme.bodyText1
+                style: Get.theme!.textTheme.bodyText1!
                     .copyWith(fontSize: Get.width * .05),
               ),
             ),
@@ -52,8 +52,8 @@ class DropDownSelection extends StatelessWidget {
         ),
         Text(
           error,
-          style: Get.theme.textTheme.caption
-              .copyWith(color: Get.theme.colorScheme.error),
+          style: Get.theme!.textTheme.caption!
+              .copyWith(color: Get.theme!.colorScheme.error),
         ),
       ],
     );

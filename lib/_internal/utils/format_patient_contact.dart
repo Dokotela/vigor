@@ -12,7 +12,7 @@ PatientContact formatPatientContact(
     );
 
 List<CodeableConcept> _mapRelationship(String relationship) {
-  final labels = AppLocalizations.of(Get.context);
+  final labels = AppLocalizations.of(Get.context!)!;
   Map<String, List<CodeableConcept>> mapRelationToCode = {
     labels.relationships.mother: _getCodeableConcept('72705000', 'Mother'),
     labels.relationships.grandmother:

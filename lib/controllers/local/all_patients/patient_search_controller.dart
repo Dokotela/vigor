@@ -27,10 +27,13 @@ class PatientSearchController extends GetxController {
       lastCommaGivenName((_activePatientList[index] as Patient).name);
   String patientDob(int index) =>
       dateFromFhirDate((_activePatientList[index] as Patient).birthDate);
-  String patientBarrio(int index) =>
-      (_activePatientList[index] as Patient).address == null
+  String patientBarrio(int index) => (_activePatientList[index] as Patient)
+              .address ==
+          null
+      ? ''
+      : (_activePatientList[index] as Patient).address!.isEmpty
           ? ''
-          : (_activePatientList[index] as Patient).address[0].district;
+          : (_activePatientList[index] as Patient).address![0].district ?? '';
   int get currentListLength => _activePatientList.length;
   int get nameSort => _nameSort.value;
   int get birthDateSort => _birthDateSort.value;
@@ -61,10 +64,10 @@ class PatientSearchController extends GetxController {
     _barrioSort.value = 0;
     if (_nameSort.value == 1) {
       _nameSort.value = 2;
-      _activePatientList.sort((a, b) => _sortName(b, a));
+      _activePatientList.sort((a, b) => _sortName(b as Patient, a as Patient));
     } else {
       _nameSort.value = 1;
-      _activePatientList.sort((a, b) => _sortName(a, b));
+      _activePatientList.sort((a, b) => _sortName(b as Patient, a as Patient));
     }
   }
 
@@ -101,13 +104,17 @@ class PatientSearchController extends GetxController {
     }
   }
 
-  int _sortBarrio(a, b) => ((a as Patient)?.address == null
+  int _sortBarrio(a, b) => ((a as Patient).address == null
           ? ''
-          : (a as Patient).address[0]?.district ?? '')
-      .compareTo((b as Patient)?.address == null
+          : a.address!.isEmpty
+              ? ''
+              : a.address![0].district ?? '')
+      .compareTo((b as Patient).address == null
           ? ''
-          : (b as Patient).address[0]?.district ?? '');
+          : b.address!.isEmpty
+              ? ''
+              : b.address![0].district ?? '');
 
   void selectPatient(int index) => Get.toNamed(AppRoutes.PATIENT_HOME_PAGE,
-      arguments: PatientModel(patient: _activePatientList[index]));
+      arguments: PatientModel(patient: _activePatientList[index] as Patient));
 }

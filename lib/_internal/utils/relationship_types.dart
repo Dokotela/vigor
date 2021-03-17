@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import '../../ui/localization.dart';
 
 List<String> relationshipTypes() {
-  final labels = AppLocalizations.of(Get.context);
+  final labels = AppLocalizations.of(Get.context!)!;
   return <String>[
     labels.relationships.mother,
     labels.relationships.grandmother,
@@ -22,7 +22,7 @@ List<String> relationshipTypes() {
 }
 
 String relationshipLabelToString(String label) {
-  final labels = AppLocalizations.of(Get.context);
+  final labels = AppLocalizations.of(Get.context!)!;
   final labelToString = {
     labels.relationships.mother: 'mother',
     labels.relationships.grandmother: 'grandmother',
@@ -38,11 +38,11 @@ String relationshipLabelToString(String label) {
     labels.relationships.nephew: 'nephew',
     labels.relationships.other: 'other',
   };
-  return labelToString[label];
+  return labelToString[label] ?? '';
 }
 
 String relationshipStringToLabel(String string) {
-  final labels = AppLocalizations.of(Get.context);
+  final labels = AppLocalizations.of(Get.context!)!;
   final stringToLabel = {
     'mother': labels.relationships.mother,
     'grandmother': labels.relationships.grandmother,
@@ -58,5 +58,5 @@ String relationshipStringToLabel(String string) {
     'nephew': labels.relationships.nephew,
     'other': labels.relationships.other,
   };
-  return stringToLabel[string];
+  return stringToLabel[string] ?? '';
 }

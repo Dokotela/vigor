@@ -16,7 +16,7 @@ class LocaleCommand extends GetxController {
   final RxString language = ''.obs;
   final List<LanguageMenuOption> languageOptions = fullLanguageOptions;
 
-  String get currentLanguage => language.value;
+  String get currentLanguage => language.value ?? 'en';
 
   @override
   Future<void> onReady() async {

@@ -19,28 +19,28 @@ class VaxDatesController extends GetxController {
   void onInit() {
     _text.value = Get.arguments[0];
     _dz.value = Get.arguments[1];
-    immList.addAll(controller.immHx()[dz].toList());
+    immList.addAll((controller.immHx()[dz] ?? <Immunization>[]).toList());
     super.onInit();
   }
 
   /// GETTER FUNCTIONS
-  String get text => _text.value;
-  String get dz => _dz.value;
+  String get text => _text.value!;
+  String get dz => _dz.value!;
   String dateString(int index) =>
-      dateFromFhirDateTime(immList[index].occurrenceDateTime);
+      dateFromFhirDateTime(immList[index].occurrenceDateTime!);
   DateTime currentDate(int index) =>
-      dateTimeFromFhirDateTime(immList[index].occurrenceDateTime);
+      dateTimeFromFhirDateTime(immList[index].occurrenceDateTime!);
 
   /// SETTER FUNCTIONS
   void updateImmList() {
     immList.clear();
-    immList.addAll(controller.immHx()[dz].toList());
+    immList.addAll((controller.immHx()[dz] ?? <Immunization>[]).toList());
   }
 
   /// EVENTS
   Future addNew() async {
     await controller.addNew(
-        drVaxCvxMap[_dz.value], FhirDateTime(DateTime.now()));
+        drVaxCvxMap[_dz.value!]!, FhirDateTime(DateTime.now()));
     updateImmList();
   }
 
@@ -51,9 +51,8 @@ class VaxDatesController extends GetxController {
   }
 
   Future editDate(int index, DateTime newDate) async {
-    if (newDate != null) {
-      await controller.editDate(immList[index], newDate);
-    }
+    await controller.editDate(immList[index], newDate);
+
     updateImmList();
   }
 }

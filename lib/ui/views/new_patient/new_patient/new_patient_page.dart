@@ -88,6 +88,7 @@ class NewPatientPage extends StatelessWidget {
                                   .copyWith(fontSize: Get.width * .05),
                             ),
                           ),
+                          Icon(Icons.edit),
                         ],
                       ),
                       SizedBox(height: Get.height * .04),
