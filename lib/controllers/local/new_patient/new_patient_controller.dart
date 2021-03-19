@@ -52,10 +52,13 @@ class NewPatientController extends GetxController {
     }
     familyName.text = _patient.value!.familyName();
     givenName.text = _patient.value!.givenName();
+    _patient.value!.patient = _patient.value!.patient.copyWith(
+        contact: _patient.value!.patient.contact ?? <PatientContact>[]);
     super.onInit();
   }
 
   /// GETTER FUNCTIONS
+  List<PatientContact> get contacts => _patient.value?.patient.contact ?? [];
   String get familyNameError => _familyNameError.value ?? '';
   String get givenNameError => _givenNameError.value ?? '';
 
@@ -71,8 +74,8 @@ class NewPatientController extends GetxController {
   List<String> get barriosList => _barriosList;
   String get barrio => _barrio.value ?? '';
   String get barrioError => _barrioError.value ?? '';
-  String get primaryFamilyMember => newPatient
-      ? ''
+  String get primaryFamilyMember => contacts.isEmpty
+      ? 'None'
       : lastCommaGivenName(
           [_patient.value?.patient.contact?[0].name ?? HumanName()]);
 
@@ -87,6 +90,14 @@ class NewPatientController extends GetxController {
   void selectBarrio(String barrio) => _barrio.value = barrio;
 
   ///EVENTS
+  void addContact(PatientContact contact) {
+    _patient.value?.patient.contact == null
+        ? _patient.value!.patient =
+            _patient.value!.patient.copyWith(contact: [contact])
+        : _patient.value!.patient.contact!.add(contact);
+    update();
+  }
+
   Future<Either<DbFailure, Unit>> save() async {
     if (isValidRegistrationName(familyName.text) &&
         isValidRegistrationName(givenName.text) &&
@@ -137,4 +148,7 @@ class NewPatientController extends GetxController {
 
   void completeRegistration() =>
       Get.toNamed(AppRoutes.CONTACTS, arguments: _patient.value);
+
+  void editContacts() => Get.toNamed(AppRoutes.CONTACTS,
+      arguments: PatientModel(patient: _patient.value!.patient));
 }

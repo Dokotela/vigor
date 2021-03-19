@@ -30,6 +30,6 @@ class PatientHomeController extends GetxController {
   void editPatient() =>
       Get.toNamed(AppRoutes.NEW_PATIENT, arguments: _patient.value);
 
-  void immPage() =>
+  Future? immPage() =>
       Get.toNamed(AppRoutes.PATIENT_IMM_PAGE, arguments: _patient.value);
 }

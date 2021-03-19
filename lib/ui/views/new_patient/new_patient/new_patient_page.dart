@@ -37,7 +37,7 @@ class NewPatientPage extends StatelessWidget {
                 width: Get.width * .7,
                 child: Obx(
                   () => Column(
-                    // mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: <Widget>[
                       /// reusable widget for entering first and last names, is
                       /// passed 2 text controllers, and the error messages for each
@@ -47,8 +47,6 @@ class NewPatientPage extends StatelessWidget {
                         familyNameError: controller.familyNameError,
                         givenNameError: controller.givenNameError,
                       ),
-
-                      // SizedBox(height: Get.height * .04),
 
                       /// reusable widget for entering gender at birth, is passed a
                       /// boolean (true = female, false = male), and then the
@@ -72,26 +70,32 @@ class NewPatientPage extends StatelessWidget {
                         dispBirthDateError: controller.birthDateError,
                       ),
 
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
-                            'Contacto\nPrimario',
-                            style: Get.theme!.textTheme.bodyText1!
-                                .copyWith(fontSize: Get.width * .05),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                'Contacto Primario',
+                                style: Get.theme!.textTheme.bodyText1!
+                                    .copyWith(fontSize: Get.width * .05),
+                              ),
+                              IconButton(
+                                  icon: Icon(Icons.edit),
+                                  onPressed: () => controller.editContacts()),
+                            ],
                           ),
                           Container(
-                            width: Get.width * 0.4,
+                            width: Get.width * .7,
                             child: Text(
                               controller.primaryFamilyMember,
                               style: Get.theme!.textTheme.bodyText1!
                                   .copyWith(fontSize: Get.width * .05),
                             ),
                           ),
-                          Icon(Icons.edit),
                         ],
                       ),
-                      SizedBox(height: Get.height * .04),
 
                       /// reusable widget for selecting neighborhood, includes the
                       /// list of neighborhoods, which one to display, the event

@@ -1,19 +1,17 @@
 import 'package:fhir/r4.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vigor/controllers/controllers.dart';
 
 import '../../../_internal/constants/constants.dart';
 import '../../../_internal/utils/relationship_types.dart';
 import '../../../_internal/utils/utils.dart';
-import '../../../models/data/patient_model.dart';
-import '../../../services/i_fhir_db.dart';
 import '../../../ui/localization.dart';
 
 class ContactsController extends GetxController {
   /// PROPERTIES
-  final _patient = PatientModel().obs;
+  final _controller = Get.put(NewPatientController());
   final labels = AppLocalizations.of(Get.context!)!;
-  final _contactsList = <PatientContact>[].obs;
 
   /// these 3 variables allow sorting by their header
   final _nameSort = 0.obs;
@@ -32,32 +30,23 @@ class ContactsController extends GetxController {
   final _barrio = ''.obs;
   final _barrioError = ''.obs;
 
-  /// INIT
-  @override
-  void onInit() {
-    _patient.value = Get.arguments;
-    _contactsList.addAll(_patient.value!.patient.contact ?? []);
-    super.onInit();
-  }
-
   // GETTERS
-  PatientModel get patient => _patient.value!;
-  int get currentListLength => _contactsList.length;
+  int get currentListLength => _controller!.contacts.length;
 
   int get nameSort => _nameSort.value;
   int get relationSort => _relationSort.value;
   int get barrioSort => _barrioSort.value;
 
   String contactName(int index) =>
-      lastCommaGivenName([_contactsList[index].name ?? HumanName()]);
+      lastCommaGivenName([_controller!.contacts[index].name ?? HumanName()]);
 
   String contactRelation(int index) {
-    if (_contactsList.isEmpty) {
+    if (_controller!.contacts.isEmpty) {
       return labels.relationships.title;
-    } else if (_contactsList[index].relationship == null) {
+    } else if (_controller!.contacts[index].relationship == null) {
       return labels.relationships.title;
     }
-    for (var relationship in _contactsList[index].relationship!) {
+    for (var relationship in _controller!.contacts[index].relationship!) {
       if (relationship.coding != null) {
         for (var relation in relationship.coding!) {
           if (relationshipTypes().contains(relationshipStringToLabel(
@@ -73,9 +62,9 @@ class ContactsController extends GetxController {
     return labels.relationships.title;
   }
 
-  String contactBarrio(int index) => _contactsList.isEmpty
+  String contactBarrio(int index) => _controller!.contacts.isEmpty
       ? labels.address.neighborhood.title
-      : _contactsList[index].address?.district ??
+      : _controller!.contacts[index].address?.district ??
           labels.address.neighborhood.title;
 
   String get familyNameError => _familyNameError.value ?? '';
@@ -103,12 +92,15 @@ class ContactsController extends GetxController {
   void sortByName() {
     _relationSort.value = 0;
     _barrioSort.value = 0;
+
     if (_nameSort.value == 1) {
       _nameSort.value = 2;
-      _contactsList.sort((a, b) => _sortName(b, a));
+      var tempContacts = _controller!.contacts;
+      tempContacts.sort((a, b) => _sortName(b, a));
     } else {
       _nameSort.value = 1;
-      _contactsList.sort((a, b) => _sortName(a, b));
+      var tempContacts = _controller!.contacts;
+      tempContacts.sort((a, b) => _sortName(a, b));
     }
   }
 
@@ -122,10 +114,10 @@ class ContactsController extends GetxController {
     _barrioSort.value = 0;
     if (_relationSort.value == 1) {
       _relationSort.value = 2;
-      _contactsList.sort((a, b) => _sortRelation(b, a));
+      _controller!.contacts.sort((a, b) => _sortRelation(b, a));
     } else {
       _relationSort.value = 1;
-      _contactsList.sort((a, b) => _sortRelation(a, b));
+      _controller!.contacts.sort((a, b) => _sortRelation(a, b));
     }
   }
 
@@ -160,10 +152,10 @@ class ContactsController extends GetxController {
     _relationSort.value = 0;
     if (_barrioSort.value == 1) {
       _barrioSort.value = 2;
-      _contactsList.sort((a, b) => _sortBarrio(b, a));
+      _controller!.contacts.sort((a, b) => _sortBarrio(b, a));
     } else {
       _barrioSort.value = 1;
-      _contactsList.sort((a, b) => _sortBarrio(a, b));
+      _controller!.contacts.sort((a, b) => _sortBarrio(a, b));
     }
   }
 
@@ -177,20 +169,8 @@ class ContactsController extends GetxController {
       _barrio.value ?? '',
       _relation.value ?? '',
     );
-    _patient.value?.patient.contact == null
-        ? _patient.value!.patient =
-            _patient.value!.patient.copyWith(contact: [contact])
-        : _patient.value!.patient.contact!.add(contact);
-    final saveResult = await IFhirDb().save(_patient.value!.patient);
-    saveResult.fold(
-      (l) => Get.snackbar('Error', l.error),
-      (r) {
-        _patient.value!.patient = r as Patient;
-        _contactsList.clear();
-        _contactsList.addAll(_patient.value!.patient.contact ?? []);
-        update();
-        Get.back();
-      },
-    );
+    _controller!.addContact(contact);
+    update();
+    Get.back();
   }
 }

@@ -22,7 +22,6 @@ class ThinActionButton extends StatelessWidget {
 
     return ResponsiveBuilder(builder: (context, sizingInformation) {
       return ButtonTheme(
-        minWidth: width ?? screenSize.width * .7,
         child: ElevatedButton(
           onPressed: () => onPressed,
           child: Text(
@@ -32,10 +31,11 @@ class ThinActionButton extends StatelessWidget {
                 fontSize: screenSize.width * .05),
           ),
           style: ElevatedButton.styleFrom(
+            minimumSize: Size(sizingInformation.screenSize.width * .7, 1),
             shape: RoundedRectangleBorder(
-                side: BorderSide(color: Get.theme!.colorScheme.onPrimary),
-                borderRadius:
-                    screenSize.circularBorderRadius(sizingInformation)),
+              side: BorderSide(color: Get.theme!.colorScheme.onPrimary),
+              borderRadius: screenSize.circularBorderRadius(sizingInformation),
+            ),
             padding: screenSize.symmetricPadding(sizingInformation),
           ),
         ),

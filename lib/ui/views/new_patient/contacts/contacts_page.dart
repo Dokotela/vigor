@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:vigor/ui/styled_components/add_new.dart';
 
 import '../../../../controllers/local/new_patient/contacts_controller.dart';
-import '../../../../routes/routes.dart';
 import '../../../localization.dart';
 import '../../../styled_components/app_bar.dart';
 import '../../../styled_components/bottom_navigation_bar.dart';
@@ -119,7 +119,7 @@ class ContactsPage extends StatelessWidget {
                           style: Get.theme!.textTheme.headline6!
                               .copyWith(fontSize: Get.width * .06),
                         )
-                      : OrderedList(
+                      : OrderedListPickOne(
                           label1: labels.name.title,
                           sortCol1: controller.sortByName,
                           order1: viewController!.getOrder(controller.nameSort),
@@ -139,22 +139,10 @@ class ContactsPage extends StatelessWidget {
                         ),
                 ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  ActionButton(
-                    buttonText:
-                        'Continue to Patient Homepage', //labels.pages.patientHome,
-                    onPressed: () async => Get.toNamed(
-                        AppRoutes.PATIENT_HOME_PAGE,
-                        arguments: controller.patient),
-                  ),
-                ],
-              ),
-              SizedBox(height: Get.height * .03),
             ],
           ),
         ),
+        floatingActionButton: AddNew(() => Get.dialog(addNew())),
         bottomNavigationBar: bottomAppBar(),
       ),
     );

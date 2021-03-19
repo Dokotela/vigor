@@ -35,6 +35,7 @@ class HomePage extends StatelessWidget {
               ),
               ActionButton(
                 buttonText: labels.pages.summaryReport,
+                onPressed: () => null,
               ),
             ],
           ),

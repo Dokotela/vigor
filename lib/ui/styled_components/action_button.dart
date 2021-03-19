@@ -8,11 +8,11 @@ import '../../controllers/controllers.dart';
 class ActionButton extends StatelessWidget {
   const ActionButton({
     required this.buttonText,
-    this.onPressed,
+    required this.onPressed,
   });
 
   final String buttonText;
-  final Function? onPressed;
+  final Future<dynamic>? Function() onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -20,9 +20,8 @@ class ActionButton extends StatelessWidget {
 
     return ResponsiveBuilder(
       builder: (context, sizingInformation) => ButtonTheme(
-        minWidth: screenSize.width * .7,
         child: ElevatedButton(
-          onPressed: () => onPressed,
+          onPressed: onPressed,
           child: Text(
             buttonText,
             style: Get.theme!.textTheme.headline6!.copyWith(
@@ -30,10 +29,11 @@ class ActionButton extends StatelessWidget {
                 fontSize: screenSize.width * .05),
           ),
           style: ElevatedButton.styleFrom(
+            minimumSize: Size(sizingInformation.screenSize.width * .7, 1),
             shape: RoundedRectangleBorder(
-                side: BorderSide(color: Get.theme!.colorScheme.onPrimary),
-                borderRadius:
-                    screenSize.circularBorderRadius(sizingInformation)),
+              side: BorderSide(color: Get.theme!.colorScheme.onPrimary),
+              borderRadius: screenSize.circularBorderRadius(sizingInformation),
+            ),
             padding: screenSize.symmetricPadding(sizingInformation),
           ),
         ),

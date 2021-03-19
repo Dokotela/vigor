@@ -27,7 +27,7 @@ class DropDownSelection extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             Container(
-              width: Get.width * 0.4,
+              width: Get.width * 0.38,
               child: Text(
                 title,
                 style: Get.theme!.textTheme.bodyText1!

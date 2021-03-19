@@ -30,89 +30,85 @@ class LoginPage extends StatelessWidget {
             currentFocus.unfocus();
           }
         },
-        child: ResponsiveBuilder(
-          builder: (context, sizingInformation) {
-            return Scaffold(
-              resizeToAvoidBottomInset: false,
-              body: Container(
-                width: screenSize.width,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: <Widget>[
-                    _sizedBox(.05),
+        child: Scaffold(
+          resizeToAvoidBottomInset: false,
+          body: Container(
+            width: screenSize.width,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                _sizedBox(.05),
 
-                    /// Widget that displays the flags country as a map of that country
-                    FlagWidget(),
-                    _sizedBox(.02),
+                /// Widget that displays the flags country as a map of that country
+                FlagWidget(),
+                _sizedBox(.02),
 
-                    ///specific text with formatting for that country's app title
-                    SplashTitleWidget(),
+                ///specific text with formatting for that country's app title
+                SplashTitleWidget(),
 
-                    _sizedBox(.05),
+                _sizedBox(.05),
 
-                    /// ToDo: make a real login
-                    Container(
-                      width: screenSize.width * .7,
-                      child: TextField(
-                        style: Get.theme!.textTheme.headline6!
-                            .copyWith(fontSize: screenSize.width * .05),
-                        obscureText: false,
-                        controller: _userName,
-                        decoration: InputDecoration(
-                          labelText: labels.auth.userName,
-                          labelStyle: Get.theme!.textTheme.headline6!
-                              .copyWith(fontSize: screenSize.width * .05),
-                          prefixIcon: Icon(
-                            Icons.person,
-                            size: screenSize.width * .05,
-                          ),
-                          contentPadding:
-                              screenSize.symmetricPadding(sizingInformation),
-                          border: OutlineInputBorder(
-                              borderRadius: screenSize
-                                  .circularBorderRadius(sizingInformation)),
-                        ),
+                /// ToDo: make a real login
+                Container(
+                  width: screenSize.width * .7,
+                  child: TextField(
+                    style: Get.theme!.textTheme.headline6!
+                        .copyWith(fontSize: screenSize.width * .05),
+                    obscureText: false,
+                    controller: _userName,
+                    decoration: InputDecoration(
+                      labelText: labels.auth.userName,
+                      labelStyle: Get.theme!.textTheme.headline6!
+                          .copyWith(fontSize: screenSize.width * .05),
+                      prefixIcon: Icon(
+                        Icons.person,
+                        size: screenSize.width * .05,
                       ),
+                      // contentPadding:
+                      //     screenSize.symmetricPadding(sizingInformation),
+                      // border: OutlineInputBorder(
+                      //     borderRadius: screenSize
+                      //         .circularBorderRadius(sizingInformation)),
                     ),
-
-                    _sizedBox(.02),
-
-                    Container(
-                      width: screenSize.width * .7,
-                      child: TextField(
-                        style: Get.theme!.textTheme.headline6!
-                            .copyWith(fontSize: screenSize.width * .05),
-                        obscureText: true,
-                        controller: _password,
-                        decoration: InputDecoration(
-                          labelText: labels.auth.password,
-                          labelStyle: Get.theme!.textTheme.headline6!
-                              .copyWith(fontSize: screenSize.width * .05),
-                          prefixIcon: Icon(
-                            Icons.lock,
-                            size: screenSize.width * .05,
-                          ),
-                          contentPadding:
-                              screenSize.symmetricPadding(sizingInformation),
-                          border: OutlineInputBorder(
-                              borderRadius: screenSize
-                                  .circularBorderRadius(sizingInformation)),
-                        ),
-                      ),
-                    ),
-
-                    _sizedBox(.05),
-
-                    ActionButton(
-                      buttonText: labels.auth.login,
-                      onPressed: () => Get.toNamed(AppRoutes.HOME),
-                    ),
-                  ],
+                  ),
                 ),
-              ),
-            );
-          },
+
+                _sizedBox(.02),
+
+                Container(
+                  width: screenSize.width * .7,
+                  child: TextField(
+                    style: Get.theme!.textTheme.headline6!
+                        .copyWith(fontSize: screenSize.width * .05),
+                    obscureText: true,
+                    controller: _password,
+                    decoration: InputDecoration(
+                      labelText: labels.auth.password,
+                      labelStyle: Get.theme!.textTheme.headline6!
+                          .copyWith(fontSize: screenSize.width * .05),
+                      prefixIcon: Icon(
+                        Icons.lock,
+                        size: screenSize.width * .05,
+                      ),
+                      // contentPadding:
+                      //     screenSize.symmetricPadding(sizingInformation),
+                      // border: OutlineInputBorder(
+                      //     borderRadius: screenSize
+                      //         .circularBorderRadius(sizingInformation)),
+                    ),
+                  ),
+                ),
+
+                _sizedBox(.05),
+
+                ActionButton(
+                  buttonText: labels.auth.login,
+                  onPressed: () => Get.toNamed(AppRoutes.HOME),
+                ),
+              ],
+            ),
+          ),
         ),
       ),
     );
