@@ -22,6 +22,16 @@ class PatientModel {
     this.immHx = immHx ?? <String, Set<Immunization>>{};
   }
 
+  PatientModel copyWith({
+    Patient? patient,
+    List<Immunization>? pastImmunizations,
+    Map<String, Set<Immunization>>? immHx,
+  }) =>
+      PatientModel(
+          patient: patient ?? this.patient,
+          pastImmunizations: pastImmunizations ?? this.pastImmunizations,
+          immHx: immHx ?? this.immHx);
+
   late Patient patient;
   late List<Immunization> pastImmunizations;
   // List<ImmunizationEvaluation> immEvaluations;

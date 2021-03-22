@@ -8,12 +8,12 @@ import '../../controllers/controllers.dart';
 class ThinActionButton extends StatelessWidget {
   const ThinActionButton({
     required this.buttonText,
-    this.onPressed,
+    required this.onPressed,
     this.width,
   });
 
   final String buttonText;
-  final Function? onPressed;
+  final Future<dynamic> Function() onPressed;
   final double? width;
 
   @override
@@ -23,7 +23,7 @@ class ThinActionButton extends StatelessWidget {
     return ResponsiveBuilder(builder: (context, sizingInformation) {
       return ButtonTheme(
         child: ElevatedButton(
-          onPressed: () => onPressed,
+          onPressed: onPressed,
           child: Text(
             buttonText,
             style: Get.theme!.textTheme.headline6!.copyWith(

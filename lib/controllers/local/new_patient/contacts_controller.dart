@@ -170,7 +170,8 @@ class ContactsController extends GetxController {
       _relation.value ?? '',
     );
     _controller!.addContact(contact);
-    update();
     Get.back();
   }
+
+  void choosePrimary(int index) => _controller!.choosePrimary(index);
 }

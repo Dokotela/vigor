@@ -91,11 +91,22 @@ class NewPatientController extends GetxController {
 
   ///EVENTS
   void addContact(PatientContact contact) {
-    _patient.value?.patient.contact == null
-        ? _patient.value!.patient =
-            _patient.value!.patient.copyWith(contact: [contact])
-        : _patient.value!.patient.contact!.add(contact);
+    if (_patient.value?.patient.contact == null) {
+      _patient.value = _patient.value!.copyWith(
+          patient: _patient.value!.patient.copyWith(contact: [contact]));
+    } else {
+      _patient.value!.patient.contact!.add(contact);
+      _patient.value =
+          _patient.value!.copyWith(patient: _patient.value!.patient);
+    }
     update();
+  }
+
+  void choosePrimary(int index) {
+    final contacts = {_patient.value!.patient.contact![index]};
+    contacts.addAll(_patient.value!.patient.contact!);
+    _patient.value = _patient.value!.copyWith(
+        patient: _patient.value!.patient.copyWith(contact: contacts.toList()));
   }
 
   Future<Either<DbFailure, Unit>> save() async {
@@ -104,6 +115,7 @@ class NewPatientController extends GetxController {
         isValidRegistrationBirthDate(_birthDate.value) &&
         isValidRegistrationBarrio(barrio) &&
         isValidGender(gender)) {
+      print('saving');
       _patient.value!.patient = _patient.value!.patient.copyWith(
         name: [
           HumanName(
@@ -147,7 +159,7 @@ class NewPatientController extends GetxController {
   }
 
   void completeRegistration() =>
-      Get.toNamed(AppRoutes.CONTACTS, arguments: _patient.value);
+      Get.toNamed(AppRoutes.PATIENT_HOME_PAGE, arguments: _patient.value);
 
   void editContacts() => Get.toNamed(AppRoutes.CONTACTS,
       arguments: PatientModel(patient: _patient.value!.patient));

@@ -16,6 +16,7 @@ class OrderedListPickOne extends StatelessWidget {
     required this.order3,
     required this.entry3,
     required this.listLength,
+    required this.choosePrimary,
     required this.selectEntry,
   });
 
@@ -32,12 +33,12 @@ class OrderedListPickOne extends StatelessWidget {
   final Widget order3;
   final Function entry3;
   final int listLength;
+  final Function choosePrimary;
   final Function? selectEntry;
 
   @override
   Widget build(BuildContext context) {
     final _padding = EdgeInsets.fromLTRB(0, 0, 0, 0);
-    String temp = '';
 
     Expanded _text(String? text) => Expanded(
           child: Text(
@@ -113,10 +114,10 @@ class OrderedListPickOne extends StatelessWidget {
                   children: [
                     Container(
                       width: Get.width * .15,
-                      child: Radio(
-                        value: 1,
-                        groupValue: temp,
-                        onChanged: (_) {},
+                      child: Radio<String>(
+                        value: entry1(index),
+                        groupValue: entry1(0),
+                        onChanged: (entry) => choosePrimary(index),
                       ),
                     ),
                     Container(

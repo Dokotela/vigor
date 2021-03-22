@@ -22,8 +22,6 @@ class ContactsPage extends StatelessWidget {
       controller.setupForNewContact();
       return ResponsiveBuilder(builder: (context, sizingInformation) {
         return AlertDialog(
-          title: Text(labels.contacts.newContact,
-              style: TextStyle(fontSize: Get.width * .05)),
           content: Obx(
             () => GestureDetector(
               onTap: () {
@@ -42,7 +40,7 @@ class ContactsPage extends StatelessWidget {
                       familyNameError: controller.familyNameError,
                       givenNameError: controller.givenNameError,
                     ),
-                    SizedBox(height: Get.height * .02),
+                    // SizedBox(height: Get.height * .02),
                     DropDownSelection(
                       title: labels.relationships.title,
                       selectionList: controller.relationTypes,
@@ -50,7 +48,7 @@ class ContactsPage extends StatelessWidget {
                       selectNew: controller.selectRelation,
                       error: controller.relationError,
                     ),
-                    SizedBox(height: Get.height * .02),
+                    // SizedBox(height: Get.height * .02),
                     DropDownSelection(
                       title: labels.address.neighborhood.title,
                       selectionList: controller.barriosList,
@@ -135,6 +133,7 @@ class ContactsPage extends StatelessWidget {
                               viewController.getOrder(controller.barrioSort),
                           entry3: controller.contactBarrio,
                           listLength: controller.currentListLength,
+                          choosePrimary: controller.choosePrimary,
                           selectEntry: null,
                         ),
                 ),
